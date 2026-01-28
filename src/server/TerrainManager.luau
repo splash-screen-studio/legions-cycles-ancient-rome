@@ -81,7 +81,7 @@ function TerrainManager:_calculateHeight(x: number, z: number): number
 end
 
 -- Determine terrain material based on height and slope
-function TerrainManager:_getMaterial(x: number, z: number, height: number, maxHeight: number): Enum.Material
+function TerrainManager:_getMaterial(x: number, z: number, height: number, _maxHeight: number): Enum.Material
     -- Sample slope using neighboring heights
     local h1 = self:_calculateHeight(x - RESOLUTION, z)
     local h2 = self:_calculateHeight(x + RESOLUTION, z)
@@ -119,7 +119,6 @@ end
 
 -- Clear existing terrain in the generation area
 function TerrainManager:_clearTerrain()
-    local halfSize = self.size / 2
     local maxHeight = self.baseHeight + self.heightAmplitude + 10
 
     self.terrain:FillBlock(

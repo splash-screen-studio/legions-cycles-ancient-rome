@@ -21,6 +21,9 @@ print(string.format("[Server] Loaded TerrainManager v%s", TerrainManager.VERSION
 local MapBoundary = require(script.MapBoundary)
 print(string.format("[Server] Loaded MapBoundary v%s", MapBoundary.VERSION))
 
+local SpawnManager = require(script.SpawnManager)
+print(string.format("[Server] Loaded SpawnManager v%s", SpawnManager.VERSION))
+
 -- Configuration
 local MAP_SIZE = 1024
 
@@ -40,5 +43,13 @@ local mapBoundary = MapBoundary.new({
     wallTransparency = 0.8,
 })
 mapBoundary:generate()
+
+-- Bootstrap spawn manager (must be after terrain generation)
+local spawnManager = SpawnManager.new({
+    position = Vector3.new(400, 0, 400), -- Southeast quadrant
+    facingDirection = Vector3.new(-1, 0, -1).Unit, -- Face northwest toward map center
+    spawnRadius = 10,
+})
+spawnManager:start()
 
 print(string.format("[Server v%s] All systems initialized", VERSION))
