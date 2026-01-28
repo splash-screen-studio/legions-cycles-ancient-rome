@@ -37,9 +37,10 @@ export type WorldPlanGeneratorInstance = typeof(setmetatable(
 
 -- Default configuration
 local DEFAULT_MAP_SIZE = 1024
-local DEFAULT_RIVER_WIDTH = 20
+local DEFAULT_RIVER_WIDTH = 40 -- Wider river (30-50 studs as per spec)
 local DEFAULT_URBAN_RADIUS = 150
 local DEFAULT_CIVIC_RADIUS = 80
+local _DEFAULT_RIVER_DEPTH = 10 -- 8-12 studs deep for swimming (used by RiverBuilder)
 
 function WorldPlanGenerator.new(config: WorldPlanGeneratorConfig?): WorldPlanGeneratorInstance
     local self = setmetatable({}, WorldPlanGenerator)
@@ -56,30 +57,55 @@ function WorldPlanGenerator.new(config: WorldPlanGeneratorConfig?): WorldPlanGen
     return self
 end
 
--- Generate a meandering river path across the map
+-- Helper: Evaluate cubic bezier curve at t
+local function evaluateBezier(p0: Vector2, p1: Vector2, p2: Vector2, p3: Vector2, t: number): Vector2
+    local u = 1 - t
+    local tt = t * t
+    local uu = u * u
+    local uuu = uu * u
+    local ttt = tt * t
+
+    local x = uuu * p0.X + 3 * uu * t * p1.X + 3 * u * tt * p2.X + ttt * p3.X
+    local y = uuu * p0.Y + 3 * uu * t * p1.Y + 3 * u * tt * p2.Y + ttt * p3.Y
+
+    return Vector2.new(x, y)
+end
+
+-- Generate a meandering river path spanning the entire map edge to edge
 function WorldPlanGenerator._generateRiverPath(self: WorldPlanGeneratorInstance): { Vector2 }
     local path: { Vector2 } = {}
     local halfSize = self.mapSize / 2
 
-    -- River starts in the west, meanders eastward
-    -- Use noise to create natural curves
-    local numPoints = 20
-    local startX = -halfSize + 50
-    local endX = halfSize - 200 -- Don't go all the way to the edge
+    -- River spans ENTIRE map from west edge to east edge
+    local startX = -halfSize
+    local endX = halfSize
 
-    for i = 0, numPoints do
-        local t = i / numPoints
-        local x = startX + (endX - startX) * t
+    -- Random start and end Z positions (within reasonable bounds)
+    math.randomseed(self.seed)
+    local startZ = math.random(-200, 200)
+    local endZ = math.random(-200, 200)
 
-        -- Use noise for natural meandering
-        local noiseOffset = math.noise(x * 0.005 + self.seed, self.seed * 0.7) * 150
+    -- Create bezier control points for smooth winding path
+    local p0 = Vector2.new(startX, startZ)
+    local p3 = Vector2.new(endX, endZ)
 
-        -- Base Z position (roughly through the northern part of the map)
-        local baseZ = -halfSize / 3
+    -- Control points create the curves - use noise for variety
+    local ctrl1X = startX + (endX - startX) * 0.33
+    local ctrl2X = startX + (endX - startX) * 0.66
 
-        local z = baseZ + noiseOffset
+    -- Use perlin noise to generate control point offsets for natural curves
+    local ctrl1Offset = math.noise(self.seed * 0.1, 0.5) * 250
+    local ctrl2Offset = math.noise(self.seed * 0.2, 0.7) * 250
 
-        table.insert(path, Vector2.new(x, z))
+    local p1 = Vector2.new(ctrl1X, startZ + ctrl1Offset)
+    local p2 = Vector2.new(ctrl2X, endZ + ctrl2Offset)
+
+    -- Sample bezier curve at regular intervals (50+ points for smooth path)
+    local numSamples = 50
+    for i = 0, numSamples do
+        local t = i / numSamples
+        local point = evaluateBezier(p0, p1, p2, p3, t)
+        table.insert(path, point)
     end
 
     return path

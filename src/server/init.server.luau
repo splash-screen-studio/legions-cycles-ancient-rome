@@ -31,6 +31,9 @@ print(string.format("[Server] Loaded SpawnManager v%s", SpawnManager.VERSION))
 local WaterFeatures = require(script.WaterFeatures)
 print(string.format("[Server] Loaded WaterFeatures v%s", WaterFeatures.VERSION))
 
+local RiverBuilder = require(script.RiverBuilder)
+print(string.format("[Server] Loaded RiverBuilder v%s", RiverBuilder.VERSION))
+
 local TerrainMaterials = require(script.TerrainMaterials)
 print(string.format("[Server] Loaded TerrainMaterials v%s", TerrainMaterials.VERSION))
 
@@ -57,10 +60,17 @@ local terrainManager = TerrainManager.new({
     baseHeight = 20,
     heightAmplitude = 40,
     noiseScale = 0.01,
+    worldPlan = worldPlan, -- Pass world plan for river corridor depression
 })
 terrainManager:generate()
 
--- STEP 3: Apply context-aware terrain materials
+-- STEP 3: Build River Structure (after terrain, before other features)
+local riverBuilder = RiverBuilder.new({
+    worldPlan = worldPlan,
+})
+riverBuilder:build()
+
+-- STEP 4: Apply context-aware terrain materials
 -- This must run AFTER terrain shape is generated
 local terrainMaterials = TerrainMaterials.new({
     terrain = workspace.Terrain,
@@ -85,11 +95,10 @@ local spawnManager = SpawnManager.new({
 spawnManager:start()
 
 -- Bootstrap water features (must be after terrain generation)
--- Fountain positions are defined in FountainConfig.luau
+-- NOTE: River is now handled by RiverBuilder, fountains from FountainConfig
 local waterFeatures = WaterFeatures.new({
-    riverStartPosition = Vector3.new(200, 0, 100), -- Western valley
     enableFountains = true, -- Creates multiple fountains from FountainConfig
-    enableRiver = true,
+    enableRiver = false, -- Disabled: river now built by RiverBuilder
 })
 waterFeatures:start()
 
