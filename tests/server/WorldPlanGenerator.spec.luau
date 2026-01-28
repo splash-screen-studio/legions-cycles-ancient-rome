@@ -47,7 +47,7 @@ describe("WorldPlanGenerator", function()
     end)
 
     it("should have _generateLandmarks() method", function()
-        expect(string.find(moduleSource, "function WorldPlanGenerator._generateLandmarks", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "function WorldPlanGenerator:_generateLandmarks", 1, true)).toNotBeNil()
     end)
 
     it("should have _generateRoads() method", function()
