@@ -15,3 +15,5 @@ sourcemap.json
 !.claude-workers/worktrees/.gitkeep
 .claude-workers/status/*.json
 !.claude-workers/status/.gitkeep
+# Temp files
+tmp.json
