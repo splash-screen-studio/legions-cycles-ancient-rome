@@ -190,27 +190,4 @@ function TerrainManager:getCFrameAlignedToTerrain(x: number, z: number): CFrame
     return TerrainUtils.getCFrameAlignedToTerrain(self.terrain, x, z)
 end
 
--- Initialize and generate terrain on server start
-local function init()
-    print("[TerrainManager] Initializing...")
-
-    local manager = TerrainManager.new({
-        size = TERRAIN_SIZE,
-        baseHeight = BASE_HEIGHT,
-        heightAmplitude = HEIGHT_AMPLITUDE,
-        noiseScale = NOISE_SCALE,
-    })
-
-    manager:generate()
-
-    -- Store reference for other scripts
-    local terrainManagerValue = Instance.new("ObjectValue")
-    terrainManagerValue.Name = "TerrainManager"
-    terrainManagerValue.Parent = ReplicatedStorage
-
-    print("[TerrainManager] Initialization complete!")
-end
-
-init()
-
 return TerrainManager

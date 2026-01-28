@@ -318,15 +318,4 @@ function MusicManager:destroy(): ()
     self._maid:destroy()
 end
 
--- Create singleton instance and start playing
-local musicManager = MusicManager.new()
-
--- Start playing the soundtrack playlist
-musicManager:playPlaylist(false) -- Sequential playback
-
--- Expose the manager globally for debugging/other scripts
-_G.MusicManager = musicManager
-
-print("[MusicManager] Initialized - Playing Roman soundtrack")
-
 return MusicManager
