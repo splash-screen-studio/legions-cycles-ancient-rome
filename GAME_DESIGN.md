@@ -6,7 +6,7 @@
 ---
 
 ## Core Experience
-Build your own piece of Ancient Rome. Place structures, watch your settlement grow, explore the Mediterranean landscape, and create a thriving Roman community.
+Rome already exists - grand landmarks, crumbling ruins, ancient aqueducts. You build YOUR piece of it. Place homes, shops, and baths in the shadow of the Colosseum. Explore the Mediterranean landscape and create a thriving Roman community.
 
 ---
 
@@ -41,10 +41,12 @@ Build your own piece of Ancient Rome. Place structures, watch your settlement gr
 - **Vibe**: Overlooking YOUR land - "This is yours to build"
 
 ### First Thing You See
-- Rolling Mediterranean hills
-- A single fountain (water feature demo)
-- Clear sky, warm lighting
-- **Implicit message**: "This empty land needs Roman civilization"
+- **Colosseum** in the distance (east)
+- **Aqueduct** spanning the valley (some sections ruined)
+- **Fallen columns** and ruins scattered on nearby hills
+- Rolling Mediterranean terrain with warm lighting
+- A fountain nearby (water demo)
+- **Implicit message**: "Rome exists. Build YOUR place in it."
 
 ### UI/Interface (Mobile-First)
 | Element | Purpose | Position |
@@ -74,18 +76,28 @@ Build your own piece of Ancient Rome. Place structures, watch your settlement gr
 - **Materials**: Balanced grass, rock, sand, ground (issue #70)
 - **Feel**: Authentic Italian peninsula landscape
 
-### Structures (Explorable)
-| Category | Examples | Key Feature |
-|----------|----------|-------------|
-| Landmarks | Colosseum, Pantheon, Forum | Grand scale, tourist attractions |
-| Residential | Domus, Insula | Multiple rooms, atriums |
-| Commercial | Taberna, Thermae | Generate income |
-| Religious | Temple | Community gathering |
-| Infrastructure | Aqueducts, Roads, Arches | Connect everything |
+### World Content (Pre-Built)
+Impressive from the start - players don't build these:
 
-**All structures have:**
-- Multiple doorways (2+ entrances)
-- Explorable interiors
+| Category | Examples | Purpose |
+|----------|----------|---------|
+| **Landmarks** | Colosseum, Pantheon, Forum, Circus Maximus | Exploration, backdrop, NPC hubs |
+| **Ruins** | Fallen columns, crumbling walls, debris | Atmosphere, history |
+| **Aqueduct** | Functional + ruined sections | Iconic engineering, water source |
+
+### Player-Built Structures
+What players actually build on their plots:
+
+| Category | Examples | Progression |
+|----------|----------|-------------|
+| **Commercial** | Taberna (shop) | Level 1 (free starter) |
+| **Residential** | Domus (house), Insula (apartments) | Level 2-10 |
+| **Religious** | Small temple, shrine | Level 5-15 |
+| **Civic** | Thermae (baths), Triumphal arch | Level 10-20 |
+
+**All explorable structures have:**
+- Multiple doorways (2+ entrances, no doors blocking)
+- Explorable interiors with directional lighting
 - Stairs for multi-story
 - Rooftop access where appropriate
 
@@ -100,13 +112,16 @@ Build your own piece of Ancient Rome. Place structures, watch your settlement gr
 - Roman "edge of the known world" feeling
 
 ### Places/Zones
-| Zone | Terrain | Structures | Unlock |
-|------|---------|------------|--------|
-| Starting Hill | Grassy valley | Basic structures | Free |
-| Forum District | Flat, paved | Shops, Temple | Level 5 |
-| Palatine Heights | Elevated | Villas, Palace | Level 10 |
-| Circus Valley | Long flat | Circus Maximus | Level 15 |
-| Colosseum Grounds | Arena area | Colosseum | Level 20 |
+| Zone | What's There | Player Activity |
+|------|--------------|-----------------|
+| **Player Plots** | Empty buildable land | Build your structures |
+| **Forum District** | Pre-built Roman Forum | Explore, NPC hub |
+| **Colosseum Area** | Pre-built Colosseum | Explore, events |
+| **Palatine Hill** | Pre-built palaces | Explore, roleplay |
+| **Aqueduct Valley** | Aqueduct (functional + ruins) | Explore, water source |
+| **Ruin Fields** | Scattered ruins | Explore, atmosphere |
+
+**All zones accessible from start.** Progression unlocks what you can BUILD, not where you can GO.
 
 ---
 
@@ -156,12 +171,15 @@ Build your own piece of Ancient Rome. Place structures, watch your settlement gr
 
 ### Progression System
 ```
-Level 1-5:   Basic structures (Taberna, small Domus)
-Level 6-10:  Medium structures (Temple, Insula)
-Level 11-15: Large structures (Forum, Thermae)
-Level 16-20: Landmarks (Colosseum, Pantheon)
-Level 21+:   Legendary structures, customization
+Level 1:     Free Taberna (tutorial)
+Level 2-5:   Small Domus, basic decorations
+Level 6-10:  Medium Domus, Insula, small Temple
+Level 11-15: Large Domus, Thermae, shops variety
+Level 16-20: Grand Temple, Triumphal Arch, luxury villa
+Level 21+:   Cosmetic unlocks, prestige decorations
 ```
+
+**Note:** Major landmarks (Colosseum, Pantheon, etc.) are PRE-BUILT world content, not player-buildable. Players build homes and businesses, not rebuild Rome.
 
 ---
 
@@ -208,7 +226,7 @@ Level 21+:   Legendary structures, customization
 ## Quick Reference
 
 **One-liner pitch:**
-> "Build your own Ancient Rome - place structures, explore interiors, grow your civilization."
+> "Explore ancient Rome's landmarks and ruins, then build your own corner of the empire."
 
 **Target audience:**
 > 8-16 year olds who enjoy building games, history fans, Bloxburg/Tycoon players
