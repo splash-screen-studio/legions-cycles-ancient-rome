@@ -101,6 +101,7 @@ log("===========================================")
 
 -- Run test suites
 require("./shared/WorldPlan.spec")
+require("./shared/FountainConfig.spec")
 require("./shared/MaterialConfig.spec")
 require("./server/WorldPlanGenerator.spec")
 require("./server/SpawnManager.spec")

@@ -97,6 +97,20 @@ describe("WaterPool", function()
         expect(string.find(moduleSource, "wallColor: Color3", 1, true)).toNotBeNil()
     end)
 
+    it("should use PoolConfig type with rimHeight", function()
+        expect(string.find(moduleSource, "rimHeight: number", 1, true)).toNotBeNil()
+    end)
+
+    it("should calculate wallTop from rimHeight", function()
+        -- Walls should extend above water surface
+        expect(string.find(moduleSource, "wallTop", 1, true)).toNotBeNil()
+    end)
+
+    it("should clear terrain inside walls", function()
+        -- CRITICAL: Must clear ALL terrain inside walls (including above water)
+        expect(string.find(moduleSource, "clearRegion", 1, true)).toNotBeNil()
+    end)
+
     it("should clear water on destroy", function()
         -- Should fill with Air to remove water when destroyed
         expect(string.find(moduleSource, "Enum.Material.Air", 1, true)).toNotBeNil()

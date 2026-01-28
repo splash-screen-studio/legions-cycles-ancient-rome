@@ -85,10 +85,10 @@ local spawnManager = SpawnManager.new({
 spawnManager:start()
 
 -- Bootstrap water features (must be after terrain generation)
+-- Fountain positions are defined in FountainConfig.luau
 local waterFeatures = WaterFeatures.new({
-    fountainPosition = Vector3.new(350, 0, 350), -- Near spawn area
     riverStartPosition = Vector3.new(200, 0, 100), -- Western valley
-    enableFountain = true,
+    enableFountains = true, -- Creates multiple fountains from FountainConfig
     enableRiver = true,
 })
 waterFeatures:start()
