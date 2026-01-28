@@ -14,17 +14,31 @@ if not Shared then
 end
 print("[Server] Found Shared folder")
 
--- Require and initialize server modules
+-- Require server modules
 local TerrainManager = require(script.TerrainManager)
 print(string.format("[Server] Loaded TerrainManager v%s", TerrainManager.VERSION))
 
+local MapBoundary = require(script.MapBoundary)
+print(string.format("[Server] Loaded MapBoundary v%s", MapBoundary.VERSION))
+
+-- Configuration
+local MAP_SIZE = 1024
+
 -- Bootstrap terrain
 local terrainManager = TerrainManager.new({
-    size = 1024,
+    size = MAP_SIZE,
     baseHeight = 20,
     heightAmplitude = 40,
     noiseScale = 0.01,
 })
 terrainManager:generate()
+
+-- Bootstrap map boundary walls
+local mapBoundary = MapBoundary.new({
+    mapSize = MAP_SIZE,
+    wallHeight = 200,
+    wallTransparency = 0.8,
+})
+mapBoundary:generate()
 
 print(string.format("[Server v%s] All systems initialized", VERSION))
