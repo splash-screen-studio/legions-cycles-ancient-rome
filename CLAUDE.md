@@ -6,6 +6,124 @@ A Roblox game set in Ancient Rome, implementing techniques from [BRicey's YouTub
 
 **Key constraint**: The terrain is undulating (rolling hills). ALL placed objects must query terrain height at their X,Z position. Water terrain must ONLY exist within part-built pool walls.
 
+## BRicey Module Architecture (CRITICAL)
+
+This project follows the **BRicey module pattern** - the standard Roblox architecture taught across BRicey's tutorials:
+
+```
+Entry Points (Scripts)  →  require()  →  ModuleScripts (Logic)
+```
+
+### File Structure
+
+```
+src/
+├── server/
+│   ├── init.server.luau        # SERVER ENTRY POINT - bootstraps server systems
+│   ├── TerrainManager.luau     # ModuleScript - terrain generation logic
+│   └── GameManager.luau        # ModuleScript - game state logic
+├── client/
+│   ├── init.client.luau        # CLIENT ENTRY POINT - bootstraps client systems
+│   ├── MusicManager.luau       # ModuleScript - music playback logic
+│   └── InputHandler.luau       # ModuleScript - input handling logic
+└── shared/
+    ├── TerrainUtils.luau       # Shared ModuleScript - terrain utilities
+    ├── Constants.luau          # Shared ModuleScript - game constants
+    ├── Maid.luau               # Shared ModuleScript - cleanup utility
+    └── Components/             # Shared ModuleScripts - OOP components
+        ├── init.luau
+        ├── Movable.luau
+        └── Damageable.luau
+```
+
+### Rojo File Extension Rules
+
+| Extension | Becomes | Purpose |
+|-----------|---------|---------|
+| `init.server.luau` | Script | Server entry point (auto-runs) |
+| `init.client.luau` | LocalScript | Client entry point (auto-runs) |
+| `Name.luau` | ModuleScript | Logic module (must be required) |
+| `init.luau` | ModuleScript | Folder's module entry point |
+
+**NEVER use `.server.luau` or `.client.luau` for non-init files in src/server or src/client folders.** They become ModuleScripts anyway due to Rojo's init file rules, causing confusion.
+
+### Entry Point Pattern
+
+```lua
+-- src/server/init.server.luau (SERVER ENTRY POINT)
+--!strict
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Wait for shared modules
+local Shared = ReplicatedStorage:WaitForChild("Shared")
+
+-- Require and initialize server modules
+local TerrainManager = require(script.TerrainManager)
+local GameManager = require(script.GameManager)
+
+-- Bootstrap the server
+local terrainManager = TerrainManager.new()
+terrainManager:generate()
+
+local gameManager = GameManager.new()
+gameManager:start()
+
+print("[Server] All systems initialized")
+```
+
+```lua
+-- src/client/init.client.luau (CLIENT ENTRY POINT)
+--!strict
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Wait for shared modules
+local Shared = ReplicatedStorage:WaitForChild("Shared")
+
+-- Require and initialize client modules
+local MusicManager = require(script.MusicManager)
+
+-- Bootstrap the client
+local musicManager = MusicManager.new()
+musicManager:playPlaylist()
+
+print("[Client] All systems initialized")
+```
+
+### ModuleScript Pattern (BRicey OOP)
+
+```lua
+-- src/server/TerrainManager.luau (ModuleScript)
+--!strict
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Shared = ReplicatedStorage:WaitForChild("Shared")
+local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
+
+local TerrainManager = {}
+TerrainManager.__index = TerrainManager
+
+function TerrainManager.new()
+    local self = setmetatable({}, TerrainManager)
+    self.terrain = workspace.Terrain
+    return self
+end
+
+function TerrainManager:generate()
+    print("[TerrainManager] Generating terrain...")
+    -- Generation logic here
+end
+
+return TerrainManager  -- ModuleScripts MUST return their table
+```
+
+**Key points:**
+- ModuleScripts contain logic but do NOT auto-initialize
+- Entry points `require()` modules and call initialization methods
+- ModuleScripts return their class/table at the end
+- NO standalone code at module bottom (no `init()` calls)
+
 ## Documentation
 
 | Document | Purpose |
@@ -15,8 +133,6 @@ A Roblox game set in Ancient Rome, implementing techniques from [BRicey's YouTub
 | `.claude-workers/manager-commands.md` | Commands reference for manager role |
 
 ## Multi-Agent Roles
-
-This project uses a multi-agent workflow with four roles:
 
 | Role | File | Description |
 |------|------|-------------|
@@ -34,37 +150,12 @@ This project uses a multi-agent workflow with four roles:
 - **Sync Tool**: Rojo (`rojo serve`)
 - **Version Control**: Git with feature branches + worktrees
 
-## File Structure
-
-```
-legions-cycles-ancient-rome/
-├── CLAUDE.md                    # This file (auto-read by Claude Code)
-├── CLAUDE_PLANNER.md           # Planner role context
-├── CLAUDE_MANAGER.md           # Manager role context
-├── CLAUDE_WORKER.md            # Worker role context
-├── IMPLEMENTATION_PLAN.md      # All 43 issues, priorities, BRicey mappings
-├── default.project.json        # Rojo configuration
-├── src/
-│   ├── server/                 # ServerScriptService (*.server.luau)
-│   ├── client/                 # StarterPlayerScripts (*.client.luau)
-│   └── shared/                 # ReplicatedStorage (*.luau)
-├── assets/
-│   └── ServerStorage/
-│       └── Templates/          # Cloneable templates
-└── .claude-workers/            # Multi-agent management
-    ├── spawn-worker.sh         # Spawn worker for an issue
-    ├── check-status.sh         # Check worker statuses
-    ├── status/                 # Worker status JSON files
-    ├── logs/                   # Worker output logs
-    └── worktrees/              # Git worktree directories
-```
-
-## Critical Rules (All Roles)
+## Critical Rules
 
 ### 1. Terrain-Adaptive Y Positioning
 ```lua
 -- CORRECT: Query terrain height
-local y = TerrainUtils.getHeightAt(x, z)
+local y = TerrainUtils.getHeightAt(terrain, x, z)
 object:PivotTo(CFrame.new(x, y, z))
 
 -- WRONG: Hardcoded Y
@@ -82,68 +173,41 @@ terrain:FillBlock(cf, size, Enum.Material.Water)  -- NEVER DO THIS
 ```
 
 ### 3. File Extensions
-- Server scripts: `Name.server.luau`
-- Client scripts: `Name.client.luau`
-- Shared modules: `Name.luau`
-- **NEVER use `.lua`**
+| Location | Extension | Result |
+|----------|-----------|--------|
+| `src/server/init.server.luau` | `.server.luau` | Script (entry point) |
+| `src/server/SomeModule.luau` | `.luau` | ModuleScript |
+| `src/client/init.client.luau` | `.client.luau` | LocalScript (entry point) |
+| `src/client/SomeModule.luau` | `.luau` | ModuleScript |
+| `src/shared/Anything.luau` | `.luau` | ModuleScript |
+
+**NEVER use `.lua` extension.**
 
 ### 4. Part Anchoring
-All procedurally generated/placed parts must be anchored:
 ```lua
-part.Anchored = true
+part.Anchored = true  -- ALWAYS for static objects
 ```
 
-### 5. Rojo Script Structure (CRITICAL)
-**Do NOT put `init.server.luau` in folders with other `.server.luau` files!**
-
-When a folder has `init.server.luau`, ALL other scripts in that folder become **ModuleScripts** (not auto-running Scripts).
-
-```
-# WRONG - TerrainManager becomes a ModuleScript and NEVER RUNS
-src/server/
-├── init.server.luau           # Makes folder a Script
-└── TerrainManager.server.luau # Becomes ModuleScript child - BROKEN!
-
-# CORRECT - Each script runs independently
-src/server/
-├── TerrainManager.server.luau # Becomes Script - RUNS!
-└── AnotherFeature.server.luau # Becomes Script - RUNS!
-
-# ALSO CORRECT - Subfolders for organization
-src/server/
-├── TerrainManager/
-│   └── init.server.luau       # Becomes Script - RUNS!
-└── AnotherFeature/
-    └── init.server.luau       # Becomes Script - RUNS!
-```
-
-**Rule: Never mix `init.*.luau` with other `*.server.luau` or `*.client.luau` files in the same folder.**
-
-## Coding Standards
-
+### 5. ModuleScript Structure
 ```lua
---!strict
-local ModuleName = {}
-ModuleName.__index = ModuleName
+-- ModuleScripts must:
+-- 1. Define a table
+-- 2. Add methods to the table
+-- 3. Return the table
+-- 4. NOT have auto-executing code at the bottom
 
-local MAX_ITERATIONS = 10  -- UPPER_SNAKE_CASE for constants
+local MyModule = {}
+MyModule.__index = MyModule
 
-type Config = {             -- Type definitions
-    value: number,
-    name: string
-}
-
-function ModuleName.new(config: Config)
-    local self = setmetatable({}, ModuleName)
-    self.value = config.value
-    return self
+function MyModule.new()
+    return setmetatable({}, MyModule)
 end
 
-function ModuleName:doThing(): boolean  -- camelCase for methods
-    return true
+function MyModule:doSomething()
+    -- Logic here
 end
 
-return ModuleName
+return MyModule  -- Required!
 ```
 
 ## Roman Theme Guidelines

@@ -76,37 +76,41 @@ echo "Status file created: $STATUS_FILE"
 # Prepare worker prompt
 WORKER_PROMPT="# YOU ARE A WORKER
 
-**READ THIS FIRST: CLAUDE_WORKER.md** - It defines your role and constraints.
+**READ CLAUDE_WORKER.md AND CLAUDE.md FIRST** - They define your role and the BRicey architecture.
 
 You are a one-shot Worker implementing GitHub issue #$ISSUE_NUM.
 You are NOT interactive. Complete your task and EXIT.
 
-## Step 1: Read Your Role
-cat CLAUDE_WORKER.md
+## CRITICAL: BRicey Module Architecture
 
-## Step 2: Read the Issue
-gh issue view $ISSUE_NUM
+This project uses the BRicey module pattern:
+- Entry points (init.server.luau, init.client.luau) require and initialize modules
+- Feature modules use .luau extension (NOT .server.luau or .client.luau)
+- ModuleScripts return their table and do NOT auto-execute code
 
-## Step 3: Read Project Rules
-Review CLAUDE.md for critical rules (terrain height, water pools, .luau extension).
+When creating a new feature:
+1. Create src/server/MyFeature.luau or src/client/MyFeature.luau (note: .luau extension)
+2. Update init.server.luau or init.client.luau to require and initialize it
+3. ModuleScripts must return their table and NOT have auto-executing code at the bottom
 
-## Step 4: Implement
-Create/modify ONLY files specified in the issue.
-- Use .luau extension (NOT .lua)
-- Query terrain height for Y positioning
-- Anchor all static parts
-- CRITICAL: Never put init.server.luau in a folder with other .server.luau files (they become ModuleScripts and won't run!)
+## Workflow
 
-## Step 5: Test
-Run 'rojo serve' and test in Roblox Studio.
+1. Read CLAUDE.md and CLAUDE_WORKER.md
+2. Read the issue: gh issue view $ISSUE_NUM
+3. Create ModuleScript(s) with .luau extension
+4. Update entry point (init.server.luau or init.client.luau) to require/initialize
+5. Test with rojo serve
+6. Commit and push
+7. Open PR
+8. EXIT
 
-## Step 6: Commit
+## Commit
 git add <files>
 git commit -m 'Implement #$ISSUE_NUM: $ISSUE_TITLE
 
 Co-Authored-By: Claude <noreply@anthropic.com>'
 
-## Step 7: Open PR
+## Open PR
 git push -u origin $BRANCH_NAME
 
 gh pr create --title 'Implement #$ISSUE_NUM: $ISSUE_TITLE' --body 'Closes #$ISSUE_NUM
@@ -114,10 +118,16 @@ gh pr create --title 'Implement #$ISSUE_NUM: $ISSUE_TITLE' --body 'Closes #$ISSU
 ## Summary
 [What you implemented]
 
-## Test Plan
-[How to verify in Roblox Studio]'
+## Changes
+- [Files created/modified]
 
-## Step 8: EXIT
+## BRicey Pattern Checklist
+- [ ] ModuleScripts use .luau extension
+- [ ] Entry point updated to require/initialize module
+- [ ] No auto-executing code in ModuleScripts
+- [ ] ModuleScripts return their table'
+
+## EXIT
 Your work is complete. Do not continue. Exit now."
 
 LOG_FILE="$LOGS_DIR/${ISSUE_NUM}.log"

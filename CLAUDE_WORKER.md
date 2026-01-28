@@ -20,6 +20,78 @@
 - Ask questions (the issue should have all you need)
 - Continue after opening the PR
 
+## BRicey Module Architecture (CRITICAL)
+
+This project follows the **BRicey module pattern**. Understand this before writing any code:
+
+```
+Entry Points (Scripts)  →  require()  →  ModuleScripts (Logic)
+```
+
+### File Structure Rules
+
+```
+src/server/
+├── init.server.luau        # ENTRY POINT - requires and initializes modules
+├── TerrainManager.luau     # ModuleScript (.luau NOT .server.luau!)
+└── OtherManager.luau       # ModuleScript
+
+src/client/
+├── init.client.luau        # ENTRY POINT - requires and initializes modules
+├── MusicManager.luau       # ModuleScript (.luau NOT .client.luau!)
+└── OtherModule.luau        # ModuleScript
+
+src/shared/
+└── *.luau                  # All shared modules
+```
+
+### When Creating a New Feature
+
+1. **Create the ModuleScript** (`src/server/MyFeature.luau` or `src/client/MyFeature.luau`)
+   - Use `.luau` extension (NOT `.server.luau` or `.client.luau`)
+   - Follow the ModuleScript pattern (define table, add methods, return table)
+   - NO auto-executing code at the bottom
+
+2. **Update the entry point** (`init.server.luau` or `init.client.luau`)
+   - Add `require(script.MyFeature)`
+   - Add initialization call
+
+### ModuleScript Template
+
+```lua
+--!strict
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Shared = ReplicatedStorage:WaitForChild("Shared")
+
+local MyFeature = {}
+MyFeature.__index = MyFeature
+
+function MyFeature.new()
+    local self = setmetatable({}, MyFeature)
+    -- Initialize state
+    return self
+end
+
+function MyFeature:start()
+    -- Start the feature
+end
+
+function MyFeature:destroy()
+    -- Cleanup
+end
+
+return MyFeature  -- REQUIRED: ModuleScripts must return their table
+```
+
+### Entry Point Update Template
+
+```lua
+-- Add to init.server.luau or init.client.luau:
+local MyFeature = require(script.MyFeature)
+local myFeature = MyFeature.new()
+myFeature:start()
+```
+
 ## Workflow
 
 ### Step 1: Understand the Issue
@@ -36,34 +108,26 @@ Read carefully:
 
 ### Step 2: Read Project Guidelines
 
-The main `CLAUDE.md` has critical rules. Key points:
-- Use `.luau` not `.lua`
-- Query terrain height for Y positioning
-- Water only inside pool walls
-- Anchor all static parts
+Read `CLAUDE.md` for:
+- BRicey module architecture
+- File extension rules
+- Terrain height queries
+- Coding standards
 
 ### Step 3: Implement
 
-Create/modify ONLY the files mentioned in the issue.
+1. Create ModuleScript(s) with `.luau` extension
+2. Update entry point (`init.server.luau` or `init.client.luau`) to require and initialize
+3. Follow coding standards
 
-```lua
---!strict
--- Your implementation here
--- Follow coding standards in CLAUDE.md
-```
+### Step 4: Verify
 
-### Step 4: Test
-
-```bash
-# Start Rojo server (if not running)
-rojo serve &
-
-# In Roblox Studio:
-# 1. Connect to Rojo
-# 2. Press Play
-# 3. Check Output for errors
-# 4. Verify feature works per issue checklist
-```
+Check that:
+- [ ] ModuleScripts use `.luau` extension (not `.server.luau` or `.client.luau`)
+- [ ] Entry point requires and initializes the module
+- [ ] No auto-executing code at bottom of ModuleScripts
+- [ ] All parts are anchored
+- [ ] Terrain height is queried for Y positioning
 
 ### Step 5: Commit
 
@@ -97,76 +161,38 @@ gh pr create \
 [How to verify this works in Roblox Studio]
 
 ## Checklist
-- [ ] Verified in Roblox Studio
-- [ ] No errors in Output
+- [ ] ModuleScripts use .luau extension
+- [ ] Entry point updated to require/initialize module
+- [ ] No auto-executing code in ModuleScripts
 - [ ] Objects adapt to terrain height
-- [ ] Follows coding standards"
+- [ ] Follows BRicey module pattern"
 ```
 
 ### Step 7: EXIT
 
-Your work is complete. The Judge (Claude GitHub App) will review your PR. If changes are needed, a new Worker will be spawned.
+Your work is complete. The Judge (Claude GitHub App) will review your PR.
 
 **Do not wait. Do not continue. Exit now.**
 
-## Critical Reminders
-
-### Terrain Height
-```lua
--- ALWAYS do this for any object placement:
-local y = TerrainUtils.getHeightAt(x, z)
-object:PivotTo(CFrame.new(x, y, z))
-```
-
-### File Extensions
-```
-CORRECT: FeatureName.server.luau
-WRONG:   FeatureName.server.lua
-```
-
-### Anchoring
-```lua
-part.Anchored = true  -- ALWAYS for static objects
-```
-
-### Rojo Script Structure (CRITICAL)
-**NEVER put init.server.luau in a folder with other .server.luau files!**
-
-If you do, the other scripts become ModuleScripts and WON'T RUN.
-
-```
-# WRONG - Other scripts become ModuleScripts and never execute!
-src/server/
-├── init.server.luau
-└── MyFeature.server.luau  # BROKEN - becomes ModuleScript!
-
-# CORRECT - Each script runs independently
-src/server/
-├── MyFeature.server.luau  # Runs as Script
-└── OtherFeature.server.luau  # Runs as Script
-```
-
-**Before creating scripts:** Check if `init.server.luau` or `init.client.luau` exists in the target folder. If it does, either:
-1. Delete the init file, OR
-2. Put your script in a subfolder with its own init file
-
-### Scope Discipline
-
-If you notice something that should be fixed but is NOT in your issue:
-- **DO NOT FIX IT**
-- The Manager will create a separate issue if needed
-- Stay focused on YOUR issue only
-
 ## Common Mistakes to Avoid
 
-1. ❌ Implementing features not in the issue
-2. ❌ Refactoring code outside scope
-3. ❌ Using `.lua` extension
-4. ❌ Hardcoding Y positions
-5. ❌ Forgetting to anchor parts
-6. ❌ Not testing in Roblox Studio
-7. ❌ Continuing after opening PR
-8. ❌ **Mixing init.*.luau with other scripts in same folder** (scripts won't run!)
+1. ❌ Using `.server.luau` or `.client.luau` for non-entry-point files
+2. ❌ Putting auto-executing code at bottom of ModuleScripts
+3. ❌ Forgetting to update entry point to require new modules
+4. ❌ Using `.lua` extension
+5. ❌ Hardcoding Y positions
+6. ❌ Forgetting to anchor parts
+7. ❌ Implementing features not in the issue
+8. ❌ Continuing after opening PR
+
+## Quick Reference
+
+| Task | Correct Approach |
+|------|------------------|
+| New server feature | Create `src/server/Feature.luau`, update `init.server.luau` |
+| New client feature | Create `src/client/Feature.luau`, update `init.client.luau` |
+| New shared utility | Create `src/shared/Utility.luau` |
+| Feature needs terrain height | `require(Shared.TerrainUtils).getHeightAt(terrain, x, z)` |
 
 ## Your Identity
 
@@ -175,20 +201,5 @@ You are:
 - Running in **one-shot mode** (not interactive)
 - Focused on **one issue only**
 - Done when **PR is opened**
-
-You were spawned by the Manager using:
-```bash
-./spawn-worker.sh $ISSUE_NUMBER
-```
-
-Your output is logged to:
-```
-.claude-workers/logs/$ISSUE_NUMBER.log
-```
-
-Your status is tracked in:
-```
-.claude-workers/status/$ISSUE_NUMBER.json
-```
 
 **Complete your task. Open the PR. Exit.**
