@@ -267,6 +267,34 @@ Animate water features within pool structures.
 
 ---
 
+### 5.3 Ambient Music System
+**GitHub Issue: #49**
+**Priority: HIGH**
+
+Implement ambient music with Roman-themed soundtrack for immersive atmosphere.
+
+**Soundtrack (6 tracks):**
+| Track | Asset ID | Duration |
+|-------|----------|----------|
+| 01-dawn | `123517555949581` | 4:13 |
+| 02-forum | `92805060343276` | 5:16 |
+| 03-march | `139982351033320` | 6:19 |
+| 04-colosseum | `94282741928731` | 6:19 |
+| 05-caesar | `83679996557602` | 6:19 |
+| 06-eternal | `122383615563909` | 4:13 |
+
+**Features:**
+- Playlist playback with shuffle
+- Smooth crossfade between tracks
+- Volume control
+- Optional: context-aware music (time-of-day, area-based)
+
+**Files:**
+- `src/client/MusicManager.client.luau`
+- `src/shared/MusicConfig.luau`
+
+---
+
 ## Phase 6: Probability-Based Spawning
 
 ### 6.1 Decorative Element Distribution
