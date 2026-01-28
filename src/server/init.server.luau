@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.0.0"
+local VERSION = "1.1.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -15,6 +15,10 @@ end
 print("[Server] Found Shared folder")
 
 -- Require server modules
+-- CRITICAL: WorldPlanGenerator must be loaded FIRST as all other systems depend on it
+local WorldPlanGenerator = require(script.WorldPlanGenerator)
+print(string.format("[Server] Loaded WorldPlanGenerator v%s", WorldPlanGenerator.VERSION))
+
 local TerrainManager = require(script.TerrainManager)
 print(string.format("[Server] Loaded TerrainManager v%s", TerrainManager.VERSION))
 
@@ -30,7 +34,21 @@ print(string.format("[Server] Loaded WaterFeatures v%s", WaterFeatures.VERSION))
 -- Configuration
 local MAP_SIZE = 1024
 
--- Bootstrap terrain
+-- STEP 1: Generate World Plan FIRST (single source of truth)
+-- This defines the abstract layout that all other systems query
+local worldPlanGenerator = WorldPlanGenerator.new({
+    mapSize = MAP_SIZE,
+})
+local worldPlan = worldPlanGenerator:generate()
+
+-- Store world plan in a ModuleScript for other systems to access
+-- (In production, this would be stored in a shared location)
+print(string.format("[Server] World plan created - %d landmarks, %d roads",
+    #worldPlan:getLandmarks(),
+    #worldPlan:getRoads()
+))
+
+-- STEP 2: Generate Terrain (queries WorldPlan for river to make low points)
 local terrainManager = TerrainManager.new({
     size = MAP_SIZE,
     baseHeight = 20,
