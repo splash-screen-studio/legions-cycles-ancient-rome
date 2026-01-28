@@ -122,6 +122,12 @@ describe("WaterPool", function()
         expect(string.find(moduleSource, "Enum.Material.Air", 1, true)).toNotBeNil()
     end)
 
+    it("should fill water to near the rim so fountain looks full", function()
+        -- Bug fix #100: Water surface should be near wall top, not at terrain level
+        -- waterSurface = wallTop - 1 (1 stud below rim)
+        expect(string.find(moduleSource, "wallTop - 1", 1, true)).toNotBeNil()
+    end)
+
     it("should not have auto-executing code at module end", function()
         -- Check that module ends with return statement, not function calls
         local lines = {}
