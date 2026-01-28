@@ -100,6 +100,8 @@ log("  Legions & Cycles: Ancient Rome - Tests")
 log("===========================================")
 
 -- Run test suites
+require("./shared/WorldPlan.spec")
+require("./server/WorldPlanGenerator.spec")
 require("./server/SpawnManager.spec")
 require("./server/WaterPool.spec")
 require("./server/WaterFeatures.spec")
