@@ -3,13 +3,19 @@
     WaterPool - Reusable water pool module with part-built walls
     CRITICAL: Water terrain ONLY exists within part-built pool walls
     Based on BRicey techniques for terrain and part management
+
+    Containment Rules:
+    1. Walls extend ABOVE water surface (rimHeight studs above)
+    2. Floor is solid part-based
+    3. ALL terrain inside walls is cleared (including above water)
+    4. Water terrain fills only up to water surface level
 ]]
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local WaterPool = {}
 WaterPool.__index = WaterPool
-WaterPool.VERSION = "1.0.0"
+WaterPool.VERSION = "2.0.0"
 
 -- Type definitions
 export type PoolConfig = {
@@ -18,6 +24,7 @@ export type PoolConfig = {
     wallMaterial: Enum.Material,
     wallColor: Color3,
     wallThickness: number?,
+    rimHeight: number?, -- How much walls extend above water surface (default: 2)
     name: string?,
 }
 
@@ -52,11 +59,13 @@ function WaterPool:build(): Folder
     local pos = config.position
     local size = config.size
     local thickness = config.wallThickness or 2
+    local rimHeight = config.rimHeight or 2 -- Walls extend above water
 
     -- CRITICAL: Query terrain height at center position
     local terrainY = self.terrainUtils.getHeightAt(self.terrain, pos.X, pos.Z)
     local poolBottom = terrainY - size.Y
-    local poolTop = terrainY
+    local waterSurface = terrainY -- Water surface at terrain level
+    local wallTop = terrainY + rimHeight -- Walls extend above water
 
     -- Create folder for organization
     local folderName = config.name or string.format("WaterPool_%.0f_%.0f", pos.X, pos.Z)
@@ -64,6 +73,9 @@ function WaterPool:build(): Folder
     folder.Name = folderName
     folder.Parent = workspace
     self.folder = folder
+
+    -- Total wall height (from pool bottom to above water)
+    local totalWallHeight = size.Y + rimHeight
 
     -- Create bottom (floor of pool)
     local bottom = self:_createWall(
@@ -73,40 +85,55 @@ function WaterPool:build(): Folder
     )
     bottom.Parent = folder
 
-    -- Create 4 walls (North, South, East, West)
+    -- Create 4 walls (extend from pool bottom to above water surface)
     -- North wall (+Z side)
     local northWall = self:_createWall(
         "NorthWall",
-        Vector3.new(pos.X, (poolBottom + poolTop) / 2, pos.Z + size.Z / 2 + thickness / 2),
-        Vector3.new(size.X + thickness * 2, size.Y, thickness)
+        Vector3.new(pos.X, poolBottom + totalWallHeight / 2, pos.Z + size.Z / 2 + thickness / 2),
+        Vector3.new(size.X + thickness * 2, totalWallHeight, thickness)
     )
     northWall.Parent = folder
 
     -- South wall (-Z side)
     local southWall = self:_createWall(
         "SouthWall",
-        Vector3.new(pos.X, (poolBottom + poolTop) / 2, pos.Z - size.Z / 2 - thickness / 2),
-        Vector3.new(size.X + thickness * 2, size.Y, thickness)
+        Vector3.new(pos.X, poolBottom + totalWallHeight / 2, pos.Z - size.Z / 2 - thickness / 2),
+        Vector3.new(size.X + thickness * 2, totalWallHeight, thickness)
     )
     southWall.Parent = folder
 
     -- East wall (+X side)
     local eastWall = self:_createWall(
         "EastWall",
-        Vector3.new(pos.X + size.X / 2 + thickness / 2, (poolBottom + poolTop) / 2, pos.Z),
-        Vector3.new(thickness, size.Y, size.Z)
+        Vector3.new(pos.X + size.X / 2 + thickness / 2, poolBottom + totalWallHeight / 2, pos.Z),
+        Vector3.new(thickness, totalWallHeight, size.Z)
     )
     eastWall.Parent = folder
 
     -- West wall (-X side)
     local westWall = self:_createWall(
         "WestWall",
-        Vector3.new(pos.X - size.X / 2 - thickness / 2, (poolBottom + poolTop) / 2, pos.Z),
-        Vector3.new(thickness, size.Y, size.Z)
+        Vector3.new(pos.X - size.X / 2 - thickness / 2, poolBottom + totalWallHeight / 2, pos.Z),
+        Vector3.new(thickness, totalWallHeight, size.Z)
     )
     westWall.Parent = folder
 
-    -- Fill interior with water terrain (inside the walls only)
+    -- CRITICAL: Clear ALL terrain inside walls (including air above water)
+    -- This ensures no terrain leaks through the walls
+    local clearMinCorner = Vector3.new(
+        pos.X - size.X / 2,
+        poolBottom,
+        pos.Z - size.Z / 2
+    )
+    local clearMaxCorner = Vector3.new(
+        pos.X + size.X / 2,
+        wallTop, -- Clear up to top of walls
+        pos.Z + size.Z / 2
+    )
+    local clearRegion = Region3.new(clearMinCorner, clearMaxCorner)
+    self.terrain:FillRegion(clearRegion, 4, Enum.Material.Air)
+
+    -- Fill water region only (from pool bottom to water surface)
     local waterMinCorner = Vector3.new(
         pos.X - size.X / 2,
         poolBottom,
@@ -114,7 +141,7 @@ function WaterPool:build(): Folder
     )
     local waterMaxCorner = Vector3.new(
         pos.X + size.X / 2,
-        poolTop - 0.1, -- Slightly below terrain surface
+        waterSurface - 0.1, -- Slightly below terrain surface
         pos.Z + size.Z / 2
     )
     local waterRegion = Region3.new(waterMinCorner, waterMaxCorner)
@@ -123,7 +150,7 @@ function WaterPool:build(): Folder
     self.terrain:FillRegion(waterRegion, 4, Enum.Material.Water)
 
     print(string.format(
-        "[WaterPool v%s] Built pool '%s' at (%.0f, %.0f, %.0f), size (%.0f, %.0f, %.0f)",
+        "[WaterPool v%s] Built pool '%s' at (%.0f, %.0f, %.0f), size (%.0f, %.0f, %.0f), depth %.0f, rim %.0f",
         WaterPool.VERSION,
         folderName,
         pos.X,
@@ -131,7 +158,9 @@ function WaterPool:build(): Folder
         pos.Z,
         size.X,
         size.Y,
-        size.Z
+        size.Z,
+        size.Y,
+        rimHeight
     ))
 
     return folder
@@ -156,21 +185,23 @@ function WaterPool:destroy()
         local config = self.config
         local pos = config.position
         local size = config.size
+        local rimHeight = config.rimHeight or 2
         local terrainY = self.terrainUtils.getHeightAt(self.terrain, pos.X, pos.Z)
         local poolBottom = terrainY - size.Y
+        local wallTop = terrainY + rimHeight
 
-        local waterMinCorner = Vector3.new(
+        local clearMinCorner = Vector3.new(
             pos.X - size.X / 2,
             poolBottom,
             pos.Z - size.Z / 2
         )
-        local waterMaxCorner = Vector3.new(
+        local clearMaxCorner = Vector3.new(
             pos.X + size.X / 2,
-            terrainY,
+            wallTop,
             pos.Z + size.Z / 2
         )
-        local waterRegion = Region3.new(waterMinCorner, waterMaxCorner)
-        self.terrain:FillRegion(waterRegion, 4, Enum.Material.Air)
+        local clearRegion = Region3.new(clearMinCorner, clearMaxCorner)
+        self.terrain:FillRegion(clearRegion, 4, Enum.Material.Air)
 
         -- Destroy all parts
         self.folder:Destroy()
