@@ -122,7 +122,7 @@ function WorldPlanGenerator._generateZones(self: WorldPlanGeneratorInstance): { 
 end
 
 -- Generate landmark positions
-function WorldPlanGenerator._generateLandmarks(self: WorldPlanGeneratorInstance): { WorldPlan.Landmark }
+function WorldPlanGenerator:_generateLandmarks(): { WorldPlan.Landmark }
     local landmarks: { WorldPlan.Landmark } = {}
 
     -- Forum - center of the civic zone
