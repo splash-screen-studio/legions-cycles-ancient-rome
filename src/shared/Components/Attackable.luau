@@ -5,7 +5,7 @@
     Based on BRicey Composition Over Inheritance tutorial
 ]]
 
-local Damageable = require(script.Parent.Damageable)
+local _Damageable = require(script.Parent.Damageable) -- For type reference
 
 export type AttackableData = {
     damage: number,
@@ -63,7 +63,7 @@ function Attackable.attack(self: Attackable, target: AttackableTarget): boolean
 end
 
 --- Check if can attack (cooldown elapsed)
-function Attackable.canAttack(self: Attackable, target: AttackableTarget?): boolean
+function Attackable.canAttack(self: Attackable, _target: AttackableTarget?): boolean
     local currentTime = os.clock()
     return (currentTime - self.lastAttackTime) >= self.attackCooldown
 end
