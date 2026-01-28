@@ -19,7 +19,7 @@ local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
 
 local RiverBuilder = {}
 RiverBuilder.__index = RiverBuilder
-RiverBuilder.VERSION = "1.0.0"
+RiverBuilder.VERSION = "1.1.0"
 
 -- River construction constants
 local WALL_HEIGHT = 12 -- Height of river walls (deep enough to swim: 8-12 studs)
@@ -220,9 +220,13 @@ function RiverBuilder:_fillWithWater(): ()
         -- Query terrain height
         local terrainY = TerrainUtils.getHeightAt(self.terrain, centerX, centerZ)
 
-        -- Water fills from floor to just below terrain surface
-        local waterHeight = WALL_HEIGHT - FLOOR_THICKNESS - WATER_SURFACE_OFFSET
-        local waterY = terrainY - WALL_HEIGHT / 2 - WATER_SURFACE_OFFSET / 2
+        -- Water fills from floor top to just below terrain surface
+        -- Floor top is at: terrainY - WALL_HEIGHT + FLOOR_THICKNESS
+        -- Water surface is at: terrainY - WATER_SURFACE_OFFSET
+        local waterBottom = terrainY - WALL_HEIGHT + FLOOR_THICKNESS
+        local waterTop = terrainY - WATER_SURFACE_OFFSET
+        local waterHeight = waterTop - waterBottom
+        local waterY = (waterBottom + waterTop) / 2
 
         -- Calculate rotation
         local rotation = math.atan2(direction.X, direction.Y)
