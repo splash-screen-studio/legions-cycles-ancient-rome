@@ -111,6 +111,12 @@ describe("WaterPool", function()
         expect(string.find(moduleSource, "clearRegion", 1, true)).toNotBeNil()
     end)
 
+    it("should clear terrain below floor part to prevent grass showing through", function()
+        -- Bug fix: terrain clearing must extend below floor part (poolBottom - thickness)
+        -- This prevents grass terrain from growing through the bottom of the pool
+        expect(string.find(moduleSource, "poolBottom - thickness", 1, true)).toNotBeNil()
+    end)
+
     it("should clear water on destroy", function()
         -- Should fill with Air to remove water when destroyed
         expect(string.find(moduleSource, "Enum.Material.Air", 1, true)).toNotBeNil()

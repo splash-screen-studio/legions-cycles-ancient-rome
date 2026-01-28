@@ -15,7 +15,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local WaterPool = {}
 WaterPool.__index = WaterPool
-WaterPool.VERSION = "2.0.0"
+WaterPool.VERSION = "2.1.0"
 
 -- Type definitions
 export type PoolConfig = {
@@ -120,9 +120,10 @@ function WaterPool:build(): Folder
 
     -- CRITICAL: Clear ALL terrain inside walls (including air above water)
     -- This ensures no terrain leaks through the walls
+    -- NOTE: Clear below floor part (poolBottom - thickness) to prevent grass showing through
     local clearMinCorner = Vector3.new(
         pos.X - size.X / 2,
-        poolBottom,
+        poolBottom - thickness,
         pos.Z - size.Z / 2
     )
     local clearMaxCorner = Vector3.new(
@@ -185,14 +186,16 @@ function WaterPool:destroy()
         local config = self.config
         local pos = config.position
         local size = config.size
+        local thickness = config.wallThickness or 2
         local rimHeight = config.rimHeight or 2
         local terrainY = self.terrainUtils.getHeightAt(self.terrain, pos.X, pos.Z)
         local poolBottom = terrainY - size.Y
         local wallTop = terrainY + rimHeight
 
+        -- Clear from below floor part (poolBottom - thickness) to wallTop
         local clearMinCorner = Vector3.new(
             pos.X - size.X / 2,
-            poolBottom,
+            poolBottom - thickness,
             pos.Z - size.Z / 2
         )
         local clearMaxCorner = Vector3.new(
