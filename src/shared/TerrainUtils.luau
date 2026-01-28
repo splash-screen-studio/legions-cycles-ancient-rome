@@ -6,7 +6,7 @@
 ]]
 
 local TerrainUtils = {}
-local TerrainUtils = {}.VERSION = "1.0.0"
+TerrainUtils.VERSION = "1.0.0"
 
 local DEFAULT_RAY_HEIGHT = 10000
 local DEFAULT_RAY_LENGTH = 20000

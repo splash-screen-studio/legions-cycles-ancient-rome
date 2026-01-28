@@ -30,7 +30,7 @@
 ]]
 
 local Maid = {}
-local Maid = {}.VERSION = "1.0.0"
+Maid.VERSION = "1.0.0"
 Maid.__index = Maid
 
 export type Task = RBXScriptConnection | Instance | () -> () | thread

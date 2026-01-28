@@ -5,7 +5,7 @@
 ]]
 
 local CFrameUtils = {}
-local CFrameUtils = {}.VERSION = "1.0.0"
+CFrameUtils.VERSION = "1.0.0"
 
 --- Chain a child CFrame to a parent CFrame (parent-relative offset)
 function CFrameUtils.chain(parent: CFrame, offset: CFrame): CFrame

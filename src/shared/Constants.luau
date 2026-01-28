@@ -5,7 +5,7 @@
 ]]
 
 local Constants = {}
-local Constants = {}.VERSION = "1.0.0"
+Constants.VERSION = "1.0.0"
 
 -- Grid sizes for placement system (studs)
 Constants.GRID_SIZES = { 0, 1, 2, 4, 8 }
