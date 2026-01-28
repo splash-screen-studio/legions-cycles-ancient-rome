@@ -120,7 +120,21 @@ Read `CLAUDE.md` for:
 2. Update entry point (`init.server.luau` or `init.client.luau`) to require and initialize
 3. Follow coding standards
 
-### Step 4: Verify
+### Step 4: Write Tests
+
+Create test file in `tests/` for new modules:
+```bash
+# Example: tests/shared/MyModule.spec.luau
+```
+
+### Step 5: Run Quality Checks
+
+```bash
+selene src/                    # Lint - must pass
+lune run tests/init.luau       # Tests - must pass
+```
+
+### Step 6: Verify
 
 Check that:
 - [ ] ModuleScripts use `.luau` extension (not `.server.luau` or `.client.luau`)
@@ -128,6 +142,8 @@ Check that:
 - [ ] No auto-executing code at bottom of ModuleScripts
 - [ ] All parts are anchored
 - [ ] Terrain height is queried for Y positioning
+- [ ] Tests written and passing
+- [ ] Lint passes (selene)
 
 ### Step 5: Commit
 

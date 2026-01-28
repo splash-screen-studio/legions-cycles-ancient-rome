@@ -238,12 +238,58 @@ return MyModule  -- Required!
 - **Materials**: Marble, Brick, Concrete, Wood, Sand, Slate
 - **Architecture**: Columns (Doric, Corinthian), arches, atriums, forums
 
+## Code Quality Requirements
+
+**Every PR must pass lint, typecheck, and tests.**
+
+### Tools (via Aftman)
+```bash
+aftman install  # Install all tools
+```
+
+| Tool | Command | Purpose |
+|------|---------|---------|
+| Selene | `selene src/` | Linting |
+| Luau | `luau-analyze src/` | Type checking |
+| Lune | `lune run tests/init.luau` | Unit tests |
+
+### PR Checks (must all pass)
+1. **Lint**: `selene src/` - no errors
+2. **Typecheck**: `luau-analyze src/` - no errors
+3. **Tests**: `lune run tests/init.luau` - all pass
+
+## Testing Requirements
+
+**Every PR must include tests.** We use [Lune](https://github.com/lune-org/lune) for offline Luau testing.
+
+### Running Tests
+```bash
+lune run tests/init.luau
+```
+
+### Test File Naming
+- Tests go in `tests/` directory
+- Test files: `ModuleName.spec.luau`
+- Example: `tests/shared/TerrainUtils.spec.luau`
+
+### PR Requirements
+- [ ] All new modules must have corresponding `.spec.luau` test file
+- [ ] All tests must pass before merge
+- [ ] Test coverage for new functions/methods
+
+### What to Test
+1. Module has VERSION constant
+2. Module exports expected functions
+3. Functions return expected types
+4. Edge cases and error handling
+
 ## Git Workflow
 
 1. **Branch naming**: `issue-{number}-brief-description`
 2. **Commit format**: `Implement #22: Brief description`
 3. **PR body**: Must include `Closes #{number}`
-4. **Review**: Wait for `@claude` review before merge
+4. **PR checklist**: Must include test verification
+5. **Review**: Wait for `@claude` review before merge
 
 ## BRicey Techniques Reference
 
