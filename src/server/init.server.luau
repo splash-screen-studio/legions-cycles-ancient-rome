@@ -24,6 +24,9 @@ print(string.format("[Server] Loaded MapBoundary v%s", MapBoundary.VERSION))
 local SpawnManager = require(script.SpawnManager)
 print(string.format("[Server] Loaded SpawnManager v%s", SpawnManager.VERSION))
 
+local WaterFeatures = require(script.WaterFeatures)
+print(string.format("[Server] Loaded WaterFeatures v%s", WaterFeatures.VERSION))
+
 -- Configuration
 local MAP_SIZE = 1024
 
@@ -51,5 +54,14 @@ local spawnManager = SpawnManager.new({
     spawnRadius = 10,
 })
 spawnManager:start()
+
+-- Bootstrap water features (must be after terrain generation)
+local waterFeatures = WaterFeatures.new({
+    fountainPosition = Vector3.new(350, 0, 350), -- Near spawn area
+    riverStartPosition = Vector3.new(200, 0, 100), -- Western valley
+    enableFountain = true,
+    enableRiver = true,
+})
+waterFeatures:start()
 
 print(string.format("[Server v%s] All systems initialized", VERSION))
