@@ -101,6 +101,8 @@ log("===========================================")
 
 -- Run test suites
 require("./server/SpawnManager.spec")
+require("./server/WaterPool.spec")
+require("./server/WaterFeatures.spec")
 
 -- Print summary
 log("\n===========================================")
