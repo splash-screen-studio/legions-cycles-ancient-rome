@@ -1,0 +1,5 @@
+# Tool versions managed by Aftman
+# https://github.com/LPGhatguy/aftman
+
+[tools]
+rojo = "rojo-rbx/rojo@7.6.1"
