@@ -70,9 +70,29 @@ describe("FountainConfig", function()
         expect(string.find(moduleSource, "Colosseum_PublicFountain", 1, true)).toNotBeNil()
     end)
 
-    it("should have basin placements at road intersections", function()
+    it("should have basin placements at street corners", function()
         expect(string.find(moduleSource, "WestRoad_Basin", 1, true)).toNotBeNil()
         expect(string.find(moduleSource, "EastRoad_Basin", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "NorthWest_Basin", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "NorthEast_Basin", 1, true)).toNotBeNil()
+    end)
+
+    it("should have Thermae plaza fountain", function()
+        expect(string.find(moduleSource, "Thermae_PublicFountain", 1, true)).toNotBeNil()
+    end)
+
+    it("should have Temple plaza fountain", function()
+        expect(string.find(moduleSource, "Temple_PublicFountain", 1, true)).toNotBeNil()
+    end)
+
+    it("should use WorldPlan coordinates (centered at 0,0)", function()
+        -- Positions should be in WorldPlan coordinate system
+        expect(string.find(moduleSource, "WorldPlan coordinates", 1, true)).toNotBeNil()
+    end)
+
+    it("should document road avoidance", function()
+        -- Config should mention roads are avoided
+        expect(string.find(moduleSource, "avoid roads", 1, true)).toNotBeNil()
     end)
 
     it("should have getTypeConfig function", function()
