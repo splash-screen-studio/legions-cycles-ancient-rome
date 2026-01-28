@@ -36,7 +36,7 @@ export type ProximityRule = {
 
 -- Altitude bands for base material selection
 -- Heights are in studs, based on TerrainManager's baseHeight=20, amplitude=40
-MaterialConfig.ALTITUDE_BANDS: { AltitudeBand } = {
+MaterialConfig.ALTITUDE_BANDS = {
     {
         minAltitude = 50,
         maxAltitude = math.huge,
@@ -68,7 +68,7 @@ MaterialConfig.ALTITUDE_BANDS: { AltitudeBand } = {
 }
 
 -- Zone material overrides (higher priority than altitude)
-MaterialConfig.ZONE_MATERIALS: { [string]: ZoneMaterialOverride } = {
+MaterialConfig.ZONE_MATERIALS = {
     civic = {
         primaryMaterial = Enum.Material.Cobblestone,
         secondaryMaterial = Enum.Material.Brick,
@@ -112,7 +112,7 @@ MaterialConfig.PROXIMITY_RULES = {
 }
 
 -- Landmark-specific material overrides
-MaterialConfig.LANDMARK_MATERIALS: { [string]: Enum.Material } = {
+MaterialConfig.LANDMARK_MATERIALS = {
     Forum = Enum.Material.Cobblestone,
     Colosseum = Enum.Material.Sand,
     Thermae = Enum.Material.Cobblestone,
@@ -121,7 +121,7 @@ MaterialConfig.LANDMARK_MATERIALS: { [string]: Enum.Material } = {
 }
 
 -- Materials allowed in Mediterranean climate (NOT allowed: Snow, Ice, Mud, LeafyGrass)
-MaterialConfig.ALLOWED_MATERIALS: { Enum.Material } = {
+MaterialConfig.ALLOWED_MATERIALS = {
     Enum.Material.Grass,
     Enum.Material.Ground,
     Enum.Material.Rock,
