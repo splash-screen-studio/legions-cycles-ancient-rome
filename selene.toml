@@ -3,7 +3,7 @@
 
 std = "roblox"
 
-[config]
+[rules]
 empty_if = "warn"
 empty_loop = "warn"
 if_same_then_else = "warn"
