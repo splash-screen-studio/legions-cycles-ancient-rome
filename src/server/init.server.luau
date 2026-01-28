@@ -34,6 +34,9 @@ print(string.format("[Server] Loaded WaterFeatures v%s", WaterFeatures.VERSION))
 local RiverBuilder = require(script.RiverBuilder)
 print(string.format("[Server] Loaded RiverBuilder v%s", RiverBuilder.VERSION))
 
+local TerrainMaterials = require(script.TerrainMaterials)
+print(string.format("[Server] Loaded TerrainMaterials v%s", TerrainMaterials.VERSION))
+
 -- Configuration
 local MAP_SIZE = 1024
 
@@ -66,6 +69,14 @@ local riverBuilder = RiverBuilder.new({
     worldPlan = worldPlan,
 })
 riverBuilder:build()
+
+-- STEP 4: Apply context-aware terrain materials
+-- This must run AFTER terrain shape is generated
+local terrainMaterials = TerrainMaterials.new({
+    terrain = workspace.Terrain,
+    worldPlan = worldPlan,
+})
+terrainMaterials:applyAll()
 
 -- Bootstrap map boundary walls
 local mapBoundary = MapBoundary.new({

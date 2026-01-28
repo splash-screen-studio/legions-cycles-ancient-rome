@@ -101,11 +101,13 @@ log("===========================================")
 
 -- Run test suites
 require("./shared/WorldPlan.spec")
+require("./shared/MaterialConfig.spec")
 require("./server/WorldPlanGenerator.spec")
 require("./server/SpawnManager.spec")
 require("./server/WaterPool.spec")
 require("./server/WaterFeatures.spec")
 require("./server/RiverBuilder.spec")
+require("./server/TerrainMaterials.spec")
 
 -- Print summary
 log("\n===========================================")
