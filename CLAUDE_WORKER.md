@@ -129,6 +129,27 @@ WRONG:   FeatureName.server.lua
 part.Anchored = true  -- ALWAYS for static objects
 ```
 
+### Rojo Script Structure (CRITICAL)
+**NEVER put init.server.luau in a folder with other .server.luau files!**
+
+If you do, the other scripts become ModuleScripts and WON'T RUN.
+
+```
+# WRONG - Other scripts become ModuleScripts and never execute!
+src/server/
+├── init.server.luau
+└── MyFeature.server.luau  # BROKEN - becomes ModuleScript!
+
+# CORRECT - Each script runs independently
+src/server/
+├── MyFeature.server.luau  # Runs as Script
+└── OtherFeature.server.luau  # Runs as Script
+```
+
+**Before creating scripts:** Check if `init.server.luau` or `init.client.luau` exists in the target folder. If it does, either:
+1. Delete the init file, OR
+2. Put your script in a subfolder with its own init file
+
 ### Scope Discipline
 
 If you notice something that should be fixed but is NOT in your issue:
@@ -145,6 +166,7 @@ If you notice something that should be fixed but is NOT in your issue:
 5. ❌ Forgetting to anchor parts
 6. ❌ Not testing in Roblox Studio
 7. ❌ Continuing after opening PR
+8. ❌ **Mixing init.*.luau with other scripts in same folder** (scripts won't run!)
 
 ## Your Identity
 

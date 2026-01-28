@@ -93,6 +93,32 @@ All procedurally generated/placed parts must be anchored:
 part.Anchored = true
 ```
 
+### 5. Rojo Script Structure (CRITICAL)
+**Do NOT put `init.server.luau` in folders with other `.server.luau` files!**
+
+When a folder has `init.server.luau`, ALL other scripts in that folder become **ModuleScripts** (not auto-running Scripts).
+
+```
+# WRONG - TerrainManager becomes a ModuleScript and NEVER RUNS
+src/server/
+├── init.server.luau           # Makes folder a Script
+└── TerrainManager.server.luau # Becomes ModuleScript child - BROKEN!
+
+# CORRECT - Each script runs independently
+src/server/
+├── TerrainManager.server.luau # Becomes Script - RUNS!
+└── AnotherFeature.server.luau # Becomes Script - RUNS!
+
+# ALSO CORRECT - Subfolders for organization
+src/server/
+├── TerrainManager/
+│   └── init.server.luau       # Becomes Script - RUNS!
+└── AnotherFeature/
+    └── init.server.luau       # Becomes Script - RUNS!
+```
+
+**Rule: Never mix `init.*.luau` with other `*.server.luau` or `*.client.luau` files in the same folder.**
+
 ## Coding Standards
 
 ```lua

@@ -95,6 +95,7 @@ Create/modify ONLY files specified in the issue.
 - Use .luau extension (NOT .lua)
 - Query terrain height for Y positioning
 - Anchor all static parts
+- CRITICAL: Never put init.server.luau in a folder with other .server.luau files (they become ModuleScripts and won't run!)
 
 ## Step 5: Test
 Run 'rojo serve' and test in Roblox Studio.
