@@ -127,12 +127,30 @@ Create test file in `tests/` for new modules:
 # Example: tests/shared/MyModule.spec.luau
 ```
 
-### Step 5: Run Quality Checks
+### Step 5: Run Quality Checks (CRITICAL)
+
+**Lint MUST pass before pushing.** CI will reject PRs with lint failures.
 
 ```bash
-selene src/                    # Lint - must pass
-lune run tests/init.luau       # Tests - must pass
+# Run lint - MUST have 0 warnings, 0 errors
+selene src/
+
+# Run tests - MUST pass
+lune run tests/init.luau
 ```
+
+**If selene doesn't work locally** (architecture issues), ensure your code follows these rules:
+- No unused variables (prefix with `_` if intentionally unused: `_unusedParam`)
+- Use method syntax for class methods: `function Class:method()` not `function Class.method(self)`
+- No shadowed variables
+- No empty if statements
+
+**After pushing, CHECK CI immediately:**
+```bash
+gh pr checks <PR_NUMBER>
+```
+
+If lint fails, fix and push again. Do NOT leave PRs with failing checks.
 
 ### Step 6: Verify
 
@@ -200,6 +218,9 @@ Your work is complete. The Judge (Claude GitHub App) will review your PR.
 6. ❌ Forgetting to anchor parts
 7. ❌ Implementing features not in the issue
 8. ❌ Continuing after opening PR
+9. ❌ **Leaving unused variables** (use `_varName` prefix if intentional)
+10. ❌ **Using `.method(self)` instead of `:method()`** for class methods
+11. ❌ **Pushing without checking CI** - always verify lint passes
 
 ## Quick Reference
 
