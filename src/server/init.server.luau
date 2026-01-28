@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.1.0"
+local VERSION = "1.2.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -31,6 +31,9 @@ print(string.format("[Server] Loaded SpawnManager v%s", SpawnManager.VERSION))
 local WaterFeatures = require(script.WaterFeatures)
 print(string.format("[Server] Loaded WaterFeatures v%s", WaterFeatures.VERSION))
 
+local TerrainMaterials = require(script.TerrainMaterials)
+print(string.format("[Server] Loaded TerrainMaterials v%s", TerrainMaterials.VERSION))
+
 -- Configuration
 local MAP_SIZE = 1024
 
@@ -56,6 +59,14 @@ local terrainManager = TerrainManager.new({
     noiseScale = 0.01,
 })
 terrainManager:generate()
+
+-- STEP 3: Apply context-aware terrain materials
+-- This must run AFTER terrain shape is generated
+local terrainMaterials = TerrainMaterials.new({
+    terrain = workspace.Terrain,
+    worldPlan = worldPlan,
+})
+terrainMaterials:applyAll()
 
 -- Bootstrap map boundary walls
 local mapBoundary = MapBoundary.new({
