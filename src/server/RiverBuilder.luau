@@ -25,7 +25,7 @@ RiverBuilder.VERSION = "1.0.0"
 local WALL_HEIGHT = 12 -- Height of river walls (deep enough to swim: 8-12 studs)
 local WALL_THICKNESS = 2 -- Thickness of wall parts
 local FLOOR_THICKNESS = 2 -- Thickness of river floor
-local SEGMENT_LENGTH = 20 -- Length of each river segment
+local _SEGMENT_LENGTH = 20 -- Length of each river segment (reserved for future use)
 local WATER_SURFACE_OFFSET = 0.5 -- How far below terrain surface to fill water
 
 -- River material colors (rock/natural)
@@ -160,7 +160,7 @@ end
 function RiverBuilder:_clearTerrainInRiver(): ()
     local riverPath = self.worldPlan:getRiverPath()
     local riverWidth = self.worldPlan:getRiverWidth()
-    local halfWidth = riverWidth / 2 + WALL_THICKNESS
+    local _halfWidth = riverWidth / 2 + WALL_THICKNESS
 
     print(string.format("[RiverBuilder v%s] Clearing terrain inside river corridor...", RiverBuilder.VERSION))
 

@@ -40,7 +40,7 @@ local DEFAULT_MAP_SIZE = 1024
 local DEFAULT_RIVER_WIDTH = 40 -- Wider river (30-50 studs as per spec)
 local DEFAULT_URBAN_RADIUS = 150
 local DEFAULT_CIVIC_RADIUS = 80
-local DEFAULT_RIVER_DEPTH = 10 -- 8-12 studs deep for swimming
+local _DEFAULT_RIVER_DEPTH = 10 -- 8-12 studs deep for swimming (used by RiverBuilder)
 
 function WorldPlanGenerator.new(config: WorldPlanGeneratorConfig?): WorldPlanGeneratorInstance
     local self = setmetatable({}, WorldPlanGenerator)
