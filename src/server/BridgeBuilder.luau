@@ -260,7 +260,7 @@ function BridgeBuilder:_buildPillars(
     centerZ: number,
     deckY: number,
     bridgeWidth: number,
-    bridgeLength: number,
+    _bridgeLength: number,
     rotation: number,
     riverFloorY: number,
     folder: Folder
