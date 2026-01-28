@@ -105,6 +105,7 @@ require("./server/WorldPlanGenerator.spec")
 require("./server/SpawnManager.spec")
 require("./server/WaterPool.spec")
 require("./server/WaterFeatures.spec")
+require("./server/RiverBuilder.spec")
 
 -- Print summary
 log("\n===========================================")

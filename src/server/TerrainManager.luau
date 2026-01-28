@@ -14,7 +14,7 @@ local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
 
 local TerrainManager = {}
 TerrainManager.__index = TerrainManager
-TerrainManager.VERSION = "1.0.0"
+TerrainManager.VERSION = "1.1.0"
 
 -- Terrain generation constants
 local TERRAIN_SIZE = 1024 -- Total terrain size in studs (1024x1024)
@@ -30,13 +30,21 @@ local LACUNARITY = 2 -- Frequency multiplier between octaves
 local CLIFF_SLOPE_THRESHOLD = 0.6 -- Radians - steeper than this = rock
 local HILLTOP_HEIGHT_RATIO = 0.7 -- Above this ratio of max height = rock
 
+-- Import WorldPlan type
+local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
+
 type TerrainConfig = {
     size: number?,
     baseHeight: number?,
     heightAmplitude: number?,
     noiseScale: number?,
     seed: number?,
+    worldPlan: WorldPlan.WorldPlanInstance?,
 }
+
+-- River corridor constants
+local RIVER_FLOOR_DEPTH = 15 -- How much below base height the river floor is
+local RIVER_BANK_WIDTH = 15 -- Width of sloping banks on each side
 
 function TerrainManager.new(config: TerrainConfig?)
     local self = setmetatable({}, TerrainManager)
@@ -48,6 +56,7 @@ function TerrainManager.new(config: TerrainConfig?)
     self.noiseScale = cfg.noiseScale or NOISE_SCALE
     self.seed = cfg.seed or math.random(1, 100000)
     self.terrain = workspace.Terrain
+    self.worldPlan = cfg.worldPlan -- Optional world plan for river corridor
 
     return self
 end
@@ -74,10 +83,41 @@ function TerrainManager:_sampleNoise(x: number, z: number): number
     return (total / maxValue + 1) / 2
 end
 
+-- Calculate river corridor height adjustment based on distance from river
+function TerrainManager:_getRiverHeightAdjustment(x: number, z: number): number
+    if not self.worldPlan then
+        return 0
+    end
+
+    local distanceToRiver = self.worldPlan:getDistanceToRiver(x, z)
+    local riverHalfWidth = self.worldPlan:getRiverWidth() / 2
+
+    -- Inside river channel - maximum depth
+    if distanceToRiver <= riverHalfWidth then
+        return -RIVER_FLOOR_DEPTH
+    end
+
+    -- On river bank - gradual slope from river edge to normal terrain
+    local bankDistance = distanceToRiver - riverHalfWidth
+    if bankDistance <= RIVER_BANK_WIDTH then
+        -- Linear interpolation from river depth to normal height
+        local t = bankDistance / RIVER_BANK_WIDTH
+        return -RIVER_FLOOR_DEPTH * (1 - t)
+    end
+
+    -- Outside river corridor - no adjustment
+    return 0
+end
+
 -- Calculate height at a given world position
 function TerrainManager:_calculateHeight(x: number, z: number): number
     local noiseValue = self:_sampleNoise(x, z)
-    return self.baseHeight + noiseValue * self.heightAmplitude
+    local baseValue = self.baseHeight + noiseValue * self.heightAmplitude
+
+    -- Apply river corridor depression
+    local riverAdjustment = self:_getRiverHeightAdjustment(x, z)
+
+    return baseValue + riverAdjustment
 end
 
 -- Determine terrain material based on height and slope
