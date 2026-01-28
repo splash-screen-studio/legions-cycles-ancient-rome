@@ -4,12 +4,16 @@
         "$className": "DataModel",
 
         "ServerScriptService": {
-            "$path": "src/server"
+            "Server": {
+                "$path": "src/server"
+            }
         },
 
         "StarterPlayer": {
             "StarterPlayerScripts": {
-                "$path": "src/client"
+                "Client": {
+                    "$path": "src/client"
+                }
             }
         },
 
