@@ -4,6 +4,27 @@ This document outlines all features to be implemented, adapted from BRicey Roblo
 
 ---
 
+## Target Platform: MOBILE-FIRST
+
+**Primary**: iPhone/iPad (smaller touchscreen, no physical keyboard)
+**Secondary**: Desktop (development testing)
+
+### Mobile Design Requirements
+- Touch-friendly UI (large tap targets, minimal precision)
+- No keyboard shortcuts required for core gameplay
+- Single and two-finger gestures (tap, drag, pinch)
+- On-screen virtual controls where needed
+- Mobile-optimized performance
+- Responsive layout for various screen sizes
+
+### Prioritization Strategy
+1. **Foundational features** - Features that other features depend on
+2. **Project setup & tooling** - Development infrastructure
+3. **Core game experience** - What makes the game playable and fun
+4. **Roman theme alignment** - What makes it feel like Ancient Rome
+
+---
+
 ## Phase 1: Foundation - Terrain System
 
 ### 1.1 Undulating Terrain Generation

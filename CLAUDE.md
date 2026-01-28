@@ -4,7 +4,23 @@
 
 A Roblox game set in Ancient Rome, implementing techniques from [BRicey's YouTube tutorials](https://www.youtube.com/@BRicey/videos) adapted to the Roman theme.
 
-**Key constraint**: The terrain is undulating (rolling hills). ALL placed objects must query terrain height at their X,Z position. Water terrain must ONLY exist within part-built pool walls.
+## Target Platform: MOBILE-FIRST
+
+**Primary platform**: iPhone/iPad (smaller touchscreen, no physical keyboard)
+**Secondary platform**: Desktop (for development testing)
+
+All features must be designed for touch input first:
+- No keyboard shortcuts required for core gameplay
+- Touch-friendly UI (large buttons, minimal precise tapping)
+- Single-finger and two-finger gestures (tap, drag, pinch)
+- On-screen virtual controls where needed
+- Performance optimized for mobile hardware
+
+## Key Constraints
+
+- **Terrain**: Undulating (rolling hills) - ALL placed objects must query terrain height at their X,Z position
+- **Water**: ONLY within part-built pool walls - never placed directly in terrain
+- **Input**: Touch-first design, desktop support secondary
 
 ## BRicey Module Architecture (CRITICAL)
 
