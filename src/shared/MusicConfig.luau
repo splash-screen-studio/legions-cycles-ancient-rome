@@ -5,6 +5,7 @@
 ]]
 
 local MusicConfig = {}
+local MusicConfig = {}.VERSION = "1.0.0"
 
 -- Track asset IDs (uploaded to Roblox)
 MusicConfig.TRACKS = {

@@ -5,6 +5,7 @@
 ]]
 
 local GridUtils = {}
+local GridUtils = {}.VERSION = "1.0.0"
 
 export type TerrainManager = {
     getHeightAt: (self: TerrainManager, x: number, z: number) -> number,

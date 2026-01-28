@@ -20,6 +20,7 @@ local Maid = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Maid
 
 local MusicManager = {}
 MusicManager.__index = MusicManager
+MusicManager.VERSION = "1.0.0"
 
 export type MusicManager = typeof(setmetatable({} :: {
     _sounds: { [string]: Sound },

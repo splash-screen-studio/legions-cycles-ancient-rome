@@ -188,7 +188,28 @@ terrain:FillBlock(cf, size, Enum.Material.Water)  -- NEVER DO THIS
 part.Anchored = true  -- ALWAYS for static objects
 ```
 
-### 5. ModuleScript Structure
+### 5. Subsystem Versioning
+
+Every module must have a VERSION constant and log it on initialization:
+
+```lua
+local MyModule = {}
+MyModule.__index = MyModule
+MyModule.VERSION = "1.0.0"
+
+function MyModule.new()
+    print(string.format("[MyModule v%s] Initializing...", MyModule.VERSION))
+    -- ...
+end
+```
+
+Entry points must log their version and all subsystem versions:
+```lua
+print(string.format("[Server v%s] Starting...", VERSION))
+print(string.format("[Server] Loaded TerrainManager v%s", TerrainManager.VERSION))
+```
+
+### 6. ModuleScript Structure
 ```lua
 -- ModuleScripts must:
 -- 1. Define a table

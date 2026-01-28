@@ -14,9 +14,10 @@ local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
 
 local TerrainManager = {}
 TerrainManager.__index = TerrainManager
+TerrainManager.VERSION = "1.0.0"
 
 -- Terrain generation constants
-local TERRAIN_SIZE = 512 -- Total terrain size in studs (512x512)
+local TERRAIN_SIZE = 1024 -- Total terrain size in studs (1024x1024)
 local RESOLUTION = 4 -- Studs per terrain voxel (Roblox terrain resolution)
 local BASE_HEIGHT = 20 -- Base elevation above sea level
 local HEIGHT_AMPLITUDE = 40 -- Maximum height variation for hills
@@ -130,8 +131,8 @@ end
 
 -- Generate the undulating terrain
 function TerrainManager:generate()
-    print("[TerrainManager] Starting terrain generation...")
-    print(string.format("[TerrainManager] Size: %d, Seed: %d", self.size, self.seed))
+    print("[TerrainManager v" .. TerrainManager.VERSION .. "] Starting terrain generation...")
+    print(string.format("[TerrainManager v" .. TerrainManager.VERSION .. "] Size: %d, Seed: %d", self.size, self.seed))
 
     local startTime = tick()
 
@@ -169,8 +170,8 @@ function TerrainManager:generate()
     end
 
     local elapsed = tick() - startTime
-    print(string.format("[TerrainManager] Terrain generated in %.2f seconds", elapsed))
-    print(string.format("[TerrainManager] Generated %d terrain columns", voxelCount))
+    print(string.format("[TerrainManager v" .. TerrainManager.VERSION .. "] Terrain generated in %.2f seconds", elapsed))
+    print(string.format("[TerrainManager v" .. TerrainManager.VERSION .. "] Generated %d terrain columns", voxelCount))
 
     return true
 end
