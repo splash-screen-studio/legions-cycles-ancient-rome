@@ -8,3 +8,10 @@
 /*.rbxl.lock
 
 sourcemap.json
+
+# Claude workers
+.claude-workers/logs/*.log
+.claude-workers/worktrees/*
+!.claude-workers/worktrees/.gitkeep
+.claude-workers/status/*.json
+!.claude-workers/status/.gitkeep
