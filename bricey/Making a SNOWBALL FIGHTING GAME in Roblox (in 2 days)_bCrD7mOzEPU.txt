@@ -1,0 +1,857 @@
+the holiday season is upon us and as a
+the holiday season is upon us and as a
+the holiday season is upon us and as a
+roblox game developer and youtuber i
+roblox game developer and youtuber i
+roblox game developer and youtuber i
+thought it's only fitting that i make a
+thought it's only fitting that i make a
+thought it's only fitting that i make a
+winter themed game for the holidays
+winter themed game for the holidays
+winter themed game for the holidays
+but there's one issue it's only a couple
+but there's one issue it's only a couple
+but there's one issue it's only a couple
+days until christmas and i haven't even
+days until christmas and i haven't even
+days until christmas and i haven't even
+started
+started
+started
+well time to make a game in two days
+well time to make a game in two days
+well time to make a game in two days
+[Music]
+[Music]
+[Music]
+so i want to make a snowball fighting
+so i want to make a snowball fighting
+so i want to make a snowball fighting
+game
+game
+game
+and so i was doing some research and
+and so i was doing some research and
+and so i was doing some research and
+came across professional snowball
+came across professional snowball
+came across professional snowball
+fighting called yuki gassin hopefully
+fighting called yuki gassin hopefully
+fighting called yuki gassin hopefully
+i'm pronouncing that right it's a
+i'm pronouncing that right it's a
+i'm pronouncing that right it's a
+japanese word so i apologize
+japanese word so i apologize
+japanese word so i apologize
+and the professional snowball fighting
+and the professional snowball fighting
+and the professional snowball fighting
+looked very cool but it involved a lot
+looked very cool but it involved a lot
+looked very cool but it involved a lot
+of dynamic movement and throwing
+of dynamic movement and throwing
+of dynamic movement and throwing
+mechanics which i didn't really want to
+mechanics which i didn't really want to
+mechanics which i didn't really want to
+implement in such a short time so
+implement in such a short time so
+implement in such a short time so
+instead i took inspiration from the
+instead i took inspiration from the
+instead i took inspiration from the
+court design of yukigasan and combined
+court design of yukigasan and combined
+court design of yukigasan and combined
+it with gameplay of something like
+it with gameplay of something like
+it with gameplay of something like
+mineplex paintball if you've ever played
+mineplex paintball if you've ever played
+mineplex paintball if you've ever played
+that
+that
+that
+and then i made a to-do list with all
+and then i made a to-do list with all
+and then i made a to-do list with all
+the requirements for the game
+the requirements for the game
+the requirements for the game
+and i started making it
+and i started making it
+and i started making it
+[Music]
+[Music]
+[Music]
+first i started by making some ui to
+first i started by making some ui to
+first i started by making some ui to
+show
+show
+show
+the amount of charge you have on your
+the amount of charge you have on your
+the amount of charge you have on your
+snowball throw
+snowball throw
+snowball throw
+because you know priorities
+because you know priorities
+because you know priorities
+then i hooked up the client's charging
+then i hooked up the client's charging
+then i hooked up the client's charging
+system up to the server and gave the
+system up to the server and gave the
+system up to the server and gave the
+server the power to throw the balls
+server the power to throw the balls
+server the power to throw the balls
+and this system uses fastcast which i
+and this system uses fastcast which i
+and this system uses fastcast which i
+have made videos on in the past like
+have made videos on in the past like
+have made videos on in the past like
+with the gun and the shotgun i'll link
+with the gun and the shotgun i'll link
+with the gun and the shotgun i'll link
+it right now if you want to see him
+it right now if you want to see him
+it right now if you want to see him
+which basically allows me to simulate
+which basically allows me to simulate
+which basically allows me to simulate
+bullet physics without network ownership
+bullet physics without network ownership
+bullet physics without network ownership
+and without too much lag
+and without too much lag
+and without too much lag
+which and it also gives me this nice
+which and it also gives me this nice
+which and it also gives me this nice
+debug view of the bullets as they go
+debug view of the bullets as they go
+debug view of the bullets as they go
+along which is pretty cool i then made a
+along which is pretty cool i then made a
+along which is pretty cool i then made a
+sphere
+sphere
+sphere
+called it a snowball put a nice looking
+called it a snowball put a nice looking
+called it a snowball put a nice looking
+trail on it
+trail on it
+trail on it
+and told fastcast to render it like a
+and told fastcast to render it like a
+and told fastcast to render it like a
+bullet
+bullet
+bullet
+and that is our snowball throwing
+now up to this point the character has
+now up to this point the character has
+now up to this point the character has
+been throwing balls from their chest
+been throwing balls from their chest
+been throwing balls from their chest
+without any animations
+without any animations
+without any animations
+let's fix that
+let's fix that
+let's fix that
+but
+but
+but
+not with that
+not with that
+not with that
+that's a bit better
+and now he can throw also but of course
+and now he can throw also but of course
+and now he can throw also but of course
+i messed it up spectacularly
+and then after some more time you can
+and then after some more time you can
+and then after some more time you can
+throw balls from your hand with
+throw balls from your hand with
+throw balls from your hand with
+decent animation i'm not an animator
+decent animation i'm not an animator
+decent animation i'm not an animator
+he's turned out looking sort of like
+he's turned out looking sort of like
+he's turned out looking sort of like
+rose
+rose
+rose
+so cool the player can throw snowballs
+so cool the player can throw snowballs
+so cool the player can throw snowballs
+but the base plate is looking kinda ugly
+but the base plate is looking kinda ugly
+but the base plate is looking kinda ugly
+let's make a map
+[Music]
+[Music]
+[Music]
+and just like that
+and just like that
+and just like that
+the map is finished
+the map is finished
+the map is finished
+again you can tell it's somewhat
+again you can tell it's somewhat
+again you can tell it's somewhat
+inspired by yukigasu and with a bunch of
+inspired by yukigasu and with a bunch of
+inspired by yukigasu and with a bunch of
+little short barricades later around
+little short barricades later around
+little short barricades later around
+and the map itself wasn't very balanced
+and the map itself wasn't very balanced
+and the map itself wasn't very balanced
+as we later figured out in testing but
+as we later figured out in testing but
+as we later figured out in testing but
+you know it's fine it's good enough map
+you know it's fine it's good enough map
+you know it's fine it's good enough map
+for me
+for me
+for me
+and after i finished the map i started
+and after i finished the map i started
+and after i finished the map i started
+adding some actual gameplay systems like
+adding some actual gameplay systems like
+adding some actual gameplay systems like
+the round system and intermission and
+the round system and intermission and
+the round system and intermission and
+stuff like that
+stuff like that
+stuff like that
+and i also did a little bit of testing
+and i also did a little bit of testing
+and i also did a little bit of testing
+to make sure everything worked properly
+to make sure everything worked properly
+to make sure everything worked properly
+the snowball hits were looking kind of
+the snowball hits were looking kind of
+the snowball hits were looking kind of
+bland so i added particles
+bland so i added particles
+bland so i added particles
+they added a lot to the game feel and
+they added a lot to the game feel and
+they added a lot to the game feel and
+made each throw feel a bit more juicy
+made each throw feel a bit more juicy
+made each throw feel a bit more juicy
+next it was time to add player damage
+next it was time to add player damage
+next it was time to add player damage
+because a fighting game without damage
+because a fighting game without damage
+because a fighting game without damage
+is well
+okay now we're good
+now it was time to play test the game
+now it was time to play test the game
+now it was time to play test the game
+and actually play the game so i first
+and actually play the game so i first
+and actually play the game so i first
+started by playing it with my friend
+started by playing it with my friend
+started by playing it with my friend
+just as a one-on-one make sure
+just as a one-on-one make sure
+just as a one-on-one make sure
+everything worked properly and all the
+everything worked properly and all the
+everything worked properly and all the
+the game function there wasn't too many
+the game function there wasn't too many
+the game function there wasn't too many
+major game breaking bugs
+major game breaking bugs
+major game breaking bugs
+and we played around it was pretty fun
+and we played around it was pretty fun
+and we played around it was pretty fun
+we weren't really testing the gameplay
+we weren't really testing the gameplay
+we weren't really testing the gameplay
+so but we still had a lot of fun pelting
+so but we still had a lot of fun pelting
+so but we still had a lot of fun pelting
+each other with snowballs
+each other with snowballs
+each other with snowballs
+it was honestly pretty challenging to
+it was honestly pretty challenging to
+it was honestly pretty challenging to
+use the
+use the
+use the
+snowballs
+snowballs
+snowballs
+because of the projectile or because you
+because of the projectile or because you
+because of the projectile or because you
+have to like compensate for that and the
+have to like compensate for that and the
+have to like compensate for that and the
+game was almost unplayable without using
+game was almost unplayable without using
+game was almost unplayable without using
+shift lock so that was something
+shift lock so that was something
+shift lock so that was something
+interesting
+and then the next day day two
+and then the next day day two
+and then the next day day two
+i started off by fixing a couple of bugs
+i started off by fixing a couple of bugs
+i started off by fixing a couple of bugs
+and i added some satisfying sounds take
+and i added some satisfying sounds take
+and i added some satisfying sounds take
+a listen
+so now it was time to formally test out
+so now it was time to formally test out
+so now it was time to formally test out
+the game
+the game
+the game
+so i sent a couple messages on my
+so i sent a couple messages on my
+so i sent a couple messages on my
+official youtube discord server the link
+official youtube discord server the link
+official youtube discord server the link
+is in the description
+is in the description
+is in the description
+and i played with some of my subscribers
+and i played with some of my subscribers
+and i played with some of my subscribers
+overall the game was like very playable
+overall the game was like very playable
+overall the game was like very playable
+it worked as it intended as i designed
+it worked as it intended as i designed
+it worked as it intended as i designed
+it with very minimal issues
+it with very minimal issues
+it with very minimal issues
+but it was not as fun as it could be i
+but it was not as fun as it could be i
+but it was not as fun as it could be i
+did enjoy dishing out snowballs in coast
+did enjoy dishing out snowballs in coast
+did enjoy dishing out snowballs in coast
+close quarters combat but i was honestly
+close quarters combat but i was honestly
+close quarters combat but i was honestly
+hoping the game would be
+hoping the game would be
+hoping the game would be
+more strategic and require like more
+more strategic and require like more
+more strategic and require like more
+skill and like sniping people
+skill and like sniping people
+skill and like sniping people
+one issue was that jumping was very
+one issue was that jumping was very
+one issue was that jumping was very
+overpowered i definitely need to nerf it
+overpowered i definitely need to nerf it
+overpowered i definitely need to nerf it
+because people could just jump around
+because people could just jump around
+because people could just jump around
+and avoid snowballs whenever they wanted
+and avoid snowballs whenever they wanted
+and avoid snowballs whenever they wanted
+and avoid getting hit and just rush into
+and avoid getting hit and just rush into
+and avoid getting hit and just rush into
+your territory without getting hit
+your territory without getting hit
+your territory without getting hit
+and i also needed to increase the arc of
+and i also needed to increase the arc of
+and i also needed to increase the arc of
+the balls a little bit people were
+the balls a little bit people were
+the balls a little bit people were
+complaining about that because
+complaining about that because
+complaining about that because
+originally i intended for you to be able
+originally i intended for you to be able
+originally i intended for you to be able
+to like lob the balls up a little to hit
+to like lob the balls up a little to hit
+to like lob the balls up a little to hit
+people behind cover
+people behind cover
+people behind cover
+but that honestly wasn't really viable
+but that honestly wasn't really viable
+but that honestly wasn't really viable
+and no one would really used it that
+and no one would really used it that
+and no one would really used it that
+much
+much
+much
+and increasing the arc would make the
+and increasing the arc would make the
+and increasing the arc would make the
+balls a little easier to throw
+balls a little easier to throw
+balls a little easier to throw
+because
+because
+because
+during this play test it was extremely
+during this play test it was extremely
+during this play test it was extremely
+hard to pick people combine that with
+hard to pick people combine that with
+hard to pick people combine that with
+the fact that it took four hits to kill
+the fact that it took four hits to kill
+the fact that it took four hits to kill
+someone
+someone
+someone
+and towards the end of the matches and
+and towards the end of the matches and
+and towards the end of the matches and
+rounds
+rounds
+rounds
+the fights got a little grindy and a
+the fights got a little grindy and a
+the fights got a little grindy and a
+little more just chaotic which is fine
+little more just chaotic which is fine
+little more just chaotic which is fine
+but i designed the map and designed the
+but i designed the map and designed the
+but i designed the map and designed the
+mechanic to be a little more
+mechanic to be a little more
+mechanic to be a little more
+strategic and require more skill
+strategic and require more skill
+strategic and require more skill
+but these issues can be easily fixed and
+but these issues can be easily fixed and
+but these issues can be easily fixed and
+i did fix them in the game the final
+i did fix them in the game the final
+i did fix them in the game the final
+game
+game
+game
+because conveniently i made the game in
+because conveniently i made the game in
+because conveniently i made the game in
+such a way where all the constants like
+such a way where all the constants like
+such a way where all the constants like
+the snowball damage the snowball speed
+the snowball damage the snowball speed
+the snowball damage the snowball speed
+and like the jump height for example
+and like the jump height for example
+and like the jump height for example
+were and like one module for me to
+were and like one module for me to
+were and like one module for me to
+change
+change
+change
+one thing i am really satisfied with
+one thing i am really satisfied with
+one thing i am really satisfied with
+is
+is
+is
+the game feel of throwing the snowballs
+the game feel of throwing the snowballs
+the game feel of throwing the snowballs
+usually in my games my mechanics are
+usually in my games my mechanics are
+usually in my games my mechanics are
+sound and the game somewhat works but it
+sound and the game somewhat works but it
+sound and the game somewhat works but it
+just doesn't feel nice
+just doesn't feel nice
+just doesn't feel nice
+i think i made the snowballs feel pretty
+i think i made the snowballs feel pretty
+i think i made the snowballs feel pretty
+nice when you throw them
+nice when you throw them
+nice when you throw them
+because the wind-up animation although
+because the wind-up animation although
+because the wind-up animation although
+it's not the best it still looks and
+it's not the best it still looks and
+it's not the best it still looks and
+feels sort of like you're throwing a
+feels sort of like you're throwing a
+feels sort of like you're throwing a
+ball
+ball
+ball
+and when the ball hits the ground it has
+and when the ball hits the ground it has
+and when the ball hits the ground it has
+a nice little puff sound it has nice
+a nice little puff sound it has nice
+a nice little puff sound it has nice
+particles and then when you hit someone
+particles and then when you hit someone
+particles and then when you hit someone
+else you get a nice satisfying like
+else you get a nice satisfying like
+else you get a nice satisfying like
+little dang sound and when you kill
+little dang sound and when you kill
+little dang sound and when you kill
+someone you get a
+someone you get a
+someone you get a
+like more fleshed out version of that
+like more fleshed out version of that
+like more fleshed out version of that
+sound so it gives the player feedback
+sound so it gives the player feedback
+sound so it gives the player feedback
+and also gives them satisfaction
+and also gives them satisfaction
+and also gives them satisfaction
+when they get hit
+when they get hit
+when they get hit
+which i think is pretty cool
+which i think is pretty cool
+which i think is pretty cool
+but honestly for only taking a little
+but honestly for only taking a little
+but honestly for only taking a little
+over a day the game was an astounding
+over a day the game was an astounding
+over a day the game was an astounding
+success
+success
+success
+at least for me and people seem to enjoy
+at least for me and people seem to enjoy
+at least for me and people seem to enjoy
+it for the most part it's definitely not
+it for the most part it's definitely not
+it for the most part it's definitely not
+a front pager but it did help me grow as
+a front pager but it did help me grow as
+a front pager but it did help me grow as
+a game developer
+a game developer
+a game developer
+and it gave me some confidence knowing
+and it gave me some confidence knowing
+and it gave me some confidence knowing
+that i can tell i can set a game
+that i can tell i can set a game
+that i can tell i can set a game
+set a deadline in a day and make a
+set a deadline in a day and make a
+set a deadline in a day and make a
+product that actually works and i think
+product that actually works and i think
+product that actually works and i think
+that's pretty cool
+that's pretty cool
+that's pretty cool
+so this project will be open source with
+so this project will be open source with
+so this project will be open source with
+both the github repository and the
+both the github repository and the
+both the github repository and the
+roblox project linked in the description
+roblox project linked in the description
+roblox project linked in the description
+and completely free to copy to like
+and completely free to copy to like
+and completely free to copy to like
+republish if you want to improve the
+republish if you want to improve the
+republish if you want to improve the
+game make it better and then publish it
+game make it better and then publish it
+game make it better and then publish it
+on your own and do whatever you want
+on your own and do whatever you want
+on your own and do whatever you want
+with it but keep in mind i did make this
+with it but keep in mind i did make this
+with it but keep in mind i did make this
+game in
+game in
+game in
+a day so not all of the
+a day so not all of the
+a day so not all of the
+choices were smart and don't treat as
+choices were smart and don't treat as
+choices were smart and don't treat as
+bible that's for sure
+bible that's for sure
+bible that's for sure
+so let's just go over some of the quick
+so let's just go over some of the quick
+so let's just go over some of the quick
+details in case you're interested so
+details in case you're interested so
+details in case you're interested so
+this project was created using
+this project was created using
+this project was created using
+rojo
+rojo
+rojo
+i have a video on that if you're
+i have a video on that if you're
+i have a video on that if you're
+interested
+interested
+interested
+and so that's why i'm in vs code i'm
+and so that's why i'm in vs code i'm
+and so that's why i'm in vs code i'm
+also using wall-e which wall is pretty
+also using wall-e which wall is pretty
+also using wall-e which wall is pretty
+new it's a package manager for roblox so
+new it's a package manager for roblox so
+new it's a package manager for roblox so
+i can put all my package dependencies
+i can put all my package dependencies
+i can put all my package dependencies
+in this dependencies section
+in this dependencies section
+in this dependencies section
+and i can
+and i can
+and i can
+include it in my project pretty easily
+include it in my project pretty easily
+include it in my project pretty easily
+so if i take a look at the script for
+so if i take a look at the script for
+so if i take a look at the script for
+example you can see i can get all of
+example you can see i can get all of
+example you can see i can get all of
+these packages by getting a package in
+these packages by getting a package in
+these packages by getting a package in
+replicated storage and putting it all
+replicated storage and putting it all
+replicated storage and putting it all
+there
+there
+there
+and i also have my default project json
+and i also have my default project json
+and i also have my default project json
+for rojo it's a basic setup it's
+for rojo it's a basic setup it's
+for rojo it's a basic setup it's
+honestly the default that comes with it
+honestly the default that comes with it
+honestly the default that comes with it
+one thing to note is if you ever need to
+one thing to note is if you ever need to
+one thing to note is if you ever need to
+change some aspect of the gameplay you
+change some aspect of the gameplay you
+change some aspect of the gameplay you
+can usually find all the constants and
+can usually find all the constants and
+can usually find all the constants and
+just the constants in the shared folder
+just the constants in the shared folder
+just the constants in the shared folder
+and
+and
+and
+the gooeys are in the game
+the gooeys are in the game
+the gooeys are in the game
+were not created with roacked so
+were not created with roacked so
+were not created with roacked so
+they are in the actual roblox game
+they are in the actual roblox game
+they are in the actual roblox game
+itself in case you're wondering
+itself in case you're wondering
+itself in case you're wondering
+so if you want to play around with those
+so if you want to play around with those
+so if you want to play around with those
+just go there
+just go there
+just go there
+and this project should be able to sync
+and this project should be able to sync
+and this project should be able to sync
+out of the box with roblox studio as
+out of the box with roblox studio as
+out of the box with roblox studio as
+long as you install all of the wally
+long as you install all of the wally
+long as you install all of the wally
+dependencies by using wally install
+dependencies by using wally install
+dependencies by using wally install
+and if you're interested i will make a
+and if you're interested i will make a
+and if you're interested i will make a
+video on working with wally in the
+video on working with wally in the
+video on working with wally in the
+future but other than that the game uses
+future but other than that the game uses
+future but other than that the game uses
+knit
+knit
+knit
+which is a good framework for
+which is a good framework for
+which is a good framework for
+client server communication
+client server communication
+client server communication
+and it has a couple services a couple
+and it has a couple services a couple
+and it has a couple services a couple
+controllers and a couple components
+controllers and a couple components
+controllers and a couple components
+using this is formally part of knit but
+using this is formally part of knit but
+using this is formally part of knit but
+now it's a separate
+now it's a separate
+now it's a separate
+package
+package
+package
+and this allows you to tag something
+and this allows you to tag something
+and this allows you to tag something
+using collection service and a class is
+using collection service and a class is
+using collection service and a class is
+attached to it that was really really
+attached to it that was really really
+attached to it that was really really
+helpful
+and then
+and then
+and then
+also
+also
+also
+in regards with saving data and data
+in regards with saving data and data
+in regards with saving data and data
+stores
+stores
+stores
+the game saves
+the game saves
+the game saves
+player kills in an ordered data store so
+player kills in an ordered data store so
+player kills in an ordered data store so
+it would be pretty simple to make a
+it would be pretty simple to make a
+it would be pretty simple to make a
+leader board if you ever wanted to
+leader board if you ever wanted to
+leader board if you ever wanted to
+so keep that in mind but that's
+so keep that in mind but that's
+so keep that in mind but that's
+basically it for the technical details
+basically it for the technical details
+basically it for the technical details
+there is a couple comments in a couple
+there is a couple comments in a couple
+there is a couple comments in a couple
+places
+places
+places
+so you can check that out if you want
+so you can check that out if you want
+so you can check that out if you want
+that's it for this video if you enjoyed
+that's it for this video if you enjoyed
+that's it for this video if you enjoyed
+make sure to like and subscribe we are
+make sure to like and subscribe we are
+make sure to like and subscribe we are
+so close to 5 000 subscribers it would
+so close to 5 000 subscribers it would
+so close to 5 000 subscribers it would
+be a great christmas present if i could
+be a great christmas present if i could
+be a great christmas present if i could
+get there
+get there
+get there
+but other than that
+but other than that
+but other than that
+i hope you guys have a merry christmas
+i hope you guys have a merry christmas
+i hope you guys have a merry christmas
+and a happy new year
+and a happy new year
+and a happy new year
+see ya
+see ya
+see ya
+[Music]
+you

@@ -1,0 +1,1855 @@
+developing games on roblox is a lawless
+developing games on roblox is a lawless
+developing games on roblox is a lawless
+place with so much
+place with so much
+place with so much
+freedom to do as you wish in the roblox
+freedom to do as you wish in the roblox
+freedom to do as you wish in the roblox
+studio game engine and so much freedom
+studio game engine and so much freedom
+studio game engine and so much freedom
+in the way you write your code with a
+in the way you write your code with a
+in the way you write your code with a
+loud scripting language
+loud scripting language
+loud scripting language
+it can be hard to find the right and
+it can be hard to find the right and
+it can be hard to find the right and
+safe correct mix
+safe correct mix
+safe correct mix
+of your code where it is and how it
+of your code where it is and how it
+of your code where it is and how it
+works in order to make your game the
+works in order to make your game the
+works in order to make your game the
+best it can be
+best it can be
+best it can be
+now i've had some experience in these
+now i've had some experience in these
+now i've had some experience in these
+lawless lands and i've learned some
+lawless lands and i've learned some
+lawless lands and i've learned some
+things over the years that can help you
+things over the years that can help you
+things over the years that can help you
+in organizing and structuring your
+in organizing and structuring your
+in organizing and structuring your
+projects
+projects
+projects
+and your object-oriented code within
+and your object-oriented code within
+and your object-oriented code within
+those projects if you choose to use it
+those projects if you choose to use it
+those projects if you choose to use it
+in this video i'm going to
+in this video i'm going to
+in this video i'm going to
+kind of let you know my opinions on how
+kind of let you know my opinions on how
+kind of let you know my opinions on how
+things should be structured in your code
+things should be structured in your code
+things should be structured in your code
+and some best practices and some style
+and some best practices and some style
+and some best practices and some style
+guides with capitalization and naming
+guides with capitalization and naming
+guides with capitalization and naming
+conventions that you can follow to
+conventions that you can follow to
+conventions that you can follow to
+hopefully make your games more readable
+hopefully make your games more readable
+hopefully make your games more readable
+more organized and just overall better
+more organized and just overall better
+more organized and just overall better
+to work with
+to work with
+to work with
+so
+so
+so
+while you watch this video make sure to
+while you watch this video make sure to
+while you watch this video make sure to
+keep in mind that these are only my
+keep in mind that these are only my
+keep in mind that these are only my
+opinions you can disagree with them and
+opinions you can disagree with them and
+opinions you can disagree with them and
+you can you know comment your
+you can you know comment your
+you can you know comment your
+disagreement down below i'd be
+disagreement down below i'd be
+disagreement down below i'd be
+interested to see what you think but
+interested to see what you think but
+interested to see what you think but
+subscribe to my channel if you enjoy
+subscribe to my channel if you enjoy
+subscribe to my channel if you enjoy
+this video and like the video as well if
+this video and like the video as well if
+this video and like the video as well if
+you enjoy it
+you enjoy it
+you enjoy it
+and
+and
+and
+with that let's get straight into the
+with that let's get straight into the
+with that let's get straight into the
+action
+so let's get started so in order to like
+so let's get started so in order to like
+so let's get started so in order to like
+organize your scripts or whatever you
+organize your scripts or whatever you
+organize your scripts or whatever you
+first got to figure out where you want
+first got to figure out where you want
+first got to figure out where you want
+to put them it's a very important
+to put them it's a very important
+to put them it's a very important
+question
+question
+question
+because it depends on what you're trying
+because it depends on what you're trying
+because it depends on what you're trying
+to accomplish so for example when i'm
+to accomplish so for example when i'm
+to accomplish so for example when i'm
+working on a standalone model
+working on a standalone model
+working on a standalone model
+like when i made
+like when i made
+like when i made
+like those hover cars a long while back
+like those hover cars a long while back
+like those hover cars a long while back
+or like the blister
+or like the blister
+or like the blister
+you know stuff like that
+you know stuff like that
+you know stuff like that
+i want to put my scripts within the
+i want to put my scripts within the
+i want to put my scripts within the
+model so if i'm in the workspace and i
+model so if i'm in the workspace and i
+model so if i'm in the workspace and i
+have a
+have a
+have a
+like model of some kind
+like model of some kind
+like model of some kind
+and i want to like ship this model out
+and i want to like ship this model out
+and i want to like ship this model out
+and either like sell it i guess if
+and either like sell it i guess if
+and either like sell it i guess if
+you're doing commissions or just like
+you're doing commissions or just like
+you're doing commissions or just like
+give it out for free like i do for most
+give it out for free like i do for most
+give it out for free like i do for most
+of my models you can just put the
+of my models you can just put the
+of my models you can just put the
+scripts within there and recently roblox
+scripts within there and recently roblox
+scripts within there and recently roblox
+added a feature which is absolutely
+added a feature which is absolutely
+added a feature which is absolutely
+wonderful i love it where you can go to
+wonderful i love it where you can go to
+wonderful i love it where you can go to
+the script properties and you can change
+the script properties and you can change
+the script properties and you can change
+the run context
+the run context
+the run context
+so you can run a client script
+so you can run a client script
+so you can run a client script
+even if it's not parented to the
+even if it's not parented to the
+even if it's not parented to the
+character
+character
+character
+or the starter player scripts or starter
+or the starter player scripts or starter
+or the starter player scripts or starter
+character strips or anything like that
+character strips or anything like that
+character strips or anything like that
+which used to not be possible because
+which used to not be possible because
+which used to not be possible because
+before if you wanted stuff to run on the
+before if you wanted stuff to run on the
+before if you wanted stuff to run on the
+client i had to be like within a tool
+client i had to be like within a tool
+client i had to be like within a tool
+within one of these two folders here
+within one of these two folders here
+within one of these two folders here
+sort of character scripts or starter
+sort of character scripts or starter
+sort of character scripts or starter
+player scripts or within like the
+player scripts or within like the
+player scripts or within like the
+starter gui and only in those select
+starter gui and only in those select
+starter gui and only in those select
+locations but now we can run client
+locations but now we can run client
+locations but now we can run client
+scripts wherever we want which is pretty
+scripts wherever we want which is pretty
+scripts wherever we want which is pretty
+cool
+cool
+cool
+so you can do that now which is really
+so you can do that now which is really
+so you can do that now which is really
+nice so you're able to export this model
+nice so you're able to export this model
+nice so you're able to export this model
+to whatever but a lot of times people
+to whatever but a lot of times people
+to whatever but a lot of times people
+just want to make entire games and for
+just want to make entire games and for
+just want to make entire games and for
+that
+that
+that
+i would only restrict your scripts to
+i would only restrict your scripts to
+i would only restrict your scripts to
+server script service
+server script service
+server script service
+and
+and
+and
+the
+the
+the
+starter character scripts or starter
+starter character scripts or starter
+starter character scripts or starter
+player scripts to be honest like not
+player scripts to be honest like not
+player scripts to be honest like not
+even don't even put anything in starter
+even don't even put anything in starter
+even don't even put anything in starter
+gui because ideally you'll be using a
+gui because ideally you'll be using a
+gui because ideally you'll be using a
+like library if you're dealing with
+like library if you're dealing with
+like library if you're dealing with
+complex guise and otherwise you can just
+complex guise and otherwise you can just
+complex guise and otherwise you can just
+access your
+access your
+access your
+gui's through
+gui's through
+gui's through
+the character just to keep your viewies
+the character just to keep your viewies
+the character just to keep your viewies
+alone and your player scripts alone
+alone and your player scripts alone
+alone and your player scripts alone
+and so yeah
+and so yeah
+and so yeah
+so after you've answered that question
+so after you've answered that question
+so after you've answered that question
+now it's time to actually make your
+now it's time to actually make your
+now it's time to actually make your
+script and start coding so i'm just
+script and start coding so i'm just
+script and start coding so i'm just
+going to create a script in server
+going to create a script in server
+going to create a script in server
+script service let's just say i'm making
+script service let's just say i'm making
+script service let's just say i'm making
+a game now the first thing to think
+a game now the first thing to think
+a game now the first thing to think
+about when you're making your scripts is
+about when you're making your scripts is
+about when you're making your scripts is
+like this concept called you ain't going
+like this concept called you ain't going
+like this concept called you ain't going
+to need it or you aren't going to need
+to need it or you aren't going to need
+to need it or you aren't going to need
+it which basically means like don't try
+it which basically means like don't try
+it which basically means like don't try
+to
+to
+to
+architect your
+architect your
+architect your
+elaborate complex game scripts all at
+elaborate complex game scripts all at
+elaborate complex game scripts all at
+the same time
+the same time
+the same time
+trying to guess what's going to happen
+trying to guess what's going to happen
+trying to guess what's going to happen
+trying to figure out what you're going
+trying to figure out what you're going
+trying to figure out what you're going
+to need what your needs are going to be
+to need what your needs are going to be
+to need what your needs are going to be
+in the future because game development
+in the future because game development
+in the future because game development
+is an organic progress process your your
+is an organic progress process your your
+is an organic progress process your your
+ideas are going to change as time goes
+ideas are going to change as time goes
+ideas are going to change as time goes
+on and your
+on and your
+on and your
+scripts are going to reflect that so you
+scripts are going to reflect that so you
+scripts are going to reflect that so you
+need to incorporate this philosophy of
+need to incorporate this philosophy of
+need to incorporate this philosophy of
+like you aren't going
+like you aren't going
+like you aren't going
+or you aren't going to need it
+or you aren't going to need it
+or you aren't going to need it
+so only program what you need at the
+so only program what you need at the
+so only program what you need at the
+moment
+moment
+moment
+to an extent at least and then
+to an extent at least and then
+to an extent at least and then
+refactor your code don't be afraid to
+refactor your code don't be afraid to
+refactor your code don't be afraid to
+refactor your code what that means is
+refactor your code what that means is
+refactor your code what that means is
+changing the structure of your code as
+changing the structure of your code as
+changing the structure of your code as
+time goes on because when i first
+time goes on because when i first
+time goes on because when i first
+started making games i was afraid of
+started making games i was afraid of
+started making games i was afraid of
+doing i always wanted to do it once
+doing i always wanted to do it once
+doing i always wanted to do it once
+make my games perfect and then just call
+make my games perfect and then just call
+make my games perfect and then just call
+it a day and leave crappy systems in
+it a day and leave crappy systems in
+it a day and leave crappy systems in
+place but although refactoring takes a
+place but although refactoring takes a
+place but although refactoring takes a
+lot of time it takes a lot less time to
+lot of time it takes a lot less time to
+lot of time it takes a lot less time to
+refactor than it does to
+refactor than it does to
+refactor than it does to
+like guess
+like guess
+like guess
+like try to formulate all your code from
+like try to formulate all your code from
+like try to formulate all your code from
+beginning and just guess it because the
+beginning and just guess it because the
+beginning and just guess it because the
+best way to get better at guessing what
+best way to get better at guessing what
+best way to get better at guessing what
+your project needs is to make a bunch of
+your project needs is to make a bunch of
+your project needs is to make a bunch of
+projects and
+projects and
+projects and
+go through different trials and figure
+go through different trials and figure
+go through different trials and figure
+out what works
+out what works
+out what works
+and what doesn't so for example in one
+and what doesn't so for example in one
+and what doesn't so for example in one
+of my earlier games this was called
+of my earlier games this was called
+of my earlier games this was called
+chaos the next generation
+chaos the next generation
+chaos the next generation
+i made this tool module
+i made this tool module
+i made this tool module
+which at the time i thought it was a
+which at the time i thought it was a
+which at the time i thought it was a
+good idea you'd have like your general
+good idea you'd have like your general
+good idea you'd have like your general
+like tool
+like tool
+like tool
+um like parent class and then other
+um like parent class and then other
+um like parent class and then other
+stuff would kind of use that
+stuff would kind of use that
+stuff would kind of use that
+and then they would add functionality to
+and then they would add functionality to
+and then they would add functionality to
+it which is great and all i guess but i
+it which is great and all i guess but i
+it which is great and all i guess but i
+added a bunch of like random stuff
+added a bunch of like random stuff
+added a bunch of like random stuff
+that like
+that like
+that like
+only applied to some tools but it was
+only applied to some tools but it was
+only applied to some tools but it was
+like in the main parent class
+like in the main parent class
+like in the main parent class
+and
+and
+and
+it didn't really
+it didn't really
+it didn't really
+look too good and the worst part is i
+look too good and the worst part is i
+look too good and the worst part is i
+put all the tools
+put all the tools
+put all the tools
+and all their stuff
+and all their stuff
+and all their stuff
+in
+in
+in
+the same script so this script is like
+the same script so this script is like
+the same script so this script is like
+almost a thousand lines long which
+almost a thousand lines long which
+almost a thousand lines long which
+is always a bad idea that's one other
+is always a bad idea that's one other
+is always a bad idea that's one other
+thing don't make your scripts this long
+thing don't make your scripts this long
+thing don't make your scripts this long
+i could have easily isolated this in
+i could have easily isolated this in
+i could have easily isolated this in
+multiple scripts but i didn't because i
+multiple scripts but i didn't because i
+multiple scripts but i didn't because i
+was too afraid to refactor each week i
+was too afraid to refactor each week i
+was too afraid to refactor each week i
+was like adding a new tool and i'm like
+was like adding a new tool and i'm like
+was like adding a new tool and i'm like
+oh i just gotta add a new tool i can i
+oh i just gotta add a new tool i can i
+oh i just gotta add a new tool i can i
+can't worry about fixing it
+can't worry about fixing it
+can't worry about fixing it
+but it took me so long to figure out oh
+but it took me so long to figure out oh
+but it took me so long to figure out oh
+this is gonna be the perfect way to set
+this is gonna be the perfect way to set
+this is gonna be the perfect way to set
+up my tools i'm gonna do it this way
+up my tools i'm gonna do it this way
+up my tools i'm gonna do it this way
+it's gonna be perfect and it turned out
+it's gonna be perfect and it turned out
+it's gonna be perfect and it turned out
+it wasn't and that's okay you gotta
+it wasn't and that's okay you gotta
+it wasn't and that's okay you gotta
+realize it's okay to not get your code
+realize it's okay to not get your code
+realize it's okay to not get your code
+structure right the first time just be
+structure right the first time just be
+structure right the first time just be
+okay to change it like i made a video a
+okay to change it like i made a video a
+okay to change it like i made a video a
+couple weeks ago on submarine warfare
+couple weeks ago on submarine warfare
+couple weeks ago on submarine warfare
+where i refactored almost the entirety
+where i refactored almost the entirety
+where i refactored almost the entirety
+of the game and it's great like my code
+of the game and it's great like my code
+of the game and it's great like my code
+base feels nice and robust feels solid
+base feels nice and robust feels solid
+base feels nice and robust feels solid
+and it feels nice to work in so don't be
+and it feels nice to work in so don't be
+and it feels nice to work in so don't be
+afraid to refactor your code so it's
+afraid to refactor your code so it's
+afraid to refactor your code so it's
+easier to work with and
+easier to work with and
+easier to work with and
+it also gives you that impetus when you
+it also gives you that impetus when you
+it also gives you that impetus when you
+start out just to go and get your hands
+start out just to go and get your hands
+start out just to go and get your hands
+dirty because like fail fast you know
+dirty because like fail fast you know
+dirty because like fail fast you know
+if you're keeping up with like rockets
+if you're keeping up with like rockets
+if you're keeping up with like rockets
+and rocket signs spacex has that idea
+and rocket signs spacex has that idea
+and rocket signs spacex has that idea
+they make rockets they make a lot of
+they make rockets they make a lot of
+they make rockets they make a lot of
+rockets a lot quickly and they wait
+rockets a lot quickly and they wait
+rockets a lot quickly and they wait
+until it explodes they see what goes
+until it explodes they see what goes
+until it explodes they see what goes
+wrong and then they fix it that's what
+wrong and then they fix it that's what
+wrong and then they fix it that's what
+you should do with your code you
+you should do with your code you
+you should do with your code you
+shouldn't try to do elaborate designs
+shouldn't try to do elaborate designs
+shouldn't try to do elaborate designs
+that take a lot of time like nasa did
+that take a lot of time like nasa did
+that take a lot of time like nasa did
+with the space launch system because
+with the space launch system because
+with the space launch system because
+that thing is never launching so you
+that thing is never launching so you
+that thing is never launching so you
+need your code to be like a spacex
+need your code to be like a spacex
+need your code to be like a spacex
+rocket it needs to launch
+rocket it needs to launch
+rocket it needs to launch
+and it needs to fail fast so you can
+and it needs to fail fast so you can
+and it needs to fail fast so you can
+figure out what's going wrong
+figure out what's going wrong
+figure out what's going wrong
+so now that you have that high level
+so now that you have that high level
+so now that you have that high level
+sort of understanding you know you want
+sort of understanding you know you want
+sort of understanding you know you want
+to pick where your script goes then you
+to pick where your script goes then you
+to pick where your script goes then you
+want to make sure that you're not over
+want to make sure that you're not over
+want to make sure that you're not over
+complicating things before you even get
+complicating things before you even get
+complicating things before you even get
+started once you get started you got to
+started once you get started you got to
+started once you get started you got to
+remember keep things simple so if you
+remember keep things simple so if you
+remember keep things simple so if you
+only need like a single function you
+only need like a single function you
+only need like a single function you
+don't need to make object-oriented class
+don't need to make object-oriented class
+don't need to make object-oriented class
+for that so if i'm just trying to like
+for that so if i'm just trying to like
+for that so if i'm just trying to like
+make a
+make a
+make a
+i don't know
+i don't know
+i don't know
+like
+like
+like
+a teleport function
+a teleport function
+a teleport function
+that will like take one thing
+that will like take one thing
+that will like take one thing
+and move it to another thing i don't
+and move it to another thing i don't
+and move it to another thing i don't
+need to create an entire teleporter
+need to create an entire teleporter
+need to create an entire teleporter
+class now when this starts expanding
+class now when this starts expanding
+class now when this starts expanding
+into multiple different situations with
+into multiple different situations with
+into multiple different situations with
+save state between each function that's
+save state between each function that's
+save state between each function that's
+when a class is necessary so let's
+when a class is necessary so let's
+when a class is necessary so let's
+actually you know extend this sort of
+actually you know extend this sort of
+actually you know extend this sort of
+idea so you have teleport which would
+idea so you have teleport which would
+idea so you have teleport which would
+like teleport like player one to player
+like teleport like player one to player
+like teleport like player one to player
+two
+two
+two
+and let's say this is like an object and
+and let's say this is like an object and
+and let's say this is like an object and
+so let's say this is initially like a
+so let's say this is initially like a
+so let's say this is initially like a
+command right so you just leave it like
+command right so you just leave it like
+command right so you just leave it like
+this and you know maybe you can say like
+this and you know maybe you can say like
+this and you know maybe you can say like
+another local function like teleport
+another local function like teleport
+another local function like teleport
+to me which takes p2
+to me which takes p2
+to me which takes p2
+and then
+and then
+and then
+we like access like the the current
+we like access like the the current
+we like access like the the current
+player that can like teleport people or
+player that can like teleport people or
+player that can like teleport people or
+something like that
+something like that
+something like that
+and that would be fine right
+and that would be fine right
+and that would be fine right
+but then let's say you want you make
+but then let's say you want you make
+but then let's say you want you make
+this teleporter like actually exist in
+this teleporter like actually exist in
+this teleporter like actually exist in
+the world so you need to have a cooldown
+the world so you need to have a cooldown
+the world so you need to have a cooldown
+you need to have
+you need to have
+you need to have
+like save state like where it is
+like save state like where it is
+like save state like where it is
+how it can change whatever that's when
+how it can change whatever that's when
+how it can change whatever that's when
+you would get rid of your individual
+you would get rid of your individual
+you would get rid of your individual
+functions and put it into a class so
+functions and put it into a class so
+functions and put it into a class so
+don't make a class for the sake of
+don't make a class for the sake of
+don't make a class for the sake of
+making a class because you know objects
+making a class because you know objects
+making a class because you know objects
+objects are so freaking cool like you
+objects are so freaking cool like you
+objects are so freaking cool like you
+know
+know
+know
+don't don't do that make it simple
+don't don't do that make it simple
+don't don't do that make it simple
+functions are great i love functions
+functions are great i love functions
+functions are great i love functions
+and only make objects when you need to
+and only make objects when you need to
+and only make objects when you need to
+so
+so
+so
+let's do that
+let's do that
+let's do that
+we got a
+we got a
+we got a
+local teleporter which will be equal to
+local teleporter which will be equal to
+local teleporter which will be equal to
+a
+a
+a
+new blank table
+new blank table
+new blank table
+and then we can set the index meta
+and then we can set the index meta
+and then we can set the index meta
+method to teleporter
+method to teleporter
+method to teleporter
+and then we can create a couple
+and then we can create a couple
+and then we can create a couple
+functions so we can create a function
+functions so we can create a function
+functions so we can create a function
+teleporter
+dot new
+dot new
+dot new
+and then
+and then
+and then
+a function teleporter
+a function teleporter
+a function teleporter
+colon destroy
+colon destroy
+colon destroy
+and then ideally actually let's do that
+and then ideally actually let's do that
+and then ideally actually let's do that
+we're going to put this in a module
+we're going to put this in a module
+we're going to put this in a module
+script
+script
+script
+because whenever so a very good rule of
+because whenever so a very good rule of
+because whenever so a very good rule of
+thumb in terms of
+thumb in terms of
+thumb in terms of
+keeping your code organized is whenever
+keeping your code organized is whenever
+keeping your code organized is whenever
+you have classes or whatever you have uh
+you have classes or whatever you have uh
+you have classes or whatever you have uh
+related functions put them into their
+related functions put them into their
+related functions put them into their
+own
+own
+own
+modules and only keep one class to one
+modules and only keep one class to one
+modules and only keep one class to one
+module so you don't make the mistake
+module so you don't make the mistake
+module so you don't make the mistake
+like i did with that tool script that i
+like i did with that tool script that i
+like i did with that tool script that i
+just showed you a moment ago where
+just showed you a moment ago where
+just showed you a moment ago where
+everything's all together this keeps
+everything's all together this keeps
+everything's all together this keeps
+your
+your
+your
+your total script small and it keeps
+your total script small and it keeps
+your total script small and it keeps
+your code very organized and very
+your code very organized and very
+your code very organized and very
+logical because in a lot of other
+logical because in a lot of other
+logical because in a lot of other
+programming language if it forces you to
+programming language if it forces you to
+programming language if it forces you to
+keep classes to their own scripts which
+keep classes to their own scripts which
+keep classes to their own scripts which
+still isn't that good like java we don't
+still isn't that good like java we don't
+still isn't that good like java we don't
+talk about java but
+talk about java but
+talk about java but
+sometimes that works well and in this
+sometimes that works well and in this
+sometimes that works well and in this
+case it does so i'm going to rename this
+case it does so i'm going to rename this
+case it does so i'm going to rename this
+to the teleporter
+and then
+and then
+and then
+the this is just basically the way i set
+the this is just basically the way i set
+the this is just basically the way i set
+up all my objects during classes i
+up all my objects during classes i
+up all my objects during classes i
+return
+return
+return
+teleporter there we go
+teleporter there we go
+teleporter there we go
+and we're going to say a local self
+and we're going to say a local self
+and we're going to say a local self
+equals
+equals
+equals
+set meta table a blank table and then
+set meta table a blank table and then
+set meta table a blank table and then
+teleporter
+teleporter
+teleporter
+and then we're going to do return of
+and then we're going to do return of
+and then we're going to do return of
+self so what i'm doing here is all i'm
+self so what i'm doing here is all i'm
+self so what i'm doing here is all i'm
+doing is making a new instance of the
+doing is making a new instance of the
+doing is making a new instance of the
+class
+class
+class
+and this self here
+and this self here
+and this self here
+is not important i can change it to a
+is not important i can change it to a
+is not important i can change it to a
+letter a
+letter a
+letter a
+return a
+return a
+return a
+the only reason i'm using self is
+the only reason i'm using self is
+the only reason i'm using self is
+because it just makes more sense in
+because it just makes more sense in
+because it just makes more sense in
+context just because it's highlighted in
+context just because it's highlighted in
+context just because it's highlighted in
+red doesn't mean it's a special keyword
+red doesn't mean it's a special keyword
+red doesn't mean it's a special keyword
+self is only special when it's within a
+self is only special when it's within a
+self is only special when it's within a
+function block with a colon like here so
+function block with a colon like here so
+function block with a colon like here so
+just keep that in mind i do that it's
+just keep that in mind i do that it's
+just keep that in mind i do that it's
+convention a lot of people do it
+convention a lot of people do it
+convention a lot of people do it
+and that's how you do it so
+and that's how you do it so
+and that's how you do it so
+now for another form of convention when
+now for another form of convention when
+now for another form of convention when
+you're saving your fields or your
+you're saving your fields or your
+you're saving your fields or your
+properties of your class
+properties of your class
+properties of your class
+i like to use pascal case so you could
+i like to use pascal case so you could
+i like to use pascal case so you could
+say self dot
+say self dot
+say self dot
+cooldown time is equal to like three
+cooldown time is equal to like three
+cooldown time is equal to like three
+seconds or whatever
+seconds or whatever
+seconds or whatever
+and
+and
+and
+this is just pascal case the first
+this is just pascal case the first
+this is just pascal case the first
+letter is capitalized of each word some
+letter is capitalized of each word some
+letter is capitalized of each word some
+people like to use camel case but this
+people like to use camel case but this
+people like to use camel case but this
+is just my personal preference and as
+is just my personal preference and as
+is just my personal preference and as
+for functions
+for functions
+for functions
+same thing goes so you do teleporter
+same thing goes so you do teleporter
+same thing goes so you do teleporter
+cool down and i always like to keep my
+cool down and i always like to keep my
+cool down and i always like to keep my
+destroy function towards the bottom just
+destroy function towards the bottom just
+destroy function towards the bottom just
+so it's like you're you start new and
+so it's like you're you start new and
+so it's like you're you start new and
+then it progresses through your other
+then it progresses through your other
+then it progresses through your other
+functions and then it destroys and then
+functions and then it destroys and then
+functions and then it destroys and then
+that's it even though
+that's it even though
+that's it even though
+since you're using this in such a way
+since you're using this in such a way
+since you're using this in such a way
+with this table at the beginning it
+with this table at the beginning it
+with this table at the beginning it
+doesn't matter the order of your
+doesn't matter the order of your
+doesn't matter the order of your
+functions
+functions
+functions
+so in this cooldown you know you could
+so in this cooldown you know you could
+so in this cooldown you know you could
+just say like
+just say like
+just say like
+cool down
+cool down
+cool down
+the tp whatever i'm not gonna actually
+the tp whatever i'm not gonna actually
+the tp whatever i'm not gonna actually
+do implementations that's not important
+do implementations that's not important
+do implementations that's not important
+and you can call that from outside but
+and you can call that from outside but
+and you can call that from outside but
+let's say you have something
+let's say you have something
+let's say you have something
+like
+like
+like
+a
+a
+a
+private variable you don't really want
+private variable you don't really want
+private variable you don't really want
+other scripts to access
+other scripts to access
+other scripts to access
+for a teleporter i don't know what you
+for a teleporter i don't know what you
+for a teleporter i don't know what you
+could do you could just say self.like is
+could do you could just say self.like is
+could do you could just say self.like is
+cooling down
+this will be equal to false to begin
+this will be equal to false to begin
+this will be equal to false to begin
+with and you can see what i did here i
+with and you can see what i did here i
+with and you can see what i did here i
+put an underscore and then
+put an underscore and then
+put an underscore and then
+i used camelcase
+i used camelcase
+i used camelcase
+and this again has no special meaning
+and this again has no special meaning
+and this again has no special meaning
+it's just a naming convention
+it's just a naming convention
+it's just a naming convention
+what this allows me to do is to tell
+what this allows me to do is to tell
+what this allows me to do is to tell
+other descriptors or tell myself when i
+other descriptors or tell myself when i
+other descriptors or tell myself when i
+look on my code base a couple of days
+look on my code base a couple of days
+look on my code base a couple of days
+later because you know i'm gonna i'm
+later because you know i'm gonna i'm
+later because you know i'm gonna i'm
+gonna forget it it's gonna happen that
+gonna forget it it's gonna happen that
+gonna forget it it's gonna happen that
+this is not meant to be accessed by
+this is not meant to be accessed by
+this is not meant to be accessed by
+outside scripts and this is a very good
+outside scripts and this is a very good
+outside scripts and this is a very good
+usually for like a game by a single
+usually for like a game by a single
+usually for like a game by a single
+developer it's not really that important
+developer it's not really that important
+developer it's not really that important
+but for
+but for
+but for
+modules that other people need to access
+modules that other people need to access
+modules that other people need to access
+this is very very important because
+this is very very important because
+this is very very important because
+people need to know what they should be
+people need to know what they should be
+people need to know what they should be
+using and what they shouldn't since lua
+using and what they shouldn't since lua
+using and what they shouldn't since lua
+is very flexible or luau i guess i
+is very flexible or luau i guess i
+is very flexible or luau i guess i
+should say is very flexible people
+should say is very flexible people
+should say is very flexible people
+can do whatever they want
+can do whatever they want
+can do whatever they want
+but
+but
+but
+we use these conventions to make sure
+we use these conventions to make sure
+we use these conventions to make sure
+they only do what they should be doing
+they only do what they should be doing
+they only do what they should be doing
+because
+because
+because
+you know an unhandled
+you know an unhandled
+you know an unhandled
+object like this can just lead to
+object like this can just lead to
+object like this can just lead to
+disaster if people are changing
+disaster if people are changing
+disaster if people are changing
+fields and properties when they
+fields and properties when they
+fields and properties when they
+shouldn't be
+shouldn't be
+shouldn't be
+and this same convention carries down to
+and this same convention carries down to
+and this same convention carries down to
+a function if you only want a function
+a function if you only want a function
+a function if you only want a function
+that like does a specific thing
+that like does a specific thing
+that like does a specific thing
+like
+like
+like
+function
+function
+function
+i don't know teleporter
+i don't know teleporter
+i don't know teleporter
+just do something
+just do something
+just do something
+it can be a private function
+it can be a private function
+it can be a private function
+but
+but
+but
+what often happens is i find myself
+what often happens is i find myself
+what often happens is i find myself
+doing
+doing
+doing
+and i'm not really sure how to feel
+and i'm not really sure how to feel
+and i'm not really sure how to feel
+about this is you like create like an
+about this is you like create like an
+about this is you like create like an
+init function or something
+and then you can call it
+and then you can call it
+and then you can call it
+from the teleporter
+from the teleporter
+from the teleporter
+new
+new
+new
+and you put like a laundry list of
+and you put like a laundry list of
+and you put like a laundry list of
+private functions that just do specific
+private functions that just do specific
+private functions that just do specific
+things
+things
+things
+and the issue with that so if like
+and the issue with that so if like
+and the issue with that so if like
+yourself
+yourself
+yourself
+do something and you call yourself
+do something and you call yourself
+do something and you call yourself
+do this
+do this
+do this
+and self like do that
+and self like do that
+and self like do that
+this just
+this just
+this just
+doesn't really make sense one of the
+doesn't really make sense one of the
+doesn't really make sense one of the
+hardest parts of
+hardest parts of
+hardest parts of
+writing code is naming giving name
+writing code is naming giving name
+writing code is naming giving name
+meaningful names to functions and
+meaningful names to functions and
+meaningful names to functions and
+properties so what's the point of having
+properties so what's the point of having
+properties so what's the point of having
+a bunch of functions like this where
+a bunch of functions like this where
+a bunch of functions like this where
+instead of doing this you can make
+instead of doing this you can make
+instead of doing this you can make
+you can make this init function block
+you can make this init function block
+you can make this init function block
+just a little bit longer
+just a little bit longer
+just a little bit longer
+and
+and
+and
+you just put comments so you can say
+you just put comments so you can say
+you just put comments so you can say
+like this
+like this
+like this
+does something
+does something
+does something
+like this and then
+like this and then
+like this and then
+that does that and then finally
+that does that and then finally
+that does that and then finally
+this does this again or something like
+this does this again or something like
+this does this again or something like
+that
+that
+that
+so instead of creating a bunch of
+so instead of creating a bunch of
+so instead of creating a bunch of
+separate like
+separate like
+separate like
+functions that are private that are only
+functions that are private that are only
+functions that are private that are only
+going to get called once and in a nit
+going to get called once and in a nit
+going to get called once and in a nit
+block i would split it up into a bunch
+block i would split it up into a bunch
+block i would split it up into a bunch
+of different
+of different
+of different
+commented blocks within one big init
+commented blocks within one big init
+commented blocks within one big init
+function don't
+function don't
+function don't
+get scared or afraid when you're when a
+get scared or afraid when you're when a
+get scared or afraid when you're when a
+function becomes like pretty large
+function becomes like pretty large
+function becomes like pretty large
+you only need to split up something into
+you only need to split up something into
+you only need to split up something into
+a function if it's used more than once
+a function if it's used more than once
+a function if it's used more than once
+really
+really
+really
+and
+and
+and
+sometimes with something like this in it
+sometimes with something like this in it
+sometimes with something like this in it
+it's better to like keep it out of the
+it's better to like keep it out of the
+it's better to like keep it out of the
+new because making a noon you know this
+new because making a noon you know this
+new because making a noon you know this
+is all just personal preference at this
+is all just personal preference at this
+is all just personal preference at this
+point since luau's so flexible you can
+point since luau's so flexible you can
+point since luau's so flexible you can
+really do what you want but just
+really do what you want but just
+really do what you want but just
+don't try to like mimic other for other
+don't try to like mimic other for other
+don't try to like mimic other for other
+paradigms other forms of code just
+paradigms other forms of code just
+paradigms other forms of code just
+because
+because
+because
+it's like the convention for other
+it's like the convention for other
+it's like the convention for other
+languages like i initially did that you
+languages like i initially did that you
+languages like i initially did that you
+know function split up thing because i
+know function split up thing because i
+know function split up thing because i
+have a lot of experience in java
+have a lot of experience in java
+have a lot of experience in java
+and luau is not java you don't need to
+and luau is not java you don't need to
+and luau is not java you don't need to
+split up stuff into a bunch of different
+split up stuff into a bunch of different
+split up stuff into a bunch of different
+functions because that's the industry
+functions because that's the industry
+functions because that's the industry
+standard in the java world you can keep
+standard in the java world you can keep
+standard in the java world you can keep
+everything in your init function
+everything in your init function
+everything in your init function
+although maybe a little bit longer who
+although maybe a little bit longer who
+although maybe a little bit longer who
+cares like
+cares like
+cares like
+that doesn't matter i guess in a select
+that doesn't matter i guess in a select
+that doesn't matter i guess in a select
+case if your indentation is getting out
+case if your indentation is getting out
+case if your indentation is getting out
+of hand that might be cause to move it
+of hand that might be cause to move it
+of hand that might be cause to move it
+into a separate function but if you're
+into a separate function but if you're
+into a separate function but if you're
+only using that functionality once there
+only using that functionality once there
+only using that functionality once there
+is no point to
+is no point to
+is no point to
+split it up
+split it up
+split it up
+so that's just what i would recommend
+so that's just what i would recommend
+so that's just what i would recommend
+but
+but
+but
+like other than that when you're writing
+like other than that when you're writing
+like other than that when you're writing
+your code make sure to do something that
+your code make sure to do something that
+your code make sure to do something that
+is intuitive and readable and that you
+is intuitive and readable and that you
+is intuitive and readable and that you
+like enjoy looking at
+like enjoy looking at
+like enjoy looking at
+so
+so
+so
+when you're commenting your code make
+when you're commenting your code make
+when you're commenting your code make
+sure you don't like say what the code
+sure you don't like say what the code
+sure you don't like say what the code
+does just like say why you're doing
+does just like say why you're doing
+does just like say why you're doing
+something make like long blocks that
+something make like long blocks that
+something make like long blocks that
+just kind of like explain your like your
+just kind of like explain your like your
+just kind of like explain your like your
+reasoning don't just kind of like write
+reasoning don't just kind of like write
+reasoning don't just kind of like write
+comments to write comments if you don't
+comments to write comments if you don't
+comments to write comments if you don't
+need to comment your code because you're
+need to comment your code because you're
+need to comment your code because you're
+working on a code base by yourself and
+working on a code base by yourself and
+working on a code base by yourself and
+your code is self-explanatory that's
+your code is self-explanatory that's
+your code is self-explanatory that's
+fine don't let other people like
+fine don't let other people like
+fine don't let other people like
+ridicule you for you know not not doing
+ridicule you for you know not not doing
+ridicule you for you know not not doing
+good code practice because ideally in a
+good code practice because ideally in a
+good code practice because ideally in a
+perfect world
+perfect world
+perfect world
+you wouldn't need to write
+you wouldn't need to write
+you wouldn't need to write
+need to write comments because your code
+need to write comments because your code
+need to write comments because your code
+would just basically explain itself
+would just basically explain itself
+would just basically explain itself
+which obviously is never going to happen
+which obviously is never going to happen
+which obviously is never going to happen
+so you need to write comments but yeah
+so you need to write comments but yeah
+so you need to write comments but yeah
+but
+but
+but
+at the end of the day the most important
+at the end of the day the most important
+at the end of the day the most important
+part of
+part of
+part of
+making
+making
+making
+organizing your projects is to release a
+organizing your projects is to release a
+organizing your projects is to release a
+game and that's something that i often
+game and that's something that i often
+game and that's something that i often
+lose sight of
+lose sight of
+lose sight of
+it's not about writing perfect code it's
+it's not about writing perfect code it's
+it's not about writing perfect code it's
+not about perfecting every single bit of
+not about perfecting every single bit of
+not about perfecting every single bit of
+your code base so it's readable it's
+your code base so it's readable it's
+your code base so it's readable it's
+safe and it's correct
+safe and it's correct
+safe and it's correct
+it's just about making a game
+it's just about making a game
+it's just about making a game
+that more or less works properly and
+that more or less works properly and
+that more or less works properly and
+that players enjoy so if you spend so
+that players enjoy so if you spend so
+that players enjoy so if you spend so
+much time trying to make your code
+much time trying to make your code
+much time trying to make your code
+perfect you're never going to release
+perfect you're never going to release
+perfect you're never going to release
+your game you obviously want to release
+your game you obviously want to release
+your game you obviously want to release
+your game that's something i struggle
+your game that's something i struggle
+your game that's something i struggle
+with a lot and so you just got to
+with a lot and so you just got to
+with a lot and so you just got to
+remember just get it done even if it's
+remember just get it done even if it's
+remember just get it done even if it's
+not perfect
+not perfect
+not perfect
+you just got to get it done because
+you just got to get it done because
+you just got to get it done because
+finishing a project is so much more
+finishing a project is so much more
+finishing a project is so much more
+important than making the project
+important than making the project
+important than making the project
+perfect because our perfect project is
+perfect because our perfect project is
+perfect because our perfect project is
+something that no one is ever going to
+something that no one is ever going to
+something that no one is ever going to
+use or play because nothing can ever be
+use or play because nothing can ever be
+use or play because nothing can ever be
+perfect so it will never
+perfect so it will never
+perfect so it will never
+get
+get
+get
+done
+done
+done
+so with that
+so with that
+so with that
+organizing a project is hard and people
+organizing a project is hard and people
+organizing a project is hard and people
+realize that so there's been efforts to
+realize that so there's been efforts to
+realize that so there's been efforts to
+make this process easier that's why
+make this process easier that's why
+make this process easier that's why
+there are frameworks that help you like
+there are frameworks that help you like
+there are frameworks that help you like
+for example a really popular one in my
+for example a really popular one in my
+for example a really popular one in my
+community and in a lot of roblox
+community and in a lot of roblox
+community and in a lot of roblox
+communities is knit
+communities is knit
+communities is knit
+and knit is great because it's simple
+and knit is great because it's simple
+and knit is great because it's simple
+it's easy it does have a couple of
+it's easy it does have a couple of
+it's easy it does have a couple of
+downsides that the creator has even
+downsides that the creator has even
+downsides that the creator has even
+mentioned the fact that it's like
+mentioned the fact that it's like
+mentioned the fact that it's like
+singletons that everything is accessing
+singletons that everything is accessing
+singletons that everything is accessing
+one
+one
+one
+like module or service in the higher
+like module or service in the higher
+like module or service in the higher
+level or controller that's that's kind
+level or controller that's that's kind
+level or controller that's that's kind
+of bad but
+of bad but
+of bad but
+you know it does help you organize your
+you know it does help you organize your
+you know it does help you organize your
+project and there are other efforts
+project and there are other efforts
+project and there are other efforts
+going on like matter ecs or the entity
+going on like matter ecs or the entity
+going on like matter ecs or the entity
+component system where any component
+component system where any component
+component system where any component
+systems have been tried and true in game
+systems have been tried and true in game
+systems have been tried and true in game
+development everyone loves them unity
+development everyone loves them unity
+development everyone loves them unity
+uses them a lot of people love unity
+uses them a lot of people love unity
+uses them a lot of people love unity
+a lot of different stuff that use them
+a lot of different stuff that use them
+a lot of different stuff that use them
+and
+and
+and
+i recommend checking that out too it's
+i recommend checking that out too it's
+i recommend checking that out too it's
+pretty early in progress but
+pretty early in progress but
+pretty early in progress but
+stuff like that can help you organize
+stuff like that can help you organize
+stuff like that can help you organize
+your game structure without you making
+your game structure without you making
+your game structure without you making
+all the decisions because
+all the decisions because
+all the decisions because
+the thing about luau is it's very very
+the thing about luau is it's very very
+the thing about luau is it's very very
+powerful it allows you to make very a
+powerful it allows you to make very a
+powerful it allows you to make very a
+lot of your own decisions
+lot of your own decisions
+lot of your own decisions
+but those decisions can lead to analysis
+but those decisions can lead to analysis
+but those decisions can lead to analysis
+paralysis because you may not know which
+paralysis because you may not know which
+paralysis because you may not know which
+ways to do something so at the end of
+ways to do something so at the end of
+ways to do something so at the end of
+the day just do something that you like
+the day just do something that you like
+the day just do something that you like
+and if there's other things to help you
+and if there's other things to help you
+and if there's other things to help you
+achieve your goals fi like achieve your
+achieve your goals fi like achieve your
+achieve your goals fi like achieve your
+targets of what you're trying to do
+targets of what you're trying to do
+targets of what you're trying to do
+just use them don't feel like you're
+just use them don't feel like you're
+just use them don't feel like you're
+plagiarizing don't feel like because
+plagiarizing don't feel like because
+plagiarizing don't feel like because
+like it's it's open it's meant for you
+like it's it's open it's meant for you
+like it's it's open it's meant for you
+to use so just
+to use so just
+to use so just
+basically what i'm trying to say is just
+basically what i'm trying to say is just
+basically what i'm trying to say is just
+find the simplest way to make your game
+find the simplest way to make your game
+find the simplest way to make your game
+to try to over complete things trust me
+to try to over complete things trust me
+to try to over complete things trust me
+i've been over complicating things my
+i've been over complicating things my
+i've been over complicating things my
+entire development career and
+entire development career and
+entire development career and
+although it's nice food for thought like
+although it's nice food for thought like
+although it's nice food for thought like
+it doesn't make you any more productive
+it doesn't make you any more productive
+it doesn't make you any more productive
+or efficient and like you need to get
+or efficient and like you need to get
+or efficient and like you need to get
+your games out so
+your games out so
+your games out so
+that's what i recommend doing
+that's what i recommend doing
+that's what i recommend doing
+but other than that
+but other than that
+but other than that
+that's about it for this video i will
+that's about it for this video i will
+that's about it for this video i will
+have a lot of links in the description
+have a lot of links in the description
+have a lot of links in the description
+to reference different
+to reference different
+to reference different
+things and there was one really good
+things and there was one really good
+things and there was one really good
+video on about like why obviously the
+video on about like why obviously the
+video on about like why obviously the
+program's bad by like this dude um i
+program's bad by like this dude um i
+program's bad by like this dude um i
+don't advocate for everything in it but
+don't advocate for everything in it but
+don't advocate for everything in it but
+you can definitely check it out just
+you can definitely check it out just
+you can definitely check it out just
+interesting food for thought
+interesting food for thought
+interesting food for thought
+and
+and
+and
+i hope you take this video and just use
+i hope you take this video and just use
+i hope you take this video and just use
+it to
+it to
+it to
+you know enhance your development just
+you know enhance your development just
+you know enhance your development just
+use it kind of as a baseline but this is
+use it kind of as a baseline but this is
+use it kind of as a baseline but this is
+all my opinion so if you don't like it
+all my opinion so if you don't like it
+all my opinion so if you don't like it
+yeah let me tell me why you don't like
+yeah let me tell me why you don't like
+yeah let me tell me why you don't like
+it maybe you'll change my mind we'll see
+it maybe you'll change my mind we'll see
+it maybe you'll change my mind we'll see
+but this is just what i've gained from a
+but this is just what i've gained from a
+but this is just what i've gained from a
+lot of experience that's the most
+lot of experience that's the most
+lot of experience that's the most
+important thing experience like get
+important thing experience like get
+important thing experience like get
+things done start writing code that's
+things done start writing code that's
+things done start writing code that's
+all i say
+all i say
+all i say
+and comment if you have any questions or
+and comment if you have any questions or
+and comment if you have any questions or
+suggestions or any opinions
+suggestions or any opinions
+suggestions or any opinions
+i hope you have a nice day
+i hope you have a nice day
+i hope you have a nice day
+and goodbye
+and goodbye
+and goodbye
+[Music]
+you

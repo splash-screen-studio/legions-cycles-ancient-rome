@@ -1,0 +1,1721 @@
+welcome back to another tallest
+welcome back to another tallest
+welcome back to another tallest
+tower devlog in this video
+tower devlog in this video
+tower devlog in this video
+i show you all the changes i've made to
+i show you all the changes i've made to
+i show you all the changes i've made to
+my
+my
+my
+up and coming roblox game the tallest
+up and coming roblox game the tallest
+up and coming roblox game the tallest
+tower
+tower
+tower
+so i basically reworked the whole entire
+so i basically reworked the whole entire
+so i basically reworked the whole entire
+project
+project
+project
+since the last video and it's looking a
+since the last video and it's looking a
+since the last video and it's looking a
+lot different
+lot different
+lot different
+but it's looking a lot better i made a
+but it's looking a lot better i made a
+but it's looking a lot better i made a
+lot of internal changes
+lot of internal changes
+lot of internal changes
+as well as external changes to the game
+as well as external changes to the game
+as well as external changes to the game
+that should make it a lot more fun to
+that should make it a lot more fun to
+that should make it a lot more fun to
+play and a lot more stable to run
+play and a lot more stable to run
+play and a lot more stable to run
+so in this video i'll be showing you the
+so in this video i'll be showing you the
+so in this video i'll be showing you the
+internals of my project you can get an
+internals of my project you can get an
+internals of my project you can get an
+inside look of how i make my roblox
+inside look of how i make my roblox
+inside look of how i make my roblox
+games
+games
+games
+which should be really really cool and
+which should be really really cool and
+which should be really really cool and
+you get to see all the aesthetics and
+you get to see all the aesthetics and
+you get to see all the aesthetics and
+gameplay changes
+gameplay changes
+gameplay changes
+so i hope you enjoy this video if you do
+so i hope you enjoy this video if you do
+so i hope you enjoy this video if you do
+like and subscribe
+like and subscribe
+like and subscribe
+comment any questions or suggestions
+comment any questions or suggestions
+comment any questions or suggestions
+down below but without further ado
+down below but without further ado
+down below but without further ado
+let's get into the video
+[Music]
+[Music]
+[Music]
+so let's start with the visual changes
+so let's start with the visual changes
+so let's start with the visual changes
+as you can see here the map
+as you can see here the map
+as you can see here the map
+has been completely reworked from the
+has been completely reworked from the
+has been completely reworked from the
+roundup
+roundup
+roundup
+and the way i did this was using height
+and the way i did this was using height
+and the way i did this was using height
+maps and color maps
+maps and color maps
+maps and color maps
+through the terrain editor so if you
+through the terrain editor so if you
+through the terrain editor so if you
+want to use that you just go to the
+want to use that you just go to the
+want to use that you just go to the
+terrain editor
+terrain editor
+terrain editor
+then you go to import and you can import
+then you go to import and you can import
+then you go to import and you can import
+whatever game assets you have
+whatever game assets you have
+whatever game assets you have
+so i have these assets in
+so i have these assets in
+so i have these assets in
+and there are two maps the first
+and there are two maps the first
+and there are two maps the first
+one
+one
+one
+is a grayscale map which depicts the
+is a grayscale map which depicts the
+is a grayscale map which depicts the
+height
+height
+height
+for the map so if i go back
+for the map so if i go back
+for the map so if i go back
+to roblox you can see that
+to roblox you can see that
+to roblox you can see that
+the little circle in the middle with the
+the little circle in the middle with the
+the little circle in the middle with the
+indention
+indention
+indention
+corresponds with the circle in the
+corresponds with the circle in the
+corresponds with the circle in the
+middle
+middle
+middle
+which is lighter and the water is a lot
+which is lighter and the water is a lot
+which is lighter and the water is a lot
+darker since it's a lot lower and then
+darker since it's a lot lower and then
+darker since it's a lot lower and then
+you have this little
+you have this little
+you have this little
+indentation which is a little darker and
+indentation which is a little darker and
+indentation which is a little darker and
+this allows you to create some really
+this allows you to create some really
+this allows you to create some really
+nice terrain
+nice terrain
+nice terrain
+really really quickly and it looks very
+really really quickly and it looks very
+really really quickly and it looks very
+nice and by the way if you're wondering
+nice and by the way if you're wondering
+nice and by the way if you're wondering
+i made this wall by using parts if i go
+i made this wall by using parts if i go
+i made this wall by using parts if i go
+to the train editor again
+to the train editor again
+to the train editor again
+i can go to convert and i can convert
+i can go to convert and i can convert
+i can go to convert and i can convert
+whatever part i want so i just made a
+whatever part i want so i just made a
+whatever part i want so i just made a
+bunch of
+bunch of
+bunch of
+rectangular parts and made a wall
+rectangular parts and made a wall
+rectangular parts and made a wall
+and along with the height map there's a
+and along with the height map there's a
+and along with the height map there's a
+color map
+color map
+color map
+which all i did is i copied and pasted
+which all i did is i copied and pasted
+which all i did is i copied and pasted
+the height map
+the height map
+the height map
+and i colored it so roblox provides
+and i colored it so roblox provides
+and i colored it so roblox provides
+a bunch of terrain material colors so
+a bunch of terrain material colors so
+a bunch of terrain material colors so
+this blue is water
+this blue is water
+this blue is water
+green is grass
+green is grass
+green is grass
+and this little brown color
+and this little brown color
+and this little brown color
+is the ground this sandy this color was
+is the ground this sandy this color was
+is the ground this sandy this color was
+supposed to be sand but since it's a
+supposed to be sand but since it's a
+supposed to be sand but since it's a
+little blurry
+little blurry
+little blurry
+i don't really know why i'm not that
+i don't really know why i'm not that
+i don't really know why i'm not that
+good with i can just get by with it
+good with i can just get by with it
+good with i can just get by with it
+it became rocks still looks fine the
+it became rocks still looks fine the
+it became rocks still looks fine the
+water looks fine
+water looks fine
+water looks fine
+i'll take it i also made this lobby area
+i'll take it i also made this lobby area
+i'll take it i also made this lobby area
+over here which looks kind of crap
+over here which looks kind of crap
+over here which looks kind of crap
+but it does the job it's just a blank
+but it does the job it's just a blank
+but it does the job it's just a blank
+little lobby you're not going to be
+little lobby you're not going to be
+little lobby you're not going to be
+spending
+spending
+spending
+a lot of time in here because you can't
+a lot of time in here because you can't
+a lot of time in here because you can't
+really like die
+really like die
+really like die
+and get set back sent back to the lobby
+and get set back sent back to the lobby
+and get set back sent back to the lobby
+it doesn't really
+it doesn't really
+it doesn't really
+serve a purpose it's like it's like the
+serve a purpose it's like it's like the
+serve a purpose it's like it's like the
+arsenal like
+arsenal like
+arsenal like
+menu screen if you ever played arsenal
+menu screen if you ever played arsenal
+menu screen if you ever played arsenal
+where you're not there
+where you're not there
+where you're not there
+a lot other than just to buy stuff and
+a lot other than just to buy stuff and
+a lot other than just to buy stuff and
+to press play again
+to press play again
+to press play again
+so it doesn't really need to be too
+so it doesn't really need to be too
+so it doesn't really need to be too
+beautiful that's exactly
+beautiful that's exactly
+beautiful that's exactly
+what it is here so along with these
+what it is here so along with these
+what it is here so along with these
+visual changes i also made a few
+visual changes i also made a few
+visual changes i also made a few
+scripting
+scripting
+scripting
+changes so i'm here in visual studio
+changes so i'm here in visual studio
+changes so i'm here in visual studio
+code
+code
+code
+to show you my scripting changes and
+to show you my scripting changes and
+to show you my scripting changes and
+there is an absolute ton
+there is an absolute ton
+there is an absolute ton
+first of all i completely reverse my
+first of all i completely reverse my
+first of all i completely reverse my
+project
+project
+project
+using a few frameworks
+using a few frameworks
+using a few frameworks
+and i split up the project into three
+and i split up the project into three
+and i split up the project into three
+categories you have game
+categories you have game
+categories you have game
+which is put up into client ef server
+which is put up into client ef server
+which is put up into client ef server
+and you have shared
+and you have shared
+and you have shared
+so the client stuff goes into starter
+so the client stuff goes into starter
+so the client stuff goes into starter
+player scripts server stuff goes into
+player scripts server stuff goes into
+player scripts server stuff goes into
+starter server scripts
+starter server scripts
+starter server scripts
+and shared goes into replicated
+and shared goes into replicated
+and shared goes into replicated
+storage this is a really nice system in
+storage this is a really nice system in
+storage this is a really nice system in
+visual studio
+visual studio
+visual studio
+and let me show you how it replicates to
+and let me show you how it replicates to
+and let me show you how it replicates to
+roblox so you can see here
+roblox so you can see here
+roblox so you can see here
+in server script service it copies the
+in server script service it copies the
+in server script service it copies the
+server folder
+server folder
+server folder
+here's all our stuff and in our player
+here's all our stuff and in our player
+here's all our stuff and in our player
+scripts does the same exact thing and
+scripts does the same exact thing and
+scripts does the same exact thing and
+replicated storage
+replicated storage
+replicated storage
+you have your shared don't worry about
+you have your shared don't worry about
+you have your shared don't worry about
+these i'll talk about them in just a
+these i'll talk about them in just a
+these i'll talk about them in just a
+second
+second
+second
+along with the whole total project
+along with the whole total project
+along with the whole total project
+changes
+changes
+changes
+i also rewrote a lot of my code
+i also rewrote a lot of my code
+i also rewrote a lot of my code
+using a game framework called knit so
+using a game framework called knit so
+using a game framework called knit so
+knit is an absolutely amazing framework
+knit is an absolutely amazing framework
+knit is an absolutely amazing framework
+made by another roblox youtuber named
+made by another roblox youtuber named
+made by another roblox youtuber named
+slate nick i'll put his link down in the
+slate nick i'll put his link down in the
+slate nick i'll put his link down in the
+description
+description
+description
+and it's a super lightweight module all
+and it's a super lightweight module all
+and it's a super lightweight module all
+you do is copy and paste
+you do is copy and paste
+you do is copy and paste
+the like folder so i copy and pasted the
+the like folder so i copy and pasted the
+the like folder so i copy and pasted the
+source folder into my project
+source folder into my project
+source folder into my project
+but you can also get it as a roblox
+but you can also get it as a roblox
+but you can also get it as a roblox
+model so it just as a module script with
+model so it just as a module script with
+model so it just as a module script with
+all the stuff in it
+all the stuff in it
+all the stuff in it
+and it works wonders it allows me to do
+and it works wonders it allows me to do
+and it works wonders it allows me to do
+so many things so let's start
+so many things so let's start
+so many things so let's start
+with the server so the server's split up
+with the server so the server's split up
+with the server so the server's split up
+into components modules and services
+into components modules and services
+into components modules and services
+in the services it's basically a bunch
+in the services it's basically a bunch
+in the services it's basically a bunch
+of singletons let me go to my game
+of singletons let me go to my game
+of singletons let me go to my game
+service
+service
+service
+that run with the startup of nit so i
+that run with the startup of nit so i
+that run with the startup of nit so i
+have a ton of services they're all
+have a ton of services they're all
+have a ton of services they're all
+module scripts
+module scripts
+module scripts
+these module scripts are run by
+these module scripts are run by
+these module scripts are run by
+a singular server script
+a singular server script
+a singular server script
+named server runtime all it does is it
+named server runtime all it does is it
+named server runtime all it does is it
+requires the modules don't worry about
+requires the modules don't worry about
+requires the modules don't worry about
+this this is just some function
+this this is just some function
+this this is just some function
+definition
+definition
+definition
+and it starts knit that's literally all
+and it starts knit that's literally all
+and it starts knit that's literally all
+it does
+it does
+it does
+we initiate a bunch of stuff and really
+we initiate a bunch of stuff and really
+we initiate a bunch of stuff and really
+cool thing about knit is since
+cool thing about knit is since
+cool thing about knit is since
+i'm guaranteed that all modules in my
+i'm guaranteed that all modules in my
+i'm guaranteed that all modules in my
+game have it
+game have it
+game have it
+i can define some global so i have
+i can define some global so i have
+i can define some global so i have
+nit.modules which is
+nit.modules which is
+nit.modules which is
+script.parent.modules so
+script.parent.modules so
+script.parent.modules so
+any other script can access it and in
+any other script can access it and in
+any other script can access it and in
+case this changes
+case this changes
+case this changes
+this location i can just rewrite this i
+this location i can just rewrite this i
+this location i can just rewrite this i
+don't have to rewrite
+don't have to rewrite
+don't have to rewrite
+the location in each of my scripts i
+the location in each of my scripts i
+the location in each of my scripts i
+also have shared
+also have shared
+also have shared
+and config i'll go over config in just a
+and config i'll go over config in just a
+and config i'll go over config in just a
+second as well
+second as well
+second as well
+so each service is run off the start
+so each service is run off the start
+so each service is run off the start
+and it uses the knit start and net
+and it uses the knit start and net
+and it uses the knit start and net
+methods and they basically start the
+methods and they basically start the
+methods and they basically start the
+game so this game
+game so this game
+game so this game
+service has a loop that is the game loop
+service has a loop that is the game loop
+service has a loop that is the game loop
+and what it does is it initiates a round
+and what it does is it initiates a round
+and what it does is it initiates a round
+which is part of the modules modules are
+which is part of the modules modules are
+which is part of the modules modules are
+just like classes basically
+just like classes basically
+just like classes basically
+so i have my round class basic meta
+so i have my round class basic meta
+so i have my round class basic meta
+method
+method
+method
+and you have the basic stuff you can see
+and you have the basic stuff you can see
+and you have the basic stuff you can see
+the round utilizes a made
+the round utilizes a made
+the round utilizes a made
+which it made is a cool utility module
+which it made is a cool utility module
+which it made is a cool utility module
+if i go to
+if i go to
+if i go to
+made here we go it's
+made here we go it's
+made here we go it's
+syntax and its api is very very simple
+syntax and its api is very very simple
+syntax and its api is very very simple
+all it is is a made basically
+all it is is a made basically
+all it is is a made basically
+you give it a task which can be an event
+you give it a task which can be an event
+you give it a task which can be an event
+connection a function
+connection a function
+connection a function
+or an instance with a destroy method or
+or an instance with a destroy method or
+or an instance with a destroy method or
+instance table with a destroy method
+instance table with a destroy method
+instance table with a destroy method
+then once you're done with those said
+then once you're done with those said
+then once you're done with those said
+methods or
+methods or
+methods or
+event connections whatever you can just
+event connections whatever you can just
+event connections whatever you can just
+destroy it
+destroy it
+destroy it
+it's really really really simple i i
+it's really really really simple i i
+it's really really really simple i i
+love this module because
+love this module because
+love this module because
+in the past i've implemented these
+in the past i've implemented these
+in the past i've implemented these
+systems pretty cleverly
+systems pretty cleverly
+systems pretty cleverly
+i do see if i do see some myself but in
+i do see if i do see some myself but in
+i do see if i do see some myself but in
+each
+each
+each
+class alone so i made a connections
+class alone so i made a connections
+class alone so i made a connections
+table for example
+table for example
+table for example
+which had all my event connections and i
+which had all my event connections and i
+which had all my event connections and i
+called disconnect on them
+called disconnect on them
+called disconnect on them
+when i was done but this is very very
+when i was done but this is very very
+when i was done but this is very very
+simple it makes it really easy and
+simple it makes it really easy and
+simple it makes it really easy and
+standardized so i can just
+standardized so i can just
+standardized so i can just
+put everything all of my connections
+put everything all of my connections
+put everything all of my connections
+like i put my player added connection
+like i put my player added connection
+like i put my player added connection
+into the maid and it'll get deleted once
+into the maid and it'll get deleted once
+into the maid and it'll get deleted once
+i call round
+i call round
+i call round
+destroy when i destroy the maid it's
+destroy when i destroy the maid it's
+destroy when i destroy the maid it's
+really really cool
+really really cool
+really really cool
+nick comes with a bunch of these utility
+nick comes with a bunch of these utility
+nick comes with a bunch of these utility
+modules
+modules
+modules
+a few of the good ones are like a
+a few of the good ones are like a
+a few of the good ones are like a
+promise or an option
+promise or an option
+promise or an option
+and these are all modules that come
+and these are all modules that come
+and these are all modules that come
+from other languages or other
+from other languages or other
+from other languages or other
+frameworks and it's just a compilation
+frameworks and it's just a compilation
+frameworks and it's just a compilation
+of the best and you don't have to use
+of the best and you don't have to use
+of the best and you don't have to use
+all of them if you don't want to
+all of them if you don't want to
+all of them if you don't want to
+but they're all really really really
+but they're all really really really
+but they're all really really really
+useful another good one is a thread
+useful another good one is a thread
+useful another good one is a thread
+or a signal which is basically like a
+or a signal which is basically like a
+or a signal which is basically like a
+custom event there's some really
+custom event there's some really
+custom event there's some really
+cleverly written modules and they're
+cleverly written modules and they're
+cleverly written modules and they're
+documented very very well
+documented very very well
+documented very very well
+so all the comments are good so i
+so all the comments are good so i
+so all the comments are good so i
+sometimes take a look and i see what i
+sometimes take a look and i see what i
+sometimes take a look and i see what i
+can learn from them as well
+can learn from them as well
+can learn from them as well
+so if i go over to the client
+so if i go over to the client
+so if i go over to the client
+you can see it's organized in much the
+you can see it's organized in much the
+you can see it's organized in much the
+same way
+same way
+same way
+but instead of services we have
+but instead of services we have
+but instead of services we have
+controllers now controllers are just the
+controllers now controllers are just the
+controllers now controllers are just the
+client-side equivalent of a service
+client-side equivalent of a service
+client-side equivalent of a service
+and we can just go in and see some stuff
+and we can just go in and see some stuff
+and we can just go in and see some stuff
+in like our camera service for example
+in like our camera service for example
+in like our camera service for example
+one of the coolest things about knit is
+one of the coolest things about knit is
+one of the coolest things about knit is
+the ability to
+the ability to
+the ability to
+knit the client and the server that's
+knit the client and the server that's
+knit the client and the server that's
+the whole point of the module
+the whole point of the module
+the whole point of the module
+as you can see here i require knit in
+as you can see here i require knit in
+as you can see here i require knit in
+the very top and then i get
+the very top and then i get
+the very top and then i get
+a service oh whoops you may be wondering
+a service oh whoops you may be wondering
+a service oh whoops you may be wondering
+how can i get a service it's on the
+how can i get a service it's on the
+how can i get a service it's on the
+server
+server
+server
+and it does all of the remote functions
+and it does all of the remote functions
+and it does all of the remote functions
+remote events for you it
+remote events for you it
+remote events for you it
+does not leave anything any like
+does not leave anything any like
+does not leave anything any like
+raw remote events or functions that you
+raw remote events or functions that you
+raw remote events or functions that you
+have to tamper with so
+have to tamper with so
+have to tamper with so
+when i use a function on wind service
+when i use a function on wind service
+when i use a function on wind service
+it's actually calling a remote event
+it's actually calling a remote event
+it's actually calling a remote event
+in this case i'm actually using a
+in this case i'm actually using a
+in this case i'm actually using a
+remote event and you can like explicitly
+remote event and you can like explicitly
+remote event and you can like explicitly
+create a remote event like wind service
+create a remote event like wind service
+create a remote event like wind service
+is a remote event that says
+is a remote event that says
+is a remote event that says
+set podium camera enabled and i can
+set podium camera enabled and i can
+set podium camera enabled and i can
+automatically connect it but you can
+automatically connect it but you can
+automatically connect it but you can
+also
+also
+also
+use a function and it can return a value
+use a function and it can return a value
+use a function and it can return a value
+using a remote function which is really
+using a remote function which is really
+using a remote function which is really
+really cool
+so services and controllers are really
+so services and controllers are really
+so services and controllers are really
+nice
+nice
+nice
+and they allow your live code to be very
+and they allow your live code to be very
+and they allow your live code to be very
+short and concise and simple since you
+short and concise and simple since you
+short and concise and simple since you
+only have one local script
+only have one local script
+only have one local script
+and one server script but we've probably
+and one server script but we've probably
+and one server script but we've probably
+all
+all
+all
+all the advanced developers we've
+all the advanced developers we've
+all the advanced developers we've
+probably done something like that or
+probably done something like that or
+probably done something like that or
+similarly
+similarly
+similarly
+at one point or another like in my last
+at one point or another like in my last
+at one point or another like in my last
+object oriented programming video if you
+object oriented programming video if you
+object oriented programming video if you
+watch that
+watch that
+watch that
+i talked about using the sort of project
+i talked about using the sort of project
+i talked about using the sort of project
+structure
+structure
+structure
+but the thing that makes knit really
+but the thing that makes knit really
+but the thing that makes knit really
+really
+really
+really
+unique is knit components which these
+unique is knit components which these
+unique is knit components which these
+components they're so simple
+components they're so simple
+components they're so simple
+but they're amazing so you saw in my
+but they're amazing so you saw in my
+but they're amazing so you saw in my
+client
+client
+client
+and my server i have a components folder
+and my server i have a components folder
+and my server i have a components folder
+each of them only has one component but
+each of them only has one component but
+each of them only has one component but
+i can obviously increase that in the
+i can obviously increase that in the
+i can obviously increase that in the
+future
+future
+future
+so the component i'm in the module right
+so the component i'm in the module right
+so the component i'm in the module right
+now is
+now is
+now is
+a module script basically or a class i
+a module script basically or a class i
+a module script basically or a class i
+should say
+should say
+should say
+that is instance on any object
+that is instance on any object
+that is instance on any object
+that has a specific tag and tags in
+that has a specific tag and tags in
+that has a specific tag and tags in
+roblox are defined using the
+roblox are defined using the
+roblox are defined using the
+collection service if you don't know
+collection service if you don't know
+collection service if you don't know
+about that in roblox there's a really
+about that in roblox there's a really
+about that in roblox there's a really
+cool tag editor plugin which allows you
+cool tag editor plugin which allows you
+cool tag editor plugin which allows you
+to edit the tags
+to edit the tags
+to edit the tags
+so let's go to our anchor for example
+so let's go to our anchor for example
+so let's go to our anchor for example
+so the anchor is a new part
+so the anchor is a new part
+so the anchor is a new part
+in my game that allows parts around it
+in my game that allows parts around it
+in my game that allows parts around it
+to be anchored because that seemed like
+to be anchored because that seemed like
+to be anchored because that seemed like
+a big thing that everyone wanted
+a big thing that everyone wanted
+a big thing that everyone wanted
+so when i click this you can see
+so when i click this you can see
+so when i click this you can see
+anchor's highlighted so that means
+anchor's highlighted so that means
+anchor's highlighted so that means
+this anchor module or model i should say
+this anchor module or model i should say
+this anchor module or model i should say
+has the anchor tag according to the
+has the anchor tag according to the
+has the anchor tag according to the
+collection service
+collection service
+collection service
+so what knit does is it basically
+so what knit does is it basically
+so what knit does is it basically
+checks through all of our components so
+checks through all of our components so
+checks through all of our components so
+let's go to
+let's go to
+let's go to
+the anchor component and it has a
+the anchor component and it has a
+the anchor component and it has a
+special tag
+special tag
+special tag
+that's anchor and this tag is what nit
+that's anchor and this tag is what nit
+that's anchor and this tag is what nit
+uses to
+uses to
+uses to
+figure out where it should go so
+figure out where it should go so
+figure out where it should go so
+when the game starts nit checks oh
+when the game starts nit checks oh
+when the game starts nit checks oh
+is this part is this part an anchor or
+is this part is this part an anchor or
+is this part is this part an anchor or
+is it tagged with anchor or checks all
+is it tagged with anchor or checks all
+is it tagged with anchor or checks all
+parts that have the tag of anchor
+parts that have the tag of anchor
+parts that have the tag of anchor
+and it gives it this
+and it gives it this
+and it gives it this
+module so it calls anchor.new and it
+module so it calls anchor.new and it
+module so it calls anchor.new and it
+gives us the instance
+gives us the instance
+gives us the instance
+in which this class like the specific
+in which this class like the specific
+in which this class like the specific
+instance of the class
+instance of the class
+instance of the class
+is connected to so this allows us to
+is connected to so this allows us to
+is connected to so this allows us to
+make
+make
+make
+really nice and concise component
+really nice and concise component
+really nice and concise component
+systems that
+systems that
+systems that
+when a pocket spawn for example the
+when a pocket spawn for example the
+when a pocket spawn for example the
+anchor part like when it gets spawned
+anchor part like when it gets spawned
+anchor part like when it gets spawned
+we want to do all of our stuff but then
+we want to do all of our stuff but then
+we want to do all of our stuff but then
+when we want to destroy it
+when we want to destroy it
+when we want to destroy it
+we can destroy and it obviously
+we can destroy and it obviously
+we can destroy and it obviously
+integrates the maid because you'll need
+integrates the maid because you'll need
+integrates the maid because you'll need
+stuff like that
+stuff like that
+stuff like that
+for the maid and the components are
+for the maid and the components are
+for the maid and the components are
+really useful when you want something
+really useful when you want something
+really useful when you want something
+temporary
+temporary
+temporary
+like for example this anchor block
+like for example this anchor block
+like for example this anchor block
+because the anchor block does not stay
+because the anchor block does not stay
+because the anchor block does not stay
+for the whole game always it spawns in
+for the whole game always it spawns in
+for the whole game always it spawns in
+then it gets destroyed then spawns and
+then it gets destroyed then spawns and
+then it gets destroyed then spawns and
+it gets destroyed
+it gets destroyed
+it gets destroyed
+similarly i use a manipulator component
+similarly i use a manipulator component
+similarly i use a manipulator component
+for the player so the manipulator
+for the player so the manipulator
+for the player so the manipulator
+component allows the player to pick up
+component allows the player to pick up
+component allows the player to pick up
+and throw parts and this component is
+and throw parts and this component is
+and throw parts and this component is
+added to the player
+added to the player
+added to the player
+instance directly it also
+instance directly it also
+instance directly it also
+like the tag the manipulator tag is also
+like the tag the manipulator tag is also
+like the tag the manipulator tag is also
+used to
+used to
+used to
+reference the players and the game
+reference the players and the game
+reference the players and the game
+service so in the game service
+service so in the game service
+service so in the game service
+basically it checks well not in the game
+basically it checks well not in the game
+basically it checks well not in the game
+service and the round
+service and the round
+service and the round
+because the round is basically a part of
+because the round is basically a part of
+because the round is basically a part of
+game service it
+game service it
+game service it
+we can check players in the game
+we can check players in the game
+we can check players in the game
+by giving by giving them the manipulator
+by giving by giving them the manipulator
+by giving by giving them the manipulator
+tag we can add them in and we can also
+tag we can add them in and we can also
+tag we can add them in and we can also
+remove them by removing
+remove them by removing
+remove them by removing
+the manipulator tag which is really
+the manipulator tag which is really
+the manipulator tag which is really
+really useful
+really useful
+really useful
+and allows me to make some really nice
+and allows me to make some really nice
+and allows me to make some really nice
+code without keeping like a players list
+code without keeping like a players list
+code without keeping like a players list
+and
+and
+and
+using tags is really really good because
+using tags is really really good because
+using tags is really really good because
+if the player leaves
+if the player leaves
+if the player leaves
+then their tag is automatically removed
+then their tag is automatically removed
+then their tag is automatically removed
+basically because when we check
+basically because when we check
+basically because when we check
+all the tagged instances they won't show
+all the tagged instances they won't show
+all the tagged instances they won't show
+up so
+up so
+up so
+tag collection server is really really
+tag collection server is really really
+tag collection server is really really
+nice i need to make a tutorial on this i
+nice i need to make a tutorial on this i
+nice i need to make a tutorial on this i
+don't know why i haven't but i will soon
+don't know why i haven't but i will soon
+don't know why i haven't but i will soon
+you can see also here i use knit.config
+you can see also here i use knit.config
+you can see also here i use knit.config
+which is basically a shared module and
+which is basically a shared module and
+which is basically a shared module and
+this is really useful it's just a bunch
+this is really useful it's just a bunch
+this is really useful it's just a bunch
+of my
+of my
+of my
+it's module script it returns a table of
+it's module script it returns a table of
+it's module script it returns a table of
+all of the contents that i need for my
+all of the contents that i need for my
+all of the contents that i need for my
+game
+game
+game
+really useful can be accessed by both
+really useful can be accessed by both
+really useful can be accessed by both
+the client and the server
+the client and the server
+the client and the server
+but knit in conclusion is amazing
+but knit in conclusion is amazing
+but knit in conclusion is amazing
+along with knit i'm also using another
+along with knit i'm also using another
+along with knit i'm also using another
+framework
+framework
+framework
+this is not a game framework it's a ui
+this is not a game framework it's a ui
+this is not a game framework it's a ui
+framework
+framework
+framework
+called roack now rolex was actually made
+called roack now rolex was actually made
+called roack now rolex was actually made
+by roblox i'm pretty sure
+by roblox i'm pretty sure
+by roblox i'm pretty sure
+so it's supported very well you can see
+so it's supported very well you can see
+so it's supported very well you can see
+it's pretty big
+it's pretty big
+it's pretty big
+it's kind of crazy it's based off of
+it's kind of crazy it's based off of
+it's kind of crazy it's based off of
+react which is used to
+react which is used to
+react which is used to
+create facebook and instagram i believe
+create facebook and instagram i believe
+create facebook and instagram i believe
+so it's a really nice interpretation of
+so it's a really nice interpretation of
+so it's a really nice interpretation of
+a javascript
+a javascript
+a javascript
+library in roblox
+library in roblox
+library in roblox
+it just basically gives you the ability
+it just basically gives you the ability
+it just basically gives you the ability
+to create your ui
+to create your ui
+to create your ui
+using a bunch of components and these
+using a bunch of components and these
+using a bunch of components and these
+components are used to
+components are used to
+components are used to
+instance elements really really nice so
+instance elements really really nice so
+instance elements really really nice so
+i can define like templates like i have
+i can define like templates like i have
+i can define like templates like i have
+this normal text
+this normal text
+this normal text
+template which creates an element of
+template which creates an element of
+template which creates an element of
+type component text label and it has a
+type component text label and it has a
+type component text label and it has a
+bunch of default
+bunch of default
+bunch of default
+things and this allows you to reuse a
+things and this allows you to reuse a
+things and this allows you to reuse a
+bunch of your ui components without
+bunch of your ui components without
+bunch of your ui components without
+having to change each one
+having to change each one
+having to change each one
+individually the only downside to it is
+individually the only downside to it is
+individually the only downside to it is
+that you can't see your ui
+that you can't see your ui
+that you can't see your ui
+in game like you'll notice i have ui
+in game like you'll notice i have ui
+in game like you'll notice i have ui
+enabled up here
+enabled up here
+enabled up here
+but nothing's showing up that's because
+but nothing's showing up that's because
+but nothing's showing up that's because
+the ui
+the ui
+the ui
+is housed within row act and it spawned
+is housed within row act and it spawned
+is housed within row act and it spawned
+when the game starts but the benefits
+when the game starts but the benefits
+when the game starts but the benefits
+definitely outweigh it because
+definitely outweigh it because
+definitely outweigh it because
+for example if i go into my clock
+i have the text label
+i have the text label
+i have the text label
+and all of the things needed to get the
+and all of the things needed to get the
+and all of the things needed to get the
+information for the text label
+information for the text label
+information for the text label
+integrated here
+integrated here
+integrated here
+so i have the game service and i set the
+so i have the game service and i set the
+so i have the game service and i set the
+state
+state
+state
+and so internal states allow you to
+and so internal states allow you to
+and so internal states allow you to
+update this single component without
+update this single component without
+update this single component without
+updating the rest of the tree
+updating the rest of the tree
+updating the rest of the tree
+this stuff gets really complex so i'm
+this stuff gets really complex so i'm
+this stuff gets really complex so i'm
+not going to go into it in detail
+not going to go into it in detail
+not going to go into it in detail
+but basically i check if it's visible
+but basically i check if it's visible
+but basically i check if it's visible
+then i return
+then i return
+then i return
+a new element which is the text
+a new element which is the text
+a new element which is the text
+in the element so it allows you to
+in the element so it allows you to
+in the element so it allows you to
+update the element
+update the element
+update the element
+by creating a new instance of it and
+by creating a new instance of it and
+by creating a new instance of it and
+that's the whole idea behind roack
+that's the whole idea behind roack
+that's the whole idea behind roack
+instead of
+instead of
+instead of
+editing current instances you just make
+editing current instances you just make
+editing current instances you just make
+new ones
+new ones
+new ones
+every update which in roblox
+every update which in roblox
+every update which in roblox
+might not be the best since you have to
+might not be the best since you have to
+might not be the best since you have to
+destroy and create and that's pretty
+destroy and create and that's pretty
+destroy and create and that's pretty
+costly on performance
+costly on performance
+costly on performance
+but its ui it should be fine
+but its ui it should be fine
+but its ui it should be fine
+so now i want to go over a few of the
+so now i want to go over a few of the
+so now i want to go over a few of the
+gameplay changes because
+gameplay changes because
+gameplay changes because
+along with the full script rework the
+along with the full script rework the
+along with the full script rework the
+game plays
+game plays
+game plays
+very similarly but there are a few
+very similarly but there are a few
+very similarly but there are a few
+distinct changes and you can also see
+distinct changes and you can also see
+distinct changes and you can also see
+some more of the aesthetics
+some more of the aesthetics
+some more of the aesthetics
+like these new parts which are sort of
+like these new parts which are sort of
+like these new parts which are sort of
+themed like a construction site
+themed like a construction site
+themed like a construction site
+and so is the plot and you can see the
+and so is the plot and you can see the
+and so is the plot and you can see the
+dragging and
+dragging and
+dragging and
+throwing are basically the same thermal
+throwing are basically the same thermal
+throwing are basically the same thermal
+might be a little too powerful might
+might be a little too powerful might
+might be a little too powerful might
+need to fix that
+need to fix that
+need to fix that
+let me just drag one of these parts if
+let me just drag one of these parts if
+let me just drag one of these parts if
+it comes here we go
+it comes here we go
+it comes here we go
+i can drop it on my plot this works the
+i can drop it on my plot this works the
+i can drop it on my plot this works the
+same
+same
+same
+but when a part is on a plot you can no
+but when a part is on a plot you can no
+but when a part is on a plot you can no
+longer grab it so this prevents people
+longer grab it so this prevents people
+longer grab it so this prevents people
+from just grabbing your tower and like
+from just grabbing your tower and like
+from just grabbing your tower and like
+making it fall down they actually have
+making it fall down they actually have
+making it fall down they actually have
+to throw parts appropriately
+to throw parts appropriately
+to throw parts appropriately
+and it prevents you from just shoving a
+and it prevents you from just shoving a
+and it prevents you from just shoving a
+bunch of parts on your plot and then
+bunch of parts on your plot and then
+bunch of parts on your plot and then
+organizing them later because i can't
+organizing them later because i can't
+organizing them later because i can't
+really move this
+really move this
+really move this
+i can't drag it at all i have to like
+i can't drag it at all i have to like
+i can't drag it at all i have to like
+hit it off somehow
+and also anchor blocks should spawn but
+and also anchor blocks should spawn but
+and also anchor blocks should spawn but
+right now they're like really rare
+right now they're like really rare
+right now they're like really rare
+so i might have to fix that but
+so i might have to fix that but
+so i might have to fix that but
+i can just drag these parts i can still
+i can just drag these parts i can still
+i can just drag these parts i can still
+do
+do
+do
+like rotations i can still bring it out
+like rotations i can still bring it out
+like rotations i can still bring it out
+well i won
+well i won
+well i won
+look at that and this little win
+look at that and this little win
+look at that and this little win
+animation i think this is pretty cool
+animation i think this is pretty cool
+animation i think this is pretty cool
+it's a lot better than the podium the
+it's a lot better than the podium the
+it's a lot better than the podium the
+podium was really ugly
+podium was really ugly
+podium was really ugly
+the whole map was ugly i like this a lot
+the whole map was ugly i like this a lot
+the whole map was ugly i like this a lot
+and it looks very nice and this little
+and it looks very nice and this little
+and it looks very nice and this little
+middle bit is just meant to keep the
+middle bit is just meant to keep the
+middle bit is just meant to keep the
+parts in the middle
+parts in the middle
+parts in the middle
+so you interact with other players and
+so you interact with other players and
+so you interact with other players and
+this brings up another good
+this brings up another good
+this brings up another good
+point which is now if i were to
+point which is now if i were to
+point which is now if i were to
+throw a part really quickly let me see
+throw a part really quickly let me see
+throw a part really quickly let me see
+this
+let me go get a part i need to like
+let me go get a part i need to like
+let me go get a part i need to like
+throw it against the wall
+throw it against the wall
+throw it against the wall
+for some testing
+okay these parts are being very stubborn
+okay these parts are being very stubborn
+okay these parts are being very stubborn
+for some reason wedges get stuck a lot i
+for some reason wedges get stuck a lot i
+for some reason wedges get stuck a lot i
+don't know why
+but you can see you i threw apart and it
+but you can see you i threw apart and it
+but you can see you i threw apart and it
+hit me
+hit me
+hit me
+and within one second of being hit by a
+and within one second of being hit by a
+and within one second of being hit by a
+part you fall over so when another
+part you fall over so when another
+part you fall over so when another
+player
+player
+player
+comes and they're threatening you you
+comes and they're threatening you you
+comes and they're threatening you you
+can throw a part at them
+can throw a part at them
+can throw a part at them
+and knock them over and keep them away
+and knock them over and keep them away
+and knock them over and keep them away
+from your tower so it adds a little
+from your tower so it adds a little
+from your tower so it adds a little
+bit more of a dynamic i'm still not sure
+bit more of a dynamic i'm still not sure
+bit more of a dynamic i'm still not sure
+if the game will be fun i haven't really
+if the game will be fun i haven't really
+if the game will be fun i haven't really
+play tested it yet
+play tested it yet
+play tested it yet
+but i think these changes it should
+but i think these changes it should
+but i think these changes it should
+improve it quite a bit
+improve it quite a bit
+improve it quite a bit
+especially the looks looks look a lot
+especially the looks looks look a lot
+especially the looks looks look a lot
+better the ui still needs a lot of work
+better the ui still needs a lot of work
+better the ui still needs a lot of work
+but i'm still learning real act
+but i'm still learning real act
+but i'm still learning real act
+so i don't necessarily know it quite yet
+so i don't necessarily know it quite yet
+so i don't necessarily know it quite yet
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you guys enjoyed this devlog
+you guys enjoyed this devlog
+you guys enjoyed this devlog
+i made a lot of changes and i kind of
+i made a lot of changes and i kind of
+i made a lot of changes and i kind of
+grinded them out without updating
+grinded them out without updating
+grinded them out without updating
+like with a bunch of clips i'm not sure
+like with a bunch of clips i'm not sure
+like with a bunch of clips i'm not sure
+how
+how
+how
+that works you guys can let me know down
+that works you guys can let me know down
+that works you guys can let me know down
+in the comments whether you like that
+in the comments whether you like that
+in the comments whether you like that
+better than
+better than
+better than
+showing progress clips because i just
+showing progress clips because i just
+showing progress clips because i just
+kind of had to work on it and the
+kind of had to work on it and the
+kind of had to work on it and the
+progress was kind of boring it was just
+progress was kind of boring it was just
+progress was kind of boring it was just
+reworking the whole thing
+reworking the whole thing
+reworking the whole thing
+so yeah i mean other than that i hope
+so yeah i mean other than that i hope
+so yeah i mean other than that i hope
+you guys enjoyed this video make sure to
+you guys enjoyed this video make sure to
+you guys enjoyed this video make sure to
+like and subscribe if you did enjoy
+like and subscribe if you did enjoy
+like and subscribe if you did enjoy
+this video so i might be taking a break
+this video so i might be taking a break
+this video so i might be taking a break
+from tallest
+from tallest
+from tallest
+tower devlogs for a little bit because
+tower devlogs for a little bit because
+tower devlogs for a little bit because
+my break is almost over my winter break
+my break is almost over my winter break
+my break is almost over my winter break
+is almost over i'm gonna go back to
+is almost over i'm gonna go back to
+is almost over i'm gonna go back to
+school it's gonna be really really busy
+school it's gonna be really really busy
+school it's gonna be really really busy
+but i still have a bunch of tutorials
+but i still have a bunch of tutorials
+but i still have a bunch of tutorials
+coming out we'll still have a few
+coming out we'll still have a few
+coming out we'll still have a few
+side projects coming out but i'm kind of
+side projects coming out but i'm kind of
+side projects coming out but i'm kind of
+also
+also
+also
+losing motivation for this project i
+losing motivation for this project i
+losing motivation for this project i
+still sort of like the idea i just need
+still sort of like the idea i just need
+still sort of like the idea i just need
+to work on it
+to work on it
+to work on it
+the gameplay definitely needs a little
+the gameplay definitely needs a little
+the gameplay definitely needs a little
+bit more work
+bit more work
+bit more work
+right now it does work fine i'm just not
+right now it does work fine i'm just not
+right now it does work fine i'm just not
+sure
+sure
+sure
+that a computer only like mini game
+that a computer only like mini game
+that a computer only like mini game
+would work well because there's no way
+would work well because there's no way
+would work well because there's no way
+i'm porting
+i'm porting
+i'm porting
+the part controls on the mobile i could
+the part controls on the mobile i could
+the part controls on the mobile i could
+try
+try
+try
+but it'd also be really laggy with all
+but it'd also be really laggy with all
+but it'd also be really laggy with all
+these physics
+these physics
+these physics
+but who knows we'll see in the future if
+but who knows we'll see in the future if
+but who knows we'll see in the future if
+you guys have any input for me just make
+you guys have any input for me just make
+you guys have any input for me just make
+sure to comment
+sure to comment
+sure to comment
+because i'm open to your suggestions
+because i'm open to your suggestions
+because i'm open to your suggestions
+other than that i hope you guys have a
+other than that i hope you guys have a
+other than that i hope you guys have a
+nice day and goodbye
+nice day and goodbye
+nice day and goodbye
+[Music]
+[Music]
+[Music]
+you

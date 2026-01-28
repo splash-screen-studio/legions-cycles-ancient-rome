@@ -1,0 +1,767 @@
+so right now i'm sitting
+so right now i'm sitting
+so right now i'm sitting
+on my very own catapult
+on my very own catapult
+on my very own catapult
+and so what this is is this is a model
+and so what this is is this is a model
+and so what this is is this is a model
+that i built
+that i built
+that i built
+in a roblox studio and you may be asking
+in a roblox studio and you may be asking
+in a roblox studio and you may be asking
+yourself well
+yourself well
+yourself well
+you know anyone can make a catapult it's
+you know anyone can make a catapult it's
+you know anyone can make a catapult it's
+pretty easy but the difference is
+pretty easy but the difference is
+pretty easy but the difference is
+is that this catapult is completely
+is that this catapult is completely
+is that this catapult is completely
+based
+based
+based
+off of roblox physics so if i go into
+off of roblox physics so if i go into
+off of roblox physics so if i go into
+the constraints view
+the constraints view
+the constraints view
+you can see this whole thing is run by
+you can see this whole thing is run by
+you can see this whole thing is run by
+a couple hinge constraints a spring and
+a couple hinge constraints a spring and
+a couple hinge constraints a spring and
+some visual effects
+some visual effects
+some visual effects
+and on top of that i can drive it around
+and on top of that i can drive it around
+and on top of that i can drive it around
+so let me go back in
+so let me go back in
+so let me go back in
+and show you real quick don't mind that
+and show you real quick don't mind that
+and show you real quick don't mind that
+i don't have pants on for some reason
+i don't have pants on for some reason
+i don't have pants on for some reason
+my character model is not loading
+my character model is not loading
+my character model is not loading
+correctly
+correctly
+correctly
+so you can see i can drive this around i
+so you can see i can drive this around i
+so you can see i can drive this around i
+can
+can
+can
+load my ball
+load my ball
+load my ball
+and i can throw it at the wall and i can
+and i can throw it at the wall and i can
+and i can throw it at the wall and i can
+reload it
+reload it
+reload it
+just drive it around
+just drive it around
+just drive it around
+but you can see if i drive it around too
+but you can see if i drive it around too
+but you can see if i drive it around too
+much the ball doesn't actually go into
+much the ball doesn't actually go into
+much the ball doesn't actually go into
+the
+the
+the
+arm you can just throw it wherever
+arm you can just throw it wherever
+arm you can just throw it wherever
+and you can see the recoil because it's
+and you can see the recoil because it's
+and you can see the recoil because it's
+actually pushing the ball
+actually pushing the ball
+actually pushing the ball
+it's not any fancy like vector forces or
+it's not any fancy like vector forces or
+it's not any fancy like vector forces or
+just like
+just like
+just like
+artificial animation using humanoids
+artificial animation using humanoids
+artificial animation using humanoids
+this is all
+this is all
+this is all
+constraint based and with that in mind
+constraint based and with that in mind
+constraint based and with that in mind
+let's get started with this video and in
+let's get started with this video and in
+let's get started with this video and in
+this video i will be showing you
+this video i will be showing you
+this video i will be showing you
+the journey that i went through creating
+the journey that i went through creating
+the journey that i went through creating
+this and this video will be structured
+this and this video will be structured
+this and this video will be structured
+very similarly to my ballista video if
+very similarly to my ballista video if
+very similarly to my ballista video if
+you haven't
+you haven't
+you haven't
+seen that make sure to check it out if
+seen that make sure to check it out if
+seen that make sure to check it out if
+you enjoy
+you enjoy
+you enjoy
+this video make sure to like and
+this video make sure to like and
+this video make sure to like and
+subscribe without further ado
+subscribe without further ado
+subscribe without further ado
+let's get started
+let's get started
+let's get started
+so in the last video i created a
+so in the last video i created a
+so in the last video i created a
+ballista
+ballista
+ballista
+and since it's a siege weapon i thought
+and since it's a siege weapon i thought
+and since it's a siege weapon i thought
+to myself well let's make
+to myself well let's make
+to myself well let's make
+some more so i was thinking about you
+some more so i was thinking about you
+some more so i was thinking about you
+know a catapult or a trebuchet
+know a catapult or a trebuchet
+know a catapult or a trebuchet
+and i just decided making catapult i'll
+and i just decided making catapult i'll
+and i just decided making catapult i'll
+probably make a trebuchet in the future
+probably make a trebuchet in the future
+probably make a trebuchet in the future
+and uh correct me if i'm pronouncing
+and uh correct me if i'm pronouncing
+and uh correct me if i'm pronouncing
+that incorrectly
+that incorrectly
+that incorrectly
+i usually only see it written i never
+i usually only see it written i never
+i usually only see it written i never
+really talk about it but
+really talk about it but
+really talk about it but
+i went to this catapult and i was like
+i went to this catapult and i was like
+i went to this catapult and i was like
+okay we're gonna like you know do the
+okay we're gonna like you know do the
+okay we're gonna like you know do the
+same research whatever whatever and
+same research whatever whatever and
+same research whatever whatever and
+when i was doing my research for the
+when i was doing my research for the
+when i was doing my research for the
+catapult i realized that it's a lot
+catapult i realized that it's a lot
+catapult i realized that it's a lot
+easier to make than a ballista so i
+easier to make than a ballista so i
+easier to make than a ballista so i
+probably should have made this first but
+probably should have made this first but
+probably should have made this first but
+let's go down on what it will look like
+let's go down on what it will look like
+let's go down on what it will look like
+in game so let's start so a catapult
+in game so let's start so a catapult
+in game so let's start so a catapult
+basically works you got a
+basically works you got a
+basically works you got a
+pivot point and then you have your
+pivot point and then you have your
+pivot point and then you have your
+little arm
+right there and then you have your
+right there and then you have your
+right there and then you have your
+little holding area for
+little holding area for
+little holding area for
+like the ball that will be launched with
+like the ball that will be launched with
+like the ball that will be launched with
+their catapult
+their catapult
+their catapult
+and then in most like
+and then in most like
+and then in most like
+kids designs with like you know small
+kids designs with like you know small
+kids designs with like you know small
+homemade catapults
+homemade catapults
+homemade catapults
+you have a another little pull
+you have a another little pull
+you have a another little pull
+and it's connected
+and it's connected
+and it's connected
+to the arm via
+to the arm via
+to the arm via
+a spring of some kind so usually it's
+a spring of some kind so usually it's
+a spring of some kind so usually it's
+like a rubber band
+like a rubber band
+like a rubber band
+it's just all it is is to hold
+it's just all it is is to hold
+it's just all it is is to hold
+elasticity
+elasticity
+elasticity
+and that works pretty well but when i
+and that works pretty well but when i
+and that works pretty well but when i
+was testing this
+was testing this
+was testing this
+end game i realized that it would be
+end game i realized that it would be
+end game i realized that it would be
+very hard
+very hard
+very hard
+to simulate like a little spring
+to simulate like a little spring
+to simulate like a little spring
+with like a rope instead because you
+with like a rope instead because you
+with like a rope instead because you
+know in there like a real angie catapult
+know in there like a real angie catapult
+know in there like a real angie catapult
+they did not have like these type
+they did not have like these type
+they did not have like these type
+springs they had like you know the ropes
+springs they had like you know the ropes
+springs they had like you know the ropes
+to like create tension and that's
+to like create tension and that's
+to like create tension and that's
+what gave the ball a rock i should say
+what gave the ball a rock i should say
+what gave the ball a rock i should say
+boulder so much force so i looked up
+boulder so much force so i looked up
+boulder so much force so i looked up
+some other designs
+some other designs
+some other designs
+and i figured out that the ancient
+and i figured out that the ancient
+and i figured out that the ancient
+romans actually used
+romans actually used
+romans actually used
+a sort of scheme like
+a sort of scheme like
+a sort of scheme like
+a ballista used on like the very bottom
+a ballista used on like the very bottom
+a ballista used on like the very bottom
+to make tension so basically this is
+to make tension so basically this is
+to make tension so basically this is
+like a top-down view
+like a top-down view
+like a top-down view
+you would have let me get another color
+you would have let me get another color
+you would have let me get another color
+you'd have like
+you'd have like
+you'd have like
+this would be one side of the rope this
+this would be one side of the rope this
+this would be one side of the rope this
+would be another side of the rope
+would be another side of the rope
+would be another side of the rope
+and they would like twist over the
+and they would like twist over the
+and they would like twist over the
+middle part and this would be
+middle part and this would be
+middle part and this would be
+the arm from a top down view
+the arm from a top down view
+the arm from a top down view
+and when the arm would rotate
+and when the arm would rotate
+and when the arm would rotate
+so this would be from a side view you
+so this would be from a side view you
+so this would be from a side view you
+get like kind of thick
+get like kind of thick
+get like kind of thick
+kind of thick this would be the arm
+kind of thick this would be the arm
+kind of thick this would be the arm
+whenever rotate
+whenever rotate
+whenever rotate
+the ropes would like you know get a
+the ropes would like you know get a
+the ropes would like you know get a
+little tension
+little tension
+little tension
+and then when it reached the bottom you
+and then when it reached the bottom you
+and then when it reached the bottom you
+release it and it'll get
+release it and it'll get
+release it and it'll get
+launched you know far
+launched you know far
+launched you know far
+so with this in mind i went to roblox
+so with this in mind i went to roblox
+so with this in mind i went to roblox
+studio and started to demo
+studio and started to demo
+studio and started to demo
+the catapult
+do
+do
+do
+[Music]
+[Music]
+[Music]
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+[Music]
+so after i was done with the demo for
+so after i was done with the demo for
+so after i was done with the demo for
+the catapult i just started playing
+the catapult i just started playing
+the catapult i just started playing
+around with some visuals
+around with some visuals
+around with some visuals
+and i started get to work on the actual
+and i started get to work on the actual
+and i started get to work on the actual
+[Music]
+[Music]
+[Music]
+build
+[Music]
+[Music]
+[Music]
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+[Music]
+do
+[Music]
+[Music]
+[Music]
+and so after i was done with the
+and so after i was done with the
+and so after i was done with the
+building for my
+building for my
+building for my
+catapult i got work to programming it
+catapult i got work to programming it
+catapult i got work to programming it
+and it was quite simple because all i
+and it was quite simple because all i
+and it was quite simple because all i
+had to do was change the
+had to do was change the
+had to do was change the
+hinge constraint from a servo to none
+hinge constraint from a servo to none
+hinge constraint from a servo to none
+and the spring up here would do all the
+and the spring up here would do all the
+and the spring up here would do all the
+work pulling
+work pulling
+work pulling
+the weight and all i had to do was like
+the weight and all i had to do was like
+the weight and all i had to do was like
+actually spawn the thing so
+actually spawn the thing so
+actually spawn the thing so
+here's my script real quick let's
+here's my script real quick let's
+here's my script real quick let's
+collapse it so it's a little bit easier
+collapse it so it's a little bit easier
+collapse it so it's a little bit easier
+to see we don't have to worry about any
+to see we don't have to worry about any
+to see we don't have to worry about any
+of these functions
+of these functions
+of these functions
+they're all pretty self-explanatory
+they're all pretty self-explanatory
+they're all pretty self-explanatory
+and i added the functionality for the
+and i added the functionality for the
+and i added the functionality for the
+projectile the boulder to explode when
+projectile the boulder to explode when
+projectile the boulder to explode when
+it hit something
+it hit something
+it hit something
+but it kind of doesn't work that well so
+but it kind of doesn't work that well so
+but it kind of doesn't work that well so
+i just got rid of it it worked a lot
+i just got rid of it it worked a lot
+i just got rid of it it worked a lot
+better with the ballista
+better with the ballista
+better with the ballista
+but basically what happens
+but basically what happens
+but basically what happens
+is whenever we touch a part we just
+is whenever we touch a part we just
+is whenever we touch a part we just
+destroy the weld
+destroy the weld
+destroy the weld
+and it somewhat works it's just a cool
+and it somewhat works it's just a cool
+and it somewhat works it's just a cool
+like novelty thing
+like novelty thing
+like novelty thing
+and coolest part is that you can drive
+and coolest part is that you can drive
+and coolest part is that you can drive
+it so
+it so
+it so
+here's like the driving little script
+here's like the driving little script
+here's like the driving little script
+right here
+right here
+right here
+and also when you sit in the seat and
+and also when you sit in the seat and
+and also when you sit in the seat and
+you press the button
+you press the button
+you press the button
+f the
+f the
+f the
+catapult will fire according to the
+catapult will fire according to the
+catapult will fire according to the
+script over here
+script over here
+script over here
+so just go back in and the thing is is
+so just go back in and the thing is is
+so just go back in and the thing is is
+the catapult's already pre-loaded when i
+the catapult's already pre-loaded when i
+the catapult's already pre-loaded when i
+get in so
+get in so
+get in so
+just ignore that
+so you can shoot it and whatever
+so you can shoot it and whatever
+so you can shoot it and whatever
+so now it's here i press f it loads back
+so now it's here i press f it loads back
+so now it's here i press f it loads back
+waits a few seconds creates the ball and
+waits a few seconds creates the ball and
+waits a few seconds creates the ball and
+then shoots it so let's go back to the
+then shoots it so let's go back to the
+then shoots it so let's go back to the
+script
+script
+script
+and just go over that real quick so
+and just go over that real quick so
+and just go over that real quick so
+what happens in this fire function we
+what happens in this fire function we
+what happens in this fire function we
+pull it back by setting it to a servo
+pull it back by setting it to a servo
+pull it back by setting it to a servo
+we spawn on the rock and i'm using some
+we spawn on the rock and i'm using some
+we spawn on the rock and i'm using some
+low
+low
+low
+type casting which works
+type casting which works
+type casting which works
+sort of nicely it's kind of cool this is
+sort of nicely it's kind of cool this is
+sort of nicely it's kind of cool this is
+just static typing in lua
+just static typing in lua
+just static typing in lua
+super cool you should check out but we
+super cool you should check out but we
+super cool you should check out but we
+wait a second
+wait a second
+wait a second
+after we spawn the rock and then we eat
+after we spawn the rock and then we eat
+after we spawn the rock and then we eat
+it
+it
+it
+with our actuary type so it just like
+with our actuary type so it just like
+with our actuary type so it just like
+disables the hinge and it can just fly
+disables the hinge and it can just fly
+disables the hinge and it can just fly
+and if there's an explosion it'll just
+and if there's an explosion it'll just
+and if there's an explosion it'll just
+blow up let me just demonstrate that
+blow up let me just demonstrate that
+blow up let me just demonstrate that
+real quick
+real quick
+real quick
+set explosions to true
+and load our catapult
+and load our catapult
+and load our catapult
+fire it and then look at that it
+fire it and then look at that it
+fire it and then look at that it
+explodes
+explodes
+explodes
+and the actual handling of the catapult
+and the actual handling of the catapult
+and the actual handling of the catapult
+is
+is
+is
+really terrible like
+really terrible like
+really terrible like
+very bad the turning is horrible
+very bad the turning is horrible
+very bad the turning is horrible
+sometimes it doesn't even turn
+sometimes it doesn't even turn
+sometimes it doesn't even turn
+it's kind of weird how it works i don't
+it's kind of weird how it works i don't
+it's kind of weird how it works i don't
+really understand it either
+really understand it either
+really understand it either
+but it you can drive it
+but it you can drive it
+but it you can drive it
+and it took me like a solid five minutes
+and it took me like a solid five minutes
+and it took me like a solid five minutes
+to make so i will take that
+to make so i will take that
+to make so i will take that
+but other than that that's about it for
+but other than that that's about it for
+but other than that that's about it for
+this catapult
+this catapult
+this catapult
+and that is about it for this video so i
+and that is about it for this video so i
+and that is about it for this video so i
+hope you guys enjoyed i will have a
+hope you guys enjoyed i will have a
+hope you guys enjoyed i will have a
+project download model download i should
+project download model download i should
+project download model download i should
+say in the description in case
+say in the description in case
+say in the description in case
+you want to check this out for yourself
+you want to check this out for yourself
+you want to check this out for yourself
+and while i was playing around with this
+and while i was playing around with this
+and while i was playing around with this
+i
+i
+i
+i sort of thought that this could be a
+i sort of thought that this could be a
+i sort of thought that this could be a
+cool idea for something like
+cool idea for something like
+cool idea for something like
+catapult lacrosse like i'm a big fan of
+catapult lacrosse like i'm a big fan of
+catapult lacrosse like i'm a big fan of
+the game called
+the game called
+the game called
+rocket league which is basically car
+rocket league which is basically car
+rocket league which is basically car
+soccer it's a lot of fun
+soccer it's a lot of fun
+soccer it's a lot of fun
+you should check it out it's going free
+you should check it out it's going free
+you should check it out it's going free
+to play soon
+to play soon
+to play soon
+and if i could make the same sort of
+and if i could make the same sort of
+and if i could make the same sort of
+concept with
+concept with
+concept with
+catapults that could be super cool so
+catapults that could be super cool so
+catapults that could be super cool so
+tell me what you think of that in the
+tell me what you think of that in the
+tell me what you think of that in the
+description i thought it could be a
+description i thought it could be a
+description i thought it could be a
+pretty cool idea
+pretty cool idea
+pretty cool idea
+because like you know you can load the
+because like you know you can load the
+because like you know you can load the
+ball and then throw it and then you can
+ball and then throw it and then you can
+ball and then throw it and then you can
+like
+like
+like
+run around with it obviously you
+run around with it obviously you
+run around with it obviously you
+wouldn't have explosions but like you
+wouldn't have explosions but like you
+wouldn't have explosions but like you
+can drive
+can drive
+can drive
+in into stuff pretty easily so if i if i
+in into stuff pretty easily so if i if i
+in into stuff pretty easily so if i if i
+can turn
+can turn
+can turn
+there we go actually you can turn you
+there we go actually you can turn you
+there we go actually you can turn you
+can like run into this stuff and like
+can like run into this stuff and like
+can like run into this stuff and like
+push it around it could be it pretty
+push it around it could be it pretty
+push it around it could be it pretty
+cool
+cool
+cool
+but that's just a thought so make sure
+but that's just a thought so make sure
+but that's just a thought so make sure
+to comment
+to comment
+to comment
+your thoughts on that other than that i
+your thoughts on that other than that i
+your thoughts on that other than that i
+hope you guys enjoyed make sure to like
+hope you guys enjoyed make sure to like
+hope you guys enjoyed make sure to like
+and subscribe
+and subscribe
+and subscribe
+if you did and i hope you have a nice
+if you did and i hope you have a nice
+if you did and i hope you have a nice
+day
+day
+day
+and goodbye
+[Music]
+[Music]
+[Music]
+you

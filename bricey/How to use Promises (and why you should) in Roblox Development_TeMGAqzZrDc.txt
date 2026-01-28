@@ -1,0 +1,1527 @@
+i promise you
+i promise you
+i promise you
+that the promise library is one of the
+that the promise library is one of the
+that the promise library is one of the
+most useful roblox libraries you can get
+most useful roblox libraries you can get
+most useful roblox libraries you can get
+your hands on so in this video i'll be
+your hands on so in this video i'll be
+your hands on so in this video i'll be
+showing you three separate examples of
+showing you three separate examples of
+showing you three separate examples of
+using promises in an actual roblox game
+using promises in an actual roblox game
+using promises in an actual roblox game
+scenario because promises are used a lot
+scenario because promises are used a lot
+scenario because promises are used a lot
+in web development i'm not sure if
+in web development i'm not sure if
+in web development i'm not sure if
+you've heard of them
+you've heard of them
+you've heard of them
+but
+but
+but
+a lot of times like when i first started
+a lot of times like when i first started
+a lot of times like when i first started
+out i heard about that and i'm like how
+out i heard about that and i'm like how
+out i heard about that and i'm like how
+can i use promises for roblox there's a
+can i use promises for roblox there's a
+can i use promises for roblox there's a
+really nice library i didn't really know
+really nice library i didn't really know
+really nice library i didn't really know
+how to use it over time i figured out
+how to use it over time i figured out
+how to use it over time i figured out
+the best not the best ways but some of
+the best not the best ways but some of
+the best not the best ways but some of
+the good ways to use promises i'm still
+the good ways to use promises i'm still
+the good ways to use promises i'm still
+learning we're all still learning but in
+learning we're all still learning but in
+learning we're all still learning but in
+this video i'll show you some tips that
+this video i'll show you some tips that
+this video i'll show you some tips that
+i've learned on where to use promises
+i've learned on where to use promises
+i've learned on where to use promises
+and how to make your code more secure
+and how to make your code more secure
+and how to make your code more secure
+more readable
+more readable
+more readable
+and more expandable so like the video if
+and more expandable so like the video if
+and more expandable so like the video if
+you enjoy it subscribe for more roblox
+you enjoy it subscribe for more roblox
+you enjoy it subscribe for more roblox
+scripting content and put any other
+scripting content and put any other
+scripting content and put any other
+libraries you want me to explain or make
+libraries you want me to explain or make
+libraries you want me to explain or make
+a video on in the description too but
+a video on in the description too but
+a video on in the description too but
+without further ado let's get into the
+without further ado let's get into the
+without further ado let's get into the
+video
+the easiest way to install and get the
+the easiest way to install and get the
+the easiest way to install and get the
+promise library up and running is to go
+promise library up and running is to go
+promise library up and running is to go
+to the github repository which i will
+to the github repository which i will
+to the github repository which i will
+have linked in the description
+have linked in the description
+have linked in the description
+and go to the releases and then go
+and go to the releases and then go
+and go to the releases and then go
+download the promise.lua and just copy
+download the promise.lua and just copy
+download the promise.lua and just copy
+the contents of that into
+the contents of that into
+the contents of that into
+a file in roblox to you
+a file in roblox to you
+a file in roblox to you
+which i have already done so here's the
+which i have already done so here's the
+which i have already done so here's the
+promise library it's nice simple one
+promise library it's nice simple one
+promise library it's nice simple one
+module script
+module script
+module script
+so let's get to using it
+so let's get to using it
+so let's get to using it
+so i have here a pretty simple setup we
+so i have here a pretty simple setup we
+so i have here a pretty simple setup we
+have a part
+have a part
+have a part
+parented to a model with the model's
+parented to a model with the model's
+parented to a model with the model's
+primary part set to this part
+primary part set to this part
+primary part set to this part
+so
+so
+so
+imagine this to be like a car or
+imagine this to be like a car or
+imagine this to be like a car or
+something in an actual game
+something in an actual game
+something in an actual game
+so in this script we're basically
+so in this script we're basically
+so in this script we're basically
+waiting a couple seconds and then
+waiting a couple seconds and then
+waiting a couple seconds and then
+changing some aspect of our model in
+changing some aspect of our model in
+changing some aspect of our model in
+this case we're accessing the primary
+this case we're accessing the primary
+this case we're accessing the primary
+part and we're accessing the color and
+part and we're accessing the color and
+part and we're accessing the color and
+we're changing it after five seconds
+we're changing it after five seconds
+we're changing it after five seconds
+and this code works as you might think
+and this code works as you might think
+and this code works as you might think
+waits a couple seconds
+waits a couple seconds
+waits a couple seconds
+the color changes
+but what if
+but what if
+but what if
+something happens let's say our car has
+something happens let's say our car has
+something happens let's say our car has
+health or something and it gets
+health or something and it gets
+health or something and it gets
+destroyed
+destroyed
+destroyed
+well it's in the process of
+well it's in the process of
+well it's in the process of
+changing its color for some reason or
+changing its color for some reason or
+changing its color for some reason or
+another
+another
+another
+so let's just implement that so we wait
+so let's just implement that so we wait
+so let's just implement that so we wait
+a couple of seconds and then we say
+a couple of seconds and then we say
+a couple of seconds and then we say
+model destroy
+if we wait a couple seconds
+if we wait a couple seconds
+if we wait a couple seconds
+it gets destroyed and then what happens
+it gets destroyed and then what happens
+it gets destroyed and then what happens
+when you change the color oh look at
+when you change the color oh look at
+when you change the color oh look at
+that it errors
+that it errors
+that it errors
+so
+so
+so
+what's happening is it's trying to
+what's happening is it's trying to
+what's happening is it's trying to
+access the primary part
+access the primary part
+access the primary part
+but the primary part doesn't exist
+but the primary part doesn't exist
+but the primary part doesn't exist
+so i mean you could technically get
+so i mean you could technically get
+so i mean you could technically get
+around this by
+around this by
+around this by
+like saying like getting a reference to
+like saying like getting a reference to
+like saying like getting a reference to
+the primary part before it's destroyed
+the primary part before it's destroyed
+the primary part before it's destroyed
+but that's still just a band-aid on the
+but that's still just a band-aid on the
+but that's still just a band-aid on the
+greater problem and that this thing
+greater problem and that this thing
+greater problem and that this thing
+still runs keeps on running after
+still runs keeps on running after
+still runs keeps on running after
+the death of the part that really
+the death of the part that really
+the death of the part that really
+shouldn't be the case and obviously we
+shouldn't be the case and obviously we
+shouldn't be the case and obviously we
+could say if modeled our primary part
+could say if modeled our primary part
+could say if modeled our primary part
+after this
+after this
+after this
+but
+but
+but
+that's just a lot of extra code
+that's just a lot of extra code
+that's just a lot of extra code
+for something that really should be
+for something that really should be
+for something that really should be
+guaranteed when we're running the
+guaranteed when we're running the
+guaranteed when we're running the
+statement
+statement
+statement
+luckily promises have a solution for
+luckily promises have a solution for
+luckily promises have a solution for
+that so let's get the promise module a
+that so let's get the promise module a
+that so let's get the promise module a
+single promise equals require
+single promise equals require
+single promise equals require
+game get service replicated storage
+game get service replicated storage
+game get service replicated storage
+dot promise
+dot promise
+dot promise
+and now we can convert this statement
+and now we can convert this statement
+and now we can convert this statement
+here into a promise by saying
+here into a promise by saying
+here into a promise by saying
+local promise equals promise dot
+local promise equals promise dot
+local promise equals promise dot
+delay
+delay
+delay
+delay it by five seconds and we can call
+delay it by five seconds and we can call
+delay it by five seconds and we can call
+and then
+function
+function
+function
+whatever
+whatever
+whatever
+so and we can put this in here
+so and we can put this in here
+so and we can put this in here
+and indent it so this promise that delay
+and indent it so this promise that delay
+and indent it so this promise that delay
+is sort of the equivalent of the
+is sort of the equivalent of the
+is sort of the equivalent of the
+task.delay
+task.delay
+task.delay
+except for the fact that
+except for the fact that
+except for the fact that
+we can cancel
+we can cancel
+we can cancel
+this delay
+this delay
+this delay
+so what that means is that when we no
+so what that means is that when we no
+so what that means is that when we no
+longer need to run this promise promise
+longer need to run this promise promise
+longer need to run this promise promise
+we can just stop it from running and so
+we can just stop it from running and so
+we can just stop it from running and so
+when the primary part or the model gets
+when the primary part or the model gets
+when the primary part or the model gets
+destroyed we don't need to run this
+destroyed we don't need to run this
+destroyed we don't need to run this
+anymore so all we got to do is say
+anymore so all we got to do is say
+anymore so all we got to do is say
+model.primarypart.destroying
+connect
+connect
+connect
+a function
+a function
+a function
+that all it says is the promise
+that all it says is the promise
+that all it says is the promise
+cancel
+cancel
+cancel
+so they'll cancel the promise when it's
+so they'll cancel the promise when it's
+so they'll cancel the promise when it's
+destroying so we don't call this and get
+destroying so we don't call this and get
+destroying so we don't call this and get
+the error and even if we don't get
+the error and even if we don't get
+the error and even if we don't get
+errors when we call this we shouldn't be
+errors when we call this we shouldn't be
+errors when we call this we shouldn't be
+calling a statement when the model
+calling a statement when the model
+calling a statement when the model
+itself doesn't exist especially
+itself doesn't exist especially
+itself doesn't exist especially
+if we're changing some state in the
+if we're changing some state in the
+if we're changing some state in the
+process like let's say
+process like let's say
+process like let's say
+this was a delay to i don't know get
+this was a delay to i don't know get
+this was a delay to i don't know get
+like a recharge or get extra money or
+like a recharge or get extra money or
+like a recharge or get extra money or
+something like that
+something like that
+something like that
+you don't want that to happen when
+you don't want that to happen when
+you don't want that to happen when
+really it shouldn't happen
+really it shouldn't happen
+really it shouldn't happen
+so let's see what happened
+so let's see what happened
+so let's see what happened
+so it gets destroyed
+so it gets destroyed
+so it gets destroyed
+and it gets completely stopped the
+and it gets completely stopped the
+and it gets completely stopped the
+statement never runs because the promise
+statement never runs because the promise
+statement never runs because the promise
+is cancelled
+is cancelled
+is cancelled
+so this is a very bare bones and basic
+so this is a very bare bones and basic
+so this is a very bare bones and basic
+example
+example
+example
+of when you can use promises just when
+of when you can use promises just when
+of when you can use promises just when
+you're using a delay
+you're using a delay
+you're using a delay
+and you don't want to use this and one
+and you don't want to use this and one
+and you don't want to use this and one
+other thing is if you use like a trove
+other thing is if you use like a trove
+other thing is if you use like a trove
+made or janitor module which is a good
+made or janitor module which is a good
+made or janitor module which is a good
+cleanup module and make sure to comment
+cleanup module and make sure to comment
+cleanup module and make sure to comment
+if you want a video on that
+if you want a video on that
+if you want a video on that
+you can give promises to those modules
+you can give promises to those modules
+you can give promises to those modules
+to clean up on their own so
+to clean up on their own so
+to clean up on their own so
+when you have a giant trove for a part
+when you have a giant trove for a part
+when you have a giant trove for a part
+or a vehicle or whatever
+or a vehicle or whatever
+or a vehicle or whatever
+when the trove cleans up the promises
+when the trove cleans up the promises
+when the trove cleans up the promises
+will all get cancelled so if you have
+will all get cancelled so if you have
+will all get cancelled so if you have
+any ongoing events or like weights going
+any ongoing events or like weights going
+any ongoing events or like weights going
+on it'll just get cancelled and this
+on it'll just get cancelled and this
+on it'll just get cancelled and this
+makes you
+makes you
+makes you
+feel a lot more secure in your delays
+feel a lot more secure in your delays
+feel a lot more secure in your delays
+and your weights because
+and your weights because
+and your weights because
+in games i mean you always want to
+in games i mean you always want to
+in games i mean you always want to
+prioritize using events
+prioritize using events
+prioritize using events
+but in roblox it's kind of kind of iffy
+but in roblox it's kind of kind of iffy
+but in roblox it's kind of kind of iffy
+with that sort of thing so sometimes you
+with that sort of thing so sometimes you
+with that sort of thing so sometimes you
+have to just use delays and promises
+have to just use delays and promises
+have to just use delays and promises
+give you a really nice way to do that
+give you a really nice way to do that
+give you a really nice way to do that
+so the next example is one for those who
+so the next example is one for those who
+so the next example is one for those who
+make like round-based games you're all
+make like round-based games you're all
+make like round-based games you're all
+too familiar with which i've almost
+too familiar with which i've almost
+too familiar with which i've almost
+exclusively made round-based games in my
+exclusively made round-based games in my
+exclusively made round-based games in my
+time on roblox so you have your main
+time on roblox so you have your main
+time on roblox so you have your main
+game loop like the wall true do loop
+game loop like the wall true do loop
+game loop like the wall true do loop
+that runs forever and ever and ever and
+that runs forever and ever and ever and
+that runs forever and ever and ever and
+ever
+ever
+ever
+except
+except
+except
+it doesn't because if an error happens
+it doesn't because if an error happens
+it doesn't because if an error happens
+this whole entire thing breaks so this
+this whole entire thing breaks so this
+this whole entire thing breaks so this
+is just simulating an actual like game
+is just simulating an actual like game
+is just simulating an actual like game
+where you start with the intermission
+where you start with the intermission
+where you start with the intermission
+takes like three seconds probably take
+takes like three seconds probably take
+takes like three seconds probably take
+more on a real game but whatever we play
+more on a real game but whatever we play
+more on a real game but whatever we play
+the game and we clean up
+the game and we clean up
+the game and we clean up
+so you know if you run this
+so you know if you run this
+so you know if you run this
+it obviously runs as you would expect
+it obviously runs as you would expect
+it obviously runs as you would expect
+nothing fancy there but what happens if
+nothing fancy there but what happens if
+nothing fancy there but what happens if
+you know just by some chance
+you know just by some chance
+you know just by some chance
+some error occurs in the game playing
+some error occurs in the game playing
+some error occurs in the game playing
+stage because us debs we're not perfect
+stage because us debs we're not perfect
+stage because us debs we're not perfect
+stuff happens
+stuff happens
+stuff happens
+so if we call if you air just say
+so if we call if you air just say
+so if we call if you air just say
+something went wrong this could be like
+something went wrong this could be like
+something went wrong this could be like
+a part gets destroyed when you don't
+a part gets destroyed when you don't
+a part gets destroyed when you don't
+expect it
+expect it
+expect it
+or
+or
+or
+[Music]
+[Music]
+[Music]
+or something else happens you know you
+or something else happens you know you
+or something else happens you know you
+never know
+never know
+never know
+so
+so
+so
+you can actually actually see the
+you can actually actually see the
+you can actually actually see the
+linters already saying warning us
+linters already saying warning us
+linters already saying warning us
+unreachable code previous statement
+unreachable code previous statement
+unreachable code previous statement
+always errors that's kind of funny so
+always errors that's kind of funny so
+always errors that's kind of funny so
+when we run this we get the intermission
+when we run this we get the intermission
+when we run this we get the intermission
+we get the game playing but then it
+we get the game playing but then it
+we get the game playing but then it
+errors
+errors
+errors
+and notice there's no cleanup and the
+and notice there's no cleanup and the
+and notice there's no cleanup and the
+loop doesn't even continue so
+loop doesn't even continue so
+loop doesn't even continue so
+if an error happens on your main like
+if an error happens on your main like
+if an error happens on your main like
+wall true do
+wall true do
+wall true do
+it completely breaks your entire game
+it completely breaks your entire game
+it completely breaks your entire game
+the only way for it to reset is to do a
+the only way for it to reset is to do a
+the only way for it to reset is to do a
+like server reset and since we're using
+like server reset and since we're using
+like server reset and since we're using
+lua and lua has
+lua and lua has
+lua and lua has
+a ton of runtime errors instead of
+a ton of runtime errors instead of
+a ton of runtime errors instead of
+compile time errors you could have a
+compile time errors you could have a
+compile time errors you could have a
+tiny little bug that could mess up your
+tiny little bug that could mess up your
+tiny little bug that could mess up your
+entire game without you knowing it and
+entire game without you knowing it and
+entire game without you knowing it and
+your players could just
+your players could just
+your players could just
+realize that the entire thing's broken
+realize that the entire thing's broken
+realize that the entire thing's broken
+and people might stop playing your game
+and people might stop playing your game
+and people might stop playing your game
+again promises come to the rescue
+again promises come to the rescue
+again promises come to the rescue
+because a local promise equals
+because a local promise equals
+because a local promise equals
+require game get service
+require game get service
+require game get service
+replicated storage
+replicated storage
+replicated storage
+dot promise
+dot promise
+dot promise
+so using promise.delay the stuff that we
+so using promise.delay the stuff that we
+so using promise.delay the stuff that we
+did earlier
+did earlier
+did earlier
+we can do the same
+we can do the same
+we can do the same
+exact idea
+exact idea
+exact idea
+so we can first after the print
+so we can first after the print
+so we can first after the print
+intermission we can do promise.delay
+intermission we can do promise.delay
+intermission we can do promise.delay
+three seconds and then we can use
+three seconds and then we can use
+three seconds and then we can use
+and then
+with a function
+with a function
+with a function
+to go into the game playing stage
+to go into the game playing stage
+to go into the game playing stage
+so we'll delay it three seconds we'll go
+so we'll delay it three seconds we'll go
+so we'll delay it three seconds we'll go
+into the game playing stage and then
+into the game playing stage and then
+into the game playing stage and then
+what we can do is we can do
+what we can do is we can do
+what we can do is we can do
+another statement and then say
+another statement and then say
+another statement and then say
+and then call
+promise.delay
+promise.delay
+promise.delay
+with
+with
+with
+five seconds
+five seconds
+five seconds
+let me actually get rid of this error
+and get rid of this
+and get rid of this
+and get rid of this
+and then finally and we can just call
+and then finally and we can just call
+and then finally and we can just call
+finally
+finally
+finally
+call a function
+call a function
+call a function
+that prints
+that prints
+that prints
+cleanup and then we can
+make a quick little delay
+make a quick little delay
+make a quick little delay
+once again
+once again
+once again
+so you don't have to understand the
+so you don't have to understand the
+so you don't have to understand the
+exact
+exact
+exact
+semantics of all of these functions that
+semantics of all of these functions that
+semantics of all of these functions that
+i'm using you just have to understand
+i'm using you just have to understand
+i'm using you just have to understand
+the gist because anyone can understand
+the gist because anyone can understand
+the gist because anyone can understand
+this but you have to understand how it's
+this but you have to understand how it's
+this but you have to understand how it's
+useful and why it's useful so as a brief
+useful and why it's useful so as a brief
+useful and why it's useful so as a brief
+overview where we still have this normal
+overview where we still have this normal
+overview where we still have this normal
+print then we're delaying it three
+print then we're delaying it three
+print then we're delaying it three
+seconds and then
+seconds and then
+seconds and then
+we're printing game playing
+we're printing game playing
+we're printing game playing
+and and then call is just syntax sugar
+and and then call is just syntax sugar
+and and then call is just syntax sugar
+for saying
+for saying
+for saying
+and then and then function
+and then and then function
+and then and then function
+return promise dot delay five so it's
+return promise dot delay five so it's
+return promise dot delay five so it's
+basically putting a delay in the
+basically putting a delay in the
+basically putting a delay in the
+promised chain
+promised chain
+promised chain
+and then finally we're gonna put cleanup
+and then finally we're gonna put cleanup
+and then finally we're gonna put cleanup
+so this finally will run regardless of
+so this finally will run regardless of
+so this finally will run regardless of
+any of
+any of
+any of
+any of these go correctly
+any of these go correctly
+any of these go correctly
+you know so
+you know so
+you know so
+the reason this is useful is because
+the reason this is useful is because
+the reason this is useful is because
+like you can chain promises
+like you can chain promises
+like you can chain promises
+and the promises the errors propagate
+and the promises the errors propagate
+and the promises the errors propagate
+all the way down so actually just to
+all the way down so actually just to
+all the way down so actually just to
+demonstrate that you can put a catch
+demonstrate that you can put a catch
+demonstrate that you can put a catch
+block at the end
+block at the end
+block at the end
+that has a function
+that has a function
+that has a function
+the air you can print or warn the air
+so let's say
+so let's say
+so let's say
+once again
+once again
+once again
+the game playing
+the game playing
+the game playing
+airs actually let's demonstrate that
+airs actually let's demonstrate that
+airs actually let's demonstrate that
+this runs properly first
+this runs properly first
+this runs properly first
+but quickly before we test
+but quickly before we test
+but quickly before we test
+the promises don't yield meaning this
+the promises don't yield meaning this
+the promises don't yield meaning this
+doesn't wait to finish so if we called
+doesn't wait to finish so if we called
+doesn't wait to finish so if we called
+wall to do it would keep on running
+wall to do it would keep on running
+wall to do it would keep on running
+around infinitely and it
+around infinitely and it
+around infinitely and it
+wouldn't go too well
+wouldn't go too well
+wouldn't go too well
+so what we can do is just add
+so what we can do is just add
+so what we can do is just add
+a weight
+a weight
+a weight
+at the end and now a weight technically
+at the end and now a weight technically
+at the end and now a weight technically
+returns a couple of values but we don't
+returns a couple of values but we don't
+returns a couple of values but we don't
+really have to worry about that since
+really have to worry about that since
+really have to worry about that since
+this block is self-contained
+this block is self-contained
+this block is self-contained
+so now let's run this
+so now let's run this
+so now let's run this
+easy intermission started
+easy intermission started
+easy intermission started
+and then the game's playing
+and then the game's playing
+and then the game's playing
+and i wait a couple more seconds
+and i wait a couple more seconds
+and i wait a couple more seconds
+and the cleanup happens
+and the cleanup happens
+and the cleanup happens
+and it repeats again and again
+and it repeats again and again
+and it repeats again and again
+and notice how this catch block didn't
+and notice how this catch block didn't
+and notice how this catch block didn't
+call because this
+call because this
+call because this
+only runs when an error happens
+only runs when an error happens
+only runs when an error happens
+so now
+so now
+so now
+let's
+let's
+let's
+again simulate
+again simulate
+again simulate
+an error
+an error
+an error
+occurring
+occurring
+occurring
+we can say
+we can say
+we can say
+oops like something right wrong again
+oops like something right wrong again
+oops like something right wrong again
+so let's play this
+so let's play this
+so let's play this
+see intermission
+see intermission
+see intermission
+the game playing
+the game playing
+the game playing
+and we see
+and we see
+and we see
+the promise has the error
+but notice
+but notice
+but notice
+how the cleanup
+how the cleanup
+how the cleanup
+still happens
+still happens
+still happens
+and notice how
+and notice how
+and notice how
+how it keeps on running even though the
+how it keeps on running even though the
+how it keeps on running even though the
+promise airs
+promise airs
+promise airs
+so in an actual game if you have some
+so in an actual game if you have some
+so in an actual game if you have some
+freak accident happen
+freak accident happen
+freak accident happen
+the game would continue running just
+the game would continue running just
+the game would continue running just
+normally and you have a really really
+normally and you have a really really
+normally and you have a really really
+nice warning that tells you exactly
+nice warning that tells you exactly
+nice warning that tells you exactly
+where stuff is which this is unusual to
+where stuff is which this is unusual to
+where stuff is which this is unusual to
+asynchronous operations in roblox
+asynchronous operations in roblox
+asynchronous operations in roblox
+because normally with code routines the
+because normally with code routines the
+because normally with code routines the
+stack is a little messy
+stack is a little messy
+stack is a little messy
+and it just doesn't look too good
+and we're catching this error and
+and we're catching this error and
+and we're catching this error and
+warning it and that's where this warrant
+warning it and that's where this warrant
+warning it and that's where this warrant
+is coming from you see right here so if
+is coming from you see right here so if
+is coming from you see right here so if
+we want we can handle this error
+we want we can handle this error
+we want we can handle this error
+differently you can upload it to like
+differently you can upload it to like
+differently you can upload it to like
+analytics service
+analytics service
+analytics service
+but and also you don't have any messy p
+but and also you don't have any messy p
+but and also you don't have any messy p
+calls lying around it's all a
+calls lying around it's all a
+calls lying around it's all a
+self-contained loop so this is supposed
+self-contained loop so this is supposed
+self-contained loop so this is supposed
+to demonstrate promise chaining where
+to demonstrate promise chaining where
+to demonstrate promise chaining where
+you can
+you can
+you can
+add promises again and again onto each
+add promises again and again onto each
+add promises again and again onto each
+other because each of these promised
+other because each of these promised
+other because each of these promised
+functions returns other functions
+functions returns other functions
+functions returns other functions
+promises are known to be composable you
+promises are known to be composable you
+promises are known to be composable you
+can compose multiple and you can figure
+can compose multiple and you can figure
+can compose multiple and you can figure
+it all out
+it all out
+it all out
+and
+and
+and
+honestly if you don't understand
+honestly if you don't understand
+honestly if you don't understand
+the actual semantics of each of these
+the actual semantics of each of these
+the actual semantics of each of these
+functions promise has a very good
+functions promise has a very good
+functions promise has a very good
+documentation page where you can look at
+documentation page where you can look at
+documentation page where you can look at
+it and understand it pretty quickly
+it and understand it pretty quickly
+it and understand it pretty quickly
+so one final example of the use of
+so one final example of the use of
+so one final example of the use of
+promises it's probably the more most
+promises it's probably the more most
+promises it's probably the more most
+stereotypical one where you're wrapping
+stereotypical one where you're wrapping
+stereotypical one where you're wrapping
+a current roblox api
+a current roblox api
+a current roblox api
+and
+and
+and
+a promise to be used in her code so i'm
+a promise to be used in her code so i'm
+a promise to be used in her code so i'm
+going to use tween service for my
+going to use tween service for my
+going to use tween service for my
+demonstration but you can use honestly a
+demonstration but you can use honestly a
+demonstration but you can use honestly a
+lot of roblox apis that that yield or
+lot of roblox apis that that yield or
+lot of roblox apis that that yield or
+in order to use properly you need to
+in order to use properly you need to
+in order to use properly you need to
+yield it eventually
+yield it eventually
+yield it eventually
+so let's just do that so we're gonna do
+so let's just do that so we're gonna do
+so let's just do that so we're gonna do
+local tween service equals game get
+local tween service equals game get
+local tween service equals game get
+service between service i'm going to say
+service between service i'm going to say
+service between service i'm going to say
+local promise
+local promise
+local promise
+equals
+equals
+equals
+require
+require
+require
+game get service replicated storage
+game get service replicated storage
+game get service replicated storage
+dot promise
+dot promise
+dot promise
+and then normally with a tween you use
+and then normally with a tween you use
+and then normally with a tween you use
+tween surface create and you send in the
+tween surface create and you send in the
+tween surface create and you send in the
+object between info and the props
+object between info and the props
+object between info and the props
+but for now we're gonna make a wrapper
+but for now we're gonna make a wrapper
+but for now we're gonna make a wrapper
+function so local function tween that
+function so local function tween that
+function so local function tween that
+takes in the object the tween info and
+takes in the object the tween info and
+takes in the object the tween info and
+the props
+the props
+the props
+and then what we can do
+and then what we can do
+and then what we can do
+is return a promise
+is return a promise
+is return a promise
+dot new
+dot new
+dot new
+that has a function
+that has a function
+that has a function
+which is the executor and the function
+which is the executor and the function
+which is the executor and the function
+takes three parameters
+takes three parameters
+takes three parameters
+a resolve callback a reject callback and
+a resolve callback a reject callback and
+a resolve callback a reject callback and
+an on cancel callback so what this does
+an on cancel callback so what this does
+an on cancel callback so what this does
+is basically
+is basically
+is basically
+when
+when
+when
+when the
+when the
+when the
+promise is created we can either resolve
+promise is created we can either resolve
+promise is created we can either resolve
+with a value that's like the success
+with a value that's like the success
+with a value that's like the success
+reject it which is like the error or the
+reject it which is like the error or the
+reject it which is like the error or the
+failure and to cancel it which is what i
+failure and to cancel it which is what i
+failure and to cancel it which is what i
+demonstrated in that first example
+demonstrated in that first example
+demonstrated in that first example
+so we can say local tween equals tween
+so we can say local tween equals tween
+so we can say local tween equals tween
+service create
+service create
+service create
+we can create it using the
+we can create it using the
+we can create it using the
+using the object between info
+using the object between info
+using the object between info
+and the props we were given and at the
+and the props we were given and at the
+and the props we were given and at the
+top
+top
+top
+we could say f
+we could say f
+we could say f
+on cancel
+on cancel
+on cancel
+with a function
+tween
+tween
+tween
+cancel
+then
+then
+then
+we return
+we return
+we return
+so basically if the function is
+so basically if the function is
+so basically if the function is
+cancelled we cancel between and then we
+cancelled we cancel between and then we
+cancelled we cancel between and then we
+return
+otherwise after that
+otherwise after that
+otherwise after that
+we can just say tween
+we can just say tween
+we can just say tween
+dot completed
+dot completed
+dot completed
+connect
+connect
+connect
+resolve
+resolve
+resolve
+and then
+and then
+and then
+we can play between
+we can play between
+we can play between
+so what this will do is basically if the
+so what this will do is basically if the
+so what this will do is basically if the
+tween is canceled
+tween is canceled
+tween is canceled
+if the promise is canceled that has
+if the promise is canceled that has
+if the promise is canceled that has
+between we cancel between
+between we cancel between
+between we cancel between
+and then we just return
+and then we just return
+and then we just return
+so the tween like doesn't get played or
+so the tween like doesn't get played or
+so the tween like doesn't get played or
+whatever
+whatever
+whatever
+and then
+and then
+and then
+we connect the completion of between the
+we connect the completion of between the
+we connect the completion of between the
+resolve so once the screen is done the
+resolve so once the screen is done the
+resolve so once the screen is done the
+promise resolves and returns back
+promise resolves and returns back
+promise resolves and returns back
+to the beginning
+to the beginning
+to the beginning
+so we can start this by
+so we can start this by
+so we can start this by
+saying you know like we can tween
+saying you know like we can tween
+saying you know like we can tween
+a let's just make a part
+a let's just make a part
+a let's just make a part
+let's make a part
+let's make a part
+let's make a part
+let's anchor it
+let's anchor it
+let's anchor it
+we can tween
+we can tween
+we can tween
+the workspace.part
+make a tween info
+dot new
+dot new
+dot new
+uh we can just put in one for the time
+uh we can just put in one for the time
+uh we can just put in one for the time
+and just leave everything else blank and
+and just leave everything else blank and
+and just leave everything else blank and
+then for the props we can just say
+then for the props we can just say
+then for the props we can just say
+position equals vector three dot zero
+position equals vector three dot zero
+position equals vector three dot zero
+so it'll tween it towards the origin
+and then
+and then
+and then
+once it's done
+once it's done
+once it's done
+you can do and then
+you can do and then
+you can do and then
+function
+function
+function
+print
+print
+print
+done once it's done
+done once it's done
+done once it's done
+so we play this
+and it sweetened it quite quickly but it
+and it sweetened it quite quickly but it
+and it sweetened it quite quickly but it
+did in fact make it towards the center
+and then if we made this take longer
+and then if we made this take longer
+and then if we made this take longer
+like 10 seconds or something
+like 10 seconds or something
+like 10 seconds or something
+we can do task.wait
+like three seconds
+like three seconds
+like three seconds
+and then we can cancel between so we say
+and then we can cancel between so we say
+and then we can cancel between so we say
+local
+local
+local
+promise equals tween whatever we can
+promise equals tween whatever we can
+promise equals tween whatever we can
+task.wait three then we can do promise
+task.wait three then we can do promise
+task.wait three then we can do promise
+cancel
+if something adverse were to happen
+so it's going it's going it's going it
+so it's going it's going it's going it
+so it's going it's going it's going it
+cancels it stops
+cancels it stops
+cancels it stops
+and obviously you you could call tween
+and obviously you you could call tween
+and obviously you you could call tween
+cancel here but wrapping everything in a
+cancel here but wrapping everything in a
+cancel here but wrapping everything in a
+promise allows you to also change so you
+promise allows you to also change so you
+promise allows you to also change so you
+you'd be able to change means you could
+you'd be able to change means you could
+you'd be able to change means you could
+do like and then tween again and then
+do like and then tween again and then
+do like and then tween again and then
+between again and finally you could like
+between again and finally you could like
+between again and finally you could like
+reset it back to the position
+reset it back to the position
+reset it back to the position
+so
+so
+so
+in the end promises aren't that
+in the end promises aren't that
+in the end promises aren't that
+so like that silver bullet that's gonna
+so like that silver bullet that's gonna
+so like that silver bullet that's gonna
+solve all of your issues it just makes
+solve all of your issues it just makes
+solve all of your issues it just makes
+your code
+your code
+your code
+feel a lot more legitimate in my opinion
+feel a lot more legitimate in my opinion
+feel a lot more legitimate in my opinion
+it feels a lot more secure
+it feels a lot more secure
+it feels a lot more secure
+and it leads to a lot of
+and it leads to a lot of
+and it leads to a lot of
+neat little code
+neat little code
+neat little code
+like reuse
+like reuse
+like reuse
+practices and code
+practices and code
+practices and code
+neat ability practices where you can
+neat ability practices where you can
+neat ability practices where you can
+make your code neater
+make your code neater
+make your code neater
+make it more readable while also making
+make it more readable while also making
+make it more readable while also making
+it more secure
+it more secure
+it more secure
+so that's about it for this video this
+so that's about it for this video this
+so that's about it for this video this
+video didn't quite go over the exact
+video didn't quite go over the exact
+video didn't quite go over the exact
+semantics of promises but there's
+semantics of promises but there's
+semantics of promises but there's
+documentation for that and the
+documentation for that and the
+documentation for that and the
+documentation does a great job of
+documentation does a great job of
+documentation does a great job of
+explaining the api
+explaining the api
+explaining the api
+and some of the use cases but
+and some of the use cases but
+and some of the use cases but
+it uses a lot of words and it has a lot
+it uses a lot of words and it has a lot
+it uses a lot of words and it has a lot
+of jargon and it makes it seem like
+of jargon and it makes it seem like
+of jargon and it makes it seem like
+promises are only for the elite roblox
+promises are only for the elite roblox
+promises are only for the elite roblox
+devs who know everything about
+devs who know everything about
+devs who know everything about
+everything whereas
+everything whereas
+everything whereas
+honestly i've come to learn that
+honestly i've come to learn that
+honestly i've come to learn that
+promises can be used by anyone as long
+promises can be used by anyone as long
+promises can be used by anyone as long
+as you know when they can use because
+as you know when they can use because
+as you know when they can use because
+they're used a lot in the web
+they're used a lot in the web
+they're used a lot in the web
+development world
+development world
+development world
+and they're touted on this like this
+and they're touted on this like this
+and they're touted on this like this
+high mountain you know how good they are
+high mountain you know how good they are
+high mountain you know how good they are
+whatever but a lot of times the use in
+whatever but a lot of times the use in
+whatever but a lot of times the use in
+the web dev world is not the same as in
+the web dev world is not the same as in
+the web dev world is not the same as in
+roblox but sometimes there's overlap
+roblox but sometimes there's overlap
+roblox but sometimes there's overlap
+like in
+like in
+like in
+api calls or whatever that like that to
+api calls or whatever that like that to
+api calls or whatever that like that to
+servers
+servers
+servers
+but in the end
+but in the end
+but in the end
+promises are useful you should use them
+promises are useful you should use them
+promises are useful you should use them
+so i'll have some links useful links in
+so i'll have some links useful links in
+so i'll have some links useful links in
+description if you want to learn more
+description if you want to learn more
+description if you want to learn more
+but i hope you have a nice day
+but i hope you have a nice day
+but i hope you have a nice day
+and goodbye
+so
+[Music]
+you

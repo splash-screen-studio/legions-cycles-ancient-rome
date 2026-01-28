@@ -1,0 +1,637 @@
+hello and welcome to another
+hello and welcome to another
+hello and welcome to another
+roblox devlog in this video
+roblox devlog in this video
+roblox devlog in this video
+i will be starting a new game which i'm
+i will be starting a new game which i'm
+i will be starting a new game which i'm
+temporarily naming the tallest tower
+temporarily naming the tallest tower
+temporarily naming the tallest tower
+so this game is going to be a like
+so this game is going to be a like
+so this game is going to be a like
+little mini game like round base sort of
+little mini game like round base sort of
+little mini game like round base sort of
+thing where you have to build the
+thing where you have to build the
+thing where you have to build the
+tallest tower
+tallest tower
+tallest tower
+while people are trying to knock down
+while people are trying to knock down
+while people are trying to knock down
+your tower and you're trying to knock
+your tower and you're trying to knock
+your tower and you're trying to knock
+down
+down
+down
+other people's towers so it should be a
+other people's towers so it should be a
+other people's towers so it should be a
+fun little
+fun little
+fun little
+physics game and in terms of the
+physics game and in terms of the
+physics game and in terms of the
+programming it shouldn't be
+programming it shouldn't be
+programming it shouldn't be
+horribly hard but it still should give
+horribly hard but it still should give
+horribly hard but it still should give
+me a good challenge with all the physics
+me a good challenge with all the physics
+me a good challenge with all the physics
+in this video i'll be explaining what
+in this video i'll be explaining what
+in this video i'll be explaining what
+the game is
+the game is
+the game is
+how it works and some progress that i've
+how it works and some progress that i've
+how it works and some progress that i've
+been making
+been making
+been making
+so i hope you enjoy and if you do make
+so i hope you enjoy and if you do make
+so i hope you enjoy and if you do make
+sure to like and subscribe
+sure to like and subscribe
+sure to like and subscribe
+without further ado let's get into the
+video
+so what exactly do i want to make in
+so what exactly do i want to make in
+so what exactly do i want to make in
+this game
+this game
+this game
+so first of all the name of this game is
+so first of all the name of this game is
+so first of all the name of this game is
+the tallest tower
+the tallest tower
+the tallest tower
+or tallest tower haven't really decided
+or tallest tower haven't really decided
+or tallest tower haven't really decided
+yet
+yet
+yet
+and the whole idea and if you have a
+and the whole idea and if you have a
+and the whole idea and if you have a
+better
+better
+better
+name then make sure to comment it down
+name then make sure to comment it down
+name then make sure to comment it down
+below the whole idea
+below the whole idea
+below the whole idea
+is this would be a top-down view so
+is this would be a top-down view so
+is this would be a top-down view so
+you'll have
+you'll have
+you'll have
+a little pit in the middle not really a
+a little pit in the middle not really a
+a little pit in the middle not really a
+pit just an
+pit just an
+pit just an
+area and it'll be a massive circular
+area and it'll be a massive circular
+area and it'll be a massive circular
+arena
+arena
+arena
+each player will have their own little
+each player will have their own little
+each player will have their own little
+plot
+let's draw a few around in a
+let's draw a few around in a
+let's draw a few around in a
+semi-circular format
+semi-circular format
+semi-circular format
+and there'll be a bunch of building
+and there'll be a bunch of building
+and there'll be a bunch of building
+blocks scattered in this middle
+blocks scattered in this middle
+blocks scattered in this middle
+area and they'll kind of flow out
+area and they'll kind of flow out
+area and they'll kind of flow out
+towards the outside because they'll all
+towards the outside because they'll all
+towards the outside because they'll all
+be
+be
+be
+they won't be anchored they'll just be
+they won't be anchored they'll just be
+they won't be anchored they'll just be
+physics based and so every player
+physics based and so every player
+physics based and so every player
+from every position will have to
+from every position will have to
+from every position will have to
+gather resources and build
+gather resources and build
+gather resources and build
+the tallest tower and at face value that
+the tallest tower and at face value that
+the tallest tower and at face value that
+sounds pretty linear
+sounds pretty linear
+sounds pretty linear
+what's gonna happen is each player will
+what's gonna happen is each player will
+what's gonna happen is each player will
+be able to
+be able to
+be able to
+knock down other people's towers and
+knock down other people's towers and
+knock down other people's towers and
+their towers have to be structurally
+their towers have to be structurally
+their towers have to be structurally
+secure or else they'll just fall over
+secure or else they'll just fall over
+secure or else they'll just fall over
+so it's all physics based it might be a
+so it's all physics based it might be a
+so it's all physics based it might be a
+little hard
+little hard
+little hard
+to make the ownership changes work
+to make the ownership changes work
+to make the ownership changes work
+but we should be fine
+but we should be fine
+but we should be fine
+and yeah so it should work pretty well
+and so here you can see i'm getting
+and so here you can see i'm getting
+and so here you can see i'm getting
+started
+started
+started
+on the programming and you notice
+on the programming and you notice
+on the programming and you notice
+something interesting
+something interesting
+something interesting
+i'm actually programming in visual
+i'm actually programming in visual
+i'm actually programming in visual
+studio code and the
+studio code and the
+studio code and the
+reason i can do this is using a really
+reason i can do this is using a really
+reason i can do this is using a really
+neat plug-in
+neat plug-in
+neat plug-in
+called rojo i think that's how it's
+called rojo i think that's how it's
+called rojo i think that's how it's
+pronounced
+pronounced
+pronounced
+and it allows me to sync with visual
+and it allows me to sync with visual
+and it allows me to sync with visual
+studio code and i can use a bunch of
+studio code and i can use a bunch of
+studio code and i can use a bunch of
+cool plugins there to help me use
+cool plugins there to help me use
+cool plugins there to help me use
+type checking for example i really like
+type checking for example i really like
+type checking for example i really like
+that where i can
+that where i can
+that where i can
+add specific types to my variables which
+add specific types to my variables which
+add specific types to my variables which
+allows me to
+allows me to
+allows me to
+auto complete functions and i can also
+auto complete functions and i can also
+auto complete functions and i can also
+set up like the project management
+set up like the project management
+set up like the project management
+instead of source control via github
+instead of source control via github
+instead of source control via github
+but right now i'm just trying to make
+but right now i'm just trying to make
+but right now i'm just trying to make
+the initial grabbing and like throwing
+the initial grabbing and like throwing
+the initial grabbing and like throwing
+of parts
+of parts
+of parts
+[Music]
+so after a little bit of coding and a
+so after a little bit of coding and a
+so after a little bit of coding and a
+lot of
+lot of
+lot of
+project setup i can now pick up
+project setup i can now pick up
+project setup i can now pick up
+and move parts so
+and move parts so
+and move parts so
+if i click on this part you can see it
+if i click on this part you can see it
+if i click on this part you can see it
+comes
+comes
+comes
+closer to me right now there's no
+closer to me right now there's no
+closer to me right now there's no
+rotational control so it kind of just
+rotational control so it kind of just
+rotational control so it kind of just
+flings around
+flings around
+flings around
+and i can just drop it like on top of
+and i can just drop it like on top of
+and i can just drop it like on top of
+that part
+that part
+that part
+and it works a little better in first
+and it works a little better in first
+and it works a little better in first
+person
+person
+person
+you can see how it connects to my mouse
+you can see how it connects to my mouse
+you can see how it connects to my mouse
+so wherever i put it it
+so wherever i put it it
+so wherever i put it it
+attaches to it but
+attaches to it but
+attaches to it but
+i don't really know how i can make it
+i don't really know how i can make it
+i don't really know how i can make it
+better for third person but
+better for third person but
+better for third person but
+it allows me to stack parts which
+it allows me to stack parts which
+it allows me to stack parts which
+will be a main focus of this game pretty
+will be a main focus of this game pretty
+will be a main focus of this game pretty
+happy with this
+happy with this
+happy with this
+and i'll probably take a break and get
+and i'll probably take a break and get
+and i'll probably take a break and get
+back deving a little bit later
+so now i started working on the throwing
+so now i started working on the throwing
+so now i started working on the throwing
+and rotating of the part
+and rotating of the part
+and rotating of the part
+and i tried to make the system as robust
+and i tried to make the system as robust
+and i tried to make the system as robust
+as possible but you'll see later
+as possible but you'll see later
+as possible but you'll see later
+i kind of had to change it a little bit
+i kind of had to change it a little bit
+i kind of had to change it a little bit
+but basically the gist of it is i have
+but basically the gist of it is i have
+but basically the gist of it is i have
+this class
+this class
+this class
+or this modulus script that controls
+or this modulus script that controls
+or this modulus script that controls
+when the player
+when the player
+when the player
+or if the player can pick up a part and
+or if the player can pick up a part and
+or if the player can pick up a part and
+how to pick it up and like
+how to pick it up and like
+how to pick it up and like
+when it drops and when it throws so
+when it drops and when it throws so
+when it drops and when it throws so
+basically when we throw the part we
+basically when we throw the part we
+basically when we throw the part we
+basically drop it
+basically drop it
+basically drop it
+and then add some velocity to it and
+and then add some velocity to it and
+and then add some velocity to it and
+since this part is owned by the client
+since this part is owned by the client
+since this part is owned by the client
+i can do this all client side and i
+i can do this all client side and i
+i can do this all client side and i
+really don't have to use any remote
+really don't have to use any remote
+really don't have to use any remote
+events for the server
+so i've implemented the rotating and
+so i've implemented the rotating and
+so i've implemented the rotating and
+throwing fee
+throwing fee
+throwing fee
+feature and i have this little stack to
+feature and i have this little stack to
+feature and i have this little stack to
+demonstrate so i can pick up a part
+demonstrate so i can pick up a part
+demonstrate so i can pick up a part
+with my mouse and you can see no
+with my mouse and you can see no
+with my mouse and you can see no
+depending on the
+depending on the
+depending on the
+orientation of the part when i pick it
+orientation of the part when i pick it
+orientation of the part when i pick it
+up it stays like that like relative to
+up it stays like that like relative to
+up it stays like that like relative to
+me
+me
+me
+so when i turn around like this it's
+so when i turn around like this it's
+so when i turn around like this it's
+facing me but then when i pick it up
+facing me but then when i pick it up
+facing me but then when i pick it up
+from the side
+from the side
+from the side
+it'll keep on facing me from that side
+it'll keep on facing me from that side
+it'll keep on facing me from that side
+and also when i press r i can rotate
+and also when i press r i can rotate
+and also when i press r i can rotate
+right now if i hold it it doesn't do
+right now if i hold it it doesn't do
+right now if i hold it it doesn't do
+anything so i really need to add a hold
+anything so i really need to add a hold
+anything so i really need to add a hold
+feature
+feature
+feature
+but for right now this works fine and
+but for right now this works fine and
+but for right now this works fine and
+also when i press f
+also when i press f
+also when i press f
+i can throw it you can see i can knock
+i can throw it you can see i can knock
+i can throw it you can see i can knock
+down the tower
+down the tower
+down the tower
+and that's kind of what i want this game
+and that's kind of what i want this game
+and that's kind of what i want this game
+to be about you know building and
+to be about you know building and
+to be about you know building and
+knocking down towers so i can
+knocking down towers so i can
+knocking down towers so i can
+quickly demo one real quick
+oh look at my tower it just fell over
+oh look at my tower it just fell over
+oh look at my tower it just fell over
+don't mind that but
+don't mind that but
+don't mind that but
+if we were to build a actual like secure
+if we were to build a actual like secure
+if we were to build a actual like secure
+tower
+tower
+tower
+we could take our part and just throw it
+we could take our part and just throw it
+we could take our part and just throw it
+at someone else's
+at someone else's
+at someone else's
+and just knock it down like that
+so yeah
+so i did a little progress off camera
+so i did a little progress off camera
+so i did a little progress off camera
+and now basically what happens is
+and now basically what happens is
+and now basically what happens is
+i can grab the part and wherever i grab
+i can grab the part and wherever i grab
+i can grab the part and wherever i grab
+it
+it
+it
+it'll make an align position at that
+it'll make an align position at that
+it'll make an align position at that
+position with an attachment and you can
+position with an attachment and you can
+position with an attachment and you can
+see this represented by this
+see this represented by this
+see this represented by this
+like white line with this white sphere
+like white line with this white sphere
+like white line with this white sphere
+so this actually works very nicely so i
+so this actually works very nicely so i
+so this actually works very nicely so i
+can like
+can like
+can like
+apply certain physics and just makes it
+apply certain physics and just makes it
+apply certain physics and just makes it
+a little more robust the only problem
+a little more robust the only problem
+a little more robust the only problem
+is right now the max distance in which
+is right now the max distance in which
+is right now the max distance in which
+you can grab the part is like
+you can grab the part is like
+you can grab the part is like
+20 studs and it automatically puts the
+20 studs and it automatically puts the
+20 studs and it automatically puts the
+part to that distance no matter
+part to that distance no matter
+part to that distance no matter
+where you are so that should be a quick
+where you are so that should be a quick
+where you are so that should be a quick
+fix
+fix
+fix
+but yeah that's about it for this video
+but yeah that's about it for this video
+but yeah that's about it for this video
+so my goals for the next devlog is to
+so my goals for the next devlog is to
+so my goals for the next devlog is to
+firstly polish this part and
+firstly polish this part and
+firstly polish this part and
+what i'm doing right now is let me just
+what i'm doing right now is let me just
+what i'm doing right now is let me just
+show you the code i'm not in visual
+show you the code i'm not in visual
+show you the code i'm not in visual
+studio but it replicates
+studio but it replicates
+studio but it replicates
+pretty nicely i have this class part
+pretty nicely i have this class part
+pretty nicely i have this class part
+controller
+controller
+controller
+that is always on but really i want to
+that is always on but really i want to
+that is always on but really i want to
+turn this into a
+turn this into a
+turn this into a
+component and make like a component
+component and make like a component
+component and make like a component
+manager so we add this component to the
+manager so we add this component to the
+manager so we add this component to the
+player
+player
+player
+once they join the match and then once
+once they join the match and then once
+once they join the match and then once
+they're done with their round we get rid
+they're done with their round we get rid
+they're done with their round we get rid
+of it
+of it
+of it
+so everything resets so in case there's
+so everything resets so in case there's
+so everything resets so in case there's
+a bug
+a bug
+a bug
+it only lasts per round because it'd be
+it only lasts per round because it'd be
+it only lasts per round because it'd be
+kind of
+kind of
+kind of
+a bad practice just to disable and
+a bad practice just to disable and
+a bad practice just to disable and
+enable this depending on
+enable this depending on
+enable this depending on
+when the rounds started or not so that's
+when the rounds started or not so that's
+when the rounds started or not so that's
+my plan for that and i also
+my plan for that and i also
+my plan for that and i also
+want to start some basic like gameplay
+want to start some basic like gameplay
+want to start some basic like gameplay
+to see how things work
+to see how things work
+to see how things work
+but i hope you guys enjoyed make sure to
+but i hope you guys enjoyed make sure to
+but i hope you guys enjoyed make sure to
+like and subscribe if you did and if you
+like and subscribe if you did and if you
+like and subscribe if you did and if you
+have any suggestions
+have any suggestions
+have any suggestions
+or questions maybe you want to see a
+or questions maybe you want to see a
+or questions maybe you want to see a
+tutorial on some of the stuff i'm doing
+tutorial on some of the stuff i'm doing
+tutorial on some of the stuff i'm doing
+here
+here
+here
+make sure to comment down below but
+make sure to comment down below but
+make sure to comment down below but
+i hope you guys have a nice day and
+i hope you guys have a nice day and
+i hope you guys have a nice day and
+[Music]
+goodbye
+[Music]
+[Music]
+[Music]
+you

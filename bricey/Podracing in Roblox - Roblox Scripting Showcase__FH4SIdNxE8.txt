@@ -1,0 +1,658 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+scripting
+scripting
+scripting
+showcase in this video i will be showing
+showcase in this video i will be showing
+showcase in this video i will be showing
+you my process
+you my process
+you my process
+and design choices through making my own
+and design choices through making my own
+and design choices through making my own
+podracer
+podracer
+podracer
+now this video is somewhat of an
+now this video is somewhat of an
+now this video is somewhat of an
+extension of my last
+extension of my last
+extension of my last
+showcase where i showed off a hover car
+showcase where i showed off a hover car
+showcase where i showed off a hover car
+i used the same technology in this video
+i used the same technology in this video
+i used the same technology in this video
+and you if you haven't seen the last
+and you if you haven't seen the last
+and you if you haven't seen the last
+video make sure to
+video make sure to
+video make sure to
+check it out and if you're wondering i
+check it out and if you're wondering i
+check it out and if you're wondering i
+will have
+will have
+will have
+the project download in the description
+the project download in the description
+the project download in the description
+in case you want to check out this
+in case you want to check out this
+in case you want to check out this
+project for yourself
+project for yourself
+project for yourself
+so i hope you guys enjoy like and
+so i hope you guys enjoy like and
+so i hope you guys enjoy like and
+subscribe if you do
+subscribe if you do
+subscribe if you do
+and let's get started
+[Music]
+[Music]
+[Music]
+so my idea for this pod racer is almost
+so my idea for this pod racer is almost
+so my idea for this pod racer is almost
+synonymous to what i did with my
+synonymous to what i did with my
+synonymous to what i did with my
+first hover car that i made a few videos
+first hover car that i made a few videos
+first hover car that i made a few videos
+ago i will link that right now so
+ago i will link that right now so
+ago i will link that right now so
+basically what we'll have
+basically what we'll have
+basically what we'll have
+is each engine of our pod racer will
+is each engine of our pod racer will
+is each engine of our pod racer will
+have a
+have a
+have a
+hover engine which will be like a vector
+hover engine which will be like a vector
+hover engine which will be like a vector
+force
+force
+force
+and so will the pod at the back
+and so will the pod at the back
+and so will the pod at the back
+and then each engine will also have
+and then each engine will also have
+and then each engine will also have
+a thrust going out the back
+a thrust going out the back
+a thrust going out the back
+and the pod will not because the pod
+and the pod will not because the pod
+and the pod will not because the pod
+will be dragged along
+will be dragged along
+will be dragged along
+by some form of constraint right here
+by some form of constraint right here
+by some form of constraint right here
+and i'll have to connect the engines in
+and i'll have to connect the engines in
+and i'll have to connect the engines in
+a way that they don't
+a way that they don't
+a way that they don't
+go crazy but they also
+go crazy but they also
+go crazy but they also
+have a little bit of flexibility to give
+have a little bit of flexibility to give
+have a little bit of flexibility to give
+that sort of like floaty look i don't
+that sort of like floaty look i don't
+that sort of like floaty look i don't
+want this whole pod racer to be
+want this whole pod racer to be
+want this whole pod racer to be
+connected rigidly
+connected rigidly
+connected rigidly
+like how the cover cars were i want each
+like how the cover cars were i want each
+like how the cover cars were i want each
+piece of the pod racer to be
+piece of the pod racer to be
+piece of the pod racer to be
+free-floating
+free-floating
+free-floating
+but still connected in a somewhat rigid
+but still connected in a somewhat rigid
+but still connected in a somewhat rigid
+way
+way
+way
+so with this in mind i started a new
+so with this in mind i started a new
+so with this in mind i started a new
+roblox project
+roblox project
+roblox project
+and got to work on the code
+[Music]
+do
+do
+do
+[Music]
+so after a lot of programming and
+so after a lot of programming and
+so after a lot of programming and
+designing with my constraints and vector
+designing with my constraints and vector
+designing with my constraints and vector
+forces
+forces
+forces
+my podracer now floated i could get onto
+my podracer now floated i could get onto
+my podracer now floated i could get onto
+it
+it
+it
+and i could drive forward and i used
+and i could drive forward and i used
+and i could drive forward and i used
+four
+four
+four
+rod constraints but then when i went
+rod constraints but then when i went
+rod constraints but then when i went
+backwards
+backwards
+backwards
+some problems began to occur and i
+some problems began to occur and i
+some problems began to occur and i
+realized i had a lot more work to do
+realized i had a lot more work to do
+realized i had a lot more work to do
+so i got to
+so i got to
+so i got to
+[Music]
+[Music]
+[Music]
+so at this point in time i got my
+so at this point in time i got my
+so at this point in time i got my
+pod racer working pretty well
+pod racer working pretty well
+pod racer working pretty well
+you can see that i had to add a part in
+you can see that i had to add a part in
+you can see that i had to add a part in
+the middle
+the middle
+the middle
+to prevent it from going crazy when i
+to prevent it from going crazy when i
+to prevent it from going crazy when i
+went backwards
+went backwards
+went backwards
+and overall it worked pretty well
+and after i finished this i generated
+and after i finished this i generated
+and after i finished this i generated
+some terrain
+some terrain
+some terrain
+and got a basic prototype of the
+and got a basic prototype of the
+and got a basic prototype of the
+podracer
+podracer
+podracer
+fully functioning and it looked like
+fully functioning and it looked like
+fully functioning and it looked like
+[Music]
+this
+this
+this
+[Music]
+so after a bunch of testing i think i've
+so after a bunch of testing i think i've
+so after a bunch of testing i think i've
+come along
+come along
+come along
+a pretty good joint setup to use for
+a pretty good joint setup to use for
+a pretty good joint setup to use for
+my pod racers so it's both like
+my pod racers so it's both like
+my pod racers so it's both like
+responsive
+responsive
+responsive
+but also rigid so it always maintains
+but also rigid so it always maintains
+but also rigid so it always maintains
+its form
+its form
+its form
+so first thing to note is this part
+so first thing to note is this part
+so first thing to note is this part
+right here this will be a ghost part
+right here this will be a ghost part
+right here this will be a ghost part
+like you won't be able to see it
+like you won't be able to see it
+like you won't be able to see it
+in game but for right now i have it on
+in game but for right now i have it on
+in game but for right now i have it on
+for testing purposes
+for testing purposes
+for testing purposes
+and it's connected to the main cab in
+and it's connected to the main cab in
+and it's connected to the main cab in
+the back by a weld so they're rigidly
+the back by a weld so they're rigidly
+the back by a weld so they're rigidly
+connected and i got a bunch of raw
+connected and i got a bunch of raw
+connected and i got a bunch of raw
+constraints going everywhere
+constraints going everywhere
+constraints going everywhere
+and then some spring constraints to
+and then some spring constraints to
+and then some spring constraints to
+basically keep
+basically keep
+basically keep
+these two engines in the right
+these two engines in the right
+these two engines in the right
+orientation but also give them
+orientation but also give them
+orientation but also give them
+some leeway so if i were to play this
+let me just hop in
+let me just hop in
+let me just hop in
+you can see i can just drive around and
+you can see i can just drive around and
+you can see i can just drive around and
+if i hit something
+if i hit something
+if i hit something
+you can see the stuff kind of balances
+you can see the stuff kind of balances
+you can see the stuff kind of balances
+and the spring goes in and out
+and the spring goes in and out
+and the spring goes in and out
+but it still maintains its position
+but it still maintains its position
+but it still maintains its position
+which is exactly like even in that and
+which is exactly like even in that and
+which is exactly like even in that and
+even in that situation it somehow
+even in that situation it somehow
+even in that situation it somehow
+maintained its
+maintained its
+maintained its
+position which gives a really cool
+position which gives a really cool
+position which gives a really cool
+effect because you could get some sick
+effect because you could get some sick
+effect because you could get some sick
+crashes
+crashes
+crashes
+which kind of hit something and all your
+which kind of hit something and all your
+which kind of hit something and all your
+engines just kind of blow up
+engines just kind of blow up
+engines just kind of blow up
+you know but to be honest
+you know but to be honest
+you know but to be honest
+a lot of this stuff is probably
+a lot of this stuff is probably
+a lot of this stuff is probably
+redundant i probably don't need two rod
+redundant i probably don't need two rod
+redundant i probably don't need two rod
+constraints or whatever
+constraints or whatever
+constraints or whatever
+but i'm just gonna leave it like this
+but i'm just gonna leave it like this
+but i'm just gonna leave it like this
+for now and focus some on some other
+for now and focus some on some other
+for now and focus some on some other
+stuff
+stuff
+stuff
+so then i got to building a new pod
+so then i got to building a new pod
+so then i got to building a new pod
+racer that actually
+racer that actually
+racer that actually
+models what they had in the movies
+models what they had in the movies
+models what they had in the movies
+and it turned out pretty well and this
+and it turned out pretty well and this
+and it turned out pretty well and this
+is how i made it
+[Music]
+[Music]
+[Music]
+[Music]
+so after around a day of
+so after around a day of
+so after around a day of
+testing i have managed to get
+testing i have managed to get
+testing i have managed to get
+my production ready not final product
+my production ready not final product
+my production ready not final product
+because
+because
+because
+stuff like this will never be finalized
+stuff like this will never be finalized
+stuff like this will never be finalized
+but a little system
+but a little system
+but a little system
+that i can use that works pretty well so
+that i can use that works pretty well so
+that i can use that works pretty well so
+let me go over
+let me go over
+let me go over
+okay first of all you got the two ropes
+okay first of all you got the two ropes
+okay first of all you got the two ropes
+connecting the
+connecting the
+connecting the
+engines to the back this is both
+engines to the back this is both
+engines to the back this is both
+lore accurate like they had like little
+lore accurate like they had like little
+lore accurate like they had like little
+like fuel cables going from the engines
+like fuel cables going from the engines
+like fuel cables going from the engines
+to the pod
+to the pod
+to the pod
+like in the movies but it also gives us
+like in the movies but it also gives us
+like in the movies but it also gives us
+some nice physics
+some nice physics
+some nice physics
+and then i got a part in the middle and
+and then i got a part in the middle and
+and then i got a part in the middle and
+this part is welded
+this part is welded
+this part is welded
+let me show you it's welded to the back
+let me show you it's welded to the back
+let me show you it's welded to the back
+just so like they align properly and
+just so like they align properly and
+just so like they align properly and
+there's two
+there's two
+there's two
+ball socket constraints here and i tried
+ball socket constraints here and i tried
+ball socket constraints here and i tried
+a bunch of like springs and like rod
+a bunch of like springs and like rod
+a bunch of like springs and like rod
+constraints like everywhere and it just
+constraints like everywhere and it just
+constraints like everywhere and it just
+didn't go very well so i ended up going
+didn't go very well so i ended up going
+didn't go very well so i ended up going
+with this nice simple
+with this nice simple
+with this nice simple
+version it works very very well i'm
+version it works very very well i'm
+version it works very very well i'm
+surprised
+surprised
+surprised
+and i have a raw constraint behind here
+and i have a raw constraint behind here
+and i have a raw constraint behind here
+so
+so
+so
+the engines don't
+the engines don't
+the engines don't
+crisscross each other which happened a
+crisscross each other which happened a
+crisscross each other which happened a
+lot beforehand
+lot beforehand
+lot beforehand
+and that's about it so and also
+and that's about it so and also
+and that's about it so and also
+i also needed to think about this as
+i also needed to think about this as
+i also needed to think about this as
+well is i made this part a little bit
+well is i made this part a little bit
+well is i made this part a little bit
+lower
+lower
+lower
+than the pod just so it wouldn't look
+than the pod just so it wouldn't look
+than the pod just so it wouldn't look
+like you're getting evaporated by the
+like you're getting evaporated by the
+like you're getting evaporated by the
+engines
+engines
+engines
+so let's go in give it a little test run
+if i can just hop up here if i can there
+if i can just hop up here if i can there
+if i can just hop up here if i can there
+we go
+we go
+we go
+so if i drive it around it's kind of
+so if i drive it around it's kind of
+so if i drive it around it's kind of
+fast right now
+fast right now
+fast right now
+but yeah you can like drive it around do
+but yeah you can like drive it around do
+but yeah you can like drive it around do
+some
+some
+some
+turns cool thing about turning is i'm
+turns cool thing about turning is i'm
+turns cool thing about turning is i'm
+not sure if i'm gonna get rid of this or
+not sure if i'm gonna get rid of this or
+not sure if i'm gonna get rid of this or
+not is if you
+not is if you
+not is if you
+overturn your pod kind of flips out of
+overturn your pod kind of flips out of
+overturn your pod kind of flips out of
+control
+control
+control
+so i guess that adds some skill into it
+so i guess that adds some skill into it
+so i guess that adds some skill into it
+but um
+but um
+but um
+i don't know if i'm going to keep it
+i don't know if i'm going to keep it
+i don't know if i'm going to keep it
+make sure to leave your feedback
+make sure to leave your feedback
+make sure to leave your feedback
+down below and the cool thing about
+down below and the cool thing about
+down below and the cool thing about
+turning as well
+turning as well
+turning as well
+is that when i just turn without moving
+is that when i just turn without moving
+is that when i just turn without moving
+it puts me that way like makes me go
+it puts me that way like makes me go
+it puts me that way like makes me go
+that way but then if i go forward
+that way but then if i go forward
+that way but then if i go forward
+because i have differential thrust on
+because i have differential thrust on
+because i have differential thrust on
+the engines it points me to whichever
+the engines it points me to whichever
+the engines it points me to whichever
+direction i'm leaning towards
+direction i'm leaning towards
+direction i'm leaning towards
+and i'm pretty sure when i'm turning if
+and i'm pretty sure when i'm turning if
+and i'm pretty sure when i'm turning if
+you turn too hard then the engine starts
+you turn too hard then the engine starts
+you turn too hard then the engine starts
+touching the ground
+touching the ground
+touching the ground
+which may not be too good but i mean
+which may not be too good but i mean
+which may not be too good but i mean
+it's just part of it it's just the way
+it's just part of it it's just the way
+it's just part of it it's just the way
+it works
+it works
+it works
+but make sure to leave a few back down
+but make sure to leave a few back down
+but make sure to leave a few back down
+below on what you think of this and
+below on what you think of this and
+below on what you think of this and
+of course in the final build we're gonna
+of course in the final build we're gonna
+of course in the final build we're gonna
+make that transparent and you can see
+make that transparent and you can see
+make that transparent and you can see
+this little beam
+this little beam
+this little beam
+still looks pretty bad i need to make a
+still looks pretty bad i need to make a
+still looks pretty bad i need to make a
+new asset for it
+new asset for it
+new asset for it
+but it looks pretty cool so let's just
+but it looks pretty cool so let's just
+but it looks pretty cool so let's just
+run this this is basically
+run this this is basically
+run this this is basically
+the final pod racer which is really nice
+the final pod racer which is really nice
+the final pod racer which is really nice
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you guys
+you guys
+you guys
+enjoyed this pod racer was a lot of fun
+enjoyed this pod racer was a lot of fun
+enjoyed this pod racer was a lot of fun
+to make
+to make
+to make
+and i hope it was fun to watch so make
+and i hope it was fun to watch so make
+and i hope it was fun to watch so make
+sure to like and subscribe
+sure to like and subscribe
+sure to like and subscribe
+if you enjoyed this video comment any of
+if you enjoyed this video comment any of
+if you enjoyed this video comment any of
+your suggestions
+your suggestions
+your suggestions
+and questions about this down below i'll
+and questions about this down below i'll
+and questions about this down below i'll
+make sure to put the
+make sure to put the
+make sure to put the
+link to my project in the description if
+link to my project in the description if
+link to my project in the description if
+you want to check it out
+you want to check it out
+you want to check it out
+and that's about it for this video so i
+and that's about it for this video so i
+and that's about it for this video so i
+hope you guys have a nice day
+hope you guys have a nice day
+hope you guys have a nice day
+and goodbye
+[Music]
+[Music]
+[Music]
+you

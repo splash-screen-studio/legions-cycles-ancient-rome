@@ -1,0 +1,1244 @@
+so in my last video
+so in my last video
+so in my last video
+i talked about how i used a different
+i talked about how i used a different
+i talked about how i used a different
+sort of framework for my remote events
+sort of framework for my remote events
+sort of framework for my remote events
+and functions and i asked if you guys
+and functions and i asked if you guys
+and functions and i asked if you guys
+wanted to see a video on it and a few
+wanted to see a video on it and a few
+wanted to see a video on it and a few
+people said yes
+people said yes
+people said yes
+so this is that video and basically
+so this is that video and basically
+so this is that video and basically
+this video is going to be showcasing my
+this video is going to be showcasing my
+this video is going to be showcasing my
+very own
+very own
+very own
+remote messenger module and this module
+remote messenger module and this module
+remote messenger module and this module
+is meant to be abstracted and used in
+is meant to be abstracted and used in
+is meant to be abstracted and used in
+all of your other scripts
+all of your other scripts
+all of your other scripts
+to communicate with remote events and
+to communicate with remote events and
+to communicate with remote events and
+remote functions
+remote functions
+remote functions
+and the reason i made this module is
+and the reason i made this module is
+and the reason i made this module is
+because when i was making my games
+because when i was making my games
+because when i was making my games
+i found that my scripts got very
+i found that my scripts got very
+i found that my scripts got very
+cluttered with remote event and function
+cluttered with remote event and function
+cluttered with remote event and function
+definitions
+definitions
+definitions
+all throughout the scripts and it just
+all throughout the scripts and it just
+all throughout the scripts and it just
+like made the
+like made the
+like made the
+like top variable area really cluttered
+like top variable area really cluttered
+like top variable area really cluttered
+and along
+and along
+and along
+and sort of confusing when i was using
+and sort of confusing when i was using
+and sort of confusing when i was using
+those variables because my naming
+those variables because my naming
+those variables because my naming
+conventions
+conventions
+conventions
+weren't very good in the first place so
+weren't very good in the first place so
+weren't very good in the first place so
+that's where i created this module
+that's where i created this module
+that's where i created this module
+and incidentally this module is actually
+and incidentally this module is actually
+and incidentally this module is actually
+very secure when it comes
+very secure when it comes
+very secure when it comes
+exploits because it uses a command
+exploits because it uses a command
+exploits because it uses a command
+system that only allows
+system that only allows
+system that only allows
+things to be run on the server when the
+things to be run on the server when the
+things to be run on the server when the
+client
+client
+client
+calls with a certain string keyword so
+calls with a certain string keyword so
+calls with a certain string keyword so
+it's basically like a password system
+it's basically like a password system
+it's basically like a password system
+which it's not impenetrable but
+which it's not impenetrable but
+which it's not impenetrable but
+it'd be kind of hard to just out of the
+it'd be kind of hard to just out of the
+it'd be kind of hard to just out of the
+blue
+blue
+blue
+guess a certain command so i'm showing
+guess a certain command so i'm showing
+guess a certain command so i'm showing
+this module the link for the downloads
+this module the link for the downloads
+this module the link for the downloads
+in the description but watch the video
+in the description but watch the video
+in the description but watch the video
+if you want to see
+if you want to see
+if you want to see
+how it works and the api usage it's
+how it works and the api usage it's
+how it works and the api usage it's
+heavily commented so you might not need
+heavily commented so you might not need
+heavily commented so you might not need
+it but
+it but
+it but
+you know the video is there if you want
+you know the video is there if you want
+you know the video is there if you want
+so i hope you all enjoy
+so i hope you all enjoy
+so i hope you all enjoy
+let's get into the video
+[Music]
+[Music]
+[Music]
+so let's start with the module itself
+so let's start with the module itself
+so let's start with the module itself
+what i usually do is i have the module
+what i usually do is i have the module
+what i usually do is i have the module
+in the toolbox i'll give you guys a link
+in the toolbox i'll give you guys a link
+in the toolbox i'll give you guys a link
+to it in the description it says remote
+to it in the description it says remote
+to it in the description it says remote
+messenger
+messenger
+messenger
+i take it i already have it you can see
+i take it i already have it you can see
+i take it i already have it you can see
+and i drag it into replicated storage
+and i drag it into replicated storage
+and i drag it into replicated storage
+because since this deals with remote
+because since this deals with remote
+because since this deals with remote
+events and functions
+events and functions
+events and functions
+we want it to be in replicated storage
+we want it to be in replicated storage
+we want it to be in replicated storage
+as much as possible
+as much as possible
+as much as possible
+and you can see let's just go take a
+and you can see let's just go take a
+and you can see let's just go take a
+quick look at the module
+quick look at the module
+quick look at the module
+i have heavily commented this and by the
+i have heavily commented this and by the
+i have heavily commented this and by the
+way i made this module
+way i made this module
+way i made this module
+so you should be able to see what's
+so you should be able to see what's
+so you should be able to see what's
+going on and it's very simple
+going on and it's very simple
+going on and it's very simple
+it just abstracts some stuff and you'll
+it just abstracts some stuff and you'll
+it just abstracts some stuff and you'll
+notice i'm also
+notice i'm also
+notice i'm also
+using some type syntax with luau
+using some type syntax with luau
+using some type syntax with luau
+which right now is pretty experimental
+which right now is pretty experimental
+which right now is pretty experimental
+like for example there's really no way
+like for example there's really no way
+like for example there's really no way
+that i think for me to put multiple
+that i think for me to put multiple
+that i think for me to put multiple
+variables
+variables
+variables
+as argument function signature
+as argument function signature
+as argument function signature
+but and in the future it'll work really
+but and in the future it'll work really
+but and in the future it'll work really
+well
+well
+well
+especially when roblox reworks their
+especially when roblox reworks their
+especially when roblox reworks their
+whole
+whole
+whole
+script editor which i think they have
+script editor which i think they have
+script editor which i think they have
+planned for next year
+planned for next year
+planned for next year
+um so basically the way this works is i
+um so basically the way this works is i
+um so basically the way this works is i
+have my remote messenger module
+have my remote messenger module
+have my remote messenger module
+and i have two remotes in it the get
+and i have two remotes in it the get
+and i have two remotes in it the get
+data remote function
+data remote function
+data remote function
+and the set data remote event
+and the set data remote event
+and the set data remote event
+and when i use this module these are the
+and when i use this module these are the
+and when i use this module these are the
+only
+only
+only
+two remote functions and events in my
+two remote functions and events in my
+two remote functions and events in my
+whole entire game
+whole entire game
+whole entire game
+and the reason i did this is when i
+and the reason i did this is when i
+and the reason i did this is when i
+built games with
+built games with
+built games with
+a bunch of remote events and a bunch of
+a bunch of remote events and a bunch of
+a bunch of remote events and a bunch of
+remote functions they ended up being
+remote functions they ended up being
+remote functions they ended up being
+very cluttered and like
+very cluttered and like
+very cluttered and like
+in the very top of the script for
+in the very top of the script for
+in the very top of the script for
+example there was just
+example there was just
+example there was just
+a bunch of random references to random
+a bunch of random references to random
+a bunch of random references to random
+events or whatever and
+events or whatever and
+events or whatever and
+it just didn't work that well so i
+it just didn't work that well so i
+it just didn't work that well so i
+created this module to combat that
+created this module to combat that
+created this module to combat that
+and this is by no way by no means like
+and this is by no way by no means like
+and this is by no way by no means like
+the best way to do this
+the best way to do this
+the best way to do this
+but this is the way i figured out and
+but this is the way i figured out and
+but this is the way i figured out and
+also the way this module works is you
+also the way this module works is you
+also the way this module works is you
+basically it uses a command system so
+basically it uses a command system so
+basically it uses a command system so
+you can add a listener and then listen
+you can add a listener and then listen
+you can add a listener and then listen
+for it and you can send data so let me
+for it and you can send data so let me
+for it and you can send data so let me
+show you an example let me just go into
+show you an example let me just go into
+show you an example let me just go into
+that i can't really explain it without
+that i can't really explain it without
+that i can't really explain it without
+showing it so that's what i'm going to
+showing it so that's what i'm going to
+showing it so that's what i'm going to
+do so i'm going to go into starter
+do so i'm going to go into starter
+do so i'm going to go into starter
+player starter player scripts
+player starter player scripts
+player starter player scripts
+and create a local script zoom in a
+and create a local script zoom in a
+and create a local script zoom in a
+little bit there we go
+little bit there we go
+little bit there we go
+i'm going to define replicated storage
+i'm going to define replicated storage
+i'm going to define replicated storage
+will be equal to game
+will be equal to game
+will be equal to game
+get service
+replicate storage and define
+replicate storage and define
+replicate storage and define
+my remote messenger which will be able
+my remote messenger which will be able
+my remote messenger which will be able
+to
+to
+to
+require replicated storage
+require replicated storage
+require replicated storage
+wait for child
+wait for child
+wait for child
+remote messenger
+remote messenger
+remote messenger
+and you can obviously rename the module
+and you can obviously rename the module
+and you can obviously rename the module
+in your own game if you want
+in your own game if you want
+in your own game if you want
+that's the best name i could find it's
+that's the best name i could find it's
+that's the best name i could find it's
+honestly kind of crappy but you can
+honestly kind of crappy but you can
+honestly kind of crappy but you can
+change it if you want
+change it if you want
+change it if you want
+so now we have a remote messenger you
+so now we have a remote messenger you
+so now we have a remote messenger you
+can do a bunch of things first thing i
+can do a bunch of things first thing i
+can do a bunch of things first thing i
+want to do i'm just going to copy this
+want to do i'm just going to copy this
+want to do i'm just going to copy this
+go into server script service and create
+go into server script service and create
+go into server script service and create
+oh not a module script and i want to
+oh not a module script and i want to
+oh not a module script and i want to
+create
+create
+create
+a normal script
+so i'm just going to paste the same code
+so i'm just going to paste the same code
+so i'm just going to paste the same code
+so we have that
+so we have that
+so we have that
+so what i'm going to do is on the
+so what i'm going to do is on the
+so what i'm going to do is on the
+local script i'm going to call remote
+local script i'm going to call remote
+local script i'm going to call remote
+messenger
+messenger
+messenger
+dot send server and send server
+dot send server and send server
+dot send server and send server
+takes in two needed parameters
+takes in two needed parameters
+takes in two needed parameters
+or one need a parameter and that is the
+or one need a parameter and that is the
+or one need a parameter and that is the
+command that you want to call on the
+command that you want to call on the
+command that you want to call on the
+server
+server
+server
+so let's say i want to call a command
+so let's say i want to call a command
+so let's say i want to call a command
+that says
+that says
+that says
+do something this is the command and
+do something this is the command and
+do something this is the command and
+string form that i want to
+string form that i want to
+string form that i want to
+call on the server so if i were to run
+call on the server so if i were to run
+call on the server so if i were to run
+this right now
+you can see i get a warning in the
+you can see i get a warning in the
+you can see i get a warning in the
+output and so this is just for
+output and so this is just for
+output and so this is just for
+when you have an event and like
+when you have an event and like
+when you have an event and like
+something's not happening you know it by
+something's not happening you know it by
+something's not happening you know it by
+saying it says nothing
+saying it says nothing
+saying it says nothing
+listening to do something so there's no
+listening to do something so there's no
+listening to do something so there's no
+listeners listening
+listeners listening
+listeners listening
+to this command down here
+to this command down here
+to this command down here
+so if i go to my server script and i get
+so if i go to my server script and i get
+so if i go to my server script and i get
+say remote
+say remote
+say remote
+messenger add listener
+to do something and i can connect the
+to do something and i can connect the
+to do something and i can connect the
+function to it
+function to it
+function to it
+and this function will get the player
+and this function will get the player
+and this function will get the player
+and we can just print did something
+so this will print out did something and
+so this will print out did something and
+so this will print out did something and
+that's because what's happening behind
+that's because what's happening behind
+that's because what's happening behind
+the hood
+the hood
+the hood
+is since we're requiring this module
+is since we're requiring this module
+is since we're requiring this module
+from both the client and the server
+from both the client and the server
+from both the client and the server
+the client requires it and then whenever
+the client requires it and then whenever
+the client requires it and then whenever
+we
+we
+we
+use the function send server what's
+use the function send server what's
+use the function send server what's
+happening is let me go find it real
+happening is let me go find it real
+happening is let me go find it real
+quick
+quick
+quick
+send server we're using our remote event
+send server we're using our remote event
+send server we're using our remote event
+and we're invoking it
+and we're invoking it
+and we're invoking it
+on the server and when the module is
+on the server and when the module is
+on the server and when the module is
+called we have this little block down
+called we have this little block down
+called we have this little block down
+here that says
+here that says
+here that says
+if it's on the server then on server
+if it's on the server then on server
+if it's on the server then on server
+event we want to connect to this
+event we want to connect to this
+event we want to connect to this
+function
+function
+function
+and the reason there's an underscore
+and the reason there's an underscore
+and the reason there's an underscore
+here is because it's private you should
+here is because it's private you should
+here is because it's private you should
+not use this function
+not use this function
+not use this function
+when you're dealing with the module
+when you're dealing with the module
+when you're dealing with the module
+this function right here and it does
+this function right here and it does
+this function right here and it does
+this for both
+this for both
+this for both
+remote events and remote functions but
+remote events and remote functions but
+remote events and remote functions but
+we're going to stick to events right now
+we're going to stick to events right now
+we're going to stick to events right now
+so i have my event little system right
+so i have my event little system right
+so i have my event little system right
+here
+here
+here
+you can also pass in parameters so let
+you can also pass in parameters so let
+you can also pass in parameters so let
+me zoom in
+me zoom in
+me zoom in
+i can pass in a parameter of let's say
+i can pass in a parameter of let's say
+i can pass in a parameter of let's say
+instead of do something let's say print
+instead of do something let's say print
+instead of do something let's say print
+message that's my command and the
+message that's my command and the
+message that's my command and the
+parameter will be my message which will
+parameter will be my message which will
+parameter will be my message which will
+be
+be
+be
+hello world and then and the server
+hello world and then and the server
+hello world and then and the server
+script
+script
+script
+we can instead of just getting the
+we can instead of just getting the
+we can instead of just getting the
+player because
+player because
+player because
+we it basically passes all the data
+we it basically passes all the data
+we it basically passes all the data
+from the server
+from the server
+from the server
+to the client or from the client to the
+to the client or from the client to the
+to the client or from the client to the
+server like no matter what it is and
+server like no matter what it is and
+server like no matter what it is and
+that's why i'm using these triple dots
+that's why i'm using these triple dots
+that's why i'm using these triple dots
+that's just basically like a variable
+that's just basically like a variable
+that's just basically like a variable
+amount of arguments
+amount of arguments
+amount of arguments
+this is super super useful if you're not
+this is super super useful if you're not
+this is super super useful if you're not
+using this for your lieu of functions
+using this for your lieu of functions
+using this for your lieu of functions
+you should be because it's one of the
+you should be because it's one of the
+you should be because it's one of the
+key things about lua like you can do a
+key things about lua like you can do a
+key things about lua like you can do a
+bunch of variable stuff that other
+bunch of variable stuff that other
+bunch of variable stuff that other
+languages you can't do
+languages you can't do
+languages you can't do
+so when we have it here we can take in
+so when we have it here we can take in
+so when we have it here we can take in
+our player and then we can take
+our player and then we can take
+our player and then we can take
+our message and then we can just say
+our message and then we can just say
+our message and then we can just say
+player.name said
+player.name said
+player.name said
+message so it'll print my name
+message so it'll print my name
+message so it'll print my name
+it'll say oh nevermind i forgot to
+it'll say oh nevermind i forgot to
+it'll say oh nevermind i forgot to
+change
+change
+change
+see this is why this warning is so good
+see this is why this warning is so good
+see this is why this warning is so good
+because i just realized i forgot to
+because i just realized i forgot to
+because i just realized i forgot to
+change
+change
+change
+do something to print message
+so it says brycey said hello world
+so it says brycey said hello world
+so it says brycey said hello world
+and the biggest thing about this system
+and the biggest thing about this system
+and the biggest thing about this system
+that i think i did this unintentionally
+that i think i did this unintentionally
+that i think i did this unintentionally
+but i feel like the system would be
+but i feel like the system would be
+but i feel like the system would be
+pretty hard to exploit because most of
+pretty hard to exploit because most of
+pretty hard to exploit because most of
+the time
+the time
+the time
+exploits would work by just mindlessly
+exploits would work by just mindlessly
+exploits would work by just mindlessly
+searching through replicated storage
+searching through replicated storage
+searching through replicated storage
+finding any remote events and remote
+finding any remote events and remote
+finding any remote events and remote
+functions and
+functions and
+functions and
+just firing them maybe with some random
+just firing them maybe with some random
+just firing them maybe with some random
+values maybe not
+values maybe not
+values maybe not
+but since we have to use a command
+but since we have to use a command
+but since we have to use a command
+system
+system
+system
+if like even if it's not a string
+if like even if it's not a string
+if like even if it's not a string
+because we check it
+because we check it
+because we check it
+and this client receive and server suit
+and this client receive and server suit
+and this client receive and server suit
+i'll go into these in
+i'll go into these in
+i'll go into these in
+in more detail a little bit later it's
+in more detail a little bit later it's
+in more detail a little bit later it's
+basically just checking for
+basically just checking for
+basically just checking for
+the command and if this is like a number
+the command and if this is like a number
+the command and if this is like a number
+if this is nil it won't
+if this is nil it won't
+if this is nil it won't
+do anything only way to run a function
+do anything only way to run a function
+do anything only way to run a function
+on the server from the client is to send
+on the server from the client is to send
+on the server from the client is to send
+a specific
+a specific
+a specific
+string value that corresponds with an
+string value that corresponds with an
+string value that corresponds with an
+active listener
+active listener
+active listener
+on the server which that is very very
+on the server which that is very very
+on the server which that is very very
+powerful and unless someone got lucky
+powerful and unless someone got lucky
+powerful and unless someone got lucky
+and guessed
+and guessed
+and guessed
+the exact like print message function
+the exact like print message function
+the exact like print message function
+and you couldn't really do anything
+and you couldn't really do anything
+and you couldn't really do anything
+and another cool thing about this is
+and another cool thing about this is
+and another cool thing about this is
+this works almost the same as an event
+this works almost the same as an event
+this works almost the same as an event
+connection so you can say local listener
+connection so you can say local listener
+connection so you can say local listener
+equals remote messenger add listener so
+equals remote messenger add listener so
+equals remote messenger add listener so
+this add listener functions returned a
+this add listener functions returned a
+this add listener functions returned a
+listener
+listener
+listener
+table which let me go up here here's a
+table which let me go up here here's a
+table which let me go up here here's a
+definition
+definition
+definition
+it's like it has a string for the
+it's like it has a string for the
+it's like it has a string for the
+command
+command
+command
+a callback function and stop listening
+a callback function and stop listening
+a callback function and stop listening
+so stop listening
+so stop listening
+so stop listening
+is basically like let's do something
+is basically like let's do something
+is basically like let's do something
+where we say
+where we say
+where we say
+listener stop listening
+listener stop listening
+listener stop listening
+this basically just stops the server
+this basically just stops the server
+this basically just stops the server
+from listening and it just destroys
+from listening and it just destroys
+from listening and it just destroys
+everything
+everything
+everything
+in regards to that specific listener so
+in regards to that specific listener so
+in regards to that specific listener so
+you can see
+you can see
+you can see
+before the client can call the server
+before the client can call the server
+before the client can call the server
+the listener disconnects
+the listener disconnects
+the listener disconnects
+which prevents the server from receiving
+which prevents the server from receiving
+which prevents the server from receiving
+the message
+the message
+the message
+which this works basically the same as a
+which this works basically the same as a
+which this works basically the same as a
+roblox script signal
+roblox script signal
+roblox script signal
+which that's like the local connection
+which that's like the local connection
+which that's like the local connection
+equals event
+equals event
+equals event
+connect to function and you can see
+connect to function and you can see
+connect to function and you can see
+they're syntactically
+they're syntactically
+they're syntactically
+very similar as well which is really
+very similar as well which is really
+very similar as well which is really
+nice
+nice
+nice
+and along with this we have our remote
+and along with this we have our remote
+and along with this we have our remote
+functions so the way those work is let
+functions so the way those work is let
+functions so the way those work is let
+me go back to the
+me go back to the
+me go back to the
+client and let me just delete this so
+client and let me just delete this so
+client and let me just delete this so
+we're going to
+we're going to
+we're going to
+call a remote function so i'm going to
+call a remote function so i'm going to
+call a remote function so i'm going to
+say local value equals
+say local value equals
+say local value equals
+remote messenger
+get from server
+get from server
+get from server
+and let's say we want to get a special
+and let's say we want to get a special
+and let's say we want to get a special
+value
+value
+value
+then we can go to the script on the
+then we can go to the script on the
+then we can go to the script on the
+server and we can say
+server and we can say
+server and we can say
+the listener
+equals remote messenger
+equals remote messenger
+equals remote messenger
+dot add listener special
+dot add listener special
+dot add listener special
+value function which would get
+value function which would get
+value function which would get
+the player and let's say our special
+the player and let's say our special
+the player and let's say our special
+value is
+value is
+value is
+a hundred we can go to local script and
+a hundred we can go to local script and
+a hundred we can go to local script and
+we can print
+we can print
+we can print
+the value and i'll explain this in a sec
+the value and i'll explain this in a sec
+the value and i'll explain this in a sec
+let me just run it and you can see it
+let me just run it and you can see it
+let me just run it and you can see it
+prints a hundred
+prints a hundred
+prints a hundred
+so wait wait this is working is get from
+so wait wait this is working is get from
+so wait wait this is working is get from
+server
+server
+server
+is calling the remote function but on
+is calling the remote function but on
+is calling the remote function but on
+the server side
+the server side
+the server side
+it's syntactically identical to the
+it's syntactically identical to the
+it's syntactically identical to the
+remote event
+remote event
+remote event
+and this makes it simpler when i was
+and this makes it simpler when i was
+and this makes it simpler when i was
+making the module and it makes it a
+making the module and it makes it a
+making the module and it makes it a
+little simpler
+little simpler
+little simpler
+when you're coding it the only problem
+when you're coding it the only problem
+when you're coding it the only problem
+is readability
+is readability
+is readability
+but the commands should clear that up
+but the commands should clear that up
+but the commands should clear that up
+for you
+for you
+for you
+and the return statements because these
+and the return statements because these
+and the return statements because these
+events
+events
+events
+should not have return statements
+should not have return statements
+should not have return statements
+but and it works the same way and in the
+but and it works the same way and in the
+but and it works the same way and in the
+module it works basically the same way
+module it works basically the same way
+module it works basically the same way
+as well so speaking of that that's
+as well so speaking of that that's
+as well so speaking of that that's
+basically it for remote functions
+basically it for remote functions
+basically it for remote functions
+they're the same as
+they're the same as
+they're the same as
+events you just get a value and they
+events you just get a value and they
+events you just get a value and they
+work the same way because this remote
+work the same way because this remote
+work the same way because this remote
+messenger
+messenger
+messenger
+just abstracts it so i already showed
+just abstracts it so i already showed
+just abstracts it so i already showed
+you the add listener
+you the add listener
+you the add listener
+this pretty simple pretty simple it just
+this pretty simple pretty simple it just
+this pretty simple pretty simple it just
+creates a table with all these values
+creates a table with all these values
+creates a table with all these values
+inserts it to a list of listeners
+inserts it to a list of listeners
+inserts it to a list of listeners
+and then this list of listeners is
+and then this list of listeners is
+and then this list of listeners is
+sorted through
+sorted through
+sorted through
+whenever we get a remote event or remote
+whenever we get a remote event or remote
+whenever we get a remote event or remote
+function
+function
+function
+on the server or on the client you
+on the server or on the client you
+on the server or on the client you
+notice these functions
+notice these functions
+notice these functions
+are basically identical
+are basically identical
+are basically identical
+and that's just because we need one on
+and that's just because we need one on
+and that's just because we need one on
+the client and we need one on the server
+the client and we need one on the server
+the client and we need one on the server
+i mean realistically you could probably
+i mean realistically you could probably
+i mean realistically you could probably
+make them the exact same but that would
+make them the exact same but that would
+make them the exact same but that would
+kill readability i feel like so i'm just
+kill readability i feel like so i'm just
+kill readability i feel like so i'm just
+gonna leave them like that
+gonna leave them like that
+gonna leave them like that
+and you see when we require the module
+and you see when we require the module
+and you see when we require the module
+this
+this
+this
+if statement is always called i already
+if statement is always called i already
+if statement is always called i already
+went over this and it just connects
+went over this and it just connects
+went over this and it just connects
+the server receive and client receive
+the server receive and client receive
+the server receive and client receive
+functions and they basically
+functions and they basically
+functions and they basically
+whenever they get an event or function
+whenever they get an event or function
+whenever they get an event or function
+they just run through
+they just run through
+they just run through
+call call the callback of each listener
+call call the callback of each listener
+call call the callback of each listener
+which was created up here
+which was created up here
+which was created up here
+and then you got a bunch of the api
+and then you got a bunch of the api
+and then you got a bunch of the api
+functions over here they're all
+functions over here they're all
+functions over here they're all
+pretty self-explanatory i have these
+pretty self-explanatory i have these
+pretty self-explanatory i have these
+comments defining what they do
+comments defining what they do
+comments defining what they do
+so if you guys want to use this module
+so if you guys want to use this module
+so if you guys want to use this module
+for yourself there will be a link in the
+for yourself there will be a link in the
+for yourself there will be a link in the
+description
+description
+description
+and i think it's written pretty well it
+and i think it's written pretty well it
+and i think it's written pretty well it
+was pretty simple project for me to make
+was pretty simple project for me to make
+was pretty simple project for me to make
+and really it's really not that
+and really it's really not that
+and really it's really not that
+crazy other than the fact that it's very
+crazy other than the fact that it's very
+crazy other than the fact that it's very
+very safe when it comes to
+very safe when it comes to
+very safe when it comes to
+the messaging with like sanity checks
+the messaging with like sanity checks
+the messaging with like sanity checks
+because
+because
+because
+the command system is basically a sanity
+the command system is basically a sanity
+the command system is basically a sanity
+check in itself if you don't know about
+check in itself if you don't know about
+check in itself if you don't know about
+that
+that
+that
+make sure to watch my last video which i
+make sure to watch my last video which i
+make sure to watch my last video which i
+talked about that
+talked about that
+talked about that
+and yeah but i think there's other like
+and yeah but i think there's other like
+and yeah but i think there's other like
+maybe better ways than this
+maybe better ways than this
+maybe better ways than this
+such as that's a weird glitch such as
+such as that's a weird glitch such as
+such as that's a weird glitch such as
+like knit
+like knit
+like knit
+which is a framework i might start using
+which is a framework i might start using
+which is a framework i might start using
+which
+which
+which
+uses a service and controller system to
+uses a service and controller system to
+uses a service and controller system to
+accomplish
+accomplish
+accomplish
+the same thing except with the whole
+the same thing except with the whole
+the same thing except with the whole
+game framework or not just remote events
+game framework or not just remote events
+game framework or not just remote events
+and function
+and function
+and function
+but i hope you guys enjoyed this video
+but i hope you guys enjoyed this video
+but i hope you guys enjoyed this video
+it was kind of more of a rant
+it was kind of more of a rant
+it was kind of more of a rant
+than an actual tutorial and a showcase
+than an actual tutorial and a showcase
+than an actual tutorial and a showcase
+but i hope you enjoyed i got a lot of
+but i hope you enjoyed i got a lot of
+but i hope you enjoyed i got a lot of
+comments on the last video saying they
+comments on the last video saying they
+comments on the last video saying they
+wanted to see this
+wanted to see this
+wanted to see this
+and i am willing to share i have a bunch
+and i am willing to share i have a bunch
+and i am willing to share i have a bunch
+of
+of
+of
+other modules actually let me look at my
+other modules actually let me look at my
+other modules actually let me look at my
+toolbox i got this mouse module that i
+toolbox i got this mouse module that i
+toolbox i got this mouse module that i
+created a tween
+created a tween
+created a tween
+module a draw module an array module
+module a draw module an array module
+module a draw module an array module
+so if you want to see any of these make
+so if you want to see any of these make
+so if you want to see any of these make
+sure to comment down below and
+sure to comment down below and
+sure to comment down below and
+i will make sure to
+i will make sure to
+i will make sure to
+showcase them because they're a bunch of
+showcase them because they're a bunch of
+showcase them because they're a bunch of
+very like simple but very powerful
+very like simple but very powerful
+very like simple but very powerful
+modules that i use in almost
+modules that i use in almost
+modules that i use in almost
+all my games but other than that make
+all my games but other than that make
+all my games but other than that make
+sure to like and subscribe if you enjoy
+sure to like and subscribe if you enjoy
+sure to like and subscribe if you enjoy
+i hope you have a nice day and goodbye
+you

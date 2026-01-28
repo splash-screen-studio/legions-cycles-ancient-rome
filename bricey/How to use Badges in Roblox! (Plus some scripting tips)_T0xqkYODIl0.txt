@@ -1,0 +1,1309 @@
+in your games oftentimes you'll want to
+in your games oftentimes you'll want to
+in your games oftentimes you'll want to
+give your players an achievement on
+give your players an achievement on
+give your players an achievement on
+roblox a badge whenever they do
+roblox a badge whenever they do
+roblox a badge whenever they do
+something interesting or they reach a
+something interesting or they reach a
+something interesting or they reach a
+big milestone because it's super
+big milestone because it's super
+big milestone because it's super
+satisfying and some people like to hunt
+satisfying and some people like to hunt
+satisfying and some people like to hunt
+for all the achievements in the game so
+for all the achievements in the game so
+for all the achievements in the game so
+it increases your game's longevity and
+it increases your game's longevity and
+it increases your game's longevity and
+replayability so in this video i'm going
+replayability so in this video i'm going
+replayability so in this video i'm going
+to show you how to implement
+to show you how to implement
+to show you how to implement
+badges
+badges
+badges
+in roblox studios you can see i got a
+in roblox studios you can see i got a
+in roblox studios you can see i got a
+badge here when i walked in this part
+badge here when i walked in this part
+badge here when i walked in this part
+i'll show you how to make a badge how to
+i'll show you how to make a badge how to
+i'll show you how to make a badge how to
+implement when you touch a part and some
+implement when you touch a part and some
+implement when you touch a part and some
+general strategies when making badges in
+general strategies when making badges in
+general strategies when making badges in
+your game as a whole because although
+your game as a whole because although
+your game as a whole because although
+they are a great feature to include they
+they are a great feature to include they
+they are a great feature to include they
+can also
+can also
+can also
+ruin
+ruin
+ruin
+the rest of your code and make it a
+the rest of your code and make it a
+the rest of your code and make it a
+little messy so you always want to watch
+little messy so you always want to watch
+little messy so you always want to watch
+out for that but if you implement them
+out for that but if you implement them
+out for that but if you implement them
+correctly they will turn out great and
+correctly they will turn out great and
+correctly they will turn out great and
+will add a nice layer to your games that
+will add a nice layer to your games that
+will add a nice layer to your games that
+you might lack if you don't include them
+you might lack if you don't include them
+you might lack if you don't include them
+so subscribe to my channel if you enjoy
+so subscribe to my channel if you enjoy
+so subscribe to my channel if you enjoy
+this video make sure to like the video
+this video make sure to like the video
+this video make sure to like the video
+as well
+as well
+as well
+and without further ado let's get into
+and without further ado let's get into
+and without further ado let's get into
+the video
+so i'm here in a fresh roblox baseplate
+so i'm here in a fresh roblox baseplate
+so i'm here in a fresh roblox baseplate
+so now let's get to making our badges so
+so now let's get to making our badges so
+so now let's get to making our badges so
+the first thing you want to do is click
+the first thing you want to do is click
+the first thing you want to do is click
+on game settings and if your game has
+on game settings and if your game has
+on game settings and if your game has
+not been saved or published to roblox
+not been saved or published to roblox
+not been saved or published to roblox
+yet you want to do that so click save to
+yet you want to do that so click save to
+yet you want to do that so click save to
+roblox and then name it whatever i'm
+roblox and then name it whatever i'm
+roblox and then name it whatever i'm
+going to name it just badge
+going to name it just badge
+going to name it just badge
+video
+video
+video
+and then
+and then
+and then
+i can click save
+so now i'm in the new
+so now i'm in the new
+so now i'm in the new
+roblox game
+roblox game
+roblox game
+so let me try to click on game settings
+so let me try to click on game settings
+so let me try to click on game settings
+again this menu should pop up go to mine
+again this menu should pop up go to mine
+again this menu should pop up go to mine
+as it monetization i don't know why it's
+as it monetization i don't know why it's
+as it monetization i don't know why it's
+a monetization because badges don't
+a monetization because badges don't
+a monetization because badges don't
+really monetize you anything but you can
+really monetize you anything but you can
+really monetize you anything but you can
+still click create badge
+still click create badge
+still click create badge
+and then this will bring up
+and then this will bring up
+and then this will bring up
+your
+badge little interface so i'm just going
+badge little interface so i'm just going
+badge little interface so i'm just going
+to choose a random picture
+to choose a random picture
+to choose a random picture
+for it
+for it
+for it
+and i'll change the name to just
+and i'll change the name to just
+and i'll change the name to just
+you found it
+you found it
+you found it
+or something so this badge and this
+or something so this badge and this
+or something so this badge and this
+scenario is going to be for when you
+scenario is going to be for when you
+scenario is going to be for when you
+find like a secret area or when you hit
+find like a secret area or when you hit
+find like a secret area or when you hit
+a part so this is when it will give it
+a part so this is when it will give it
+a part so this is when it will give it
+to you you can change the description or
+to you you can change the description or
+to you you can change the description or
+whatever but that's good enough for me
+whatever but that's good enough for me
+whatever but that's good enough for me
+i'm gonna click preview
+i'm gonna click preview
+i'm gonna click preview
+and then click purchase for zero roblox
+and then click purchase for zero roblox
+and then click purchase for zero roblox
+just make sure it's zero it should
+just make sure it's zero it should
+just make sure it's zero it should
+always be zero i'm pretty sure
+always be zero i'm pretty sure
+always be zero i'm pretty sure
+they will charge you if you create more
+they will charge you if you create more
+they will charge you if you create more
+than 100 badges like per hour or
+than 100 badges like per hour or
+than 100 badges like per hour or
+something which is
+something which is
+something which is
+not an issue for most people
+so now if i go back
+so now if i go back
+so now if i go back
+to the badgeman you can see it says not
+to the badgeman you can see it says not
+to the badgeman you can see it says not
+seeing badges or flesh so i'm going to
+seeing badges or flesh so i'm going to
+seeing badges or flesh so i'm going to
+refresh it and then the badge is here
+refresh it and then the badge is here
+refresh it and then the badge is here
+with the beautiful picture the beautiful
+with the beautiful picture the beautiful
+with the beautiful picture the beautiful
+name and description and now for now i'm
+name and description and now for now i'm
+name and description and now for now i'm
+just going to copy this id
+just going to copy this id
+just going to copy this id
+and we will deal with it
+and we will deal with it
+and we will deal with it
+later
+so in its most basic form giving out a
+so in its most basic form giving out a
+so in its most basic form giving out a
+badge is quite simple so i'm going to go
+badge is quite simple so i'm going to go
+badge is quite simple so i'm going to go
+create a new script and server script
+create a new script and server script
+create a new script and server script
+service
+service
+service
+and i'm just going to name the script
+and i'm just going to name the script
+and i'm just going to name the script
+like badge manager or something
+like badge manager or something
+like badge manager or something
+bad badge manager
+bad badge manager
+bad badge manager
+here's a script so the only thing you
+here's a script so the only thing you
+here's a script so the only thing you
+have to do to
+have to do to
+have to do to
+award a bachelor player
+award a bachelor player
+award a bachelor player
+is first get the badge service local
+is first get the badge service local
+is first get the badge service local
+badge service equals game get service
+badge service equals game get service
+badge service equals game get service
+badge service there we go
+badge service there we go
+badge service there we go
+and i'm just gonna save the id to a
+and i'm just gonna save the id to a
+and i'm just gonna save the id to a
+variable so i'm gonna say local badge
+variable so i'm gonna say local badge
+variable so i'm gonna say local badge
+id
+id
+id
+equals and i'm going to use ctrl v to
+equals and i'm going to use ctrl v to
+equals and i'm going to use ctrl v to
+paste the id that i copied earlier if
+paste the id that i copied earlier if
+paste the id that i copied earlier if
+you didn't copy it just go back to game
+you didn't copy it just go back to game
+you didn't copy it just go back to game
+settings monetization your badge click
+settings monetization your badge click
+settings monetization your badge click
+the little three dots and click copy and
+the little three dots and click copy and
+the little three dots and click copy and
+you should be able to right click paste
+you should be able to right click paste
+you should be able to right click paste
+it or just use ctrl v to paste it
+it or just use ctrl v to paste it
+it or just use ctrl v to paste it
+and all you have to do is say badge
+and all you have to do is say badge
+and all you have to do is say badge
+service
+award
+award
+award
+badge
+badge
+badge
+and then send in the player user id
+and then send in the player user id
+and then send in the player user id
+and the badge id
+and the badge id
+and the badge id
+so
+so
+so
+hypothetically i could do a test real
+hypothetically i could do a test real
+hypothetically i could do a test real
+quick just to show that so i'm gonna
+quick just to show that so i'm gonna
+quick just to show that so i'm gonna
+wait a couple seconds and then
+wait a couple seconds and then
+wait a couple seconds and then
+just get the first character who joins
+just get the first character who joins
+just get the first character who joins
+so game
+so game
+so game
+service players
+service players
+service players
+get players
+and then just one
+and then just one
+and then just one
+and then i can do the badge id so after
+and then i can do the badge id so after
+and then i can do the badge id so after
+a couple seconds this will reward me
+a couple seconds this will reward me
+a couple seconds this will reward me
+since i'm the only one in the games of
+since i'm the only one in the games of
+since i'm the only one in the games of
+badge and the real game you would never
+badge and the real game you would never
+badge and the real game you would never
+do this you'd have a system actually set
+do this you'd have a system actually set
+do this you'd have a system actually set
+up but for our demonstration purposes it
+up but for our demonstration purposes it
+up but for our demonstration purposes it
+works just fine
+works just fine
+works just fine
+oh well i forgot to get the user id let
+oh well i forgot to get the user id let
+oh well i forgot to get the user id let
+me fix that so i just got the player
+me fix that so i just got the player
+me fix that so i just got the player
+this might be a common mistake if you're
+this might be a common mistake if you're
+this might be a common mistake if you're
+using badges you have to get the player
+using badges you have to get the player
+using badges you have to get the player
+dot user id
+dot user id
+dot user id
+there we go
+so now if you wait wait a couple seconds
+so now if you wait wait a couple seconds
+so now if you wait wait a couple seconds
+you can see badge awarded in the bottom
+you can see badge awarded in the bottom
+you can see badge awarded in the bottom
+right of my screen
+right of my screen
+right of my screen
+that is perfect
+that is perfect
+that is perfect
+but in reality you are never going to
+but in reality you are never going to
+but in reality you are never going to
+award a badge like this you're never
+award a badge like this you're never
+award a badge like this you're never
+just going to give it to some arbitrary
+just going to give it to some arbitrary
+just going to give it to some arbitrary
+player a very common use case for badges
+player a very common use case for badges
+player a very common use case for badges
+is when a player reaches a certain
+is when a player reaches a certain
+is when a player reaches a certain
+location or they find a secret location
+location or they find a secret location
+location or they find a secret location
+or they just go somewhere or do
+or they just go somewhere or do
+or they just go somewhere or do
+something and usually that requires
+something and usually that requires
+something and usually that requires
+touching apart so i'm going to show you
+touching apart so i'm going to show you
+touching apart so i'm going to show you
+now a system a really clever system to
+now a system a really clever system to
+now a system a really clever system to
+make a give a badge whenever you hit a
+make a give a badge whenever you hit a
+make a give a badge whenever you hit a
+part and it's going to be pretty simple
+part and it's going to be pretty simple
+part and it's going to be pretty simple
+pretty non-intrusive to your game
+pretty non-intrusive to your game
+pretty non-intrusive to your game
+because that's one
+because that's one
+because that's one
+hard thing about badges you don't want
+hard thing about badges you don't want
+hard thing about badges you don't want
+your badges to be coupled to your main
+your badges to be coupled to your main
+your badges to be coupled to your main
+game mechanics you want them to stay to
+game mechanics you want them to stay to
+game mechanics you want them to stay to
+the side and just kind of do their thing
+the side and just kind of do their thing
+the side and just kind of do their thing
+because if you need to change something
+because if you need to change something
+because if you need to change something
+in your main game you don't want to go
+in your main game you don't want to go
+in your main game you don't want to go
+and change all the badge code to that
+and change all the badge code to that
+and change all the badge code to that
+that just be kind of annoying
+that just be kind of annoying
+that just be kind of annoying
+so i'm going to go into workspace and
+so i'm going to go into workspace and
+so i'm going to go into workspace and
+just create a arbitrary part
+just create a arbitrary part
+just create a arbitrary part
+and this will be like a detector part so
+and this will be like a detector part so
+and this will be like a detector part so
+a player can like walk into it for
+a player can like walk into it for
+a player can like walk into it for
+testing i'm just going to make it
+testing i'm just going to make it
+testing i'm just going to make it
+partially transparent in a real game
+partially transparent in a real game
+partially transparent in a real game
+you'd probably have it fully transparent
+you'd probably have it fully transparent
+you'd probably have it fully transparent
+and make it anchored and no cane collide
+and make it anchored and no cane collide
+and make it anchored and no cane collide
+and then name doesn't really matter and
+and then name doesn't really matter and
+and then name doesn't really matter and
+what you want to do
+what you want to do
+what you want to do
+is
+is
+is
+first of all if you don't have it i'll
+first of all if you don't have it i'll
+first of all if you don't have it i'll
+have it in the description install a
+have it in the description install a
+have it in the description install a
+plugin called
+plugin called
+plugin called
+the like tag manager or tag plugin
+the like tag manager or tag plugin
+the like tag manager or tag plugin
+and go open the tag window
+and go open the tag window
+and go open the tag window
+and you want to create a new bat a new
+and you want to create a new bat a new
+and you want to create a new bat a new
+tag i should say and i'm going to call
+tag i should say and i'm going to call
+tag i should say and i'm going to call
+this tag badge contact and if you don't
+this tag badge contact and if you don't
+this tag badge contact and if you don't
+know what i'm really doing here and what
+know what i'm really doing here and what
+know what i'm really doing here and what
+all this tag stuff is i have a video on
+all this tag stuff is i have a video on
+all this tag stuff is i have a video on
+collection service and tagging i will
+collection service and tagging i will
+collection service and tagging i will
+link it right now
+link it right now
+link it right now
+but i'm going to assign this block
+but i'm going to assign this block
+but i'm going to assign this block
+a
+a
+a
+badge contact tag by clicking little
+badge contact tag by clicking little
+badge contact tag by clicking little
+hole there and it'll create a check
+hole there and it'll create a check
+hole there and it'll create a check
+there which is what i want and then i'm
+there which is what i want and then i'm
+there which is what i want and then i'm
+going to add an attribute to this part
+going to add an attribute to this part
+going to add an attribute to this part
+and i'm going to change it to a number
+and i'm going to change it to a number
+and i'm going to change it to a number
+and this will be the badge
+and this will be the badge
+and this will be the badge
+id attribute
+id attribute
+id attribute
+and i'm going to paste that same id that
+and i'm going to paste that same id that
+and i'm going to paste that same id that
+we got before in this badge id
+we got before in this badge id
+we got before in this badge id
+so what i want to implement here is all
+so what i want to implement here is all
+so what i want to implement here is all
+the parts tagged with this badge contact
+the parts tagged with this badge contact
+the parts tagged with this badge contact
+tag
+tag
+tag
+will
+will
+will
+award the player
+award the player
+award the player
+the
+the
+the
+badge id given
+badge id given
+badge id given
+when they touch it so you can put these
+when they touch it so you can put these
+when they touch it so you can put these
+around your map wherever you don't have
+around your map wherever you don't have
+around your map wherever you don't have
+to copy and paste scripts you don't have
+to copy and paste scripts you don't have
+to copy and paste scripts you don't have
+to copy and base code you don't have to
+to copy and base code you don't have to
+to copy and base code you don't have to
+change the bat the badge id in each
+change the bat the badge id in each
+change the bat the badge id in each
+script or whatever you'll be able to
+script or whatever you'll be able to
+script or whatever you'll be able to
+have a very very simple script that will
+have a very very simple script that will
+have a very very simple script that will
+do it all for you so i'm gonna go back
+do it all for you so i'm gonna go back
+do it all for you so i'm gonna go back
+to the badge manager script
+to the badge manager script
+to the badge manager script
+i need uh the collection service for the
+i need uh the collection service for the
+i need uh the collection service for the
+tags so i'm gonna do local collection
+tags so i'm gonna do local collection
+tags so i'm gonna do local collection
+service equals game get service
+service equals game get service
+service equals game get service
+collection service there we go and then
+collection service there we go and then
+collection service there we go and then
+i'm also going to need the player
+i'm also going to need the player
+i'm also going to need the player
+service to detect the player so i'm
+service to detect the player so i'm
+service to detect the player so i'm
+going to do local players equals game
+going to do local players equals game
+going to do local players equals game
+get service
+get service
+get service
+players there you go
+players there you go
+players there you go
+so now i want to run through all the
+so now i want to run through all the
+so now i want to run through all the
+parts tagged with the badge contact tag
+parts tagged with the badge contact tag
+parts tagged with the badge contact tag
+so i'm going to say say for i part
+so i'm going to say say for i part
+so i'm going to say say for i part
+in ipairs
+in ipairs
+in ipairs
+collection service get tagged
+collection service get tagged
+collection service get tagged
+and then we want to get the ones tagged
+and then we want to get the ones tagged
+and then we want to get the ones tagged
+with the badge contact tag now you could
+with the badge contact tag now you could
+with the badge contact tag now you could
+have named this tag whatever you want
+have named this tag whatever you want
+have named this tag whatever you want
+it's just badge contact like the stuff
+it's just badge contact like the stuff
+it's just badge contact like the stuff
+they contact to get a badge makes a lot
+they contact to get a badge makes a lot
+they contact to get a badge makes a lot
+of sense to me so that's why i chose it
+of sense to me so that's why i chose it
+of sense to me so that's why i chose it
+and then after that we're gonna put do
+and then after that we're gonna put do
+and then after that we're gonna put do
+and then we want to
+and then we want to
+and then we want to
+hook up a touchdown so part.touched
+hook up a touchdown so part.touched
+hook up a touchdown so part.touched
+connect
+connect
+connect
+function
+function
+function
+and then the touch will be the touch
+and then the touch will be the touch
+and then the touch will be the touch
+part will be called hit in my
+part will be called hit in my
+part will be called hit in my
+case we're going to say local character
+case we're going to say local character
+case we're going to say local character
+equals hit
+find first
+find first
+find first
+ancestor which is a model
+ancestor which is a model
+ancestor which is a model
+and then let's say local player
+and then let's say local player
+and then let's say local player
+equals players get player from character
+character
+character
+character
+so what this will do is whenever the
+so what this will do is whenever the
+so what this will do is whenever the
+parts touch and by the way we don't need
+parts touch and by the way we don't need
+parts touch and by the way we don't need
+to really really need to disconnect this
+to really really need to disconnect this
+to really really need to disconnect this
+event because we're not going to be
+event because we're not going to be
+event because we're not going to be
+connecting and disconnecting it multiple
+connecting and disconnecting it multiple
+connecting and disconnecting it multiple
+times throughout the game we only do
+times throughout the game we only do
+times throughout the game we only do
+this once at the very beginning of the
+this once at the very beginning of the
+this once at the very beginning of the
+game so don't worry about that we're not
+game so don't worry about that we're not
+game so don't worry about that we're not
+disconnecting this
+disconnecting this
+disconnecting this
+so whatever the parts touched we take
+so whatever the parts touched we take
+so whatever the parts touched we take
+the hit part the part that it's touched
+the hit part the part that it's touched
+the hit part the part that it's touched
+by
+by
+by
+we check if there's a model because your
+we check if there's a model because your
+we check if there's a model because your
+character is always a model and but
+character is always a model and but
+character is always a model and but
+whenever you touch something it's a part
+whenever you touch something it's a part
+whenever you touch something it's a part
+within your character model so we try to
+within your character model so we try to
+within your character model so we try to
+get back to the character
+get back to the character
+get back to the character
+and then we try to run this function
+and then we try to run this function
+and then we try to run this function
+which checks if there is a player
+which checks if there is a player
+which checks if there is a player
+associated with that said model which if
+associated with that said model which if
+associated with that said model which if
+there is that means it's your player
+there is that means it's your player
+there is that means it's your player
+character so we say if player so if the
+character so we say if player so if the
+character so we say if player so if the
+player exists then all we got to do is
+player exists then all we got to do is
+player exists then all we got to do is
+award the badge and that as i showed
+award the badge and that as i showed
+award the badge and that as i showed
+earlier was very trivial so all you do
+earlier was very trivial so all you do
+earlier was very trivial so all you do
+is bad service award badge if you can
+is bad service award badge if you can
+is bad service award badge if you can
+spell award correctly badge and we say
+spell award correctly badge and we say
+spell award correctly badge and we say
+the player.user id make sure the
+the player.user id make sure the
+the player.user id make sure the
+player.user id not just the player as i
+player.user id not just the player as i
+player.user id not just the player as i
+messed up earlier we want to do the part
+messed up earlier we want to do the part
+messed up earlier we want to do the part
+get attribute
+badge id now in case stuff isn't working
+badge id now in case stuff isn't working
+badge id now in case stuff isn't working
+and you're like oh why isn't it working
+and you're like oh why isn't it working
+and you're like oh why isn't it working
+it might be easier for you to
+it might be easier for you to
+it might be easier for you to
+first assert
+first assert
+first assert
+that part
+that part
+that part
+get attribute
+badge id exist and then say
+badge id exist and then say
+badge id exist and then say
+like there is no
+like there is no
+like there is no
+badge id assigned
+badge id assigned
+badge id assigned
+just in case you you're forgetful and
+just in case you you're forgetful and
+just in case you you're forgetful and
+you forget to put the badge id into your
+you forget to put the badge id into your
+you forget to put the badge id into your
+part because if you don't it'll give you
+part because if you don't it'll give you
+part because if you don't it'll give you
+a really funky error message that you
+a really funky error message that you
+a really funky error message that you
+probably won't trace to just not putting
+probably won't trace to just not putting
+probably won't trace to just not putting
+this attribute in so putting this assert
+this attribute in so putting this assert
+this attribute in so putting this assert
+here lets you know on startup that there
+here lets you know on startup that there
+here lets you know on startup that there
+is no badge id assigned to the given
+is no badge id assigned to the given
+is no badge id assigned to the given
+part you can also add the part
+part you can also add the part
+part you can also add the part
+information if you want to this is just
+information if you want to this is just
+information if you want to this is just
+ease of use you don't need this assert
+ease of use you don't need this assert
+ease of use you don't need this assert
+line you don't really need it if you
+line you don't really need it if you
+line you don't really need it if you
+always remember to put this badge id but
+always remember to put this badge id but
+always remember to put this badge id but
+if you forget
+if you forget
+if you forget
+it might lead to some confusion it has
+it might lead to some confusion it has
+it might lead to some confusion it has
+to me before
+to me before
+to me before
+so just for good user experience with
+so just for good user experience with
+so just for good user experience with
+your developers you could just leave
+your developers you could just leave
+your developers you could just leave
+this here
+this here
+this here
+so let's test it out
+let's go find our part
+let's go find our part
+let's go find our part
+hit the part
+so really interestingly roblox released
+so really interestingly roblox released
+so really interestingly roblox released
+an update like yesterday or today
+an update like yesterday or today
+an update like yesterday or today
+that changed the badge service so before
+that changed the badge service so before
+that changed the badge service so before
+it would just award you the badge any
+it would just award you the badge any
+it would just award you the badge any
+time you hit the thing like while you're
+time you hit the thing like while you're
+time you hit the thing like while you're
+testing in roblox studio
+testing in roblox studio
+testing in roblox studio
+but now it does not it did like a day
+but now it does not it did like a day
+but now it does not it did like a day
+ago when i made this when i tested it
+ago when i made this when i tested it
+ago when i made this when i tested it
+out so that is quite annoying but you're
+out so that is quite annoying but you're
+out so that is quite annoying but you're
+just gonna have to trust me that the
+just gonna have to trust me that the
+just gonna have to trust me that the
+badge will get awarded to a new player
+badge will get awarded to a new player
+badge will get awarded to a new player
+if you really want to check bad service
+if you really want to check bad service
+if you really want to check bad service
+does have a
+function called
+function called
+function called
+a user has badge async which you can use
+a user has badge async which you can use
+a user has badge async which you can use
+to check if a user has a badge it
+to check if a user has a badge it
+to check if a user has a badge it
+returns true or false so if you don't
+returns true or false so if you don't
+returns true or false so if you don't
+believe me then you can say like print
+believe me then you can say like print
+believe me then you can say like print
+user has badge the player.user id and
+user has badge the player.user id and
+user has badge the player.user id and
+the part attribute badge id just to make
+the part attribute badge id just to make
+the part attribute badge id just to make
+sure that your player actually has the
+sure that your player actually has the
+sure that your player actually has the
+badge kind of annoying that it doesn't
+badge kind of annoying that it doesn't
+badge kind of annoying that it doesn't
+work in testing anymore but
+work in testing anymore but
+work in testing anymore but
+whatever
+whatever
+whatever
+so there's one other thing i have to
+so there's one other thing i have to
+so there's one other thing i have to
+touch on and that is coupling your
+touch on and that is coupling your
+touch on and that is coupling your
+badges with the rest of your game so
+badges with the rest of your game so
+badges with the rest of your game so
+here i have a simple example when the
+here i have a simple example when the
+here i have a simple example when the
+player joins we create like a basic
+player joins we create like a basic
+player joins we create like a basic
+money thing and leadership is just basic
+money thing and leadership is just basic
+money thing and leadership is just basic
+normal stuff it'll just give them
+normal stuff it'll just give them
+normal stuff it'll just give them
+some leader stats
+some leader stats
+some leader stats
+in the top right corner of the screen
+in the top right corner of the screen
+in the top right corner of the screen
+let's just verify that it works so you
+let's just verify that it works so you
+let's just verify that it works so you
+have zero money so let's say you want to
+have zero money so let's say you want to
+have zero money so let's say you want to
+give an achievement or badge when a
+give an achievement or badge when a
+give an achievement or badge when a
+player reaches a certain number of money
+player reaches a certain number of money
+player reaches a certain number of money
+now the simplest way to do it would just
+now the simplest way to do it would just
+now the simplest way to do it would just
+be to say like right here like money
+be to say like right here like money
+be to say like right here like money
+dot change and then connect whatever
+dot change and then connect whatever
+dot change and then connect whatever
+and say oh if they have certain amount
+and say oh if they have certain amount
+and say oh if they have certain amount
+of money awards said badge
+of money awards said badge
+of money awards said badge
+but that would just be
+but that would just be
+but that would just be
+bad for a couple of reasons because it
+bad for a couple of reasons because it
+bad for a couple of reasons because it
+would just
+would just
+would just
+link your badges to your player handler
+link your badges to your player handler
+link your badges to your player handler
+which just is not smart in case you ever
+which just is not smart in case you ever
+which just is not smart in case you ever
+want to change it or if you're making if
+want to change it or if you're making if
+want to change it or if you're making if
+you're refactoring your code you're
+you're refactoring your code you're
+you're refactoring your code you're
+changing a bunch it just would not work
+changing a bunch it just would not work
+changing a bunch it just would not work
+so one good strategy to use when you're
+so one good strategy to use when you're
+so one good strategy to use when you're
+awarding badges is the observer pattern
+awarding badges is the observer pattern
+awarding badges is the observer pattern
+which basically means using events so in
+which basically means using events so in
+which basically means using events so in
+my case i have a bindable event parented
+my case i have a bindable event parented
+my case i have a bindable event parented
+to my player manager if you're using
+to my player manager if you're using
+to my player manager if you're using
+other libraries you could use like a
+other libraries you could use like a
+other libraries you could use like a
+signal library or something for that so
+signal library or something for that so
+signal library or something for that so
+whenever a player joins i'm going to say
+whenever a player joins i'm going to say
+whenever a player joins i'm going to say
+script dot player joined fire
+script dot player joined fire
+script dot player joined fire
+and give them the player and for this
+and give them the player and for this
+and give them the player and for this
+demonstration i'm just going to give
+demonstration i'm just going to give
+demonstration i'm just going to give
+them the money value too
+them the money value too
+them the money value too
+so what i can do now is i can go back to
+so what i can do now is i can go back to
+so what i can do now is i can go back to
+my badge manager
+my badge manager
+my badge manager
+and say
+and say
+and say
+script.parent
+script.parent
+script.parent
+dot player manager dot player joined
+dot player manager dot player joined
+dot player manager dot player joined
+connect
+connect
+connect
+function
+function
+function
+player money
+player money
+player money
+and then we could say money dot changed
+and then we could say money dot changed
+and then we could say money dot changed
+connect
+connect
+connect
+function
+function
+function
+and then
+and then
+and then
+the value of money would be like value
+the value of money would be like value
+the value of money would be like value
+and so we could say if value is greater
+and so we could say if value is greater
+and so we could say if value is greater
+than some number like 10
+than some number like 10
+than some number like 10
+or a thousand
+or a thousand
+or a thousand
+you just say
+you just say
+you just say
+print
+print
+print
+you're rich or something like that in
+you're rich or something like that in
+you're rich or something like that in
+reality you would award a badge but
+reality you would award a badge but
+reality you would award a badge but
+since i've already awarded this badge
+since i've already awarded this badge
+since i've already awarded this badge
+once and i cannot award it again there's
+once and i cannot award it again there's
+once and i cannot award it again there's
+really no point to so what this does
+really no point to so what this does
+really no point to so what this does
+here is it allows like other people in
+here is it allows like other people in
+here is it allows like other people in
+your development team or yourself when
+your development team or yourself when
+your development team or yourself when
+you forget to always know that your
+you forget to always know that your
+you forget to always know that your
+badge code is going to be within like
+badge code is going to be within like
+badge code is going to be within like
+one script or one module so you don't
+one script or one module so you don't
+one script or one module so you don't
+ever have to go back and forth and
+ever have to go back and forth and
+ever have to go back and forth and
+figure out
+figure out
+figure out
+where you're awarding a badge or what's
+where you're awarding a badge or what's
+where you're awarding a badge or what's
+going on so you always know where things
+going on so you always know where things
+going on so you always know where things
+are and how they work in relation to one
+are and how they work in relation to one
+are and how they work in relation to one
+another so let's just try this out
+another so let's just try this out
+another so let's just try this out
+just double check things are working
+just double check things are working
+just double check things are working
+and i screwed up
+we have to do a dot event connect for a
+we have to do a dot event connect for a
+we have to do a dot event connect for a
+bindable event
+bindable event
+bindable event
+i'm used to using the signals with knit
+i'm used to using the signals with knit
+i'm used to using the signals with knit
+so that's probably the issue
+so that's probably the issue
+so that's probably the issue
+but now if i go and change
+but now if i go and change
+but now if i go and change
+my money value to something like
+my money value to something like
+my money value to something like
+10 000
+you'd say it says you're rich which is
+you'd say it says you're rich which is
+you'd say it says you're rich which is
+perfect now on the services may seem
+perfect now on the services may seem
+perfect now on the services may seem
+like a trivial thing to do why can't i
+like a trivial thing to do why can't i
+like a trivial thing to do why can't i
+just
+just
+just
+put the badge where it's most convenient
+put the badge where it's most convenient
+put the badge where it's most convenient
+and it's just because as your game gets
+and it's just because as your game gets
+and it's just because as your game gets
+bigger as your
+bigger as your
+bigger as your
+backhand code gets more
+backhand code gets more
+backhand code gets more
+convoluted and spaghetti like we want to
+convoluted and spaghetti like we want to
+convoluted and spaghetti like we want to
+reduce spaghetti we don't like spaghetti
+reduce spaghetti we don't like spaghetti
+reduce spaghetti we don't like spaghetti
+in our code we want it to be nice
+in our code we want it to be nice
+in our code we want it to be nice
+and chopped up nice and neat so other
+and chopped up nice and neat so other
+and chopped up nice and neat so other
+developers and yourself when you forget
+developers and yourself when you forget
+developers and yourself when you forget
+can figure out where the code is and
+can figure out where the code is and
+can figure out where the code is and
+what it does and how it does it and all
+what it does and how it does it and all
+what it does and how it does it and all
+of each domain like the player domain
+of each domain like the player domain
+of each domain like the player domain
+where player joining and
+where player joining and
+where player joining and
+data stores are probably handled too is
+data stores are probably handled too is
+data stores are probably handled too is
+separate from the achievement domain
+separate from the achievement domain
+separate from the achievement domain
+because this should not infect other
+because this should not infect other
+because this should not infect other
+parts of your code it should not be a
+parts of your code it should not be a
+parts of your code it should not be a
+point of error it should just exist and
+point of error it should just exist and
+point of error it should just exist and
+award badges when it sees fit
+award badges when it sees fit
+award badges when it sees fit
+and i will have an article on the
+and i will have an article on the
+and i will have an article on the
+observer pattern in the description if
+observer pattern in the description if
+observer pattern in the description if
+you want to check it out it's a really
+you want to check it out it's a really
+you want to check it out it's a really
+nice read it's part of a book which i
+nice read it's part of a book which i
+nice read it's part of a book which i
+really enjoy called game programming
+really enjoy called game programming
+really enjoy called game programming
+pattern so read that if you will
+pattern so read that if you will
+pattern so read that if you will
+but that's about it for this video so i
+but that's about it for this video so i
+but that's about it for this video so i
+hope you enjoyed learning about badges
+hope you enjoyed learning about badges
+hope you enjoyed learning about badges
+learning about how to get them how to
+learning about how to get them how to
+learning about how to get them how to
+program them and some common practices
+program them and some common practices
+program them and some common practices
+on when to use them if you know the
+on when to use them if you know the
+on when to use them if you know the
+video make sure to like the video and
+video make sure to like the video and
+video make sure to like the video and
+subscribe to my channel for more roblox
+subscribe to my channel for more roblox
+subscribe to my channel for more roblox
+scripting content comment any questions
+scripting content comment any questions
+scripting content comment any questions
+or suggestions down below but with that
+or suggestions down below but with that
+or suggestions down below but with that
+i hope you have a nice day and goodbye
+i hope you have a nice day and goodbye
+i hope you have a nice day and goodbye
+[Music]
+you

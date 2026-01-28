@@ -1,0 +1,582 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i'll be showing you spring
+in this video i'll be showing you spring
+in this video i'll be showing you spring
+constraints
+constraints
+constraints
+these are super cool cool constraints
+these are super cool cool constraints
+these are super cool cool constraints
+that can be used for a lot of
+that can be used for a lot of
+that can be used for a lot of
+applications in your roblox games and
+applications in your roblox games and
+applications in your roblox games and
+i really enjoy playing around with them
+i really enjoy playing around with them
+i really enjoy playing around with them
+and in this video i'll show you like all
+and in this video i'll show you like all
+and in this video i'll show you like all
+the properties and i'll show you a
+the properties and i'll show you a
+the properties and i'll show you a
+little demonstration of what you can do
+little demonstration of what you can do
+little demonstration of what you can do
+with them
+with them
+with them
+like so
+and without further ado let's get into
+and without further ado let's get into
+and without further ado let's get into
+the video
+[Music]
+[Music]
+[Music]
+so let's begin with spring constraints
+so let's begin with spring constraints
+so let's begin with spring constraints
+so spring constraints are exactly what
+so spring constraints are exactly what
+so spring constraints are exactly what
+they sound like
+they sound like
+they sound like
+they're basically just springs so here i
+they're basically just springs so here i
+they're basically just springs so here i
+have a part
+have a part
+have a part
+and then we can duplicate this part we
+and then we can duplicate this part we
+and then we can duplicate this part we
+have another part and then let's go to
+have another part and then let's go to
+have another part and then let's go to
+model create and then create a spring
+model create and then create a spring
+model create and then create a spring
+so springs have two attachments and they
+so springs have two attachments and they
+so springs have two attachments and they
+basically just specify where you want
+basically just specify where you want
+basically just specify where you want
+the spring to start and end
+the spring to start and end
+the spring to start and end
+so i'm going to put a attachment there
+so i'm going to put a attachment there
+so i'm going to put a attachment there
+and attachment there and here you have
+and attachment there and here you have
+and attachment there and here you have
+your spring
+your spring
+your spring
+so let's just run this without changing
+so let's just run this without changing
+so let's just run this without changing
+any of the properties
+any of the properties
+any of the properties
+you can see nothing really happens
+you can see nothing really happens
+you can see nothing really happens
+there's like a specified length and this
+there's like a specified length and this
+there's like a specified length and this
+length
+length
+length
+does not change when you start it and
+does not change when you start it and
+does not change when you start it and
+this property
+this property
+this property
+is called the free length and so this is
+is called the free length and so this is
+is called the free length and so this is
+the
+the
+the
+length that you want the spring to
+length that you want the spring to
+length that you want the spring to
+maintain if you bring them any closer or
+maintain if you bring them any closer or
+maintain if you bring them any closer or
+they'll try to push out if you bring
+they'll try to push out if you bring
+they'll try to push out if you bring
+them any farther they'll try to pull in
+them any farther they'll try to pull in
+them any farther they'll try to pull in
+just like a spring would do and so up
+just like a spring would do and so up
+just like a spring would do and so up
+here in the properties let's just go
+here in the properties let's just go
+here in the properties let's just go
+over the coils
+over the coils
+over the coils
+all of this stuff is all visuals i don't
+all of this stuff is all visuals i don't
+all of this stuff is all visuals i don't
+really need to go over it
+really need to go over it
+really need to go over it
+and then down here you have yourself all
+and then down here you have yourself all
+and then down here you have yourself all
+the spring stuff so the damping
+the spring stuff so the damping
+the spring stuff so the damping
+is how delayed or like slow
+is how delayed or like slow
+is how delayed or like slow
+down the effects are so let me just
+down the effects are so let me just
+down the effects are so let me just
+anchor this one part let me actually
+anchor this one part let me actually
+anchor this one part let me actually
+bring it up real quick
+bring it up real quick
+bring it up real quick
+let me anchor it just so you can see a
+let me anchor it just so you can see a
+let me anchor it just so you can see a
+little bit better
+little bit better
+little bit better
+you can see it kind of springs a little
+you can see it kind of springs a little
+you can see it kind of springs a little
+bit
+bit
+bit
+and depending on how much the damping is
+and depending on how much the damping is
+and depending on how much the damping is
+it goes a little bit slower so let's
+it goes a little bit slower so let's
+it goes a little bit slower so let's
+change damping to like 100
+hit play you can see it's a lot
+hit play you can see it's a lot
+hit play you can see it's a lot
+slower it's not as reactive or quick
+and then let's go to limits limits are
+and then let's go to limits limits are
+and then let's go to limits limits are
+pretty self-explanatory
+pretty self-explanatory
+pretty self-explanatory
+they define a max and min
+they define a max and min
+they define a max and min
+limit for your spring and this is
+limit for your spring and this is
+limit for your spring and this is
+regardless of the damping or any other
+regardless of the damping or any other
+regardless of the damping or any other
+physics things like it literally will
+physics things like it literally will
+physics things like it literally will
+not go past a certain amount
+not go past a certain amount
+not go past a certain amount
+so we play this you can see it
+so we play this you can see it
+so we play this you can see it
+automatically snaps into place
+automatically snaps into place
+automatically snaps into place
+let me go out and then turn on
+let me go out and then turn on
+let me go out and then turn on
+constraints
+constraints
+constraints
+and this allows me to simulate the
+and this allows me to simulate the
+and this allows me to simulate the
+constraints limits
+constraints limits
+constraints limits
+so if i go into game and i try moving
+so if i go into game and i try moving
+so if i go into game and i try moving
+this i can't even move it
+this i can't even move it
+this i can't even move it
+like farther than a certain amount
+like farther than a certain amount
+like farther than a certain amount
+because of limits
+because of limits
+because of limits
+we can also demo this inside of studio
+we can also demo this inside of studio
+we can also demo this inside of studio
+you can see i
+you can see i
+you can see i
+cannot move it anywhere past this
+cannot move it anywhere past this
+cannot move it anywhere past this
+at all i can drag it for some reason
+at all i can drag it for some reason
+at all i can drag it for some reason
+that's kind of stupid
+that's kind of stupid
+that's kind of stupid
+but when i use the move tool i can't do
+but when i use the move tool i can't do
+but when i use the move tool i can't do
+it
+it
+it
+so let's go back to our spring and then
+so let's go back to our spring and then
+so let's go back to our spring and then
+we have our max force which is pretty
+we have our max force which is pretty
+we have our max force which is pretty
+self-explanatory the max amount of force
+self-explanatory the max amount of force
+self-explanatory the max amount of force
+the coil of the spring can apply to your
+the coil of the spring can apply to your
+the coil of the spring can apply to your
+two parts
+two parts
+two parts
+and the stiffness which is basically the
+and the stiffness which is basically the
+and the stiffness which is basically the
+opposite of damping
+opposite of damping
+opposite of damping
+it's how much force not how much force
+it's how much force not how much force
+it's how much force not how much force
+it's basically how much force needs to
+it's basically how much force needs to
+it's basically how much force needs to
+be applied to the spring to bring it
+be applied to the spring to bring it
+be applied to the spring to bring it
+back
+back
+back
+to its free length and that's regardless
+to its free length and that's regardless
+to its free length and that's regardless
+of the limit so if we play this
+of the limit so if we play this
+of the limit so if we play this
+and we can shove that around and it can
+and we can shove that around and it can
+and we can shove that around and it can
+like move around
+like move around
+like move around
+and more stiffness means more power so
+and more stiffness means more power so
+and more stiffness means more power so
+to speak
+to speak
+to speak
+and you can see that demonstrated in my
+and you can see that demonstrated in my
+and you can see that demonstrated in my
+ballista video if you watch that
+ballista video if you watch that
+ballista video if you watch that
+and in that video i use springs to
+and in that video i use springs to
+and in that video i use springs to
+simulate
+simulate
+simulate
+like a bow and now i'm going to demo one
+like a bow and now i'm going to demo one
+like a bow and now i'm going to demo one
+of the most common uses
+of the most common uses
+of the most common uses
+of your hinge constraints and that is in
+of your hinge constraints and that is in
+of your hinge constraints and that is in
+conjunction with a prismatic constraint
+conjunction with a prismatic constraint
+conjunction with a prismatic constraint
+if you haven't seen that video make sure
+if you haven't seen that video make sure
+if you haven't seen that video make sure
+to check it out because
+to check it out because
+to check it out because
+a prismatic constraint on its own is
+a prismatic constraint on its own is
+a prismatic constraint on its own is
+cool but like
+cool but like
+cool but like
+you can't really simulate physics that
+you can't really simulate physics that
+you can't really simulate physics that
+well so the best way to use it
+well so the best way to use it
+well so the best way to use it
+not the best way but for certain
+not the best way but for certain
+not the best way but for certain
+situations like for example when i was
+situations like for example when i was
+situations like for example when i was
+making a ballista
+making a ballista
+making a ballista
+you need to use prismatic and spring
+you need to use prismatic and spring
+you need to use prismatic and spring
+constraints together so
+constraints together so
+constraints together so
+let me just get rid of that here we have
+let me just get rid of that here we have
+let me just get rid of that here we have
+this part
+this part
+this part
+let's go duplicate it make another part
+let's go duplicate it make another part
+let's go duplicate it make another part
+and i'm going to anchor this bottom part
+and i'm going to anchor this bottom part
+and i'm going to anchor this bottom part
+for purposes of this demonstration
+for purposes of this demonstration
+for purposes of this demonstration
+making this a little bit smaller create
+making this a little bit smaller create
+making this a little bit smaller create
+a
+a
+a
+prismatic constraint
+let me change my increment to 0.25 there
+let me change my increment to 0.25 there
+let me change my increment to 0.25 there
+we go
+we go
+we go
+so we can line them up properly
+let's put that there let's put this down
+let's put that there let's put this down
+let's put that there let's put this down
+and then we can make another part
+and then we can make another part
+and then we can make another part
+right here let's say
+anchor it and then create a
+spring and this is a demonstration it
+spring and this is a demonstration it
+spring and this is a demonstration it
+doesn't really do much
+doesn't really do much
+doesn't really do much
+but like let me actually move this
+but like let me actually move this
+but like let me actually move this
+but it's a good demonstration there we
+but it's a good demonstration there we
+but it's a good demonstration there we
+go
+go
+go
+now let's create my spring constraint
+now let's create my spring constraint
+now let's create my spring constraint
+right there
+right there
+right there
+and if we were to play this nothing much
+and if we were to play this nothing much
+and if we were to play this nothing much
+happens
+happens
+happens
+but you can notice the really cool thing
+but you can notice the really cool thing
+but you can notice the really cool thing
+about this is that usually since the
+about this is that usually since the
+about this is that usually since the
+spring allows rotation on both
+spring allows rotation on both
+spring allows rotation on both
+axises usually it would just fall off
+axises usually it would just fall off
+axises usually it would just fall off
+and nothing would happen but since the
+and nothing would happen but since the
+and nothing would happen but since the
+prismatic constraint
+prismatic constraint
+prismatic constraint
+only lets it slide on one axis you can
+only lets it slide on one axis you can
+only lets it slide on one axis you can
+get really cool things like this where
+get really cool things like this where
+get really cool things like this where
+you get like a little this is like a
+you get like a little this is like a
+you get like a little this is like a
+punching bag sort of
+punching bag sort of
+punching bag sort of
+so either this can like punch things you
+so either this can like punch things you
+so either this can like punch things you
+can like go back and forth
+can like go back and forth
+can like go back and forth
+and overall it's just really cool and
+and overall it's just really cool and
+and overall it's just really cool and
+you can do this in all axises so you can
+you can do this in all axises so you can
+you can do this in all axises so you can
+do it like up and down i could rotate
+do it like up and down i could rotate
+do it like up and down i could rotate
+that
+that
+that
+and it's just a really cool combination
+and it's just a really cool combination
+and it's just a really cool combination
+of constraints and that's when
+of constraints and that's when
+of constraints and that's when
+constraints are used best in conjunction
+constraints are used best in conjunction
+constraints are used best in conjunction
+with one another
+with one another
+with one another
+so this is a quick example and stuff you
+so this is a quick example and stuff you
+so this is a quick example and stuff you
+can do with
+can do with
+can do with
+springs is you can also like tween any
+springs is you can also like tween any
+springs is you can also like tween any
+of their properties
+of their properties
+of their properties
+i've never really used that but it's
+i've never really used that but it's
+i've never really used that but it's
+always a possibility
+always a possibility
+always a possibility
+and that's about it for this video
+and that's about it for this video
+and that's about it for this video
+so i hope you enjoyed this video it was
+so i hope you enjoyed this video it was
+so i hope you enjoyed this video it was
+a quick one
+a quick one
+a quick one
+but i'm kind of busy right now and if
+but i'm kind of busy right now and if
+but i'm kind of busy right now and if
+you notice i haven't really uploaded
+you notice i haven't really uploaded
+you notice i haven't really uploaded
+recently
+recently
+recently
+because you know school is starting
+because you know school is starting
+because you know school is starting
+there's a bunch of things going on
+there's a bunch of things going on
+there's a bunch of things going on
+but i'll try to keep up the uploads and
+but i'll try to keep up the uploads and
+but i'll try to keep up the uploads and
+in the next video i'll probably make
+in the next video i'll probably make
+in the next video i'll probably make
+a video on rod constraints and that
+a video on rod constraints and that
+a video on rod constraints and that
+should be
+should be
+should be
+almost all of the constraints done i'm
+almost all of the constraints done i'm
+almost all of the constraints done i'm
+not going to go over stuff like welds or
+not going to go over stuff like welds or
+not going to go over stuff like welds or
+some other stuff like that because
+some other stuff like that because
+some other stuff like that because
+they're kind of self-explanatory
+they're kind of self-explanatory
+they're kind of self-explanatory
+but yeah that's about it for this video
+but yeah that's about it for this video
+but yeah that's about it for this video
+and i wanna thank you
+and i wanna thank you
+and i wanna thank you
+for 500 subscribers that's a big
+for 500 subscribers that's a big
+for 500 subscribers that's a big
+milestone
+milestone
+milestone
+and it's halfway to a thousand which is
+and it's halfway to a thousand which is
+and it's halfway to a thousand which is
+absolutely amazing
+absolutely amazing
+absolutely amazing
+but that's it for this video make sure
+but that's it for this video make sure
+but that's it for this video make sure
+to like and subscribe if you enjoyed
+to like and subscribe if you enjoyed
+to like and subscribe if you enjoyed
+i hope you have a nice day and goodbye
+i hope you have a nice day and goodbye
+i hope you have a nice day and goodbye
+[Music]
+[Music]
+[Music]
+you

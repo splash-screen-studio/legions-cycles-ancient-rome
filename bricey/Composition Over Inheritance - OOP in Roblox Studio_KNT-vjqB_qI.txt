@@ -1,0 +1,1382 @@
+composition is the object-oriented
+composition is the object-oriented
+composition is the object-oriented
+programming idea of
+programming idea of
+programming idea of
+creating classes with other classes
+creating classes with other classes
+creating classes with other classes
+which a lot of people say is better than
+which a lot of people say is better than
+which a lot of people say is better than
+inheritance
+inheritance
+inheritance
+so inheritance is where you have your
+so inheritance is where you have your
+so inheritance is where you have your
+class
+class
+class
+and another class inherits from it and
+and another class inherits from it and
+and another class inherits from it and
+if you don't know about inheritance
+if you don't know about inheritance
+if you don't know about inheritance
+i have a video on it specifically for
+i have a video on it specifically for
+i have a video on it specifically for
+roblox meta tables and
+roblox meta tables and
+roblox meta tables and
+modules so you should go check that out
+modules so you should go check that out
+modules so you should go check that out
+and inheritance does get the job done
+and inheritance does get the job done
+and inheritance does get the job done
+but composition offers a lot more
+but composition offers a lot more
+but composition offers a lot more
+elegant solutions to
+elegant solutions to
+elegant solutions to
+most scenarios and you can do everything
+most scenarios and you can do everything
+most scenarios and you can do everything
+you can
+you can
+you can
+with inheritance with composition but
+with inheritance with composition but
+with inheritance with composition but
+composition has a lot more to offer so
+composition has a lot more to offer so
+composition has a lot more to offer so
+composition you have your like
+composition you have your like
+composition you have your like
+class and you have a bunch of components
+class and you have a bunch of components
+class and you have a bunch of components
+that this class can pick and choose from
+that this class can pick and choose from
+that this class can pick and choose from
+to
+to
+to
+be composed of so this class is composed
+be composed of so this class is composed
+be composed of so this class is composed
+of other
+of other
+of other
+classes and this is really really useful
+classes and this is really really useful
+classes and this is really really useful
+especially in game design so in this
+especially in game design so in this
+especially in game design so in this
+video i'll show you why composition
+video i'll show you why composition
+video i'll show you why composition
+is preferred over inheritance most of
+is preferred over inheritance most of
+is preferred over inheritance most of
+the time
+the time
+the time
+and i'll give you a little example and
+and i'll give you a little example and
+with like just drawing some graphics and
+with like just drawing some graphics and
+with like just drawing some graphics and
+also go into roblox studio to give you a
+also go into roblox studio to give you a
+also go into roblox studio to give you a
+concrete code example so let's get
+concrete code example so let's get
+concrete code example so let's get
+started
+started
+started
+let's say you want to make a vehicle
+let's say you want to make a vehicle
+let's say you want to make a vehicle
+simulator game
+simulator game
+simulator game
+and you want to implement cars planes
+and you want to implement cars planes
+and you want to implement cars planes
+and potentially
+and potentially
+and potentially
+boats and you're thinking ahead you're
+boats and you're thinking ahead you're
+boats and you're thinking ahead you're
+not just going to make a car class
+not just going to make a car class
+not just going to make a car class
+and just start from there you want to
+and just start from there you want to
+and just start from there you want to
+make a nice
+make a nice
+make a nice
+design that allows you to expand and
+design that allows you to expand and
+design that allows you to expand and
+scale in the future so you're going to
+scale in the future so you're going to
+scale in the future so you're going to
+have a base class
+have a base class
+have a base class
+named vehicle and this example is going
+named vehicle and this example is going
+named vehicle and this example is going
+to use inheritance then we're going to
+to use inheritance then we're going to
+to use inheritance then we're going to
+move over to composition a little bit
+move over to composition a little bit
+move over to composition a little bit
+later
+later
+later
+and this vehicle has a child class of
+and this vehicle has a child class of
+and this vehicle has a child class of
+car so car
+car so car
+car so car
+is a vehicle now car has engine
+is a vehicle now car has engine
+is a vehicle now car has engine
+seats and wheels and that's all good and
+seats and wheels and that's all good and
+seats and wheels and that's all good and
+then you want to make a plane
+then you want to make a plane
+then you want to make a plane
+so plane is a vehicle but it shares a
+so plane is a vehicle but it shares a
+so plane is a vehicle but it shares a
+lot of stuff
+lot of stuff
+lot of stuff
+from the car like the wheels a little
+from the car like the wheels a little
+from the car like the wheels a little
+bit of wheels for planes like landing
+bit of wheels for planes like landing
+bit of wheels for planes like landing
+gear
+gear
+gear
+and an engine and seats but it also has
+and an engine and seats but it also has
+and an engine and seats but it also has
+wings
+wings
+wings
+but a plane really isn't a car so it'd
+but a plane really isn't a car so it'd
+but a plane really isn't a car so it'd
+look kind of weird to put that in the
+look kind of weird to put that in the
+look kind of weird to put that in the
+inheritance hierarchy and then you move
+inheritance hierarchy and then you move
+inheritance hierarchy and then you move
+over and you want to make a boat
+over and you want to make a boat
+over and you want to make a boat
+a boat has an engine seats
+a boat has an engine seats
+a boat has an engine seats
+no wheels no wings but it has a
+no wheels no wings but it has a
+no wheels no wings but it has a
+propeller
+propeller
+propeller
+for the engine now already like right
+for the engine now already like right
+for the engine now already like right
+now you're using
+now you're using
+now you're using
+reasoning a lot of code in between these
+reasoning a lot of code in between these
+reasoning a lot of code in between these
+classes
+classes
+classes
+and that's kind of a bad idea because
+and that's kind of a bad idea because
+and that's kind of a bad idea because
+with code reuse
+with code reuse
+with code reuse
+what if you change the behavior of the
+what if you change the behavior of the
+what if you change the behavior of the
+wheels you want them to change for
+wheels you want them to change for
+wheels you want them to change for
+everything
+everything
+everything
+not just the car or not just the plane
+not just the car or not just the plane
+not just the car or not just the plane
+and let's say your game gets super
+and let's say your game gets super
+and let's say your game gets super
+popular
+popular
+popular
+your players want you to implement a
+your players want you to implement a
+your players want you to implement a
+boat car
+boat car
+boat car
+so you have a boat car and you may be
+so you have a boat car and you may be
+so you have a boat car and you may be
+asking oh why can't we just do
+asking oh why can't we just do
+asking oh why can't we just do
+a boat car as a car and a boat multiple
+a boat car as a car and a boat multiple
+a boat car as a car and a boat multiple
+inheritance is frowned upon
+inheritance is frowned upon
+inheritance is frowned upon
+in the programmer community like where a
+in the programmer community like where a
+in the programmer community like where a
+class
+class
+class
+inherits from multiple parents because
+inherits from multiple parents because
+inherits from multiple parents because
+it leads to situations like
+it leads to situations like
+it leads to situations like
+do you want the engine of the car or the
+do you want the engine of the car or the
+do you want the engine of the car or the
+engine of the boat
+engine of the boat
+engine of the boat
+so in a good inheritance structure you
+so in a good inheritance structure you
+so in a good inheritance structure you
+would just put the boat car off to the
+would just put the boat car off to the
+would just put the boat car off to the
+side but then your reason code from the
+side but then your reason code from the
+side but then your reason code from the
+boat and the car
+boat and the car
+boat and the car
+and at that point it's just super messy
+and at that point it's just super messy
+and at that point it's just super messy
+and this is where
+and this is where
+and this is where
+composition comes in so you'll notice
+composition comes in so you'll notice
+composition comes in so you'll notice
+we've been using an iza mentality a car
+we've been using an iza mentality a car
+we've been using an iza mentality a car
+is a vehicle a plane is a vehicle a boat
+is a vehicle a plane is a vehicle a boat
+is a vehicle a plane is a vehicle a boat
+is a vehicle
+is a vehicle
+is a vehicle
+well composition it uses a haza
+well composition it uses a haza
+well composition it uses a haza
+mentality so if we were to have a bunch
+mentality so if we were to have a bunch
+mentality so if we were to have a bunch
+of components
+of components
+of components
+like an engine or
+like an engine or
+like an engine or
+seats and wheels
+seats and wheels
+seats and wheels
+and then a propeller
+and then a propeller
+and then a propeller
+and then finally like wings
+and you were to make a car a car
+and you were to make a car a car
+and you were to make a car a car
+would have an engine seats
+would have an engine seats
+would have an engine seats
+and wheels but nothing else but a
+and wheels but nothing else but a
+and wheels but nothing else but a
+boat would have an engine
+boat would have an engine
+boat would have an engine
+seats and then a propeller
+seats and then a propeller
+seats and then a propeller
+well a plane would have
+well a plane would have
+well a plane would have
+wheels seats and then wings
+wheels seats and then wings
+wheels seats and then wings
+just assume there's air it's getting
+just assume there's air it's getting
+just assume there's air it's getting
+kind of messy so you can see that
+kind of messy so you can see that
+kind of messy so you can see that
+having this like little box of
+having this like little box of
+having this like little box of
+components off to the side allows you to
+components off to the side allows you to
+components off to the side allows you to
+construct
+construct
+construct
+a lot more unique classes very quickly
+a lot more unique classes very quickly
+a lot more unique classes very quickly
+so like for a boat car you just
+so like for a boat car you just
+so like for a boat car you just
+take all the components and make up a
+take all the components and make up a
+take all the components and make up a
+boat and just add all the components
+boat and just add all the components
+boat and just add all the components
+that make up a car
+that make up a car
+that make up a car
+and you'd have yourself a boat car it
+and you'd have yourself a boat car it
+and you'd have yourself a boat car it
+would be super
+would be super
+would be super
+super simple and it's a really really
+super simple and it's a really really
+super simple and it's a really really
+nice idea because you can do everything
+nice idea because you can do everything
+nice idea because you can do everything
+that you can do
+that you can do
+that you can do
+in inheritance with composition but
+in inheritance with composition but
+in inheritance with composition but
+composition allows you to do
+composition allows you to do
+composition allows you to do
+more and that's the really cool use of
+more and that's the really cool use of
+more and that's the really cool use of
+it so now we're going to hop into roblox
+it so now we're going to hop into roblox
+it so now we're going to hop into roblox
+and get
+and get
+and get
+into some practical examples so
+into some practical examples so
+into some practical examples so
+let's implement the car from our
+let's implement the car from our
+let's implement the car from our
+theoretical example
+theoretical example
+theoretical example
+into actual code so we're going to start
+into actual code so we're going to start
+into actual code so we're going to start
+with our car class i'm going to be doing
+with our car class i'm going to be doing
+with our car class i'm going to be doing
+everything in server script service so
+everything in server script service so
+everything in server script service so
+i'm going to create a module script
+i'm going to create a module script
+i'm going to create a module script
+and this will be our car so let's do a
+and this will be our car so let's do a
+and this will be our car so let's do a
+basic class
+basic class
+basic class
+structure so i'm going to set the car
+structure so i'm going to set the car
+structure so i'm going to set the car
+index equal to car then do a function
+index equal to car then do a function
+index equal to car then do a function
+car dot new and then for now we're just
+car dot new and then for now we're just
+car dot new and then for now we're just
+going to return
+going to return
+going to return
+set meta table a blank table and
+set meta table a blank table and
+set meta table a blank table and
+car so this is a basic class setup
+car so this is a basic class setup
+car so this is a basic class setup
+if you don't really know what any of
+if you don't really know what any of
+if you don't really know what any of
+this means go check out my
+this means go check out my
+this means go check out my
+object-oriented programming series
+object-oriented programming series
+object-oriented programming series
+a few of my practices have changed but
+a few of my practices have changed but
+a few of my practices have changed but
+this is like the general structure that
+this is like the general structure that
+this is like the general structure that
+most of the roblox community uses
+most of the roblox community uses
+most of the roblox community uses
+so in this set meta table little block
+so in this set meta table little block
+so in this set meta table little block
+this is our like constructor where we'll
+this is our like constructor where we'll
+this is our like constructor where we'll
+define all of our values
+define all of our values
+define all of our values
+we need to make our engine and our
+we need to make our engine and our
+we need to make our engine and our
+wheels
+wheels
+wheels
+and all that stuff and also we could
+and all that stuff and also we could
+and all that stuff and also we could
+also include a model
+also include a model
+also include a model
+that brings up another good point
+that brings up another good point
+that brings up another good point
+whenever you've used classes you've
+whenever you've used classes you've
+whenever you've used classes you've
+probably already used composition
+probably already used composition
+probably already used composition
+unknowingly or at least that's what i
+unknowingly or at least that's what i
+unknowingly or at least that's what i
+did
+did
+did
+because whenever i had like let's for
+because whenever i had like let's for
+because whenever i had like let's for
+say for example a treasure trust
+say for example a treasure trust
+say for example a treasure trust
+you want to have a model like in the
+you want to have a model like in the
+you want to have a model like in the
+workspace
+workspace
+workspace
+that would define your treasure chest
+that would define your treasure chest
+that would define your treasure chest
+but a module script can't inherit
+but a module script can't inherit
+but a module script can't inherit
+from a model like that just doesn't work
+from a model like that just doesn't work
+from a model like that just doesn't work
+you can't do that in roblox because the
+you can't do that in roblox because the
+you can't do that in roblox because the
+models are made in c
+models are made in c
+models are made in c
+plus well we're writing in lua and that
+plus well we're writing in lua and that
+plus well we're writing in lua and that
+just doesn't really work so i always had
+just doesn't really work so i always had
+just doesn't really work so i always had
+a reference to my model
+a reference to my model
+a reference to my model
+inside of my class and that's an example
+inside of my class and that's an example
+inside of my class and that's an example
+of composition
+of composition
+of composition
+your class is composed of a model and we
+your class is composed of a model and we
+your class is composed of a model and we
+can do a very very simple example
+can do a very very simple example
+can do a very very simple example
+like that with our car so i'm just going
+like that with our car so i'm just going
+like that with our car so i'm just going
+to create a part
+to create a part
+to create a part
+make sure it's anchored bring it up
+make sure it's anchored bring it up
+make sure it's anchored bring it up
+and then we can use control g to group
+and then we can use control g to group
+and then we can use control g to group
+it into a model which is pretty cool and
+it into a model which is pretty cool and
+it into a model which is pretty cool and
+i'm going to name this
+i'm going to name this
+i'm going to name this
+car model and so we're going to like
+car model and so we're going to like
+car model and so we're going to like
+move this part around a little bit
+move this part around a little bit
+move this part around a little bit
+and i'm going to set my primary part to
+and i'm going to set my primary part to
+and i'm going to set my primary part to
+the
+the
+the
+part and by the way can we just take a
+part and by the way can we just take a
+part and by the way can we just take a
+second to admire
+second to admire
+second to admire
+the new base plate looks really really
+the new base plate looks really really
+the new base plate looks really really
+nice it's a good job by roblox for doing
+nice it's a good job by roblox for doing
+nice it's a good job by roblox for doing
+that
+that
+that
+now we can go back to our module script
+now we can go back to our module script
+now we can go back to our module script
+i realize i named it module script we
+i realize i named it module script we
+i realize i named it module script we
+should probably rename that to
+should probably rename that to
+should probably rename that to
+car
+there we go so we can go
+there we go so we can go
+there we go so we can go
+and create our engine first of all we'll
+and create our engine first of all we'll
+and create our engine first of all we'll
+get to the model a little bit later
+get to the model a little bit later
+get to the model a little bit later
+because we don't want to have a hard
+because we don't want to have a hard
+because we don't want to have a hard
+reference to it here because what if you
+reference to it here because what if you
+reference to it here because what if you
+want to make multiple cars
+want to make multiple cars
+want to make multiple cars
+with multiple models so in this new
+with multiple models so in this new
+with multiple models so in this new
+module script which i will name
+module script which i will name
+module script which i will name
+engine we'll put a few things so there
+engine we'll put a few things so there
+engine we'll put a few things so there
+we go
+we go
+we go
+so i'm going to rename this module
+so i'm going to rename this module
+so i'm going to rename this module
+engine
+engine
+engine
+and then return engine
+and then return engine
+and then return engine
+say engine index
+say engine index
+say engine index
+equals engine then function
+equals engine then function
+equals engine then function
+engine.new and we'll take in
+engine.new and we'll take in
+engine.new and we'll take in
+the speed at which we want the engine to
+the speed at which we want the engine to
+the speed at which we want the engine to
+run
+run
+run
+then we'll return set meta table
+then we'll return set meta table
+then we'll return set meta table
+blank table engine so that's just saying
+blank table engine so that's just saying
+blank table engine so that's just saying
+create a new engine inside this we can
+create a new engine inside this we can
+create a new engine inside this we can
+say the speed
+say the speed
+say the speed
+is equal to speed comma fuel
+is equal to speed comma fuel
+is equal to speed comma fuel
+is 100 and then is on which would be a
+is 100 and then is on which would be a
+is 100 and then is on which would be a
+boolean
+boolean
+boolean
+is false so these are obviously just
+is false so these are obviously just
+is false so these are obviously just
+like placeholder values we won't
+like placeholder values we won't
+like placeholder values we won't
+actually be implementing any of these
+actually be implementing any of these
+actually be implementing any of these
+features because that would lead to a
+features because that would lead to a
+features because that would lead to a
+very long video it's just to show off
+very long video it's just to show off
+very long video it's just to show off
+the concepts
+the concepts
+the concepts
+now we're going to make a simple
+now we're going to make a simple
+now we're going to make a simple
+function engine turn
+function engine turn
+function engine turn
+on and we'll set self
+on and we'll set self
+on and we'll set self
+dot is on equal to true and then print
+dot is on equal to true and then print
+dot is on equal to true and then print
+engine is running
+engine is running
+engine is running
+and that's it for our engine class now
+and that's it for our engine class now
+and that's it for our engine class now
+over to the wheel
+in our wheel we want to of course do the
+in our wheel we want to of course do the
+in our wheel we want to of course do the
+same exact setup
+and i know this looks a little bit
+and i know this looks a little bit
+and i know this looks a little bit
+different than when i did my original
+different than when i did my original
+different than when i did my original
+object-oriented programming series
+object-oriented programming series
+object-oriented programming series
+so i recommend using this new updated
+so i recommend using this new updated
+so i recommend using this new updated
+version
+version
+version
+because it's the standard for most
+because it's the standard for most
+because it's the standard for most
+people
+people
+people
+and honestly it looks a little bit
+and honestly it looks a little bit
+and honestly it looks a little bit
+better it's a little more readable
+better it's a little more readable
+better it's a little more readable
+so just keep that in mind so this wheel
+so just keep that in mind so this wheel
+so just keep that in mind so this wheel
+we're not going to take any
+we're not going to take any
+we're not going to take any
+constructor parameters we're just going
+constructor parameters we're just going
+constructor parameters we're just going
+to return set meta table
+to return set meta table
+to return set meta table
+a blank table once again and the wheel
+a blank table once again and the wheel
+a blank table once again and the wheel
+and we're going to say is flat
+and we're going to say is flat
+and we're going to say is flat
+equal to false so this is going to be
+equal to false so this is going to be
+equal to false so this is going to be
+saying is the wheel flat well we'll do
+saying is the wheel flat well we'll do
+saying is the wheel flat well we'll do
+some
+some
+some
+interesting logic with this a little bit
+interesting logic with this a little bit
+interesting logic with this a little bit
+later now
+later now
+later now
+back to the car we can implement
+back to the car we can implement
+back to the car we can implement
+our engine on our wheel quite easily now
+our engine on our wheel quite easily now
+our engine on our wheel quite easily now
+by just going to the top and saying
+by just going to the top and saying
+by just going to the top and saying
+local engine equals
+local engine equals
+local engine equals
+require script dot parent
+require script dot parent
+require script dot parent
+dot engine and then we can say
+dot engine and then we can say
+dot engine and then we can say
+local wheel equals require
+local wheel equals require
+local wheel equals require
+script dot parent dot wheel
+script dot parent dot wheel
+script dot parent dot wheel
+there we go now we have our engine and
+there we go now we have our engine and
+there we go now we have our engine and
+our wheel so now since we have these
+our wheel so now since we have these
+our wheel so now since we have these
+objects
+objects
+objects
+we can just reference them in our
+we can just reference them in our
+we can just reference them in our
+constructor by saying
+constructor by saying
+constructor by saying
+engine equals engine.new
+engine equals engine.new
+engine equals engine.new
+with a speed of 10 let's say and then
+with a speed of 10 let's say and then
+with a speed of 10 let's say and then
+we'll have a
+we'll have a
+we'll have a
+another subtable named wheels and inside
+another subtable named wheels and inside
+another subtable named wheels and inside
+we'll have a left wheel
+we'll have a left wheel
+we'll have a left wheel
+which will be equal to wheel.new
+which will be equal to wheel.new
+which will be equal to wheel.new
+and then a right wheel which will be
+and then a right wheel which will be
+and then a right wheel which will be
+equal to
+equal to
+equal to
+wheel.new as well and i'm not going to
+wheel.new as well and i'm not going to
+wheel.new as well and i'm not going to
+do any other wheels let's just assume
+do any other wheels let's just assume
+do any other wheels let's just assume
+this car has two wheels kind of weird
+this car has two wheels kind of weird
+this car has two wheels kind of weird
+but
+but
+but
+for this for this example it should work
+for this for this example it should work
+for this for this example it should work
+and also
+and also
+and also
+we can take as a parameter for our
+we can take as a parameter for our
+we can take as a parameter for our
+car.new
+car.new
+car.new
+function a model which will be the one
+function a model which will be the one
+function a model which will be the one
+in our workspace
+in our workspace
+in our workspace
+and we'll say model equals model
+and we'll say model equals model
+and we'll say model equals model
+make sure to put your commas or it will
+make sure to put your commas or it will
+make sure to put your commas or it will
+break down here
+break down here
+break down here
+we'll have a function car drive
+we'll have a function car drive
+we'll have a function car drive
+and in order to drive the car the wheels
+and in order to drive the car the wheels
+and in order to drive the car the wheels
+really should not be flat i mean you
+really should not be flat i mean you
+really should not be flat i mean you
+can technically drive a car while
+can technically drive a car while
+can technically drive a car while
+they're flat but for the sake of this
+they're flat but for the sake of this
+they're flat but for the sake of this
+example
+example
+example
+let's assume you can't so we're gonna
+let's assume you can't so we're gonna
+let's assume you can't so we're gonna
+check if not
+check if not
+check if not
+self dot wheels dot left
+self dot wheels dot left
+self dot wheels dot left
+dot is flat so if it's not flat
+dot is flat so if it's not flat
+dot is flat so if it's not flat
+and not self dot wheels
+and not self dot wheels
+and not self dot wheels
+dot write dot is flat
+dot write dot is flat
+dot write dot is flat
+then we want to do self.engine
+then we want to do self.engine
+then we want to do self.engine
+turn on and then we can also
+turn on and then we can also
+turn on and then we can also
+say self dot model
+say self dot model
+say self dot model
+set primary part c frame
+set primary part c frame
+set primary part c frame
+to let's just do an arbitrary c frame
+to let's just do an arbitrary c frame
+to let's just do an arbitrary c frame
+for the sake of this example
+for the sake of this example
+for the sake of this example
+we can set it to 10 10 10.
+we can set it to 10 10 10.
+we can set it to 10 10 10.
+and then we can print your car
+and then we can print your car
+and then we can print your car
+is driving but if your wheels are flat
+is driving but if your wheels are flat
+is driving but if your wheels are flat
+we want to print actually we can do a
+we want to print actually we can do a
+we want to print actually we can do a
+warning warn
+warning warn
+warning warn
+your car's tires
+your car's tires
+your car's tires
+are flat there we go and that's the
+are flat there we go and that's the
+are flat there we go and that's the
+whole entirety
+whole entirety
+whole entirety
+of our composition system done which is
+of our composition system done which is
+of our composition system done which is
+great
+great
+great
+so right now these modules are doing
+so right now these modules are doing
+so right now these modules are doing
+nothing so we're going to make a server
+nothing so we're going to make a server
+nothing so we're going to make a server
+script
+script
+script
+in service script service and get our
+in service script service and get our
+in service script service and get our
+car so local car
+car so local car
+car so local car
+equals require script dot
+equals require script dot
+equals require script dot
+parent dot car and then we can create a
+parent dot car and then we can create a
+parent dot car and then we can create a
+new car
+new car
+new car
+named c will equal to car.new workspace
+named c will equal to car.new workspace
+named c will equal to car.new workspace
+dot car model so we'll create a new
+dot car model so we'll create a new
+dot car model so we'll create a new
+car with our car model and this car will
+car with our car model and this car will
+car with our car model and this car will
+initialize
+initialize
+initialize
+all of our other classes which is
+all of our other classes which is
+all of our other classes which is
+exactly what we want to do
+exactly what we want to do
+exactly what we want to do
+and then we can just say see
+and then we can just say see
+and then we can just say see
+drive let's just run this
+and you can see engine is running your
+and you can see engine is running your
+and you can see engine is running your
+car is driving
+car is driving
+car is driving
+this did move i believe yeah it moved a
+this did move i believe yeah it moved a
+this did move i believe yeah it moved a
+little bit
+you can see it moved over there which is
+you can see it moved over there which is
+you can see it moved over there which is
+good good to know but our script is
+good good to know but our script is
+good good to know but our script is
+actually working
+actually working
+actually working
+and if we were to go into our car and
+and if we were to go into our car and
+and if we were to go into our car and
+say
+say
+say
+c dot wheels dot left
+c dot wheels dot left
+c dot wheels dot left
+dot is flat equals true so we
+dot is flat equals true so we
+dot is flat equals true so we
+let's say we like ran into a wall and we
+let's say we like ran into a wall and we
+let's say we like ran into a wall and we
+flattened our wheel
+flattened our wheel
+flattened our wheel
+the car should not be able to drive and
+the car should not be able to drive and
+the car should not be able to drive and
+it'll say your car's tires are flat
+it'll say your car's tires are flat
+it'll say your car's tires are flat
+and you notice we did this example with
+and you notice we did this example with
+and you notice we did this example with
+ease like we didn't have to
+ease like we didn't have to
+ease like we didn't have to
+do it all we have to do is write an
+do it all we have to do is write an
+do it all we have to do is write an
+extra line
+extra line
+extra line
+for all of the components so instead of
+for all of the components so instead of
+for all of the components so instead of
+just saying self
+just saying self
+just saying self
+turn on we have to say self.engine
+turn on we have to say self.engine
+turn on we have to say self.engine
+instead of saying self
+instead of saying self
+instead of saying self
+dot is flat i guess that wouldn't really
+dot is flat i guess that wouldn't really
+dot is flat i guess that wouldn't really
+make sense in the first place but
+make sense in the first place but
+make sense in the first place but
+instead of saying itself that is flat
+instead of saying itself that is flat
+instead of saying itself that is flat
+you have to say yourself.wheels
+you have to say yourself.wheels
+you have to say yourself.wheels
+is flat now that's only like for
+is flat now that's only like for
+is flat now that's only like for
+five more characters but this gives you
+five more characters but this gives you
+five more characters but this gives you
+a central hub of components that you can
+a central hub of components that you can
+a central hub of components that you can
+create
+create
+create
+a plane a boat a ton of different
+a plane a boat a ton of different
+a plane a boat a ton of different
+vehicles
+vehicles
+vehicles
+with ease using the same exact structure
+with ease using the same exact structure
+with ease using the same exact structure
+and in
+and in
+and in
+my opinion this kind of style of
+my opinion this kind of style of
+my opinion this kind of style of
+composition is the most elegant in
+composition is the most elegant in
+composition is the most elegant in
+roblox
+roblox
+roblox
+and in lua it's so flexible you could
+and in lua it's so flexible you could
+and in lua it's so flexible you could
+implement multiple inheritance
+implement multiple inheritance
+implement multiple inheritance
+i tried that i ran into a lot of issues
+i tried that i ran into a lot of issues
+i tried that i ran into a lot of issues
+but it's technically possible
+but it's technically possible
+but it's technically possible
+you could also compose a class by
+you could also compose a class by
+you could also compose a class by
+assigning
+assigning
+assigning
+each value inside the class like you
+each value inside the class like you
+each value inside the class like you
+have this table if you have multiple
+have this table if you have multiple
+have this table if you have multiple
+classes you could
+classes you could
+classes you could
+force all of the functions from the
+force all of the functions from the
+force all of the functions from the
+other classes into your main
+other classes into your main
+other classes into your main
+card.new table and you could also do
+card.new table and you could also do
+card.new table and you could also do
+that if you wanted to
+that if you wanted to
+that if you wanted to
+but that also leads to weird function
+but that also leads to weird function
+but that also leads to weird function
+calls where you would be calling let's
+calls where you would be calling let's
+calls where you would be calling let's
+say self.turn on
+say self.turn on
+say self.turn on
+and someone reading your code would be
+and someone reading your code would be
+and someone reading your code would be
+like where's the turn on method so they
+like where's the turn on method so they
+like where's the turn on method so they
+have to look through
+have to look through
+have to look through
+all of the things that your car is
+all of the things that your car is
+all of the things that your car is
+composed on to find the turn on method i
+composed on to find the turn on method i
+composed on to find the turn on method i
+think i like this
+think i like this
+think i like this
+a lot better because it's a lot simpler
+a lot better because it's a lot simpler
+a lot better because it's a lot simpler
+it's a lot more manageable it makes a
+it's a lot more manageable it makes a
+it's a lot more manageable it makes a
+lot more sense
+lot more sense
+lot more sense
+but if you guys want to look into
+but if you guys want to look into
+but if you guys want to look into
+multiple inheritance where
+multiple inheritance where
+multiple inheritance where
+a subclass can have multiple parents
+a subclass can have multiple parents
+a subclass can have multiple parents
+which is basically the same as
+which is basically the same as
+which is basically the same as
+composition
+composition
+composition
+i will link it in the description
+and one piece of terminology you want to
+and one piece of terminology you want to
+and one piece of terminology you want to
+be aware of when dealing
+be aware of when dealing
+be aware of when dealing
+with composition is the specific name
+with composition is the specific name
+with composition is the specific name
+for these classes like engine
+for these classes like engine
+for these classes like engine
+and wheel these are called mix ends
+and wheel these are called mix ends
+and wheel these are called mix ends
+so they're spelled like there we go
+so they're spelled like there we go
+so they're spelled like there we go
+mix-ins
+mix-ins
+mix-ins
+and that has nothing to do with code
+and that has nothing to do with code
+and that has nothing to do with code
+it's just an id a name that people have
+it's just an id a name that people have
+it's just an id a name that people have
+assigned these sorts of classes because
+assigned these sorts of classes because
+assigned these sorts of classes because
+they're intended to be mixed in with
+they're intended to be mixed in with
+they're intended to be mixed in with
+other classes
+other classes
+other classes
+like a car or a plane and that's the
+like a car or a plane and that's the
+like a car or a plane and that's the
+whole idea
+whole idea
+whole idea
+behind them and whenever you like look
+behind them and whenever you like look
+behind them and whenever you like look
+up to help about composition or whatever
+up to help about composition or whatever
+up to help about composition or whatever
+you'll probably see
+you'll probably see
+you'll probably see
+mix-ins it's what a lot of the lua
+mix-ins it's what a lot of the lua
+mix-ins it's what a lot of the lua
+libraries
+libraries
+libraries
+that implement classes is what they call
+that implement classes is what they call
+that implement classes is what they call
+it as well
+it as well
+it as well
+and languages like javascript use that
+and languages like javascript use that
+and languages like javascript use that
+terminology as well
+terminology as well
+terminology as well
+so just be aware of that but honestly
+so just be aware of that but honestly
+so just be aware of that but honestly
+that's about it for this video
+that's about it for this video
+that's about it for this video
+i personally use inheritance or
+i personally use inheritance or
+i personally use inheritance or
+composition i should say
+composition i should say
+composition i should say
+all the time i haven't really found a
+all the time i haven't really found a
+all the time i haven't really found a
+use to use inheritance
+use to use inheritance
+use to use inheritance
+when composition wouldn't work so i've
+when composition wouldn't work so i've
+when composition wouldn't work so i've
+just been using that
+just been using that
+just been using that
+all the time it works a lot better with
+all the time it works a lot better with
+all the time it works a lot better with
+roblox especially since there's no
+roblox especially since there's no
+roblox especially since there's no
+static typing you don't know the parents
+static typing you don't know the parents
+static typing you don't know the parents
+like you just have to sign that stuff
+like you just have to sign that stuff
+like you just have to sign that stuff
+yourself
+yourself
+yourself
+so just keep that in mind i'm not
+so just keep that in mind i'm not
+so just keep that in mind i'm not
+telling you that this is the best way
+telling you that this is the best way
+telling you that this is the best way
+it's just another way that a lot of
+it's just another way that a lot of
+it's just another way that a lot of
+software developers find
+software developers find
+software developers find
+to be very advantageous so make sure to
+to be very advantageous so make sure to
+to be very advantageous so make sure to
+like and subscribe
+like and subscribe
+like and subscribe
+if you enjoyed this video and
+if you enjoyed this video and
+if you enjoyed this video and
+if you want to see more videos about
+if you want to see more videos about
+if you want to see more videos about
+topics like these make sure to comment
+topics like these make sure to comment
+topics like these make sure to comment
+down below
+down below
+down below
+especially if you want to see like the
+especially if you want to see like the
+especially if you want to see like the
+nuances of my new like style structure
+nuances of my new like style structure
+nuances of my new like style structure
+with my classes
+with my classes
+with my classes
+but other than that i hope you guys have
+but other than that i hope you guys have
+but other than that i hope you guys have
+a nice day
+a nice day
+a nice day
+and goodbye
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+[Music]
+you

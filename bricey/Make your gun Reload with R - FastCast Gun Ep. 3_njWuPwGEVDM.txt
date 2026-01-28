@@ -1,0 +1,830 @@
+so in the last video we made
+so in the last video we made
+so in the last video we made
+our gun fully automatic
+our gun fully automatic
+our gun fully automatic
+you can see right now it's quite
+you can see right now it's quite
+you can see right now it's quite
+overpowered i can shoot for as many
+overpowered i can shoot for as many
+overpowered i can shoot for as many
+bullets as i want and no one's ever
+bullets as i want and no one's ever
+bullets as i want and no one's ever
+gonna stop me
+gonna stop me
+gonna stop me
+and in a game that's probably a bad idea
+and in a game that's probably a bad idea
+and in a game that's probably a bad idea
+so we need to add
+so we need to add
+so we need to add
+reloading in order to do that
+reloading in order to do that
+reloading in order to do that
+we're going to go to our gun and open up
+we're going to go to our gun and open up
+we're going to go to our gun and open up
+the server and client scripts to start
+the server and client scripts to start
+the server and client scripts to start
+off with
+off with
+off with
+now you might think it'd be easier to go
+now you might think it'd be easier to go
+now you might think it'd be easier to go
+into a client script and do a check like
+into a client script and do a check like
+into a client script and do a check like
+if
+if
+if
+the and the left is less than zero then
+the and the left is less than zero then
+the and the left is less than zero then
+you reload the gun
+you reload the gun
+you reload the gun
+but that's a bad idea because you should
+but that's a bad idea because you should
+but that's a bad idea because you should
+never ever
+never ever
+never ever
+trust the client and that's a big thing
+trust the client and that's a big thing
+trust the client and that's a big thing
+in roblox in any server client
+in roblox in any server client
+in roblox in any server client
+application
+application
+application
+like ever because the client could
+like ever because the client could
+like ever because the client could
+inject malicious code to maybe
+inject malicious code to maybe
+inject malicious code to maybe
+bypass the reload system so they can
+bypass the reload system so they can
+bypass the reload system so they can
+shoot as much as they want
+shoot as much as they want
+shoot as much as they want
+and you do not want that to happen
+and you do not want that to happen
+and you do not want that to happen
+that's a bad idea
+that's a bad idea
+that's a bad idea
+so we're going to do all of our
+so we're going to do all of our
+so we're going to do all of our
+reloading on the server script
+reloading on the server script
+reloading on the server script
+so we're going to start off down here
+so we're going to start off down here
+so we're going to start off down here
+and create a variable
+and create a variable
+and create a variable
+local no left and set this equal to
+local no left and set this equal to
+local no left and set this equal to
+30. now really in a real like production
+30. now really in a real like production
+30. now really in a real like production
+game you'd want to define
+game you'd want to define
+game you'd want to define
+this as a constant but for our case just
+this as a constant but for our case just
+this as a constant but for our case just
+for simplicity
+for simplicity
+for simplicity
+we're going to leave it as a literal
+we're going to leave it as a literal
+we're going to leave it as a literal
+value
+value
+value
+and then now we can say local reloading
+and then now we can say local reloading
+and then now we can say local reloading
+equals false this will be a boolean just
+equals false this will be a boolean just
+equals false this will be a boolean just
+telling us when our gun is reloading
+telling us when our gun is reloading
+telling us when our gun is reloading
+and now we can define our reload
+and now we can define our reload
+and now we can define our reload
+function
+function
+function
+and all this will do is just reload the
+and all this will do is just reload the
+and all this will do is just reload the
+gun but
+gun but
+gun but
+you could just say like wait
+you could just say like wait
+you could just say like wait
+10 seconds and then set mo left equal to
+10 seconds and then set mo left equal to
+10 seconds and then set mo left equal to
+again the problem with this is if reload
+again the problem with this is if reload
+again the problem with this is if reload
+gets called
+gets called
+gets called
+multiple times within an event
+multiple times within an event
+multiple times within an event
+it'll keep on reloading the gun
+it'll keep on reloading the gun
+it'll keep on reloading the gun
+repeatedly which is not what you want
+repeatedly which is not what you want
+repeatedly which is not what you want
+so we have to add a few checks here
+so we have to add a few checks here
+so we have to add a few checks here
+first of which is by saying if
+first of which is by saying if
+first of which is by saying if
+reloading then return end
+reloading then return end
+reloading then return end
+so if we've already been reloading and
+so if we've already been reloading and
+so if we've already been reloading and
+this function has been called we
+this function has been called we
+this function has been called we
+only want to reload one time at like one
+only want to reload one time at like one
+only want to reload one time at like one
+specific point in time
+specific point in time
+specific point in time
+so that's why we put that there and then
+so that's why we put that there and then
+so that's why we put that there and then
+we can set reloading to true
+we can set reloading to true
+we can set reloading to true
+so this is a basic d bounce if you don't
+so this is a basic d bounce if you don't
+so this is a basic d bounce if you don't
+know what d balancing is i have a video
+know what d balancing is i have a video
+know what d balancing is i have a video
+on it
+on it
+on it
+and i will link it right now and then we
+and i will link it right now and then we
+and i will link it right now and then we
+wait
+wait
+wait
+we can wait uh reload time so i'm just
+we can wait uh reload time so i'm just
+we can wait uh reload time so i'm just
+gonna do like 10 seconds is fine
+gonna do like 10 seconds is fine
+gonna do like 10 seconds is fine
+maybe 5 seconds just for it'll only be
+maybe 5 seconds just for it'll only be
+maybe 5 seconds just for it'll only be
+able to be called once
+able to be called once
+able to be called once
+and then we can reset our ammo
+and then we can reset our ammo
+and then we can reset our ammo
+so this does nothing on its own we
+so this does nothing on its own we
+so this does nothing on its own we
+obviously need to implement that and to
+obviously need to implement that and to
+obviously need to implement that and to
+do that we're going to go
+do that we're going to go
+do that we're going to go
+to the fire function because this is
+to the fire function because this is
+to the fire function because this is
+what's called
+what's called
+what's called
+by our fire event
+by our fire event
+by our fire event
+so in here we're going to say if
+so in here we're going to say if
+so in here we're going to say if
+ammo left is greater than 0 and
+ammo left is greater than 0 and
+ammo left is greater than 0 and
+not reloading then
+not reloading then
+not reloading then
+and then we're going to indent this
+and then we're going to indent this
+and then we're going to indent this
+whole block here
+whole block here
+whole block here
+put in else and here's our little logic
+put in else and here's our little logic
+put in else and here's our little logic
+now we're going to say reload so what's
+now we're going to say reload so what's
+now we're going to say reload so what's
+going to happen is
+going to happen is
+going to happen is
+when we call the fire event it's gonna
+when we call the fire event it's gonna
+when we call the fire event it's gonna
+check if we have enough ammo and check
+check if we have enough ammo and check
+check if we have enough ammo and check
+if we're not reloading and this might
+if we're not reloading and this might
+if we're not reloading and this might
+seem redundant but it'll come into play
+seem redundant but it'll come into play
+seem redundant but it'll come into play
+a little bit later this little line
+a little bit later this little line
+a little bit later this little line
+right here
+right here
+right here
+and then if we don't have enough ammo we
+and then if we don't have enough ammo we
+and then if we don't have enough ammo we
+will reload the gun and we can do this
+will reload the gun and we can do this
+will reload the gun and we can do this
+even if we start clicking while we're
+even if we start clicking while we're
+even if we start clicking while we're
+reloading because it'll keep on calling
+reloading because it'll keep on calling
+reloading because it'll keep on calling
+the reload function but the reload
+the reload function but the reload
+the reload function but the reload
+function knows
+function knows
+function knows
+that it can only be called once and
+that it can only be called once and
+that it can only be called once and
+that's why we have that little d bounce
+that's why we have that little d bounce
+that's why we have that little d bounce
+up there
+up there
+up there
+now this won't work as is because the
+now this won't work as is because the
+now this won't work as is because the
+ammo left never gets depleted so right
+ammo left never gets depleted so right
+ammo left never gets depleted so right
+below our caster fire we're going to say
+below our caster fire we're going to say
+below our caster fire we're going to say
+ammo left minus equals
+ammo left minus equals
+ammo left minus equals
+one so this will subtract one from ammo
+one so this will subtract one from ammo
+one so this will subtract one from ammo
+left
+left
+left
+every time we shoot the gun which is
+every time we shoot the gun which is
+every time we shoot the gun which is
+exactly what we want
+exactly what we want
+exactly what we want
+so with no client code changed this
+so with no client code changed this
+so with no client code changed this
+should work as is
+should work as is
+should work as is
+so we have our gun shoot it and you can
+so we have our gun shoot it and you can
+so we have our gun shoot it and you can
+see it stops i'm spam clicking
+see it stops i'm spam clicking
+see it stops i'm spam clicking
+i'm clicking as much as i can and
+i'm clicking as much as i can and
+i'm clicking as much as i can and
+nothing's happening and then i got i got
+nothing's happening and then i got i got
+nothing's happening and then i got i got
+to shoot again
+to shoot again
+to shoot again
+the fire rate is like really really high
+the fire rate is like really really high
+the fire rate is like really really high
+so yeah and there you go i
+so yeah and there you go i
+so yeah and there you go i
+killed the zombie which is exactly what
+killed the zombie which is exactly what
+killed the zombie which is exactly what
+we want but i can't spam it as much as i
+we want but i can't spam it as much as i
+we want but i can't spam it as much as i
+want
+want
+want
+which is really good so the basic reload
+which is really good so the basic reload
+which is really good so the basic reload
+functionality is done
+functionality is done
+functionality is done
+but what if the player wants to reload
+but what if the player wants to reload
+but what if the player wants to reload
+before they run out of ammo
+before they run out of ammo
+before they run out of ammo
+we haven't really addressed that so
+we haven't really addressed that so
+we haven't really addressed that so
+let's go into our client script
+let's go into our client script
+let's go into our client script
+and let's start so first thing we want
+and let's start so first thing we want
+and let's start so first thing we want
+to do
+to do
+to do
+is reference the context action service
+also we go to game get service context
+also we go to game get service context
+also we go to game get service context
+action service
+action service
+action service
+and then also what we want to do is go
+and then also what we want to do is go
+and then also what we want to do is go
+into the gun
+into the gun
+into the gun
+click the plus and create another remote
+click the plus and create another remote
+click the plus and create another remote
+event
+event
+event
+and i'm going to name this the reload
+and i'm going to name this the reload
+and i'm going to name this the reload
+event
+event
+event
+and this will be responsible for
+and this will be responsible for
+and this will be responsible for
+notifying the server
+notifying the server
+notifying the server
+when the client wants to reload their
+when the client wants to reload their
+when the client wants to reload their
+gun
+gun
+gun
+and let's reference it here by saying
+and let's reference it here by saying
+and let's reference it here by saying
+local reload
+local reload
+local reload
+event equals tool
+event equals tool
+event equals tool
+wait for child reload
+wait for child reload
+wait for child reload
+event now down here what we want to do
+event now down here what we want to do
+event now down here what we want to do
+is instead of just instantly saying
+is instead of just instantly saying
+is instead of just instantly saying
+context action service
+context action service
+context action service
+bind action actually i misspelled it
+bind action actually i misspelled it
+bind action actually i misspelled it
+there we go we need to say tool
+there we go we need to say tool
+there we go we need to say tool
+dot equipped
+dot equipped
+dot equipped
+connect function
+and then we also need to make a tool dot
+and then we also need to make a tool dot
+and then we also need to make a tool dot
+unequipped and just connect a function
+and the reason we need to do this is
+and the reason we need to do this is
+and the reason we need to do this is
+when we equip our tool we want to bind
+when we equip our tool we want to bind
+when we equip our tool we want to bind
+the reload action
+the reload action
+the reload action
+and then when we unequip it we want to
+and then when we unequip it we want to
+and then when we unequip it we want to
+unbind it and we'll just
+unbind it and we'll just
+unbind it and we'll just
+set that up right now by saying context
+set that up right now by saying context
+set that up right now by saying context
+action service
+action service
+action service
+bind action and so this takes a few
+bind action and so this takes a few
+bind action and so this takes a few
+parameters the first is a name
+parameters the first is a name
+parameters the first is a name
+which will set to reload the next is a
+which will set to reload the next is a
+which will set to reload the next is a
+function which we'll just set to a
+function which we'll just set to a
+function which we'll just set to a
+function
+function
+function
+and then over here we're also going to
+and then over here we're also going to
+and then over here we're also going to
+say comma after the functions
+say comma after the functions
+say comma after the functions
+and we're going to say false and then
+and we're going to say false and then
+and we're going to say false and then
+enum.keycode.r
+enum.keycode.r
+enum.keycode.r
+so what this does is we have our name we
+so what this does is we have our name we
+so what this does is we have our name we
+have a function we want to run
+have a function we want to run
+have a function we want to run
+when all of these key codes are pressed
+when all of these key codes are pressed
+when all of these key codes are pressed
+so
+so
+so
+right now when we hit r it'll reload
+right now when we hit r it'll reload
+right now when we hit r it'll reload
+this false is telling
+this false is telling
+this false is telling
+this function that we do not want a
+this function that we do not want a
+this function that we do not want a
+mobile
+mobile
+mobile
+button obviously if you're dealing with
+button obviously if you're dealing with
+button obviously if you're dealing with
+a mobile game with mobile controls
+a mobile game with mobile controls
+a mobile game with mobile controls
+you would want to do that but for the
+you would want to do that but for the
+you would want to do that but for the
+example we don't
+example we don't
+example we don't
+really need it so this function
+really need it so this function
+really need it so this function
+that will be called when we press r
+that will be called when we press r
+that will be called when we press r
+takes in three parameters the name
+takes in three parameters the name
+takes in three parameters the name
+which will always be reload the state
+which will always be reload the state
+which will always be reload the state
+and the input object
+and the input object
+and the input object
+all we really need is a state and we can
+all we really need is a state and we can
+all we really need is a state and we can
+just say if state
+just say if state
+just say if state
+equals enum.userinputstate.begin
+equals enum.userinputstate.begin
+equals enum.userinputstate.begin
+then we want to fire our reload event by
+then we want to fire our reload event by
+then we want to fire our reload event by
+saying reload event
+saying reload event
+saying reload event
+fire so what this does is we
+fire so what this does is we
+fire so what this does is we
+check the state so that begin is when
+check the state so that begin is when
+check the state so that begin is when
+the key is down
+the key is down
+the key is down
+because this function runs when it
+because this function runs when it
+because this function runs when it
+begins and when it ends we don't want
+begins and when it ends we don't want
+begins and when it ends we don't want
+the reload to fire twice that's just
+the reload to fire twice that's just
+the reload to fire twice that's just
+redundant
+redundant
+redundant
+so we'll only fire it once when the key
+so we'll only fire it once when the key
+so we'll only fire it once when the key
+is clicked
+is clicked
+is clicked
+and then down here in our tool to
+and then down here in our tool to
+and then down here in our tool to
+unequipped we'll say
+unequipped we'll say
+unequipped we'll say
+context action service unbind action
+context action service unbind action
+context action service unbind action
+reload so when our tool is equipped we
+reload so when our tool is equipped we
+reload so when our tool is equipped we
+bind our action
+bind our action
+bind our action
+and then when your tool is unequipped we
+and then when your tool is unequipped we
+and then when your tool is unequipped we
+unbind it
+unbind it
+unbind it
+and in this example it doesn't really do
+and in this example it doesn't really do
+and in this example it doesn't really do
+anything but when you have multiple guns
+anything but when you have multiple guns
+anything but when you have multiple guns
+with multiple reloads
+with multiple reloads
+with multiple reloads
+and a bunch of binded actions you'll
+and a bunch of binded actions you'll
+and a bunch of binded actions you'll
+definitely want to do this and it's just
+definitely want to do this and it's just
+definitely want to do this and it's just
+a good practice because
+a good practice because
+a good practice because
+you shouldn't have a bound action that
+you shouldn't have a bound action that
+you shouldn't have a bound action that
+you're not going to be using and when
+you're not going to be using and when
+you're not going to be using and when
+the tool is unequipped you should not
+the tool is unequipped you should not
+the tool is unequipped you should not
+bind it
+bind it
+bind it
+so let's run this and we can just check
+so let's run this and we can just check
+so let's run this and we can just check
+it out
+it out
+it out
+so if i shoot a little bit and i click r
+so if i shoot a little bit and i click r
+so if i shoot a little bit and i click r
+oh there's an error it's actually
+oh there's an error it's actually
+oh there's an error it's actually
+fire server i
+fire server i
+fire server i
+did that wrong and honestly when we test
+did that wrong and honestly when we test
+did that wrong and honestly when we test
+this now think about it it won't do
+this now think about it it won't do
+this now think about it it won't do
+anything since we have nothing on the
+anything since we have nothing on the
+anything since we have nothing on the
+server
+server
+server
+but the server setup is quite easy let
+but the server setup is quite easy let
+but the server setup is quite easy let
+me go to the top
+me go to the top
+me go to the top
+where we defined our other event let me
+where we defined our other event let me
+where we defined our other event let me
+just find it real quick
+underneath our fire event we'll say
+underneath our fire event we'll say
+underneath our fire event we'll say
+local reload
+local reload
+local reload
+event equals
+event equals
+event equals
+tool dot reload event and then all the
+tool dot reload event and then all the
+tool dot reload event and then all the
+way at the bottom where we have our tool
+way at the bottom where we have our tool
+way at the bottom where we have our tool
+dot equipped and fire event we can just
+dot equipped and fire event we can just
+dot equipped and fire event we can just
+say
+say
+say
+reload event dot on server
+reload event dot on server
+reload event dot on server
+event connect reload
+event connect reload
+event connect reload
+so whenever we click r it'll just call
+so whenever we click r it'll just call
+so whenever we click r it'll just call
+the reload function on the server
+the reload function on the server
+the reload function on the server
+which is what we want to do because
+which is what we want to do because
+which is what we want to do because
+that'll just reset the ammo
+that'll just reset the ammo
+that'll just reset the ammo
+and prevent us from shooting
+and prevent us from shooting
+and prevent us from shooting
+so we shoot a little bit and click r
+so we shoot a little bit and click r
+so we shoot a little bit and click r
+and then try shooting doesn't work
+and then try shooting doesn't work
+and then try shooting doesn't work
+after a while we'll get it back and we
+after a while we'll get it back and we
+after a while we'll get it back and we
+can shoot
+can shoot
+can shoot
+the zombies to our hearts content
+and this doesn't really have to do with
+and this doesn't really have to do with
+and this doesn't really have to do with
+our
+our
+our
+reload but one thing we want to add and
+reload but one thing we want to add and
+reload but one thing we want to add and
+i forgot to add this and the other two
+i forgot to add this and the other two
+i forgot to add this and the other two
+videos
+videos
+videos
+is a simple line in our fire function
+is a simple line in our fire function
+is a simple line in our fire function
+where we say if
+tool dot parent
+is a backpack then
+is a backpack then
+is a backpack then
+return end so what this line does is it
+return end so what this line does is it
+return end so what this line does is it
+basically prevents our gun
+basically prevents our gun
+basically prevents our gun
+from firing while it's unequipped which
+from firing while it's unequipped which
+from firing while it's unequipped which
+is
+is
+is
+honestly a pretty big oversight on my
+honestly a pretty big oversight on my
+honestly a pretty big oversight on my
+part my bad
+part my bad
+part my bad
+but you just add this line so when your
+but you just add this line so when your
+but you just add this line so when your
+tool is unequipped
+tool is unequipped
+tool is unequipped
+it will not shoot because the client
+it will not shoot because the client
+it will not shoot because the client
+local script will still run
+local script will still run
+local script will still run
+whether it's equipped or unequipped
+whether it's equipped or unequipped
+whether it's equipped or unequipped
+because this run service dot stepped
+because this run service dot stepped
+because this run service dot stepped
+is always running
+but that's about it for this video so i
+but that's about it for this video so i
+but that's about it for this video so i
+hope you guys enjoyed
+hope you guys enjoyed
+hope you guys enjoyed
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+did
+did
+did
+comment any questions or suggestions
+comment any questions or suggestions
+comment any questions or suggestions
+down below and tell me what you want to
+down below and tell me what you want to
+down below and tell me what you want to
+see
+see
+see
+next in this series but other than that
+next in this series but other than that
+next in this series but other than that
+i hope you have a nice day and goodbye
+[Music]
+you

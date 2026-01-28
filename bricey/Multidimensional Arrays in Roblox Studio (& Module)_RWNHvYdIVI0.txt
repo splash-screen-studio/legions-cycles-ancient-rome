@@ -1,0 +1,893 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i will be teaching you
+in this video i will be teaching you
+in this video i will be teaching you
+about multi-dimensional arrays in roblox
+about multi-dimensional arrays in roblox
+about multi-dimensional arrays in roblox
+studios so you may be asking
+studios so you may be asking
+studios so you may be asking
+what is a multi-dimensional array so
+what is a multi-dimensional array so
+what is a multi-dimensional array so
+normal rays and roblox are just like 1d
+normal rays and roblox are just like 1d
+normal rays and roblox are just like 1d
+one dimensional and they consist of just
+one dimensional and they consist of just
+one dimensional and they consist of just
+one index well multi-dimensional array
+one index well multi-dimensional array
+one index well multi-dimensional array
+can have like an x and a y or xyz if you
+can have like an x and a y or xyz if you
+can have like an x and a y or xyz if you
+really want to
+really want to
+really want to
+and they're very useful i use them in
+and they're very useful i use them in
+and they're very useful i use them in
+many of my games
+many of my games
+many of my games
+such as color chaos the next generation
+such as color chaos the next generation
+such as color chaos the next generation
+and it's a trap obviously because of the
+and it's a trap obviously because of the
+and it's a trap obviously because of the
+maze
+maze
+maze
+and my prim's maze generation algorithm
+and my prim's maze generation algorithm
+and my prim's maze generation algorithm
+that uses that
+that uses that
+that uses that
+as well so i use it in a lot of my
+as well so i use it in a lot of my
+as well so i use it in a lot of my
+projects and roblox and it's a very
+projects and roblox and it's a very
+projects and roblox and it's a very
+useful thing to know
+useful thing to know
+useful thing to know
+so make sure to like and subscribe if
+so make sure to like and subscribe if
+so make sure to like and subscribe if
+you enjoyed this video but without
+you enjoyed this video but without
+you enjoyed this video but without
+further ado
+further ado
+further ado
+let's get started
+[Music]
+[Music]
+[Music]
+so i'm here in a fresh roblox studio
+so i'm here in a fresh roblox studio
+so i'm here in a fresh roblox studio
+project
+project
+project
+and let's go into server script service
+and let's go into server script service
+and let's go into server script service
+and create a script
+and create a script
+and create a script
+to show you what multi-dimensional
+to show you what multi-dimensional
+to show you what multi-dimensional
+arrays are
+arrays are
+arrays are
+so let's start with a review over the
+so let's start with a review over the
+so let's start with a review over the
+basic roblox array
+basic roblox array
+basic roblox array
+so this is obviously how you create one
+so this is obviously how you create one
+so this is obviously how you create one
+this is an array it can store like
+this is an array it can store like
+this is an array it can store like
+strings
+strings
+strings
+booleans or just numbers that's what
+booleans or just numbers that's what
+booleans or just numbers that's what
+i'll be doing now like zero
+i'll be doing now like zero
+i'll be doing now like zero
+three five there we go
+three five there we go
+three five there we go
+and each element of this array has an
+and each element of this array has an
+and each element of this array has an
+index so the index starts with one
+index so the index starts with one
+index so the index starts with one
+so you have one actually there's one
+so you have one actually there's one
+so you have one actually there's one
+there's two and there's three
+there's two and there's three
+there's two and there's three
+important to note unlike other languages
+important to note unlike other languages
+important to note unlike other languages
+it starts with one
+it starts with one
+it starts with one
+not zero most other languages start with
+not zero most other languages start with
+not zero most other languages start with
+zero so just keep that in mind
+zero so just keep that in mind
+zero so just keep that in mind
+but this is your normal array and it
+but this is your normal array and it
+but this is your normal array and it
+works pretty well doing like one
+works pretty well doing like one
+works pretty well doing like one
+dimensional stuff but like
+dimensional stuff but like
+dimensional stuff but like
+if you want to get into 2d like for
+if you want to get into 2d like for
+if you want to get into 2d like for
+example
+example
+example
+making like parts in roblox like just
+making like parts in roblox like just
+making like parts in roblox like just
+make a bunch of them
+make a bunch of them
+make a bunch of them
+in like a 2d like grid sort of thing you
+in like a 2d like grid sort of thing you
+in like a 2d like grid sort of thing you
+need to use
+need to use
+need to use
+multi-dimensional arrays because they
+multi-dimensional arrays because they
+multi-dimensional arrays because they
+can get very complex very quickly
+can get very complex very quickly
+can get very complex very quickly
+only using one dimension so the most
+only using one dimension so the most
+only using one dimension so the most
+basic way to create a multi-dimensional
+basic way to create a multi-dimensional
+basic way to create a multi-dimensional
+array
+array
+array
+is just let me just get rid of this real
+is just let me just get rid of this real
+is just let me just get rid of this real
+quick
+quick
+quick
+is just to create a normal array
+is just to create a normal array
+is just to create a normal array
+and let me enter in and you create an
+and let me enter in and you create an
+and let me enter in and you create an
+array
+array
+array
+inside of an array so this is called a
+inside of an array so this is called a
+inside of an array so this is called a
+nested array
+nested array
+nested array
+and i can put like a zero zero zero as
+and i can put like a zero zero zero as
+and i can put like a zero zero zero as
+all my elements
+all my elements
+all my elements
+and then i can just copy this paste it
+and then i can just copy this paste it
+and then i can just copy this paste it
+paste it there you go so this is the
+paste it there you go so this is the
+paste it there you go so this is the
+most basic way to create a
+most basic way to create a
+most basic way to create a
+multi-dimensional array
+multi-dimensional array
+multi-dimensional array
+and then i can change like let's say i
+and then i can change like let's say i
+and then i can change like let's say i
+change the middle one
+change the middle one
+change the middle one
+and the way you'd access this is let me
+and the way you'd access this is let me
+and the way you'd access this is let me
+just make a print statement
+just make a print statement
+just make a print statement
+print array i want to go to
+print array i want to go to
+print array i want to go to
+the second index like the second table
+the second index like the second table
+the second index like the second table
+and then i want to go to the second
+and then i want to go to the second
+and then i want to go to the second
+element of that second table
+element of that second table
+element of that second table
+so basically what this does is this code
+so basically what this does is this code
+so basically what this does is this code
+right here is we access the first
+right here is we access the first
+right here is we access the first
+or the second i should say element of
+or the second i should say element of
+or the second i should say element of
+our array and since our array is made up
+our array and since our array is made up
+our array and since our array is made up
+of other arrays it accesses
+of other arrays it accesses
+of other arrays it accesses
+this second array since this is one
+this second array since this is one
+this second array since this is one
+this is two and this is three
+this is two and this is three
+this is two and this is three
+and since we want to access this
+and since we want to access this
+and since we want to access this
+one we need to go to the second element
+one we need to go to the second element
+one we need to go to the second element
+of our second array and that gives us
+of our second array and that gives us
+of our second array and that gives us
+this one
+this one
+this one
+so if we run this you can see it prints
+so if we run this you can see it prints
+so if we run this you can see it prints
+one because that's exactly
+one because that's exactly
+one because that's exactly
+where our one is and that's good
+where our one is and that's good
+where our one is and that's good
+for a basic array
+for a basic array
+for a basic array
+so this works fine for now but let's say
+so this works fine for now but let's say
+so this works fine for now but let's say
+you want to have an array
+you want to have an array
+you want to have an array
+that's 25 by 25 or 50 by 50. and i
+that's 25 by 25 or 50 by 50. and i
+that's 25 by 25 or 50 by 50. and i
+actually used something like this
+actually used something like this
+actually used something like this
+when i created my maze using prim's
+when i created my maze using prim's
+when i created my maze using prim's
+algorithm if you haven't seen that make
+algorithm if you haven't seen that make
+algorithm if you haven't seen that make
+sure you check it out
+sure you check it out
+sure you check it out
+but and the way i did that was just
+but and the way i did that was just
+but and the way i did that was just
+using
+using
+using
+a function and i'll define it right here
+a function and i'll define it right here
+a function and i'll define it right here
+that just automatically creates
+that just automatically creates
+that just automatically creates
+your multi-dimensional array so let's
+your multi-dimensional array so let's
+your multi-dimensional array so let's
+define a local
+define a local
+define a local
+function create array
+function create array
+function create array
+and we'll take in the number of rows the
+and we'll take in the number of rows the
+and we'll take in the number of rows the
+number of columns
+number of columns
+number of columns
+and then the default value and this
+and then the default value and this
+and then the default value and this
+default value that
+default value that
+default value that
+is actually pretty important but you'll
+is actually pretty important but you'll
+is actually pretty important but you'll
+find out why in just a second
+find out why in just a second
+find out why in just a second
+so now we're going to make a loop our
+so now we're going to make a loop our
+so now we're going to make a loop our
+first we're going to make
+first we're going to make
+first we're going to make
+our array so local r equals
+our array so local r equals
+our array so local r equals
+these two brackets and we're just going
+these two brackets and we're just going
+these two brackets and we're just going
+to leave it blank for now because we'll
+to leave it blank for now because we'll
+to leave it blank for now because we'll
+fill it a little bit later
+fill it a little bit later
+fill it a little bit later
+and we're going to return our array and
+and we're going to return our array and
+and we're going to return our array and
+then we're going to do a for loop
+then we're going to do a for loop
+then we're going to do a for loop
+for x equals one rows do
+for x equals one rows do
+for x equals one rows do
+and then for y equals one calls
+and then for y equals one calls
+and then for y equals one calls
+due and so this will run
+due and so this will run
+due and so this will run
+for every row and for every column that
+for every row and for every column that
+for every row and for every column that
+you want to make
+you want to make
+you want to make
+so each time you want to make a new row
+so each time you want to make a new row
+so each time you want to make a new row
+just like our array that we defined up
+just like our array that we defined up
+just like our array that we defined up
+here
+here
+here
+let me just redefine an array so you can
+let me just redefine an array so you can
+let me just redefine an array so you can
+use this
+use this
+use this
+as your example
+as your example
+as your example
+there we go
+just make it work there we go so this is
+just make it work there we go so this is
+just make it work there we go so this is
+our array so
+our array so
+our array so
+we want a loop and for each row we want
+we want a loop and for each row we want
+we want a loop and for each row we want
+to create a new array and then for each
+to create a new array and then for each
+to create a new array and then for each
+column we want to populate this array
+column we want to populate this array
+column we want to populate this array
+with a bunch of values so let's do that
+with a bunch of values so let's do that
+with a bunch of values so let's do that
+so we want to go
+so we want to go
+so we want to go
+r and then put the x value in
+r and then put the x value in
+r and then put the x value in
+for the like the loop and we want to set
+for the like the loop and we want to set
+for the like the loop and we want to set
+this equal to a
+this equal to a
+this equal to a
+blank array and we want to set r x
+blank array and we want to set r x
+blank array and we want to set r x
+y to
+y to
+y to
+our default value
+our default value
+our default value
+and then that that'll be it so this just
+and then that that'll be it so this just
+and then that that'll be it so this just
+loops there
+loops there
+loops there
+creates a new array for each row and
+creates a new array for each row and
+creates a new array for each row and
+then populates that array with our
+then populates that array with our
+then populates that array with our
+default value element
+default value element
+default value element
+and if this default value is nil it will
+and if this default value is nil it will
+and if this default value is nil it will
+not
+not
+not
+create the array properly i don't know
+create the array properly i don't know
+create the array properly i don't know
+why
+why
+why
+there's probably a good reason but i
+there's probably a good reason but i
+there's probably a good reason but i
+just don't know off the top my head
+just don't know off the top my head
+just don't know off the top my head
+so just make sure to put a default value
+so just make sure to put a default value
+so just make sure to put a default value
+but if you don't
+but if you don't
+but if you don't
+you can just add some code like this or
+you can just add some code like this or
+you can just add some code like this or
+zero so it'll put 0 by default but
+zero so it'll put 0 by default but
+zero so it'll put 0 by default but
+right now let's just leave it like this
+right now let's just leave it like this
+right now let's just leave it like this
+it's more simple so then we can define
+it's more simple so then we can define
+it's more simple so then we can define
+our new array and this will be
+our new array and this will be
+our new array and this will be
+the create array and let's do a 5x5
+the create array and let's do a 5x5
+the create array and let's do a 5x5
+array
+array
+array
+with the default value of zero and we
+with the default value of zero and we
+with the default value of zero and we
+can print
+can print
+can print
+our new array let's just say five
+our new array let's just say five
+our new array let's just say five
+five there we go so if we run this
+five there we go so if we run this
+five there we go so if we run this
+it prints zero because obviously we set
+it prints zero because obviously we set
+it prints zero because obviously we set
+it to zero
+it to zero
+it to zero
+and then we can change like a value so
+and then we can change like a value so
+and then we can change like a value so
+new array
+new array
+new array
+five five can be set to three
+five five can be set to three
+five five can be set to three
+or two and it prints two
+or two and it prints two
+or two and it prints two
+and that's pretty good
+and that's pretty good
+and that's pretty good
+and so since we are in lua you can set
+and so since we are in lua you can set
+and so since we are in lua you can set
+whoops you can set your default value to
+whoops you can set your default value to
+whoops you can set your default value to
+absolutely anything like a c
+absolutely anything like a c
+absolutely anything like a c
+frame or a vector3 even a part
+frame or a vector3 even a part
+frame or a vector3 even a part
+or a model and that's the beauty of it
+or a model and that's the beauty of it
+or a model and that's the beauty of it
+is you can
+is you can
+is you can
+make your arrays work very very well and
+make your arrays work very very well and
+make your arrays work very very well and
+if you really want to get complicated
+if you really want to get complicated
+if you really want to get complicated
+you could probably like make a
+you could probably like make a
+you could probably like make a
+triangular array
+triangular array
+triangular array
+or like something like that that stuff's
+or like something like that that stuff's
+or like something like that that stuff's
+pretty cool i've never found a used form
+pretty cool i've never found a used form
+pretty cool i've never found a used form
+but there probably is
+but there probably is
+but there probably is
+and you can use that if you want but
+and you can use that if you want but
+and you can use that if you want but
+this may seem
+this may seem
+this may seem
+intimidating to the new programmer and
+intimidating to the new programmer and
+intimidating to the new programmer and
+if you really need to use them
+if you really need to use them
+if you really need to use them
+you want to file find a way to use them
+you want to file find a way to use them
+you want to file find a way to use them
+reliably and that's why i've created a
+reliably and that's why i've created a
+reliably and that's why i've created a
+module
+module
+module
+that can do multi-dimensional arrays for
+that can do multi-dimensional arrays for
+that can do multi-dimensional arrays for
+you so let me just get it out real quick
+you so let me just get it out real quick
+you so let me just get it out real quick
+it's called the array2d module
+it's called the array2d module
+it's called the array2d module
+and i will show you how to use it
+and i will show you how to use it
+and i will show you how to use it
+so this is a object-oriented module
+so this is a object-oriented module
+so this is a object-oriented module
+it's pretty self-explanatory the code if
+it's pretty self-explanatory the code if
+it's pretty self-explanatory the code if
+you understand there's a few
+you understand there's a few
+you understand there's a few
+little meta methods down here that do
+little meta methods down here that do
+little meta methods down here that do
+some
+some
+some
+kind of weird stuff but they actually
+kind of weird stuff but they actually
+kind of weird stuff but they actually
+make the module
+make the module
+make the module
+very very functional just as functional
+very very functional just as functional
+very very functional just as functional
+as a normal table
+as a normal table
+as a normal table
+so let me just demo it real quick i'm
+so let me just demo it real quick i'm
+so let me just demo it real quick i'm
+going to comment this out
+going to comment this out
+going to comment this out
+for now you can still look at it if you
+for now you can still look at it if you
+for now you can still look at it if you
+want to
+want to
+want to
+and we're going to make a reference
+and we're going to make a reference
+and we're going to make a reference
+to our ray2d so local ray2d
+to our ray2d so local ray2d
+to our ray2d so local ray2d
+equals require
+game.replicatorstorage.array2d
+game.replicatorstorage.array2d
+game.replicatorstorage.array2d
+and then we can define a new
+and then we can define a new
+and then we can define a new
+array2d as array2d.new
+array2d as array2d.new
+array2d as array2d.new
+and it takes in rows and columns let's
+and it takes in rows and columns let's
+and it takes in rows and columns let's
+do like a 3x3 array
+do like a 3x3 array
+do like a 3x3 array
+and the d you could put a default value
+and the d you could put a default value
+and the d you could put a default value
+but it automatically defaults to zero so
+but it automatically defaults to zero so
+but it automatically defaults to zero so
+we'll just leave it like that
+we'll just leave it like that
+we'll just leave it like that
+and we can print our new array and
+and we can print our new array and
+and we can print our new array and
+usually with like a normal table it just
+usually with like a normal table it just
+usually with like a normal table it just
+print out like the address like the
+print out like the address like the
+print out like the address like the
+memory address
+memory address
+memory address
+but i have a custom tostring function so
+but i have a custom tostring function so
+but i have a custom tostring function so
+it prints it out
+it prints it out
+it prints it out
+properly as you'd expect it so you can
+properly as you'd expect it so you can
+properly as you'd expect it so you can
+see it actually prints it out
+see it actually prints it out
+see it actually prints it out
+the reason it's spaced down is so this
+the reason it's spaced down is so this
+the reason it's spaced down is so this
+little green
+little green
+little green
+bar doesn't mess up the printout
+bar doesn't mess up the printout
+bar doesn't mess up the printout
+and you can actually visualize what
+and you can actually visualize what
+and you can actually visualize what
+happens to your array which is really
+happens to your array which is really
+happens to your array which is really
+cool
+cool
+cool
+and and the api for this module is
+and and the api for this module is
+and and the api for this module is
+pretty simple
+pretty simple
+pretty simple
+so let me just
+so let me just
+so let me just
+create something real quick new ray 2d
+create something real quick new ray 2d
+create something real quick new ray 2d
+get let's just do one one
+get let's just do one one
+get let's just do one one
+just gets the
+just gets the
+just gets the
+element at the coordinates that i
+element at the coordinates that i
+element at the coordinates that i
+specify
+specify
+specify
+at this at this instance it's 1 1 so if
+at this at this instance it's 1 1 so if
+at this at this instance it's 1 1 so if
+i were to
+i were to
+i were to
+print it out let me just
+print it out let me just
+print it out let me just
+do that it'll print zero
+do that it'll print zero
+do that it'll print zero
+and then you can also do a set which is
+and then you can also do a set which is
+and then you can also do a set which is
+new array 2d
+new array 2d
+new array 2d
+set and let's set one one to a value of
+set and let's set one one to a value of
+set and let's set one one to a value of
+four so it sets
+four so it sets
+four so it sets
+x then y then the value that you want to
+x then y then the value that you want to
+x then y then the value that you want to
+set
+set
+set
+so it prints four which is exactly what
+so it prints four which is exactly what
+so it prints four which is exactly what
+you want
+you want
+you want
+and i think that's all the api for it
+and i think that's all the api for it
+and i think that's all the api for it
+and it's actually really cool
+and it's actually really cool
+and it's actually really cool
+i'm going to use it a lot because it's a
+i'm going to use it a lot because it's a
+i'm going to use it a lot because it's a
+lot more of a hassle just to make this
+lot more of a hassle just to make this
+lot more of a hassle just to make this
+every single time
+every single time
+every single time
+and by the way if you are wondering you
+and by the way if you are wondering you
+and by the way if you are wondering you
+could make
+could make
+could make
+a three-dimensional array by just doing
+a three-dimensional array by just doing
+a three-dimensional array by just doing
+another nested for loop here and then
+another nested for loop here and then
+another nested for loop here and then
+making
+making
+making
+like another list inside of a list
+like another list inside of a list
+like another list inside of a list
+inside of a list
+inside of a list
+inside of a list
+that could work i've never really used a
+that could work i've never really used a
+that could work i've never really used a
+3d array i've only used 2d arrays
+3d array i've only used 2d arrays
+3d array i've only used 2d arrays
+but you can do that if you want to
+but you can do that if you want to
+but you can do that if you want to
+and that's about it for this video so i
+and that's about it for this video so i
+and that's about it for this video so i
+hope you guys
+hope you guys
+hope you guys
+enjoyed this has been requested
+enjoyed this has been requested
+enjoyed this has been requested
+profusely by one of my subscribers so i
+profusely by one of my subscribers so i
+profusely by one of my subscribers so i
+hope
+hope
+hope
+they enjoy it but this is a very simple
+they enjoy it but this is a very simple
+they enjoy it but this is a very simple
+concept
+concept
+concept
+concept but very powerful as i said i
+concept but very powerful as i said i
+concept but very powerful as i said i
+used it i've used it in
+used it i've used it in
+used it i've used it in
+one of my games or two of my games
+one of my games or two of my games
+one of my games or two of my games
+actually
+actually
+actually
+and i've used it in my maze i use it a
+and i've used it in my maze i use it a
+and i've used it in my maze i use it a
+lot
+lot
+lot
+and it's very simple but very very
+and it's very simple but very very
+and it's very simple but very very
+useful but it can be complicated if you
+useful but it can be complicated if you
+useful but it can be complicated if you
+don't know what you're doing
+don't know what you're doing
+don't know what you're doing
+but make sure to like and subscribe if
+but make sure to like and subscribe if
+but make sure to like and subscribe if
+you enjoy this video
+you enjoy this video
+you enjoy this video
+but other than that i hope you guys have
+but other than that i hope you guys have
+but other than that i hope you guys have
+a nice day and goodbye
+[Music]
+[Music]
+[Music]
+you

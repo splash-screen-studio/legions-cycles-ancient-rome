@@ -1,0 +1,2341 @@
+in the last video we covered the aiming
+in the last video we covered the aiming
+in the last video we covered the aiming
+and the model setup of this little
+and the model setup of this little
+and the model setup of this little
+turret this video will cover the
+turret this video will cover the
+turret this video will cover the
+shooting and the AI so we leave the
+shooting and the AI so we leave the
+shooting and the AI so we leave the
+target area
+target area
+target area
+it does this a little idle animation we
+it does this a little idle animation we
+it does this a little idle animation we
+go back in it acquires us and it shoots
+go back in it acquires us and it shoots
+go back in it acquires us and it shoots
+us and we'll also be covering how if you
+us and we'll also be covering how if you
+us and we'll also be covering how if you
+get like beneath it or something it
+get like beneath it or something it
+get like beneath it or something it
+won't actually shoot you so I hope
+won't actually shoot you so I hope
+won't actually shoot you so I hope
+you're excited for that this video is a
+you're excited for that this video is a
+you're excited for that this video is a
+little bit long because it's a lot of
+little bit long because it's a lot of
+little bit long because it's a lot of
+tuning required just like the last video
+tuning required just like the last video
+tuning required just like the last video
+but just in a different sense so a lot
+but just in a different sense so a lot
+but just in a different sense so a lot
+of the parts can be skipped if you tune
+of the parts can be skipped if you tune
+of the parts can be skipped if you tune
+it quickly or a lot of it can be like
+it quickly or a lot of it can be like
+it quickly or a lot of it can be like
+gone fast through
+gone fast through
+gone fast through
+yes English you can go through it fast
+yes English you can go through it fast
+yes English you can go through it fast
+but um I hope you enjoy like And
+but um I hope you enjoy like And
+but um I hope you enjoy like And
+subscribe if you do last video of the
+subscribe if you do last video of the
+subscribe if you do last video of the
+series let's go and let's jump right
+series let's go and let's jump right
+series let's go and let's jump right
+into it
+so last video we covered the turret part
+so last video we covered the turret part
+so last video we covered the turret part
+of the AI laser turret now we need to
+of the AI laser turret now we need to
+of the AI laser turret now we need to
+get the AI and the laser working so what
+get the AI and the laser working so what
+get the AI and the laser working so what
+is that necessarily entail so my vision
+is that necessarily entail so my vision
+is that necessarily entail so my vision
+for this turret is that it'll have like
+for this turret is that it'll have like
+for this turret is that it'll have like
+a radius around it like a spherical
+a radius around it like a spherical
+a radius around it like a spherical
+radius that if any humanoids or whether
+radius that if any humanoids or whether
+radius that if any humanoids or whether
+they be a player NPC whatever enters it
+they be a player NPC whatever enters it
+they be a player NPC whatever enters it
+they'll get zapped they'll take damage
+they'll get zapped they'll take damage
+they'll get zapped they'll take damage
+and once they leave the AI turret we'll
+and once they leave the AI turret we'll
+and once they leave the AI turret we'll
+look at something else or whatever now
+look at something else or whatever now
+look at something else or whatever now
+have a nice little idle animation too
+have a nice little idle animation too
+have a nice little idle animation too
+like people know that it's an active
+like people know that it's an active
+like people know that it's an active
+live turret which should be pretty cool
+live turret which should be pretty cool
+live turret which should be pretty cool
+so let's get started
+so let's get started
+so let's get started
+so the first step is going to be the
+so the first step is going to be the
+so the first step is going to be the
+actual detection so I'm going to make
+actual detection so I'm going to make
+actual detection so I'm going to make
+some room
+some room
+some room
+down here because
+down here because
+down here because
+um we don't this part the hinge stuff is
+um we don't this part the hinge stuff is
+um we don't this part the hinge stuff is
+going to stay it's going to be towards
+going to stay it's going to be towards
+going to stay it's going to be towards
+the very bottom now we're going to make
+the very bottom now we're going to make
+the very bottom now we're going to make
+our main kind of like routing statement
+our main kind of like routing statement
+our main kind of like routing statement
+for this thing
+for this thing
+for this thing
+so we're going to say we're first going
+so we're going to say we're first going
+so we're going to say we're first going
+to Define a variable called this local
+to Define a variable called this local
+to Define a variable called this local
+Target we're going to initially set it
+Target we're going to initially set it
+Target we're going to initially set it
+to nil because this is going to be set
+to nil because this is going to be set
+to nil because this is going to be set
+to the character
+to the character
+to the character
+that we're targeting the character that
+that we're targeting the character that
+that we're targeting the character that
+we want to cheat so if there isn't a
+we want to cheat so if there isn't a
+we want to cheat so if there isn't a
+Target so if not Target then we need to
+Target so if not Target then we need to
+Target so if not Target then we need to
+find one and then else we're going to
+find one and then else we're going to
+find one and then else we're going to
+like do something else we'll handle
+like do something else we'll handle
+like do something else we'll handle
+we'll handle this else block a little
+we'll handle this else block a little
+we'll handle this else block a little
+bit later but for now let's work on
+bit later but for now let's work on
+bit later but for now let's work on
+target acquisition Target detection and
+target acquisition Target detection and
+target acquisition Target detection and
+the way we're going to do that is using
+the way we're going to do that is using
+the way we're going to do that is using
+an overlap query in Roblox so what does
+an overlap query in Roblox so what does
+an overlap query in Roblox so what does
+that look like Let's do let's say local
+that look like Let's do let's say local
+that look like Let's do let's say local
+Parts equals workspace
+Parts equals workspace
+Parts equals workspace
+it part bounds in radius
+it part bounds in radius
+it part bounds in radius
+and then we're going to go to the
+and then we're going to go to the
+and then we're going to go to the
+ref.position where we want to start and
+ref.position where we want to start and
+ref.position where we want to start and
+we need a radius which I'm actually
+we need a radius which I'm actually
+we need a radius which I'm actually
+going to go to I don't know why my
+going to go to I don't know why my
+going to go to I don't know why my
+properties window keeps on going away
+properties window keeps on going away
+properties window keeps on going away
+I'm going to actually go to my AI laser
+I'm going to actually go to my AI laser
+I'm going to actually go to my AI laser
+turret and create a new attribute and
+turret and create a new attribute and
+turret and create a new attribute and
+call this
+call this
+call this
+detection
+detection
+detection
+radius
+radius
+radius
+and I'm going to set this to something
+and I'm going to set this to something
+and I'm going to set this to something
+like 30 30 studs and up at the top we're
+like 30 30 studs and up at the top we're
+like 30 30 studs and up at the top we're
+going to make a new constant call this
+going to make a new constant call this
+going to make a new constant call this
+radius and all caps because I like to
+radius and all caps because I like to
+radius and all caps because I like to
+pull my constants in all caps it doesn't
+pull my constants in all caps it doesn't
+pull my constants in all caps it doesn't
+matter it's up to you but just personal
+matter it's up to you but just personal
+matter it's up to you but just personal
+preference I'm going to say current get
+preference I'm going to say current get
+preference I'm going to say current get
+attribute
+attribute
+attribute
+detection radius there we go so this is
+detection radius there we go so this is
+detection radius there we go so this is
+going to be our radius so in our good
+going to be our radius so in our good
+going to be our radius so in our good
+get parts bounds and radius
+get parts bounds and radius
+get parts bounds and radius
+then in our radius there we go and then
+then in our radius there we go and then
+then in our radius there we go and then
+we also need to send in an overlap
+we also need to send in an overlap
+we also need to send in an overlap
+params instance so I'm going to create
+params instance so I'm going to create
+params instance so I'm going to create
+that up at the very top say local
+that up at the very top say local
+that up at the very top say local
+overlap params equals overlap params.new
+overlap params equals overlap params.new
+overlap params equals overlap params.new
+I'm gonna say overlap parameter overlap
+I'm gonna say overlap parameter overlap
+I'm gonna say overlap parameter overlap
+Rams lowercase dot filter type equals
+Rams lowercase dot filter type equals
+Rams lowercase dot filter type equals
+enum dot raycast filter type dot exclude
+enum dot raycast filter type dot exclude
+enum dot raycast filter type dot exclude
+then we're going to set the overlap
+then we're going to set the overlap
+then we're going to set the overlap
+params dot filter descendants instances
+params dot filter descendants instances
+params dot filter descendants instances
+equal to a a table with the turret there
+equal to a a table with the turret there
+equal to a a table with the turret there
+we go because all we need to do is
+we go because all we need to do is
+we go because all we need to do is
+exclude our our model our turret model
+exclude our our model our turret model
+exclude our our model our turret model
+and then we're going to send that in to
+and then we're going to send that in to
+and then we're going to send that in to
+our get parts bounds and read we're
+our get parts bounds and read we're
+our get parts bounds and read we're
+going to send in
+going to send in
+going to send in
+there we go so what does this actually
+there we go so what does this actually
+there we go so what does this actually
+do it does exactly what it says it does
+do it does exactly what it says it does
+do it does exactly what it says it does
+we look at a radius we get all the parts
+we look at a radius we get all the parts
+we look at a radius we get all the parts
+bound so keyword here is bounds so it
+bound so keyword here is bounds so it
+bound so keyword here is bounds so it
+won't actually detect like the outline
+won't actually detect like the outline
+won't actually detect like the outline
+so if I go back here see how when I
+so if I go back here see how when I
+so if I go back here see how when I
+hover over my
+hover over my
+hover over my
+my uh model you can see there's like a
+my uh model you can see there's like a
+my uh model you can see there's like a
+little blue outline around the actual
+little blue outline around the actual
+little blue outline around the actual
+cylinder part and there's this larger
+cylinder part and there's this larger
+cylinder part and there's this larger
+kind of box around the entire thing
+kind of box around the entire thing
+kind of box around the entire thing
+we're looking at the box and that's good
+we're looking at the box and that's good
+we're looking at the box and that's good
+because this doesn't have to be
+because this doesn't have to be
+because this doesn't have to be
+perfectly accurate we don't want because
+perfectly accurate we don't want because
+perfectly accurate we don't want because
+that that requires a lot of performance
+that that requires a lot of performance
+that that requires a lot of performance
+that we don't want especially since
+that we don't want especially since
+that we don't want especially since
+we're running this every step
+we're running this every step
+we're running this every step
+uh physics frame we want a kind of a
+uh physics frame we want a kind of a
+uh physics frame we want a kind of a
+rough query that uses the the bounding
+rough query that uses the the bounding
+rough query that uses the the bounding
+boxes of all the parts that's good so
+boxes of all the parts that's good so
+boxes of all the parts that's good so
+now that we have all the parts we need
+now that we have all the parts we need
+now that we have all the parts we need
+to run through them so I'm going to say
+to run through them so I'm going to say
+to run through them so I'm going to say
+four underscore because we don't need
+four underscore because we don't need
+four underscore because we don't need
+the index Arc in parts
+the index Arc in parts
+the index Arc in parts
+you
+you
+you
+and so what do we want to do we want to
+and so what do we want to do we want to
+and so what do we want to do we want to
+first check if the part is part of the
+first check if the part is part of the
+first check if the part is part of the
+model so I'm going to say local
+model so I'm going to say local
+model so I'm going to say local
+character it was part find first
+character it was part find first
+character it was part find first
+ancestor which is a model
+ancestor which is a model
+ancestor which is a model
+so if it's a model and we say local
+so if it's a model and we say local
+so if it's a model and we say local
+humanoid equals character and character
+humanoid equals character and character
+humanoid equals character and character
+find first child which is a there we go
+find first child which is a there we go
+find first child which is a there we go
+so what we're doing here is we check if
+so what we're doing here is we check if
+so what we're doing here is we check if
+if it's parented to a model in some part
+if it's parented to a model in some part
+if it's parented to a model in some part
+of the ancestry then we check with that
+of the ancestry then we check with that
+of the ancestry then we check with that
+model as a humanoid if the character
+model as a humanoid if the character
+model as a humanoid if the character
+exists because and Returns the
+exists because and Returns the
+exists because and Returns the
+this is true it'll return the second
+this is true it'll return the second
+this is true it'll return the second
+value if this is false it'll just return
+value if this is false it'll just return
+value if this is false it'll just return
+false and so we can check by saying if
+false and so we can check by saying if
+false and so we can check by saying if
+humanoid
+humanoid
+humanoid
+then then that means we have a humanoid
+then then that means we have a humanoid
+then then that means we have a humanoid
+and we have a character and that's great
+and we have a character and that's great
+and we have a character and that's great
+and all we do is set the target equal to
+and all we do is set the target equal to
+and all we do is set the target equal to
+the character and then we we break the
+the character and then we we break the
+the character and then we we break the
+loop you really don't have to break Loop
+loop you really don't have to break Loop
+loop you really don't have to break Loop
+so the difference is is if you don't
+so the difference is is if you don't
+so the difference is is if you don't
+break the loop if there's multiple
+break the loop if there's multiple
+break the loop if there's multiple
+players in your thing the last or in
+players in your thing the last or in
+players in your thing the last or in
+your little radius the last character
+your little radius the last character
+your little radius the last character
+will be set to the Target if you don't
+will be set to the Target if you don't
+will be set to the Target if you don't
+if you leave the break here it's the
+if you leave the break here it's the
+if you leave the break here it's the
+first character
+first character
+first character
+again it the order in which they're
+again it the order in which they're
+again it the order in which they're
+selected is probably random I mean
+selected is probably random I mean
+selected is probably random I mean
+there's probably some logic to it within
+there's probably some logic to it within
+there's probably some logic to it within
+this function but I don't really know I
+this function but I don't really know I
+this function but I don't really know I
+don't really care it doesn't really
+don't really care it doesn't really
+don't really care it doesn't really
+matter this break just makes it a little
+matter this break just makes it a little
+matter this break just makes it a little
+bit more performant depending on the
+bit more performant depending on the
+bit more performant depending on the
+situation because you don't you don't
+situation because you don't you don't
+situation because you don't you don't
+want to keep on like a looping through
+want to keep on like a looping through
+want to keep on like a looping through
+all of them you already found it's a
+all of them you already found it's a
+all of them you already found it's a
+valid Target
+valid Target
+valid Target
+so there you go but
+so there you go but
+so there you go but
+if we were to run this we would run into
+if we were to run this we would run into
+if we were to run this we would run into
+a couple of issues
+a couple of issues
+a couple of issues
+that's because
+that's because
+that's because
+this does not take into account the
+this does not take into account the
+this does not take into account the
+actual like position of our player so
+actual like position of our player so
+actual like position of our player so
+for example if
+for example if
+for example if
+um actually you know we can do we can
+um actually you know we can do we can
+um actually you know we can do we can
+show this so we can say
+show this so we can say
+show this so we can say
+Direction
+we can just let's actually copy this
+we can just let's actually copy this
+we can just let's actually copy this
+line
+we can say a direction equals
+we can say a direction equals
+we can say a direction equals
+ref.c frame point to object space and we
+ref.c frame point to object space and we
+ref.c frame point to object space and we
+can do Target get if it position there
+can do Target get if it position there
+can do Target get if it position there
+you go so it should Point towards our
+you go so it should Point towards our
+you go so it should Point towards our
+character
+character
+character
+let's just play this
+let's just play this
+let's just play this
+see what happens
+oh good to do
+it down here
+yeah because this means we have a Target
+yeah because this means we have a Target
+yeah because this means we have a Target
+so there we go so this is just for
+so there we go so this is just for
+so there we go so this is just for
+testing you don't really have to do this
+testing you don't really have to do this
+testing you don't really have to do this
+let's just do something
+let's just do something
+let's just do something
+so
+so
+so
+if we go here you can see you see it
+if we go here you can see you see it
+if we go here you can see you see it
+points at us right but if we go
+points at us right but if we go
+points at us right but if we go
+underneath the turret it still thinks
+underneath the turret it still thinks
+underneath the turret it still thinks
+for our Target like dude you can't you
+for our Target like dude you can't you
+for our Target like dude you can't you
+can't shoot through there like that
+can't shoot through there like that
+can't shoot through there like that
+doesn't make any sense
+doesn't make any sense
+doesn't make any sense
+so we get we have to fix that we can't
+so we get we have to fix that we can't
+so we get we have to fix that we can't
+we can't be having
+we can't be having
+we can't be having
+so we have to do
+so we have to do
+so we have to do
+is we're going to create a function
+is we're going to create a function
+is we're going to create a function
+because we're going to use this function
+because we're going to use this function
+because we're going to use this function
+multiple times throughout the remainder
+multiple times throughout the remainder
+multiple times throughout the remainder
+of this video called is reachable so
+of this video called is reachable so
+of this video called is reachable so
+local function is reachable
+local function is reachable
+local function is reachable
+and we're going to send in a subject the
+and we're going to send in a subject the
+and we're going to send in a subject the
+thing that we want to reach
+thing that we want to reach
+thing that we want to reach
+so what's going to happen here is we're
+so what's going to happen here is we're
+so what's going to happen here is we're
+going to basically check to see if this
+going to basically check to see if this
+going to basically check to see if this
+subject is within like the depression
+subject is within like the depression
+subject is within like the depression
+range of our gun and if it's also in a
+range of our gun and if it's also in a
+range of our gun and if it's also in a
+line of sight so if it's like because
+line of sight so if it's like because
+line of sight so if it's like because
+this this function here does not take
+this this function here does not take
+this this function here does not take
+into account walls we need to do that
+into account walls we need to do that
+into account walls we need to do that
+so let's do that so first we're going to
+so let's do that so first we're going to
+so let's do that so first we're going to
+say local Direction equals subject get
+say local Direction equals subject get
+say local Direction equals subject get
+pivot because the subject will be a
+pivot because the subject will be a
+pivot because the subject will be a
+model dot position minus the reference
+model dot position minus the reference
+model dot position minus the reference
+stop position
+stop position
+stop position
+I'm going to say
+I'm going to say
+I'm going to say
+and now now we need to check the angle
+and now now we need to check the angle
+and now now we need to check the angle
+so we're going to say if ref.c frame dot
+so we're going to say if ref.c frame dot
+so we're going to say if ref.c frame dot
+up Vector in the angle of that
+up Vector in the angle of that
+up Vector in the angle of that
+uh with direction is less than some
+uh with direction is less than some
+uh with direction is less than some
+value that we're going to define a sec
+value that we're going to define a sec
+value that we're going to define a sec
+then we're going to return oh so this
+then we're going to return oh so this
+then we're going to return oh so this
+means it's not reachable so
+means it's not reachable so
+means it's not reachable so
+I mean if it's greater than some value
+I mean if it's greater than some value
+I mean if it's greater than some value
+so what this value is is we're going to
+so what this value is is we're going to
+so what this value is is we're going to
+Define another attribute all this
+Define another attribute all this
+Define another attribute all this
+Russian it's not like mental health
+Russian it's not like mental health
+Russian it's not like mental health
+depression it means like the the weight
+depression it means like the the weight
+depression it means like the the weight
+how far the gun Peril can can go down
+how far the gun Peril can can go down
+how far the gun Peril can can go down
+like to press into the ground so we're
+like to press into the ground so we're
+like to press into the ground so we're
+going to set that to I don't know
+going to set that to I don't know
+going to set that to I don't know
+actually believe it zero for now but
+actually believe it zero for now but
+actually believe it zero for now but
+first we need to get it in our script
+first we need to get it in our script
+first we need to get it in our script
+we're going to say local
+attribute impression there we go we have
+attribute impression there we go we have
+attribute impression there we go we have
+our depression and we do if it's greater
+our depression and we do if it's greater
+our depression and we do if it's greater
+than depression
+than depression
+than depression
+if the angle is greater than the
+if the angle is greater than the
+if the angle is greater than the
+depressed angle then we're going to
+depressed angle then we're going to
+depressed angle then we're going to
+return false
+return false
+return false
+so what is this depressed angle
+so what is this depressed angle
+so what is this depressed angle
+how will this work let's go test it out
+how will this work let's go test it out
+how will this work let's go test it out
+let's go into the field so what I'm
+let's go into the field so what I'm
+let's go into the field so what I'm
+looking at is the angle at which our
+looking at is the angle at which our
+looking at is the angle at which our
+turret can go down no more we're gonna
+turret can go down no more we're gonna
+turret can go down no more we're gonna
+we're going to sample our our pitch
+we're going to sample our our pitch
+we're going to sample our our pitch
+angle here I change my my model move
+angle here I change my my model move
+angle here I change my my model move
+mode to physical
+mode to physical
+mode to physical
+but now what I can do is I can move this
+but now what I can do is I can move this
+but now what I can do is I can move this
+down
+down
+down
+and see which angle I want to like stop
+and see which angle I want to like stop
+and see which angle I want to like stop
+so that's about as far as we can go this
+so that's about as far as we can go this
+so that's about as far as we can go this
+is about as far as it could go because
+is about as far as it could go because
+is about as far as it could go because
+this little base part is kind of big
+this little base part is kind of big
+this little base part is kind of big
+so I'm going to go into my pitch and see
+so I'm going to go into my pitch and see
+so I'm going to go into my pitch and see
+what angle
+it says current angle is 32. now through
+it says current angle is 32. now through
+it says current angle is 32. now through
+my own testing that's kind of not the
+my own testing that's kind of not the
+my own testing that's kind of not the
+angle we want we want the
+angle we want we want the
+angle we want we want the
+actually let's try it out let's see what
+actually let's try it out let's see what
+actually let's try it out let's see what
+happens
+happens
+happens
+um let's set our depression to like
+um let's set our depression to like
+um let's set our depression to like
+32.
+32.
+32.
+so wait actually let's see let's see
+so wait actually let's see let's see
+so wait actually let's see let's see
+where it goes let's actually place the
+where it goes let's actually place the
+where it goes let's actually place the
+print so it starts down at 32 and if we
+print so it starts down at 32 and if we
+print so it starts down at 32 and if we
+move it up where does it end up
+it goes up booster
+so down is 32. so if it's
+so down is 32. so if it's
+so down is 32. so if it's
+well this is awesome
+well this is awesome
+well this is awesome
+keep in mind this is also the turret
+keep in mind this is also the turret
+keep in mind this is also the turret
+angle not necessarily
+because what we're doing is we're
+because what we're doing is we're
+because what we're doing is we're
+looking at the
+looking at the
+looking at the
+up value so it's like
+up value so it's like
+up value so it's like
+so um eventually we might need like the
+so um eventually we might need like the
+so um eventually we might need like the
+complement or the actually the
+complement or the actually the
+complement or the actually the
+supplement so let's just see what
+supplement so let's just see what
+supplement so let's just see what
+happens we set it to 32 probably offset
+happens we set it to 32 probably offset
+happens we set it to 32 probably offset
+about like 90 degrees or something
+about like 90 degrees or something
+about like 90 degrees or something
+oh
+oh
+oh
+it's still pointing at us
+it's still pointing at us
+it's still pointing at us
+angle's not really locking in
+angle's not really locking in
+angle's not really locking in
+let's actually go into the field and
+let's actually go into the field and
+let's actually go into the field and
+just
+just
+just
+so I'm going to copy this value and just
+so I'm going to copy this value and just
+so I'm going to copy this value and just
+print it
+so we're going to print the refer oh
+so we're going to print the refer oh
+so we're going to print the refer oh
+wait
+wait
+wait
+I'm stupid uh one sec you have to
+I'm stupid uh one sec you have to
+I'm stupid uh one sec you have to
+convert this into degrees so we're in
+convert this into degrees so we're in
+convert this into degrees so we're in
+Mathletics
+Mathletics
+Mathletics
+left eye angle and then we're also going
+left eye angle and then we're also going
+left eye angle and then we're also going
+to print it out this side this is just
+to print it out this side this is just
+to print it out this side this is just
+how you test it I know it may make the
+how you test it I know it may make the
+how you test it I know it may make the
+video a little bit longer because I'm
+video a little bit longer because I'm
+video a little bit longer because I'm
+not so genius it's the angle off the
+not so genius it's the angle off the
+not so genius it's the angle off the
+head but there's how you test your own
+head but there's how you test your own
+head but there's how you test your own
+thing too oh here we go
+well thing is is we're actually using
+well thing is is we're actually using
+well thing is is we're actually using
+the breachable function I'm kind of
+the breachable function I'm kind of
+the breachable function I'm kind of
+stupid so let's put this in to if
+stupid so let's put this in to if
+stupid so let's put this in to if
+humanoid and
+humanoid and
+humanoid and
+is reachable then we set the we set the
+is reachable then we set the we set the
+is reachable then we set the we set the
+character so it is reachable
+after then
+after then
+after then
+we actually set the target thing
+so yeah see it doesn't detect us and
+so yeah see it doesn't detect us and
+so yeah see it doesn't detect us and
+then once we get into the range
+this is like 180 so let's see what angle
+this is like 180 so let's see what angle
+this is like 180 so let's see what angle
+do we want
+do we want
+do we want
+so it's like 118 out
+so it's like 118 out
+so it's like 118 out
+so let's actually
+so let's actually
+so let's actually
+it gets smaller
+it gets smaller
+it gets smaller
+okay so
+okay so
+okay so
+we want the depression to be
+impression to be like
+impression to be like
+impression to be like
+there we go because what that means is
+there we go because what that means is
+there we go because what that means is
+that
+that
+that
+as as we get closer we want this value
+as as we get closer we want this value
+as as we get closer we want this value
+to be greater so if this value is
+to be greater so if this value is
+to be greater so if this value is
+greater than the depression which is
+greater than the depression which is
+greater than the depression which is
+like 120 then we return false otherwise
+like 120 then we return false otherwise
+like 120 then we return false otherwise
+we return true so we should log on once
+we return true so we should log on once
+we return true so we should log on once
+we get around to the Sun so whatever get
+we get around to the Sun so whatever get
+we get around to the Sun so whatever get
+a little closer
+a little closer
+a little closer
+at 90.
+at 90.
+at 90.
+let's see what's going on
+let's see what's going on
+let's see what's going on
+so
+it's because we're not returned
+it's because we're not returned
+it's because we're not returned
+but as a test return true
+but as a test return true
+but as a test return true
+and is reachable
+if we make it past a little yep there we
+if we make it past a little yep there we
+if we make it past a little yep there we
+go so we lock on obviously since we have
+go so we lock on obviously since we have
+go so we lock on obviously since we have
+no is reachable we'll check later it
+no is reachable we'll check later it
+no is reachable we'll check later it
+stays locked on but notice how it
+stays locked on but notice how it
+stays locked on but notice how it
+doesn't log on until we get into the
+doesn't log on until we get into the
+doesn't log on until we get into the
+range but along with that we need to
+range but along with that we need to
+range but along with that we need to
+check line of sight so I'm going to
+check line of sight so I'm going to
+check line of sight so I'm going to
+delete this first statement sorry for a
+delete this first statement sorry for a
+delete this first statement sorry for a
+little like rough around the edges kind
+little like rough around the edges kind
+little like rough around the edges kind
+of debugging but this kind of shows you
+of debugging but this kind of shows you
+of debugging but this kind of shows you
+how you would do this yourself because
+how you would do this yourself because
+how you would do this yourself because
+your gun is going to be different than
+your gun is going to be different than
+your gun is going to be different than
+mine you need to figure out your
+mine you need to figure out your
+mine you need to figure out your
+depression just remember depression I'll
+depression just remember depression I'll
+depression just remember depression I'll
+just print out the angle I don't even
+just print out the angle I don't even
+just print out the angle I don't even
+use the hinge I was kind of stupid on
+use the hinge I was kind of stupid on
+use the hinge I was kind of stupid on
+them but don't don't use the hands just
+them but don't don't use the hands just
+them but don't don't use the hands just
+go find the depression yourself using
+go find the depression yourself using
+go find the depression yourself using
+printing out the degrees and remember
+printing out the degrees and remember
+printing out the degrees and remember
+angle returns radian so you need to
+angle returns radian so you need to
+angle returns radian so you need to
+convert that to degrees but after you've
+convert that to degrees but after you've
+convert that to degrees but after you've
+done that
+done that
+done that
+it's time to get the get the cast or the
+it's time to get the get the cast or the
+it's time to get the get the cast or the
+line of sight we're going to say
+line of sight we're going to say
+line of sight we're going to say
+Cassie's workspace raycast
+Cassie's workspace raycast
+Cassie's workspace raycast
+I'm going to do ref.position over to the
+I'm going to do ref.position over to the
+I'm going to do ref.position over to the
+direction dot unit
+direction dot unit
+direction dot unit
+times the radius because we shouldn't
+times the radius because we shouldn't
+times the radius because we shouldn't
+cast farther out and the radius and
+cast farther out and the radius and
+cast farther out and the radius and
+we're also going to send in the cast
+we're also going to send in the cast
+we're also going to send in the cast
+params
+params
+params
+we haven't created yet so we're going to
+we haven't created yet so we're going to
+we haven't created yet so we're going to
+create some cast params by copying our
+create some cast params by copying our
+create some cast params by copying our
+overlap params because it's literally
+overlap params because it's literally
+overlap params because it's literally
+the exact same except for cast params
+the exact same except for cast params
+the exact same except for cast params
+and just change it to raycast params.new
+and just change it to raycast params.new
+and just change it to raycast params.new
+and we're going to replace all the
+and we're going to replace all the
+and we're going to replace all the
+overlap params with that and it's the
+overlap params with that and it's the
+overlap params with that and it's the
+exact same so we can just say cast
+exact same so we can just say cast
+exact same so we can just say cast
+params broadcast and I want to say
+params broadcast and I want to say
+params broadcast and I want to say
+return asked and
+return asked and
+return asked and
+as dot instance is descendant of subject
+as dot instance is descendant of subject
+as dot instance is descendant of subject
+so what we're doing here is we're saying
+so what we're doing here is we're saying
+so what we're doing here is we're saying
+if the cast exists so if we're if we hit
+if the cast exists so if we're if we hit
+if the cast exists so if we're if we hit
+them if we're within the line of sight
+them if we're within the line of sight
+them if we're within the line of sight
+and the thing that we hit is actually
+and the thing that we hit is actually
+and the thing that we hit is actually
+part of the subject that means we're
+part of the subject that means we're
+part of the subject that means we're
+good to go like the target is reachable
+good to go like the target is reachable
+good to go like the target is reachable
+we can shoot them so where to play this
+we can shoot them so where to play this
+we can shoot them so where to play this
+we should get more or less the same
+we should get more or less the same
+we should get more or less the same
+result best
+result best
+result best
+different kind of form of it yeah so
+different kind of form of it yeah so
+different kind of form of it yeah so
+points at us
+points at us
+points at us
+but I know it still stays locked on
+but I know it still stays locked on
+but I know it still stays locked on
+after we
+after we
+after we
+after we leave like the line of sight so
+after we leave like the line of sight so
+after we leave like the line of sight so
+we also need to set that so what we're
+we also need to set that so what we're
+we also need to set that so what we're
+going to do is we're going to say
+going to do is we're going to say
+going to do is we're going to say
+and then after the if not Target like in
+and then after the if not Target like in
+and then after the if not Target like in
+the other block we're gonna say else if
+the other block we're gonna say else if
+the other block we're gonna say else if
+is reachable with Target so each frame
+is reachable with Target so each frame
+is reachable with Target so each frame
+we're going to check if the target's
+we're going to check if the target's
+we're going to check if the target's
+still reachable and then we're gonna do
+still reachable and then we're gonna do
+still reachable and then we're gonna do
+stuff and then otherwise and then
+stuff and then otherwise and then
+stuff and then otherwise and then
+otherwise so at the very end of this
+otherwise so at the very end of this
+otherwise so at the very end of this
+chain so it's going to be three three
+chain so it's going to be three three
+chain so it's going to be three three
+if else chain I'm going to put Target
+if else chain I'm going to put Target
+if else chain I'm going to put Target
+equals no
+equals no
+equals no
+so what's going to happen is like if we
+so what's going to happen is like if we
+so what's going to happen is like if we
+don't have a Target we're gonna try to
+don't have a Target we're gonna try to
+don't have a Target we're gonna try to
+find a Target if we do have a Target and
+find a Target if we do have a Target and
+find a Target if we do have a Target and
+it's reachable we're gonna shoot them
+it's reachable we're gonna shoot them
+it's reachable we're gonna shoot them
+and this is where the shoot block will
+and this is where the shoot block will
+and this is where the shoot block will
+be otherwise if we don't have a Target
+be otherwise if we don't have a Target
+be otherwise if we don't have a Target
+or if we do have a Target and it's not
+or if we do have a Target and it's not
+or if we do have a Target and it's not
+reachable
+reachable
+reachable
+we're gonna we're gonna get rid of it
+we're gonna we're gonna get rid of it
+we're gonna we're gonna get rid of it
+because like we can't can't shoot so for
+because like we can't can't shoot so for
+because like we can't can't shoot so for
+testing I want to set Direction equal to
+testing I want to set Direction equal to
+testing I want to set Direction equal to
+some like vector three dot x-axis so
+some like vector three dot x-axis so
+some like vector three dot x-axis so
+just some random value
+just some random value
+just some random value
+and then we're going to run this
+and then we're going to run this
+and then we're going to run this
+so
+so
+so
+you can see it points wherever and so
+you can see it points wherever and so
+you can see it points wherever and so
+now we're just chilling we go we go into
+now we're just chilling we go we go into
+now we're just chilling we go we go into
+hiding
+you go into hiding and it just kind of
+you go into hiding and it just kind of
+you go into hiding and it just kind of
+points and points out a little nowhere
+points and points out a little nowhere
+points and points out a little nowhere
+and then
+and then
+and then
+move back in once at us we move out
+move back in once at us we move out
+move back in once at us we move out
+it goes back to position
+it goes back to position
+it goes back to position
+us
+us
+us
+go into hiding
+go into hiding
+go into hiding
+goes back
+goes back
+goes back
+so that's exactly what we want now we
+so that's exactly what we want now we
+so that's exactly what we want now we
+will be a leader adding an idle
+will be a leader adding an idle
+will be a leader adding an idle
+animation
+animation
+animation
+it is actually let's do it now pretty
+it is actually let's do it now pretty
+it is actually let's do it now pretty
+simple so
+simple so
+simple so
+idle animation what the heck does that
+idle animation what the heck does that
+idle animation what the heck does that
+mean well I've had a really simple way
+mean well I've had a really simple way
+mean well I've had a really simple way
+to do it it's kind of cheaty but
+to do it it's kind of cheaty but
+to do it it's kind of cheaty but
+it's not really cheating but it's just
+it's not really cheating but it's just
+it's not really cheating but it's just
+kind of cool trying to say local RNG
+kind of cool trying to say local RNG
+kind of cool trying to say local RNG
+equals random
+equals random
+equals random
+random.new and then down here
+random.new and then down here
+random.new and then down here
+in this block right above the lsif
+in this block right above the lsif
+in this block right above the lsif
+inside of if if not Target we're going
+inside of if if not Target we're going
+inside of if if not Target we're going
+to say if
+to say if
+to say if
+RNG
+RNG
+RNG
+next number so this returns a number
+next number so this returns a number
+next number so this returns a number
+between zero one is less than point
+between zero one is less than point
+between zero one is less than point
+zero zero five some small number like
+zero zero five some small number like
+zero zero five some small number like
+that we're going to say
+that we're going to say
+that we're going to say
+Direction equals RNG dot next unit
+Direction equals RNG dot next unit
+Direction equals RNG dot next unit
+Vector so what this will do is this is
+Vector so what this will do is this is
+Vector so what this will do is this is
+our random like number generator library
+our random like number generator library
+our random like number generator library
+in roblox actually pretty useful because
+in roblox actually pretty useful because
+in roblox actually pretty useful because
+we we get the next number we see if it's
+we we get the next number we see if it's
+we we get the next number we see if it's
+like so every so often if this is
+like so every so often if this is
+like so every so often if this is
+actually less than this value we're
+actually less than this value we're
+actually less than this value we're
+gonna move the target direction to some
+gonna move the target direction to some
+gonna move the target direction to some
+random number so this will basically
+random number so this will basically
+random number so this will basically
+look like it just looks kind of random
+look like it just looks kind of random
+look like it just looks kind of random
+places over time
+places over time
+places over time
+we'll see how this works
+we'll see how this works
+we'll see how this works
+you notice how it's pointing there now
+you notice how it's pointing there now
+you notice how it's pointing there now
+it's pointing there pointing there and
+it's pointing there pointing there and
+it's pointing there pointing there and
+the time between the points is different
+the time between the points is different
+the time between the points is different
+so it just looks kind of like it's
+so it just looks kind of like it's
+so it just looks kind of like it's
+panning around which is kind of sick
+panning around which is kind of sick
+panning around which is kind of sick
+then we go in and it's
+then we go in and it's
+then we go in and it's
+all right if we hide away
+all right if we hide away
+all right if we hide away
+it just goes
+it just goes
+it just goes
+why it's so different
+yeah there you go that's cool
+yeah there you go that's cool
+yeah there you go that's cool
+so we have our our Randomness covered
+so we have our our Randomness covered
+so we have our our Randomness covered
+and now
+and now
+and now
+now we actually have to get to the
+now we actually have to get to the
+now we actually have to get to the
+shooty bit
+shooty bit
+shooty bit
+Let's do let's do some shooting this is
+Let's do let's do some shooting this is
+Let's do let's do some shooting this is
+the fun part it's actually the last part
+the fun part it's actually the last part
+the fun part it's actually the last part
+of this tutorial as well
+of this tutorial as well
+of this tutorial as well
+I kind of sad we're almost done okay
+I kind of sad we're almost done okay
+I kind of sad we're almost done okay
+well let's go so in here
+well let's go so in here
+well let's go so in here
+we're going to we need to like do stuff
+we're going to we need to like do stuff
+we're going to we need to like do stuff
+so we're gonna say local cast equals
+so we're gonna say local cast equals
+so we're gonna say local cast equals
+workspace Dot raycast and where do you
+workspace Dot raycast and where do you
+workspace Dot raycast and where do you
+want to raycast one this is actually a
+want to raycast one this is actually a
+want to raycast one this is actually a
+question a question because
+question a question because
+question a question because
+we could do it from the ref
+we could do it from the ref
+we could do it from the ref
+but honestly to make it as most accurate
+but honestly to make it as most accurate
+but honestly to make it as most accurate
+as possible you should do it from the
+as possible you should do it from the
+as possible you should do it from the
+very tip of the gun so what I'm going to
+very tip of the gun so what I'm going to
+very tip of the gun so what I'm going to
+do is I'm going to
+do is I'm going to
+do is I'm going to
+go to my
+go to my
+go to my
+gun
+gun
+gun
+so we're going to use like this part
+so we're going to use like this part
+so we're going to use like this part
+here
+here
+here
+and then we're going to duplicate it
+all right we're going to change it move
+all right we're going to change it move
+all right we're going to change it move
+mode to geometric we're going to use alt
+mode to geometric we're going to use alt
+mode to geometric we're going to use alt
+I'll click select this part
+I'll click select this part
+I'll click select this part
+duplicate it
+duplicate it
+duplicate it
+and we're going to call this part the
+and we're going to call this part the
+and we're going to call this part the
+hip
+hip
+hip
+part and then we're going to
+part and then we're going to
+part and then we're going to
+make a ball just for testing purposes
+make a ball just for testing purposes
+make a ball just for testing purposes
+we're gonna move it out a little bit
+we're gonna move it out a little bit
+we're gonna move it out a little bit
+there
+there
+there
+good
+good
+good
+semi-transparent now we're going to
+semi-transparent now we're going to
+semi-transparent now we're going to
+for the orientation indicator I'm going
+for the orientation indicator I'm going
+for the orientation indicator I'm going
+to move it so
+what
+the front is facing down
+the front is forward like that with the
+the front is forward like that with the
+the front is forward like that with the
+up facing up just because we're going to
+up facing up just because we're going to
+up facing up just because we're going to
+shoot it out like that and so we need to
+shoot it out like that and so we need to
+shoot it out like that and so we need to
+make sure the the front is facing the
+make sure the the front is facing the
+make sure the the front is facing the
+front of the gun and then we're going to
+front of the gun and then we're going to
+front of the gun and then we're going to
+verify the welds are all set the welds
+verify the welds are all set the welds
+verify the welds are all set the welds
+look pretty set good stuff I'm gonna
+look pretty set good stuff I'm gonna
+look pretty set good stuff I'm gonna
+move the tip actually we can leave it in
+move the tip actually we can leave it in
+move the tip actually we can leave it in
+the housing
+the housing
+the housing
+and I'm actually going to make it
+and I'm actually going to make it
+and I'm actually going to make it
+transparent now that we have it done
+transparent now that we have it done
+transparent now that we have it done
+right off you don't really need it make
+right off you don't really need it make
+right off you don't really need it make
+sure anchor is off because it will be
+sure anchor is off because it will be
+sure anchor is off because it will be
+moving with the gun we want that so now
+moving with the gun we want that so now
+moving with the gun we want that so now
+we're going to go get that tip say a
+we're going to go get that tip say a
+we're going to go get that tip say a
+local tip equals
+local tip equals
+local tip equals
+hurt
+hurt
+hurt
+housing dot pip and then what we want to
+housing dot pip and then what we want to
+housing dot pip and then what we want to
+do
+do
+do
+is we want to raycast from the tip Dot
+is we want to raycast from the tip Dot
+is we want to raycast from the tip Dot
+position to the tip.c frame
+position to the tip.c frame
+position to the tip.c frame
+about look Vector times some value I
+about look Vector times some value I
+about look Vector times some value I
+want to say a hundred and we're not
+want to say a hundred and we're not
+want to say a hundred and we're not
+gonna put in our cast params because if
+gonna put in our cast params because if
+gonna put in our cast params because if
+this if this laser beam collides with
+this if this laser beam collides with
+this if this laser beam collides with
+anything even if it's a turret we need
+anything even if it's a turret we need
+anything even if it's a turret we need
+to stop it because we can't can't be
+to stop it because we can't can't be
+to stop it because we can't can't be
+having that like it has to it has to
+having that like it has to it has to
+having that like it has to it has to
+just keep on shooting you know or it
+just keep on shooting you know or it
+just keep on shooting you know or it
+can't just shoot through our own turret
+can't just shoot through our own turret
+can't just shoot through our own turret
+that doesn't make any sense so if we
+that doesn't make any sense so if we
+that doesn't make any sense so if we
+have the cast and the cast dot instance
+have the cast and the cast dot instance
+have the cast and the cast dot instance
+is
+is
+is
+descendant
+descendant
+descendant
+and of the target so if we hit something
+and of the target so if we hit something
+and of the target so if we hit something
+and it's
+and it's
+and it's
+and it's part of the target we got we
+and it's part of the target we got we
+and it's part of the target we got we
+gotta shoot them
+gotta shoot them
+gotta shoot them
+so we're gonna say Target
+so we're gonna say Target
+so we're gonna say Target
+Dot humulated
+human Elite take
+human Elite take
+human Elite take
+damage and
+damage and
+damage and
+I'm just going to say 10 is like a
+I'm just going to say 10 is like a
+I'm just going to say 10 is like a
+random damage value but I guess we can
+random damage value but I guess we can
+random damage value but I guess we can
+go into our
+go into our
+go into our
+thing change it to into our turret make
+thing change it to into our turret make
+thing change it to into our turret make
+an attribute called as damage set this
+an attribute called as damage set this
+an attribute called as damage set this
+to like 10.
+to like 10.
+to like 10.
+also depression is all capsules
+oh depression looks a little bit more
+oh depression looks a little bit more
+oh depression looks a little bit more
+a little more sense I'm gonna say
+a little more sense I'm gonna say
+a little more sense I'm gonna say
+local damage for it
+local damage for it
+local damage for it
+attribute
+attribute
+attribute
+damage
+in order to save damage all caps and now
+in order to save damage all caps and now
+in order to save damage all caps and now
+we're going to go down take damage the
+we're going to go down take damage the
+we're going to go down take damage the
+damage amount specify here we go and
+damage amount specify here we go and
+damage amount specify here we go and
+then we'll visualize it later but let's
+then we'll visualize it later but let's
+then we'll visualize it later but let's
+just double check this works and shoots
+just double check this works and shoots
+just double check this works and shoots
+us
+us
+us
+we're gonna play it
+so I thought I thought I only told it to
+so I thought I thought I only told it to
+so I thought I thought I only told it to
+do 10 damage but let's let's double
+do 10 damage but let's let's double
+do 10 damage but let's let's double
+check let's double check so David said
+check let's double check so David said
+check let's double check so David said
+oh wait look at that we don't have a d
+oh wait look at that we don't have a d
+oh wait look at that we don't have a d
+bounce so I have a video on D bouncing
+bounce so I have a video on D bouncing
+bounce so I have a video on D bouncing
+if you guys want to check it out but
+if you guys want to check it out but
+if you guys want to check it out but
+what that means is we don't have a
+what that means is we don't have a
+what that means is we don't have a
+cooldown so when it sees us it zaps us
+cooldown so when it sees us it zaps us
+cooldown so when it sees us it zaps us
+like like it takes like it's it's like
+like like it takes like it's it's like
+like like it takes like it's it's like
+only 100 frames for us to die so we need
+only 100 frames for us to die so we need
+only 100 frames for us to die so we need
+to add cooldown so the way we're going
+to add cooldown so the way we're going
+to add cooldown so the way we're going
+to do that is if we're going to go to
+to do that is if we're going to go to
+to do that is if we're going to go to
+the top outside of our stepped Loop and
+the top outside of our stepped Loop and
+the top outside of our stepped Loop and
+we're gonna say local shot time equals
+we're gonna say local shot time equals
+we're gonna say local shot time equals
+zero this is gonna be the time in
+zero this is gonna be the time in
+zero this is gonna be the time in
+between shots and so
+between shots and so
+between shots and so
+we also need to add a new attribute I'm
+we also need to add a new attribute I'm
+we also need to add a new attribute I'm
+going to call this the cooldown so this
+going to call this the cooldown so this
+going to call this the cooldown so this
+is the cooldown
+is the cooldown
+is the cooldown
+between shots the number attribute and
+between shots the number attribute and
+between shots the number attribute and
+we're going to set that to 1.5 seconds
+we're going to set that to 1.5 seconds
+we're going to set that to 1.5 seconds
+I'm gonna go to the top
+I'm gonna go to the top
+I'm gonna go to the top
+we're going to
+we're going to
+we're going to
+a local rule down
+a local rule down
+a local rule down
+equals turret
+equals turret
+equals turret
+um get attribute
+um get attribute
+um get attribute
+cool down there you go and then we're
+cool down there you go and then we're
+cool down there you go and then we're
+going we need a we need to actually set
+going we need a we need to actually set
+going we need a we need to actually set
+cool down so
+cool down so
+cool down so
+underneath R is reachable we're going to
+underneath R is reachable we're going to
+underneath R is reachable we're going to
+say if
+ET elapsed time minus shot time is
+ET elapsed time minus shot time is
+ET elapsed time minus shot time is
+greater than equal to
+greater than equal to
+greater than equal to
+cool down
+cool down
+cool down
+then we're gonna do all this junk
+and then inside of our inner then after
+and then inside of our inner then after
+and then inside of our inner then after
+the cat if we verify that we can
+the cat if we verify that we can
+the cat if we verify that we can
+actually shoot we're gonna set the shot
+actually shoot we're gonna set the shot
+actually shoot we're gonna set the shot
+time equal
+time equal
+time equal
+the elapsed time so this ET if you
+the elapsed time so this ET if you
+the elapsed time so this ET if you
+remember goes into here and it's the
+remember goes into here and it's the
+remember goes into here and it's the
+time that has elapsed since like the
+time that has elapsed since like the
+time that has elapsed since like the
+beginning of the game so what this
+beginning of the game so what this
+beginning of the game so what this
+basically means is
+basically means is
+basically means is
+when the elapsed time
+when the elapsed time
+when the elapsed time
+is
+is
+is
+like minus draw time so this like value
+like minus draw time so this like value
+like minus draw time so this like value
+so this will keep on going up this will
+so this will keep on going up this will
+so this will keep on going up this will
+stay static once that's greater than
+stay static once that's greater than
+stay static once that's greater than
+cooldown so once enough time has passed
+cooldown so once enough time has passed
+cooldown so once enough time has passed
+that the distance between when we shot
+that the distance between when we shot
+that the distance between when we shot
+last and what time it is now is greater
+last and what time it is now is greater
+last and what time it is now is greater
+than the cooldown
+than the cooldown
+than the cooldown
+then we can shoot again
+then we can shoot again
+then we can shoot again
+then we reset the shot time so we can't
+then we reset the shot time so we can't
+then we reset the shot time so we can't
+shoot again until that after that's done
+shoot again until that after that's done
+shoot again until that after that's done
+let's go try this out
+oh
+let's go see what we messed up on
+let's go see what we messed up on
+let's go see what we messed up on
+we misspelled turret that's tragic there
+we misspelled turret that's tragic there
+we misspelled turret that's tragic there
+you go turret spelled correctly
+you go turret spelled correctly
+you go turret spelled correctly
+we're going back in to this AI laser
+we're going back in to this AI laser
+we're going back in to this AI laser
+turret shoot me what
+turret shoot me what
+turret shoot me what
+you can see now the health now my health
+you can see now the health now my health
+you can see now the health now my health
+is going it's going down quite slowly
+is going it's going down quite slowly
+is going it's going down quite slowly
+hey ladies and gentlemen we're almost
+hey ladies and gentlemen we're almost
+hey ladies and gentlemen we're almost
+done all we got to do is visualize that
+done all we got to do is visualize that
+done all we got to do is visualize that
+that Dawn cast so let's let's do that
+that Dawn cast so let's let's do that
+that Dawn cast so let's let's do that
+I'm gonna make I'm gonna go to part
+I'm gonna make I'm gonna go to part
+I'm gonna make I'm gonna go to part
+three cylinder boom cylinder gonna make
+three cylinder boom cylinder gonna make
+three cylinder boom cylinder gonna make
+it pretty
+it pretty
+it pretty
+well if I remember correctly I did
+well if I remember correctly I did
+well if I remember correctly I did
+alert
+alert
+alert
+came a color for my uh what kind of like
+came a color for my uh what kind of like
+came a color for my uh what kind of like
+theme make that thing neon boom neon
+theme make that thing neon boom neon
+theme make that thing neon boom neon
+laser beam done now we need to make it a
+laser beam done now we need to make it a
+laser beam done now we need to make it a
+little thin we're gonna make this like
+little thin we're gonna make this like
+little thin we're gonna make this like
+point
+actual distance doesn't matter that
+actual distance doesn't matter that
+actual distance doesn't matter that
+one's a little deep
+look at how he's girthy there you go so
+look at how he's girthy there you go so
+look at how he's girthy there you go so
+if you remember if you want to watch my
+if you remember if you want to watch my
+if you remember if you want to watch my
+stun gun video for kind of like a
+stun gun video for kind of like a
+stun gun video for kind of like a
+similar idea what we want to do since
+similar idea what we want to do since
+similar idea what we want to do since
+we're using a cylinder is a cylinder's
+we're using a cylinder is a cylinder's
+we're using a cylinder is a cylinder's
+front face kind of faces the middle of
+front face kind of faces the middle of
+front face kind of faces the middle of
+nowhere so like faces like that way we
+nowhere so like faces like that way we
+nowhere so like faces like that way we
+we don't really like that what we're
+we don't really like that what we're
+we don't really like that what we're
+gonna do because we're gonna use like
+gonna do because we're gonna use like
+gonna do because we're gonna use like
+some c-frame positioning to get it in
+some c-frame positioning to get it in
+some c-frame positioning to get it in
+the right spot and what we want to do is
+the right spot and what we want to do is
+the right spot and what we want to do is
+instead of like manually rotating it
+instead of like manually rotating it
+instead of like manually rotating it
+whatever we're gonna actually edit our
+whatever we're gonna actually edit our
+whatever we're gonna actually edit our
+pivot
+pivot
+pivot
+because when we actually use the pivot
+because when we actually use the pivot
+because when we actually use the pivot
+we want it to be at the very back like
+we want it to be at the very back like
+we want it to be at the very back like
+back here and we want it to be rotated
+back here and we want it to be rotated
+back here and we want it to be rotated
+acing
+acing
+acing
+um
+um
+um
+not the right way you want to actually
+not the right way you want to actually
+not the right way you want to actually
+be rotated facing
+be rotated facing
+be rotated facing
+our uh the front of like the gun so
+our uh the front of like the gun so
+our uh the front of like the gun so
+the way I get this to work usually is
+the way I get this to work usually is
+the way I get this to work usually is
+make sure that your pivot offset
+make sure that your pivot offset
+make sure that your pivot offset
+orientation the Y is negative nine
+orientation the Y is negative nine
+orientation the Y is negative nine
+that's how you usually do it if you move
+that's how you usually do it if you move
+that's how you usually do it if you move
+it off to the side now depending on
+it off to the side now depending on
+it off to the side now depending on
+which side like you move it you may have
+which side like you move it you may have
+which side like you move it you may have
+to change this to positive 90. but every
+to change this to positive 90. but every
+to change this to positive 90. but every
+time I've done this negative this is
+time I've done this negative this is
+time I've done this negative this is
+again this is another trial by
+again this is another trial by
+again this is another trial by
+file like
+file like
+file like
+do it mess up and then figure it out but
+do it mess up and then figure it out but
+do it mess up and then figure it out but
+I move this to the edge just to
+I move this to the edge just to
+I move this to the edge just to
+demonstrate you because we'll position
+demonstrate you because we'll position
+demonstrate you because we'll position
+it like using the pivot but remember I
+it like using the pivot but remember I
+it like using the pivot but remember I
+am very important move your pivot back
+am very important move your pivot back
+am very important move your pivot back
+to the very center of your part make
+to the very center of your part make
+to the very center of your part make
+sure this position is set to zero zero
+sure this position is set to zero zero
+sure this position is set to zero zero
+zero because you don't want to because
+zero because you don't want to because
+zero because you don't want to because
+we're going to be offsetting it again
+we're going to be offsetting it again
+we're going to be offsetting it again
+so this is our little thing done and
+and so for
+so now I'm going to rename this to our
+so now I'm going to rename this to our
+so now I'm going to rename this to our
+beam
+beam
+beam
+and I'm actually going to hear it
+and I'm actually going to hear it
+and I'm actually going to hear it
+and can't Collide off
+and can't Collide off
+and can't Collide off
+on can query off because we don't want
+on can query off because we don't want
+on can query off because we don't want
+it to be able to be detected by rays and
+it to be able to be detected by rays and
+it to be able to be detected by rays and
+I'm just gonna move it
+I'm just gonna move it
+I'm just gonna move it
+within my
+within my
+within my
+AI laser turret because when you guys
+AI laser turret because when you guys
+AI laser turret because when you guys
+copy it I don't want to have anything be
+copy it I don't want to have anything be
+copy it I don't want to have anything be
+in server stores but in an actual game I
+in server stores but in an actual game I
+in server stores but in an actual game I
+would totally recommend putting this in
+would totally recommend putting this in
+would totally recommend putting this in
+server storage but I can do this because
+server storage but I can do this because
+server storage but I can do this because
+you know you can't clearly see that it's
+you know you can't clearly see that it's
+you know you can't clearly see that it's
+gonna kind of lodged in there so now we
+gonna kind of lodged in there so now we
+gonna kind of lodged in there so now we
+can go to our turret script we can go to
+can go to our turret script we can go to
+can go to our turret script we can go to
+we can go get our local beam temp late
+we can go get our local beam temp late
+we can go get our local beam temp late
+equals where it's dot b
+beam there we go wait the beam is not
+beam there we go wait the beam is not
+beam there we go wait the beam is not
+yeah there you go generally ala is a
+yeah there you go generally ala is a
+yeah there you go generally ala is a
+turn down so we got the third dot beam
+turn down so we got the third dot beam
+turn down so we got the third dot beam
+boom
+boom
+boom
+and then we want to
+and then we want to
+and then we want to
+and our
+and our
+and our
+take damage block a little bit below
+take damage block a little bit below
+take damage block a little bit below
+we're gonna say local beam equals beam
+we're gonna say local beam equals beam
+we're gonna say local beam equals beam
+template clone I'm gonna say beam dot
+template clone I'm gonna say beam dot
+template clone I'm gonna say beam dot
+size equals vector3. new
+size equals vector3. new
+size equals vector3. new
+past dot distance so how how far it
+past dot distance so how how far it
+past dot distance so how how far it
+takes for us to hit it and we're going
+takes for us to hit it and we're going
+takes for us to hit it and we're going
+to just reuse the beam dot size
+to just reuse the beam dot size
+to just reuse the beam dot size
+game.size.y and then beam
+game.size.y and then beam
+game.size.y and then beam
+dot size dot Z because cylinders the x
+dot size dot Z because cylinders the x
+dot size dot Z because cylinders the x
+is like kind of the length
+is like kind of the length
+is like kind of the length
+that's what we want to use and we said
+that's what we want to use and we said
+that's what we want to use and we said
+the beam.pivot offset
+the beam.pivot offset
+the beam.pivot offset
+equal to beam dot pivot offset minus
+equal to beam dot pivot offset minus
+equal to beam dot pivot offset minus
+vector3 dot x-axis Times cast dot
+vector3 dot x-axis Times cast dot
+vector3 dot x-axis Times cast dot
+distance divided by two so what this
+distance divided by two so what this
+distance divided by two so what this
+does is we
+does is we
+does is we
+we set we offset our beam pivot I
+we set we offset our beam pivot I
+we set we offset our beam pivot I
+half the distance because we want it to
+half the distance because we want it to
+half the distance because we want it to
+be at the very edge like I showed you a
+be at the very edge like I showed you a
+be at the very edge like I showed you a
+couple seconds ago and we can't really
+couple seconds ago and we can't really
+couple seconds ago and we can't really
+set it to the edge
+set it to the edge
+set it to the edge
+um before because we set the size
+um before because we set the size
+um before because we set the size
+programmatically so therefore we have a
+programmatically so therefore we have a
+programmatically so therefore we have a
+position programmatically
+position programmatically
+position programmatically
+but after we do that now we can just do
+but after we do that now we can just do
+but after we do that now we can just do
+beam pivot two
+beam pivot two
+beam pivot two
+hip dot C frame and that that's the
+hip dot C frame and that that's the
+hip dot C frame and that that's the
+beauty of using pivots is because all we
+beauty of using pivots is because all we
+beauty of using pivots is because all we
+have to do to actually move it is Pivot
+have to do to actually move it is Pivot
+have to do to actually move it is Pivot
+to the actual tip where it is and it'll
+to the actual tip where it is and it'll
+to the actual tip where it is and it'll
+be positioned it correctly all we have
+be positioned it correctly all we have
+be positioned it correctly all we have
+to do is set the beam.parent equal to
+to do is set the beam.parent equal to
+to do is set the beam.parent equal to
+the workspace
+the workspace
+the workspace
+and then we also want to get rid of it
+and then we also want to get rid of it
+and then we also want to get rid of it
+after a certain time so I'm going to go
+after a certain time so I'm going to go
+after a certain time so I'm going to go
+to the very top say local to breathe
+to the very top say local to breathe
+to the very top say local to breathe
+this game get service debris
+this game get service debris
+this game get service debris
+and then we're going to
+and then we're going to
+and then we're going to
+set we're going to do debris add item
+set we're going to do debris add item
+set we're going to do debris add item
+after like 0.5 seconds so it's gonna
+after like 0.5 seconds so it's gonna
+after like 0.5 seconds so it's gonna
+just clear the item off the
+just clear the item off the
+just clear the item off the
+off the workspace after 0.5 seconds so
+off the workspace after 0.5 seconds so
+off the workspace after 0.5 seconds so
+let's play this thing
+let's play this thing
+let's play this thing
+see if it works
+it does work
+it does work
+it does work
+that's beautiful
+that's beautiful
+that's beautiful
+so there you have it you got you got
+so there you have it you got you got
+so there you have it you got you got
+your AI laser turret look at that thing
+your AI laser turret look at that thing
+your AI laser turret look at that thing
+so Majestic so you want you walk towards
+so Majestic so you want you walk towards
+so Majestic so you want you walk towards
+it walks on or zapping you run away
+it walks on or zapping you run away
+it walks on or zapping you run away
+no no you're out of range
+yo go back into hiding
+yo go back into hiding
+yo go back into hiding
+and it goes away
+and it goes away
+and it goes away
+this thing this thing is beautiful I
+this thing this thing is beautiful I
+this thing this thing is beautiful I
+mean look at how sick it is
+mean look at how sick it is
+mean look at how sick it is
+I mean I actually love this was such a
+I mean I actually love this was such a
+I mean I actually love this was such a
+fun project to do
+fun project to do
+fun project to do
+I hope you guys enjoyed it it's it's
+I hope you guys enjoyed it it's it's
+I hope you guys enjoyed it it's it's
+just really freaking cool
+just really freaking cool
+just really freaking cool
+it just zaps you
+it just zaps you
+it just zaps you
+kind of sick
+kind of sick
+kind of sick
+and he kills you and boom that's it
+and he kills you and boom that's it
+and he kills you and boom that's it
+but yeah I hope you enjoyed this video I
+but yeah I hope you enjoyed this video I
+but yeah I hope you enjoyed this video I
+hope you enjoyed the last video too
+hope you enjoyed the last video too
+hope you enjoyed the last video too
+and if you want any more things using
+and if you want any more things using
+and if you want any more things using
+this technology just let me know because
+this technology just let me know because
+this technology just let me know because
+you can you make it take turret out of
+you can you make it take turret out of
+you can you make it take turret out of
+this you can make a battleship gun out
+this you can make a battleship gun out
+this you can make a battleship gun out
+of this using like protectiles and stuff
+of this using like protectiles and stuff
+of this using like protectiles and stuff
+using fast cast whatever you can do
+using fast cast whatever you can do
+using fast cast whatever you can do
+stuff like that too so
+stuff like that too so
+stuff like that too so
+with that
+with that
+with that
+also one other thing I remembered it
+also one other thing I remembered it
+also one other thing I remembered it
+um just make sure you get rid of your
+um just make sure you get rid of your
+um just make sure you get rid of your
+references to your target part because
+references to your target part because
+references to your target part because
+that's just I can
+that's just I can
+that's just I can
+where is the Target
+yeah so we can just get rid of this we
+yeah so we can just get rid of this we
+yeah so we can just get rid of this we
+don't need this other than that that's
+don't need this other than that that's
+don't need this other than that that's
+it so I comment any questions or
+it so I comment any questions or
+it so I comment any questions or
+suggestions down below uh like And
+suggestions down below uh like And
+suggestions down below uh like And
+subscribe if you enjoyed it I really
+subscribe if you enjoyed it I really
+subscribe if you enjoyed it I really
+enjoyed making this it's a nice nice
+enjoyed making this it's a nice nice
+enjoyed making this it's a nice nice
+video but with that I hope you have a
+video but with that I hope you have a
+video but with that I hope you have a
+nice day and goodbye
+nice day and goodbye
+nice day and goodbye
+thank you
+[Music]
+[Music]
+[Music]
+thank you

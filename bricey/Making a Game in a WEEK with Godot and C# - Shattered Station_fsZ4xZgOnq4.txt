@@ -1,0 +1,1128 @@
+so i made a game in a week
+so i made a game in a week
+so i made a game in a week
+and if you're wondering why i made a
+and if you're wondering why i made a
+and if you're wondering why i made a
+video game in a week it's because i
+video game in a week it's because i
+video game in a week it's because i
+participated in
+participated in
+participated in
+the brackies game jam the first one of
+the brackies game jam the first one of
+the brackies game jam the first one of
+if you don't know what a game jam is
+if you don't know what a game jam is
+if you don't know what a game jam is
+it's basically a
+it's basically a
+it's basically a
+challenge where you have to create a
+challenge where you have to create a
+challenge where you have to create a
+game within a specified time period in
+game within a specified time period in
+game within a specified time period in
+this case it's a week
+this case it's a week
+this case it's a week
+around a given theme and this jams theme
+around a given theme and this jams theme
+around a given theme and this jams theme
+was better together so you can interpret
+was better together so you can interpret
+was better together so you can interpret
+it any way you want
+it any way you want
+it any way you want
+and this is the game that i created
+and this is the game that i created
+and this is the game that i created
+called shattered station and i made it
+called shattered station and i made it
+called shattered station and i made it
+with the godot game engine
+with the godot game engine
+with the godot game engine
+so the whole idea of my game is you're
+so the whole idea of my game is you're
+so the whole idea of my game is you're
+a ship this is my ship i can shoot a
+a ship this is my ship i can shoot a
+a ship this is my ship i can shoot a
+laser
+laser
+laser
+and i'm tasked with protecting this
+and i'm tasked with protecting this
+and i'm tasked with protecting this
+shattered station it was once a
+shattered station it was once a
+shattered station it was once a
+mighty great station but now it lays in
+mighty great station but now it lays in
+mighty great station but now it lays in
+ruin
+ruin
+ruin
+but some of the pieces of the station
+but some of the pieces of the station
+but some of the pieces of the station
+can be found
+can be found
+can be found
+around the area and when you get it
+around the area and when you get it
+around the area and when you get it
+close enough
+close enough
+close enough
+to your station it can connect to it
+to your station it can connect to it
+to your station it can connect to it
+to allow you to defend against the
+to allow you to defend against the
+to allow you to defend against the
+hordes of asteroids that
+hordes of asteroids that
+hordes of asteroids that
+threaten to destroy your mighty
+threaten to destroy your mighty
+threaten to destroy your mighty
+station so this is the whole idea it's a
+station so this is the whole idea it's a
+station so this is the whole idea it's a
+very very simple concept
+very very simple concept
+very very simple concept
+that can lead to some pretty interesting
+that can lead to some pretty interesting
+that can lead to some pretty interesting
+gameplay surprisingly
+gameplay surprisingly
+gameplay surprisingly
+well all i got to do is shoot the
+well all i got to do is shoot the
+well all i got to do is shoot the
+asteroids my turrets can shoot for me
+asteroids my turrets can shoot for me
+asteroids my turrets can shoot for me
+you can see they're kind of kind of
+you can see they're kind of kind of
+you can see they're kind of kind of
+janky sometimes cool thing is
+janky sometimes cool thing is
+janky sometimes cool thing is
+also i can interact with the asteroids
+also i can interact with the asteroids
+also i can interact with the asteroids
+with my
+with my
+with my
+ship so i can actually just like body
+ship so i can actually just like body
+ship so i can actually just like body
+block them
+block them
+block them
+and so this fits the theme because like
+and so this fits the theme because like
+and so this fits the theme because like
+you're trying to bring all of these
+you're trying to bring all of these
+you're trying to bring all of these
+pieces like together and they're
+pieces like together and they're
+pieces like together and they're
+actually better together since they
+actually better together since they
+actually better together since they
+can't really do anything apart you'd
+can't really do anything apart you'd
+can't really do anything apart you'd
+probably die
+probably die
+probably die
+if you don't have enough turrets to
+if you don't have enough turrets to
+if you don't have enough turrets to
+defend your station
+defend your station
+defend your station
+but yeah it's a pretty fun game for the
+but yeah it's a pretty fun game for the
+but yeah it's a pretty fun game for the
+amount of time
+amount of time
+amount of time
+that i took to make it it's not polished
+that i took to make it it's not polished
+that i took to make it it's not polished
+at
+at
+at
+all because there's like first of all
+all because there's like first of all
+all because there's like first of all
+there's like a little bit of music
+there's like a little bit of music
+there's like a little bit of music
+there's no sound whatsoever there are a
+there's no sound whatsoever there are a
+there's no sound whatsoever there are a
+few bugs
+few bugs
+few bugs
+and a lot of bugs are like game breaking
+and a lot of bugs are like game breaking
+and a lot of bugs are like game breaking
+but the idea
+but the idea
+but the idea
+is actually pretty solid and i'm pretty
+is actually pretty solid and i'm pretty
+is actually pretty solid and i'm pretty
+proud of myself for coming up with it
+proud of myself for coming up with it
+proud of myself for coming up with it
+because it's a good example of emergent
+because it's a good example of emergent
+because it's a good example of emergent
+behavior you have a very simple
+behavior you have a very simple
+behavior you have a very simple
+idea which is that you have your
+idea which is that you have your
+idea which is that you have your
+ship and you have your station and you
+ship and you have your station and you
+ship and you have your station and you
+have these little turrets that have to
+have these little turrets that have to
+have these little turrets that have to
+connect to the station
+connect to the station
+connect to the station
+but it can lead to like a bunch of cool
+but it can lead to like a bunch of cool
+but it can lead to like a bunch of cool
+things like where you have clusters of
+things like where you have clusters of
+things like where you have clusters of
+just
+just
+just
+turrets everywhere trying to defend your
+turrets everywhere trying to defend your
+turrets everywhere trying to defend your
+station and like
+station and like
+station and like
+asteroids are coming like crazy and the
+asteroids are coming like crazy and the
+asteroids are coming like crazy and the
+difficulty does get a little bit harder
+difficulty does get a little bit harder
+difficulty does get a little bit harder
+i'm probably gonna lose right now but
+i'm probably gonna lose right now but
+i'm probably gonna lose right now but
+it's pretty frantic as well because you
+it's pretty frantic as well because you
+it's pretty frantic as well because you
+gotta
+gotta
+gotta
+find good times to get
+find good times to get
+find good times to get
+all of your stuff together so you don't
+all of your stuff together so you don't
+all of your stuff together so you don't
+get destroyed while you're out getting
+get destroyed while you're out getting
+get destroyed while you're out getting
+other turrets and whatever
+other turrets and whatever
+other turrets and whatever
+and one thing you'll also notice is the
+and one thing you'll also notice is the
+and one thing you'll also notice is the
+art
+art
+art
+all of this art was made by me
+all of this art was made by me
+all of this art was made by me
+i'm actually quite proud of it because
+i'm actually quite proud of it because
+i'm actually quite proud of it because
+i'm not
+i'm not
+i'm not
+used to pixel art i haven't really done
+used to pixel art i haven't really done
+used to pixel art i haven't really done
+pixel art before
+pixel art before
+pixel art before
+but a lot of pixel art that i've seen in
+but a lot of pixel art that i've seen in
+but a lot of pixel art that i've seen in
+games like especially like minecraft or
+games like especially like minecraft or
+games like especially like minecraft or
+other like vauxhall games has been
+other like vauxhall games has been
+other like vauxhall games has been
+really nice and i really enjoy the art
+really nice and i really enjoy the art
+really nice and i really enjoy the art
+style
+style
+style
+and it's a nice programmer art since i'm
+and it's a nice programmer art since i'm
+and it's a nice programmer art since i'm
+only working with like 16 pixels
+only working with like 16 pixels
+only working with like 16 pixels
+so i can make art that looks decent
+so i can make art that looks decent
+so i can make art that looks decent
+without having the artistic skill or the
+without having the artistic skill or the
+without having the artistic skill or the
+hardware to do that either so yeah
+hardware to do that either so yeah
+hardware to do that either so yeah
+and so as i said before this game was
+and so as i said before this game was
+and so as i said before this game was
+created using the godot
+created using the godot
+created using the godot
+game engine which i really
+game engine which i really
+game engine which i really
+really enjoy so as you know if you've
+really enjoy so as you know if you've
+really enjoy so as you know if you've
+watched my channel for some time
+watched my channel for some time
+watched my channel for some time
+i tried making a game in unity that
+i tried making a game in unity that
+i tried making a game in unity that
+didn't really go too well
+didn't really go too well
+didn't really go too well
+i don't know i just couldn't really mesh
+i don't know i just couldn't really mesh
+i don't know i just couldn't really mesh
+with unity it's a great game engine a
+with unity it's a great game engine a
+with unity it's a great game engine a
+lot of people use
+lot of people use
+lot of people use
+a lot of really really good games have
+a lot of really really good games have
+a lot of really really good games have
+been created using it
+been created using it
+been created using it
+but the whole entity component system
+but the whole entity component system
+but the whole entity component system
+just didn't really
+just didn't really
+just didn't really
+fit with me because a lot of the
+fit with me because a lot of the
+fit with me because a lot of the
+tutorials i was watching to like learn
+tutorials i was watching to like learn
+tutorials i was watching to like learn
+it
+it
+it
+would just weren't really conveying like
+would just weren't really conveying like
+would just weren't really conveying like
+the best strategies a lot of stuff was
+the best strategies a lot of stuff was
+the best strategies a lot of stuff was
+just
+just
+just
+temporary like the coupling that unity
+temporary like the coupling that unity
+temporary like the coupling that unity
+uses
+uses
+uses
+like initially for beginners is just
+like initially for beginners is just
+like initially for beginners is just
+crazy coupling is basically where
+crazy coupling is basically where
+crazy coupling is basically where
+one game object for example is connected
+one game object for example is connected
+one game object for example is connected
+to another
+to another
+to another
+with like references or variables or
+with like references or variables or
+with like references or variables or
+something and that's just bad for your
+something and that's just bad for your
+something and that's just bad for your
+code because you shouldn't have to
+code because you shouldn't have to
+code because you shouldn't have to
+understand
+understand
+understand
+everything if you want to understand one
+everything if you want to understand one
+everything if you want to understand one
+specific category
+specific category
+specific category
+of your code but godot is different
+of your code but godot is different
+of your code but godot is different
+it uses nodes not game objects and
+it uses nodes not game objects and
+it uses nodes not game objects and
+components
+components
+components
+which is very similar to roblox
+which is very similar to roblox
+which is very similar to roblox
+if you've ever played around with roblox
+if you've ever played around with roblox
+if you've ever played around with roblox
+and used all like the scripts and the
+and used all like the scripts and the
+and used all like the scripts and the
+parts whatever
+parts whatever
+parts whatever
+each like instance in roblox is
+each like instance in roblox is
+each like instance in roblox is
+basically a
+basically a
+basically a
+node and there's hierarchies you can
+node and there's hierarchies you can
+node and there's hierarchies you can
+traverse the hierarchy like via
+traverse the hierarchy like via
+traverse the hierarchy like via
+script.parent.something
+script.parent.something
+script.parent.something
+whatever this is what godot uses it's
+whatever this is what godot uses it's
+whatever this is what godot uses it's
+very
+very
+very
+very similar and i really enjoy it so
+very similar and i really enjoy it so
+very similar and i really enjoy it so
+like here's my main scene
+like here's my main scene
+like here's my main scene
+and scenes are nodes as well so right
+and scenes are nodes as well so right
+and scenes are nodes as well so right
+now
+now
+now
+it's a node 2d which is just a 2d node
+it's a node 2d which is just a 2d node
+it's a node 2d which is just a 2d node
+it has
+it has
+it has
+a transform and i have some like
+a transform and i have some like
+a transform and i have some like
+parallax stuff
+parallax stuff
+parallax stuff
+and then my player which is a kinematic
+and then my player which is a kinematic
+and then my player which is a kinematic
+body which is basically a
+body which is basically a
+body which is basically a
+physics body that can be controlled by
+physics body that can be controlled by
+physics body that can be controlled by
+the player via script
+the player via script
+the player via script
+and i'll show you that script in just a
+and i'll show you that script in just a
+and i'll show you that script in just a
+second and you have all my gui's
+second and you have all my gui's
+second and you have all my gui's
+and these are just nodes as well i can
+and these are just nodes as well i can
+and these are just nodes as well i can
+expand them out
+expand them out
+expand them out
+it's very verbose their gui system is
+it's very verbose their gui system is
+it's very verbose their gui system is
+also
+also
+also
+very very good because this like all of
+very very good because this like all of
+very very good because this like all of
+this gui was created using
+this gui was created using
+this gui was created using
+their gui objects in
+their gui objects in
+their gui objects in
+in-house so if i go here
+in-house so if i go here
+in-house so if i go here
+all the nodes i can create any node i
+all the nodes i can create any node i
+all the nodes i can create any node i
+want godot also has a 3d
+want godot also has a 3d
+want godot also has a 3d
+area that's what the spatials are right
+area that's what the spatials are right
+area that's what the spatials are right
+now i'm using node 2d
+now i'm using node 2d
+now i'm using node 2d
+which has a ton of stuff godot's 2d is
+which has a ton of stuff godot's 2d is
+which has a ton of stuff godot's 2d is
+really expansive it's actually
+really expansive it's actually
+really expansive it's actually
+independent of its 3d engine unlike
+independent of its 3d engine unlike
+independent of its 3d engine unlike
+unity where
+unity where
+unity where
+the 2d is just a lousy port of the
+the 2d is just a lousy port of the
+the 2d is just a lousy port of the
+3d version just without an axis and with
+3d version just without an axis and with
+3d version just without an axis and with
+a different type of camera
+a different type of camera
+a different type of camera
+and yeah i really enjoy it also the
+and yeah i really enjoy it also the
+and yeah i really enjoy it also the
+units are in pixels
+units are in pixels
+units are in pixels
+so it makes sending all my pixlr up
+so it makes sending all my pixlr up
+so it makes sending all my pixlr up
+very very simple which is quite nice so
+very very simple which is quite nice so
+very very simple which is quite nice so
+now we can take a look
+now we can take a look
+now we can take a look
+at the scripts that i'm using
+at the scripts that i'm using
+at the scripts that i'm using
+whoops there we go so i'm using c
+whoops there we go so i'm using c
+whoops there we go so i'm using c
+sharp to programming godot godot has a
+sharp to programming godot godot has a
+sharp to programming godot godot has a
+few options
+few options
+few options
+for scripting you have gd script which
+for scripting you have gd script which
+for scripting you have gd script which
+is very similar to
+is very similar to
+is very similar to
+python and it's a high up level language
+python and it's a high up level language
+python and it's a high up level language
+you have some like block
+you have some like block
+you have some like block
+script and gd native which is c
+script and gd native which is c
+script and gd native which is c
+plus basically i'm using c sharp because
+plus basically i'm using c sharp because
+plus basically i'm using c sharp because
+i'm well versed in java because the
+i'm well versed in java because the
+i'm well versed in java because the
+languages
+languages
+languages
+that we use at my school is java and
+that we use at my school is java and
+that we use at my school is java and
+java is very very similar to c
+java is very very similar to c
+java is very very similar to c
+sharp and c sharp is just an absolute
+sharp and c sharp is just an absolute
+sharp and c sharp is just an absolute
+joy to use i didn't know how much i
+joy to use i didn't know how much i
+joy to use i didn't know how much i
+liked it until i started using it to
+liked it until i started using it to
+liked it until i started using it to
+make this project
+make this project
+make this project
+i just really really enjoy it it's very
+i just really really enjoy it it's very
+i just really really enjoy it it's very
+very simple
+very simple
+very simple
+the syntax just makes sense it's just in
+the syntax just makes sense it's just in
+the syntax just makes sense it's just in
+my opinion a better version of java i
+my opinion a better version of java i
+my opinion a better version of java i
+mean it's very controversial obviously
+mean it's very controversial obviously
+mean it's very controversial obviously
+but i really enjoy it so and godot's
+but i really enjoy it so and godot's
+but i really enjoy it so and godot's
+system is actually very simple and
+system is actually very simple and
+system is actually very simple and
+meshes very very well
+meshes very very well
+meshes very very well
+with c sharps you can see here there's a
+with c sharps you can see here there's a
+with c sharps you can see here there's a
+few
+few
+few
+things like first of all i can export
+things like first of all i can export
+things like first of all i can export
+variables that basically means
+variables that basically means
+variables that basically means
+if i go back to godot go to my player
+if i go back to godot go to my player
+if i go back to godot go to my player
+for example
+for example
+for example
+these script variables are exported so
+these script variables are exported so
+these script variables are exported so
+the max speed acceleration
+the max speed acceleration
+the max speed acceleration
+i can change all of these in the editor
+i can change all of these in the editor
+i can change all of these in the editor
+instead of having go to go back to the
+instead of having go to go back to the
+instead of having go to go back to the
+script which is very nice
+script which is very nice
+script which is very nice
+and i can i have some like basic
+and i can i have some like basic
+and i can i have some like basic
+variables you know you got the vector 2s
+variables you know you got the vector 2s
+variables you know you got the vector 2s
+whatever
+whatever
+whatever
+it's pretty standard it's a pretty
+it's pretty standard it's a pretty
+it's pretty standard it's a pretty
+run-of-the-mill
+run-of-the-mill
+run-of-the-mill
+sort of system just like unity
+sort of system just like unity
+sort of system just like unity
+and yeah it's just really nice and the
+and yeah it's just really nice and the
+and yeah it's just really nice and the
+cool thing is is i can reference
+cool thing is is i can reference
+cool thing is is i can reference
+nodes which are just like the
+nodes which are just like the
+nodes which are just like the
+equivalence of instances and roblox and
+equivalence of instances and roblox and
+equivalence of instances and roblox and
+like game objects and unity for example
+like game objects and unity for example
+like game objects and unity for example
+i can get them by just sending in the
+i can get them by just sending in the
+i can get them by just sending in the
+path
+path
+path
+so sending in the string basically infer
+so sending in the string basically infer
+so sending in the string basically infer
+so this is a child of
+so this is a child of
+so this is a child of
+the current node that the script is in
+the current node that the script is in
+the current node that the script is in
+and if i were to put like a slash here
+and if i were to put like a slash here
+and if i were to put like a slash here
+this would go to the root node which is
+this would go to the root node which is
+this would go to the root node which is
+pretty nice
+pretty nice
+pretty nice
+and it works basically like a file
+and it works basically like a file
+and it works basically like a file
+system in any operating system where you
+system in any operating system where you
+system in any operating system where you
+just
+just
+just
+navigate to whatever node you want via
+navigate to whatever node you want via
+navigate to whatever node you want via
+like slashes
+like slashes
+like slashes
+and i know this is hard coded
+and i know this is hard coded
+and i know this is hard coded
+but a lot of times these values won't
+but a lot of times these values won't
+but a lot of times these values won't
+really change so it works out pretty
+really change so it works out pretty
+really change so it works out pretty
+well
+well
+well
+but overall c sharp and godot
+but overall c sharp and godot
+but overall c sharp and godot
+is really really nice i won't go into
+is really really nice i won't go into
+is really really nice i won't go into
+the nitty-gritty of my
+the nitty-gritty of my
+the nitty-gritty of my
+code and this video but i really enjoyed
+code and this video but i really enjoyed
+code and this video but i really enjoyed
+it
+it
+it
+very very simple very intuitive very
+very very simple very intuitive very
+very very simple very intuitive very
+easy
+easy
+easy
+to use and one one of the biggest things
+to use and one one of the biggest things
+to use and one one of the biggest things
+that helped me a lot
+that helped me a lot
+that helped me a lot
+with creating this game was the
+with creating this game was the
+with creating this game was the
+godot documentation and it's
+godot documentation and it's
+godot documentation and it's
+really really good so here it is right
+really really good so here it is right
+really really good so here it is right
+here
+here
+here
+it's has everything you need it has
+it's has everything you need it has
+it's has everything you need it has
+tutorials to get started with 2d and 3d
+tutorials to get started with 2d and 3d
+tutorials to get started with 2d and 3d
+has a ton of things it has a nice
+has a ton of things it has a nice
+has a ton of things it has a nice
+convenient search so if i want to know
+convenient search so if i want to know
+convenient search so if i want to know
+what a node is and its api
+what a node is and its api
+what a node is and its api
+i can go to my node get nice block text
+i can go to my node get nice block text
+i can go to my node get nice block text
+explaining
+explaining
+explaining
+everything you got properties and you
+everything you got properties and you
+everything you got properties and you
+can just go to them
+can just go to them
+can just go to them
+and a lot of the scripts and
+and a lot of the scripts and
+and a lot of the scripts and
+scripting examples actually have
+scripting examples actually have
+scripting examples actually have
+c sharp and gd script so i can use both
+c sharp and gd script so i can use both
+c sharp and gd script so i can use both
+of them
+of them
+of them
+let me just find an example real quick
+let me just find an example real quick
+let me just find an example real quick
+let me just go to like 3d use like 3d
+let me just go to like 3d use like 3d
+let me just go to like 3d use like 3d
+transforms whatever
+transforms whatever
+transforms whatever
+you get on here you can see there's a
+you get on here you can see there's a
+you get on here you can see there's a
+c-sharp version
+c-sharp version
+c-sharp version
+i can switch back and forth which is
+i can switch back and forth which is
+i can switch back and forth which is
+super super nice
+super super nice
+super super nice
+and honestly this documentation is a lot
+and honestly this documentation is a lot
+and honestly this documentation is a lot
+better
+better
+better
+than unreal or unity i've used both
+than unreal or unity i've used both
+than unreal or unity i've used both
+those engines
+those engines
+those engines
+it's been a real struggle because the
+it's been a real struggle because the
+it's been a real struggle because the
+docks are just outdated or
+docks are just outdated or
+docks are just outdated or
+old or just not that good but
+old or just not that good but
+old or just not that good but
+this documentation is very good
+this documentation is very good
+this documentation is very good
+definitely not better than roblox's
+definitely not better than roblox's
+definitely not better than roblox's
+documentation that is unparalleled it's
+documentation that is unparalleled it's
+documentation that is unparalleled it's
+the best documentation i've ever seen
+the best documentation i've ever seen
+the best documentation i've ever seen
+and probably will ever see to be honest
+and probably will ever see to be honest
+and probably will ever see to be honest
+it's just amazing but my experience with
+it's just amazing but my experience with
+it's just amazing but my experience with
+this engine
+this engine
+this engine
+is really good i would really recommend
+is really good i would really recommend
+is really good i would really recommend
+it if you're coming from roblox and want
+it if you're coming from roblox and want
+it if you're coming from roblox and want
+to make
+to make
+to make
+some video games other than roblox
+some video games other than roblox
+some video games other than roblox
+so yeah but overall i learned a lot
+so yeah but overall i learned a lot
+so yeah but overall i learned a lot
+of very valuable things while making
+of very valuable things while making
+of very valuable things while making
+this game in a week
+this game in a week
+this game in a week
+first of all i definitely underestimated
+first of all i definitely underestimated
+first of all i definitely underestimated
+the amount of time this would take
+the amount of time this would take
+the amount of time this would take
+as i said this game is not really
+as i said this game is not really
+as i said this game is not really
+completed
+completed
+completed
+it's very unpolished and half the time
+it's very unpolished and half the time
+it's very unpolished and half the time
+it
+it
+it
+doesn't even work because i just didn't
+doesn't even work because i just didn't
+doesn't even work because i just didn't
+give myself enough time to do it
+give myself enough time to do it
+give myself enough time to do it
+i thought i would have enough time in
+i thought i would have enough time in
+i thought i would have enough time in
+the week i actually
+the week i actually
+the week i actually
+didn't and so you really need to keep in
+didn't and so you really need to keep in
+didn't and so you really need to keep in
+mind that you need to
+mind that you need to
+mind that you need to
+designate a lot of time to make a game
+designate a lot of time to make a game
+designate a lot of time to make a game
+especially with a limited time period
+especially with a limited time period
+especially with a limited time period
+and like there's a common saying among
+and like there's a common saying among
+and like there's a common saying among
+game developers like think about the
+game developers like think about the
+game developers like think about the
+amount of time it'll take you to make a
+amount of time it'll take you to make a
+amount of time it'll take you to make a
+game
+game
+game
+and then double it and then maybe double
+and then double it and then maybe double
+and then double it and then maybe double
+it again and that's the amount of time
+it again and that's the amount of time
+it again and that's the amount of time
+that you'll use
+that you'll use
+that you'll use
+and that's very true i definitely didn't
+and that's very true i definitely didn't
+and that's very true i definitely didn't
+think that was true but
+think that was true but
+think that was true but
+it definitely is but it was a really
+it definitely is but it was a really
+it definitely is but it was a really
+good experience
+good experience
+good experience
+i learned a lot from switching over to
+i learned a lot from switching over to
+i learned a lot from switching over to
+different engine
+different engine
+different engine
+i got a lot of new valuable perspectives
+i got a lot of new valuable perspectives
+i got a lot of new valuable perspectives
+and just thought a lot about
+and just thought a lot about
+and just thought a lot about
+what i was doing like when i was
+what i was doing like when i was
+what i was doing like when i was
+learning c sharp and like godot in
+learning c sharp and like godot in
+learning c sharp and like godot in
+general
+general
+general
+i made sure to learn the style and the
+i made sure to learn the style and the
+i made sure to learn the style and the
+specific syntax that i needed to use to
+specific syntax that i needed to use to
+specific syntax that i needed to use to
+make my code consistent with the rest
+make my code consistent with the rest
+make my code consistent with the rest
+of the code bases that everyone else
+of the code bases that everyone else
+of the code bases that everyone else
+uses that made me think more about
+uses that made me think more about
+uses that made me think more about
+how i style my roblox code and the
+how i style my roblox code and the
+how i style my roblox code and the
+consistencies and stuff like that
+consistencies and stuff like that
+consistencies and stuff like that
+i also encourage you to do something
+i also encourage you to do something
+i also encourage you to do something
+like this as well
+like this as well
+like this as well
+it's really an eye-opening experience
+it's really an eye-opening experience
+it's really an eye-opening experience
+this allows you
+this allows you
+this allows you
+again to get different insights and it's
+again to get different insights and it's
+again to get different insights and it's
+just a nice refresher because i got to
+just a nice refresher because i got to
+just a nice refresher because i got to
+use a new engine
+use a new engine
+use a new engine
+it was fun to like try to speedrun
+it was fun to like try to speedrun
+it was fun to like try to speedrun
+learning the engine in a week
+learning the engine in a week
+learning the engine in a week
+and it was just really cool a lot
+and it was just really cool a lot
+and it was just really cool a lot
+different than roblox that's for sure
+different than roblox that's for sure
+different than roblox that's for sure
+but it was a nice welcome break actually
+but it was a nice welcome break actually
+but it was a nice welcome break actually
+right now i'm working on web development
+right now i'm working on web development
+right now i'm working on web development
+using
+using
+using
+node.js and javascript and the reason
+node.js and javascript and the reason
+node.js and javascript and the reason
+i'm doing that is just to get a new
+i'm doing that is just to get a new
+i'm doing that is just to get a new
+perspective on dynamic prototype
+perspective on dynamic prototype
+perspective on dynamic prototype
+languages
+languages
+languages
+as you know lua is a prototype based
+as you know lua is a prototype based
+as you know lua is a prototype based
+language
+language
+language
+and so is javascript but the javascript
+and so is javascript but the javascript
+and so is javascript but the javascript
+community is very saturated so i can
+community is very saturated so i can
+community is very saturated so i can
+learn a lot from looking at the code in
+learn a lot from looking at the code in
+learn a lot from looking at the code in
+their
+their
+their
+idiomatic object-oriented program with
+idiomatic object-oriented program with
+idiomatic object-oriented program with
+it and whatever
+it and whatever
+it and whatever
+so i can you know emulate that in
+so i can you know emulate that in
+so i can you know emulate that in
+my lua code which is really really nice
+my lua code which is really really nice
+my lua code which is really really nice
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you enjoyed
+you enjoyed
+you enjoyed
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+did
+did
+did
+but other than that i hope you have a
+but other than that i hope you have a
+but other than that i hope you have a
+nice day and goodbye
+[Music]
+you

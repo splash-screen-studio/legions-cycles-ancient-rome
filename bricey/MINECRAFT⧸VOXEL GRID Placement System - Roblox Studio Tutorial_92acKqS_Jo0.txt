@@ -1,0 +1,1915 @@
+welcome to my Minecraft Let's Play Where
+welcome to my Minecraft Let's Play Where
+welcome to my Minecraft Let's Play Where
+wait this isn't Minecraft this is Roblox
+wait this isn't Minecraft this is Roblox
+wait this isn't Minecraft this is Roblox
+what's going on oh okay so in this video
+what's going on oh okay so in this video
+what's going on oh okay so in this video
+I'm going to be teaching you how to make
+I'm going to be teaching you how to make
+I'm going to be teaching you how to make
+a Minecraft style placement system to
+a Minecraft style placement system to
+a Minecraft style placement system to
+almost exactly mimic that game in other
+almost exactly mimic that game in other
+almost exactly mimic that game in other
+voxo based games where you can move your
+voxo based games where you can move your
+voxo based games where you can move your
+mouse wherever you want place your
+mouse wherever you want place your
+mouse wherever you want place your
+blocks and they'll be placed nicely
+blocks and they'll be placed nicely
+blocks and they'll be placed nicely
+relative to each other and they won't
+relative to each other and they won't
+relative to each other and they won't
+you know mess up go where you don't want
+you know mess up go where you don't want
+you know mess up go where you don't want
+them to go and they're validated by the
+them to go and they're validated by the
+them to go and they're validated by the
+server as well so explorers can't break
+server as well so explorers can't break
+server as well so explorers can't break
+your block Magic so this video goes into
+your block Magic so this video goes into
+your block Magic so this video goes into
+a lot of depth with CF frames and you
+a lot of depth with CF frames and you
+a lot of depth with CF frames and you
+know vectors and it's really really
+know vectors and it's really really
+know vectors and it's really really
+informative so I encourage you to watch
+informative so I encourage you to watch
+informative so I encourage you to watch
+the entire video and enjoy that and the
+the entire video and enjoy that and the
+the entire video and enjoy that and the
+code from the pre previous video will be
+code from the pre previous video will be
+code from the pre previous video will be
+in the description because that is a
+in the description because that is a
+in the description because that is a
+prerequisite for this video but make
+prerequisite for this video but make
+prerequisite for this video but make
+sure to watch the previous video If you
+sure to watch the previous video If you
+sure to watch the previous video If you
+haven't to learn how our initial
+haven't to learn how our initial
+haven't to learn how our initial
+placement system works but this is a
+placement system works but this is a
+placement system works but this is a
+really really helpful video I hope you
+really really helpful video I hope you
+really really helpful video I hope you
+enjoy it if you have any suggestions
+enjoy it if you have any suggestions
+enjoy it if you have any suggestions
+comment down below if you like the video
+comment down below if you like the video
+comment down below if you like the video
+like the video and subscribe to my
+like the video and subscribe to my
+like the video and subscribe to my
+channel but with that let's get into the
+video so first we're going to be working
+video so first we're going to be working
+video so first we're going to be working
+with our snappage or snapping to grid to
+with our snappage or snapping to grid to
+with our snappage or snapping to grid to
+figure out how we can get a random
+figure out how we can get a random
+figure out how we can get a random
+arbitrary point to conform to like a
+arbitrary point to conform to like a
+arbitrary point to conform to like a
+blocky grid as you would see in a game
+blocky grid as you would see in a game
+blocky grid as you would see in a game
+like Minecraft so let's say we pick a
+like Minecraft so let's say we pick a
+like Minecraft so let's say we pick a
+point let's start with like one one
+point let's start with like one one
+point let's start with like one one
+right here and this point you know it's
+right here and this point you know it's
+right here and this point you know it's
+not really according to our grid because
+not really according to our grid because
+not really according to our grid because
+we want our grid to be like a 3X3
+we want our grid to be like a 3X3
+we want our grid to be like a 3X3
+according to our block and also as a
+according to our block and also as a
+according to our block and also as a
+side note this will scale to 3D I'm just
+side note this will scale to 3D I'm just
+side note this will scale to 3D I'm just
+using 2D as a vehicle for explanation
+using 2D as a vehicle for explanation
+using 2D as a vehicle for explanation
+okay so we have this point at 1 one but
+okay so we have this point at 1 one but
+okay so we have this point at 1 one but
+we need to get it to somewhere like one
+we need to get it to somewhere like one
+we need to get it to somewhere like one
+of these four points on the grid so for
+of these four points on the grid so for
+of these four points on the grid so for
+our system I'm always going to choose
+our system I'm always going to choose
+our system I'm always going to choose
+the bottom left point so this one one
+the bottom left point so this one one
+the bottom left point so this one one
+needs to move down to 0 0 it has to get
+needs to move down to 0 0 it has to get
+needs to move down to 0 0 it has to get
+there that that's the goal we want it to
+there that that's the goal we want it to
+there that that's the goal we want it to
+move to this bottom point so how do we
+move to this bottom point so how do we
+move to this bottom point so how do we
+do that so I guess let's actually bring
+do that so I guess let's actually bring
+do that so I guess let's actually bring
+out the number so it makes a little bit
+out the number so it makes a little bit
+out the number so it makes a little bit
+more sense so this would be one one we
+more sense so this would be one one we
+more sense so this would be one one we
+need to get it to 0 0 so what we'll do
+need to get it to 0 0 so what we'll do
+need to get it to 0 0 so what we'll do
+is we'll divide this number by the grid
+is we'll divide this number by the grid
+is we'll divide this number by the grid
+size so the grid size is three so we'll
+size so the grid size is three so we'll
+size so the grid size is three so we'll
+divide it by three but you'll notice we
+divide it by three but you'll notice we
+divide it by three but you'll notice we
+get like 1/3 for each coordinate 13 and
+get like 1/3 for each coordinate 13 and
+get like 1/3 for each coordinate 13 and
+this is a fraction which can also be
+this is a fraction which can also be
+this is a fraction which can also be
+represented in decimal by some you know
+represented in decimal by some you know
+represented in decimal by some you know
+zero with a bunch of other stuff after
+zero with a bunch of other stuff after
+zero with a bunch of other stuff after
+well 3 three repeated I think yeah right
+well 3 three repeated I think yeah right
+well 3 three repeated I think yeah right
+something like that I know my math um
+something like that I know my math um
+something like that I know my math um
+but this is not z0 it's close though so
+but this is not z0 it's close though so
+but this is not z0 it's close though so
+how can we get it 0 Z there's a function
+how can we get it 0 Z there's a function
+how can we get it 0 Z there's a function
+called floor which allows us to do that
+called floor which allows us to do that
+called floor which allows us to do that
+and by floor what floor does like like
+and by floor what floor does like like
+and by floor what floor does like like
+math. floor it just cuts out the decimal
+math. floor it just cuts out the decimal
+math. floor it just cuts out the decimal
+portion we don't care about it anymore
+portion we don't care about it anymore
+portion we don't care about it anymore
+and it and it moves it down to the
+and it and it moves it down to the
+and it and it moves it down to the
+lowest value so this this um 0.33 just
+lowest value so this this um 0.33 just
+lowest value so this this um 0.33 just
+becomes zero and so we get 0 0 now that
+becomes zero and so we get 0 0 now that
+becomes zero and so we get 0 0 now that
+works that works great and you may be
+works that works great and you may be
+works that works great and you may be
+wondering okay what happens when we're
+wondering okay what happens when we're
+wondering okay what happens when we're
+in we have some negatives so let's go I
+in we have some negatives so let's go I
+in we have some negatives so let's go I
+guess to find a new Point Let's do
+guess to find a new Point Let's do
+guess to find a new Point Let's do
+negative one one right here so this
+negative one one right here so this
+negative one one right here so this
+would
+would
+would
+be -1 one and when we divide this by
+be -1 one and when we divide this by
+be -1 one and when we divide this by
+three again we'll get some like we'll
+three again we'll get some like we'll
+three again we'll get some like we'll
+get 0.33 repeated for the X and then
+get 0.33 repeated for the X and then
+get 0.33 repeated for the X and then
+0.33 for the Y and we already dealt with
+0.33 for the Y and we already dealt with
+0.33 for the Y and we already dealt with
+the Positive so we don't really care
+the Positive so we don't really care
+the Positive so we don't really care
+we're more interested in this negative
+we're more interested in this negative
+we're more interested in this negative
+portion right here this is a 3 three
+portion right here this is a 3 three
+portion right here this is a 3 three
+there we go so what happens when we
+there we go so what happens when we
+there we go so what happens when we
+floor this now you may be thinking okay
+floor this now you may be thinking okay
+floor this now you may be thinking okay
+it goes to zero but floor always goes to
+it goes to zero but floor always goes to
+it goes to zero but floor always goes to
+like the lowest value the lowest whole
+like the lowest value the lowest whole
+like the lowest value the lowest whole
+number so in this case
+number so in this case
+number so in this case
+1 is lower than Z so this will get
+1 is lower than Z so this will get
+1 is lower than Z so this will get
+floored
+floored
+floored
+to1 and that's exactly what we want
+to1 and that's exactly what we want
+to1 and that's exactly what we want
+because now now we have zero and now we
+because now now we have zero and now we
+because now now we have zero and now we
+have negative 1 and there's one final
+have negative 1 and there's one final
+have negative 1 and there's one final
+step especially when we get these
+step especially when we get these
+step especially when we get these
+numbers that aren't zero is you have to
+numbers that aren't zero is you have to
+numbers that aren't zero is you have to
+multiply by the grid size once again so
+multiply by the grid size once again so
+multiply by the grid size once again so
+this in this case it'll be three so
+this in this case it'll be three so
+this in this case it'll be three so
+it'll take our point from here all the
+it'll take our point from here all the
+it'll take our point from here all the
+way from negative 1 1 to right here it'
+way from negative 1 1 to right here it'
+way from negative 1 1 to right here it'
+be -3 0 so it'd be in the bottom left so
+be -3 0 so it'd be in the bottom left so
+be -3 0 so it'd be in the bottom left so
+if our Mouse is in this quadrant our
+if our Mouse is in this quadrant our
+if our Mouse is in this quadrant our
+block will be like superimposed here and
+block will be like superimposed here and
+block will be like superimposed here and
+if our Mouse is in this quadrant it'll
+if our Mouse is in this quadrant it'll
+if our Mouse is in this quadrant it'll
+be like here and if our Mouse is here
+be like here and if our Mouse is here
+be like here and if our Mouse is here
+it'll be here that's because for each of
+it'll be here that's because for each of
+it'll be here that's because for each of
+these we'll get like the negative like
+these we'll get like the negative like
+these we'll get like the negative like
+unit value like negative one or zero or
+unit value like negative one or zero or
+unit value like negative one or zero or
+one or whatever and then we'll multiply
+one or whatever and then we'll multiply
+one or whatever and then we'll multiply
+it by three to get the thing that we
+it by three to get the thing that we
+it by three to get the thing that we
+need and then it'll bring us to the
+need and then it'll bring us to the
+need and then it'll bring us to the
+point that we want it's exactly what we
+point that we want it's exactly what we
+point that we want it's exactly what we
+want and one other note is that in in
+want and one other note is that in in
+want and one other note is that in in
+Roblox we don't have to divide and then
+Roblox we don't have to divide and then
+Roblox we don't have to divide and then
+floor it there is actually a floor
+floor it there is actually a floor
+floor it there is actually a floor
+division function in Lu now so if you
+division function in Lu now so if you
+division function in Lu now so if you
+take a number like one and you do slash
+take a number like one and you do slash
+take a number like one and you do slash
+slash3 you'll get zero it'll do the
+slash3 you'll get zero it'll do the
+slash3 you'll get zero it'll do the
+floor division stuff for you okay so now
+floor division stuff for you okay so now
+floor division stuff for you okay so now
+we know how to snap let's go implement
+we know how to snap let's go implement
+we know how to snap let's go implement
+this in our little
+this in our little
+this in our little
+game so I'm here in the Roblox project
+game so I'm here in the Roblox project
+game so I'm here in the Roblox project
+and if you don't know what this is make
+and if you don't know what this is make
+and if you don't know what this is make
+sure to watch the last video or check
+sure to watch the last video or check
+sure to watch the last video or check
+the description for the code because
+the description for the code because
+the description for the code because
+we'll be basing it off of what we did
+we'll be basing it off of what we did
+we'll be basing it off of what we did
+previously and let's go into placement
+previously and let's go into placement
+previously and let's go into placement
+value validator and in here we need to
+value validator and in here we need to
+value validator and in here we need to
+Define another like Global constant
+Define another like Global constant
+Define another like Global constant
+we're going to call this local grid size
+we're going to call this local grid size
+we're going to call this local grid size
+and this is an integer and we're going
+and this is an integer and we're going
+and this is an integer and we're going
+to set it to three and usually oh I
+to set it to three and usually oh I
+to set it to three and usually oh I
+guess right now like you want this value
+guess right now like you want this value
+guess right now like you want this value
+to be set to the size of your block so
+to be set to the size of your block so
+to be set to the size of your block so
+my block is a 3X3 over3 you want it to
+my block is a 3X3 over3 you want it to
+my block is a 3X3 over3 you want it to
+be exactly the same you could hardcode
+be exactly the same you could hardcode
+be exactly the same you could hardcode
+it that way but you know it's fine just
+it that way but you know it's fine just
+it that way but you know it's fine just
+to leave it as a number in case you know
+to leave it as a number in case you know
+to leave it as a number in case you know
+you have variable size blocks and stuff
+you have variable size blocks and stuff
+you have variable size blocks and stuff
+and like you have to deal with it but
+and like you have to deal with it but
+and like you have to deal with it but
+for now that's what we're going to use
+for now that's what we're going to use
+for now that's what we're going to use
+grid size 3 and we need to make a
+grid size 3 and we need to make a
+grid size 3 and we need to make a
+function called
+function called
+function called
+placement
+placement
+placement
+validators dot or validator snap to grid
+validators dot or validator snap to grid
+validators dot or validator snap to grid
+this will take in a position which is a
+this will take in a position which is a
+this will take in a position which is a
+vector three and return the grid snapped
+vector three and return the grid snapped
+vector three and return the grid snapped
+position so the reason we're putting
+position so the reason we're putting
+position so the reason we're putting
+this in placement validators is because
+this in placement validators is because
+this in placement validators is because
+both the client and the server will have
+both the client and the server will have
+both the client and the server will have
+to use this the client will use this to
+to use this the client will use this to
+to use this the client will use this to
+like render the preview the server will
+like render the preview the server will
+like render the preview the server will
+use this to verify that you're placing
+use this to verify that you're placing
+use this to verify that you're placing
+your blocks in a valid position because
+your blocks in a valid position because
+your blocks in a valid position because
+remember we cannot trust the client
+remember we cannot trust the client
+remember we cannot trust the client
+because they could be exploiting or
+because they could be exploiting or
+because they could be exploiting or
+whatever okay so we're going to return a
+whatever okay so we're going to return a
+whatever okay so we're going to return a
+vector 3. new and I'm going to make this
+vector 3. new and I'm going to make this
+vector 3. new and I'm going to make this
+multiple lines just to like give us some
+multiple lines just to like give us some
+multiple lines just to like give us some
+room and what we're going to do is we're
+room and what we're going to do is we're
+room and what we're going to do is we're
+just going to do the position like the
+just going to do the position like the
+just going to do the position like the
+component and then we're going to do the
+component and then we're going to do the
+component and then we're going to do the
+floor division by the grid size so
+floor division by the grid size so
+floor division by the grid size so
+pose. xid by grid size pos. y oh I said
+pose. xid by grid size pos. y oh I said
+pose. xid by grid size pos. y oh I said
+okay there should be pos. X up here pos.
+okay there should be pos. X up here pos.
+okay there should be pos. X up here pos.
+y the second one and then for the third
+y the second one and then for the third
+y the second one and then for the third
+parameter say pos. Z / grid size so this
+parameter say pos. Z / grid size so this
+parameter say pos. Z / grid size so this
+will always move our well after we
+will always move our well after we
+will always move our well after we
+multiply it by grid size this will
+multiply it by grid size this will
+multiply it by grid size this will
+always move our position to a valid grid
+always move our position to a valid grid
+always move our position to a valid grid
+position and then we'll multiply it by
+position and then we'll multiply it by
+position and then we'll multiply it by
+the grid size to scale it back up again
+the grid size to scale it back up again
+the grid size to scale it back up again
+so we're kind of just get rid we're
+so we're kind of just get rid we're
+so we're kind of just get rid we're
+getting rid of the decimal parts and
+getting rid of the decimal parts and
+getting rid of the decimal parts and
+we're bringing it back up so everything
+we're bringing it back up so everything
+we're bringing it back up so everything
+is nice and clean and then now we should
+is nice and clean and then now we should
+is nice and clean and then now we should
+be able to go to
+be able to go to
+be able to go to
+our client Placer and Implement
+our client Placer and Implement
+our client Placer and Implement
+that okay so first we're going to get
+that okay so first we're going to get
+that okay so first we're going to get
+the snapped position and this will be
+the snapped position and this will be
+the snapped position and this will be
+equal to placement well we got to get
+equal to placement well we got to get
+equal to placement well we got to get
+placement validators on the client side
+placement validators on the client side
+placement validators on the client side
+first say local placement validator
+first say local placement validator
+first say local placement validator
+equals
+require game oh we have we already have
+require game oh we have we already have
+require game oh we have we already have
+replicate okay replicate storage wait
+replicate okay replicate storage wait
+replicate okay replicate storage wait
+for child placement validator okay so we
+for child placement validator okay so we
+for child placement validator okay so we
+have a placement Val validator imported
+have a placement Val validator imported
+have a placement Val validator imported
+we can do placement validator do snap to
+we can do placement validator do snap to
+we can do placement validator do snap to
+grid and we're going to send in the
+grid and we're going to send in the
+grid and we're going to send in the
+cast. position okay so that's the snap
+cast. position okay so that's the snap
+cast. position okay so that's the snap
+position and then since it's always in
+position and then since it's always in
+position and then since it's always in
+the bottom left and we're going to need
+the bottom left and we're going to need
+the bottom left and we're going to need
+like a cframe later we're just going to
+like a cframe later we're just going to
+like a cframe later we're just going to
+make a CF I'm going to set this equal to
+make a CF I'm going to set this equal to
+make a CF I'm going to set this equal to
+CF frame. new snapped position and then
+CF frame. new snapped position and then
+CF frame. new snapped position and then
+in here we're going to get rid of the
+in here we're going to get rid of the
+in here we're going to get rid of the
+cast position cast normal stuff that was
+cast position cast normal stuff that was
+cast position cast normal stuff that was
+only temp we're going to set the
+only temp we're going to set the
+only temp we're going to set the
+preview. position equal to
+preview. position equal to
+preview. position equal to
+CF point to World
+CF point to World
+CF point to World
+space and we're going to transform the
+space and we're going to transform the
+space and we're going to transform the
+lock template. size divid two so what
+lock template. size divid two so what
+lock template. size divid two so what
+this will do is it will offset our block
+this will do is it will offset our block
+this will do is it will offset our block
+by half its size so it'll move it from
+by half its size so it'll move it from
+by half its size so it'll move it from
+the bottom the bottom left corner to the
+the bottom the bottom left corner to the
+the bottom the bottom left corner to the
+center of the block because we're going
+center of the block because we're going
+center of the block because we're going
+we're traversing like um half of each
+we're traversing like um half of each
+we're traversing like um half of each
+component upwards and sideways and other
+component upwards and sideways and other
+component upwards and sideways and other
+sideways and we'll get to to the center
+sideways and we'll get to to the center
+sideways and we'll get to to the center
+and if you don't know how this all works
+and if you don't know how this all works
+and if you don't know how this all works
+I have a video on object space and World
+I have a video on object space and World
+I have a video on object space and World
+space check that out it's basically the
+space check that out it's basically the
+space check that out it's basically the
+same same thing as saying snap position
+same same thing as saying snap position
+same same thing as saying snap position
+plus size divided by two at this point
+plus size divided by two at this point
+plus size divided by two at this point
+in time later the C frame is going to
+in time later the C frame is going to
+in time later the C frame is going to
+change and it'll be useful but for now
+change and it'll be useful but for now
+change and it'll be useful but for now
+this should work
+this should work
+this should work
+hopefully yeah okay so everything snaps
+hopefully yeah okay so everything snaps
+hopefully yeah okay so everything snaps
+pretty normally and if you like really
+pretty normally and if you like really
+pretty normally and if you like really
+try and like like Trace out your mouse
+try and like like Trace out your mouse
+try and like like Trace out your mouse
+around the corners and stuff it does
+around the corners and stuff it does
+around the corners and stuff it does
+kind of adhere to it pretty pretty well
+kind of adhere to it pretty pretty well
+kind of adhere to it pretty pretty well
+and even if you kind of walk around like
+and even if you kind of walk around like
+and even if you kind of walk around like
+I'm probably Crossing 0 at this point
+I'm probably Crossing 0 at this point
+I'm probably Crossing 0 at this point
+and everything still seems to work
+and everything still seems to work
+and everything still seems to work
+exactly as you expected so that's
+exactly as you expected so that's
+exactly as you expected so that's
+snapping done but snappage is only half
+snapping done but snappage is only half
+snapping done but snappage is only half
+of it because there comes issues when
+of it because there comes issues when
+of it because there comes issues when
+you try to place blocks on other blocks
+you try to place blocks on other blocks
+you try to place blocks on other blocks
+or on walls or on like sideways angles
+or on walls or on like sideways angles
+or on walls or on like sideways angles
+so you have to handle those in you know
+so you have to handle those in you know
+so you have to handle those in you know
+kind of a unique way so let's say you
+kind of a unique way so let's say you
+kind of a unique way so let's say you
+try to you know you click here on this
+try to you know you click here on this
+try to you know you click here on this
+little spot this is a wall by the way
+little spot this is a wall by the way
+little spot this is a wall by the way
+this is the floor handling the floor is
+this is the floor handling the floor is
+this is the floor handling the floor is
+pretty trivial we already did that but
+pretty trivial we already did that but
+pretty trivial we already did that but
+the walls and stuff are pretty tough so
+the walls and stuff are pretty tough so
+the walls and stuff are pretty tough so
+we're going to use this as an example so
+we're going to use this as an example so
+we're going to use this as an example so
+this is our wall this is the point that
+this is our wall this is the point that
+this is our wall this is the point that
+we click and I know this is not too
+we click and I know this is not too
+we click and I know this is not too
+scale but like these are like the four
+scale but like these are like the four
+scale but like these are like the four
+valid gridge positions that we can like
+valid gridge positions that we can like
+valid gridge positions that we can like
+go to so according to our previous
+go to so according to our previous
+go to so according to our previous
+logic we will like move this little
+logic we will like move this little
+logic we will like move this little
+Point all the way to this corner and
+Point all the way to this corner and
+Point all the way to this corner and
+this will be where it starts but then
+this will be where it starts but then
+this will be where it starts but then
+the block will kind of grow it'll grow
+the block will kind of grow it'll grow
+the block will kind of grow it'll grow
+out like this way um this is a bad
+out like this way um this is a bad
+out like this way um this is a bad
+drawing but like imagine like growing
+drawing but like imagine like growing
+drawing but like imagine like growing
+behind the wall because remember how we
+behind the wall because remember how we
+behind the wall because remember how we
+said this is the bottom the bottom back
+said this is the bottom the bottom back
+said this is the bottom the bottom back
+left corner it'll grow like away from us
+left corner it'll grow like away from us
+left corner it'll grow like away from us
+it'll grow like that way so if Like This
+it'll grow like that way so if Like This
+it'll grow like that way so if Like This
+Is Us looking at the wall it'll it'll
+Is Us looking at the wall it'll it'll
+Is Us looking at the wall it'll it'll
+grow like past the wall we don't want
+grow like past the wall we don't want
+grow like past the wall we don't want
+that we want the block to like you know
+that we want the block to like you know
+that we want the block to like you know
+spawn in like against this wall in this
+spawn in like against this wall in this
+spawn in like against this wall in this
+grid position right here like this one
+grid position right here like this one
+grid position right here like this one
+right here so the way we do that is we
+right here so the way we do that is we
+right here so the way we do that is we
+have to like Define a relative like
+have to like Define a relative like
+have to like Define a relative like
+coordinate space this is going to be
+coordinate space this is going to be
+coordinate space this is going to be
+using C frames so we're basically just
+using C frames so we're basically just
+using C frames so we're basically just
+going to define the direction in which
+going to define the direction in which
+going to define the direction in which
+we want like up down left and right to
+we want like up down left and right to
+we want like up down left and right to
+be and spawn our block in that way and
+be and spawn our block in that way and
+be and spawn our block in that way and
+I'm saying like the block will grow
+I'm saying like the block will grow
+I'm saying like the block will grow
+because the way we defined our block
+because the way we defined our block
+because the way we defined our block
+like offset placement function we're
+like offset placement function we're
+like offset placement function we're
+taking that C frame and we're kind of
+taking that C frame and we're kind of
+taking that C frame and we're kind of
+just moving it in that direction so like
+just moving it in that direction so like
+just moving it in that direction so like
+it's moving along like the primary axes
+it's moving along like the primary axes
+it's moving along like the primary axes
+of the C frame so let's do that so what
+of the C frame so let's do that so what
+of the C frame so let's do that so what
+we have to do here is we have to get the
+we have to do here is we have to get the
+we have to do here is we have to get the
+direction between our actual clicked
+direction between our actual clicked
+direction between our actual clicked
+position and our
+position and our
+position and our
+and our snapped position and we have to
+and our snapped position and we have to
+and our snapped position and we have to
+first Define
+first Define
+first Define
+our space relative to the normal of the
+our space relative to the normal of the
+our space relative to the normal of the
+plane so for example the normal here
+plane so for example the normal here
+plane so for example the normal here
+would be oh shoot the normal here would
+would be oh shoot the normal here would
+would be oh shoot the normal here would
+be like out this way this would be our
+be like out this way this would be our
+be like out this way this would be our
+normal vector and this would be the
+normal vector and this would be the
+normal vector and this would be the
+forward Direction in our C frame
+forward Direction in our C frame
+forward Direction in our C frame
+actually this is a bad drawing of the
+actually this is a bad drawing of the
+actually this is a bad drawing of the
+normal it would be like
+normal it would be like
+normal it would be like
+this
+this
+this
+way no it would be a little higher sorry
+way no it would be a little higher sorry
+way no it would be a little higher sorry
+trying to get this
+right yeah that's about right okay so
+right yeah that's about right okay so
+right yeah that's about right okay so
+that's our normal vector and so that's
+that's our normal vector and so that's
+that's our normal vector and so that's
+like protruding from the wall facing
+like protruding from the wall facing
+like protruding from the wall facing
+away from the wall and in here we want
+away from the wall and in here we want
+away from the wall and in here we want
+to move all of these positions relative
+to move all of these positions relative
+to move all of these positions relative
+to this normal vector and we can do that
+to this normal vector and we can do that
+to this normal vector and we can do that
+in the code and then all we have to
+in the code and then all we have to
+in the code and then all we have to
+do is get is get the vector from our
+do is get is get the vector from our
+do is get is get the vector from our
+point to the snapped
+point to the snapped
+point to the snapped
+Point get it like right here and then we
+Point get it like right here and then we
+Point get it like right here and then we
+have to get the components of that so
+have to get the components of that so
+have to get the components of that so
+we'll get the x or relative X component
+we'll get the x or relative X component
+we'll get the x or relative X component
+and the relative y component and then
+and the relative y component and then
+and the relative y component and then
+this will kind of point us in the right
+this will kind of point us in the right
+this will kind of point us in the right
+direction so if you look at this you see
+direction so if you look at this you see
+direction so if you look at this you see
+how the normal fa is this way the X fa
+how the normal fa is this way the X fa
+how the normal fa is this way the X fa
+is this way or this is the Y I guess and
+is this way or this is the Y I guess and
+is this way or this is the Y I guess and
+the other coordinate place is this way
+the other coordinate place is this way
+the other coordinate place is this way
+you don't know if whether it's going to
+you don't know if whether it's going to
+you don't know if whether it's going to
+be X Y or Z until you actually do it
+be X Y or Z until you actually do it
+be X Y or Z until you actually do it
+that's why we're doing relative space
+that's why we're doing relative space
+that's why we're doing relative space
+you'll notice that this coordinate frame
+you'll notice that this coordinate frame
+you'll notice that this coordinate frame
+looks like this and if you were to
+looks like this and if you were to
+looks like this and if you were to
+imagine the block growing out of these
+imagine the block growing out of these
+imagine the block growing out of these
+three a axes it would it would move out
+three a axes it would it would move out
+three a axes it would it would move out
+toward you in this kind of section as
+toward you in this kind of section as
+toward you in this kind of section as
+you would expect so the whole goal here
+you would expect so the whole goal here
+you would expect so the whole goal here
+is to get our three axes pointing the
+is to get our three axes pointing the
+is to get our three axes pointing the
+right direction and then the rest of the
+right direction and then the rest of the
+right direction and then the rest of the
+code that we wrote will just kind of
+code that we wrote will just kind of
+code that we wrote will just kind of
+like move the block it'll move it you
+like move the block it'll move it you
+like move the block it'll move it you
+know transform it a little bit this way
+know transform it a little bit this way
+know transform it a little bit this way
+and then a little bit
+and then a little bit
+and then a little bit
+up and then a little bit oh this is a
+up and then a little bit oh this is a
+up and then a little bit oh this is a
+horrible drawing but you get the idea
+horrible drawing but you get the idea
+horrible drawing but you get the idea
+it'll it'll transform it in the three
+it'll it'll transform it in the three
+it'll it'll transform it in the three
+axes and kind of like grow out of it and
+axes and kind of like grow out of it and
+axes and kind of like grow out of it and
+the only thing we have to do is get like
+the only thing we have to do is get like
+the only thing we have to do is get like
+the vector between them and the
+the vector between them and the
+the vector between them and the
+components so let's actually do this in
+components so let's actually do this in
+components so let's actually do this in
+code now okay so back in Roblox all we
+code now okay so back in Roblox all we
+code now okay so back in Roblox all we
+need to do is go into the client Placer
+need to do is go into the client Placer
+need to do is go into the client Placer
+because there's nothing to validate here
+because there's nothing to validate here
+because there's nothing to validate here
+this is just to like assist the client
+this is just to like assist the client
+this is just to like assist the client
+so they actually place the stuff where
+so they actually place the stuff where
+so they actually place the stuff where
+they they intend to and now we're going
+they they intend to and now we're going
+they they intend to and now we're going
+to going to move or we're going to move
+to going to move or we're going to move
+to going to move or we're going to move
+the C frame down because we'll have to
+the C frame down because we'll have to
+the C frame down because we'll have to
+change it in a minute but we want to
+change it in a minute but we want to
+change it in a minute but we want to
+first get the normal cframe so this is
+first get the normal cframe so this is
+first get the normal cframe so this is
+the cframe relative to our normal Vector
+the cframe relative to our normal Vector
+the cframe relative to our normal Vector
+on the surface that we're on and for
+on the surface that we're on and for
+on the surface that we're on and for
+that we're going to use cframe
+that we're going to use cframe
+that we're going to use cframe
+dolal look along I don't know how long
+dolal look along I don't know how long
+dolal look along I don't know how long
+this has been around I just saw it the
+this has been around I just saw it the
+this has been around I just saw it the
+other day it's a very useful method
+other day it's a very useful method
+other day it's a very useful method
+because we can create a C frame at a
+because we can create a C frame at a
+because we can create a C frame at a
+position and it can look along a certain
+position and it can look along a certain
+position and it can look along a certain
+Vector this differs as as opposed to
+Vector this differs as as opposed to
+Vector this differs as as opposed to
+like look at because look at looks at a
+like look at because look at looks at a
+like look at because look at looks at a
+position in 3D space look look along is
+position in 3D space look look along is
+position in 3D space look look along is
+uses a direction cast. normal is a unit
+uses a direction cast. normal is a unit
+uses a direction cast. normal is a unit
+Vector I think it's unit Vector that is
+Vector I think it's unit Vector that is
+Vector I think it's unit Vector that is
+in the direction of the normal phase of
+in the direction of the normal phase of
+in the direction of the normal phase of
+the part that we're looking at it's not
+the part that we're looking at it's not
+the part that we're looking at it's not
+a position we could use CF frame. look
+a position we could use CF frame. look
+a position we could use CF frame. look
+at and do cast. position plus cast.
+at and do cast. position plus cast.
+at and do cast. position plus cast.
+normal this is simpler easier to look at
+normal this is simpler easier to look at
+normal this is simpler easier to look at
+whatever so this will basically make our
+whatever so this will basically make our
+whatever so this will basically make our
+negative Za
+negative Za
+negative Za
+axis the cast. normal pretty sure that's
+axis the cast. normal pretty sure that's
+axis the cast. normal pretty sure that's
+how it works because Z is the look I
+how it works because Z is the look I
+how it works because Z is the look I
+don't know something like that so all we
+don't know something like that so all we
+don't know something like that so all we
+know is that this cast. normal is
+know is that this cast. normal is
+know is that this cast. normal is
+relative or this normal CF is relative
+relative or this normal CF is relative
+relative or this normal CF is relative
+to the cast. normal and now we need to
+to the cast. normal and now we need to
+to the cast. normal and now we need to
+get the snap position relative to this
+get the snap position relative to this
+get the snap position relative to this
+new cframe so we're going to do relative
+new cframe so we're going to do relative
+new cframe so we're going to do relative
+snapped equals normal
+snapped equals normal
+snapped equals normal
+CF point to object space so we're
+CF point to object space so we're
+CF point to object space so we're
+converting a vector to a well we're just
+converting a vector to a well we're just
+converting a vector to a well we're just
+a vector to a vector but we're like
+a vector to a vector but we're like
+a vector to a vector but we're like
+redefining it in terms of having that
+redefining it in terms of having that
+redefining it in terms of having that
+normal facing forward and we're going to
+normal facing forward and we're going to
+normal facing forward and we're going to
+use snap position in the parameter so
+use snap position in the parameter so
+use snap position in the parameter so
+now this is the relative snaap and what
+now this is the relative snaap and what
+now this is the relative snaap and what
+this allows us to do is it allows us to
+this allows us to do is it allows us to
+this allows us to do is it allows us to
+access the components of this Vector in
+access the components of this Vector in
+access the components of this Vector in
+such a way that we can do it the same
+such a way that we can do it the same
+such a way that we can do it the same
+time every time regardless of whether
+time every time regardless of whether
+time every time regardless of whether
+it's X Y or Z because if it were in like
+it's X Y or Z because if it were in like
+it's X Y or Z because if it were in like
+normal World space you wouldn't know
+normal World space you wouldn't know
+normal World space you wouldn't know
+which axis to choose and like you could
+which axis to choose and like you could
+which axis to choose and like you could
+do some complex conditional logic to
+do some complex conditional logic to
+do some complex conditional logic to
+figure that out but this is just easier
+figure that out but this is just easier
+figure that out but this is just easier
+in my opinion and you'll notice we're
+in my opinion and you'll notice we're
+in my opinion and you'll notice we're
+not not actually using any Vector
+not not actually using any Vector
+not not actually using any Vector
+subtraction to get the difference
+subtraction to get the difference
+subtraction to get the difference
+between them like I showed in the
+between them like I showed in the
+between them like I showed in the
+previous clip like where I was like
+previous clip like where I was like
+previous clip like where I was like
+Drawing the Line because that's usually
+Drawing the Line because that's usually
+Drawing the Line because that's usually
+how you get the point or the vector
+how you get the point or the vector
+how you get the point or the vector
+between two points but keep in mind that
+between two points but keep in mind that
+between two points but keep in mind that
+cast opposition in this normal CF is the
+cast opposition in this normal CF is the
+cast opposition in this normal CF is the
+origin so where we click is the origin
+origin so where we click is the origin
+origin so where we click is the origin
+this snap position is relative to that
+this snap position is relative to that
+this snap position is relative to that
+so it's it's technically in World space
+so it's it's technically in World space
+so it's it's technically in World space
+it's snap position minus cast. position
+it's snap position minus cast. position
+it's snap position minus cast. position
+but we're using Co point to object space
+but we're using Co point to object space
+but we're using Co point to object space
+just to make it more clear what we're
+just to make it more clear what we're
+just to make it more clear what we're
+doing so this is kind of like the line
+doing so this is kind of like the line
+doing so this is kind of like the line
+that we need to split up the components
+that we need to split up the components
+that we need to split up the components
+of so now we're going to say local X
+of so now we're going to say local X
+of so now we're going to say local X
+Vector equals normal CF we're going to
+Vector equals normal CF we're going to
+Vector equals normal CF we're going to
+use Vector to World space this rotates a
+use Vector to World space this rotates a
+use Vector to World space this rotates a
+vector it doesn't actually like
+vector it doesn't actually like
+vector it doesn't actually like
+transform it at all it just rotates it
+transform it at all it just rotates it
+transform it at all it just rotates it
+according to the new um C frame that
+according to the new um C frame that
+according to the new um C frame that
+we're using and we're going to take the
+we're using and we're going to take the
+we're using and we're going to take the
+vector 3. xaxis times negative
+vector 3. xaxis times negative
+vector 3. xaxis times negative
+math. sin relative snaap dox and what
+math. sin relative snaap dox and what
+math. sin relative snaap dox and what
+this does here is in our in our little
+this does here is in our in our little
+this does here is in our in our little
+explanation notice how the vector were
+explanation notice how the vector were
+explanation notice how the vector were
+isolating the from the Orange Point down
+isolating the from the Orange Point down
+isolating the from the Orange Point down
+to the snap point it's facing this way
+to the snap point it's facing this way
+to the snap point it's facing this way
+and so the components would also be
+and so the components would also be
+and so the components would also be
+facing this way which we kind of don't
+facing this way which we kind of don't
+facing this way which we kind of don't
+want let me get that so they'll also be
+want let me get that so they'll also be
+want let me get that so they'll also be
+facing this way so we use a negative
+facing this way so we use a negative
+facing this way so we use a negative
+sign to like flip them so the negative
+sign to like flip them so the negative
+sign to like flip them so the negative
+sign would flip them and they'd be like
+sign would flip them and they'd be like
+sign would flip them and they'd be like
+this now which is what we want we don't
+this now which is what we want we don't
+this now which is what we want we don't
+want it facing that way and
+want it facing that way and
+want it facing that way and
+that's what we use the um negative sign
+that's what we use the um negative sign
+that's what we use the um negative sign
+for here and then the math. sign is
+for here and then the math. sign is
+for here and then the math. sign is
+finding the like relative snap position
+finding the like relative snap position
+finding the like relative snap position
+because depending on where where the
+because depending on where where the
+because depending on where where the
+point is it these it kind of gives us
+point is it these it kind of gives us
+point is it these it kind of gives us
+the direction in which we want to go so
+the direction in which we want to go so
+the direction in which we want to go so
+that's why that's why we're taking the
+that's why that's why we're taking the
+that's why that's why we're taking the
+sign of the relative snap because it
+sign of the relative snap because it
+sign of the relative snap because it
+gives us the direction in which we want
+gives us the direction in which we want
+gives us the direction in which we want
+to place because when we place on like
+to place because when we place on like
+to place because when we place on like
+different points in the wall we need to
+different points in the wall we need to
+different points in the wall we need to
+know which like direction we should be
+know which like direction we should be
+know which like direction we should be
+pointing to and that's what this gives
+pointing to and that's what this gives
+pointing to and that's what this gives
+us so we need to do that for the Y
+us so we need to do that for the Y
+us so we need to do that for the Y
+Vector as well so local y Vector equals
+Vector as well so local y Vector equals
+Vector as well so local y Vector equals
+normal CF Vector to
+normal CF Vector to
+normal CF Vector to
+worldspace and we're going to do Vector
+worldspace and we're going to do Vector
+worldspace and we're going to do Vector
+3.y
+3.y
+3.y
+axis times negative math. sin relative
+axis times negative math. sin relative
+axis times negative math. sin relative
+sna doy so this is the same thing just
+sna doy so this is the same thing just
+sna doy so this is the same thing just
+for the other axis now you'll notice
+for the other axis now you'll notice
+for the other axis now you'll notice
+that like we're using X Vector y Vector
+that like we're using X Vector y Vector
+that like we're using X Vector y Vector
+kind of weird names that's because the
+kind of weird names that's because the
+kind of weird names that's because the
+cframe function we're going to use to
+cframe function we're going to use to
+cframe function we're going to use to
+actually generate the CF frame is going
+actually generate the CF frame is going
+actually generate the CF frame is going
+to be CF frame from from Matrix so this
+to be CF frame from from Matrix so this
+to be CF frame from from Matrix so this
+take in the position at which we want to
+take in the position at which we want to
+take in the position at which we want to
+start which will be our snap position
+start which will be our snap position
+start which will be our snap position
+then the X Vector which we're going to
+then the X Vector which we're going to
+then the X Vector which we're going to
+use x Vector for and then the Y Vector
+use x Vector for and then the Y Vector
+use x Vector for and then the Y Vector
+which we're going to use the Y Vector
+which we're going to use the Y Vector
+which we're going to use the Y Vector
+for and then as for the Z Vector we're
+for and then as for the Z Vector we're
+for and then as for the Z Vector we're
+going to use cast on normal so these are
+going to use cast on normal so these are
+going to use cast on normal so these are
+the three directions in which we want
+the three directions in which we want
+the three directions in which we want
+our entire system to kind of be based
+our entire system to kind of be based
+our entire system to kind of be based
+around the X Vector y vector and cast
+around the X Vector y vector and cast
+around the X Vector y vector and cast
+normal and then this can stay the same
+normal and then this can stay the same
+normal and then this can stay the same
+because all we're doing is we like
+because all we're doing is we like
+because all we're doing is we like
+transformed World space to kind of like
+transformed World space to kind of like
+transformed World space to kind of like
+be so that like if you're the if you're
+be so that like if you're the if you're
+be so that like if you're the if you're
+the code if you're this line right line
+the code if you're this line right line
+the code if you're this line right line
+of code right here all you know is like
+of code right here all you know is like
+of code right here all you know is like
+you treat this kind of surface as the
+you treat this kind of surface as the
+you treat this kind of surface as the
+ground this is your ground not this it's
+ground this is your ground not this it's
+ground this is your ground not this it's
+this this is the ground so that's the
+this this is the ground so that's the
+this this is the ground so that's the
+ground to you and then all you do you do
+ground to you and then all you do you do
+ground to you and then all you do you do
+the same like point to World space thing
+the same like point to World space thing
+the same like point to World space thing
+but this time it's kind of more relative
+but this time it's kind of more relative
+but this time it's kind of more relative
+to point so let's let's run it hopefully
+to point so let's let's run it hopefully
+to point so let's let's run it hopefully
+it works this was a lot and I will show
+it works this was a lot and I will show
+it works this was a lot and I will show
+you a way to kind of like reason through
+you a way to kind of like reason through
+you a way to kind of like reason through
+this a little a little bit better um so
+this a little a little bit better um so
+this a little a little bit better um so
+you'll place it and you'll
+you'll place it and you'll
+you'll place it and you'll
+notice everything works well the wall
+notice everything works well the wall
+notice everything works well the wall
+the blocks are pointed on the wall
+the blocks are pointed on the wall
+the blocks are pointed on the wall
+properly and I guess if you didn't think
+properly and I guess if you didn't think
+properly and I guess if you didn't think
+this like did anything then try like
+this like did anything then try like
+this like did anything then try like
+disabling what I just wrote and then try
+disabling what I just wrote and then try
+disabling what I just wrote and then try
+you know placing blocks as well so this
+you know placing blocks as well so this
+you know placing blocks as well so this
+works in all directions going everywhere
+works in all directions going everywhere
+works in all directions going everywhere
+and it does exactly what you would want
+and it does exactly what you would want
+and it does exactly what you would want
+it to do so I'm here in my little test
+it to do so I'm here in my little test
+it to do so I'm here in my little test
+world where I actually made this project
+world where I actually made this project
+world where I actually made this project
+for this video to show you a a helpful
+for this video to show you a a helpful
+for this video to show you a a helpful
+tool and understand standing this C
+tool and understand standing this C
+tool and understand standing this C
+frame magic that I just imposed upon you
+frame magic that I just imposed upon you
+frame magic that I just imposed upon you
+and that's using like visuals in game to
+and that's using like visuals in game to
+and that's using like visuals in game to
+kind of indicate the directions of the
+kind of indicate the directions of the
+kind of indicate the directions of the
+CF frame so you see here the yellow red
+CF frame so you see here the yellow red
+CF frame so you see here the yellow red
+and blue axes are like all the Y Vector
+and blue axes are like all the Y Vector
+and blue axes are like all the Y Vector
+Z vector and X Vector of our CF frame
+Z vector and X Vector of our CF frame
+Z vector and X Vector of our CF frame
+and as I move my mouse you can see how
+and as I move my mouse you can see how
+and as I move my mouse you can see how
+they're changing and how they're
+they're changing and how they're
+they're changing and how they're
+adapting to the environment and how they
+adapting to the environment and how they
+adapting to the environment and how they
+move around and the little blue dot is
+move around and the little blue dot is
+move around and the little blue dot is
+the snap position and you can just see
+the snap position and you can just see
+the snap position and you can just see
+how everything works together and how it
+how everything works together and how it
+how everything works together and how it
+all works so I'd recomend
+all works so I'd recomend
+all works so I'd recomend
+doing something like this and also
+doing something like this and also
+doing something like this and also
+you'll notice in the back I have little
+you'll notice in the back I have little
+you'll notice in the back I have little
+indicators for the X Y andz axises like
+indicators for the X Y andz axises like
+indicators for the X Y andz axises like
+the origin and stuff to test like across
+the origin and stuff to test like across
+the origin and stuff to test like across
+negatives and stuff and to do that you
+negatives and stuff and to do that you
+negatives and stuff and to do that you
+can go to
+can go to
+can go to
+view and then um where is it it's in
+view and then um where is it it's in
+view and then um where is it it's in
+show grid yeah click show grid and then
+show grid yeah click show grid and then
+show grid yeah click show grid and then
+you can get those aess which is cool so
+you can get those aess which is cool so
+you can get those aess which is cool so
+all I did is I have a couple parts and
+all I did is I have a couple parts and
+all I did is I have a couple parts and
+they have they have their um pivots set
+they have they have their um pivots set
+they have they have their um pivots set
+to like one Edge so you see how the
+to like one Edge so you see how the
+to like one Edge so you see how the
+pivot is at the very back then on my
+pivot is at the very back then on my
+pivot is at the very back then on my
+code this same exact client place so
+code this same exact client place so
+code this same exact client place so
+variables might be a little bit
+variables might be a little bit
+variables might be a little bit
+different I have I just moved I pivot
+different I have I just moved I pivot
+different I have I just moved I pivot
+them to the C frames and then the
+them to the C frames and then the
+them to the C frames and then the
+they're at the position and they're
+they're at the position and they're
+they're at the position and they're
+looking at the next position and that's
+looking at the next position and that's
+looking at the next position and that's
+all I do and the p is like the little
+all I do and the p is like the little
+all I do and the p is like the little
+little blue dot where is it where is the
+little blue dot where is it where is the
+little blue dot where is it where is the
+pose it's like this little blue dot here
+pose it's like this little blue dot here
+pose it's like this little blue dot here
+so that one moves around as well so I
+so that one moves around as well so I
+so that one moves around as well so I
+would recommend doing this if you're
+would recommend doing this if you're
+would recommend doing this if you're
+kind of confused and you kind want to
+kind of confused and you kind want to
+kind of confused and you kind want to
+understand what I'm doing and like play
+understand what I'm doing and like play
+understand what I'm doing and like play
+play with some of the values to see like
+play with some of the values to see like
+play with some of the values to see like
+what happens like maybe flip the
+what happens like maybe flip the
+what happens like maybe flip the
+negative sign or you know try to leave
+negative sign or you know try to leave
+negative sign or you know try to leave
+it in global space not convert it to the
+it in global space not convert it to the
+it in global space not convert it to the
+normal CF and see how things change
+normal CF and see how things change
+normal CF and see how things change
+because this took me many hours to
+because this took me many hours to
+because this took me many hours to
+figure out even though I actually know
+figure out even though I actually know
+figure out even though I actually know
+linear algebra now so I have no excuse
+linear algebra now so I have no excuse
+linear algebra now so I have no excuse
+of just like you know like dealing with
+of just like you know like dealing with
+of just like you know like dealing with
+magic because I actually know the magic
+magic because I actually know the magic
+magic because I actually know the magic
+what it means now so it's complex don't
+what it means now so it's complex don't
+what it means now so it's complex don't
+get worried if you don't understand it
+get worried if you don't understand it
+get worried if you don't understand it
+you'll you'll figure it out so there's
+you'll you'll figure it out so there's
+you'll you'll figure it out so there's
+one last thing we need to do before
+one last thing we need to do before
+one last thing we need to do before
+before we call this project done at
+before we call this project done at
+before we call this project done at
+least for now and that's the server
+least for now and that's the server
+least for now and that's the server
+validation because right now if you you
+validation because right now if you you
+validation because right now if you you
+can like cheese a system let me see if I
+can like cheese a system let me see if I
+can like cheese a system let me see if I
+can show you so obviously other than the
+can show you so obviously other than the
+can show you so obviously other than the
+fact that you can like just send bogus
+fact that you can like just send bogus
+fact that you can like just send bogus
+coordinates to the server and it'll just
+coordinates to the server and it'll just
+coordinates to the server and it'll just
+trust you that you're on the grid system
+trust you that you're on the grid system
+trust you that you're on the grid system
+if you like kind of like you know move
+if you like kind of like you know move
+if you like kind of like you know move
+like spam it around or whatever you can
+like spam it around or whatever you can
+like spam it around or whatever you can
+get stuff that's like not
+get stuff that's like not
+get stuff that's like not
+aligned I guess I guess I didn't hear
+aligned I guess I guess I didn't hear
+aligned I guess I guess I didn't hear
+but like you can you can get stuff
+but like you can you can get stuff
+but like you can you can get stuff
+that's not aligned and you don't that
+that's not aligned and you don't that
+that's not aligned and you don't that
+okay so let's go into placement
+okay so let's go into placement
+okay so let's go into placement
+validator and we need a special function
+validator and we need a special function
+validator and we need a special function
+to validate the like gridness like is it
+to validate the like gridness like is it
+to validate the like gridness like is it
+grid worthy you know so we're going to
+grid worthy you know so we're going to
+grid worthy you know so we're going to
+do function placement
+do function placement
+do function placement
+validator do is within grid and we're
+validator do is within grid and we're
+validator do is within grid and we're
+going to take the position and this will
+going to take the position and this will
+going to take the position and this will
+be the position that the client sends to
+be the position that the client sends to
+be the position that the client sends to
+the server so keep in mind it's already
+the server so keep in mind it's already
+the server so keep in mind it's already
+transformed by the you know by the um
+transformed by the you know by the um
+transformed by the you know by the um
+object like by the block T by size by2
+object like by the block T by size by2
+object like by the block T by size by2
+it's already it's already transformed in
+it's already it's already transformed in
+it's already it's already transformed in
+that direction now obviously we don't
+that direction now obviously we don't
+that direction now obviously we don't
+really have to like transform it like
+really have to like transform it like
+really have to like transform it like
+it's fine we could send it to the server
+it's fine we could send it to the server
+it's fine we could send it to the server
+and save it but like just to you know
+and save it but like just to you know
+and save it but like just to you know
+make it simpler for the client we can do
+make it simpler for the client we can do
+make it simpler for the client we can do
+all the processing on the server and say
+all the processing on the server and say
+all the processing on the server and say
+local block pose equals placement
+local block pose equals placement
+local block pose equals placement
+validator snap to grid the position and
+validator snap to grid the position and
+validator snap to grid the position and
+we'll add Vector 3.1 and this is just
+we'll add Vector 3.1 and this is just
+we'll add Vector 3.1 and this is just
+111 it's a Shand for vector 3. new11 and
+111 it's a Shand for vector 3. new11 and
+111 it's a Shand for vector 3. new11 and
+we're going to multiply this times the
+we're going to multiply this times the
+we're going to multiply this times the
+grid size divided by two so in the same
+grid size divided by two so in the same
+grid size divided by two so in the same
+way as we over here we multiply it by
+way as we over here we multiply it by
+way as we over here we multiply it by
+the block do size of I by two we're
+the block do size of I by two we're
+the block do size of I by two we're
+assuming the grid size is the block size
+assuming the grid size is the block size
+assuming the grid size is the block size
+and we're kind of like we're snapping it
+and we're kind of like we're snapping it
+and we're kind of like we're snapping it
+to the grid so it'll be the bottom
+to the grid so it'll be the bottom
+to the grid so it'll be the bottom
+bottom back left again and we're going
+bottom back left again and we're going
+bottom back left again and we're going
+to multiply It Forward by one and we're
+to multiply It Forward by one and we're
+to multiply It Forward by one and we're
+just going to get it in the right
+just going to get it in the right
+just going to get it in the right
+position and then we're going to
+position and then we're going to
+position and then we're going to
+return block
+return block
+return block
+pose fuzzy equal position so fuzzy equal
+pose fuzzy equal position so fuzzy equal
+pose fuzzy equal position so fuzzy equal
+is just a vector function that kind of
+is just a vector function that kind of
+is just a vector function that kind of
+checks if they're mostly equal like
+checks if they're mostly equal like
+checks if they're mostly equal like
+because obviously when we're dealing
+because obviously when we're dealing
+because obviously when we're dealing
+with floats and 3D space the coordinates
+with floats and 3D space the coordinates
+with floats and 3D space the coordinates
+aren't always going to be 100% equal but
+aren't always going to be 100% equal but
+aren't always going to be 100% equal but
+if they're within like you know like a
+if they're within like you know like a
+if they're within like you know like a
+thousand a thousandth or something like
+thousand a thousandth or something like
+thousand a thousandth or something like
+it's good enough we can just place it
+it's good enough we can just place it
+it's good enough we can just place it
+like it doesn't really matter that much
+like it doesn't really matter that much
+like it doesn't really matter that much
+and here this is all we're doing just to
+and here this is all we're doing just to
+and here this is all we're doing just to
+like transfer it to the right position
+like transfer it to the right position
+like transfer it to the right position
+and I think that's that's really all we
+and I think that's that's really all we
+and I think that's that's really all we
+need for this so now let's go into the
+need for this so now let's go into the
+need for this so now let's go into the
+server Placer and all we need to do is
+server Placer and all we need to do is
+server Placer and all we need to do is
+we need to do if not placement is within
+we need to do if not placement is within
+we need to do if not placement is within
+Max
+or not placement validator is within
+or not placement validator is within
+or not placement validator is within
+grid
+grid
+grid
+position then return so if this is if
+position then return so if this is if
+position then return so if this is if
+this is
+this is
+this is
+false then we just return so that should
+false then we just return so that should
+false then we just return so that should
+be everything this shouldn't really
+be everything this shouldn't really
+be everything this shouldn't really
+change the functionality this is only
+change the functionality this is only
+change the functionality this is only
+like anti- exploit practice and and such
+like anti- exploit practice and and such
+like anti- exploit practice and and such
+so everything should be good obviously
+so everything should be good obviously
+so everything should be good obviously
+as I just demonstrated there you can
+as I just demonstrated there you can
+as I just demonstrated there you can
+still like kind of phas into the ground
+still like kind of phas into the ground
+still like kind of phas into the ground
+which is not good but you can that's a
+which is not good but you can that's a
+which is not good but you can that's a
+pretty easy fix if you really want to
+pretty easy fix if you really want to
+pretty easy fix if you really want to
+you know figure that out but yeah this
+you know figure that out but yeah this
+you know figure that out but yeah this
+is the client placement and the server
+is the client placement and the server
+is the client placement and the server
+placement and the whole grid system done
+placement and the whole grid system done
+placement and the whole grid system done
+making Minecraft style lock placing a
+making Minecraft style lock placing a
+making Minecraft style lock placing a
+breeze so I really hope you enjoy this
+breeze so I really hope you enjoy this
+breeze so I really hope you enjoy this
+video this is a really fun project to
+video this is a really fun project to
+video this is a really fun project to
+work on and I'm going to be making
+work on and I'm going to be making
+work on and I'm going to be making
+another placement video series as well
+another placement video series as well
+another placement video series as well
+because doing like these kind of
+because doing like these kind of
+because doing like these kind of
+placement systems are really cool
+placement systems are really cool
+placement systems are really cool
+they're also really tough and test your
+they're also really tough and test your
+they're also really tough and test your
+C framing ability and vector and 3D
+C framing ability and vector and 3D
+C framing ability and vector and 3D
+graphics and all that stuff so I really
+graphics and all that stuff so I really
+graphics and all that stuff so I really
+hope you learn something and I hope you
+hope you learn something and I hope you
+hope you learn something and I hope you
+enjoy it and make sure to take some time
+enjoy it and make sure to take some time
+enjoy it and make sure to take some time
+playing with the intricacies of this
+playing with the intricacies of this
+playing with the intricacies of this
+cframe stuff that we're doing here
+cframe stuff that we're doing here
+cframe stuff that we're doing here
+because I feel like you can apply this
+because I feel like you can apply this
+because I feel like you can apply this
+knowledge to a lot of different projects
+knowledge to a lot of different projects
+knowledge to a lot of different projects
+but like And subscribe if you enjoyed
+but like And subscribe if you enjoyed
+but like And subscribe if you enjoyed
+the video and with that I hope you have
+the video and with that I hope you have
+the video and with that I hope you have
+a nice day and
+goodbye
+[Music]

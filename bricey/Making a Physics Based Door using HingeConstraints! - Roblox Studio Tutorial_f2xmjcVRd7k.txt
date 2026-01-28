@@ -1,0 +1,1013 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i will be showing you how
+in this video i will be showing you how
+in this video i will be showing you how
+to make your own
+to make your own
+to make your own
+physics-based door
+physics-based door
+physics-based door
+and so in order to make this door we
+and so in order to make this door we
+and so in order to make this door we
+will have to learn about
+will have to learn about
+will have to learn about
+hinges and i will be going over all
+hinges and i will be going over all
+hinges and i will be going over all
+about hinges in this video
+about hinges in this video
+about hinges in this video
+they're a very cool constraint and a
+they're a very cool constraint and a
+they're a very cool constraint and a
+roblox
+roblox
+roblox
+they're super useful i made a bunch of
+they're super useful i made a bunch of
+they're super useful i made a bunch of
+other projects like
+other projects like
+other projects like
+a revolving door or a folding chair with
+a revolving door or a folding chair with
+a revolving door or a folding chair with
+them
+them
+them
+they're super cool and we'll also be
+they're super cool and we'll also be
+they're super cool and we'll also be
+doing a little bit of scripting
+doing a little bit of scripting
+doing a little bit of scripting
+in order to make our door actually
+in order to make our door actually
+in order to make our door actually
+function when you click it
+function when you click it
+function when you click it
+but make sure to like and subscribe if
+but make sure to like and subscribe if
+but make sure to like and subscribe if
+you enjoyed this video
+you enjoyed this video
+you enjoyed this video
+if you want join my discord server the
+if you want join my discord server the
+if you want join my discord server the
+link will be in the description where we
+link will be in the description where we
+link will be in the description where we
+talk about scripting and
+talk about scripting and
+talk about scripting and
+a bunch of other stuff and without
+a bunch of other stuff and without
+a bunch of other stuff and without
+further ado
+further ado
+further ado
+let's get into the video
+let's get into the video
+let's get into the video
+[Music]
+[Music]
+[Music]
+so in front of me i have two parts one
+so in front of me i have two parts one
+so in front of me i have two parts one
+which resembles a door and one which
+which resembles a door and one which
+which resembles a door and one which
+resembles a pivot point
+resembles a pivot point
+resembles a pivot point
+for your door so in order to set up my
+for your door so in order to set up my
+for your door so in order to set up my
+door i'm going to first
+door i'm going to first
+door i'm going to first
+anchor my pivot point and now we're
+anchor my pivot point and now we're
+anchor my pivot point and now we're
+going to make a hinge constraint between
+going to make a hinge constraint between
+going to make a hinge constraint between
+our door and our pivot point
+our door and our pivot point
+our door and our pivot point
+so i'm going to go through model create
+so i'm going to go through model create
+so i'm going to go through model create
+hinge
+hinge
+hinge
+and if you can't see it it's in the drop
+and if you can't see it it's in the drop
+and if you can't see it it's in the drop
+down you select hinge
+down you select hinge
+down you select hinge
+and then i'm going to start it at the
+and then i'm going to start it at the
+and then i'm going to start it at the
+very edge of this part
+very edge of this part
+very edge of this part
+click once and you'll see the green ball
+click once and you'll see the green ball
+click once and you'll see the green ball
+which is an attachment shows up
+which is an attachment shows up
+which is an attachment shows up
+and i'm going to go all the way over to
+and i'm going to go all the way over to
+and i'm going to go all the way over to
+the other part
+the other part
+the other part
+over here and go to the very end and
+over here and go to the very end and
+over here and go to the very end and
+click again this
+click again this
+click again this
+is our hinge constraint so you see right
+is our hinge constraint so you see right
+is our hinge constraint so you see right
+now it looks kind of weird
+now it looks kind of weird
+now it looks kind of weird
+it doesn't have much information if you
+it doesn't have much information if you
+it doesn't have much information if you
+want to see more about your constraints
+want to see more about your constraints
+want to see more about your constraints
+go to model constraint details and then
+go to model constraint details and then
+go to model constraint details and then
+most of the time i turn on draw on top
+most of the time i turn on draw on top
+most of the time i turn on draw on top
+so i can just see it
+so i can just see it
+so i can just see it
+wherever and also i'm going to go to
+wherever and also i'm going to go to
+wherever and also i'm going to go to
+model and then
+model and then
+model and then
+select constraints and so this basically
+select constraints and so this basically
+select constraints and so this basically
+keeps the limits and requirements of our
+keeps the limits and requirements of our
+keeps the limits and requirements of our
+constraints in mind when we're dragging
+constraints in mind when we're dragging
+constraints in mind when we're dragging
+moving
+moving
+moving
+rotating our parts so you can see
+rotating our parts so you can see
+rotating our parts so you can see
+there's this little red line here
+there's this little red line here
+there's this little red line here
+which says attachments aren't the same
+which says attachments aren't the same
+which says attachments aren't the same
+location and this is one big thing about
+location and this is one big thing about
+location and this is one big thing about
+hinges the attachments have to be at the
+hinges the attachments have to be at the
+hinges the attachments have to be at the
+same location
+same location
+same location
+just like a real hinge so like if your
+just like a real hinge so like if your
+just like a real hinge so like if your
+hinge in real life
+hinge in real life
+hinge in real life
+was not attached to your door like your
+was not attached to your door like your
+was not attached to your door like your
+door frame
+door frame
+door frame
+it wouldn't work same with roblox but
+it wouldn't work same with roblox but
+it wouldn't work same with roblox but
+roblox forcefully drags it
+roblox forcefully drags it
+roblox forcefully drags it
+to the position so if i were to like
+to the position so if i were to like
+to the position so if i were to like
+just try to move this around you can see
+just try to move this around you can see
+just try to move this around you can see
+it automatically snaps
+it automatically snaps
+it automatically snaps
+because i have constraints on
+because i have constraints on
+because i have constraints on
+so this is our basic hinge if we were to
+so this is our basic hinge if we were to
+so this is our basic hinge if we were to
+play this
+play this
+play this
+let's just see how it works so i walk
+let's just see how it works so i walk
+let's just see how it works so i walk
+around
+around
+around
+i can hit my hinge the door will rotate
+i can hit my hinge the door will rotate
+i can hit my hinge the door will rotate
+around
+around
+around
+door's pretty heavy so it's kind of hard
+door's pretty heavy so it's kind of hard
+door's pretty heavy so it's kind of hard
+for my character to
+for my character to
+for my character to
+move it that easily you see the door can
+move it that easily you see the door can
+move it that easily you see the door can
+move around
+move around
+move around
+it has way too free of a range of motion
+it has way too free of a range of motion
+it has way too free of a range of motion
+in real life a door would get stopped
+in real life a door would get stopped
+in real life a door would get stopped
+like right about right around there but
+like right about right around there but
+like right about right around there but
+obviously i can just move it around
+obviously i can just move it around
+obviously i can just move it around
+so this brings up a good point about how
+so this brings up a good point about how
+so this brings up a good point about how
+our
+our
+our
+angles and hinge constraint interact
+angles and hinge constraint interact
+angles and hinge constraint interact
+so the way hinge constraint works is it
+so the way hinge constraint works is it
+so the way hinge constraint works is it
+has two attachments right
+has two attachments right
+has two attachments right
+both the attachments their primary
+both the attachments their primary
+both the attachments their primary
+axises their yellow axises have to be
+axises their yellow axises have to be
+axises their yellow axises have to be
+pointing in the same direction
+pointing in the same direction
+pointing in the same direction
+in my case they're pointing upwards and
+in my case they're pointing upwards and
+in my case they're pointing upwards and
+this means
+this means
+this means
+that the hinge will allow the parts to
+that the hinge will allow the parts to
+that the hinge will allow the parts to
+rotate
+rotate
+rotate
+around the axis in which they are both
+around the axis in which they are both
+around the axis in which they are both
+pointing and so this would be the y-axis
+pointing and so this would be the y-axis
+pointing and so this would be the y-axis
+and world space and it's like this way
+and world space and it's like this way
+and world space and it's like this way
+so it's what you saw before
+so it's what you saw before
+so it's what you saw before
+and there's also the secondary axises
+and there's also the secondary axises
+and there's also the secondary axises
+and these determine the angle
+and these determine the angle
+and these determine the angle
+for your hinge and the reason this is
+for your hinge and the reason this is
+for your hinge and the reason this is
+important is because if we want to put
+important is because if we want to put
+important is because if we want to put
+limits
+limits
+limits
+on our hinge we have to enable
+on our hinge we have to enable
+on our hinge we have to enable
+angles to limit them and we have to know
+angles to limit them and we have to know
+angles to limit them and we have to know
+like how the angles work so
+like how the angles work so
+like how the angles work so
+in my hinge i'm going to go and press
+in my hinge i'm going to go and press
+in my hinge i'm going to go and press
+limit
+limit
+limit
+enable you can see a bunch of things pop
+enable you can see a bunch of things pop
+enable you can see a bunch of things pop
+up don't get overwhelmed
+up don't get overwhelmed
+up don't get overwhelmed
+this little green thing is the limits of
+this little green thing is the limits of
+this little green thing is the limits of
+your hinge so right now if i were to
+your hinge so right now if i were to
+your hinge so right now if i were to
+play this
+you can see that the hinge can only go
+you can see that the hinge can only go
+you can see that the hinge can only go
+45 degrees
+45 degrees
+45 degrees
+in either direction and that's because
+in either direction and that's because
+in either direction and that's because
+if i go back to this little area you can
+if i go back to this little area you can
+if i go back to this little area you can
+see
+see
+see
+here you have the main axis of your
+here you have the main axis of your
+here you have the main axis of your
+angle and it can only go 45 degrees in
+angle and it can only go 45 degrees in
+angle and it can only go 45 degrees in
+one direction 45 degrees another
+one direction 45 degrees another
+one direction 45 degrees another
+and the way this angle is calculated is
+and the way this angle is calculated is
+and the way this angle is calculated is
+the angle between
+the angle between
+the angle between
+your attachment zero secondary axis and
+your attachment zero secondary axis and
+your attachment zero secondary axis and
+your attachment one secondary axis so
+your attachment one secondary axis so
+your attachment one secondary axis so
+these arrows at the side are literally
+these arrows at the side are literally
+these arrows at the side are literally
+just rays that an angle is being
+just rays that an angle is being
+just rays that an angle is being
+calculated from
+calculated from
+calculated from
+right now personally this doesn't look
+right now personally this doesn't look
+right now personally this doesn't look
+very intuitive
+very intuitive
+very intuitive
+and it doesn't make much sense so i'm
+and it doesn't make much sense so i'm
+and it doesn't make much sense so i'm
+going to take my secondary axises and
+going to take my secondary axises and
+going to take my secondary axises and
+rotate them
+rotate them
+rotate them
+to face towards our door part i'm going
+to face towards our door part i'm going
+to face towards our door part i'm going
+to take both of them and do that
+to take both of them and do that
+to take both of them and do that
+and the reason i'm doing both of them is
+and the reason i'm doing both of them is
+and the reason i'm doing both of them is
+because this sets like when the
+because this sets like when the
+because this sets like when the
+secondary the secondary axises are at
+secondary the secondary axises are at
+secondary the secondary axises are at
+the same location
+the same location
+the same location
+that is angle zero of your hinge so
+that is angle zero of your hinge so
+that is angle zero of your hinge so
+right now it's at angle zero
+right now it's at angle zero
+right now it's at angle zero
+and i wanna set my limits i'm gonna set
+and i wanna set my limits i'm gonna set
+and i wanna set my limits i'm gonna set
+the
+the
+the
+lower angle to zero and the upper angle
+lower angle to zero and the upper angle
+lower angle to zero and the upper angle
+to 90.
+to 90.
+to 90.
+so this gives it a 90 degree range of
+so this gives it a 90 degree range of
+so this gives it a 90 degree range of
+motion
+motion
+motion
+just like a normal door in real life
+just like a normal door in real life
+just like a normal door in real life
+because it can only open up one way i
+because it can only open up one way i
+because it can only open up one way i
+can't open up the other
+can't open up the other
+can't open up the other
+so i'm not sure yeah here we go this is
+so i'm not sure yeah here we go this is
+so i'm not sure yeah here we go this is
+the right side
+the right side
+the right side
+you can see you can open and close just
+you can see you can open and close just
+you can see you can open and close just
+normally
+normally
+normally
+so this is all fine and good
+so this is all fine and good
+so this is all fine and good
+but what if i want to go a step further
+but what if i want to go a step further
+but what if i want to go a step further
+because most doors and road blocks
+because most doors and road blocks
+because most doors and road blocks
+they can be scripted so that when you
+they can be scripted so that when you
+they can be scripted so that when you
+click on them
+click on them
+click on them
+they can open and close and you can do
+they can open and close and you can do
+they can open and close and you can do
+that
+that
+that
+with this hinge setup as well but first
+with this hinge setup as well but first
+with this hinge setup as well but first
+you got to understand
+you got to understand
+you got to understand
+servos and hinges so basically what i
+servos and hinges so basically what i
+servos and hinges so basically what i
+serve in a hinges
+serve in a hinges
+serve in a hinges
+is it's a type of actuator for the hinge
+is it's a type of actuator for the hinge
+is it's a type of actuator for the hinge
+so i have my hinge selected
+so i have my hinge selected
+so i have my hinge selected
+i go into the properties and you can see
+i go into the properties and you can see
+i go into the properties and you can see
+this actuator type
+this actuator type
+this actuator type
+property you can choose from none motor
+property you can choose from none motor
+property you can choose from none motor
+or servo
+or servo
+or servo
+so we're just going to talk about a
+so we're just going to talk about a
+so we're just going to talk about a
+servo a motor does what it
+servo a motor does what it
+servo a motor does what it
+says it does it just continually applies
+says it does it just continually applies
+says it does it just continually applies
+force
+force
+force
+to our hinge but we're going to use
+to our hinge but we're going to use
+to our hinge but we're going to use
+servo because that's more for precise
+servo because that's more for precise
+servo because that's more for precise
+movement aka
+movement aka
+movement aka
+opening and closing a door so there are
+opening and closing a door so there are
+opening and closing a door so there are
+a few properties the speed the max
+a few properties the speed the max
+a few properties the speed the max
+torque and the target angle
+torque and the target angle
+torque and the target angle
+so the target angle is the angle along
+so the target angle is the angle along
+so the target angle is the angle along
+like between the
+like between the
+like between the
+limits that we want to get our hinge to
+limits that we want to get our hinge to
+limits that we want to get our hinge to
+meet
+meet
+meet
+so right now it's at angle 0 so if we
+so right now it's at angle 0 so if we
+so right now it's at angle 0 so if we
+want the door to open
+want the door to open
+want the door to open
+we can set it to angle 90 target angle
+we can set it to angle 90 target angle
+we can set it to angle 90 target angle
+but right now this will do nothing and
+but right now this will do nothing and
+but right now this will do nothing and
+you can see it graphs out
+you can see it graphs out
+you can see it graphs out
+the way the hinge should move to reach
+the way the hinge should move to reach
+the way the hinge should move to reach
+the target angle but right now it'll do
+the target angle but right now it'll do
+the target angle but right now it'll do
+nothing since the angular speed and
+nothing since the angular speed and
+nothing since the angular speed and
+servo max torque
+servo max torque
+servo max torque
+are not set so i'm going to set the
+are not set so i'm going to set the
+are not set so i'm going to set the
+angular speed to something like a
+angular speed to something like a
+angular speed to something like a
+thousand and the servo max torque
+thousand and the servo max torque
+thousand and the servo max torque
+to something like 2000 this will just
+to something like 2000 this will just
+to something like 2000 this will just
+add a little bit of acceleration
+add a little bit of acceleration
+add a little bit of acceleration
+just play around with these values you
+just play around with these values you
+just play around with these values you
+can customize
+can customize
+can customize
+them to your liking so if i were to just
+them to your liking so if i were to just
+them to your liking so if i were to just
+run this normally
+run this normally
+run this normally
+the door will open to 90 degrees which
+the door will open to 90 degrees which
+the door will open to 90 degrees which
+is exactly what we want
+is exactly what we want
+is exactly what we want
+and this server is pretty precise so i
+and this server is pretty precise so i
+and this server is pretty precise so i
+can set it to something like 45 degrees
+can set it to something like 45 degrees
+can set it to something like 45 degrees
+just to demonstrate
+just to demonstrate
+just to demonstrate
+and it goes to 45 degrees so that's
+and it goes to 45 degrees so that's
+and it goes to 45 degrees so that's
+exactly
+exactly
+exactly
+what you want it to do that's great so
+what you want it to do that's great so
+what you want it to do that's great so
+i'm going to set it back
+i'm going to set it back
+i'm going to set it back
+to zero and then i'm going to
+to zero and then i'm going to
+to zero and then i'm going to
+take my door and my pivot and just group
+take my door and my pivot and just group
+take my door and my pivot and just group
+them
+them
+them
+because that'll make it easier for me to
+because that'll make it easier for me to
+because that'll make it easier for me to
+work with with my script and we're going
+work with with my script and we're going
+work with with my script and we're going
+to name this
+to name this
+to name this
+door and i'm going to create a script
+door and i'm going to create a script
+door and i'm going to create a script
+in my door i'm going to go back we'll
+in my door i'm going to go back we'll
+in my door i'm going to go back we'll
+deal with that script in just a second
+deal with that script in just a second
+deal with that script in just a second
+and i'm going to go create a click
+and i'm going to go create a click
+and i'm going to go create a click
+detector
+detector
+detector
+inside of my door part so when you click
+inside of my door part so when you click
+inside of my door part so when you click
+on the door it will open
+on the door it will open
+on the door it will open
+now i'm going to go into my script
+now i'm going to go into my script
+now i'm going to go into my script
+define local
+define local
+define local
+door model equal script dot parent
+door model equal script dot parent
+door model equal script dot parent
+and i define local door which will be
+and i define local door which will be
+and i define local door which will be
+equal to
+equal to
+equal to
+door model dot door
+door model dot door
+door model dot door
+i'm going to find local pivot which will
+i'm going to find local pivot which will
+i'm going to find local pivot which will
+be equal to
+be equal to
+be equal to
+door model dot pivot
+door model dot pivot
+door model dot pivot
+and then now we can just go define our
+and then now we can just go define our
+and then now we can just go define our
+click detector so local click
+click detector so local click
+click detector so local click
+detector equals door dot click
+so in order to understand if our door is
+so in order to understand if our door is
+so in order to understand if our door is
+open or closed we need to give our
+open or closed we need to give our
+open or closed we need to give our
+script another variable
+script another variable
+script another variable
+local open and we're going to set this
+local open and we're going to set this
+local open and we're going to set this
+to false because right now
+to false because right now
+to false because right now
+the door is not open so open equals
+the door is not open so open equals
+the door is not open so open equals
+false this will be a boolean either true
+false this will be a boolean either true
+false this will be a boolean either true
+or false
+or false
+or false
+and then whenever you click on the door
+and then whenever you click on the door
+and then whenever you click on the door
+so let's
+so let's
+so let's
+say local click detector not local click
+say local click detector not local click
+say local click detector not local click
+detector we're just going to
+detector we're just going to
+detector we're just going to
+use click detector that we defined above
+use click detector that we defined above
+use click detector that we defined above
+we're going to say click detector dot
+we're going to say click detector dot
+we're going to say click detector dot
+mouse click
+mouse click
+mouse click
+and so whenever the player clicks the
+and so whenever the player clicks the
+and so whenever the player clicks the
+mouse this will fire we're going to
+mouse this will fire we're going to
+mouse this will fire we're going to
+connect
+connect
+connect
+a function and then enter give us some
+a function and then enter give us some
+a function and then enter give us some
+space we're going to set open equal to
+space we're going to set open equal to
+space we're going to set open equal to
+not
+not
+not
+open so if open is false it'll make it
+open so if open is false it'll make it
+open so if open is false it'll make it
+true if open is true it'll make it false
+true if open is true it'll make it false
+true if open is true it'll make it false
+it just
+it just
+it just
+negates it inverts it whatever you want
+negates it inverts it whatever you want
+negates it inverts it whatever you want
+to say
+to say
+to say
+and now we're going to find our target
+and now we're going to find our target
+and now we're going to find our target
+angle and this target angle will be
+angle and this target angle will be
+angle and this target angle will be
+equal to
+equal to
+equal to
+open and
+open and
+open and
+90 or 0. so what this means is it says
+90 or 0. so what this means is it says
+90 or 0. so what this means is it says
+if open is true then
+if open is true then
+if open is true then
+set the target angle to 90 we haven't
+set the target angle to 90 we haven't
+set the target angle to 90 we haven't
+set it yet but this is just a variable
+set it yet but this is just a variable
+set it yet but this is just a variable
+and if open is false we set the target
+and if open is false we set the target
+and if open is false we set the target
+angle to zero you don't really have to
+angle to zero you don't really have to
+angle to zero you don't really have to
+understand this is some
+understand this is some
+understand this is some
+logic shorthand it can make your script
+logic shorthand it can make your script
+logic shorthand it can make your script
+so much shorter
+so much shorter
+so much shorter
+but for right now we can just set hinge
+but for right now we can just set hinge
+but for right now we can just set hinge
+dot target angle
+dot target angle
+dot target angle
+to our target angle that we
+to our target angle that we
+to our target angle that we
+defined above so this is about all the
+defined above so this is about all the
+defined above so this is about all the
+code you need
+code you need
+code you need
+so i'm going to hop into my game and you
+so i'm going to hop into my game and you
+so i'm going to hop into my game and you
+can click on the door
+and it takes a while sometimes and it'll
+and it takes a while sometimes and it'll
+and it takes a while sometimes and it'll
+open
+open
+open
+so this just depends on the properties
+so this just depends on the properties
+so this just depends on the properties
+that you give it
+you can see the door can open and close
+however you please
+and that's great and it only opens one
+and that's great and it only opens one
+and that's great and it only opens one
+way it doesn't matter and since this is
+way it doesn't matter and since this is
+way it doesn't matter and since this is
+based off of a hinge and not a tween for
+based off of a hinge and not a tween for
+based off of a hinge and not a tween for
+example or c
+example or c
+example or c
+frame i can stand in front of my door
+frame i can stand in front of my door
+frame i can stand in front of my door
+and it won't close
+and it won't close
+and it won't close
+but this just depends on how much speed
+but this just depends on how much speed
+but this just depends on how much speed
+and
+and
+and
+max torque you give it i can stand in
+max torque you give it i can stand in
+max torque you give it i can stand in
+front of it again it won't close
+front of it again it won't close
+front of it again it won't close
+and when it's closed i can even like
+and when it's closed i can even like
+and when it's closed i can even like
+manually push it
+manually push it
+manually push it
+back in sometimes and if someone tries
+back in sometimes and if someone tries
+back in sometimes and if someone tries
+to open it from the other side i can
+to open it from the other side i can
+to open it from the other side i can
+just stand in front of it
+just stand in front of it
+just stand in front of it
+and it prevents them from getting
+and it prevents them from getting
+and it prevents them from getting
+through you could do that as well it
+through you could do that as well it
+through you could do that as well it
+just depends on what you want
+just depends on what you want
+just depends on what you want
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you guys
+you guys
+you guys
+enjoyed hinges are super fun and
+enjoyed hinges are super fun and
+enjoyed hinges are super fun and
+super useful in roblox and if you are
+super useful in roblox and if you are
+super useful in roblox and if you are
+wondering there will be
+wondering there will be
+wondering there will be
+a model link in the description if you
+a model link in the description if you
+a model link in the description if you
+want to check it out
+want to check it out
+want to check it out
+and in the background you can also see a
+and in the background you can also see a
+and in the background you can also see a
+few other creations
+few other creations
+few other creations
+i've made with hinges like a little
+i've made with hinges like a little
+i've made with hinges like a little
+folding chair
+folding chair
+folding chair
+it's nice and simple but it looks pretty
+it's nice and simple but it looks pretty
+it's nice and simple but it looks pretty
+good
+good
+good
+and if you guys enjoyed this video make
+and if you guys enjoyed this video make
+and if you guys enjoyed this video make
+sure to like
+sure to like
+sure to like
+and subscribe and you can also see i
+and subscribe and you can also see i
+and subscribe and you can also see i
+have a revolving door which that was
+have a revolving door which that was
+have a revolving door which that was
+pretty cool
+pretty cool
+pretty cool
+i think it's a cool little hinge feature
+i think it's a cool little hinge feature
+i think it's a cool little hinge feature
+and if you guys want to see these
+and if you guys want to see these
+and if you guys want to see these
+make sure to comment down below and
+make sure to comment down below and
+make sure to comment down below and
+comment any suggestions or questions
+comment any suggestions or questions
+comment any suggestions or questions
+that you may have but other than that
+that you may have but other than that
+that you may have but other than that
+i hope you guys have a nice day and
+i hope you guys have a nice day and
+i hope you guys have a nice day and
+goodbye
+[Music]
+[Music]
+[Music]
+you

@@ -1,0 +1,1054 @@
+so if you've been to the roblox dev wiki
+so if you've been to the roblox dev wiki
+so if you've been to the roblox dev wiki
+recently specifically on the mouse page
+recently specifically on the mouse page
+recently specifically on the mouse page
+you probably would have seen this
+you probably would have seen this
+you probably would have seen this
+message and it basically says the mouse
+message and it basically says the mouse
+message and it basically says the mouse
+has been superseded
+has been superseded
+has been superseded
+by user input service and for someone
+by user input service and for someone
+by user input service and for someone
+who's been using the mouse
+who's been using the mouse
+who's been using the mouse
+the mouse for a really long time i was
+the mouse for a really long time i was
+the mouse for a really long time i was
+kind of distressed when i saw this
+kind of distressed when i saw this
+kind of distressed when i saw this
+because
+because
+because
+it's basically saying this is deprecated
+it's basically saying this is deprecated
+it's basically saying this is deprecated
+but it's not because everyone uses it
+but it's not because everyone uses it
+but it's not because everyone uses it
+and using deprecated things or basically
+and using deprecated things or basically
+and using deprecated things or basically
+deprecated things is just
+deprecated things is just
+deprecated things is just
+not really that good and you can tell
+not really that good and you can tell
+not really that good and you can tell
+the age of this module
+the age of this module
+the age of this module
+because it offers stuff like target
+because it offers stuff like target
+because it offers stuff like target
+surface
+surface
+surface
+or you can't even tell the normal so
+or you can't even tell the normal so
+or you can't even tell the normal so
+it's only like top bottom you can't get
+it's only like top bottom you can't get
+it's only like top bottom you can't get
+like an actual vector
+like an actual vector
+like an actual vector
+and you need something more so i did
+and you need something more so i did
+and you need something more so i did
+some research when user input service
+some research when user input service
+some research when user input service
+you you have to actually like get the
+you you have to actually like get the
+you you have to actually like get the
+camera as well as use user input service
+camera as well as use user input service
+camera as well as use user input service
+but
+but
+but
+i'll get into that a little bit later
+i'll get into that a little bit later
+i'll get into that a little bit later
+and i created my very own
+and i created my very own
+and i created my very own
+mouse module and here it is
+mouse module and here it is
+mouse module and here it is
+so it's a pretty big module there are a
+so it's a pretty big module there are a
+so it's a pretty big module there are a
+few really really important functions
+few really really important functions
+few really really important functions
+the rest are just for convenience
+the rest are just for convenience
+the rest are just for convenience
+but it's used to overwrite
+but it's used to overwrite
+but it's used to overwrite
+what the default mouse is used for and i
+what the default mouse is used for and i
+what the default mouse is used for and i
+have it in replicated storage
+have it in replicated storage
+have it in replicated storage
+so everyone can get it so if you want to
+so everyone can get it so if you want to
+so everyone can get it so if you want to
+use this module link will be in the
+use this module link will be in the
+use this module link will be in the
+description and if you want to see how
+description and if you want to see how
+description and if you want to see how
+it works
+it works
+it works
+make sure to watch this video
+make sure to watch this video
+make sure to watch this video
+so let's get started i already have my
+so let's get started i already have my
+so let's get started i already have my
+mouse module
+mouse module
+mouse module
+brought in from the toolbox i'll have
+brought in from the toolbox i'll have
+brought in from the toolbox i'll have
+the link in the description
+the link in the description
+the link in the description
+if you want to check it out for yourself
+if you want to check it out for yourself
+if you want to check it out for yourself
+so first thing
+so first thing
+so first thing
+let's go to a demonstration i'll explain
+let's go to a demonstration i'll explain
+let's go to a demonstration i'll explain
+the api a little bit later it'll just be
+the api a little bit later it'll just be
+the api a little bit later it'll just be
+easier to start with the demonstration
+easier to start with the demonstration
+easier to start with the demonstration
+so i'm going to go into starter player
+so i'm going to go into starter player
+so i'm going to go into starter player
+scripts and create a local
+scripts and create a local
+scripts and create a local
+script and obviously since this is
+script and obviously since this is
+script and obviously since this is
+a mouse module you cannot
+a mouse module you cannot
+a mouse module you cannot
+get this module on the server there's no
+get this module on the server there's no
+get this module on the server there's no
+checks for that
+checks for that
+checks for that
+but it won't really do much since you
+but it won't really do much since you
+but it won't really do much since you
+can't really access the camera on the
+can't really access the camera on the
+can't really access the camera on the
+server or user input service
+server or user input service
+server or user input service
+so i'm just going to get replicated
+so i'm just going to get replicated
+so i'm just going to get replicated
+storage and i get my mouse
+storage and i get my mouse
+storage and i get my mouse
+module which will be in
+module which will be in
+module which will be in
+replicated storage
+replicated storage
+replicated storage
+there we go so here we have our mouse
+there we go so here we have our mouse
+there we go so here we have our mouse
+module i'm going to do a very basic
+module i'm going to do a very basic
+module i'm going to do a very basic
+example
+example
+example
+that just shows you how it works so i'm
+that just shows you how it works so i'm
+that just shows you how it works so i'm
+going to have a
+going to have a
+going to have a
+infinite loop i'm going to wait a second
+infinite loop i'm going to wait a second
+infinite loop i'm going to wait a second
+and we're just going to do mouse module
+and we're just going to do mouse module
+and we're just going to do mouse module
+we're going to print
+we're going to print
+we're going to print
+actually we're going to make a variable
+actually we're going to make a variable
+actually we're going to make a variable
+local target
+local target
+local target
+equals mouse module dot get target
+equals mouse module dot get target
+equals mouse module dot get target
+and then we're going to print our target
+and then we're going to print our target
+and then we're going to print our target
+so
+so
+so
+this function looks to see where the
+this function looks to see where the
+this function looks to see where the
+mouse is pointing at
+mouse is pointing at
+mouse is pointing at
+and gets the target of the mouse so you
+and gets the target of the mouse so you
+and gets the target of the mouse so you
+can see right now it's the base plate if
+can see right now it's the base plate if
+can see right now it's the base plate if
+i hover over my hand
+i hover over my hand
+i hover over my hand
+it's like my arm we have head
+there's some other stuff yeah so this is
+there's some other stuff yeah so this is
+there's some other stuff yeah so this is
+my body you can just see
+my body you can just see
+my body you can just see
+it tells you where it is and likewise we
+it tells you where it is and likewise we
+it tells you where it is and likewise we
+can also say
+can also say
+can also say
+mouse get
+position to get the position
+position to get the position
+position to get the position
+and this is also pretty useful
+and you can see that this mouse very
+and you can see that this mouse very
+and you can see that this mouse very
+similarly copies
+similarly copies
+similarly copies
+the basic api of the original
+the basic api of the original
+the basic api of the original
+mouse and roblox and the reason i'm
+mouse and roblox and the reason i'm
+mouse and roblox and the reason i'm
+making this is because if you actually
+making this is because if you actually
+making this is because if you actually
+go to the wiki page
+go to the wiki page
+go to the wiki page
+i have it over here it says this object
+i have it over here it says this object
+i have it over here it says this object
+has been superseded by user input
+has been superseded by user input
+has been superseded by user input
+service and
+service and
+service and
+basically this is saying that the only
+basically this is saying that the only
+basically this is saying that the only
+reason they keep it is because a lot of
+reason they keep it is because a lot of
+reason they keep it is because a lot of
+people use it
+people use it
+people use it
+really it should be deprecated but
+really it should be deprecated but
+really it should be deprecated but
+everyone uses it
+everyone uses it
+everyone uses it
+so this very similarly copies it we have
+so this very similarly copies it we have
+so this very similarly copies it we have
+git position which is similar to mouse
+git position which is similar to mouse
+git position which is similar to mouse
+dot hit it's not a c
+dot hit it's not a c
+dot hit it's not a c
+frame but you can very easily calculate
+frame but you can very easily calculate
+frame but you can very easily calculate
+c frame and you have git target but
+c frame and you have git target but
+c frame and you have git target but
+these are basically just
+these are basically just
+these are basically just
+convenience functions the real power
+convenience functions the real power
+convenience functions the real power
+is really in the raycast function so
+is really in the raycast function so
+is really in the raycast function so
+this function
+this function
+this function
+raycasts and we get a raycast result and
+raycasts and we get a raycast result and
+raycasts and we get a raycast result and
+this is the same raycast result
+this is the same raycast result
+this is the same raycast result
+that i've always been using on this
+that i've always been using on this
+that i've always been using on this
+channel or
+channel or
+channel or
+well i mean recently they updated it but
+well i mean recently they updated it but
+well i mean recently they updated it but
+whatever so i have a video on this
+whatever so i have a video on this
+whatever so i have a video on this
+on the new like array functions and it
+on the new like array functions and it
+on the new like array functions and it
+gives me a raycast result
+gives me a raycast result
+gives me a raycast result
+and then we can do stuff so first of all
+and then we can do stuff so first of all
+and then we can do stuff so first of all
+since
+since
+since
+when you're pointing at the sky you
+when you're pointing at the sky you
+when you're pointing at the sky you
+wouldn't ever get a result you have to
+wouldn't ever get a result you have to
+wouldn't ever get a result you have to
+check if the result is there
+check if the result is there
+check if the result is there
+to make it easier we'll say result and
+to make it easier we'll say result and
+to make it easier we'll say result and
+we'll say result
+we'll say result
+we'll say result
+and in here we can just say like print
+and in here we can just say like print
+and in here we can just say like print
+result dot instance and you can
+result dot instance and you can
+result dot instance and you can
+basically see
+basically see
+basically see
+this does the exact same thing as our
+this does the exact same thing as our
+this does the exact same thing as our
+other thing
+other thing
+other thing
+[Music]
+[Music]
+[Music]
+except we have a little more control and
+except we have a little more control and
+except we have a little more control and
+you can go a step further than this
+you can go a step further than this
+you can go a step further than this
+and this is the same functionality as
+and this is the same functionality as
+and this is the same functionality as
+the old one but it just
+the old one but it just
+the old one but it just
+makes it a little bit easier we can do
+makes it a little bit easier we can do
+makes it a little bit easier we can do
+get unit ray
+get unit ray
+get unit ray
+and this is probably the most important
+and this is probably the most important
+and this is probably the most important
+function
+function
+function
+in this module and the reason is is
+in this module and the reason is is
+in this module and the reason is is
+because
+because
+because
+realistically in a game when you're
+realistically in a game when you're
+realistically in a game when you're
+when you're getting the position of the
+when you're getting the position of the
+when you're getting the position of the
+mouse unless you're positioning a gui or
+mouse unless you're positioning a gui or
+mouse unless you're positioning a gui or
+something
+something
+something
+you would want the physics or like a
+you would want the physics or like a
+you would want the physics or like a
+bullet for example
+bullet for example
+bullet for example
+like you're shooting a bullet you want
+like you're shooting a bullet you want
+like you're shooting a bullet you want
+to aim and then you want to shoot your
+to aim and then you want to shoot your
+to aim and then you want to shoot your
+gun
+gun
+gun
+the bullet would be created and fired on
+the bullet would be created and fired on
+the bullet would be created and fired on
+the server
+the server
+the server
+so the best practice for this module is
+so the best practice for this module is
+so the best practice for this module is
+really just to say
+really just to say
+really just to say
+mouse module gate unit ray and then you
+mouse module gate unit ray and then you
+mouse module gate unit ray and then you
+send
+send
+send
+this unit ray to the server and the
+this unit ray to the server and the
+this unit ray to the server and the
+server does the raycasting for you
+server does the raycasting for you
+server does the raycasting for you
+so let me show you a quick example of
+so let me show you a quick example of
+so let me show you a quick example of
+that now you could do this very simply
+that now you could do this very simply
+that now you could do this very simply
+let me just show you the
+let me just show you the
+let me just show you the
+unit array function because it's very
+unit array function because it's very
+unit array function because it's very
+small
+small
+small
+but the real charm of this module is the
+but the real charm of this module is the
+but the real charm of this module is the
+fact that
+fact that
+fact that
+you can debug very easily and i'll
+you can debug very easily and i'll
+you can debug very easily and i'll
+elaborate on that a little bit later but
+elaborate on that a little bit later but
+elaborate on that a little bit later but
+let's just do this real quick so we have
+let's just do this real quick so we have
+let's just do this real quick so we have
+our ray
+our ray
+our ray
+and then we can say make a remote event
+and then we can say make a remote event
+and then we can say make a remote event
+we can just say
+mouse position get send
+mouse position get send
+mouse position get send
+mouse position there we go
+mouse position there we go
+mouse position there we go
+and then we can get that send mouse
+and then we can get that send mouse
+and then we can get that send mouse
+position equals
+position equals
+position equals
+replicate storage wait for child send
+replicate storage wait for child send
+replicate storage wait for child send
+mouse position there we go
+mouse position there we go
+mouse position there we go
+and we can do send mouse position fire
+and we can do send mouse position fire
+and we can do send mouse position fire
+server
+server
+server
+with our ray and on the server
+with our ray and on the server
+with our ray and on the server
+we can say local
+we can say local
+we can say local
+send mouse position i really should be
+send mouse position i really should be
+send mouse position i really should be
+defining replicated storage but that's
+defining replicated storage but that's
+defining replicated storage but that's
+fine
+fine
+fine
+will be equal to game get service
+will be equal to game get service
+will be equal to game get service
+replicated storage dot send mouse
+replicated storage dot send mouse
+replicated storage dot send mouse
+position there we go
+position there we go
+position there we go
+we can do send mouse position on server
+we can do send mouse position on server
+we can do send mouse position on server
+event connect
+event connect
+event connect
+a function and we'll get the player
+a function and we'll get the player
+a function and we'll get the player
+and the unit ray and then here we can
+and the unit ray and then here we can
+and the unit ray and then here we can
+just say
+just say
+just say
+local result equals workspace recast
+unit ray dot origin
+unit ray dot origin
+unit ray dot origin
+unit ray dot direction
+unit ray dot direction
+unit ray dot direction
+times like 500. so the reason we have to
+times like 500. so the reason we have to
+times like 500. so the reason we have to
+get the unit rate origin unit rate
+get the unit rate origin unit rate
+get the unit rate origin unit rate
+direction is because
+direction is because
+direction is because
+legacy in the past you do workspace like
+legacy in the past you do workspace like
+legacy in the past you do workspace like
+find part on re
+find part on re
+find part on re
+and you send in your unit array but
+and you send in your unit array but
+and you send in your unit array but
+since we're using the new raycast
+since we're using the new raycast
+since we're using the new raycast
+functions
+functions
+functions
+you have to get the origin and the
+you have to get the origin and the
+you have to get the origin and the
+direction specifically
+direction specifically
+direction specifically
+and here as a result we can just say if
+and here as a result we can just say if
+and here as a result we can just say if
+result
+result
+result
+then print result dot
+then print result dot
+then print result dot
+instance so
+instance so
+instance so
+this is a lot more code but is
+this is a lot more code but is
+this is a lot more code but is
+accomplishing
+accomplishing
+accomplishing
+the same thing and you're maybe asking
+the same thing and you're maybe asking
+the same thing and you're maybe asking
+why would you want to do this and that's
+why would you want to do this and that's
+why would you want to do this and that's
+just because
+just because
+just because
+on the client anything could happen you
+on the client anything could happen you
+on the client anything could happen you
+could be lagging really hard
+could be lagging really hard
+could be lagging really hard
+and instead of you your like mouse like
+and instead of you your like mouse like
+and instead of you your like mouse like
+pointing at the
+pointing at the
+pointing at the
+base plate for example it could just be
+base plate for example it could just be
+base plate for example it could just be
+like pointing at another player like
+like pointing at another player like
+like pointing at another player like
+three like three walls or something
+three like three walls or something
+three like three walls or something
+and that just would not be good
+and that just would not be good
+and that just would not be good
+obviously there's a lot more complexity
+obviously there's a lot more complexity
+obviously there's a lot more complexity
+in regards to latency and shooters and
+in regards to latency and shooters and
+in regards to latency and shooters and
+shooting in general i'm just kind of
+shooting in general i'm just kind of
+shooting in general i'm just kind of
+doing a brief overview of that
+doing a brief overview of that
+doing a brief overview of that
+but that's just a little bit of the
+but that's just a little bit of the
+but that's just a little bit of the
+basics and also
+basics and also
+basics and also
+since this mouse module uses the new ray
+since this mouse module uses the new ray
+since this mouse module uses the new ray
+castings
+castings
+castings
+it's not really new but the brake
+it's not really new but the brake
+it's not really new but the brake
+casting system that we have now that's
+casting system that we have now that's
+casting system that we have now that's
+not legacy
+not legacy
+not legacy
+you can also send in optional raycast
+you can also send in optional raycast
+you can also send in optional raycast
+parameters
+parameters
+parameters
+for your students so like if i want to
+for your students so like if i want to
+for your students so like if i want to
+say mouse raycast i can send in
+say mouse raycast i can send in
+say mouse raycast i can send in
+parameters to prevent it from detecting
+parameters to prevent it from detecting
+parameters to prevent it from detecting
+the player but then again
+the player but then again
+the player but then again
+you could do the same exact thing on the
+you could do the same exact thing on the
+you could do the same exact thing on the
+server
+server
+server
+so let's look take a quick look at the
+so let's look take a quick look at the
+so let's look take a quick look at the
+api
+api
+api
+so basically get unit ray is all you
+so basically get unit ray is all you
+so basically get unit ray is all you
+want to do
+want to do
+want to do
+honestly if you're not too worried about
+honestly if you're not too worried about
+honestly if you're not too worried about
+debugging and you're not too worried
+debugging and you're not too worried
+debugging and you're not too worried
+about just some like conveniences
+about just some like conveniences
+about just some like conveniences
+i would honestly use get like just take
+i would honestly use get like just take
+i would honestly use get like just take
+this out and just use this as like a
+this out and just use this as like a
+this out and just use this as like a
+local function or something
+local function or something
+local function or something
+it's just that useful and
+it's just that useful and
+it's just that useful and
+here are the rest of the functions you
+here are the rest of the functions you
+here are the rest of the functions you
+have raycast which gets the unarray and
+have raycast which gets the unarray and
+have raycast which gets the unarray and
+then we do workspace raycast
+then we do workspace raycast
+then we do workspace raycast
+just like what we did here notice the
+just like what we did here notice the
+just like what we did here notice the
+luau type syntax again
+luau type syntax again
+luau type syntax again
+and people are asking me if i should do
+and people are asking me if i should do
+and people are asking me if i should do
+a tutorial on it
+a tutorial on it
+a tutorial on it
+and it's not to a point where it's like
+and it's not to a point where it's like
+and it's not to a point where it's like
+useful and it's not complete either
+useful and it's not complete either
+useful and it's not complete either
+so i'm gonna hold off on that until they
+so i'm gonna hold off on that until they
+so i'm gonna hold off on that until they
+make it a lot better
+make it a lot better
+make it a lot better
+but you also have the getposition
+but you also have the getposition
+but you also have the getposition
+function which gets
+function which gets
+function which gets
+the raycast result and we forward the
+the raycast result and we forward the
+the raycast result and we forward the
+unit ray
+unit ray
+unit ray
+and then we get the position if they
+and then we get the position if they
+and then we get the position if they
+didn't raycast on anything
+didn't raycast on anything
+didn't raycast on anything
+we just give them like the default
+we just give them like the default
+we just give them like the default
+position where
+position where
+position where
+would be and get targets the same then
+would be and get targets the same then
+would be and get targets the same then
+you have this private function
+you have this private function
+you have this private function
+that just connects a few little events
+that just connects a few little events
+that just connects a few little events
+that i created up here let me actually
+that i created up here let me actually
+that i created up here let me actually
+demonstrate those so let's get rid of
+demonstrate those so let's get rid of
+demonstrate those so let's get rid of
+this
+this
+this
+while true we can just say mouse module
+while true we can just say mouse module
+while true we can just say mouse module
+dot left click
+dot left click
+dot left click
+connect function
+connect function
+connect function
+and we can just print
+and we'll get our state so print
+and we'll get our state so print
+and we'll get our state so print
+mouse module
+dot get unit ray so whenever you click
+dot get unit ray so whenever you click
+dot get unit ray so whenever you click
+it will print your unit array
+it will print your unit array
+it will print your unit array
+and that works fine so you may be asking
+and that works fine so you may be asking
+and that works fine so you may be asking
+this is a module
+this is a module
+this is a module
+how is he connecting it directly to
+how is he connecting it directly to
+how is he connecting it directly to
+an index of the module and the thing i'm
+an index of the module and the thing i'm
+an index of the module and the thing i'm
+using
+using
+using
+is i'm using a bindable event and then
+is i'm using a bindable event and then
+is i'm using a bindable event and then
+we're using the event of that boundable
+we're using the event of that boundable
+we're using the event of that boundable
+event to put
+event to put
+event to put
+here so this is good in two ways first
+here so this is good in two ways first
+here so this is good in two ways first
+of all it makes a lot easier
+of all it makes a lot easier
+of all it makes a lot easier
+syntactically and a lot similar to
+syntactically and a lot similar to
+syntactically and a lot similar to
+normal roblox objects and it prevents
+normal roblox objects and it prevents
+normal roblox objects and it prevents
+any other require
+any other require
+any other require
+of this module from firing our left and
+of this module from firing our left and
+of this module from firing our left and
+right click actions
+right click actions
+right click actions
+and these are kind of just for debugging
+and these are kind of just for debugging
+and these are kind of just for debugging
+and for convenience realistically you'd
+and for convenience realistically you'd
+and for convenience realistically you'd
+want to use
+want to use
+want to use
+user input service or contact action
+user input service or contact action
+user input service or contact action
+service to
+service to
+service to
+detect input but i mean a lot of this
+detect input but i mean a lot of this
+detect input but i mean a lot of this
+stuff is for convenience
+stuff is for convenience
+stuff is for convenience
+you know whenever i'm working on a small
+you know whenever i'm working on a small
+you know whenever i'm working on a small
+project i just pop this module in
+project i just pop this module in
+project i just pop this module in
+and then i use some of the functions
+and then i use some of the functions
+and then i use some of the functions
+just to make something simple make a
+just to make something simple make a
+just to make something simple make a
+little prototype
+little prototype
+little prototype
+but this git unit for a function can be
+but this git unit for a function can be
+but this git unit for a function can be
+very useful and you can also learn
+very useful and you can also learn
+very useful and you can also learn
+from some of this code for like a basic
+from some of this code for like a basic
+from some of this code for like a basic
+raycasting workflow
+raycasting workflow
+raycasting workflow
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you enjoyed
+you enjoyed
+you enjoyed
+it's just another another module i think
+it's just another another module i think
+it's just another another module i think
+for these next few days i'm going to
+for these next few days i'm going to
+for these next few days i'm going to
+start
+start
+start
+polishing and making a few of my modules
+polishing and making a few of my modules
+polishing and making a few of my modules
+like publishable
+like publishable
+like publishable
+because you guys really like the last
+because you guys really like the last
+because you guys really like the last
+one
+one
+one
+and i feel like this is pretty useful
+and i feel like this is pretty useful
+and i feel like this is pretty useful
+because even if you don't use these
+because even if you don't use these
+because even if you don't use these
+modules you can just look at the code
+modules you can just look at the code
+modules you can just look at the code
+and
+and
+and
+learn from someone who's made like i
+learn from someone who's made like i
+learn from someone who's made like i
+didn't make these modules because i
+didn't make these modules because i
+didn't make these modules because i
+thought i would need to use them
+thought i would need to use them
+thought i would need to use them
+i made a bunch of games and i realized i
+i made a bunch of games and i realized i
+i made a bunch of games and i realized i
+should probably make some modules for
+should probably make some modules for
+should probably make some modules for
+this stuff i'm doing over and over and
+this stuff i'm doing over and over and
+this stuff i'm doing over and over and
+over again
+over again
+over again
+so this is just the result of trial and
+so this is just the result of trial and
+so this is just the result of trial and
+error and me just eventually
+error and me just eventually
+error and me just eventually
+making these so eventually in your dev
+making these so eventually in your dev
+making these so eventually in your dev
+career you'll probably get to a
+career you'll probably get to a
+career you'll probably get to a
+situation where you need to do something
+situation where you need to do something
+situation where you need to do something
+like this
+like this
+like this
+and here's my quick example i encourage
+and here's my quick example i encourage
+and here's my quick example i encourage
+you to write your own though
+you to write your own though
+you to write your own though
+because that's always a fun challenge
+because that's always a fun challenge
+because that's always a fun challenge
+and experience
+and experience
+and experience
+but other than that i hope you enjoyed
+but other than that i hope you enjoyed
+but other than that i hope you enjoyed
+the video make sure to like
+the video make sure to like
+the video make sure to like
+and subscribe if you did tell me what
+and subscribe if you did tell me what
+and subscribe if you did tell me what
+module
+module
+module
+or what tutorial you want to see next in
+or what tutorial you want to see next in
+or what tutorial you want to see next in
+the comments
+the comments
+the comments
+and i hope you have a nice day and
+and i hope you have a nice day and
+and i hope you have a nice day and
+[Music]
+goodbye
+[Music]
+[Music]
+[Music]
+you

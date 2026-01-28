@@ -1,0 +1,2538 @@
+have you ever wanted a thick raycast so
+have you ever wanted a thick raycast so
+have you ever wanted a thick raycast so
+even if you're not aiming at something
+even if you're not aiming at something
+even if you're not aiming at something
+you're able to hit them well in this
+you're able to hit them well in this
+you're able to hit them well in this
+video I'll be covering the semi-newly
+video I'll be covering the semi-newly
+video I'll be covering the semi-newly
+introduced sphere cast and Roblox Studio
+introduced sphere cast and Roblox Studio
+introduced sphere cast and Roblox Studio
+which allows you to cast basically a
+which allows you to cast basically a
+which allows you to cast basically a
+thick Ray because you know we all love
+thick Ray because you know we all love
+thick Ray because you know we all love
+Ray casting let's make our Rays a little
+Ray casting let's make our Rays a little
+Ray casting let's make our Rays a little
+thicker and it's really cool so in this
+thicker and it's really cool so in this
+thicker and it's really cool so in this
+video I'll be demoing cirracast by use
+video I'll be demoing cirracast by use
+video I'll be demoing cirracast by use
+of this little stun gun which sort of
+of this little stun gun which sort of
+of this little stun gun which sort of
+resembles like the Star Wars stun gun
+resembles like the Star Wars stun gun
+resembles like the Star Wars stun gun
+which is pretty cool and it shows I show
+which is pretty cool and it shows I show
+which is pretty cool and it shows I show
+you all how to make is gone how to
+you all how to make is gone how to
+you all how to make is gone how to
+communicate between the server and the
+communicate between the server and the
+communicate between the server and the
+client to shoot it and how to spherecast
+client to shoot it and how to spherecast
+client to shoot it and how to spherecast
+to get
+to get
+to get
+big swathing
+big swathing
+big swathing
+beams that are able to stun all of your
+beams that are able to stun all of your
+beams that are able to stun all of your
+enemies so make sure to like And
+enemies so make sure to like And
+enemies so make sure to like And
+subscribe if you enjoy this video the
+subscribe if you enjoy this video the
+subscribe if you enjoy this video the
+code will also be in the description if
+code will also be in the description if
+code will also be in the description if
+you want to check it out for yourself
+you want to check it out for yourself
+you want to check it out for yourself
+and comment any questions or suggestions
+and comment any questions or suggestions
+and comment any questions or suggestions
+but without further Ado let's Jump Right
+but without further Ado let's Jump Right
+but without further Ado let's Jump Right
+In
+In
+In
+foreign
+model here it has a nice thick Barrel
+model here it has a nice thick Barrel
+model here it has a nice thick Barrel
+because our stun beams are going to be
+because our stun beams are going to be
+because our stun beams are going to be
+big that's kind of the whole point it
+big that's kind of the whole point it
+big that's kind of the whole point it
+was thick Ray casting in the form of
+was thick Ray casting in the form of
+was thick Ray casting in the form of
+circus but this model has to have a few
+circus but this model has to have a few
+circus but this model has to have a few
+things done to it before we can actually
+things done to it before we can actually
+things done to it before we can actually
+start scripting so first off whatever
+start scripting so first off whatever
+start scripting so first off whatever
+model you have make sure all the parts
+model you have make sure all the parts
+model you have make sure all the parts
+have can Collide off and anchored to
+have can Collide off and anchored to
+have can Collide off and anchored to
+full so both can Collide and anchored
+full so both can Collide and anchored
+full so both can Collide and anchored
+should be false they can fall they can
+should be false they can fall they can
+should be false they can fall they can
+move about with the character when they
+move about with the character when they
+move about with the character when they
+hold their tool in addition you have to
+hold their tool in addition you have to
+hold their tool in addition you have to
+make sure they're all welded together so
+make sure they're all welded together so
+make sure they're all welded together so
+go to model create and then go to weld
+go to model create and then go to weld
+go to model create and then go to weld
+and I'll create welds in all of our
+and I'll create welds in all of our
+and I'll create welds in all of our
+parts here
+parts here
+parts here
+and then to order make sure in order to
+and then to order make sure in order to
+and then to order make sure in order to
+make sure the welds actually exist make
+make sure the welds actually exist make
+make sure the welds actually exist make
+sure constraint details is on and show
+sure constraint details is on and show
+sure constraint details is on and show
+welds on too so you can see all these
+welds on too so you can see all these
+welds on too so you can see all these
+welds which is quite nice so our models
+welds which is quite nice so our models
+welds which is quite nice so our models
+done all of our parts are trying to set
+done all of our parts are trying to set
+done all of our parts are trying to set
+up so what I want to do now is make the
+up so what I want to do now is make the
+up so what I want to do now is make the
+handle so I'm actually just going to
+handle so I'm actually just going to
+handle so I'm actually just going to
+create a new part just sit it around
+create a new part just sit it around
+create a new part just sit it around
+here we're going to make it a
+here we're going to make it a
+here we're going to make it a
+one by one one
+one by one one
+one by one one
+part transparent no can Collide no
+part transparent no can Collide no
+part transparent no can Collide no
+anchored and then I'm going to use alt
+anchored and then I'm going to use alt
+anchored and then I'm going to use alt
+click to select my little grip
+click to select my little grip
+click to select my little grip
+copy that position go back to my new
+copy that position go back to my new
+copy that position go back to my new
+part
+part
+part
+paste that position so our little part
+paste that position so our little part
+paste that position so our little part
+is here and then I'm going to right
+is here and then I'm going to right
+is here and then I'm going to right
+click on it and do show orientation
+click on it and do show orientation
+click on it and do show orientation
+indicator because I want to see the
+indicator because I want to see the
+indicator because I want to see the
+front so the front right now you can see
+front so the front right now you can see
+front so the front right now you can see
+this little f with the up Arrow it's
+this little f with the up Arrow it's
+this little f with the up Arrow it's
+facing to the left where our ground is
+facing to the left where our ground is
+facing to the left where our ground is
+holding so I would recommend that your
+holding so I would recommend that your
+holding so I would recommend that your
+front
+front
+front
+of your handle part faces towards like
+of your handle part faces towards like
+of your handle part faces towards like
+where the front of the gun will be
+where the front of the gun will be
+where the front of the gun will be
+because this way wherever you position
+because this way wherever you position
+because this way wherever you position
+this handle part will be where the
+this handle part will be where the
+this handle part will be where the
+player will hold the part and or hold
+player will hold the part and or hold
+player will hold the part and or hold
+the gun and it'll automatically be
+the gun and it'll automatically be
+the gun and it'll automatically be
+oriented correctly because handling tool
+oriented correctly because handling tool
+oriented correctly because handling tool
+orientations is kind of a mess a lot of
+orientations is kind of a mess a lot of
+orientations is kind of a mess a lot of
+times so just create a separate part to
+times so just create a separate part to
+times so just create a separate part to
+do that and then
+do that and then
+do that and then
+just leave this part hang out here I'm
+just leave this part hang out here I'm
+just leave this part hang out here I'm
+also going to duplicate this part
+also going to duplicate this part
+also going to duplicate this part
+using Ctrl D and this will be I'm going
+using Ctrl D and this will be I'm going
+using Ctrl D and this will be I'm going
+to move this to the front of the gun
+to move this to the front of the gun
+to move this to the front of the gun
+where you want your like beam to come
+where you want your like beam to come
+where you want your like beam to come
+out so this is going to be our
+out so this is going to be our
+out so this is going to be our
+little origin part so in total you got
+little origin part so in total you got
+little origin part so in total you got
+your your handle part your origin part
+your your handle part your origin part
+your your handle part your origin part
+your normal model let's create a tool
+your normal model let's create a tool
+your normal model let's create a tool
+and put it all into there so we got
+and put it all into there so we got
+and put it all into there so we got
+ourselves a tool in the workspace shove
+ourselves a tool in the workspace shove
+ourselves a tool in the workspace shove
+the model in I'm going to name this
+the model in I'm going to name this
+the model in I'm going to name this
+model like d chord because it's all the
+model like d chord because it's all the
+model like d chord because it's all the
+decoration stuff
+decoration stuff
+decoration stuff
+e-core there we go and then I'm going to
+e-core there we go and then I'm going to
+e-core there we go and then I'm going to
+take my parts shove them also in the
+take my parts shove them also in the
+take my parts shove them also in the
+tool take the part in which the beam
+tool take the part in which the beam
+tool take the part in which the beam
+origin will spawn like where your gun
+origin will spawn like where your gun
+origin will spawn like where your gun
+will spawn
+will spawn
+will spawn
+the bullets well not bullets it's raises
+the bullets well not bullets it's raises
+the bullets well not bullets it's raises
+beans whatever and we're going to call
+beans whatever and we're going to call
+beans whatever and we're going to call
+this the beam origin
+this the beam origin
+this the beam origin
+so name it beam origin take the part
+so name it beam origin take the part
+so name it beam origin take the part
+where your player wants to be holding it
+where your player wants to be holding it
+where your player wants to be holding it
+and you're going to call it the handle
+and you're going to call it the handle
+and you're going to call it the handle
+spelling is incredibly important
+spelling is incredibly important
+spelling is incredibly important
+use capital h a n d l e because that's
+use capital h a n d l e because that's
+use capital h a n d l e because that's
+what the tool uses to tell
+what the tool uses to tell
+what the tool uses to tell
+the character player character what to
+the character player character what to
+the character player character what to
+actually hold and this handle has to be
+actually hold and this handle has to be
+actually hold and this handle has to be
+directly parented to the tool or else it
+directly parented to the tool or else it
+directly parented to the tool or else it
+won't work don't parent it to the model
+won't work don't parent it to the model
+won't work don't parent it to the model
+this model is just for decoration stuff
+this model is just for decoration stuff
+this model is just for decoration stuff
+right now the tool and the origin aren't
+right now the tool and the origin aren't
+right now the tool and the origin aren't
+really connected anything so I'm just
+really connected anything so I'm just
+really connected anything so I'm just
+going to highlight all the parts to make
+going to highlight all the parts to make
+going to highlight all the parts to make
+it easier and also highlight the handle
+it easier and also highlight the handle
+it easier and also highlight the handle
+and the beam origin and I'm going to use
+and the beam origin and I'm going to use
+and the beam origin and I'm going to use
+weld to weld them together as well which
+weld to weld them together as well which
+weld to weld them together as well which
+should be great
+should be great
+should be great
+so there we go we got our tool we've got
+so there we go we got our tool we've got
+so there we go we got our tool we've got
+all our Decor we got our handle beam
+all our Decor we got our handle beam
+all our Decor we got our handle beam
+orange or whatever and then I'm going to
+orange or whatever and then I'm going to
+orange or whatever and then I'm going to
+name this tool stun gun obviously and
+name this tool stun gun obviously and
+name this tool stun gun obviously and
+then I think just to test I'm going to
+then I think just to test I'm going to
+then I think just to test I'm going to
+go to test and then
+go to test and then
+go to test and then
+underneath play just do run and make
+underneath play just do run and make
+underneath play just do run and make
+sure it all falls as a unit
+sure it all falls as a unit
+sure it all falls as a unit
+so it all falls as a unit and it falls
+so it all falls as a unit and it falls
+so it all falls as a unit and it falls
+into the void which is kind of what we
+into the void which is kind of what we
+into the void which is kind of what we
+want because it has no can Collide
+want because it has no can Collide
+want because it has no can Collide
+that's good and that means everything is
+that's good and that means everything is
+that's good and that means everything is
+connected so we got our stun gun let's
+connected so we got our stun gun let's
+connected so we got our stun gun let's
+take it shove it into starter pack and
+take it shove it into starter pack and
+take it shove it into starter pack and
+then let's actually play it
+then let's actually play it
+then let's actually play it
+I used F5 to play just then and we could
+I used F5 to play just then and we could
+I used F5 to play just then and we could
+pull out our stun gun looks good looks
+pull out our stun gun looks good looks
+pull out our stun gun looks good looks
+dangerous let's get to scripting now go
+dangerous let's get to scripting now go
+dangerous let's get to scripting now go
+into your tool
+into your tool
+into your tool
+and let's click the pause arrow and
+and let's click the pause arrow and
+and let's click the pause arrow and
+create a locals there we go I'm going to
+create a locals there we go I'm going to
+create a locals there we go I'm going to
+name this
+name this
+name this
+I'm gonna name this
+I'm gonna name this
+I'm gonna name this
+stun
+stun
+stun
+lion
+lion
+lion
+there we go let's zoom into this nice
+there we go let's zoom into this nice
+there we go let's zoom into this nice
+and easy
+and easy
+and easy
+and then we're going to
+and then we're going to
+and then we're going to
+rename
+rename
+rename
+or get rid of the initial print
+or get rid of the initial print
+or get rid of the initial print
+statement we got to get the user input
+statement we got to get the user input
+statement we got to get the user input
+service initially this will be for game
+service initially this will be for game
+service initially this will be for game
+get service user input service this will
+get service user input service this will
+get service user input service this will
+be for getting the mouse input of the
+be for getting the mouse input of the
+be for getting the mouse input of the
+player and we also need to get the
+player and we also need to get the
+player and we also need to get the
+camera
+camera
+camera
+which will be equal to the
+which will be equal to the
+which will be equal to the
+workspace.current camera since we're on
+workspace.current camera since we're on
+workspace.current camera since we're on
+a local script this will just get the
+a local script this will just get the
+a local script this will just get the
+current camera of the current player and
+current camera of the current player and
+current camera of the current player and
+we also need the player which will be
+we also need the player which will be
+we also need the player which will be
+just game get service
+just game get service
+just game get service
+players dot local player this is our
+players dot local player this is our
+players dot local player this is our
+local player of this local script there
+local player of this local script there
+local player of this local script there
+we go so
+we go so
+we go so
+and now we need to like get the trigger
+and now we need to like get the trigger
+and now we need to like get the trigger
+input of the gun so obviously we need to
+input of the gun so obviously we need to
+input of the gun so obviously we need to
+get the gun gun equals script dot parent
+get the gun gun equals script dot parent
+get the gun gun equals script dot parent
+and we can now make our gun event so gun
+and we can now make our gun event so gun
+and we can now make our gun event so gun
+dot activated
+dot activated
+dot activated
+next a function
+next a function
+next a function
+and here we go so
+and here we go so
+and here we go so
+when the gun is clicked when you press
+when the gun is clicked when you press
+when the gun is clicked when you press
+right trigger on a Gamepad when you
+right trigger on a Gamepad when you
+right trigger on a Gamepad when you
+touch the screen this activated event
+touch the screen this activated event
+touch the screen this activated event
+will be sent or will be triggered and it
+will be sent or will be triggered and it
+will be sent or will be triggered and it
+will run whatever is within this
+will run whatever is within this
+will run whatever is within this
+function block here so what we want to
+function block here so what we want to
+function block here so what we want to
+do here is get where the player wants to
+do here is get where the player wants to
+do here is get where the player wants to
+or where the players like looking at in
+or where the players like looking at in
+or where the players like looking at in
+world speed
+world speed
+world speed
+the way we do that is initially we get
+the way we do that is initially we get
+the way we do that is initially we get
+the position of the player's Mouse on
+the position of the player's Mouse on
+the position of the player's Mouse on
+screen Mouse touch like that sort of
+screen Mouse touch like that sort of
+screen Mouse touch like that sort of
+thing
+thing
+thing
+um it works for Gamepad and mouse not
+um it works for Gamepad and mouse not
+um it works for Gamepad and mouse not
+really sure about touch but
+really sure about touch but
+really sure about touch but
+compatibility is not really the point of
+compatibility is not really the point of
+compatibility is not really the point of
+this video so you have to test it out on
+this video so you have to test it out on
+this video so you have to test it out on
+your own local device I'm pretty sure
+your own local device I'm pretty sure
+your own local device I'm pretty sure
+so we'll get local position
+so we'll get local position
+so we'll get local position
+and so we just do mouse
+and so we just do mouse
+and so we just do mouse
+screen Mouse
+screen Mouse
+screen Mouse
+position equals user input service
+position equals user input service
+position equals user input service
+get mouse location so this returns a
+get mouse location so this returns a
+get mouse location so this returns a
+vector 2 so X and Y position for the
+vector 2 so X and Y position for the
+vector 2 so X and Y position for the
+user's Mouse position we can say local
+user's Mouse position we can say local
+user's Mouse position we can say local
+Ray equals camera view or
+Ray equals camera view or
+Ray equals camera view or
+0.2 Ray and we get the green Mouse
+0.2 Ray and we get the green Mouse
+0.2 Ray and we get the green Mouse
+position dot X and then the screen Mouse
+position dot X and then the screen Mouse
+position dot X and then the screen Mouse
+position dot y there we go so what this
+position dot y there we go so what this
+position dot y there we go so what this
+does is we get the position we send it
+does is we get the position we send it
+does is we get the position we send it
+to this function which creates array
+to this function which creates array
+to this function which creates array
+from the camera so basically just
+from the camera so basically just
+from the camera so basically just
+transfer our 2D position to like
+transfer our 2D position to like
+transfer our 2D position to like
+origin and direction in World space
+origin and direction in World space
+origin and direction in World space
+which is exactly what we want so from
+which is exactly what we want so from
+which is exactly what we want so from
+here
+here
+here
+we can say local Direction This will be
+we can say local Direction This will be
+we can say local Direction This will be
+equal to the ray dot Direction and we
+equal to the ray dot Direction and we
+equal to the ray dot Direction and we
+need like the range of
+need like the range of
+need like the range of
+our gun so this range because we're
+our gun so this range because we're
+our gun so this range because we're
+going to be using sphere cast on the
+going to be using sphere cast on the
+going to be using sphere cast on the
+server which I'll get into later we need
+server which I'll get into later we need
+server which I'll get into later we need
+this range to be less than 1024 studs
+this range to be less than 1024 studs
+this range to be less than 1024 studs
+and since both the client and the server
+and since both the client and the server
+and since both the client and the server
+are going to need to access it we can
+are going to need to access it we can
+are going to need to access it we can
+just go into the stun gun add attribute
+just go into the stun gun add attribute
+just go into the stun gun add attribute
+change the type to a number and call
+change the type to a number and call
+change the type to a number and call
+this range
+this range
+this range
+and I'm going to make my range we're
+and I'm going to make my range we're
+and I'm going to make my range we're
+going to make it 500 studs change it to
+going to make it 500 studs change it to
+going to make it 500 studs change it to
+whatever you want and then in our local
+whatever you want and then in our local
+whatever you want and then in our local
+script we're going to say local range
+script we're going to say local range
+script we're going to say local range
+and all caps because constants use upper
+and all caps because constants use upper
+and all caps because constants use upper
+or loud snake case so as convention at
+or loud snake case so as convention at
+or loud snake case so as convention at
+least for me you can use it whatever you
+least for me you can use it whatever you
+least for me you can use it whatever you
+want but this is what I prefer so it's
+want but this is what I prefer so it's
+want but this is what I prefer so it's
+clear that this is a constant will be
+clear that this is a constant will be
+clear that this is a constant will be
+equal to gun get attribute
+equal to gun get attribute
+equal to gun get attribute
+range so we get the range and we
+range so we get the range and we
+range so we get the range and we
+multiply our rate Direction times the
+multiply our rate Direction times the
+multiply our rate Direction times the
+range because raycasts use
+range because raycasts use
+range because raycasts use
+both the direction and the magnitude of
+both the direction and the magnitude of
+both the direction and the magnitude of
+the direction to get our link final
+the direction to get our link final
+the direction to get our link final
+position thing
+position thing
+position thing
+and then we need to actually do our fast
+and then we need to actually do our fast
+and then we need to actually do our fast
+we're going to say local cast equals or
+we're going to say local cast equals or
+we're going to say local cast equals or
+space Dot raycast
+space Dot raycast
+space Dot raycast
+recast now we're going to send in the
+recast now we're going to send in the
+recast now we're going to send in the
+ray.origence so the camera origin and
+ray.origence so the camera origin and
+ray.origence so the camera origin and
+then the direction
+then the direction
+then the direction
+so the reason we're using raycast and
+so the reason we're using raycast and
+so the reason we're using raycast and
+not sphere cast right now is because the
+not sphere cast right now is because the
+not sphere cast right now is because the
+client all has to do is get the world
+client all has to do is get the world
+client all has to do is get the world
+position of the mouse the server will do
+position of the mouse the server will do
+position of the mouse the server will do
+the heavy lifting with the with the
+the heavy lifting with the with the
+the heavy lifting with the with the
+sphere casting to get our nice thick Ray
+sphere casting to get our nice thick Ray
+sphere casting to get our nice thick Ray
+that will allow us to detect a lot of
+that will allow us to detect a lot of
+that will allow us to detect a lot of
+players in like an AOE type fashion
+players in like an AOE type fashion
+players in like an AOE type fashion
+but
+but
+but
+what we need to do here is just get the
+what we need to do here is just get the
+what we need to do here is just get the
+Mouse position of the player so we could
+Mouse position of the player so we could
+Mouse position of the player so we could
+just use a simple raycast here and send
+just use a simple raycast here and send
+just use a simple raycast here and send
+in the stuff because
+in the stuff because
+in the stuff because
+all we need to do is know where the
+all we need to do is know where the
+all we need to do is know where the
+player really wants to go
+player really wants to go
+player really wants to go
+so let's just print the cast dot
+so let's just print the cast dot
+so let's just print the cast dot
+instance to make sure everything is
+instance to make sure everything is
+instance to make sure everything is
+working properly
+working properly
+working properly
+let's go in let's play it
+let's go in let's play it
+let's go in let's play it
+so here we are in the world we've got
+so here we are in the world we've got
+so here we are in the world we've got
+the base plate you got the spawn
+the base plate you got the spawn
+the base plate you got the spawn
+location
+location
+location
+if you look turn around you hit the
+if you look turn around you hit the
+if you look turn around you hit the
+handle you don't really want to hit the
+handle you don't really want to hit the
+handle you don't really want to hit the
+handle or you can even hit the player
+handle or you can even hit the player
+handle or you can even hit the player
+maybe which is not good and also when
+maybe which is not good and also when
+maybe which is not good and also when
+you click the sky
+you click the sky
+you click the sky
+there's no re there's no cast the cast
+there's no re there's no cast the cast
+there's no re there's no cast the cast
+object doesn't exist so we have to
+object doesn't exist so we have to
+object doesn't exist so we have to
+handle that somehow so
+handle that somehow so
+handle that somehow so
+go back into our stun client first of
+go back into our stun client first of
+go back into our stun client first of
+all let's solve that issue where you can
+all let's solve that issue where you can
+all let's solve that issue where you can
+intersect with yourself you can hit your
+intersect with yourself you can hit your
+intersect with yourself you can hit your
+own gun you can hit your own player so
+own gun you can hit your own player so
+own gun you can hit your own player so
+we're gonna make a raycast params object
+we're gonna make a raycast params object
+we're gonna make a raycast params object
+I'm going to call this Mouse cast params
+I'm going to call this Mouse cast params
+I'm going to call this Mouse cast params
+equals
+equals
+equals
+raycastsprams.new and then underneath
+raycastsprams.new and then underneath
+raycastsprams.new and then underneath
+here we're going to do mousecast params
+here we're going to do mousecast params
+here we're going to do mousecast params
+filter type filter type equals
+filter type filter type equals
+filter type filter type equals
+enum.filter type
+enum.filter type
+enum.filter type
+raycast filter type dot exclude so all
+raycast filter type dot exclude so all
+raycast filter type dot exclude so all
+of our filter descendants instances are
+of our filter descendants instances are
+of our filter descendants instances are
+going to be excluded from our raycast so
+going to be excluded from our raycast so
+going to be excluded from our raycast so
+then before each raycast we're just
+then before each raycast we're just
+then before each raycast we're just
+going to say
+going to say
+going to say
+Mouse cast params dot filter descendants
+Mouse cast params dot filter descendants
+Mouse cast params dot filter descendants
+instances equals
+instances equals
+instances equals
+R player.character so our local player's
+R player.character so our local player's
+R player.character so our local player's
+character and then the gun
+character and then the gun
+character and then the gun
+and the reason we have to set this every
+and the reason we have to set this every
+and the reason we have to set this every
+single time is because the
+single time is because the
+single time is because the
+player.character could change between
+player.character could change between
+player.character could change between
+the tool and whatever it just changes so
+the tool and whatever it just changes so
+the tool and whatever it just changes so
+it's better to set it just directly
+it's better to set it just directly
+it's better to set it just directly
+before since we are within a tool that
+before since we are within a tool that
+before since we are within a tool that
+gets parented to the character here and
+gets parented to the character here and
+gets parented to the character here and
+there you could probably get away with
+there you could probably get away with
+there you could probably get away with
+putting it outside of the activated
+putting it outside of the activated
+putting it outside of the activated
+function but
+function but
+function but
+better safe than sorry you can
+better safe than sorry you can
+better safe than sorry you can
+experiment if you want but only if
+experiment if you want but only if
+experiment if you want but only if
+performances as you end in this example
+performances as you end in this example
+performances as you end in this example
+Performance is most certainly not an
+Performance is most certainly not an
+Performance is most certainly not an
+issue so then we also want to send our
+issue so then we also want to send our
+issue so then we also want to send our
+mousecast params as the third argument
+mousecast params as the third argument
+mousecast params as the third argument
+to our raycast
+to our raycast
+to our raycast
+so now we shouldn't be able to hit
+so now we shouldn't be able to hit
+so now we shouldn't be able to hit
+ourselves which is good but we also need
+ourselves which is good but we also need
+ourselves which is good but we also need
+to make sure
+to make sure
+to make sure
+that when we get the position from our
+that when we get the position from our
+that when we get the position from our
+raycast it handles the case where we
+raycast it handles the case where we
+raycast it handles the case where we
+don't actually hit anything
+don't actually hit anything
+don't actually hit anything
+so when we say local position we're
+so when we say local position we're
+so when we say local position we're
+going to say we're going to do it fl's
+going to say we're going to do it fl's
+going to say we're going to do it fl's
+clause
+clause
+clause
+so we're going to do if
+so we're going to do if
+so we're going to do if
+asked then ask.position else
+asked then ask.position else
+asked then ask.position else
+radar origin plus our Direction so
+radar origin plus our Direction so
+radar origin plus our Direction so
+what this does is it's basically like
+what this does is it's basically like
+what this does is it's basically like
+returning a value we return cash lab
+returning a value we return cash lab
+returning a value we return cash lab
+position if the gas does exist but
+position if the gas does exist but
+position if the gas does exist but
+otherwise we just
+otherwise we just
+otherwise we just
+give the position value or position
+give the position value or position
+give the position value or position
+variable where the rate would be at its
+variable where the rate would be at its
+variable where the rate would be at its
+maximum distance so we go from the
+maximum distance so we go from the
+maximum distance so we go from the
+origin and we go all the way to the
+origin and we go all the way to the
+origin and we go all the way to the
+direction times the range so that's like
+direction times the range so that's like
+direction times the range so that's like
+the max distance max range it could go
+the max distance max range it could go
+the max distance max range it could go
+to so this position will always be a
+to so this position will always be a
+to so this position will always be a
+value regardless if we actually hit
+value regardless if we actually hit
+value regardless if we actually hit
+something which is great so if we do
+something which is great so if we do
+something which is great so if we do
+print position
+you can play it
+you can play it
+you can play it
+and then
+and then
+and then
+you should be able to hit the ground you
+you should be able to hit the ground you
+you should be able to hit the ground you
+get number hit the sky you get numbered
+get number hit the sky you get numbered
+get number hit the sky you get numbered
+so that is wonderful so we got our rate
+so that is wonderful so we got our rate
+so that is wonderful so we got our rate
+position but we obviously can't really
+position but we obviously can't really
+position but we obviously can't really
+do anything with this position so we
+do anything with this position so we
+do anything with this position so we
+need to actually like send it to the
+need to actually like send it to the
+need to actually like send it to the
+server the way we're going to do that is
+server the way we're going to do that is
+server the way we're going to do that is
+with our remote events so I'm going to
+with our remote events so I'm going to
+with our remote events so I'm going to
+create a remote event
+create a remote event
+create a remote event
+and our stun gun and I'm going to name
+and our stun gun and I'm going to name
+and our stun gun and I'm going to name
+this
+this
+this
+fire gun
+fire gun
+fire gun
+and the reason we have to send this to
+and the reason we have to send this to
+and the reason we have to send this to
+the server is because if we were to do
+the server is because if we were to do
+the server is because if we were to do
+the hit detection and the image on the
+the hit detection and the image on the
+the hit detection and the image on the
+client number one it wouldn't actually
+client number one it wouldn't actually
+client number one it wouldn't actually
+register because clients shouldn't be
+register because clients shouldn't be
+register because clients shouldn't be
+able to do that number two the client
+able to do that number two the client
+able to do that number two the client
+should not be able to do that because
+should not be able to do that because
+should not be able to do that because
+that means exploiters can literally just
+that means exploiters can literally just
+that means exploiters can literally just
+kill everyone if they wanted to so
+kill everyone if they wanted to so
+kill everyone if they wanted to so
+obviously we have to send it to server
+obviously we have to send it to server
+obviously we have to send it to server
+or validate the hits and you know do all
+or validate the hits and you know do all
+or validate the hits and you know do all
+of our server stuff without the prying
+of our server stuff without the prying
+of our server stuff without the prying
+eyes of a
+eyes of a
+eyes of a
+exploitative client so underneath our
+exploitative client so underneath our
+exploitative client so underneath our
+gun I'm going to define a new variable
+gun I'm going to define a new variable
+gun I'm going to define a new variable
+that says local fire gun events equals
+that says local fire gun events equals
+that says local fire gun events equals
+gun weight or filed because it may or
+gun weight or filed because it may or
+gun weight or filed because it may or
+may not exist you fire gun these are on
+may not exist you fire gun these are on
+may not exist you fire gun these are on
+the client we have to use wheat for
+the client we have to use wheat for
+the client we have to use wheat for
+child so down here where we have our
+child so down here where we have our
+child so down here where we have our
+position we can just do fire gun event
+position we can just do fire gun event
+position we can just do fire gun event
+fire server with the mouse position
+fire server with the mouse position
+fire server with the mouse position
+so there we go so that is the client
+so there we go so that is the client
+so there we go so that is the client
+done
+done
+done
+now let's go to our server we don't have
+now let's go to our server we don't have
+now let's go to our server we don't have
+a server yet let's create our server go
+a server yet let's create our server go
+a server yet let's create our server go
+to stun gun click the plus create a
+to stun gun click the plus create a
+to stun gun click the plus create a
+script just a regular old script I want
+script just a regular old script I want
+script just a regular old script I want
+to name this stun server
+to name this stun server
+to name this stun server
+just because it helps with our little
+just because it helps with our little
+just because it helps with our little
+top bar here
+top bar here
+top bar here
+and then now we need to get our stuff
+and then now we need to get our stuff
+and then now we need to get our stuff
+and create our
+and create our
+and create our
+server side big raycast sphere cast gun
+server side big raycast sphere cast gun
+server side big raycast sphere cast gun
+thing there's a local gun equals script
+thing there's a local gun equals script
+thing there's a local gun equals script
+dot parent then we're going to say local
+dot parent then we're going to say local
+dot parent then we're going to say local
+fire gun event I think that the client
+fire gun event I think that the client
+fire gun event I think that the client
+uses to communicate that we will receive
+uses to communicate that we will receive
+uses to communicate that we will receive
+we're going to do gun.fire gun notice
+we're going to do gun.fire gun notice
+we're going to do gun.fire gun notice
+there's no use of wait for child because
+there's no use of wait for child because
+there's no use of wait for child because
+we're on the server everything's already
+we're on the server everything's already
+we're on the server everything's already
+loaded
+loaded
+loaded
+and now we also should probably get the
+and now we also should probably get the
+and now we also should probably get the
+range because we use that leader as well
+range because we use that leader as well
+range because we use that leader as well
+so range equals done get attribute
+so range equals done get attribute
+so range equals done get attribute
+range there we go and then we're going
+range there we go and then we're going
+range there we go and then we're going
+to say fire gun event dot on server
+to say fire gun event dot on server
+to say fire gun event dot on server
+event so when the server gets called by
+event so when the server gets called by
+event so when the server gets called by
+the client you connect a function which
+the client you connect a function which
+the client you connect a function which
+takes two parameters the player and the
+takes two parameters the player and the
+takes two parameters the player and the
+position the same Mouse position that
+position the same Mouse position that
+position the same Mouse position that
+they want to hit and then inside our
+they want to hit and then inside our
+they want to hit and then inside our
+function this will run every time the
+function this will run every time the
+function this will run every time the
+player wants to shoot our gun we're
+player wants to shoot our gun we're
+player wants to shoot our gun we're
+going to say we're going to start with
+going to say we're going to start with
+going to say we're going to start with
+uh Direction calculation because we kind
+uh Direction calculation because we kind
+uh Direction calculation because we kind
+of need that so we're going to say local
+of need that so we're going to say local
+of need that so we're going to say local
+Direction equals
+Direction equals
+Direction equals
+Mouse position
+Mouse position
+Mouse position
+minus
+minus
+minus
+R beam origin dot position but we need
+R beam origin dot position but we need
+R beam origin dot position but we need
+to get our beam origin so let's go to
+to get our beam origin so let's go to
+to get our beam origin so let's go to
+our top we're gonna say local beam
+our top we're gonna say local beam
+our top we're gonna say local beam
+origin equals you can spell it right
+origin equals you can spell it right
+origin equals you can spell it right
+equals gun dot beam origin there we go
+equals gun dot beam origin there we go
+equals gun dot beam origin there we go
+so down here back in our Mouse in our
+so down here back in our Mouse in our
+so down here back in our Mouse in our
+little Direction block we say mouse
+little Direction block we say mouse
+little Direction block we say mouse
+position minus beam origin
+position minus beam origin
+position minus beam origin
+up position dot unit times the ring
+up position dot unit times the ring
+up position dot unit times the ring
+so
+so
+so
+this may look a little bit redundant but
+this may look a little bit redundant but
+this may look a little bit redundant but
+what we're doing here is we're getting
+what we're doing here is we're getting
+what we're doing here is we're getting
+the vector from our position that we
+the vector from our position that we
+the vector from our position that we
+touched on the screen and the origin so
+touched on the screen and the origin so
+touched on the screen and the origin so
+that we can Later cast array from the
+that we can Later cast array from the
+that we can Later cast array from the
+origin of the beam to our intended
+origin of the beam to our intended
+origin of the beam to our intended
+position and see what collides from
+position and see what collides from
+position and see what collides from
+there because the if we were to just
+there because the if we were to just
+there because the if we were to just
+cast straight from the mouse origin and
+cast straight from the mouse origin and
+cast straight from the mouse origin and
+the in like the mouse Direction
+the in like the mouse Direction
+the in like the mouse Direction
+the bullet would or the ray or the beam
+the bullet would or the ray or the beam
+the bullet would or the ray or the beam
+would come from your camera which is
+would come from your camera which is
+would come from your camera which is
+kind of weird you want the beam to come
+kind of weird you want the beam to come
+kind of weird you want the beam to come
+from the barrel of your gun this origin
+from the barrel of your gun this origin
+from the barrel of your gun this origin
+opposition or is basically the barrel of
+opposition or is basically the barrel of
+opposition or is basically the barrel of
+our gun and this position is where we
+our gun and this position is where we
+our gun and this position is where we
+kind of want to shoot but since the
+kind of want to shoot but since the
+kind of want to shoot but since the
+client is sending us as Mouse position
+client is sending us as Mouse position
+client is sending us as Mouse position
+we really don't want to trust that it's
+we really don't want to trust that it's
+we really don't want to trust that it's
+that it's like within uh
+that it's like within uh
+that it's like within uh
+1024 studs because sphere cast can go
+1024 studs because sphere cast can go
+1024 studs because sphere cast can go
+past that so we we get the unit Vector
+past that so we we get the unit Vector
+past that so we we get the unit Vector
+so it's the magnitude is like one and
+so it's the magnitude is like one and
+so it's the magnitude is like one and
+then we multiply by the range again
+then we multiply by the range again
+then we multiply by the range again
+because this mouse position could be
+because this mouse position could be
+because this mouse position could be
+anything we want to make sure that it's
+anything we want to make sure that it's
+anything we want to make sure that it's
+safe for the server to handle so there's
+safe for the server to handle so there's
+safe for the server to handle so there's
+not too many errors
+not too many errors
+not too many errors
+and so now we need to do our cast
+and so now we need to do our cast
+and so now we need to do our cast
+there's a local asked equals workspace
+there's a local asked equals workspace
+there's a local asked equals workspace
+sphere cast
+sphere cast
+sphere cast
+Nancy it's a sphere cast where we send
+Nancy it's a sphere cast where we send
+Nancy it's a sphere cast where we send
+in
+in
+in
+our
+our
+our
+beam origin opposition so this is where
+beam origin opposition so this is where
+beam origin opposition so this is where
+it starts and then we have our radius so
+it starts and then we have our radius so
+it starts and then we have our radius so
+what should how wide charts a little
+what should how wide charts a little
+what should how wide charts a little
+sphere cast be we're going to say 3.5
+sphere cast be we're going to say 3.5
+sphere cast be we're going to say 3.5
+later we could we're going to turn this
+later we could we're going to turn this
+later we could we're going to turn this
+into a actually let's do that right
+into a actually let's do that right
+into a actually let's do that right
+let's turn this into an attribute of our
+let's turn this into an attribute of our
+let's turn this into an attribute of our
+stun guns you can edit that on the Fly
+stun guns you can edit that on the Fly
+stun guns you can edit that on the Fly
+I'm going to say r
+done radius
+done radius
+done radius
+is a number value which
+is a number value which
+is a number value which
+will be equal to
+will be equal to
+will be equal to
+3.5 studs I'm gonna say local
+radius
+radius
+radius
+equals
+equals
+equals
+done it's attribute
+done it's attribute
+done it's attribute
+done radius there we go okay so we have
+done radius there we go okay so we have
+done radius there we go okay so we have
+our Stone radius we have our range
+our Stone radius we have our range
+our Stone radius we have our range
+whatever let's do our Stone radius in
+whatever let's do our Stone radius in
+whatever let's do our Stone radius in
+here and then finally for our direction
+here and then finally for our direction
+here and then finally for our direction
+we're going to send in the direction
+we're going to send in the direction
+we're going to send in the direction
+literally just created so what is a
+literally just created so what is a
+literally just created so what is a
+sphere class as opposed to a raycast a
+sphere class as opposed to a raycast a
+sphere class as opposed to a raycast a
+sphere cast takes like a big chunky
+sphere cast takes like a big chunky
+sphere cast takes like a big chunky
+sphere the radius of the thing that we
+sphere the radius of the thing that we
+sphere the radius of the thing that we
+sent and it casts it like in a row like
+sent and it casts it like in a row like
+sent and it casts it like in a row like
+array but instead of being like really
+array but instead of being like really
+array but instead of being like really
+really thin like a ray it's nice and
+really thin like a ray it's nice and
+really thin like a ray it's nice and
+chunky so this will allow us to make a
+chunky so this will allow us to make a
+chunky so this will allow us to make a
+stun gun sort of like the Star Wars ones
+stun gun sort of like the Star Wars ones
+stun gun sort of like the Star Wars ones
+where like it's a big kind of cylinder
+where like it's a big kind of cylinder
+where like it's a big kind of cylinder
+and it'll catch anything and it's and
+and it'll catch anything and it's and
+and it'll catch anything and it's and
+it's like range I guess the for the
+it's like range I guess the for the
+it's like range I guess the for the
+sphere cast it'll catch the first thing
+sphere cast it'll catch the first thing
+sphere cast it'll catch the first thing
+so after we have that cast and I think
+so after we have that cast and I think
+so after we have that cast and I think
+we're let's add the
+we're let's add the
+we're let's add the
+raycast programs right now too because
+raycast programs right now too because
+raycast programs right now too because
+we kind of know they have to be there so
+we kind of know they have to be there so
+we kind of know they have to be there so
+we're gonna say local fire cast params
+we're gonna say local fire cast params
+we're gonna say local fire cast params
+equals raycast params.new I'm gonna say
+equals raycast params.new I'm gonna say
+equals raycast params.new I'm gonna say
+firecast param stock filter it's the
+firecast param stock filter it's the
+firecast param stock filter it's the
+same thing we did before a filter type
+same thing we did before a filter type
+same thing we did before a filter type
+equals enum dot recast filter type dot
+equals enum dot recast filter type dot
+equals enum dot recast filter type dot
+exclude so before each firing we need to
+exclude so before each firing we need to
+exclude so before each firing we need to
+set our
+our uh archives params dot filter to
+our uh archives params dot filter to
+our uh archives params dot filter to
+finish instances equal to the player dot
+finish instances equal to the player dot
+finish instances equal to the player dot
+character and the gun and question which
+character and the gun and question which
+character and the gun and question which
+should work out nicely and so now we
+should work out nicely and so now we
+should work out nicely and so now we
+have our cast we have everything set up
+have our cast we have everything set up
+have our cast we have everything set up
+let's just double check that everything
+let's just double check that everything
+let's just double check that everything
+works by printing the cast Dot
+works by printing the cast Dot
+works by printing the cast Dot
+instance
+instance
+instance
+area
+so we got our stun gun
+so we got our stun gun
+so we got our stun gun
+faceplate handle
+faceplate handle
+faceplate handle
+sky has nothing because there is no
+sky has nothing because there is no
+sky has nothing because there is no
+answer that exists so in the same
+answer that exists so in the same
+answer that exists so in the same
+fashion that we did for the client we
+fashion that we did for the client we
+fashion that we did for the client we
+have to make our little position
+have to make our little position
+have to make our little position
+or this will actually this will only be
+or this will actually this will only be
+or this will actually this will only be
+first of visualization purposes because
+first of visualization purposes because
+first of visualization purposes because
+in terms of the actual stun behavior
+in terms of the actual stun behavior
+in terms of the actual stun behavior
+that won't be triggered when we hit the
+that won't be triggered when we hit the
+that won't be triggered when we hit the
+sky because we're not gonna run any
+sky because we're not gonna run any
+sky because we're not gonna run any
+anything we can't stun the sky so when I
+anything we can't stun the sky so when I
+anything we can't stun the sky so when I
+say local position equals if cast Then
+say local position equals if cast Then
+say local position equals if cast Then
+cast that position
+cast that position
+cast that position
+in else
+in else
+in else
+beam origin.position
+beam origin.position
+beam origin.position
+less Direction
+less Direction
+less Direction
+there we go so in the same fashion as
+there we go so in the same fashion as
+there we go so in the same fashion as
+before this is what we will be doing
+before this is what we will be doing
+before this is what we will be doing
+which should be done so
+which should be done so
+which should be done so
+moving on we have our position we'll use
+moving on we have our position we'll use
+moving on we have our position we'll use
+this later actually for the
+this later actually for the
+this later actually for the
+visualization of
+visualization of
+visualization of
+our theme but for now let's actually add
+our theme but for now let's actually add
+our theme but for now let's actually add
+the stunning aspect so we could only
+the stunning aspect so we could only
+the stunning aspect so we could only
+stun if we actually hit something so I'm
+stun if we actually hit something so I'm
+stun if we actually hit something so I'm
+going to say ifcast and cast dot
+going to say ifcast and cast dot
+going to say ifcast and cast dot
+instance so if we hit something and the
+instance so if we hit something and the
+instance so if we hit something and the
+thing we hit exists not terrain or
+thing we hit exists not terrain or
+thing we hit exists not terrain or
+anything we say local character
+anything we say local character
+anything we say local character
+equals ask dot instance
+find first ancestor which is uh
+find first ancestor which is uh
+find first ancestor which is uh
+model so we go back in our ancestry
+model so we go back in our ancestry
+model so we go back in our ancestry
+because usually we hit like an arm or
+because usually we hit like an arm or
+because usually we hit like an arm or
+something and arm is parented to the
+something and arm is parented to the
+something and arm is parented to the
+model and then since we got our
+model and then since we got our
+model and then since we got our
+character we may not have a character
+character we may not have a character
+character we may not have a character
+let's go get our humanoid as well which
+let's go get our humanoid as well which
+let's go get our humanoid as well which
+will be equal to
+will be equal to
+will be equal to
+character and character
+character and character
+character and character
+find the first child
+find the first child
+find the first child
+to be more safe you can do which is a
+to be more safe you can do which is a
+to be more safe you can do which is a
+okay so what this does here is if the
+okay so what this does here is if the
+okay so what this does here is if the
+character exists so if character was
+character exists so if character was
+character exists so if character was
+true and Returns the second value which
+true and Returns the second value which
+true and Returns the second value which
+is this your character is false humanoid
+is this your character is false humanoid
+is this your character is false humanoid
+just won't exist because now we have to
+just won't exist because now we have to
+just won't exist because now we have to
+test if the humanoid exists then
+test if the humanoid exists then
+test if the humanoid exists then
+we need to actually you
+we need to actually you
+we need to actually you
+stun them so for my testing the most
+stun them so for my testing the most
+stun them so for my testing the most
+reliable way to stun a humanoid is
+reliable way to stun a humanoid is
+reliable way to stun a humanoid is
+setting humanoid.platform stand equals
+setting humanoid.platform stand equals
+setting humanoid.platform stand equals
+to true
+to true
+to true
+and then we're going to do task dot
+and then we're going to do task dot
+and then we're going to do task dot
+delay
+delay
+delay
+or how long however long you want the
+or how long however long you want the
+or how long however long you want the
+player to be stun I'm just gonna say
+player to be stun I'm just gonna say
+player to be stun I'm just gonna say
+three seconds
+three seconds
+three seconds
+and you could turn this into an
+and you could turn this into an
+and you could turn this into an
+attribute if you wanted definitely a
+attribute if you wanted definitely a
+attribute if you wanted definitely a
+good idea if you're actually making this
+good idea if you're actually making this
+good idea if you're actually making this
+tool just say if humanoid then humanoid
+tool just say if humanoid then humanoid
+tool just say if humanoid then humanoid
+dot platform and equals false okay so we
+dot platform and equals false okay so we
+dot platform and equals false okay so we
+got our we got our humanoid we set them
+got our we got our humanoid we set them
+got our we got our humanoid we set them
+to stun so this platform stand basically
+to stun so this platform stand basically
+to stun so this platform stand basically
+just stuns them it looks really weird
+just stuns them it looks really weird
+just stuns them it looks really weird
+I mean I would recommend running your
+I mean I would recommend running your
+I mean I would recommend running your
+own animation but it does do the
+own animation but it does do the
+own animation but it does do the
+stunning and it does do it well I tried
+stunning and it does do it well I tried
+stunning and it does do it well I tried
+setting their humanoid State didn't
+setting their humanoid State didn't
+setting their humanoid State didn't
+really work this may not be the best way
+really work this may not be the best way
+really work this may not be the best way
+but this is not the point of the video
+but this is not the point of the video
+but this is not the point of the video
+the point of the video is to put on a
+the point of the video is to put on a
+the point of the video is to put on a
+sphere cast
+sphere cast
+sphere cast
+and with you know tool stuff but this
+and with you know tool stuff but this
+and with you know tool stuff but this
+does do the trick to stun them and after
+does do the trick to stun them and after
+does do the trick to stun them and after
+three seconds we have to unstun them and
+three seconds we have to unstun them and
+three seconds we have to unstun them and
+that we use a Sasol delay so that it
+that we use a Sasol delay so that it
+that we use a Sasol delay so that it
+creates a new thread so that this delay
+creates a new thread so that this delay
+creates a new thread so that this delay
+won't really interfere or if you use
+won't really interfere or if you use
+won't really interfere or if you use
+task.weight it interferes with the rest
+task.weight it interferes with the rest
+task.weight it interferes with the rest
+of this code and below here we're going
+of this code and below here we're going
+of this code and below here we're going
+to add our visualization and we
+to add our visualization and we
+to add our visualization and we
+definitely don't want the delay
+definitely don't want the delay
+definitely don't want the delay
+to interfere with that
+to interfere with that
+to interfere with that
+so after delay stuff could have changed
+so after delay stuff could have changed
+so after delay stuff could have changed
+their player could have died so we have
+their player could have died so we have
+their player could have died so we have
+to make sure that the humanoid in
+to make sure that the humanoid in
+to make sure that the humanoid in
+question still exist and then we we
+question still exist and then we we
+question still exist and then we we
+unstun them here because obviously they
+unstun them here because obviously they
+unstun them here because obviously they
+can't be stunned forever and since we're
+can't be stunned forever and since we're
+can't be stunned forever and since we're
+doing this on the server it should be
+doing this on the server it should be
+doing this on the server it should be
+more or less secure so let's actually
+more or less secure so let's actually
+more or less secure so let's actually
+try that so what I'm going to do is go
+try that so what I'm going to do is go
+try that so what I'm going to do is go
+to toolbox if you don't have a toolbox
+to toolbox if you don't have a toolbox
+to toolbox if you don't have a toolbox
+just go to view and then the Box
+just go to view and then the Box
+just go to view and then the Box
+um
+um
+um
+freaking toolbox here we go I'm gonna go
+freaking toolbox here we go I'm gonna go
+freaking toolbox here we go I'm gonna go
+find my old friend the drooling zombie
+or there we go we're gonna go find my
+or there we go we're gonna go find my
+or there we go we're gonna go find my
+old friend ruling Zone and then yeah I
+old friend ruling Zone and then yeah I
+old friend ruling Zone and then yeah I
+don't care at scripts and we're going to
+don't care at scripts and we're going to
+don't care at scripts and we're going to
+go in
+go in
+go in
+we're gonna play this John
+and we're gonna stun the crap out of the
+and we're gonna stun the crap out of the
+and we're gonna stun the crap out of the
+zombie why is he so
+zombie why is he so
+zombie why is he so
+but
+but
+but
+he does in fact get sun you see him like
+he does in fact get sun you see him like
+he does in fact get sun you see him like
+kind of sinking to the floor that is the
+kind of sinking to the floor that is the
+kind of sinking to the floor that is the
+stunned Behavior working its action the
+stunned Behavior working its action the
+stunned Behavior working its action the
+click away doesn't lead to anything and
+click away doesn't lead to anything and
+click away doesn't lead to anything and
+then boom you stun him he's in the floor
+then boom you stun him he's in the floor
+then boom you stun him he's in the floor
+he can't move that's what we want but
+he can't move that's what we want but
+he can't move that's what we want but
+it's weird for the player because you
+it's weird for the player because you
+it's weird for the player because you
+can't really see what you're stunning so
+can't really see what you're stunning so
+can't really see what you're stunning so
+let's add some a little visualization to
+let's add some a little visualization to
+let's add some a little visualization to
+this so first off let's create our beam
+this so first off let's create our beam
+this so first off let's create our beam
+and I'm going to create it in the
+and I'm going to create it in the
+and I'm going to create it in the
+workspace just for now the beam is going
+workspace just for now the beam is going
+workspace just for now the beam is going
+to be a cylinder and this cylinder if I
+to be a cylinder and this cylinder if I
+to be a cylinder and this cylinder if I
+go
+we're gonna make the cylinder
+we're gonna make the cylinder
+we're gonna make the cylinder
+can't Collide off anchored true because
+can't Collide off anchored true because
+can't Collide off anchored true because
+we're gonna like spawn on the world I'm
+we're gonna like spawn on the world I'm
+we're gonna like spawn on the world I'm
+going to create the build like a force
+going to create the build like a force
+going to create the build like a force
+field just
+field just
+field just
+look
+the same color as what I did before and
+the same color as what I did before and
+the same color as what I did before and
+then don't you don't really know what
+then don't you don't really know what
+then don't you don't really know what
+you're worried about the size
+you're worried about the size
+you're worried about the size
+but one thing I want to mention is we're
+but one thing I want to mention is we're
+but one thing I want to mention is we're
+going to be using
+going to be using
+going to be using
+um a pivot here so
+um a pivot here so
+um a pivot here so
+because we're dealing with a cylinder we
+because we're dealing with a cylinder we
+because we're dealing with a cylinder we
+kind of want like cylinders are weird
+kind of want like cylinders are weird
+kind of want like cylinders are weird
+because their front face if I show
+because their front face if I show
+because their front face if I show
+her front face is like out to the side
+her front face is like out to the side
+her front face is like out to the side
+of the cylinder which is kind of stupid
+of the cylinder which is kind of stupid
+of the cylinder which is kind of stupid
+so the best way to like move the
+so the best way to like move the
+so the best way to like move the
+cylinder and position in the world is to
+cylinder and position in the world is to
+cylinder and position in the world is to
+use the pivot so if I go to edit pivot
+use the pivot so if I go to edit pivot
+use the pivot so if I go to edit pivot
+see our pivots here what we want is
+see our pivots here what we want is
+see our pivots here what we want is
+every time we spawn in a new beam we
+every time we spawn in a new beam we
+every time we spawn in a new beam we
+want the pivot to be at the very back so
+want the pivot to be at the very back so
+want the pivot to be at the very back so
+like back here
+like back here
+like back here
+where where the uh where the base of the
+where where the uh where the base of the
+where where the uh where the base of the
+beam is and then we also want to make
+beam is and then we also want to make
+beam is and then we also want to make
+sure the front face feeds the pivot's
+sure the front face feeds the pivot's
+sure the front face feeds the pivot's
+front face is still here so we're going
+front face is still here so we're going
+front face is still here so we're going
+to take the pivot and we're just going
+to take the pivot and we're just going
+to take the pivot and we're just going
+to rotate it
+that was not it you need to edit a bit
+that was not it you need to edit a bit
+that was not it you need to edit a bit
+of the pivot and then rotate it
+of the pivot and then rotate it
+of the pivot and then rotate it
+so from my testing it's front face here
+so from my testing it's front face here
+so from my testing it's front face here
+and you set it to like negative 90 on
+and you set it to like negative 90 on
+and you set it to like negative 90 on
+the
+the
+the
+y orientation for the pivot it should
+y orientation for the pivot it should
+y orientation for the pivot it should
+work out the position doesn't actually
+work out the position doesn't actually
+work out the position doesn't actually
+matter actually while we're here set the
+matter actually while we're here set the
+matter actually while we're here set the
+position back to zero because you're
+position back to zero because you're
+position back to zero because you're
+going to be offsetting it in the code
+going to be offsetting it in the code
+going to be offsetting it in the code
+but the orientation is important it
+but the orientation is important it
+but the orientation is important it
+doesn't work just play around with the Y
+doesn't work just play around with the Y
+doesn't work just play around with the Y
+orientation to get the beam spawning
+orientation to get the beam spawning
+orientation to get the beam spawning
+properly but I want a cylinder because
+properly but I want a cylinder because
+properly but I want a cylinder because
+it looks good we're going to use a
+it looks good we're going to use a
+it looks good we're going to use a
+cylinder
+cylinder
+cylinder
+but this is our beam done so I'm going
+but this is our beam done so I'm going
+but this is our beam done so I'm going
+to rename it to beam shove it into
+to rename it to beam shove it into
+to rename it to beam shove it into
+server storage because we need to like
+server storage because we need to like
+server storage because we need to like
+Source it to spawn it in now we're going
+Source it to spawn it in now we're going
+Source it to spawn it in now we're going
+to get that beam but that's how we're
+to get that beam but that's how we're
+to get that beam but that's how we're
+going to say local beam equals
+going to say local beam equals
+going to say local beam equals
+workspace or I guess game get service
+workspace or I guess game get service
+workspace or I guess game get service
+server storage
+server storage
+server storage
+dot there we go so we got our beam let's
+dot there we go so we got our beam let's
+dot there we go so we got our beam let's
+go clone our beam actually let's rename
+go clone our beam actually let's rename
+go clone our beam actually let's rename
+this at the top to the beam template
+this at the top to the beam template
+this at the top to the beam template
+so we can create a beam and say local
+so we can create a beam and say local
+so we can create a beam and say local
+beam equals beam template there's a
+beam equals beam template there's a
+beam equals beam template there's a
+couple things we have to do to visualize
+couple things we have to do to visualize
+couple things we have to do to visualize
+this beam first off we need to set the
+this beam first off we need to set the
+this beam first off we need to set the
+size so beam dot size will be equal to
+size so beam dot size will be equal to
+size so beam dot size will be equal to
+vector3 dot new
+vector3 dot new
+vector3 dot new
+so the x of a cylinder is the length of
+so the x of a cylinder is the length of
+so the x of a cylinder is the length of
+the beam so we need to set this beam
+the beam so we need to set this beam
+the beam so we need to set this beam
+length equal to the length of the Ray
+length equal to the length of the Ray
+length equal to the length of the Ray
+and we're going to Define a variable
+and we're going to Define a variable
+and we're going to Define a variable
+above called distance and this will be
+above called distance and this will be
+above called distance and this will be
+equal to the length of the ray it'll be
+equal to the length of the ray it'll be
+equal to the length of the ray it'll be
+the position minus the beam origin of
+the position minus the beam origin of
+the position minus the beam origin of
+position
+position
+position
+dot magnitude
+dot magnitude
+dot magnitude
+so this is basically
+so this is basically
+so this is basically
+where the ray starts to where it goes
+where the ray starts to where it goes
+where the ray starts to where it goes
+that little vector magnitude so the
+that little vector magnitude so the
+that little vector magnitude so the
+length so we're going to do distance as
+length so we're going to do distance as
+length so we're going to do distance as
+the x value and then for the Y the Z
+the x value and then for the Y the Z
+the x value and then for the Y the Z
+we're just going to set it to the radius
+we're just going to set it to the radius
+we're just going to set it to the radius
+of the sun radius because
+of the sun radius because
+of the sun radius because
+we're gonna make it as thick as it will
+we're gonna make it as thick as it will
+we're gonna make it as thick as it will
+be as the sphere cast will be
+be as the sphere cast will be
+be as the sphere cast will be
+and then we need to set the beam.pivot
+and then we need to set the beam.pivot
+and then we need to set the beam.pivot
+offset equal to the beam.pivot offset
+offset equal to the beam.pivot offset
+offset equal to the beam.pivot offset
+because the beam pivot offset is a C
+because the beam pivot offset is a C
+because the beam pivot offset is a C
+frame we do not want to edit the
+frame we do not want to edit the
+frame we do not want to edit the
+orientation so we're going to offset the
+orientation so we're going to offset the
+orientation so we're going to offset the
+pivot offset by a vector three so all
+pivot offset by a vector three so all
+pivot offset by a vector three so all
+we're doing is changing the
+we're doing is changing the
+we're doing is changing the
+position of the pivot offset that's why
+position of the pivot offset that's why
+position of the pivot offset that's why
+if your position is set to something
+if your position is set to something
+if your position is set to something
+it'll just change it we don't want that
+it'll just change it we don't want that
+it'll just change it we don't want that
+so make sure your position is set to
+so make sure your position is set to
+so make sure your position is set to
+zero zero zero so we're going to do
+zero zero zero so we're going to do
+zero zero zero so we're going to do
+pivot offset minus
+pivot offset minus
+pivot offset minus
+vector3 dot x-axis so we're going to
+vector3 dot x-axis so we're going to
+vector3 dot x-axis so we're going to
+offset it on the x-axis I
+offset it on the x-axis I
+offset it on the x-axis I
+distance divided by two so if you'll
+distance divided by two so if you'll
+distance divided by two so if you'll
+notice let's let's use our
+notice let's let's use our
+notice let's let's use our
+actually duplicate our beam we're gonna
+actually duplicate our beam we're gonna
+actually duplicate our beam we're gonna
+have a little test beam here and if we
+have a little test beam here and if we
+have a little test beam here and if we
+edit the pivot and we would
+edit the pivot and we would
+edit the pivot and we would
+edit the pivot remove the pivot to the
+edit the pivot remove the pivot to the
+edit the pivot remove the pivot to the
+edge here notice how the beam is four
+edge here notice how the beam is four
+edge here notice how the beam is four
+studs long and the pivot position is
+studs long and the pivot position is
+studs long and the pivot position is
+negative two so we want those on the B
+negative two so we want those on the B
+negative two so we want those on the B
+here so we'll take our x coordinate and
+here so we'll take our x coordinate and
+here so we'll take our x coordinate and
+we'll just kind of divide it by two and
+we'll just kind of divide it by two and
+we'll just kind of divide it by two and
+we subtract it so that's why it's
+we subtract it so that's why it's
+we subtract it so that's why it's
+negative and boom there you go that's a
+negative and boom there you go that's a
+negative and boom there you go that's a
+little explanation behind it test beam
+little explanation behind it test beam
+little explanation behind it test beam
+goodbye back in the server we're going
+goodbye back in the server we're going
+goodbye back in the server we're going
+to say beam pivot two
+to say beam pivot two
+to say beam pivot two
+this is the function to use the pivot to
+this is the function to use the pivot to
+this is the function to use the pivot to
+actually do it relative to Pivot to a
+actually do it relative to Pivot to a
+actually do it relative to Pivot to a
+new C frame and so it's going to be
+new C frame and so it's going to be
+new C frame and so it's going to be
+we're going to do c frame.look at
+we're going to do c frame.look at
+we're going to do c frame.look at
+because this is the most intuitive C
+because this is the most intuitive C
+because this is the most intuitive C
+frame function I have a video on this if
+frame function I have a video on this if
+frame function I have a video on this if
+you want to check it out
+you want to check it out
+you want to check it out
+I'm going to see frame dot look at eem
+I'm going to see frame dot look at eem
+I'm going to see frame dot look at eem
+origin team origin.position
+origin team origin.position
+origin team origin.position
+and now we're going to look at the
+and now we're going to look at the
+and now we're going to look at the
+position so we're going to start at the
+position so we're going to start at the
+position so we're going to start at the
+origin and we're going to look at the
+origin and we're going to look at the
+origin and we're going to look at the
+position
+position
+position
+offset in such a way and since we're
+offset in such a way and since we're
+offset in such a way and since we're
+doing since we use the pivot offset we
+doing since we use the pivot offset we
+doing since we use the pivot offset we
+don't actually have to offset the pivot
+don't actually have to offset the pivot
+don't actually have to offset the pivot
+do which is really great and now we set
+do which is really great and now we set
+do which is really great and now we set
+beam dot parent equal to the workspace
+beam dot parent equal to the workspace
+beam dot parent equal to the workspace
+and we do we need to delete the beam
+and we do we need to delete the beam
+and we do we need to delete the beam
+after it's in the world for a little bit
+after it's in the world for a little bit
+after it's in the world for a little bit
+for that we're going to use the debris
+for that we're going to use the debris
+for that we're going to use the debris
+service so local debris equals game get
+service so local debris equals game get
+service so local debris equals game get
+service debris
+service debris
+service debris
+and what we can do here is we can say
+and what we can do here is we can say
+and what we can do here is we can say
+debris add item
+debris add item
+debris add item
+beam and it'll despawn after one second
+beam and it'll despawn after one second
+beam and it'll despawn after one second
+so this is basically automatically
+so this is basically automatically
+so this is basically automatically
+delete the beam after a second because
+delete the beam after a second because
+delete the beam after a second because
+we don't want to have infinite beans
+so let's go and test this
+so let's go and test this
+so let's go and test this
+yeah so now we got our beams
+yeah so now we got our beams
+yeah so now we got our beams
+and now you can see when you stun the
+and now you can see when you stun the
+and now you can see when you stun the
+dude you got your nice little
+dude you got your nice little
+dude you got your nice little
+beam can go into space
+beam can go into space
+beam can go into space
+but notice we just kind of fell into the
+but notice we just kind of fell into the
+but notice we just kind of fell into the
+Earth which was not good so we should
+Earth which was not good so we should
+Earth which was not good so we should
+probably use our
+probably use our
+probably use our
+aspers or
+aspers or
+aspers or
+our exclusion
+our exclusion
+our exclusion
+raycast programs in our sphere fast they
+raycast programs in our sphere fast they
+raycast programs in our sphere fast they
+oversight by me we need to actually
+oversight by me we need to actually
+oversight by me we need to actually
+include this fire pass params inside of
+include this fire pass params inside of
+include this fire pass params inside of
+our thing but speaking of the casparams
+our thing but speaking of the casparams
+our thing but speaking of the casparams
+if you'll notice
+if you'll notice
+if you'll notice
+we go back in we get we got our little
+we go back in we get we got our little
+we go back in we get we got our little
+lasers you can shoot against your own
+lasers you can shoot against your own
+lasers you can shoot against your own
+leaders that's kind of stupid the lasers
+leaders that's kind of stupid the lasers
+leaders that's kind of stupid the lasers
+should be independent of each other so
+should be independent of each other so
+should be independent of each other so
+to fix that we're going to go into
+to fix that we're going to go into
+to fix that we're going to go into
+workspace create a new folder all this
+workspace create a new folder all this
+workspace create a new folder all this
+themes
+themes
+themes
+we're gonna go in the server get this
+we're gonna go in the server get this
+we're gonna go in the server get this
+folder we're going to say local
+folder we're going to say local
+folder we're going to say local
+beam folder equals workspace.beams and
+beam folder equals workspace.beams and
+beam folder equals workspace.beams and
+we're going to add this to the exclusion
+we're going to add this to the exclusion
+we're going to add this to the exclusion
+list and our filter is in instances
+list and our filter is in instances
+list and our filter is in instances
+we're going to add this
+we're going to add this
+we're going to add this
+in
+in
+in
+beam folder because we want to ignore
+beam folder because we want to ignore
+beam folder because we want to ignore
+all the other beams and then when we
+all the other beams and then when we
+all the other beams and then when we
+parent the beam we're going to actually
+parent the beam we're going to actually
+parent the beam we're going to actually
+set it to the beam folder parrot as well
+set it to the beam folder parrot as well
+set it to the beam folder parrot as well
+and since we do this on the server we
+and since we do this on the server we
+and since we do this on the server we
+should probably also do it on the client
+should probably also do it on the client
+should probably also do it on the client
+so I just copied the beam folder but in
+so I just copied the beam folder but in
+so I just copied the beam folder but in
+here I'm going to do workspace wait for
+here I'm going to do workspace wait for
+here I'm going to do workspace wait for
+child beams just in case
+child beams just in case
+child beams just in case
+and then we're going to say beam folder
+and then we're going to say beam folder
+and then we're going to say beam folder
+and
+in our Mouse cast params B email folder
+in our Mouse cast params B email folder
+in our Mouse cast params B email folder
+there we go
+there we go
+there we go
+that's good that's good so now we should
+that's good that's good so now we should
+that's good that's good so now we should
+be able to
+be able to
+be able to
+not shoot
+not shoot
+not shoot
+bro
+bro
+bro
+beams
+beams
+beams
+so yeah so they go they go through each
+so yeah so they go they go through each
+so yeah so they go they go through each
+other
+other
+other
+which is cool
+which is cool
+which is cool
+exactly what we want so the beams can
+exactly what we want so the beams can
+exactly what we want so the beams can
+actually do that
+actually do that
+actually do that
+cool
+cool
+cool
+so this can't shoot infinitely and I'm
+so this can't shoot infinitely and I'm
+so this can't shoot infinitely and I'm
+not going to cover debounce in this
+not going to cover debounce in this
+not going to cover debounce in this
+video I already have a video on that so
+video I already have a video on that so
+video I already have a video on that so
+check out that if you want and make sure
+check out that if you want and make sure
+check out that if you want and make sure
+to put it on the server that you can't
+to put it on the server that you can't
+to put it on the server that you can't
+shoot multiple times in a row because
+shoot multiple times in a row because
+shoot multiple times in a row because
+it's bad but at the end of the day this
+it's bad but at the end of the day this
+it's bad but at the end of the day this
+is our stun gun gun
+is our stun gun gun
+is our stun gun gun
+I knew this video was a little long and
+I knew this video was a little long and
+I knew this video was a little long and
+I was going a little fast but I hope I
+I was going a little fast but I hope I
+I was going a little fast but I hope I
+was able to explain everything because
+was able to explain everything because
+was able to explain everything because
+sphere casting is really cool I've been
+sphere casting is really cool I've been
+sphere casting is really cool I've been
+looking for something like this
+looking for something like this
+looking for something like this
+for a long time because this allows you
+for a long time because this allows you
+for a long time because this allows you
+to cover more area on your raycasts a
+to cover more area on your raycasts a
+to cover more area on your raycasts a
+little thick raycast and
+little thick raycast and
+little thick raycast and
+it's super useful for stuff like this
+it's super useful for stuff like this
+it's super useful for stuff like this
+because
+because
+because
+I guess maybe I need to demonstrate it a
+I guess maybe I need to demonstrate it a
+I guess maybe I need to demonstrate it a
+little better because if I go back in
+little better because if I go back in
+little better because if I go back in
+and I'm like looking at my zombie and I
+and I'm like looking at my zombie and I
+and I'm like looking at my zombie and I
+kind of shoot to the side
+kind of shoot to the side
+kind of shoot to the side
+I still hit him I don't have to like
+I still hit him I don't have to like
+I still hit him I don't have to like
+pinpoint accuracy click him
+pinpoint accuracy click him
+pinpoint accuracy click him
+which is really really cool
+which is really really cool
+which is really really cool
+but yeah I hope you enjoyed this video
+but yeah I hope you enjoyed this video
+but yeah I hope you enjoyed this video
+make sure to let me know what other
+make sure to let me know what other
+make sure to let me know what other
+things you want to see with sphere cast
+things you want to see with sphere cast
+things you want to see with sphere cast
+and block cast because they have a lot
+and block cast because they have a lot
+and block cast because they have a lot
+of potential let me know if you have any
+of potential let me know if you have any
+of potential let me know if you have any
+questions suggestions whatever
+questions suggestions whatever
+questions suggestions whatever
+and I hope you enjoyed
+and I hope you enjoyed
+and I hope you enjoyed
+so
+so
+so
+when I stay and goodbye
+when I stay and goodbye
+when I stay and goodbye
+[Music]

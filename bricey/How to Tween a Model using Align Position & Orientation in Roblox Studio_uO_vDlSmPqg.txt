@@ -1,0 +1,1070 @@
+so in this video i'll be teaching you
+so in this video i'll be teaching you
+so in this video i'll be teaching you
+how to use
+how to use
+how to use
+an align position and line orientation
+an align position and line orientation
+an align position and line orientation
+constraint in roblox studio
+constraint in roblox studio
+constraint in roblox studio
+to tween your models so i'll start by
+to tween your models so i'll start by
+to tween your models so i'll start by
+going over the basics of each of these
+going over the basics of each of these
+going over the basics of each of these
+constraints
+constraints
+constraints
+and then i'll combine them with the help
+and then i'll combine them with the help
+and then i'll combine them with the help
+of a little script
+of a little script
+of a little script
+to get this nice little animation of
+to get this nice little animation of
+to get this nice little animation of
+this cool rotating elevator that you see
+this cool rotating elevator that you see
+this cool rotating elevator that you see
+right here so if you're interested in
+right here so if you're interested in
+right here so if you're interested in
+that make sure to watch the video
+that make sure to watch the video
+that make sure to watch the video
+and like and subscribe if you enjoyed it
+and like and subscribe if you enjoyed it
+and like and subscribe if you enjoyed it
+and make sure to comment down below
+and make sure to comment down below
+and make sure to comment down below
+also join my discord link is in the
+also join my discord link is in the
+also join my discord link is in the
+description
+description
+description
+where this is my server where we can
+where this is my server where we can
+where this is my server where we can
+just talk we have some developer
+just talk we have some developer
+just talk we have some developer
+discussions
+discussions
+discussions
+and you can post your cool creations
+and you can post your cool creations
+and you can post your cool creations
+there as well so without further ado
+there as well so without further ado
+there as well so without further ado
+let's get into the video
+so a line position and a line
+so a line position and a line
+so a line position and a line
+orientation
+orientation
+orientation
+are forces are like a constraint and
+are forces are like a constraint and
+are forces are like a constraint and
+roblox
+roblox
+roblox
+you can find them by going to model and
+you can find them by going to model and
+you can find them by going to model and
+create
+create
+create
+they're down here and they do exactly
+they're down here and they do exactly
+they're down here and they do exactly
+what they tell you
+what they tell you
+what they tell you
+they do so i'm going to start by
+they do so i'm going to start by
+they do so i'm going to start by
+creating a part
+creating a part
+creating a part
+here's our part i'm just going to
+here's our part i'm just going to
+here's our part i'm just going to
+duplicate this part
+duplicate this part
+duplicate this part
+with ctrl d and here is another
+with ctrl d and here is another
+with ctrl d and here is another
+part so we have two parts here now we
+part so we have two parts here now we
+part so we have two parts here now we
+can go
+can go
+can go
+to model create then go to align
+to model create then go to align
+to model create then go to align
+position
+position
+position
+doesn't really matter where you click
+doesn't really matter where you click
+doesn't really matter where you click
+this is just for demonstration purposes
+this is just for demonstration purposes
+this is just for demonstration purposes
+so you want to click on one of the parts
+so you want to click on one of the parts
+so you want to click on one of the parts
+once
+once
+once
+and then click on another part once
+and then click on another part once
+and then click on another part once
+and you can see it draws out this line
+and you can see it draws out this line
+and you can see it draws out this line
+by the way if you can't see this go to
+by the way if you can't see this go to
+by the way if you can't see this go to
+model
+model
+model
+then constraint details and then also
+then constraint details and then also
+then constraint details and then also
+optionally draw on top i like to keep
+optionally draw on top i like to keep
+optionally draw on top i like to keep
+that on it just makes it a little bit
+that on it just makes it a little bit
+that on it just makes it a little bit
+easier
+easier
+easier
+and this gives you some information so
+and this gives you some information so
+and this gives you some information so
+you can see this arrow
+you can see this arrow
+you can see this arrow
+it's showing that this part will be
+it's showing that this part will be
+it's showing that this part will be
+attracted to this part so
+attracted to this part so
+attracted to this part so
+if we run this like this without looking
+if we run this like this without looking
+if we run this like this without looking
+at any of the properties you can see
+at any of the properties you can see
+at any of the properties you can see
+that it's attracted and the reason
+that it's attracted and the reason
+that it's attracted and the reason
+it goes infinitely is because the
+it goes infinitely is because the
+it goes infinitely is because the
+reaction force is not enabled
+reaction force is not enabled
+reaction force is not enabled
+and this is a property so you go into
+and this is a property so you go into
+and this is a property so you go into
+the explorer go to
+the explorer go to
+the explorer go to
+part and the align position if you
+part and the align position if you
+part and the align position if you
+enable the reaction force you can see
+enable the reaction force you can see
+enable the reaction force you can see
+there's two arrows so they'll be
+there's two arrows so they'll be
+there's two arrows so they'll be
+pulling towards each other and then this
+pulling towards each other and then this
+pulling towards each other and then this
+is sort of like a magnet
+is sort of like a magnet
+is sort of like a magnet
+and they'll keep on trying to go towards
+and they'll keep on trying to go towards
+and they'll keep on trying to go towards
+each other until the attachments
+each other until the attachments
+each other until the attachments
+meet and this could be cool on its own
+meet and this could be cool on its own
+meet and this could be cool on its own
+there's also
+there's also
+there's also
+another property applied center of mass
+another property applied center of mass
+another property applied center of mass
+which basically makes it
+which basically makes it
+which basically makes it
+not so the attachment which is still
+not so the attachment which is still
+not so the attachment which is still
+like the center of the parts meet which
+like the center of the parts meet which
+like the center of the parts meet which
+is that's pretty cool as well
+is that's pretty cool as well
+is that's pretty cool as well
+and you have a few properties like match
+and you have a few properties like match
+and you have a few properties like match
+force max velocity and responsiveness
+force max velocity and responsiveness
+force max velocity and responsiveness
+those are all pretty self-explanatory in
+those are all pretty self-explanatory in
+those are all pretty self-explanatory in
+the documentation
+the documentation
+the documentation
+on align positions is very good so you
+on align positions is very good so you
+on align positions is very good so you
+can check that out as well
+can check that out as well
+can check that out as well
+but the one of the coolest features is
+but the one of the coolest features is
+but the one of the coolest features is
+this is also what body positions don't
+this is also what body positions don't
+this is also what body positions don't
+have this is why
+have this is why
+have this is why
+a line position in certain cases is
+a line position in certain cases is
+a line position in certain cases is
+better than a body position
+better than a body position
+better than a body position
+and that's rigidy enabled rigidity
+and that's rigidy enabled rigidity
+and that's rigidy enabled rigidity
+enabled my bad
+enabled my bad
+enabled my bad
+so you can see as it turns the line into
+so you can see as it turns the line into
+so you can see as it turns the line into
+red and it says
+red and it says
+red and it says
+the attachments are not at the same
+the attachments are not at the same
+the attachments are not at the same
+location and this
+location and this
+location and this
+forces the attachment it uses as much
+forces the attachment it uses as much
+forces the attachment it uses as much
+force as possible to get them into the
+force as possible to get them into the
+force as possible to get them into the
+exact
+exact
+exact
+location where they should be and when
+location where they should be and when
+location where they should be and when
+you're using this
+you're using this
+you're using this
+it's best practice to make one of the
+it's best practice to make one of the
+it's best practice to make one of the
+parts
+parts
+parts
+like non-collidable i think and i'm also
+like non-collidable i think and i'm also
+like non-collidable i think and i'm also
+just going to anchor it for the purposes
+just going to anchor it for the purposes
+just going to anchor it for the purposes
+of this
+of this
+of this
+and we're going to make it
+and we're going to make it
+and we're going to make it
+semi-transparent so
+semi-transparent so
+semi-transparent so
+it when we play this you can see
+it when we play this you can see
+it when we play this you can see
+oh wait it's on the wrong part let me
+oh wait it's on the wrong part let me
+oh wait it's on the wrong part let me
+fix that so let me change the
+fix that so let me change the
+fix that so let me change the
+transparency back
+transparency back
+transparency back
+there we go unaccurate because i did it
+there we go unaccurate because i did it
+there we go unaccurate because i did it
+on the wrong part
+on the wrong part
+on the wrong part
+this is the like destination part since
+this is the like destination part since
+this is the like destination part since
+reaction force is not enabled
+reaction force is not enabled
+reaction force is not enabled
+that's my bad but we can change we can
+that's my bad but we can change we can
+that's my bad but we can change we can
+change it to be anchored and can collide
+change it to be anchored and can collide
+change it to be anchored and can collide
+off and you can see
+off and you can see
+off and you can see
+this part will snap to exactly where we
+this part will snap to exactly where we
+this part will snap to exactly where we
+want to snap and to make this even
+want to snap and to make this even
+want to snap and to make this even
+better
+better
+better
+we could turn apply its center of mass
+we could turn apply its center of mass
+we could turn apply its center of mass
+to true
+to true
+to true
+so this has some interesting income
+so this has some interesting income
+so this has some interesting income
+implications and that's basically
+implications and that's basically
+implications and that's basically
+these parts this part will snap to the
+these parts this part will snap to the
+these parts this part will snap to the
+exact location of this
+exact location of this
+exact location of this
+and since the aligned positions
+and since the aligned positions
+and since the aligned positions
+are physics based if we were to spawn in
+are physics based if we were to spawn in
+are physics based if we were to spawn in
+another part
+another part
+another part
+and then we can create a weld and weld
+and then we can create a weld and weld
+and then we can create a weld and weld
+it to this part
+it to this part
+it to this part
+if we run this the same thing happens
+if we run this the same thing happens
+if we run this the same thing happens
+with two parts so this will allow you to
+with two parts so this will allow you to
+with two parts so this will allow you to
+animate or tween models and this is
+animate or tween models and this is
+animate or tween models and this is
+obviously a different way than
+obviously a different way than
+obviously a different way than
+how i did it in like one of my very
+how i did it in like one of my very
+how i did it in like one of my very
+first videos where i use like
+first videos where i use like
+first videos where i use like
+moto 60 but this is a pretty cool
+moto 60 but this is a pretty cool
+moto 60 but this is a pretty cool
+feature but
+feature but
+feature but
+we're not done yet because now we need
+we're not done yet because now we need
+we're not done yet because now we need
+to align the orientation
+to align the orientation
+to align the orientation
+and also before we do that you might
+and also before we do that you might
+and also before we do that you might
+have noticed the attachments
+have noticed the attachments
+have noticed the attachments
+are not really centered so make sure to
+are not really centered so make sure to
+are not really centered so make sure to
+change the position to
+change the position to
+change the position to
+zero zero zero so they're centered in
+zero zero zero so they're centered in
+zero zero zero so they're centered in
+the parts
+the parts
+the parts
+that makes it better and makes it good
+that makes it better and makes it good
+that makes it better and makes it good
+for the future but for your models you
+for the future but for your models you
+for the future but for your models you
+can change it to whatever you want
+can change it to whatever you want
+can change it to whatever you want
+i'm just gonna put it to zero so they
+i'm just gonna put it to zero so they
+i'm just gonna put it to zero so they
+snap
+snap
+snap
+to exactly where they're supposed to
+to exactly where they're supposed to
+to exactly where they're supposed to
+snap
+snap
+snap
+and there we go so now we can create our
+and there we go so now we can create our
+and there we go so now we can create our
+align position so let's go to model
+align position so let's go to model
+align position so let's go to model
+create align position but before you
+create align position but before you
+create align position but before you
+create it make sure to
+create it make sure to
+create it make sure to
+select your attachment and what this
+select your attachment and what this
+select your attachment and what this
+will do
+will do
+will do
+is here's our align position it sets the
+is here's our align position it sets the
+is here's our align position it sets the
+attachment of our line position
+attachment of our line position
+attachment of our line position
+to the attachment of our line
+to the attachment of our line
+to the attachment of our line
+orientation
+orientation
+orientation
+and if you hover you're gonna have to
+and if you hover you're gonna have to
+and if you hover you're gonna have to
+have draw on top for this to work
+have draw on top for this to work
+have draw on top for this to work
+and if you hover over this part right
+and if you hover over this part right
+and if you hover over this part right
+here then you can
+here then you can
+here then you can
+select it there we go so you can see the
+select it there we go so you can see the
+select it there we go so you can see the
+line orientation has the same
+line orientation has the same
+line orientation has the same
+attachment zero and attachment one as
+attachment zero and attachment one as
+attachment zero and attachment one as
+our aligned position
+our aligned position
+our aligned position
+and this works out pretty well because
+and this works out pretty well because
+and this works out pretty well because
+it just keeps your workspace
+it just keeps your workspace
+it just keeps your workspace
+less cluttered and it's a lot more
+less cluttered and it's a lot more
+less cluttered and it's a lot more
+elegant when you like move the
+elegant when you like move the
+elegant when you like move the
+attachments around
+attachments around
+attachments around
+so in regards to the line position and
+so in regards to the line position and
+so in regards to the line position and
+its properties
+its properties
+its properties
+it's pretty basic the only real
+it's pretty basic the only real
+it's pretty basic the only real
+difference between this and a line
+difference between this and a line
+difference between this and a line
+position is a primary axis only property
+position is a primary axis only property
+position is a primary axis only property
+that basically just says the primary
+that basically just says the primary
+that basically just says the primary
+axis
+axis
+axis
+or should it like apply rotation to only
+or should it like apply rotation to only
+or should it like apply rotation to only
+the primary axis of the attachment which
+the primary axis of the attachment which
+the primary axis of the attachment which
+is the yellow
+is the yellow
+is the yellow
+arrow so in this case the yellow arrow
+arrow so in this case the yellow arrow
+arrow so in this case the yellow arrow
+is pointing upwards
+is pointing upwards
+is pointing upwards
+which is the y-axis so it would only
+which is the y-axis so it would only
+which is the y-axis so it would only
+apply rotational torque on the y-axis
+apply rotational torque on the y-axis
+apply rotational torque on the y-axis
+but
+but
+but
+i rarely ever use that it doesn't really
+i rarely ever use that it doesn't really
+i rarely ever use that it doesn't really
+matter
+matter
+matter
+so and i just leave the rest
+so and i just leave the rest
+so and i just leave the rest
+how it is but we want to turn rigidity
+how it is but we want to turn rigidity
+how it is but we want to turn rigidity
+rigidity enabled
+rigidity enabled
+rigidity enabled
+on and this will make it snap to where
+on and this will make it snap to where
+on and this will make it snap to where
+it's going so if we press play
+it's going so if we press play
+it's going so if we press play
+you can see it snaps exactly to where
+you can see it snaps exactly to where
+you can see it snaps exactly to where
+it's supposed to go
+it's supposed to go
+it's supposed to go
+and the reason these are kind of offset
+and the reason these are kind of offset
+and the reason these are kind of offset
+the attachments is because
+the attachments is because
+the attachments is because
+the apply at center of mass is true for
+the apply at center of mass is true for
+the apply at center of mass is true for
+our aligned position
+our aligned position
+our aligned position
+and this allows you to have full control
+and this allows you to have full control
+and this allows you to have full control
+over this assembly or model
+over this assembly or model
+over this assembly or model
+with this singular part and you know
+with this singular part and you know
+with this singular part and you know
+what you can do with parts
+what you can do with parts
+what you can do with parts
+you can tween parts so i'm going to
+you can tween parts so i'm going to
+you can tween parts so i'm going to
+select all of these
+select all of these
+select all of these
+and use ctrl g to create a model
+and use ctrl g to create a model
+and use ctrl g to create a model
+and i'm just going to leave the model
+and i'm just going to leave the model
+and i'm just going to leave the model
+name how it is and then i'm going to
+name how it is and then i'm going to
+name how it is and then i'm going to
+select this part
+select this part
+select this part
+per tip you can hold alt to select
+per tip you can hold alt to select
+per tip you can hold alt to select
+a part inside of a model and you can
+a part inside of a model and you can
+a part inside of a model and you can
+click
+click
+click
+and then we can set this and we can
+and then we can set this and we can
+and then we can set this and we can
+rename this to
+rename this to
+rename this to
+our reference this is just for our
+our reference this is just for our
+our reference this is just for our
+script that we're about to make
+script that we're about to make
+script that we're about to make
+so here we have our reference part now
+so here we have our reference part now
+so here we have our reference part now
+we can go into model
+we can go into model
+we can go into model
+click the plus arrow create a script
+click the plus arrow create a script
+click the plus arrow create a script
+zoom in a little bit and we're going to
+zoom in a little bit and we're going to
+zoom in a little bit and we're going to
+define our model which is equal to
+define our model which is equal to
+define our model which is equal to
+script dot parent then we're going to
+script dot parent then we're going to
+script dot parent then we're going to
+find our
+find our
+find our
+reference which is equal to model dot
+reference which is equal to model dot
+reference which is equal to model dot
+reference
+reference
+reference
+and this is all the references you need
+and this is all the references you need
+and this is all the references you need
+and all you have to do now is
+and all you have to do now is
+and all you have to do now is
+tween our reference and the only tweens
+tween our reference and the only tweens
+tween our reference and the only tweens
+that will get applied
+that will get applied
+that will get applied
+are the position orientation and
+are the position orientation and
+are the position orientation and
+c frame properties so you keep that in
+c frame properties so you keep that in
+c frame properties so you keep that in
+mind but we're going to define our tween
+mind but we're going to define our tween
+mind but we're going to define our tween
+servers we can be local
+servers we can be local
+servers we can be local
+between service equals game
+between service equals game
+between service equals game
+get service
+between service there we go and now
+between service there we go and now
+between service there we go and now
+we're going to
+we're going to
+we're going to
+define our tween info
+define our tween info
+define our tween info
+which will be equal to tween info dot
+which will be equal to tween info dot
+which will be equal to tween info dot
+new
+new
+new
+two seconds easing style of enum dot
+two seconds easing style of enum dot
+two seconds easing style of enum dot
+easing style dot quad let's say it
+easing style dot quad let's say it
+easing style dot quad let's say it
+doesn't really matter
+doesn't really matter
+doesn't really matter
+enum dot easing direction dot and out
+enum dot easing direction dot and out
+enum dot easing direction dot and out
+repeat counts negative one so it goes
+repeat counts negative one so it goes
+repeat counts negative one so it goes
+infinitely reverses will be true and
+infinitely reverses will be true and
+infinitely reverses will be true and
+delay time will be
+delay time will be
+delay time will be
+0.5 let's say and we want to define our
+0.5 let's say and we want to define our
+0.5 let's say and we want to define our
+properties so i'm going to start out
+properties so i'm going to start out
+properties so i'm going to start out
+by saying properties equals position and
+by saying properties equals position and
+by saying properties equals position and
+we're going to set the position to
+we're going to set the position to
+we're going to set the position to
+our reference stop position plus vector
+our reference stop position plus vector
+our reference stop position plus vector
+3 dot new
+3 dot new
+3 dot new
+0 10 0. so let's basically put our part
+0 10 0. so let's basically put our part
+0 10 0. so let's basically put our part
+ten studs above the reference when the
+ten studs above the reference when the
+ten studs above the reference when the
+tween is finished so now let's do
+tween is finished so now let's do
+tween is finished so now let's do
+local twin equals tween service
+local twin equals tween service
+local twin equals tween service
+create we're gonna send in our reference
+create we're gonna send in our reference
+create we're gonna send in our reference
+because that's the part we want between
+because that's the part we want between
+because that's the part we want between
+we're gonna send in our tween info and
+we're gonna send in our tween info and
+we're gonna send in our tween info and
+then
+then
+then
+our properties and then of course we
+our properties and then of course we
+our properties and then of course we
+have to say tween
+have to say tween
+have to say tween
+play and if you don't know how tweens
+play and if you don't know how tweens
+play and if you don't know how tweens
+work i have a video on that
+work i have a video on that
+work i have a video on that
+specifically towards just tweening parts
+specifically towards just tweening parts
+specifically towards just tweening parts
+and gooeys so make sure to check that
+and gooeys so make sure to check that
+and gooeys so make sure to check that
+out
+out
+out
+so if we were to run this you can see
+so if we were to run this you can see
+so if we were to run this you can see
+the part moves up and down according to
+the part moves up and down according to
+the part moves up and down according to
+the references starting position
+the references starting position
+the references starting position
+which is great but since we're dealing
+which is great but since we're dealing
+which is great but since we're dealing
+with parts
+with parts
+with parts
+and since we're dealing with tweens we
+and since we're dealing with tweens we
+and since we're dealing with tweens we
+can also change the c
+can also change the c
+can also change the c
+frame which allows you to change the
+frame which allows you to change the
+frame which allows you to change the
+position and orientation simultaneously
+position and orientation simultaneously
+position and orientation simultaneously
+which is really good so let's set our c
+which is really good so let's set our c
+which is really good so let's set our c
+frame equal
+frame equal
+frame equal
+and don't worry that the c frame is
+and don't worry that the c frame is
+and don't worry that the c frame is
+highlighted in blue as long as you don't
+highlighted in blue as long as you don't
+highlighted in blue as long as you don't
+call any functions on it
+call any functions on it
+call any functions on it
+it should not like mess up your script
+it should not like mess up your script
+it should not like mess up your script
+so just keep that in mind
+so just keep that in mind
+so just keep that in mind
+so we're going to set our c frame equal
+so we're going to set our c frame equal
+so we're going to set our c frame equal
+to
+to
+to
+a new c frame actually we're going to
+a new c frame actually we're going to
+a new c frame actually we're going to
+take our reference
+take our reference
+take our reference
+dot c frame and then we're going to
+dot c frame and then we're going to
+dot c frame and then we're going to
+add our vector 3 and we're first going
+add our vector 3 and we're first going
+add our vector 3 and we're first going
+to multiply it by
+to multiply it by
+to multiply it by
+c frame dot angles and let's just say we
+c frame dot angles and let's just say we
+c frame dot angles and let's just say we
+want to rotate it in 90 degrees
+want to rotate it in 90 degrees
+want to rotate it in 90 degrees
+i'm going to say symbolic angles 0
+i'm going to say symbolic angles 0
+i'm going to say symbolic angles 0
+90 and then
+90 and then
+90 and then
+0 and then we're going to add
+0 and then we're going to add
+0 and then we're going to add
+a vector 3.0 0 10 0.
+a vector 3.0 0 10 0.
+a vector 3.0 0 10 0.
+so this is basically it seems pretty
+so this is basically it seems pretty
+so this is basically it seems pretty
+complex but all we're doing is taking
+complex but all we're doing is taking
+complex but all we're doing is taking
+our c
+our c
+our c
+frame rotating it by 90 degrees that's
+frame rotating it by 90 degrees that's
+frame rotating it by 90 degrees that's
+really all you need to know about c
+really all you need to know about c
+really all you need to know about c
+frame dot angles if you want to learn
+frame dot angles if you want to learn
+frame dot angles if you want to learn
+more i touched on it a little more in
+more i touched on it a little more in
+more i touched on it a little more in
+depth in my last video so you can make
+depth in my last video so you can make
+depth in my last video so you can make
+sure to check that out
+sure to check that out
+sure to check that out
+and then we're adding our vector so this
+and then we're adding our vector so this
+and then we're adding our vector so this
+adds position to our c frame
+adds position to our c frame
+adds position to our c frame
+so if we were to play this
+so if we were to play this
+so if we were to play this
+you can see a locks in place rotates 90
+you can see a locks in place rotates 90
+you can see a locks in place rotates 90
+degrees as it goes up
+degrees as it goes up
+degrees as it goes up
+which is really nice and i can also test
+which is really nice and i can also test
+which is really nice and i can also test
+this out with my player
+so if i hop on you can see i get brought
+so if i hop on you can see i get brought
+so if i hop on you can see i get brought
+up
+up
+up
+and it spins and it's kind of janky but
+and it spins and it's kind of janky but
+and it spins and it's kind of janky but
+really it should not matter
+really it should not matter
+really it should not matter
+and also if you really wanted to you
+and also if you really wanted to you
+and also if you really wanted to you
+could simulate this on the client
+could simulate this on the client
+could simulate this on the client
+which might be a little bit better so
+which might be a little bit better so
+which might be a little bit better so
+that's about it for this video i hope
+that's about it for this video i hope
+that's about it for this video i hope
+you guys
+you guys
+you guys
+enjoyed this is a really good
+enjoyed this is a really good
+enjoyed this is a really good
+little system that you can use to
+little system that you can use to
+little system that you can use to
+animate your models and tween your
+animate your models and tween your
+animate your models and tween your
+models
+models
+models
+and it's a lot more beginner friendly
+and it's a lot more beginner friendly
+and it's a lot more beginner friendly
+than my other
+than my other
+than my other
+version that i made a few months ago but
+version that i made a few months ago but
+version that i made a few months ago but
+this one does not work as well when it
+this one does not work as well when it
+this one does not work as well when it
+comes to
+comes to
+comes to
+like the jitteriness and it's probably
+like the jitteriness and it's probably
+like the jitteriness and it's probably
+less performant that's just a guess
+less performant that's just a guess
+less performant that's just a guess
+if you know of any more more like
+if you know of any more more like
+if you know of any more more like
+definite tests
+definite tests
+definite tests
+then make sure to let me know down in
+then make sure to let me know down in
+then make sure to let me know down in
+the comments but it works out fine
+the comments but it works out fine
+the comments but it works out fine
+it's very very intuitive because you're
+it's very very intuitive because you're
+it's very very intuitive because you're
+using two
+using two
+using two
+constraints aligned position and a line
+constraints aligned position and a line
+constraints aligned position and a line
+orientation
+orientation
+orientation
+which align your position and align your
+which align your position and align your
+which align your position and align your
+orientation and those constraints can be
+orientation and those constraints can be
+orientation and those constraints can be
+used for whatever else you want so i
+used for whatever else you want so i
+used for whatever else you want so i
+hope you i hope i taught you a little
+hope you i hope i taught you a little
+hope you i hope i taught you a little
+bit about that
+bit about that
+bit about that
+but make sure to like and subscribe if
+but make sure to like and subscribe if
+but make sure to like and subscribe if
+you enjoyed this video
+you enjoyed this video
+you enjoyed this video
+comment any questions or suggestions
+comment any questions or suggestions
+comment any questions or suggestions
+down below
+down below
+down below
+but other than that i hope you have a
+but other than that i hope you have a
+but other than that i hope you have a
+nice day and goodbye
+[Music]
+[Music]
+[Music]
+you

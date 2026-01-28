@@ -1,0 +1,1711 @@
+buttons or pads or whatever you want to
+buttons or pads or whatever you want to
+buttons or pads or whatever you want to
+call them
+call them
+call them
+are the foundation of any good tycoon in
+are the foundation of any good tycoon in
+are the foundation of any good tycoon in
+this video i'll show you how to
+this video i'll show you how to
+this video i'll show you how to
+implement
+implement
+implement
+this nice sleek looking button that you
+this nice sleek looking button that you
+this nice sleek looking button that you
+can unlock
+can unlock
+can unlock
+with a nice animation and unlock
+with a nice animation and unlock
+with a nice animation and unlock
+whatever you want
+whatever you want
+whatever you want
+and it'll also make sure that you have
+and it'll also make sure that you have
+and it'll also make sure that you have
+enough money to pay for it
+enough money to pay for it
+enough money to pay for it
+and we'll also be setting up the money
+and we'll also be setting up the money
+and we'll also be setting up the money
+system and all of that in this video as
+system and all of that in this video as
+system and all of that in this video as
+well
+well
+well
+so make sure to watch the previous
+so make sure to watch the previous
+so make sure to watch the previous
+tycoon video to get caught up on the
+tycoon video to get caught up on the
+tycoon video to get caught up on the
+progress we've made and
+progress we've made and
+progress we've made and
+like the video if you enjoy it subscribe
+like the video if you enjoy it subscribe
+like the video if you enjoy it subscribe
+to my channel to stay up to date with
+to my channel to stay up to date with
+to my channel to stay up to date with
+the tycoon series
+the tycoon series
+the tycoon series
+but without further ado let's get
+but without further ado let's get
+but without further ado let's get
+started
+so our button is a component and so
+so our button is a component and so
+so our button is a component and so
+it'll be implemented like our other
+it'll be implemented like our other
+it'll be implemented like our other
+components we've made so far
+components we've made so far
+components we've made so far
+so let's take our template drag it into
+so let's take our template drag it into
+so let's take our template drag it into
+the workspace
+the workspace
+the workspace
+and let's make a new part so i'm going
+and let's make a new part so i'm going
+and let's make a new part so i'm going
+to create a new part
+to create a new part
+to create a new part
+it's a nice red that's exactly what i
+it's a nice red that's exactly what i
+it's a nice red that's exactly what i
+want
+want
+want
+and i'm going to i'm just going to
+and i'm going to i'm just going to
+and i'm going to i'm just going to
+change my ratio real quick make it a
+change my ratio real quick make it a
+change my ratio real quick make it a
+little smaller
+little smaller
+little smaller
+a little bigger and then maybe just
+a little bigger and then maybe just
+a little bigger and then maybe just
+change it
+change it
+change it
+to like a three by three there we go
+to like a three by three there we go
+to like a three by three there we go
+that's a nice
+that's a nice
+that's a nice
+looking button so now i'm going to
+looking button so now i'm going to
+looking button so now i'm going to
+rename this part to button
+then drag the button into our template
+then drag the button into our template
+then drag the button into our template
+and now we need to tag it because all
+and now we need to tag it because all
+and now we need to tag it because all
+components need to have a tag
+components need to have a tag
+components need to have a tag
+so i'm going to go to my tag editor if
+so i'm going to go to my tag editor if
+so i'm going to go to my tag editor if
+it's not open for you go to
+it's not open for you go to
+it's not open for you go to
+plugins and then tag window and i'm
+plugins and then tag window and i'm
+plugins and then tag window and i'm
+going to add a new tag
+going to add a new tag
+going to add a new tag
+called button i'm going to make sure
+called button i'm going to make sure
+called button i'm going to make sure
+this part selected and then click on
+this part selected and then click on
+this part selected and then click on
+button
+button
+button
+and for right now it'll only have the
+and for right now it'll only have the
+and for right now it'll only have the
+button component but down the line
+button component but down the line
+button component but down the line
+you'll have buttons that will also be
+you'll have buttons that will also be
+you'll have buttons that will also be
+unlockable
+unlockable
+unlockable
+because you'll unlock a button you'll
+because you'll unlock a button you'll
+because you'll unlock a button you'll
+buy a button
+buy a button
+buy a button
+and then it'll unlock other buttons
+and then it'll unlock other buttons
+and then it'll unlock other buttons
+which will unlock other things
+which will unlock other things
+which will unlock other things
+so it's just like a chain reaction but
+so it's just like a chain reaction but
+so it's just like a chain reaction but
+initially you want some buttons that
+initially you want some buttons that
+initially you want some buttons that
+can just be unlocked from the get-go and
+can just be unlocked from the get-go and
+can just be unlocked from the get-go and
+that's what this one will be
+that's what this one will be
+that's what this one will be
+so we can take it and drag our template
+so we can take it and drag our template
+so we can take it and drag our template
+back into server storage
+back into server storage
+back into server storage
+now we can start scripting first thing
+now we can start scripting first thing
+now we can start scripting first thing
+i'm going to do is go back to our tycoon
+i'm going to do is go back to our tycoon
+i'm going to do is go back to our tycoon
+and go down to this these two lines down
+and go down to this these two lines down
+and go down to this these two lines down
+here that we added in the last video
+here that we added in the last video
+here that we added in the last video
+this was just a test and before i forget
+this was just a test and before i forget
+this was just a test and before i forget
+i want to get rid of it
+i want to get rid of it
+i want to get rid of it
+just so we don't have any unintended
+just so we don't have any unintended
+just so we don't have any unintended
+behavior happening
+behavior happening
+behavior happening
+so now let's go into our components
+so now let's go into our components
+so now let's go into our components
+create a new component or new module
+create a new component or new module
+create a new component or new module
+script
+script
+script
+and i'm going to name this module script
+and i'm going to name this module script
+and i'm going to name this module script
+button
+button
+button
+and then you know the drill by now we're
+and then you know the drill by now we're
+and then you know the drill by now we're
+going to rename
+going to rename
+going to rename
+the module to button then do button dot
+the module to button then do button dot
+the module to button then do button dot
+underscore underscore index as our meta
+underscore underscore index as our meta
+underscore underscore index as our meta
+method
+method
+method
+and a function button.new which will
+and a function button.new which will
+and a function button.new which will
+take in the tycoon and the part
+take in the tycoon and the part
+take in the tycoon and the part
+that it's attached to
+and then we need to make another
+and then we need to make another
+and then we need to make another
+function
+function
+function
+button init and this will be our
+button init and this will be our
+button init and this will be our
+initialization
+initialization
+initialization
+and let's go back up to our dot new
+and let's go back up to our dot new
+and let's go back up to our dot new
+and say local self equal set meta table
+and say local self equal set meta table
+and say local self equal set meta table
+blank table and then button
+blank table and then button
+blank table and then button
+and then return self don't forget that
+and then return self don't forget that
+and then return self don't forget that
+and we we're going to use our tycoon and
+and we we're going to use our tycoon and
+and we we're going to use our tycoon and
+our instance later so i'm going to say
+our instance later so i'm going to say
+our instance later so i'm going to say
+self.tycoon
+self.tycoon
+self.tycoon
+equals tycoon and then self.instance
+equals tycoon and then self.instance
+equals tycoon and then self.instance
+equals part
+equals part
+equals part
+there we go so this is just a basic
+there we go so this is just a basic
+there we go so this is just a basic
+setup i glazed through this pretty
+setup i glazed through this pretty
+setup i glazed through this pretty
+quickly that's because in the previous
+quickly that's because in the previous
+quickly that's because in the previous
+few videos
+few videos
+few videos
+i went more in depth so now in our init
+i went more in depth so now in our init
+i went more in depth so now in our init
+we need to do a few things so for our
+we need to do a few things so for our
+we need to do a few things so for our
+button i
+button i
+button i
+want to use a proximity prompt and the
+want to use a proximity prompt and the
+want to use a proximity prompt and the
+benefit of using a proximity prompt is
+benefit of using a proximity prompt is
+benefit of using a proximity prompt is
+that it's simple it's uniform with the
+that it's simple it's uniform with the
+that it's simple it's uniform with the
+rest of roblox
+rest of roblox
+rest of roblox
+and it looks a lot sleeker and more
+and it looks a lot sleeker and more
+and it looks a lot sleeker and more
+professional than just using a touched
+professional than just using a touched
+professional than just using a touched
+event because
+event because
+event because
+traditional tycoons you stepped on a
+traditional tycoons you stepped on a
+traditional tycoons you stepped on a
+button you touched it with your player
+button you touched it with your player
+button you touched it with your player
+character and unlock things
+character and unlock things
+character and unlock things
+but first of all you could do you could
+but first of all you could do you could
+but first of all you could do you could
+accidentally step on something by
+accidentally step on something by
+accidentally step on something by
+accident
+accident
+accident
+and it just doesn't look that good but a
+and it just doesn't look that good but a
+and it just doesn't look that good but a
+proximity prompt has a nice little gui
+proximity prompt has a nice little gui
+proximity prompt has a nice little gui
+that pops up and you can see
+that pops up and you can see
+that pops up and you can see
+when stuff happens and that's what we're
+when stuff happens and that's what we're
+when stuff happens and that's what we're
+going to be using
+going to be using
+going to be using
+so i'm going to create a function called
+so i'm going to create a function called
+so i'm going to create a function called
+button
+button
+button
+create prompt now really the better way
+create prompt now really the better way
+create prompt now really the better way
+to do this
+to do this
+to do this
+is to create a proximity prop customize
+is to create a proximity prop customize
+is to create a proximity prop customize
+it to your liking then put it in server
+it to your liking then put it in server
+it to your liking then put it in server
+storage
+storage
+storage
+but for simplicity i'm just going to
+but for simplicity i'm just going to
+but for simplicity i'm just going to
+create a new one from scratch every time
+create a new one from scratch every time
+create a new one from scratch every time
+and then we'll do that by saying local
+and then we'll do that by saying local
+and then we'll do that by saying local
+prompt equals instance
+prompt equals instance
+prompt equals instance
+if i can split it right instance dot new
+if i can split it right instance dot new
+if i can split it right instance dot new
+proximity prompt there we go and then i
+proximity prompt there we go and then i
+proximity prompt there we go and then i
+can say
+can say
+can say
+prompt dot hold duration
+prompt dot hold duration
+prompt dot hold duration
+equals 0.5 the whole duration is how
+equals 0.5 the whole duration is how
+equals 0.5 the whole duration is how
+long you have to hold the key
+long you have to hold the key
+long you have to hold the key
+and our case the default is e and i'm
+and our case the default is e and i'm
+and our case the default is e and i'm
+going to leave it like that because e is
+going to leave it like that because e is
+going to leave it like that because e is
+a pretty nice key
+a pretty nice key
+a pretty nice key
+and the whole duration is how long you
+and the whole duration is how long you
+and the whole duration is how long you
+have to hold that key in order to
+have to hold that key in order to
+have to hold that key in order to
+trigger our prompt its default is one
+trigger our prompt its default is one
+trigger our prompt its default is one
+it's a little too long so i just set it
+it's a little too long so i just set it
+it's a little too long so i just set it
+to 0.5
+to 0.5
+to 0.5
+and we can set our prompt.parent equal
+and we can set our prompt.parent equal
+and we can set our prompt.parent equal
+to the self.instance and
+to the self.instance and
+to the self.instance and
+if you want to you can make the prompt
+if you want to you can make the prompt
+if you want to you can make the prompt
+be attached to a part that sort of
+be attached to a part that sort of
+be attached to a part that sort of
+hovers above the button
+hovers above the button
+hovers above the button
+because you kind of have to look down
+because you kind of have to look down
+because you kind of have to look down
+and see the prompt but
+and see the prompt but
+and see the prompt but
+for my situation i don't really care as
+for my situation i don't really care as
+for my situation i don't really care as
+long as the prompt is visible i'm fine
+long as the prompt is visible i'm fine
+long as the prompt is visible i'm fine
+and at the very bottom we're going to
+and at the very bottom we're going to
+and at the very bottom we're going to
+return our prompt
+return our prompt
+return our prompt
+as the basic setup we'll add more a
+as the basic setup we'll add more a
+as the basic setup we'll add more a
+little bit later but we just want to
+little bit later but we just want to
+little bit later but we just want to
+make sure everything is
+make sure everything is
+make sure everything is
+working so open our init we're going to
+working so open our init we're going to
+working so open our init we're going to
+say self.prompt
+say self.prompt
+say self.prompt
+equals self create prompt because
+equals self create prompt because
+equals self create prompt because
+we're putting this in it because we're
+we're putting this in it because we're
+we're putting this in it because we're
+actually doing something we're in the
+actually doing something we're in the
+actually doing something we're in the
+act of creating a new instance and then
+act of creating a new instance and then
+act of creating a new instance and then
+parenting it to our self.instance
+parenting it to our self.instance
+parenting it to our self.instance
+that's why we're leaving it there
+that's why we're leaving it there
+that's why we're leaving it there
+and then below that we want to have
+and then below that we want to have
+and then below that we want to have
+an event for self.prompt.triggered
+an event for self.prompt.triggered
+an event for self.prompt.triggered
+and we'll connect a function which will
+and we'll connect a function which will
+and we'll connect a function which will
+take in ellipses
+take in ellipses
+take in ellipses
+so a bunch of parameters that we don't
+so a bunch of parameters that we don't
+so a bunch of parameters that we don't
+really need to know and then we'll call
+really need to know and then we'll call
+really need to know and then we'll call
+another function
+another function
+another function
+so this triggered is called when you
+so this triggered is called when you
+so this triggered is called when you
+hold
+hold
+hold
+the key for the whole duration and when
+the key for the whole duration and when
+the key for the whole duration and when
+our button is triggered
+our button is triggered
+our button is triggered
+it's getting pressed so i'm going to
+it's getting pressed so i'm going to
+it's getting pressed so i'm going to
+name a function down here
+name a function down here
+name a function down here
+create a new function a press
+create a new function a press
+create a new function a press
+and then the proximity prompt will give
+and then the proximity prompt will give
+and then the proximity prompt will give
+you an argument of the player who
+you an argument of the player who
+you an argument of the player who
+pressed it which is very convenient
+pressed it which is very convenient
+pressed it which is very convenient
+and so now that we have this function
+and so now that we have this function
+and so now that we have this function
+defined i can go up to the triggered
+defined i can go up to the triggered
+defined i can go up to the triggered
+connection and just say self
+connection and just say self
+connection and just say self
+press and then send in the ellipses and
+press and then send in the ellipses and
+press and then send in the ellipses and
+keep in mind we don't really need to do
+keep in mind we don't really need to do
+keep in mind we don't really need to do
+the ellipses we could just put player
+the ellipses we could just put player
+the ellipses we could just put player
+but
+but
+but
+just in case anything changes we want to
+just in case anything changes we want to
+just in case anything changes we want to
+leave this there because this is just
+leave this there because this is just
+leave this there because this is just
+forwarding the event down to our
+forwarding the event down to our
+forwarding the event down to our
+function and
+function and
+function and
+don't be worried by the fact that we
+don't be worried by the fact that we
+don't be worried by the fact that we
+have an event
+have an event
+have an event
+later we'll destroy the instance and
+later we'll destroy the instance and
+later we'll destroy the instance and
+when we destroy this instance
+when we destroy this instance
+when we destroy this instance
+it will destroy the prompt which will
+it will destroy the prompt which will
+it will destroy the prompt which will
+kill
+kill
+kill
+the event connected to it so we don't
+the event connected to it so we don't
+the event connected to it so we don't
+have to worry about any memory leaks
+have to worry about any memory leaks
+have to worry about any memory leaks
+so in our press we can say local id
+so in our press we can say local id
+so in our press we can say local id
+equal self.instance get attribute
+equal self.instance get attribute
+equal self.instance get attribute
+id and this brings up another point we
+id and this brings up another point we
+id and this brings up another point we
+need to give our buttons
+need to give our buttons
+need to give our buttons
+an id because just like in the last
+an id because just like in the last
+an id because just like in the last
+video each unlockable had an unlock id
+video each unlockable had an unlock id
+video each unlockable had an unlock id
+our buttons are going to have an id
+our buttons are going to have an id
+our buttons are going to have an id
+which when published will
+which when published will
+which when published will
+unlock all other unlockables with
+unlock all other unlockables with
+unlock all other unlockables with
+a matching id so let's go into our
+a matching id so let's go into our
+a matching id so let's go into our
+template in server storage
+template in server storage
+template in server storage
+find our button scroll the way down in
+find our button scroll the way down in
+find our button scroll the way down in
+the properties window
+the properties window
+the properties window
+and click add attribute we're going to
+and click add attribute we're going to
+and click add attribute we're going to
+add an attribute named id
+and our id for right now is going to
+and our id for right now is going to
+and our id for right now is going to
+match the unlock id of our test part
+match the unlock id of our test part
+match the unlock id of our test part
+so that unlock id was basic part if
+so that unlock id was basic part if
+so that unlock id was basic part if
+you're not sure
+you're not sure
+you're not sure
+go back to your part and look at the
+go back to your part and look at the
+go back to your part and look at the
+unlock id so in my case it's base part
+unlock id so in my case it's base part
+unlock id so in my case it's base part
+so our button is baseball so this allows
+so our button is baseball so this allows
+so our button is baseball so this allows
+us
+us
+us
+for the button to unlock multiple
+for the button to unlock multiple
+for the button to unlock multiple
+unlockables at the same time because as
+unlockables at the same time because as
+unlockables at the same time because as
+long as the unlockable has an unlock id
+long as the unlockable has an unlock id
+long as the unlockable has an unlock id
+that matches our button id
+that matches our button id
+that matches our button id
+it will get unlocked which is really
+it will get unlocked which is really
+it will get unlocked which is really
+nice and really flexible
+nice and really flexible
+nice and really flexible
+and so now in our button press function
+and so now in our button press function
+and so now in our button press function
+block
+block
+block
+we can publish our topic so we're gonna
+we can publish our topic so we're gonna
+we can publish our topic so we're gonna
+do self.tycoon
+do self.tycoon
+do self.tycoon
+publish topic
+and the topic will be on the button
+and the topic will be on the button
+and the topic will be on the button
+topic and we'll send in our id
+topic and we'll send in our id
+topic and we'll send in our id
+so when we publish our button id
+so when we publish our button id
+so when we publish our button id
+to the button topic all the unlockables
+to the button topic all the unlockables
+to the button topic all the unlockables
+that are listening
+that are listening
+that are listening
+will check to see if their id matches
+will check to see if their id matches
+will check to see if their id matches
+and unlock if that's the case
+and unlock if that's the case
+and unlock if that's the case
+and so once we've published this and
+and so once we've published this and
+and so once we've published this and
+once our job is done
+once our job is done
+once our job is done
+you can say self.instance destroy to
+you can say self.instance destroy to
+you can say self.instance destroy to
+get rid of the button and one thing i
+get rid of the button and one thing i
+get rid of the button and one thing i
+forgot to do let me just go back to my
+forgot to do let me just go back to my
+forgot to do let me just go back to my
+button and anchor it
+button and anchor it
+button and anchor it
+it's kind of something you have to do
+it's kind of something you have to do
+it's kind of something you have to do
+with tycoons but
+with tycoons but
+with tycoons but
+other than that we should be ready to
+other than that we should be ready to
+other than that we should be ready to
+test so let's try it out
+so i kind of have to walk far i might
+so i kind of have to walk far i might
+so i kind of have to walk far i might
+have to move my spawn point in just a
+have to move my spawn point in just a
+have to move my spawn point in just a
+sec but that should be pretty easy
+sec but that should be pretty easy
+sec but that should be pretty easy
+you can walk over to our tycoon you can
+you can walk over to our tycoon you can
+you can walk over to our tycoon you can
+see there's a e to interact
+see there's a e to interact
+see there's a e to interact
+button and we can hold e and
+button and we can hold e and
+button and we can hold e and
+once we do that the test is initialized
+once we do that the test is initialized
+once we do that the test is initialized
+and our part is spawn
+and our part is spawn
+and our part is spawn
+so what just happened we created a
+so what just happened we created a
+so what just happened we created a
+prompt that's the little e to interact
+prompt that's the little e to interact
+prompt that's the little e to interact
+thing we saw
+thing we saw
+thing we saw
+and then we triggered the pump by
+and then we triggered the pump by
+and then we triggered the pump by
+holding e for the whole duration
+holding e for the whole duration
+holding e for the whole duration
+that trigger caused our button to be
+that trigger caused our button to be
+that trigger caused our button to be
+pressed we got our id
+pressed we got our id
+pressed we got our id
+which is basic part and make sure your
+which is basic part and make sure your
+which is basic part and make sure your
+id and your unlock ids
+id and your unlock ids
+id and your unlock ids
+match letter for letter because that's
+match letter for letter because that's
+match letter for letter because that's
+very important they won't work otherwise
+very important they won't work otherwise
+very important they won't work otherwise
+and then after we publish it let's go
+and then after we publish it let's go
+and then after we publish it let's go
+back to our unlockable
+back to our unlockable
+back to our unlockable
+the unlockable sees this and its
+the unlockable sees this and its
+the unlockable sees this and its
+subscription and it says
+subscription and it says
+subscription and it says
+oh look at that a button was published
+oh look at that a button was published
+oh look at that a button was published
+our button id was published to the
+our button id was published to the
+our button id was published to the
+button topic doesn't match our
+button topic doesn't match our
+button topic doesn't match our
+unlock id if so it unlocks and that's
+unlock id if so it unlocks and that's
+unlock id if so it unlocks and that's
+exactly
+exactly
+exactly
+what it did and that's perfect so now
+what it did and that's perfect so now
+what it did and that's perfect so now
+let's add
+let's add
+let's add
+some more pizzazz to our button prompt
+some more pizzazz to our button prompt
+some more pizzazz to our button prompt
+let's go back to our button module
+let's go back to our button module
+let's go back to our button module
+and we're going to add a few lines of
+and we're going to add a few lines of
+and we're going to add a few lines of
+code but before we do that let's go to
+code but before we do that let's go to
+code but before we do that let's go to
+our button
+our button
+our button
+and let's add a few attributes so i'm
+and let's add a few attributes so i'm
+and let's add a few attributes so i'm
+going to add two attributes and each
+going to add two attributes and each
+going to add two attributes and each
+will correspond
+will correspond
+will correspond
+to a prompt
+to a prompt
+to a prompt
+value so the first one is going to be
+value so the first one is going to be
+value so the first one is going to be
+display and all these are strings and
+display and all these are strings and
+display and all these are strings and
+the next one is going to be
+the next one is going to be
+the next one is going to be
+cost and
+cost and
+cost and
+the cost will be a number
+because we need that number to
+because we need that number to
+because we need that number to
+like check later how much the player has
+like check later how much the player has
+like check later how much the player has
+versus how much it costs
+versus how much it costs
+versus how much it costs
+and so i'm going to change my display to
+and so i'm going to change my display to
+and so i'm going to change my display to
+basic part
+basic part
+basic part
+and you'll notice that these display and
+and you'll notice that these display and
+and you'll notice that these display and
+the id
+the id
+the id
+are very similar the reason i'm keeping
+are very similar the reason i'm keeping
+are very similar the reason i'm keeping
+them separate
+them separate
+them separate
+and not having the id the same as a
+and not having the id the same as a
+and not having the id the same as a
+display is
+display is
+display is
+late in development when you realize you
+late in development when you realize you
+late in development when you realize you
+need to change the name of something you
+need to change the name of something you
+need to change the name of something you
+really do not want to change the id of
+really do not want to change the id of
+really do not want to change the id of
+it
+it
+it
+because that's just a big hassle and
+because that's just a big hassle and
+because that's just a big hassle and
+it's not worth it
+it's not worth it
+it's not worth it
+so i like to keep the value separate if
+so i like to keep the value separate if
+so i like to keep the value separate if
+you really want to keep it simple you
+you really want to keep it simple you
+you really want to keep it simple you
+could have your display
+could have your display
+could have your display
+text the same as your id but i would not
+text the same as your id but i would not
+text the same as your id but i would not
+recommend it
+recommend it
+recommend it
+so now in our create prompt we can say
+so now in our create prompt we can say
+so now in our create prompt we can say
+prompt dot action text equals
+prompt dot action text equals
+prompt dot action text equals
+self dot instance get attribute
+display and you can rename the
+display and you can rename the
+display and you can rename the
+attributes whatever you want i just
+attributes whatever you want i just
+attributes whatever you want i just
+thought display is the display text same
+thought display is the display text same
+thought display is the display text same
+as action check
+as action check
+as action check
+action text and then for the prompt dot
+action text and then for the prompt dot
+action text and then for the prompt dot
+object text
+object text
+object text
+we're going to set it to self.instance
+we're going to set it to self.instance
+we're going to set it to self.instance
+get attribute
+cost what i want to do before that
+cost what i want to do before that
+cost what i want to do before that
+is have a dollar sign just to make it
+is have a dollar sign just to make it
+is have a dollar sign just to make it
+certain that it's actually
+certain that it's actually
+certain that it's actually
+money so i'm going to put a dollar sign
+money so i'm going to put a dollar sign
+money so i'm going to put a dollar sign
+in quotations and then dot dot to
+in quotations and then dot dot to
+in quotations and then dot dot to
+concatenate it with
+concatenate it with
+concatenate it with
+the cost so now let's try this out
+let's walk over there real quick
+let's walk over there real quick
+let's walk over there real quick
+you can see it has a zero and then basic
+you can see it has a zero and then basic
+you can see it has a zero and then basic
+part in front of it
+part in front of it
+part in front of it
+and it does the exact same thing we
+and it does the exact same thing we
+and it does the exact same thing we
+didn't change the functionality
+didn't change the functionality
+didn't change the functionality
+so our button works but right now
+so our button works but right now
+so our button works but right now
+there's no way to check
+there's no way to check
+there's no way to check
+if the player has enough money to buy a
+if the player has enough money to buy a
+if the player has enough money to buy a
+button that has a certain cost that's
+button that has a certain cost that's
+button that has a certain cost that's
+because we haven't implemented money at
+because we haven't implemented money at
+because we haven't implemented money at
+all
+all
+all
+so let's do that i'm going to go to
+so let's do that i'm going to go to
+so let's do that i'm going to go to
+server script service and
+server script service and
+server script service and
+create a new module script and name this
+create a new module script and name this
+create a new module script and name this
+module
+module
+module
+player manager it's going to be a pretty
+player manager it's going to be a pretty
+player manager it's going to be a pretty
+run-of-the-mill
+run-of-the-mill
+run-of-the-mill
+player manager you've probably heard of
+player manager you've probably heard of
+player manager you've probably heard of
+those before or made them before
+those before or made them before
+those before or made them before
+so all i won't explain that much because
+so all i won't explain that much because
+so all i won't explain that much because
+it's
+it's
+it's
+quite simple so it's just going to be a
+quite simple so it's just going to be a
+quite simple so it's just going to be a
+normal module not a class or anything
+normal module not a class or anything
+normal module not a class or anything
+and i just renamed those two things
+and i just renamed those two things
+and i just renamed those two things
+at the very top we're going to say local
+at the very top we're going to say local
+at the very top we're going to say local
+players equals game
+players equals game
+players equals game
+get service
+get service
+get service
+players and then
+players and then
+players and then
+we want a function for the
+we want a function for the
+we want a function for the
+player added so function player manager
+dot on player added and we'll take the
+dot on player added and we'll take the
+dot on player added and we'll take the
+player
+player
+player
+and then inside here we want to create
+and then inside here we want to create
+and then inside here we want to create
+the player leader stats i'm going to
+the player leader stats i'm going to
+the player leader stats i'm going to
+make a local function for that just to
+make a local function for that just to
+make a local function for that just to
+make it a little
+make it a little
+make it a little
+more separated i'm going to name this
+more separated i'm going to name this
+more separated i'm going to name this
+leader board
+leader board
+leader board
+setup and this is a very standard
+setup and this is a very standard
+setup and this is a very standard
+leader stat setup in roblox i'm say
+leader stat setup in roblox i'm say
+leader stat setup in roblox i'm say
+local leader stats
+local leader stats
+local leader stats
+equals instance dot new
+equals instance dot new
+equals instance dot new
+folder leader stats
+folder leader stats
+folder leader stats
+oh crap leader stats dot name
+oh crap leader stats dot name
+oh crap leader stats dot name
+equals leader stats and then
+equals leader stats and then
+equals leader stats and then
+our money and i'm just going to name it
+our money and i'm just going to name it
+our money and i'm just going to name it
+money because
+money because
+money because
+that's the most creative currency i
+that's the most creative currency i
+that's the most creative currency i
+could think of i'm going to do
+could think of i'm going to do
+could think of i'm going to do
+the local money equal instance dot new
+the local money equal instance dot new
+the local money equal instance dot new
+int value
+int value
+int value
+then money.name is equal to money
+then money.name is equal to money
+then money.name is equal to money
+money.value is equal to
+money.value is equal to
+money.value is equal to
+zero for now and then money.parent
+zero for now and then money.parent
+zero for now and then money.parent
+is equal to leader stats and then we're
+is equal to leader stats and then we're
+is equal to leader stats and then we're
+going to return
+going to return
+going to return
+our leader stats this just sets up our
+our leader stats this just sets up our
+our leader stats this just sets up our
+basic leader stats and then we can say
+basic leader stats and then we can say
+basic leader stats and then we can say
+local leader stats equals leaderboard
+local leader stats equals leaderboard
+local leader stats equals leaderboard
+setup
+setup
+setup
+and then we can set our leader stats dot
+and then we can set our leader stats dot
+and then we can set our leader stats dot
+parent equal to the player
+parent equal to the player
+parent equal to the player
+so let's create a leaderboard entry in
+so let's create a leaderboard entry in
+so let's create a leaderboard entry in
+the top right of the screen
+the top right of the screen
+the top right of the screen
+and we'll make it visible to player and
+and we'll make it visible to player and
+and we'll make it visible to player and
+we'll have a money
+we'll have a money
+we'll have a money
+value now right now this on player added
+value now right now this on player added
+value now right now this on player added
+will never be called so let's fix that
+will never be called so let's fix that
+will never be called so let's fix that
+i'm going to make a dedicated function
+i'm going to make a dedicated function
+i'm going to make a dedicated function
+for this called player
+for this called player
+for this called player
+manager dot start and you'll only call
+manager dot start and you'll only call
+manager dot start and you'll only call
+this once and all this will do is hook
+this once and all this will do is hook
+this once and all this will do is hook
+our events to the proper functions and
+our events to the proper functions and
+our events to the proper functions and
+that'll look like saying
+that'll look like saying
+that'll look like saying
+players dot are players dot player added
+players dot are players dot player added
+players dot are players dot player added
+connect player manager dot on
+connect player manager dot on
+connect player manager dot on
+player added it looks a lot better than
+player added it looks a lot better than
+player added it looks a lot better than
+our other
+our other
+our other
+event connections just because it's a
+event connections just because it's a
+event connections just because it's a
+dot not a colon which is great
+dot not a colon which is great
+dot not a colon which is great
+and so this should work but we're not
+and so this should work but we're not
+and so this should work but we're not
+requiring it so let's
+requiring it so let's
+requiring it so let's
+go to our server then go to the top and
+go to our server then go to the top and
+go to our server then go to the top and
+we're going to say local
+we're going to say local
+we're going to say local
+player manager equals require script
+player manager equals require script
+player manager equals require script
+dot parent dot player manager
+dot parent dot player manager
+dot parent dot player manager
+and then right below that before our
+and then right below that before our
+and then right below that before our
+player added hook we could say player
+player added hook we could say player
+player added hook we could say player
+manager
+manager
+manager
+dot start and so
+dot start and so
+dot start and so
+let's run this just make sure everything
+let's run this just make sure everything
+let's run this just make sure everything
+works you can see we have money in the
+works you can see we have money in the
+works you can see we have money in the
+top right of our screen
+top right of our screen
+top right of our screen
+that's exactly what we want so now that
+that's exactly what we want so now that
+that's exactly what we want so now that
+that works
+that works
+that works
+let's add some convenience functions to
+let's add some convenience functions to
+let's add some convenience functions to
+our player manager
+our player manager
+our player manager
+i'm going to say function or if i can
+i'm going to say function or if i can
+i'm going to say function or if i can
+spell that right function
+spell that right function
+spell that right function
+player manager dot get money
+player manager dot get money
+player manager dot get money
+and all we're going to do here is return
+and all we're going to do here is return
+and all we're going to do here is return
+the leader stats
+the leader stats
+the leader stats
+money value and we can say local
+money value and we can say local
+money value and we can say local
+leader stats equals
+player and well the player will be the
+player and well the player will be the
+player and well the player will be the
+parameter in the get money
+parameter in the get money
+parameter in the get money
+function i missed that sorry we're gonna
+function i missed that sorry we're gonna
+function i missed that sorry we're gonna
+say player
+say player
+say player
+find first child leader stats
+and make sure the name is exactly how i
+and make sure the name is exactly how i
+and make sure the name is exactly how i
+put it you can't really change it
+put it you can't really change it
+put it you can't really change it
+or it won't work let's say if leader
+or it won't work let's say if leader
+or it won't work let's say if leader
+stats
+then i'm gonna say local money equals
+then i'm gonna say local money equals
+then i'm gonna say local money equals
+leader stats
+leader stats
+leader stats
+find first child money and this is just
+find first child money and this is just
+find first child money and this is just
+in case the players in the middle of
+in case the players in the middle of
+in case the players in the middle of
+leaving or something it doesn't air
+leaving or something it doesn't air
+leaving or something it doesn't air
+and then i'm gonna say if money exists
+and then i'm gonna say if money exists
+and then i'm gonna say if money exists
+then
+then
+then
+we're going to return money dot value if
+we're going to return money dot value if
+we're going to return money dot value if
+it doesn't exist we're going to go to
+it doesn't exist we're going to go to
+it doesn't exist we're going to go to
+the very bottom and return
+the very bottom and return
+the very bottom and return
+0. just in case it somehow errors we
+0. just in case it somehow errors we
+0. just in case it somehow errors we
+don't want it
+don't want it
+don't want it
+we don't want it to return new we just
+we don't want it to return new we just
+we don't want it to return new we just
+want it to return 0.
+want it to return 0.
+want it to return 0.
+and then and below that we can say
+and then and below that we can say
+and then and below that we can say
+player manager
+set money and i'll have the player and
+set money and i'll have the player and
+set money and i'll have the player and
+the value
+the value
+the value
+and so we're just going to make sure the
+and so we're just going to make sure the
+and so we're just going to make sure the
+value exists by saying if value then
+value exists by saying if value then
+value exists by saying if value then
+and then all we can do is copy this
+and then all we can do is copy this
+and then all we can do is copy this
+entire block up here
+entire block up here
+entire block up here
+paste it down here and instead of
+paste it down here and instead of
+paste it down here and instead of
+returning the money.value we set
+returning the money.value we set
+returning the money.value we set
+money.value
+money.value
+money.value
+equal to our value and these two
+equal to our value and these two
+equal to our value and these two
+functions are just to make sure
+functions are just to make sure
+functions are just to make sure
+the scripts that use their play manager
+the scripts that use their play manager
+the scripts that use their play manager
+don't mess up
+don't mess up
+don't mess up
+with the leader stats or the money which
+with the leader stats or the money which
+with the leader stats or the money which
+makes a lot simpler saves you a lot of
+makes a lot simpler saves you a lot of
+makes a lot simpler saves you a lot of
+lines of code
+lines of code
+lines of code
+so now let's go back to our button
+so now let's go back to our button
+so now let's go back to our button
+in our button we can get a few more
+in our button we can get a few more
+in our button we can get a few more
+things so
+things so
+things so
+other than our id we can also get
+other than our id we can also get
+other than our id we can also get
+the money or cost i should say cost
+the money or cost i should say cost
+the money or cost i should say cost
+which will be equal to self.instance
+which will be equal to self.instance
+which will be equal to self.instance
+get attribute cost and this is our
+get attribute cost and this is our
+get attribute cost and this is our
+player or
+player or
+player or
+button press function block and then
+button press function block and then
+button press function block and then
+below that we can say
+below that we can say
+below that we can say
+local money equals player
+local money equals player
+local money equals player
+manager get money
+manager get money
+manager get money
+player but we haven't defined our player
+player but we haven't defined our player
+player but we haven't defined our player
+manager so let's do that by going to the
+manager so let's do that by going to the
+manager so let's do that by going to the
+top of our script
+top of our script
+top of our script
+above our button and saying local player
+above our button and saying local player
+above our button and saying local player
+manager equals require script
+manager equals require script
+manager equals require script
+dot parents dot parent dot player
+dot parents dot parent dot player
+dot parents dot parent dot player
+manager there we go so we have our
+manager there we go so we have our
+manager there we go so we have our
+player manager we have the cost we have
+player manager we have the cost we have
+player manager we have the cost we have
+the money
+the money
+the money
+so now we need to first make sure the
+so now we need to first make sure the
+so now we need to first make sure the
+player that
+player that
+player that
+activates our button is the player that
+activates our button is the player that
+activates our button is the player that
+owns a tycoon
+owns a tycoon
+owns a tycoon
+and then make sure they have enough
+and then make sure they have enough
+and then make sure they have enough
+money to buy it and if they do we
+money to buy it and if they do we
+money to buy it and if they do we
+subtract the money
+subtract the money
+subtract the money
+and we publish the topic so we can do
+and we publish the topic so we can do
+and we publish the topic so we can do
+that by saying if
+that by saying if
+that by saying if
+player equals or double equals
+player equals or double equals
+player equals or double equals
+self.tycoon
+self.tycoon
+self.tycoon
+dot owner so if the player is the tycoon
+dot owner so if the player is the tycoon
+dot owner so if the player is the tycoon
+owner
+owner
+owner
+and their money is greater than or equal
+and their money is greater than or equal
+and their money is greater than or equal
+to the cost of the button
+to the cost of the button
+to the cost of the button
+then we'll do all this and then we put
+then we'll do all this and then we put
+then we'll do all this and then we put
+an n below that
+an n below that
+an n below that
+and then tab this in just so it's a
+and then tab this in just so it's a
+and then tab this in just so it's a
+little more obvious what it's doing
+little more obvious what it's doing
+little more obvious what it's doing
+and then right above our publish topic
+and then right above our publish topic
+and then right above our publish topic
+we're going to say
+we're going to say
+we're going to say
+player manager dot set
+player manager dot set
+player manager dot set
+money we're going to set money of our
+money we're going to set money of our
+money we're going to set money of our
+player
+player
+player
+to the money minus the cost so
+to the money minus the cost so
+to the money minus the cost so
+i say the player has 50 coins or money
+i say the player has 50 coins or money
+i say the player has 50 coins or money
+and the cost is 50. 50 is greater than
+and the cost is 50. 50 is greater than
+and the cost is 50. 50 is greater than
+equal to 50 and i'll just do 50 minus 50
+equal to 50 and i'll just do 50 minus 50
+equal to 50 and i'll just do 50 minus 50
+and i'll leave them
+and i'll leave them
+and i'll leave them
+with zero money which is exactly what we
+with zero money which is exactly what we
+with zero money which is exactly what we
+want
+want
+want
+so since our button up to this point
+so since our button up to this point
+so since our button up to this point
+costs nothing
+costs nothing
+costs nothing
+it shouldn't change the behavior so
+it shouldn't change the behavior so
+it shouldn't change the behavior so
+let's try it out
+let's try it out
+let's try it out
+and i move the spawn point so i'm here
+and i move the spawn point so i'm here
+and i move the spawn point so i'm here
+and i hold this
+and i hold this
+and i hold this
+and you can see the behavior is the same
+and you can see the behavior is the same
+and you can see the behavior is the same
+but if i were to go to our button
+but if i were to go to our button
+but if i were to go to our button
+and scroll the way down change the cost
+and scroll the way down change the cost
+and scroll the way down change the cost
+to 10
+to 10
+to 10
+it will not let us unlock it
+it will not let us unlock it
+it will not let us unlock it
+and i go up to it it's 10 it won't do
+and i go up to it it's 10 it won't do
+and i go up to it it's 10 it won't do
+anything
+anything
+anything
+but if i were to go into the server by
+but if i were to go into the server by
+but if i were to go into the server by
+pressing current client up here it'll
+pressing current client up here it'll
+pressing current client up here it'll
+switch me to the server i can go to
+switch me to the server i can go to
+switch me to the server i can go to
+players
+players
+players
+be your ic or whatever your player name
+be your ic or whatever your player name
+be your ic or whatever your player name
+is then money and i set this to
+is then money and i set this to
+is then money and i set this to
+something like 100.
+something like 100.
+something like 100.
+i can switch back to the client and then
+i can switch back to the client and then
+i can switch back to the client and then
+you can see it's 100 in the top right
+you can see it's 100 in the top right
+you can see it's 100 in the top right
+we can hold that it unlocks it subtracts
+we can hold that it unlocks it subtracts
+we can hold that it unlocks it subtracts
+10 which is a cost and gives us 90 which
+10 which is a cost and gives us 90 which
+10 which is a cost and gives us 90 which
+is exactly what we want
+so that's it for this video there is a
+so that's it for this video there is a
+so that's it for this video there is a
+few edge cases that
+few edge cases that
+few edge cases that
+our player manager needs to handle as
+our player manager needs to handle as
+our player manager needs to handle as
+well as we need we can clean up this
+well as we need we can clean up this
+well as we need we can clean up this
+area
+area
+area
+of our server but we'll do that in the
+of our server but we'll do that in the
+of our server but we'll do that in the
+next video this video's already
+next video this video's already
+next video this video's already
+gone pretty long so if you enjoy the
+gone pretty long so if you enjoy the
+gone pretty long so if you enjoy the
+video
+video
+video
+like it and subscribe to my channel if
+like it and subscribe to my channel if
+like it and subscribe to my channel if
+you want to see more tycoon series
+you want to see more tycoon series
+you want to see more tycoon series
+videos
+videos
+videos
+and comment any questions or suggestions
+and comment any questions or suggestions
+and comment any questions or suggestions
+in the comments below
+in the comments below
+in the comments below
+the code will be in the description if
+the code will be in the description if
+the code will be in the description if
+you want it
+you want it
+you want it
+and other than that i hope you have a
+and other than that i hope you have a
+and other than that i hope you have a
+nice day and goodbye
+[Music]
+you

@@ -1,0 +1,1317 @@
+in this video i show you how to make
+in this video i show you how to make
+in this video i show you how to make
+this
+this
+this
+over the shoulder third person camera
+over the shoulder third person camera
+over the shoulder third person camera
+using
+using
+using
+scripting and roblox studio you'll
+scripting and roblox studio you'll
+scripting and roblox studio you'll
+you'll learn about run service context
+you'll learn about run service context
+you'll learn about run service context
+action service
+action service
+action service
+user input service and a bunch of cool
+user input service and a bunch of cool
+user input service and a bunch of cool
+c-frame math functions so if you're
+c-frame math functions so if you're
+c-frame math functions so if you're
+interested in that
+interested in that
+interested in that
+or you just want a working third-person
+or you just want a working third-person
+or you just want a working third-person
+camera
+camera
+camera
+stay tuned if you enjoy the video make
+stay tuned if you enjoy the video make
+stay tuned if you enjoy the video make
+sure to like and subscribe
+sure to like and subscribe
+sure to like and subscribe
+and join my discord server link is in
+and join my discord server link is in
+and join my discord server link is in
+the description
+the description
+the description
+but without further ado let's get into
+but without further ado let's get into
+but without further ado let's get into
+the video
+the video
+the video
+let's get started i'm going to start by
+let's get started i'm going to start by
+let's get started i'm going to start by
+going into starter player
+going into starter player
+going into starter player
+starter player scripts clicking the plus
+starter player scripts clicking the plus
+starter player scripts clicking the plus
+arrow
+arrow
+arrow
+and inserting a local script
+and inserting a local script
+and inserting a local script
+here we go let me zoom in a little bit
+here we go let me zoom in a little bit
+here we go let me zoom in a little bit
+here
+here
+here
+is my local script so there's a few
+is my local script so there's a few
+is my local script so there's a few
+variables that we need to define first
+variables that we need to define first
+variables that we need to define first
+one being
+one being
+one being
+the player service which is going to be
+the player service which is going to be
+the player service which is going to be
+equal to game
+equal to game
+equal to game
+get service players and this of course
+get service players and this of course
+get service players and this of course
+is going to be used
+is going to be used
+is going to be used
+to reference our local player now we're
+to reference our local player now we're
+to reference our local player now we're
+going to find our context
+going to find our context
+going to find our context
+action service and this is the service
+action service and this is the service
+action service and this is the service
+used to capture
+used to capture
+used to capture
+player input
+player input
+player input
+so it's going to be same thing except
+so it's going to be same thing except
+so it's going to be same thing except
+with context action service
+with context action service
+with context action service
+there we go and now we're going to
+there we go and now we're going to
+there we go and now we're going to
+define
+define
+define
+the run service
+the run service
+the run service
+which can be equal to game get service
+which can be equal to game get service
+which can be equal to game get service
+run service there you go
+run service there you go
+run service there you go
+and we're going to find one more service
+and we're going to find one more service
+and we're going to find one more service
+that is the user input service
+that is the user input service
+that is the user input service
+and this will be equal to game get
+and this will be equal to game get
+and this will be equal to game get
+service
+service
+service
+user input service
+user input service
+user input service
+there we go so now we need to get our
+there we go so now we need to get our
+there we go so now we need to get our
+camera
+camera
+camera
+which can be equal to workspace dot
+which can be equal to workspace dot
+which can be equal to workspace dot
+current camera and our player
+current camera and our player
+current camera and our player
+which can be equal to players.local
+which can be equal to players.local
+which can be equal to players.local
+player there we go
+and so now we can start our main script
+and so now we can start our main script
+and so now we can start our main script
+now what we're going to put in here is
+now what we're going to put in here is
+now what we're going to put in here is
+we're going to first put
+we're going to first put
+we're going to first put
+a little event connection and it's going
+a little event connection and it's going
+a little event connection and it's going
+to be player.character added
+to be player.character added
+to be player.character added
+connect i'm going to do function
+connect i'm going to do function
+connect i'm going to do function
+character there you go so this is going
+character there you go so this is going
+character there you go so this is going
+to be used for controlling our camera
+to be used for controlling our camera
+to be used for controlling our camera
+each time our player gets reset and we
+each time our player gets reset and we
+each time our player gets reset and we
+need to put in character added because
+need to put in character added because
+need to put in character added because
+when they get reset we need to reset all
+when they get reset we need to reset all
+when they get reset we need to reset all
+the variables
+the variables
+the variables
+pertaining to their camera
+pertaining to their camera
+pertaining to their camera
+and now we can define a
+and now we can define a
+and now we can define a
+interesting function down here below
+interesting function down here below
+interesting function down here below
+that and it's going to be named
+that and it's going to be named
+that and it's going to be named
+focus control so this function is going
+focus control so this function is going
+focus control so this function is going
+to be responsible for
+to be responsible for
+to be responsible for
+focusing our
+focusing our
+focusing our
+mouse when like when we focus on the
+mouse when like when we focus on the
+mouse when like when we focus on the
+window
+window
+window
+we're gonna make our mouse like a lock
+we're gonna make our mouse like a lock
+we're gonna make our mouse like a lock
+center and we're gonna prevent it
+center and we're gonna prevent it
+center and we're gonna prevent it
+from like leaving the center and we're
+from like leaving the center and we're
+from like leaving the center and we're
+gonna disable the little icon
+gonna disable the little icon
+gonna disable the little icon
+so it just looks a little better when
+so it just looks a little better when
+so it just looks a little better when
+we're doing the third person camera and
+we're doing the third person camera and
+we're doing the third person camera and
+our mouse can't like stray off the
+our mouse can't like stray off the
+our mouse can't like stray off the
+screen
+screen
+screen
+so i'll show you what that looks like we
+so i'll show you what that looks like we
+so i'll show you what that looks like we
+need some parameters action name
+need some parameters action name
+need some parameters action name
+input state and input
+input state and input
+input state and input
+object there we go and now we can
+object there we go and now we can
+object there we go and now we can
+put an if statement if input state
+put an if statement if input state
+put an if statement if input state
+equals enum.userinputstate.begin
+equals enum.userinputstate.begin
+equals enum.userinputstate.begin
+then we want to set the camera.camera
+then we want to set the camera.camera
+then we want to set the camera.camera
+type to enum.cameratype.scriptable
+type to enum.cameratype.scriptable
+type to enum.cameratype.scriptable
+then we want to change some aspects of
+then we want to change some aspects of
+then we want to change some aspects of
+the user input service like user input
+the user input service like user input
+the user input service like user input
+service
+service
+service
+dot mouse behavior and we want to set
+dot mouse behavior and we want to set
+dot mouse behavior and we want to set
+that to edom
+that to edom
+that to edom
+dot mouse behavior.lock center so this
+dot mouse behavior.lock center so this
+dot mouse behavior.lock center so this
+will prevent
+will prevent
+will prevent
+our player's mouse from moving from the
+our player's mouse from moving from the
+our player's mouse from moving from the
+center of the screen
+center of the screen
+center of the screen
+which is what you usually see in third
+which is what you usually see in third
+which is what you usually see in third
+person cameras
+person cameras
+person cameras
+such as the roblox like default shift
+such as the roblox like default shift
+such as the roblox like default shift
+lock camera
+lock camera
+lock camera
+and we also need to say user input
+and we also need to say user input
+and we also need to say user input
+service dot
+service dot
+service dot
+mouse icon enable equals false now this
+mouse icon enable equals false now this
+mouse icon enable equals false now this
+line right here
+line right here
+line right here
+is optional for my camera i don't want
+is optional for my camera i don't want
+is optional for my camera i don't want
+the little mouse icon to be in the
+the little mouse icon to be in the
+the little mouse icon to be in the
+center of our screen at all times
+center of our screen at all times
+center of our screen at all times
+you can obviously change that to like a
+you can obviously change that to like a
+you can obviously change that to like a
+crosshair if you're in shooter
+crosshair if you're in shooter
+crosshair if you're in shooter
+or some other icon if you want but
+or some other icon if you want but
+or some other icon if you want but
+that's just my personal preference
+that's just my personal preference
+that's just my personal preference
+so now we need to bind this action so
+so now we need to bind this action so
+so now we need to bind this action so
+context
+context
+context
+action service find action
+action service find action
+action service find action
+we're going to name this focus control
+we're going to name this focus control
+we're going to name this focus control
+send in our function
+send in our function
+send in our function
+which is focus control we do not want a
+which is focus control we do not want a
+which is focus control we do not want a
+mobile button that's why we set that to
+mobile button that's why we set that to
+mobile button that's why we set that to
+false
+false
+false
+and then for the inputs let me zoom out
+and then for the inputs let me zoom out
+and then for the inputs let me zoom out
+a little bit there's a few
+a little bit there's a few
+a little bit there's a few
+we want enum dot
+we want enum dot
+we want enum dot
+user input type not state user input
+user input type not state user input
+user input type not state user input
+type
+type
+type
+dot mouse button one then we want
+dot mouse button one then we want
+dot mouse button one then we want
+enum dot user input type
+enum dot user input type
+enum dot user input type
+dot touch and lastly
+dot touch and lastly
+dot touch and lastly
+we want enum dot user input
+we want enum dot user input
+we want enum dot user input
+type dot focus so basically
+type dot focus so basically
+type dot focus so basically
+we'll capture all the input on our
+we'll capture all the input on our
+we'll capture all the input on our
+screen
+screen
+screen
+and we'll send it over to this function
+and we'll send it over to this function
+and we'll send it over to this function
+and in this function
+and in this function
+and in this function
+we want to say at the very end context
+we want to say at the very end context
+we want to say at the very end context
+action service
+action service
+action service
+unbind action focus control so basically
+unbind action focus control so basically
+unbind action focus control so basically
+we're going to run this bind our action
+we're going to run this bind our action
+we're going to run this bind our action
+so
+so
+so
+when we focus on our window
+when we focus on our window
+when we focus on our window
+will set all the camera and all of the
+will set all the camera and all of the
+will set all the camera and all of the
+mouse stuff and then we'll unbind it at
+mouse stuff and then we'll unbind it at
+mouse stuff and then we'll unbind it at
+the end so it can't be run again
+the end so it can't be run again
+the end so it can't be run again
+so let's play this and see what happens
+so let's play this and see what happens
+so let's play this and see what happens
+so my mouse works fine right now when i
+so my mouse works fine right now when i
+so my mouse works fine right now when i
+click you can see
+click you can see
+click you can see
+it disappears and since we set camera
+it disappears and since we set camera
+it disappears and since we set camera
+type to scriptable
+type to scriptable
+type to scriptable
+my camera does not move which is exactly
+my camera does not move which is exactly
+my camera does not move which is exactly
+what we want so now that our input
+what we want so now that our input
+what we want so now that our input
+is all set up and our focus is all set
+is all set up and our focus is all set
+is all set up and our focus is all set
+up we can
+up we can
+up we can
+set up our camera function so
+set up our camera function so
+set up our camera function so
+firstly we need to find some variables
+firstly we need to find some variables
+firstly we need to find some variables
+just for like ease of use
+just for like ease of use
+just for like ease of use
+and we're going to get our humanoid
+and we're going to get our humanoid
+and we're going to get our humanoid
+which will be equal to character
+which will be equal to character
+which will be equal to character
+wait for child humanoid
+wait for child humanoid
+wait for child humanoid
+and our root part which will be equal to
+and our root part which will be equal to
+and our root part which will be equal to
+character weight for
+character weight for
+character weight for
+child humanoid
+child humanoid
+child humanoid
+root part there we go
+root part there we go
+root part there we go
+whoops i got the parentheses humanoid
+whoops i got the parentheses humanoid
+whoops i got the parentheses humanoid
+root part there we go now we need to get
+root part there we go now we need to get
+root part there we go now we need to get
+our now we need to find our camera angle
+our now we need to find our camera angle
+our now we need to find our camera angle
+x
+x
+x
+which will be equal to zero and our
+which will be equal to zero and our
+which will be equal to zero and our
+camera angle y which will also be equal
+camera angle y which will also be equal
+camera angle y which will also be equal
+to zero
+to zero
+to zero
+so these two variables are for our
+so these two variables are for our
+so these two variables are for our
+camera angles we'll edit them
+camera angles we'll edit them
+camera angles we'll edit them
+when we move our mouse and we'll apply
+when we move our mouse and we'll apply
+when we move our mouse and we'll apply
+them
+them
+them
+when we position our camera now we can
+when we position our camera now we can
+when we position our camera now we can
+define our function
+define our function
+define our function
+and this is the player
+and this is the player
+and this is the player
+input function it'll take the action
+input function it'll take the action
+input function it'll take the action
+name
+name
+name
+input state and input object
+input state and input object
+input state and input object
+as parameters and this will just be used
+as parameters and this will just be used
+as parameters and this will just be used
+to capture our mouse input like i said
+to capture our mouse input like i said
+to capture our mouse input like i said
+earlier so in this we're going to say
+earlier so in this we're going to say
+earlier so in this we're going to say
+if input state equals enum
+if input state equals enum
+if input state equals enum
+dot user input state dot change
+dot user input state dot change
+dot user input state dot change
+so whenever we move our mouse not if it
+so whenever we move our mouse not if it
+so whenever we move our mouse not if it
+begins or ends
+begins or ends
+begins or ends
+then we want to set the camera angle
+then we want to set the camera angle
+then we want to set the camera angle
+x equal to camera angle x actually we
+x equal to camera angle x actually we
+x equal to camera angle x actually we
+can do minus equals
+can do minus equals
+can do minus equals
+minus equals input object
+minus equals input object
+minus equals input object
+dot delta dot
+dot delta dot
+dot delta dot
+x so this is basically say our camera
+x so this is basically say our camera
+x so this is basically say our camera
+angle x
+angle x
+angle x
+will subtract this
+will subtract this
+will subtract this
+delta x from itself so this delta is how
+delta x from itself so this delta is how
+delta x from itself so this delta is how
+much
+much
+much
+the mouse has moved in a given frame so
+the mouse has moved in a given frame so
+the mouse has moved in a given frame so
+each time we move our mouse we want to
+each time we move our mouse we want to
+each time we move our mouse we want to
+subtract that amount
+subtract that amount
+subtract that amount
+from our main angle and we need to do
+from our main angle and we need to do
+from our main angle and we need to do
+the same thing with the camera angle y
+the same thing with the camera angle y
+the same thing with the camera angle y
+but y is a little bit different because
+but y is a little bit different because
+but y is a little bit different because
+we also need to clamp it so actually
+we also need to clamp it so actually
+we also need to clamp it so actually
+let me do this again camera angle y
+let me do this again camera angle y
+let me do this again camera angle y
+equals math.clamp
+equals math.clamp
+equals math.clamp
+camera angle y minus
+camera angle y minus
+camera angle y minus
+input object
+input object
+input object
+dot delta dot y
+dot delta dot y
+dot delta dot y
+and i'm going to multiply this by 0.4
+and i'm going to multiply this by 0.4
+and i'm going to multiply this by 0.4
+that's just so
+that's just so
+that's just so
+they have a lower sensitivity on the y
+they have a lower sensitivity on the y
+they have a lower sensitivity on the y
+axis you can change that if you want
+axis you can change that if you want
+axis you can change that if you want
+and then we're going to set negative 75
+and then we're going to set negative 75
+and then we're going to set negative 75
+for a minimum
+for a minimum
+for a minimum
+and 75 for a maximum the reason we're
+and 75 for a maximum the reason we're
+and 75 for a maximum the reason we're
+doing this
+doing this
+doing this
+is so when our user moves our mouse up
+is so when our user moves our mouse up
+is so when our user moves our mouse up
+and down we want to stop them from doing
+and down we want to stop them from doing
+and down we want to stop them from doing
+a full like 360 degree rotation around
+a full like 360 degree rotation around
+a full like 360 degree rotation around
+their whole character because the camera
+their whole character because the camera
+their whole character because the camera
+would end up being upside down
+would end up being upside down
+would end up being upside down
+there'd just be some problems so you can
+there'd just be some problems so you can
+there'd just be some problems so you can
+edit any of these values the 0.4
+edit any of these values the 0.4
+edit any of these values the 0.4
+negative 75 75
+negative 75 75
+negative 75 75
+to your liking this is just good
+to your liking this is just good
+to your liking this is just good
+little arguments that worked for me
+little arguments that worked for me
+little arguments that worked for me
+so that's it for our player input so now
+so that's it for our player input so now
+so that's it for our player input so now
+all we need to do is bind this
+all we need to do is bind this
+all we need to do is bind this
+so let's go context action service
+so let's go context action service
+so let's go context action service
+bind action player input
+bind action player input
+bind action player input
+you know the drill we did this with
+you know the drill we did this with
+you know the drill we did this with
+focus player input
+focus player input
+focus player input
+false enum dot user input type
+false enum dot user input type
+false enum dot user input type
+user input type dot
+user input type dot
+user input type dot
+mouse movement and then we
+mouse movement and then we
+mouse movement and then we
+also want to add
+also want to add
+also want to add
+enum dot user input type
+enum dot user input type
+enum dot user input type
+dot touch so when they touch the screen
+dot touch so when they touch the screen
+dot touch so when they touch the screen
+or move their mouse
+or move their mouse
+or move their mouse
+we want to move this camera angle
+we want to move this camera angle
+we want to move this camera angle
+position so
+position so
+position so
+now we're to the exciting part this is
+now we're to the exciting part this is
+now we're to the exciting part this is
+where
+where
+where
+we are going to use the run service
+we are going to use the run service
+we are going to use the run service
+to every frame change our camera's
+to every frame change our camera's
+to every frame change our camera's
+position
+position
+position
+so we're going to say run service bind
+so we're going to say run service bind
+so we're going to say run service bind
+to render step
+to render step
+to render step
+and this is very similar to bind action
+and this is very similar to bind action
+and this is very similar to bind action
+on the context action service
+on the context action service
+on the context action service
+we send in the name of our binded
+we send in the name of our binded
+we send in the name of our binded
+function
+function
+function
+we need to set the render priority
+we need to set the render priority
+we need to set the render priority
+so render priority is basically just an
+so render priority is basically just an
+so render priority is basically just an
+integer value
+integer value
+integer value
+and it determines when this bind to
+and it determines when this bind to
+and it determines when this bind to
+render step is called
+render step is called
+render step is called
+really you don't need to know the
+really you don't need to know the
+really you don't need to know the
+specifics but
+specifics but
+specifics but
+since we're dealing with the camera i'm
+since we're dealing with the camera i'm
+since we're dealing with the camera i'm
+going to say
+enum.renderpriority.camera.value do not
+enum.renderpriority.camera.value do not
+enum.renderpriority.camera.value do not
+forget this dot value this is
+forget this dot value this is
+forget this dot value this is
+very very important reason we're doing
+very very important reason we're doing
+very very important reason we're doing
+this is because
+this is because
+this is because
+we get our enum and then we get the
+we get our enum and then we get the
+we get our enum and then we get the
+value of that which is an integer which
+value of that which is an integer which
+value of that which is an integer which
+is what we want
+is what we want
+is what we want
+and now we give our function which i'm
+and now we give our function which i'm
+and now we give our function which i'm
+just going to find an anonymous function
+just going to find an anonymous function
+just going to find an anonymous function
+like
+like
+like
+inline right here
+and so inside of it we're going to
+and so inside of it we're going to
+and so inside of it we're going to
+define our start c
+define our start c
+define our start c
+frame this is the starting c frame of
+frame this is the starting c frame of
+frame this is the starting c frame of
+our camera
+our camera
+our camera
+it's going to be equal to c frame dot
+it's going to be equal to c frame dot
+it's going to be equal to c frame dot
+new
+new
+new
+root part dot c frame dot position so we
+root part dot c frame dot position so we
+root part dot c frame dot position so we
+just get the position
+just get the position
+just get the position
+we discard all of our rotational values
+we discard all of our rotational values
+we discard all of our rotational values
+for our
+for our
+for our
+root part c frame and we want to
+root part c frame and we want to
+root part c frame and we want to
+multiply it by
+multiply it by
+multiply it by
+c frame dot angles
+c frame dot angles
+c frame dot angles
+zero math dot rad
+zero math dot rad
+zero math dot rad
+camera angle x
+camera angle x
+camera angle x
+0 and then we want to multiply it by
+0 and then we want to multiply it by
+0 and then we want to multiply it by
+math
+math
+math
+oh c frame dot angles once again
+oh c frame dot angles once again
+oh c frame dot angles once again
+and we will apply the y which will be
+and we will apply the y which will be
+and we will apply the y which will be
+math.rad camera
+math.rad camera
+math.rad camera
+angle y and then zero and then another
+angle y and then zero and then another
+angle y and then zero and then another
+zero
+zero
+zero
+so you might think oh i can just put
+so you might think oh i can just put
+so you might think oh i can just put
+this in one block but for some reason it
+this in one block but for some reason it
+this in one block but for some reason it
+doesn't work too well so just
+doesn't work too well so just
+doesn't work too well so just
+leave see frame.angles these two
+leave see frame.angles these two
+leave see frame.angles these two
+together
+together
+together
+and you'll get better results and
+and you'll get better results and
+and you'll get better results and
+basically the reason we need to call
+basically the reason we need to call
+basically the reason we need to call
+math.rad that converts this degrees
+math.rad that converts this degrees
+math.rad that converts this degrees
+value into radians and c frame.angles
+value into radians and c frame.angles
+value into radians and c frame.angles
+takes a radian value so we're basically
+takes a radian value so we're basically
+takes a radian value so we're basically
+just taking our position and then we're
+just taking our position and then we're
+just taking our position and then we're
+multiplying our camera angles
+multiplying our camera angles
+multiplying our camera angles
+onto it and now we can
+onto it and now we can
+onto it and now we can
+create our camera c frame
+create our camera c frame
+create our camera c frame
+which will be equal to start c frame
+which will be equal to start c frame
+which will be equal to start c frame
+point to world space
+and so we want to make our camera c
+and so we want to make our camera c
+and so we want to make our camera c
+frame offset from our player
+frame offset from our player
+frame offset from our player
+and in order to do that you could just
+and in order to do that you could just
+and in order to do that you could just
+put like a vector vector right here like
+put like a vector vector right here like
+put like a vector vector right here like
+but i wanted to find a camera offset
+but i wanted to find a camera offset
+but i wanted to find a camera offset
+variable
+variable
+variable
+local camera offset equals vector3.new
+local camera offset equals vector3.new
+local camera offset equals vector3.new
+and i'm going to set this to 2 2 and 8.
+and i'm going to set this to 2 2 and 8.
+and i'm going to set this to 2 2 and 8.
+so this is going to be the offset of our
+so this is going to be the offset of our
+so this is going to be the offset of our
+character
+character
+character
+of our camera from our character you can
+of our camera from our character you can
+of our camera from our character you can
+change this to whatever you want
+change this to whatever you want
+change this to whatever you want
+so now we're going to go back down set
+so now we're going to go back down set
+so now we're going to go back down set
+star frame
+star frame
+star frame
+point towards place to our camera
+point towards place to our camera
+point towards place to our camera
+offset vector 3 value
+offset vector 3 value
+offset vector 3 value
+and then we want to create our camera
+and then we want to create our camera
+and then we want to create our camera
+focus local camera
+focus local camera
+focus local camera
+focus equals start c frame
+focus equals start c frame
+focus equals start c frame
+point to world space
+point to world space
+point to world space
+vector three dot new camera
+vector three dot new camera
+vector three dot new camera
+offset dot x camera offset dot
+offset dot x camera offset dot
+offset dot x camera offset dot
+y and then we want to set this to an
+y and then we want to set this to an
+y and then we want to set this to an
+arbitrarily very large negative value so
+arbitrarily very large negative value so
+arbitrarily very large negative value so
+i'm going to do negative like
+i'm going to do negative like
+i'm going to do negative like
+million or that's a hundred thousand my
+million or that's a hundred thousand my
+million or that's a hundred thousand my
+bad
+bad
+bad
+but set it to a big negative value
+but set it to a big negative value
+but set it to a big negative value
+and this is just the focus so the focus
+and this is just the focus so the focus
+and this is just the focus so the focus
+will be off in the distance so
+will be off in the distance so
+will be off in the distance so
+the camera will be over the shoulder it
+the camera will be over the shoulder it
+the camera will be over the shoulder it
+won't be pointing directly at our
+won't be pointing directly at our
+won't be pointing directly at our
+character it'll be pointing
+character it'll be pointing
+character it'll be pointing
+at where the character is looking that's
+at where the character is looking that's
+at where the character is looking that's
+what you want for most like shooters and
+what you want for most like shooters and
+what you want for most like shooters and
+other
+other
+other
+third person camera applications so now
+third person camera applications so now
+third person camera applications so now
+we can set our camera
+we can set our camera
+we can set our camera
+dot c frame equal to c frame dot
+dot c frame equal to c frame dot
+dot c frame equal to c frame dot
+look at
+camera c frame and then camera
+camera c frame and then camera
+camera c frame and then camera
+focus
+so basically this takes our two vector
+so basically this takes our two vector
+so basically this takes our two vector
+threes i know this is kind of misleading
+threes i know this is kind of misleading
+threes i know this is kind of misleading
+but
+but
+but
+it sort of makes sense camera c frame is
+it sort of makes sense camera c frame is
+it sort of makes sense camera c frame is
+actually a vector three value point two
+actually a vector three value point two
+actually a vector three value point two
+world space returns a vector three
+world space returns a vector three
+world space returns a vector three
+so we have our two vector threes camera
+so we have our two vector threes camera
+so we have our two vector threes camera
+c frame which is like offset behind the
+c frame which is like offset behind the
+c frame which is like offset behind the
+camera
+camera
+camera
+the focus so it's at the c frame looking
+the focus so it's at the c frame looking
+the focus so it's at the c frame looking
+at the focus
+at the focus
+at the focus
+so if we were to run this
+you can see our camera is
+you can see our camera is
+you can see our camera is
+moving around quite nicely obviously our
+moving around quite nicely obviously our
+moving around quite nicely obviously our
+character
+character
+character
+is not following it so that's what we
+is not following it so that's what we
+is not following it so that's what we
+need to do
+need to do
+need to do
+next so now below our
+next so now below our
+next so now below our
+camera c frame assignment we can say
+camera c frame assignment we can say
+camera c frame assignment we can say
+local looking c frame equals c
+local looking c frame equals c
+local looking c frame equals c
+frame dot look at
+frame dot look at
+frame dot look at
+root part dot position
+root part dot position
+root part dot position
+camera dot c frame point
+camera dot c frame point
+camera dot c frame point
+two world space and then we want to set
+two world space and then we want to set
+two world space and then we want to set
+a arbitrary vector three zero zero
+a arbitrary vector three zero zero
+a arbitrary vector three zero zero
+and then another a very large negative
+and then another a very large negative
+and then another a very large negative
+value
+so this basically takes our root part
+so this basically takes our root part
+so this basically takes our root part
+and makes it look
+and makes it look
+and makes it look
+towards our sort of our camera c
+towards our sort of our camera c
+towards our sort of our camera c
+frame focus basically but just to make
+frame focus basically but just to make
+frame focus basically but just to make
+it easier we just use our camera
+it easier we just use our camera
+it easier we just use our camera
+c frame and
+c frame and
+c frame and
+you might want to just set our root
+you might want to just set our root
+you might want to just set our root
+part.c
+part.c
+part.c
+frame to this but it'll lead to
+frame to this but it'll lead to
+frame to this but it'll lead to
+rotations
+rotations
+rotations
+on all axes not just the y which is the
+on all axes not just the y which is the
+on all axes not just the y which is the
+one we want to rotate
+one we want to rotate
+one we want to rotate
+so now we need to do root part
+so now we need to do root part
+so now we need to do root part
+dot c frame equals c frame dot from
+dot c frame equals c frame dot from
+dot c frame equals c frame dot from
+matrix and we need to do root part
+matrix and we need to do root part
+matrix and we need to do root part
+dot position then looking c
+dot position then looking c
+dot position then looking c
+frame dot x vector then we need to do
+frame dot x vector then we need to do
+frame dot x vector then we need to do
+root part dot c frame dot y
+root part dot c frame dot y
+root part dot c frame dot y
+vector so this basically extracts the y
+vector so this basically extracts the y
+vector so this basically extracts the y
+component like rotational component of
+component like rotational component of
+component like rotational component of
+our looking c
+our looking c
+our looking c
+frame so we can keep everything else
+frame so we can keep everything else
+frame so we can keep everything else
+about our player character but just
+about our player character but just
+about our player character but just
+change its like y direction which is
+change its like y direction which is
+change its like y direction which is
+exactly what we want
+exactly what we want
+exactly what we want
+so if we were to play this
+you can see our character rotates
+you can see our character rotates
+you can see our character rotates
+with our mouse which is exactly what we
+with our mouse which is exactly what we
+with our mouse which is exactly what we
+want
+want
+want
+and sometimes i think that might not
+and sometimes i think that might not
+and sometimes i think that might not
+work so one thing you want to add just
+work so one thing you want to add just
+work so one thing you want to add just
+in case
+in case
+in case
+is set our humanoid dot
+is set our humanoid dot
+is set our humanoid dot
+auto rotate to false just
+auto rotate to false just
+auto rotate to false just
+in case it doesn't work
+in case it doesn't work
+in case it doesn't work
+mine works fine but humanoid rotate
+mine works fine but humanoid rotate
+mine works fine but humanoid rotate
+false just makes it a little bit better
+false just makes it a little bit better
+false just makes it a little bit better
+and just in case you're wondering the
+and just in case you're wondering the
+and just in case you're wondering the
+reason we didn't just
+reason we didn't just
+reason we didn't just
+set our camera angle x and camera angle
+set our camera angle x and camera angle
+set our camera angle x and camera angle
+y directly
+y directly
+y directly
+to our root part.c frame is because
+to our root part.c frame is because
+to our root part.c frame is because
+when i did that and like the player ran
+when i did that and like the player ran
+when i did that and like the player ran
+into a wall the wall kind of
+into a wall the wall kind of
+into a wall the wall kind of
+stopped their character from rotating
+stopped their character from rotating
+stopped their character from rotating
+for like a few frames
+for like a few frames
+for like a few frames
+so the body sort of became offset using
+so the body sort of became offset using
+so the body sort of became offset using
+this method our camera stays the same
+this method our camera stays the same
+this method our camera stays the same
+but our body always tracks the camera
+but our body always tracks the camera
+but our body always tracks the camera
+not the body just relatively being
+not the body just relatively being
+not the body just relatively being
+edited by the current
+edited by the current
+edited by the current
+camera angle so that's about it for this
+camera angle so that's about it for this
+camera angle so that's about it for this
+video i hope you enjoyed
+video i hope you enjoyed
+video i hope you enjoyed
+if you have any questions make sure to
+if you have any questions make sure to
+if you have any questions make sure to
+comment them down below
+comment them down below
+comment them down below
+if something doesn't work make sure to
+if something doesn't work make sure to
+if something doesn't work make sure to
+tell me i'll make sure to fix it
+tell me i'll make sure to fix it
+tell me i'll make sure to fix it
+and make sure to comment any other
+and make sure to comment any other
+and make sure to comment any other
+suggestions that you have
+suggestions that you have
+suggestions that you have
+if you enjoyed this video make sure to
+if you enjoyed this video make sure to
+if you enjoyed this video make sure to
+like and subscribe
+like and subscribe
+like and subscribe
+but i hope you guys have a nice day and
+goodbye
+you

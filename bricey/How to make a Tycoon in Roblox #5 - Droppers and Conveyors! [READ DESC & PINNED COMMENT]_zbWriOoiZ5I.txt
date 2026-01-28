@@ -1,0 +1,1522 @@
+so we have the basis for our tycoon we
+so we have the basis for our tycoon we
+so we have the basis for our tycoon we
+made
+made
+made
+buttons we have unlockables we have our
+buttons we have unlockables we have our
+buttons we have unlockables we have our
+base we have our component system but
+base we have our component system but
+base we have our component system but
+one thing you're
+one thing you're
+one thing you're
+we're missing is the ability to make
+we're missing is the ability to make
+we're missing is the ability to make
+money that's why in this video we'll be
+money that's why in this video we'll be
+money that's why in this video we'll be
+implementing a dropper
+implementing a dropper
+implementing a dropper
+and conveyor to at least partially solve
+and conveyor to at least partially solve
+and conveyor to at least partially solve
+that problem
+that problem
+that problem
+so we're going to be making a typical
+so we're going to be making a typical
+so we're going to be making a typical
+tycoon dropper that drops parts and a
+tycoon dropper that drops parts and a
+tycoon dropper that drops parts and a
+conveyor that
+conveyor that
+conveyor that
+moves it along and this will all be
+moves it along and this will all be
+moves it along and this will all be
+created using the component system that
+created using the component system that
+created using the component system that
+we
+we
+we
+created in the second video so stay
+created in the second video so stay
+created in the second video so stay
+tuned
+tuned
+tuned
+for that like the video if you enjoyed
+for that like the video if you enjoyed
+for that like the video if you enjoyed
+it subscribe to my channel
+it subscribe to my channel
+it subscribe to my channel
+for more tycoon videos but without
+for more tycoon videos but without
+for more tycoon videos but without
+further ado
+further ado
+further ado
+let's get started
+let's get started
+let's get started
+so i have a dropper model in front of me
+so i have a dropper model in front of me
+so i have a dropper model in front of me
+it's a very simple model
+it's a very simple model
+it's a very simple model
+it consists of a couple of parts and
+it consists of a couple of parts and
+it consists of a couple of parts and
+then one important thing to note is this
+then one important thing to note is this
+then one important thing to note is this
+part
+part
+part
+named spout it's sort of close to where
+named spout it's sort of close to where
+named spout it's sort of close to where
+i want my
+i want my
+i want my
+drops to drop from the dropper and
+drops to drop from the dropper and
+drops to drop from the dropper and
+inside of it i'm going to click the plus
+inside of it i'm going to click the plus
+inside of it i'm going to click the plus
+and create an attachment and so
+and create an attachment and so
+and create an attachment and so
+attachment is basically just
+attachment is basically just
+attachment is basically just
+a point in space on your part and
+a point in space on your part and
+a point in space on your part and
+usually it's used for constraints and
+usually it's used for constraints and
+usually it's used for constraints and
+stuff but in this situation we can use
+stuff but in this situation we can use
+stuff but in this situation we can use
+it for position data
+it for position data
+it for position data
+so i want this attachment to be located
+so i want this attachment to be located
+so i want this attachment to be located
+where i want my drops to spawn so i'm
+where i want my drops to spawn so i'm
+where i want my drops to spawn so i'm
+going to move it down a little bit
+going to move it down a little bit
+going to move it down a little bit
+right there it's good and i'm using
+right there it's good and i'm using
+right there it's good and i'm using
+attachments instead of parts just
+attachments instead of parts just
+attachments instead of parts just
+because it's a little simpler and makes
+because it's a little simpler and makes
+because it's a little simpler and makes
+my
+my
+my
+life a little bit easier and i'm going
+life a little bit easier and i'm going
+life a little bit easier and i'm going
+to make sure to name this attachment
+to make sure to name this attachment
+to make sure to name this attachment
+spawn
+spawn
+spawn
+because we'll be using it in the code a
+because we'll be using it in the code a
+because we'll be using it in the code a
+little bit later
+little bit later
+little bit later
+so that's our dropper done and you'll
+so that's our dropper done and you'll
+so that's our dropper done and you'll
+notice here i have a little
+notice here i have a little
+notice here i have a little
+part it sort of looks like copper this
+part it sort of looks like copper this
+part it sort of looks like copper this
+is going to be a copper dropper
+is going to be a copper dropper
+is going to be a copper dropper
+and this is this drop that will fall
+and this is this drop that will fall
+and this is this drop that will fall
+from it what i'm going to do is i
+from it what i'm going to do is i
+from it what i'm going to do is i
+already named it copper
+already named it copper
+already named it copper
+i'm going to take it into server storage
+i'm going to take it into server storage
+i'm going to take it into server storage
+and create a new folder in server
+and create a new folder in server
+and create a new folder in server
+storage
+storage
+storage
+called drops
+called drops
+called drops
+there we go i'm going to take my copper
+there we go i'm going to take my copper
+there we go i'm going to take my copper
+and drag it into the drops
+and drag it into the drops
+and drag it into the drops
+folder you can name it whatever you want
+folder you can name it whatever you want
+folder you can name it whatever you want
+just make sure to change the name
+just make sure to change the name
+just make sure to change the name
+in your code and so
+in your code and so
+in your code and so
+now we can go through the normal
+now we can go through the normal
+now we can go through the normal
+component creation process
+component creation process
+component creation process
+by dragging in our template here's our
+by dragging in our template here's our
+by dragging in our template here's our
+template
+template
+template
+and we can put our dropper inside of the
+and we can put our dropper inside of the
+and we can put our dropper inside of the
+template and then we can move the
+template and then we can move the
+template and then we can move the
+dropper to where we want it so i'm just
+dropper to where we want it so i'm just
+dropper to where we want it so i'm just
+going to move it
+going to move it
+going to move it
+around here somewhere maybe rotate it a
+around here somewhere maybe rotate it a
+around here somewhere maybe rotate it a
+little bit
+little bit
+little bit
+there we go that should be good for now
+there we go that should be good for now
+there we go that should be good for now
+while we're testing
+while we're testing
+while we're testing
+okay there's our dropper done now we can
+okay there's our dropper done now we can
+okay there's our dropper done now we can
+create a tag in our tag editor in the
+create a tag in our tag editor in the
+create a tag in our tag editor in the
+bottom right
+bottom right
+bottom right
+so i'm going to create a new tag called
+so i'm going to create a new tag called
+so i'm going to create a new tag called
+the dropper
+the dropper
+the dropper
+select our dropper and then add the
+select our dropper and then add the
+select our dropper and then add the
+dropper
+dropper
+dropper
+so the dropper is already added just
+so the dropper is already added just
+so the dropper is already added just
+because i use this
+because i use this
+because i use this
+another time and also you'll notice we
+another time and also you'll notice we
+another time and also you'll notice we
+have the unlockable so it
+have the unlockable so it
+have the unlockable so it
+has a dropper and unlockable component
+has a dropper and unlockable component
+has a dropper and unlockable component
+because droppers
+because droppers
+because droppers
+can be unlocked so speaking of an
+can be unlocked so speaking of an
+can be unlocked so speaking of an
+unlockable dropper
+unlockable dropper
+unlockable dropper
+that brings up another good point we
+that brings up another good point we
+that brings up another good point we
+have to make a button
+have to make a button
+have to make a button
+for our dropper so i'm going to move
+for our dropper so i'm going to move
+for our dropper so i'm going to move
+this button a little out of the way
+this button a little out of the way
+this button a little out of the way
+just so i can make a new one i'm going
+just so i can make a new one i'm going
+just so i can make a new one i'm going
+to use ctrl d to duplicate that
+to use ctrl d to duplicate that
+to use ctrl d to duplicate that
+drag it over sort of close to where the
+drag it over sort of close to where the
+drag it over sort of close to where the
+dropper is
+and then inside of the properties window
+and then inside of the properties window
+and then inside of the properties window
+of our button
+of our button
+of our button
+i'm going to leave the cost to zero
+i'm going to leave the cost to zero
+i'm going to leave the cost to zero
+change the display to
+change the display to
+change the display to
+copper space dropper and then the id
+copper space dropper and then the id
+copper space dropper and then the id
+i'm just gonna have copper dropper with
+i'm just gonna have copper dropper with
+i'm just gonna have copper dropper with
+no spaces
+no spaces
+no spaces
+and then in our dropper itself
+and then in our dropper itself
+and then in our dropper itself
+i'm going to add an attribute and this
+i'm going to add an attribute and this
+i'm going to add an attribute and this
+will be the unlock id for our unlockable
+will be the unlock id for our unlockable
+will be the unlock id for our unlockable
+it'll be a string and this id
+it'll be a string and this id
+it'll be a string and this id
+will be copper dropper so make sure the
+will be copper dropper so make sure the
+will be copper dropper so make sure the
+id
+id
+id
+of our button matches the unlock id of
+of our button matches the unlock id of
+of our button matches the unlock id of
+our dropper
+our dropper
+our dropper
+so out of the box this should
+so out of the box this should
+so out of the box this should
+function at least in a primitive way so
+function at least in a primitive way so
+function at least in a primitive way so
+let's just try it out
+so we're in here we can hold e to get
+so we're in here we can hold e to get
+so we're in here we can hold e to get
+the copper dropper and you can see it's
+the copper dropper and you can see it's
+the copper dropper and you can see it's
+in
+in
+in
+now it doesn't do anything because we
+now it doesn't do anything because we
+now it doesn't do anything because we
+haven't added the components to it yet
+haven't added the components to it yet
+haven't added the components to it yet
+for the dropper but you can see with no
+for the dropper but you can see with no
+for the dropper but you can see with no
+extra code it spawns in which is great
+extra code it spawns in which is great
+extra code it spawns in which is great
+so now let's get scripting with our
+so now let's get scripting with our
+so now let's get scripting with our
+droppers so i'm going to go into server
+droppers so i'm going to go into server
+droppers so i'm going to go into server
+script service
+script service
+script service
+create a new component or module script
+create a new component or module script
+create a new component or module script
+underneath our components and name this
+underneath our components and name this
+underneath our components and name this
+dropper
+dropper
+dropper
+make sure the name is the same as the
+make sure the name is the same as the
+make sure the name is the same as the
+tag name because we use that
+tag name because we use that
+tag name because we use that
+and we're going to go through the same
+and we're going to go through the same
+and we're going to go through the same
+deal you guys have done this
+deal you guys have done this
+deal you guys have done this
+a bunch of times now so i'm not really
+a bunch of times now so i'm not really
+a bunch of times now so i'm not really
+going to commentate
+going to commentate
+going to commentate
+it's just a basic object oriented class
+it's just a basic object oriented class
+it's just a basic object oriented class
+definition
+definition
+definition
+once again
+and i'm going to follow up with my knit
+and i'm going to follow up with my knit
+and i'm going to follow up with my knit
+dropper in it and then up here i'm going
+dropper in it and then up here i'm going
+dropper in it and then up here i'm going
+to finish
+to finish
+to finish
+the dropper new by single self equals
+the dropper new by single self equals
+the dropper new by single self equals
+set meta table blank
+set meta table blank
+set meta table blank
+table and dropper and then return self
+table and dropper and then return self
+table and dropper and then return self
+and then we are going to need both the
+and then we are going to need both the
+and then we are going to need both the
+tycoon and the instance i'm going to say
+tycoon and the instance i'm going to say
+tycoon and the instance i'm going to say
+self.tycoon equals tycoon
+self.tycoon equals tycoon
+self.tycoon equals tycoon
+and self.instance equals
+and self.instance equals
+and self.instance equals
+instance there we go and
+instance there we go and
+instance there we go and
+we are going to need a few other values
+we are going to need a few other values
+we are going to need a few other values
+from our dropper but i'm not going to
+from our dropper but i'm not going to
+from our dropper but i'm not going to
+hard code them
+hard code them
+hard code them
+in this i'm going to go to server
+in this i'm going to go to server
+in this i'm going to go to server
+storage go to my template and go to my
+storage go to my template and go to my
+storage go to my template and go to my
+dropper and add
+dropper and add
+dropper and add
+some attributes so droppers they vary in
+some attributes so droppers they vary in
+some attributes so droppers they vary in
+a couple ways
+a couple ways
+a couple ways
+the first way is going to be the
+the first way is going to be the
+the first way is going to be the
+drop template so i'm going to make a new
+drop template so i'm going to make a new
+drop template so i'm going to make a new
+attribute named
+attribute named
+attribute named
+drop which is going to be string and
+drop which is going to be string and
+drop which is going to be string and
+this string of our drop is going to
+this string of our drop is going to
+this string of our drop is going to
+correspond
+correspond
+correspond
+to our copper underneath the drops
+to our copper underneath the drops
+to our copper underneath the drops
+folder so
+folder so
+folder so
+i'm going to say copper
+and then in below that we're also going
+and then in below that we're also going
+and then in below that we're also going
+to put
+to put
+to put
+a new number value which will be the
+a new number value which will be the
+a new number value which will be the
+rate
+rate
+rate
+so the rate will be in how many times
+so the rate will be in how many times
+so the rate will be in how many times
+a second something has dropped so i'm
+a second something has dropped so i'm
+a second something has dropped so i'm
+just gonna do
+just gonna do
+just gonna do
+one drop per one second so a rate of one
+one drop per one second so a rate of one
+one drop per one second so a rate of one
+and we can leave the unlock id down
+and we can leave the unlock id down
+and we can leave the unlock id down
+there so we have drop which will be
+there so we have drop which will be
+there so we have drop which will be
+copper and their rate
+copper and their rate
+copper and their rate
+which will be one and we can get those
+which will be one and we can get those
+which will be one and we can get those
+values here
+values here
+values here
+so underneath the self dot instance we
+so underneath the self dot instance we
+so underneath the self dot instance we
+can say self.rate
+can say self.rate
+can say self.rate
+equals instance get
+equals instance get
+equals instance get
+attribute rate
+attribute rate
+attribute rate
+and then for the drop template we first
+and then for the drop template we first
+and then for the drop template we first
+need to get the drops folder in server
+need to get the drops folder in server
+need to get the drops folder in server
+storage
+storage
+storage
+by going to the top and saying local
+by going to the top and saying local
+by going to the top and saying local
+drops equals or drops folder
+drops equals or drops folder
+drops equals or drops folder
+equals game get service
+equals game get service
+equals game get service
+server storage dot
+server storage dot
+server storage dot
+drops there we go and then for our
+drops there we go and then for our
+drops there we go and then for our
+drop template we can just say self.drop
+drop template we can just say self.drop
+drop template we can just say self.drop
+template
+template
+template
+equals i'm going to do drop folder
+equals i'm going to do drop folder
+equals i'm going to do drop folder
+and instead of doing find first child or
+and instead of doing find first child or
+and instead of doing find first child or
+wait for child i'm just going to use
+wait for child i'm just going to use
+wait for child i'm just going to use
+brackets
+brackets
+brackets
+and this these brackets assume that the
+and this these brackets assume that the
+and this these brackets assume that the
+drop exists which it should so if you
+drop exists which it should so if you
+drop exists which it should so if you
+get any weird
+get any weird
+get any weird
+errors make sure that your drop is
+errors make sure that your drop is
+errors make sure that your drop is
+underneath the drops folder and server
+underneath the drops folder and server
+underneath the drops folder and server
+storage because
+storage because
+storage because
+you want to figure this out before the
+you want to figure this out before the
+you want to figure this out before the
+game starts you don't want to get a nail
+game starts you don't want to get a nail
+game starts you don't want to get a nail
+error
+error
+error
+like in the middle of nowhere so that's
+like in the middle of nowhere so that's
+like in the middle of nowhere so that's
+why we're doing this so inside of these
+why we're doing this so inside of these
+why we're doing this so inside of these
+brackets i'm going to say
+brackets i'm going to say
+brackets i'm going to say
+instance get attribute
+instance get attribute
+instance get attribute
+drop so the drop is copper it'll look in
+drop so the drop is copper it'll look in
+drop so the drop is copper it'll look in
+our drop folder a drops folder i should
+our drop folder a drops folder i should
+our drop folder a drops folder i should
+say
+say
+say
+and it will see
+and it will see
+and it will see
+if the drop exists and if it doesn't
+if the drop exists and if it doesn't
+if the drop exists and if it doesn't
+exist it'll probably err
+exist it'll probably err
+exist it'll probably err
+just to make like let you know that you
+just to make like let you know that you
+just to make like let you know that you
+need to fix it
+need to fix it
+need to fix it
+and then for convenience i'm also going
+and then for convenience i'm also going
+and then for convenience i'm also going
+to define the drop spawn which is that
+to define the drop spawn which is that
+to define the drop spawn which is that
+attachment that we talked about earlier
+attachment that we talked about earlier
+attachment that we talked about earlier
+so the self.drop spawn will be equal to
+so the self.drop spawn will be equal to
+so the self.drop spawn will be equal to
+instance
+instance
+instance
+dot spout or whatever you named it
+dot spout or whatever you named it
+dot spout or whatever you named it
+dot spawn or whatever you named it and
+dot spawn or whatever you named it and
+dot spawn or whatever you named it and
+that is our new function
+that is our new function
+that is our new function
+done so now we can move on to our init
+done so now we can move on to our init
+done so now we can move on to our init
+function
+function
+function
+that i put down here and so this is
+that i put down here and so this is
+that i put down here and so this is
+going to be a very
+going to be a very
+going to be a very
+simple init statement all we have to do
+simple init statement all we have to do
+simple init statement all we have to do
+is run a function every so
+is run a function every so
+is run a function every so
+often that will drop a part
+often that will drop a part
+often that will drop a part
+so i'm going to use a code routine for
+so i'm going to use a code routine for
+so i'm going to use a code routine for
+this and the reason i'm using a co
+this and the reason i'm using a co
+this and the reason i'm using a co
+routine just so
+routine just so
+routine just so
+we don't have our components yielding
+we don't have our components yielding
+we don't have our components yielding
+anything and if you don't know about
+anything and if you don't know about
+anything and if you don't know about
+code routines or response or whatever or
+code routines or response or whatever or
+code routines or response or whatever or
+multi-threading and lua
+multi-threading and lua
+multi-threading and lua
+i v on that i'll link it right now so
+i v on that i'll link it right now so
+i v on that i'll link it right now so
+i'm going to say
+i'm going to say
+i'm going to say
+co routine dot wrap and then inside of
+co routine dot wrap and then inside of
+co routine dot wrap and then inside of
+this i'm going to find a new function
+this i'm going to find a new function
+this i'm going to find a new function
+and all we want to do here is say wow
+and all we want to do here is say wow
+and all we want to do here is say wow
+true
+true
+true
+do and then we want to
+do and then we want to
+do and then we want to
+wait self.rate
+and then below that below our init we're
+and then below that below our init we're
+and then below that below our init we're
+going to say function
+going to say function
+going to say function
+dropper drop
+dropper drop
+dropper drop
+and then we'll and after we've defined a
+and then we'll and after we've defined a
+and then we'll and after we've defined a
+function we can go back up to the wall
+function we can go back up to the wall
+function we can go back up to the wall
+true
+true
+true
+and then below before the wait we can
+and then below before the wait we can
+and then below before the wait we can
+say self
+say self
+say self
+drop so what's happening is we're
+drop so what's happening is we're
+drop so what's happening is we're
+creating a
+creating a
+creating a
+routine that will loop
+routine that will loop
+routine that will loop
+every so often and drop the part
+every so often and drop the part
+every so often and drop the part
+now realistically if you want to be
+now realistically if you want to be
+now realistically if you want to be
+ultra safe and
+ultra safe and
+ultra safe and
+ultra secure you wouldn't use walter
+ultra secure you wouldn't use walter
+ultra secure you wouldn't use walter
+you'd use wall
+you'd use wall
+you'd use wall
+a bullion or something and or maybe use
+a bullion or something and or maybe use
+a bullion or something and or maybe use
+like run service or something but
+like run service or something but
+like run service or something but
+this wall true is just very simple and
+this wall true is just very simple and
+this wall true is just very simple and
+very sweet and it's
+very sweet and it's
+very sweet and it's
+easy and make sure this is very
+easy and make sure this is very
+easy and make sure this is very
+important that you put
+important that you put
+important that you put
+a set of parentheses at the end of your
+a set of parentheses at the end of your
+a set of parentheses at the end of your
+corroutine dot wrap
+corroutine dot wrap
+corroutine dot wrap
+because this quarter change dot wrap
+because this quarter change dot wrap
+because this quarter change dot wrap
+just creates a code routine it doesn't
+just creates a code routine it doesn't
+just creates a code routine it doesn't
+actually call it
+actually call it
+actually call it
+so by putting these parentheses it will
+so by putting these parentheses it will
+so by putting these parentheses it will
+call the function that it creates
+call the function that it creates
+call the function that it creates
+in here and i decided to keep this
+in here and i decided to keep this
+in here and i decided to keep this
+function in line and not like make it
+function in line and not like make it
+function in line and not like make it
+separate down here just because it's
+separate down here just because it's
+separate down here just because it's
+short and doesn't really do that much
+short and doesn't really do that much
+short and doesn't really do that much
+and now we can
+and now we can
+and now we can
+go to our dropper drop function now this
+go to our dropper drop function now this
+go to our dropper drop function now this
+will be pretty simple all we got to do
+will be pretty simple all we got to do
+will be pretty simple all we got to do
+is clone our drop template so i'll say
+is clone our drop template so i'll say
+is clone our drop template so i'll say
+local drop
+local drop
+local drop
+equals self dot drop template
+equals self dot drop template
+equals self dot drop template
+clone there we go and then we'll say
+clone there we go and then we'll say
+clone there we go and then we'll say
+drop
+drop
+drop
+dot position equals self dot drop
+dot position equals self dot drop
+dot position equals self dot drop
+spawn dot world position you can use c
+spawn dot world position you can use c
+spawn dot world position you can use c
+frames if you want i don't think it's
+frames if you want i don't think it's
+frames if you want i don't think it's
+necessary in my situation so i'm not
+necessary in my situation so i'm not
+necessary in my situation so i'm not
+and then below that we're just going to
+and then below that we're just going to
+and then below that we're just going to
+say drop dot parent
+say drop dot parent
+say drop dot parent
+equals self dot instance so the drop
+equals self dot instance so the drop
+equals self dot instance so the drop
+will be oh i suppose parent wrong whoops
+will be oh i suppose parent wrong whoops
+will be oh i suppose parent wrong whoops
+there you go
+there you go
+there you go
+so the drop will be positioned at our
+so the drop will be positioned at our
+so the drop will be positioned at our
+spawn
+spawn
+spawn
+and then we will parent it to the
+and then we will parent it to the
+and then we will parent it to the
+workspace indirectly via the parent
+workspace indirectly via the parent
+workspace indirectly via the parent
+of our dropper just so it's nice and
+of our dropper just so it's nice and
+of our dropper just so it's nice and
+contained and we don't clutter our
+contained and we don't clutter our
+contained and we don't clutter our
+workspace within
+workspace within
+workspace within
+with a bunch of random crap and then
+with a bunch of random crap and then
+with a bunch of random crap and then
+we're not done yet because one thing
+we're not done yet because one thing
+we're not done yet because one thing
+that i've noticed i've made a tycoon
+that i've noticed i've made a tycoon
+that i've noticed i've made a tycoon
+game before
+game before
+game before
+is that you always want a fail save for
+is that you always want a fail save for
+is that you always want a fail save for
+your drops because
+your drops because
+your drops because
+if they don't hit the collector at the
+if they don't hit the collector at the
+if they don't hit the collector at the
+end of the conveyor
+end of the conveyor
+end of the conveyor
+and they just sit there they'll never
+and they just sit there they'll never
+and they just sit there they'll never
+despawn on their own so that's why we're
+despawn on their own so that's why we're
+despawn on their own so that's why we're
+going to employ a very useful service
+going to employ a very useful service
+going to employ a very useful service
+that roblox has called
+that roblox has called
+that roblox has called
+the debris service so i'm going to go to
+the debris service so i'm going to go to
+the debris service so i'm going to go to
+the very top of the script and say
+the very top of the script and say
+the very top of the script and say
+local debris equals
+local debris equals
+local debris equals
+game get service debris
+game get service debris
+game get service debris
+and then below our parentage we can say
+and then below our parentage we can say
+and then below our parentage we can say
+debris
+debris
+debris
+add item drop
+add item drop
+add item drop
+and then the next argument
+and then the next argument
+and then the next argument
+is the amount of seconds you want your
+is the amount of seconds you want your
+is the amount of seconds you want your
+item to stay
+item to stay
+item to stay
+in the workspace before it gets
+in the workspace before it gets
+in the workspace before it gets
+destroyed so i'm just going to do 10
+destroyed so i'm just going to do 10
+destroyed so i'm just going to do 10
+seconds
+seconds
+seconds
+that's a good value for my situation and
+that's a good value for my situation and
+that's a good value for my situation and
+the conveyors i'll be making
+the conveyors i'll be making
+the conveyors i'll be making
+change this value to whatever you want
+change this value to whatever you want
+change this value to whatever you want
+don't make it too short
+don't make it too short
+don't make it too short
+or the drops will get destroyed before
+or the drops will get destroyed before
+or the drops will get destroyed before
+they get collected and you won't get any
+they get collected and you won't get any
+they get collected and you won't get any
+money
+money
+money
+but this is just for overflow if the
+but this is just for overflow if the
+but this is just for overflow if the
+player interacts with it or if you're
+player interacts with it or if you're
+player interacts with it or if you're
+getting bugs or something
+getting bugs or something
+getting bugs or something
+you don't want to spawn hundreds and
+you don't want to spawn hundreds and
+you don't want to spawn hundreds and
+hundreds of parts that just won't
+hundreds of parts that just won't
+hundreds of parts that just won't
+get destroyed so we should be ready to
+get destroyed so we should be ready to
+get destroyed so we should be ready to
+go to
+go to
+go to
+test this so i'm going to hit play
+and create my copper dropper
+and create my copper dropper
+and create my copper dropper
+and you can see the drops do indeed
+and you can see the drops do indeed
+and you can see the drops do indeed
+spawn in
+spawn in
+spawn in
+and let's just wait a little bit and see
+and let's just wait a little bit and see
+and let's just wait a little bit and see
+if our little debris statement is
+if our little debris statement is
+if our little debris statement is
+working
+working
+working
+wait a couple of seconds and these
+wait a couple of seconds and these
+wait a couple of seconds and these
+should start disappearing you can see
+should start disappearing you can see
+should start disappearing you can see
+they're all going away
+they're all going away
+they're all going away
+and that's great now obviously this is
+and that's great now obviously this is
+and that's great now obviously this is
+kind of useless
+kind of useless
+kind of useless
+without a conveyor so let's get that
+without a conveyor so let's get that
+without a conveyor so let's get that
+implemented so i have a very simple
+implemented so i have a very simple
+implemented so i have a very simple
+conveyor set up
+conveyor set up
+conveyor set up
+in front of me consists of three parts
+in front of me consists of three parts
+in front of me consists of three parts
+and make sure the middle part of your
+and make sure the middle part of your
+and make sure the middle part of your
+conveyor the part where the parts will
+conveyor the part where the parts will
+conveyor the part where the parts will
+actually
+actually
+actually
+like travel across is named belt because
+like travel across is named belt because
+like travel across is named belt because
+we will use that in our code
+we will use that in our code
+we will use that in our code
+now most of the time in roblox creating
+now most of the time in roblox creating
+now most of the time in roblox creating
+a conveyor is as easy as going into the
+a conveyor is as easy as going into the
+a conveyor is as easy as going into the
+properties and setting
+properties and setting
+properties and setting
+the velocity in our case it's assembly
+the velocity in our case it's assembly
+the velocity in our case it's assembly
+linear velocity
+linear velocity
+linear velocity
+but one thing with tycoons
+but one thing with tycoons
+but one thing with tycoons
+is the fact that your
+is the fact that your
+is the fact that your
+tycoons may not be oriented in the same
+tycoons may not be oriented in the same
+tycoons may not be oriented in the same
+direction every time
+direction every time
+direction every time
+so this assembly linear velocity will
+so this assembly linear velocity will
+so this assembly linear velocity will
+not apply in different
+not apply in different
+not apply in different
+orientations so you're going to have to
+orientations so you're going to have to
+orientations so you're going to have to
+manually
+manually
+manually
+script that in and one thing you want to
+script that in and one thing you want to
+script that in and one thing you want to
+note
+note
+note
+when creating your belt is that the
+when creating your belt is that the
+when creating your belt is that the
+front face
+front face
+front face
+is pointing in the right direction the
+is pointing in the right direction the
+is pointing in the right direction the
+direction you want it to go
+direction you want it to go
+direction you want it to go
+so if you want to see that go to belt go
+so if you want to see that go to belt go
+so if you want to see that go to belt go
+to your belt
+to your belt
+to your belt
+and then right click and show
+and then right click and show
+and then right click and show
+orientation indicator
+orientation indicator
+orientation indicator
+this front little icon should be facing
+this front little icon should be facing
+this front little icon should be facing
+where you want
+where you want
+where you want
+your parts to go so front's facing to
+your parts to go so front's facing to
+your parts to go so front's facing to
+the right so the parts will go from
+the right so the parts will go from
+the right so the parts will go from
+left to right now that we have that all
+left to right now that we have that all
+left to right now that we have that all
+out of the way
+out of the way
+out of the way
+let's drag our template from server
+let's drag our template from server
+let's drag our template from server
+storage into the workspace
+storage into the workspace
+storage into the workspace
+and we can take our conveyor and move it
+and we can take our conveyor and move it
+and we can take our conveyor and move it
+to the proper location
+to the proper location
+to the proper location
+so i'm going to drag it over here and
+so i'm going to drag it over here and
+so i'm going to drag it over here and
+then rotate it
+just around whoops actually use ctrl r
+just around whoops actually use ctrl r
+just around whoops actually use ctrl r
+to rotate it there you go that's a
+to rotate it there you go that's a
+to rotate it there you go that's a
+little easier
+little easier
+little easier
+and then our front is facing away from
+and then our front is facing away from
+and then our front is facing away from
+the dropper because we want the parts to
+the dropper because we want the parts to
+the dropper because we want the parts to
+go
+go
+go
+away from the dropper that's great so
+away from the dropper that's great so
+away from the dropper that's great so
+i'm not going to give this an unlockable
+i'm not going to give this an unlockable
+i'm not going to give this an unlockable
+because in most icons i'm pretty sure
+because in most icons i'm pretty sure
+because in most icons i'm pretty sure
+the
+the
+the
+conveyor spawned in off the bat when you
+conveyor spawned in off the bat when you
+conveyor spawned in off the bat when you
+own the tycoon
+own the tycoon
+own the tycoon
+you can give it unlockable if you want
+you can give it unlockable if you want
+you can give it unlockable if you want
+but i don't really care
+but i don't really care
+but i don't really care
+so i'm going to take my conveyor and
+so i'm going to take my conveyor and
+so i'm going to take my conveyor and
+drag it into the template model
+drag it into the template model
+drag it into the template model
+just so it's part of our tycoon and i'm
+just so it's part of our tycoon and i'm
+just so it's part of our tycoon and i'm
+going to add a
+going to add a
+going to add a
+conveyor component
+conveyor component
+conveyor component
+and i'm gonna make sure my conveyor is
+and i'm gonna make sure my conveyor is
+and i'm gonna make sure my conveyor is
+highlighted and then click
+highlighted and then click
+highlighted and then click
+the conveyor tag so now it's tagged
+the conveyor tag so now it's tagged
+the conveyor tag so now it's tagged
+we can take the template drop it back
+we can take the template drop it back
+we can take the template drop it back
+into server storage
+into server storage
+into server storage
+and get scripting so you know the drill
+and get scripting so you know the drill
+and get scripting so you know the drill
+new component
+new component
+new component
+module script rename it to component
+module script rename it to component
+module script rename it to component
+or conveyor i should say
+and then we write all
+okay so we will need to get the tycoon
+okay so we will need to get the tycoon
+okay so we will need to get the tycoon
+and the instance for our conveyor
+we don't really need a tycoon but we do
+we don't really need a tycoon but we do
+we don't really need a tycoon but we do
+need the instance so i'm going to do
+need the instance so i'm going to do
+need the instance so i'm going to do
+self.instance
+self.instance
+self.instance
+equals instance and then one thing we
+equals instance and then one thing we
+equals instance and then one thing we
+want for our conveyor is be able to
+want for our conveyor is be able to
+want for our conveyor is be able to
+configure the speed
+configure the speed
+configure the speed
+so i'm going to go back to our template
+so i'm going to go back to our template
+so i'm going to go back to our template
+go to our conveyor hover over the model
+go to our conveyor hover over the model
+go to our conveyor hover over the model
+and add a new attribute
+and add a new attribute
+and add a new attribute
+and i'm going to make a new number
+and i'm going to make a new number
+and i'm going to make a new number
+attribute and call this
+attribute and call this
+attribute and call this
+speed and for right now i'll just say it
+speed and for right now i'll just say it
+speed and for right now i'll just say it
+set it to 5 studs per second
+set it to 5 studs per second
+set it to 5 studs per second
+there we go so that's the speed of how
+there we go so that's the speed of how
+there we go so that's the speed of how
+fast the conveyor is going and we can
+fast the conveyor is going and we can
+fast the conveyor is going and we can
+get that value by saying self.speed
+get that value by saying self.speed
+get that value by saying self.speed
+equals instance get attribute
+equals instance get attribute
+equals instance get attribute
+speed there we go
+speed there we go
+speed there we go
+so that's really all we need and our new
+so that's really all we need and our new
+so that's really all we need and our new
+and then in our init
+and then in our init
+and then in our init
+which needed our belt by saying local
+which needed our belt by saying local
+which needed our belt by saying local
+belt eagle self.instance
+belt eagle self.instance
+belt eagle self.instance
+dot belt and then we'll say belt
+dot belt and then we'll say belt
+dot belt and then we'll say belt
+dot assembly linear velocity
+dot assembly linear velocity
+dot assembly linear velocity
+equals belt.c frame
+equals belt.c frame
+equals belt.c frame
+dot look vector times
+dot look vector times
+dot look vector times
+self.speed so what this will do is it
+self.speed so what this will do is it
+self.speed so what this will do is it
+will set the velocity
+will set the velocity
+will set the velocity
+and if you guys didn't know a part that
+and if you guys didn't know a part that
+and if you guys didn't know a part that
+is anchored
+is anchored
+is anchored
+with their their velocity set basically
+with their their velocity set basically
+with their their velocity set basically
+turns into a conveyor belt
+turns into a conveyor belt
+turns into a conveyor belt
+i assume that's common knowledge sorry
+i assume that's common knowledge sorry
+i assume that's common knowledge sorry
+for that but
+for that but
+for that but
+make sure your belt is anchored and if
+make sure your belt is anchored and if
+make sure your belt is anchored and if
+it is and if it has any assembly
+it is and if it has any assembly
+it is and if it has any assembly
+linear velocity it will exert that force
+linear velocity it will exert that force
+linear velocity it will exert that force
+to any parts that are touching it
+to any parts that are touching it
+to any parts that are touching it
+so in this case setting our assembly
+so in this case setting our assembly
+so in this case setting our assembly
+linear velocity
+linear velocity
+linear velocity
+to the look factor times self.speed will
+to the look factor times self.speed will
+to the look factor times self.speed will
+point it to wherever that little forward
+point it to wherever that little forward
+point it to wherever that little forward
+indicator i showed you earlier was going
+indicator i showed you earlier was going
+indicator i showed you earlier was going
+and we're multiplying it myself.speed to
+and we're multiplying it myself.speed to
+and we're multiplying it myself.speed to
+configure it since the look vector is a
+configure it since the look vector is a
+configure it since the look vector is a
+unit vector and therefore it doesn't
+unit vector and therefore it doesn't
+unit vector and therefore it doesn't
+really
+really
+really
+have any magnitude
+have any magnitude
+have any magnitude
+and that should work straight out of the
+and that should work straight out of the
+and that should work straight out of the
+box so let's
+box so let's
+box so let's
+test it out
+so let's just try standing on it you can
+so let's just try standing on it you can
+so let's just try standing on it you can
+see when we stand on the conveyor it
+see when we stand on the conveyor it
+see when we stand on the conveyor it
+moves us
+moves us
+moves us
+and then we can get our copper dropper
+and then we can get our copper dropper
+and then we can get our copper dropper
+and it drops parts
+and it drops parts
+and it drops parts
+towards the end of the conveyor and that
+towards the end of the conveyor and that
+towards the end of the conveyor and that
+is absolutely wonderful
+is absolutely wonderful
+is absolutely wonderful
+so that's it for this video i hope you
+so that's it for this video i hope you
+so that's it for this video i hope you
+enjoyed getting the basic framework done
+enjoyed getting the basic framework done
+enjoyed getting the basic framework done
+for our dropper and our conveyor in the
+for our dropper and our conveyor in the
+for our dropper and our conveyor in the
+next video
+next video
+next video
+we will be making the collector for our
+we will be making the collector for our
+we will be making the collector for our
+parts and also
+parts and also
+parts and also
+the little kiosk bank thing to
+the little kiosk bank thing to
+the little kiosk bank thing to
+turn your collected drops into
+turn your collected drops into
+turn your collected drops into
+money so stay tuned for that make sure
+money so stay tuned for that make sure
+money so stay tuned for that make sure
+to subscribe to my channel to stay up to
+to subscribe to my channel to stay up to
+to subscribe to my channel to stay up to
+date with
+date with
+date with
+the tycoon series comment any questions
+the tycoon series comment any questions
+the tycoon series comment any questions
+or suggestions down below make sure to
+or suggestions down below make sure to
+or suggestions down below make sure to
+like
+like
+like
+the video and also you can join my
+the video and also you can join my
+the video and also you can join my
+discord server the link will be in the
+discord server the link will be in the
+discord server the link will be in the
+description
+description
+description
+and also in the description you'll find
+and also in the description you'll find
+and also in the description you'll find
+the code for this video
+the code for this video
+the code for this video
+so other than that i hope you guys have
+so other than that i hope you guys have
+so other than that i hope you guys have
+a nice day
+a nice day
+a nice day
+and goodbye
+[Music]
+[Music]
+[Music]
+you

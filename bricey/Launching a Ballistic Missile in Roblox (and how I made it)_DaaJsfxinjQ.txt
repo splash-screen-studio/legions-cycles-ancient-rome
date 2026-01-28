@@ -1,0 +1,763 @@
+intercontinental ballistic missiles
+intercontinental ballistic missiles
+intercontinental ballistic missiles
+capable of delivering nuclear warheads
+capable of delivering nuclear warheads
+capable of delivering nuclear warheads
+across the entire globe to a pinpoint
+across the entire globe to a pinpoint
+across the entire globe to a pinpoint
+target location
+target location
+target location
+one of the most lethal weapons ever
+one of the most lethal weapons ever
+one of the most lethal weapons ever
+created by mankind
+created by mankind
+created by mankind
+so i decided to make one in roblox this
+so i decided to make one in roblox this
+so i decided to make one in roblox this
+is a really fun project to experiment
+is a really fun project to experiment
+is a really fun project to experiment
+with physics with particle design and
+with physics with particle design and
+with physics with particle design and
+just with some really cool
+just with some really cool
+just with some really cool
+code in this video i'll take you through
+code in this video i'll take you through
+code in this video i'll take you through
+the theory and code that makes this
+the theory and code that makes this
+the theory and code that makes this
+ballistic missile work and roblox
+ballistic missile work and roblox
+ballistic missile work and roblox
+and there'll also be a
+and there'll also be a
+and there'll also be a
+link to the place that i made this in in
+link to the place that i made this in in
+link to the place that i made this in in
+the description in case you want to
+the description in case you want to
+the description in case you want to
+check it out and play around with it so
+check it out and play around with it so
+check it out and play around with it so
+without further ado let's get into the
+without further ado let's get into the
+without further ado let's get into the
+video
+a ballistic missile
+a ballistic missile
+a ballistic missile
+follows a ballistic trajectory hence the
+follows a ballistic trajectory hence the
+follows a ballistic trajectory hence the
+name
+name
+name
+to deliver its payload usually like
+to deliver its payload usually like
+to deliver its payload usually like
+nuclear warheads to a target so what a
+nuclear warheads to a target so what a
+nuclear warheads to a target so what a
+ballistic trajectory is is basically the
+ballistic trajectory is is basically the
+ballistic trajectory is is basically the
+rocket starts out in a powered
+rocket starts out in a powered
+rocket starts out in a powered
+state of flight where the boosters are
+state of flight where the boosters are
+state of flight where the boosters are
+going so it starts climbing up into the
+going so it starts climbing up into the
+going so it starts climbing up into the
+air it starts tilting to the side
+air it starts tilting to the side
+air it starts tilting to the side
+and at certain point the engines cut off
+and at certain point the engines cut off
+and at certain point the engines cut off
+because usually they're solid fuel
+because usually they're solid fuel
+because usually they're solid fuel
+boosters and they are lit and they run
+boosters and they are lit and they run
+boosters and they are lit and they run
+until they run out of fuel so at that
+until they run out of fuel so at that
+until they run out of fuel so at that
+point the rocket is basically just in
+point the rocket is basically just in
+point the rocket is basically just in
+free fall but since it generated so much
+free fall but since it generated so much
+free fall but since it generated so much
+acceleration and so much velocity
+acceleration and so much velocity
+acceleration and so much velocity
+starting out it keeps on going higher
+starting out it keeps on going higher
+starting out it keeps on going higher
+and higher and higher and eventually if
+and higher and higher and eventually if
+and higher and higher and eventually if
+all of our calculations are right
+all of our calculations are right
+all of our calculations are right
+the rocket drops down
+the rocket drops down
+the rocket drops down
+and it hits its target
+and it hits its target
+and it hits its target
+causing a lot of damage so since this is
+causing a lot of damage so since this is
+causing a lot of damage so since this is
+a pretty simple
+a pretty simple
+a pretty simple
+physics equation i thought i could model
+physics equation i thought i could model
+physics equation i thought i could model
+this pretty easily in roblox one thing i
+this pretty easily in roblox one thing i
+this pretty easily in roblox one thing i
+forgot to think about is this
+forgot to think about is this
+forgot to think about is this
+acceleration part because this is kind
+acceleration part because this is kind
+acceleration part because this is kind
+of hard to model with a simple equation
+of hard to model with a simple equation
+of hard to model with a simple equation
+you can model normal projectile motion
+you can model normal projectile motion
+you can model normal projectile motion
+very very easily in fact there's a
+very very easily in fact there's a
+very very easily in fact there's a
+little website i found that can
+little website i found that can
+little website i found that can
+visualize it
+visualize it
+visualize it
+so here's like projectile motion i can
+so here's like projectile motion i can
+so here's like projectile motion i can
+change like the angle
+change like the angle
+change like the angle
+or the
+or the
+or the
+like velocity the launch angle whatever
+like velocity the launch angle whatever
+like velocity the launch angle whatever
+i can fire the projectile and so this is
+i can fire the projectile and so this is
+i can fire the projectile and so this is
+a bunch of simple vector math and i
+a bunch of simple vector math and i
+a bunch of simple vector math and i
+could do that pretty easily one issue is
+could do that pretty easily one issue is
+could do that pretty easily one issue is
+is you have this acceleration
+is you have this acceleration
+is you have this acceleration
+so
+so
+so
+instead of actually learning how to
+instead of actually learning how to
+instead of actually learning how to
+calculate this using math and all the
+calculate this using math and all the
+calculate this using math and all the
+sophisticated math that the people
+sophisticated math that the people
+sophisticated math that the people
+actually making missiles do
+actually making missiles do
+actually making missiles do
+i took a simpler approach
+i took a simpler approach
+i took a simpler approach
+and basically calculated
+and basically calculated
+and basically calculated
+the
+the
+the
+projected drop location every frame
+projected drop location every frame
+projected drop location every frame
+using
+using
+using
+a simple kinematics equation
+a simple kinematics equation
+a simple kinematics equation
+and then used a p controller like those
+and then used a p controller like those
+and then used a p controller like those
+pid controllers i'm only using the
+pid controllers i'm only using the
+pid controllers i'm only using the
+proportional part to hone in on that
+proportional part to hone in on that
+proportional part to hone in on that
+location so i actually have a demo of
+location so i actually have a demo of
+location so i actually have a demo of
+this
+this
+this
+and i can play it
+so this is our rocket and the red line
+so this is our rocket and the red line
+so this is our rocket and the red line
+is its projected trajectory as you can
+is its projected trajectory as you can
+is its projected trajectory as you can
+see it launches up into the sky
+see it launches up into the sky
+see it launches up into the sky
+and then it drops down you can see the
+and then it drops down you can see the
+and then it drops down you can see the
+rejected trajectory is slowly
+rejected trajectory is slowly
+rejected trajectory is slowly
+coinciding with the target and right
+coinciding with the target and right
+coinciding with the target and right
+there it just hit the target
+there it just hit the target
+there it just hit the target
+so all i'm doing
+so all i'm doing
+so all i'm doing
+is i'm using a pretty simple equation so
+is i'm using a pretty simple equation so
+is i'm using a pretty simple equation so
+you have gravity which is workspace
+you have gravity which is workspace
+you have gravity which is workspace
+gravity you have the part position and
+gravity you have the part position and
+gravity you have the part position and
+you have the current velocity
+you have the current velocity
+you have the current velocity
+and then all you have to do
+and then all you have to do
+and then all you have to do
+to
+to
+to
+calculate it
+calculate it
+calculate it
+down here
+down here
+down here
+is
+is
+is
+this little equation right here which
+this little equation right here which
+this little equation right here which
+solves
+solves
+solves
+for
+for
+for
+your
+your
+your
+end velocity and then i just subtract it
+end velocity and then i just subtract it
+end velocity and then i just subtract it
+from the target position
+from the target position
+from the target position
+and then we get
+and then we get
+and then we get
+the difference which we can apply to our
+the difference which we can apply to our
+the difference which we can apply to our
+vector force
+vector force
+vector force
+and i also added some extra stuff just
+and i also added some extra stuff just
+and i also added some extra stuff just
+to make it look good
+to make it look good
+to make it look good
+but using this basic premise like the
+but using this basic premise like the
+but using this basic premise like the
+whole the whole rocket is driven by
+whole the whole rocket is driven by
+whole the whole rocket is driven by
+these couple lines of code
+these couple lines of code
+these couple lines of code
+you can make a pretty convincing travel
+you can make a pretty convincing travel
+you can make a pretty convincing travel
+arc for a ballistic missile
+so that brings us on to the icbm launch
+so that brings us on to the icbm launch
+so that brings us on to the icbm launch
+project itself which takes the
+project itself which takes the
+project itself which takes the
+early strategies implemented by that
+early strategies implemented by that
+early strategies implemented by that
+other project i just showed you but
+other project i just showed you but
+other project i just showed you but
+makes it a little more visually pleasing
+makes it a little more visually pleasing
+makes it a little more visually pleasing
+and the code is structured a little bit
+and the code is structured a little bit
+and the code is structured a little bit
+better
+better
+better
+so i have a missile silo model
+so i have a missile silo model
+so i have a missile silo model
+inside a silo script with a launch
+inside a silo script with a launch
+inside a silo script with a launch
+sequence module script this is a pretty
+sequence module script this is a pretty
+sequence module script this is a pretty
+cool way of formatting it i thought
+cool way of formatting it i thought
+cool way of formatting it i thought
+because all it does
+because all it does
+because all it does
+is it's a function the module returns a
+is it's a function the module returns a
+is it's a function the module returns a
+function
+function
+function
+and i just call all the next functions
+and i just call all the next functions
+and i just call all the next functions
+so like we start with the power flight
+so like we start with the power flight
+so like we start with the power flight
+phase
+phase
+phase
+and then we descend this is like where
+and then we descend this is like where
+and then we descend this is like where
+it's unpowered and just following
+it's unpowered and just following
+it's unpowered and just following
+and then we explode the rocket and each
+and then we explode the rocket and each
+and then we explode the rocket and each
+of these functions
+of these functions
+of these functions
+is module scripts within
+is module scripts within
+is module scripts within
+our original launch sequence module
+our original launch sequence module
+our original launch sequence module
+and all we're doing is first of all the
+and all we're doing is first of all the
+and all we're doing is first of all the
+gyro so the gyro this makes it really
+gyro so the gyro this makes it really
+gyro so the gyro this makes it really
+convincing
+convincing
+convincing
+for a lot of a launch
+for a lot of a launch
+for a lot of a launch
+because
+because
+because
+in roblox apart
+in roblox apart
+in roblox apart
+if it's just powered would kind of just
+if it's just powered would kind of just
+if it's just powered would kind of just
+like flail around so i have to use the
+like flail around so i have to use the
+like flail around so i have to use the
+gyro to basically make the rocket look
+gyro to basically make the rocket look
+gyro to basically make the rocket look
+at its last position
+at its last position
+at its last position
+except like the rocket model itself is
+except like the rocket model itself is
+except like the rocket model itself is
+inverted so it looks like the rocket is
+inverted so it looks like the rocket is
+inverted so it looks like the rocket is
+looking towards its velocity i tried to
+looking towards its velocity i tried to
+looking towards its velocity i tried to
+get it to look towards its velocity all
+get it to look towards its velocity all
+get it to look towards its velocity all
+the time didn't quite work out for some
+the time didn't quite work out for some
+the time didn't quite work out for some
+reason but this worked pretty well
+reason but this worked pretty well
+reason but this worked pretty well
+and then each of these modules is pretty
+and then each of these modules is pretty
+and then each of these modules is pretty
+simple
+simple
+simple
+it's always good to have a lot of tiny
+it's always good to have a lot of tiny
+it's always good to have a lot of tiny
+modules instead of just one massive
+modules instead of just one massive
+modules instead of just one massive
+script
+script
+script
+so this is the stuff i showed you before
+so this is the stuff i showed you before
+so this is the stuff i showed you before
+and a little bit more presentable format
+and a little bit more presentable format
+and a little bit more presentable format
+and this little equation although it
+and this little equation although it
+and this little equation although it
+looks complex is just a pretty simple
+looks complex is just a pretty simple
+looks complex is just a pretty simple
+quadratic equation
+quadratic equation
+quadratic equation
+for
+for
+for
+projectile motion
+projectile motion
+projectile motion
+but i'm kind of abusing the crap out of
+but i'm kind of abusing the crap out of
+but i'm kind of abusing the crap out of
+it since i'm
+it since i'm
+it since i'm
+finding a difference and then right i'm
+finding a difference and then right i'm
+finding a difference and then right i'm
+multiplying it by a lerp just to make it
+multiplying it by a lerp just to make it
+multiplying it by a lerp just to make it
+look like the rocket's accelerating
+look like the rocket's accelerating
+look like the rocket's accelerating
+and after that we just wait
+and after that we just wait
+and after that we just wait
+and then go back to the next section
+and then go back to the next section
+and then go back to the next section
+which is the descent
+which is the descent
+which is the descent
+nothing special here it literally just
+nothing special here it literally just
+nothing special here it literally just
+disables the little engine fire and
+disables the little engine fire and
+disables the little engine fire and
+that's basically it and then once it
+that's basically it and then once it
+that's basically it and then once it
+touches something we go on to the
+touches something we go on to the
+touches something we go on to the
+explosion now the explosion is just a
+explosion now the explosion is just a
+explosion now the explosion is just a
+ton of particles i made and the
+ton of particles i made and the
+ton of particles i made and the
+particles can be found like server
+particles can be found like server
+particles can be found like server
+storage the mushroom cloud
+storage the mushroom cloud
+storage the mushroom cloud
+and it does not look that good i will
+and it does not look that good i will
+and it does not look that good i will
+admit but
+admit but
+admit but
+i don't really spend too much time on it
+i don't really spend too much time on it
+i don't really spend too much time on it
+and honestly the the roblox um particle
+and honestly the the roblox um particle
+and honestly the the roblox um particle
+emitters aren't as bad as i thought they
+emitters aren't as bad as i thought they
+emitters aren't as bad as i thought they
+were like setting them up was pretty
+were like setting them up was pretty
+were like setting them up was pretty
+simple and i used the command line just
+simple and i used the command line just
+simple and i used the command line just
+to test to make sure that they could
+to test to make sure that they could
+to test to make sure that they could
+emit and it looked semi-decent and it
+emit and it looked semi-decent and it
+emit and it looked semi-decent and it
+turned out pretty good
+and as for the actual launch this hatch
+and as for the actual launch this hatch
+and as for the actual launch this hatch
+here is a prism prismatic constraint i
+here is a prism prismatic constraint i
+here is a prism prismatic constraint i
+have a video on that if you want to
+have a video on that if you want to
+have a video on that if you want to
+learn more
+learn more
+learn more
+and then
+and then
+and then
+in the client side
+in the client side
+in the client side
+so let me just play this to demonstrate
+you'll notice i have a pretty nifty
+you'll notice i have a pretty nifty
+you'll notice i have a pretty nifty
+target animation
+target animation
+target animation
+you have this massive crosshair
+you have this massive crosshair
+you have this massive crosshair
+and it honestly was pretty simple it
+and it honestly was pretty simple it
+and it honestly was pretty simple it
+looks it looks kind of nice but this is
+looks it looks kind of nice but this is
+looks it looks kind of nice but this is
+pretty simple
+pretty simple
+pretty simple
+all that happens is when
+all that happens is when
+all that happens is when
+the server tells the client to start
+the server tells the client to start
+the server tells the client to start
+picking a target we tweet the camera
+picking a target we tweet the camera
+picking a target we tweet the camera
+and then
+and then
+and then
+i take the crosshair model that i
+i take the crosshair model that i
+i take the crosshair model that i
+duplicated from replicated storage
+duplicated from replicated storage
+duplicated from replicated storage
+and
+moved it to where the player was and
+moved it to where the player was and
+moved it to where the player was and
+then once they click i disconnect it and
+then once they click i disconnect it and
+then once they click i disconnect it and
+send it back
+send it back
+send it back
+so the code itself is kind of ugly
+so the code itself is kind of ugly
+so the code itself is kind of ugly
+but it does the job
+but it does the job
+but it does the job
+and this is more just about the physics
+and this is more just about the physics
+and this is more just about the physics
+and just seeing if i could do it and
+and just seeing if i could do it and
+and just seeing if i could do it and
+honestly
+honestly
+honestly
+a missile and of itself is just pretty
+a missile and of itself is just pretty
+a missile and of itself is just pretty
+cool
+and if you're interested in putting this
+and if you're interested in putting this
+and if you're interested in putting this
+project into your own project
+project into your own project
+project into your own project
+the only
+the only
+the only
+files are the only models that are
+files are the only models that are
+files are the only models that are
+outside of the missile silo
+outside of the missile silo
+outside of the missile silo
+[Music]
+[Music]
+[Music]
+model
+model
+model
+is the missile model and the mushroom
+is the missile model and the mushroom
+is the missile model and the mushroom
+cloud which are both in server storage
+cloud which are both in server storage
+cloud which are both in server storage
+you should be able to move those
+you should be able to move those
+you should be able to move those
+directly
+directly
+directly
+and the pick target
+and the pick target
+and the pick target
+and cross hair so pick target is a
+and cross hair so pick target is a
+and cross hair so pick target is a
+remote event
+remote event
+remote event
+that the missile silo script uses
+that the missile silo script uses
+that the missile silo script uses
+and the crosshair is just the visual
+and the crosshair is just the visual
+and the crosshair is just the visual
+like red across here that you see on the
+like red across here that you see on the
+like red across here that you see on the
+client side
+client side
+client side
+and then i have one starter player
+and then i have one starter player
+and then i have one starter player
+script
+script
+script
+which you can just copy directly over
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you enjoyed learning a little bit about
+you enjoyed learning a little bit about
+you enjoyed learning a little bit about
+the physics and a little bit about
+the physics and a little bit about
+the physics and a little bit about
+the code that went into
+my
+my
+my
+icbm
+icbm
+icbm
+this is a pretty fun project pretty
+this is a pretty fun project pretty
+this is a pretty fun project pretty
+simple just to see if i could do it and
+simple just to see if i could do it and
+simple just to see if i could do it and
+it turned out quite nicely
+it turned out quite nicely
+it turned out quite nicely
+especially since i will have to
+especially since i will have to
+especially since i will have to
+implement icbms for my upcoming game
+implement icbms for my upcoming game
+implement icbms for my upcoming game
+submarine warfare
+and
+and
+and
+it's just a good learning experience to
+it's just a good learning experience to
+it's just a good learning experience to
+figure out how they work
+figure out how they work
+figure out how they work
+and how to go about implementing them so
+and how to go about implementing them so
+and how to go about implementing them so
+if you enjoyed the video make sure to
+if you enjoyed the video make sure to
+if you enjoyed the video make sure to
+like like it and subscribe to my channel
+like like it and subscribe to my channel
+like like it and subscribe to my channel
+if you want to see more content
+if you want to see more content
+if you want to see more content
+and comment any questions or suggestions
+and comment any questions or suggestions
+and comment any questions or suggestions
+down below but other than that i hope
+down below but other than that i hope
+down below but other than that i hope
+you have a nice day
+you have a nice day
+you have a nice day
+and goodbye
+[Music]
+you

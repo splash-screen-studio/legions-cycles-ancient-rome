@@ -1,0 +1,1423 @@
+boats in robloxs are usually pretty hard
+boats in robloxs are usually pretty hard
+boats in robloxs are usually pretty hard
+to get right the water physics in the
+to get right the water physics in the
+to get right the water physics in the
+default Roblox water is kind of me and a
+default Roblox water is kind of me and a
+default Roblox water is kind of me and a
+lot of times getting constraints to play
+lot of times getting constraints to play
+lot of times getting constraints to play
+how you want them to is quite difficult
+how you want them to is quite difficult
+how you want them to is quite difficult
+but in this video using the power of
+but in this video using the power of
+but in this video using the power of
+plane constraints Vector forces porks
+plane constraints Vector forces porks
+plane constraints Vector forces porks
+and like a line orientation you'll be
+and like a line orientation you'll be
+and like a line orientation you'll be
+able to make a nice boat like the one I
+able to make a nice boat like the one I
+able to make a nice boat like the one I
+have here and this boat will be very
+have here and this boat will be very
+have here and this boat will be very
+tunable there's a bunch of values you
+tunable there's a bunch of values you
+tunable there's a bunch of values you
+can change to make it sluggish or as
+can change to make it sluggish or as
+can change to make it sluggish or as
+fast or as responsive as you want
+fast or as responsive as you want
+fast or as responsive as you want
+depending on what your game may need I'm
+depending on what your game may need I'm
+depending on what your game may need I'm
+really proud of this and I hope you
+really proud of this and I hope you
+really proud of this and I hope you
+really enjoy it as much as I do because
+really enjoy it as much as I do because
+really enjoy it as much as I do because
+Naval vehicles and Roblox are just hard
+Naval vehicles and Roblox are just hard
+Naval vehicles and Roblox are just hard
+to make they're very hard to make so I
+to make they're very hard to make so I
+to make they're very hard to make so I
+hope you enjoy this video make sure to
+hope you enjoy this video make sure to
+hope you enjoy this video make sure to
+watch my other constraint videos as well
+watch my other constraint videos as well
+watch my other constraint videos as well
+and without further Ado let's get
+and without further Ado let's get
+and without further Ado let's get
+started oh and don't forget to like And
+subscribe
+subscribe
+subscribe
+okay so I'm here in a Roblox Studio
+okay so I'm here in a Roblox Studio
+okay so I'm here in a Roblox Studio
+project with some terrain surrounding me
+project with some terrain surrounding me
+project with some terrain surrounding me
+and we also got a little boat model
+and we also got a little boat model
+and we also got a little boat model
+right here all it is is a bunch of parts
+right here all it is is a bunch of parts
+right here all it is is a bunch of parts
+and unions and then there's this one
+and unions and then there's this one
+and unions and then there's this one
+base part which is a transparent non-an
+base part which is a transparent non-an
+base part which is a transparent non-an
+Collide part that just covers the
+Collide part that just covers the
+Collide part that just covers the
+general like span of the boat and this
+general like span of the boat and this
+general like span of the boat and this
+will be useful for when we put our
+will be useful for when we put our
+will be useful for when we put our
+Vector forces and other forces down the
+Vector forces and other forces down the
+Vector forces and other forces down the
+line and then we also have have an ocean
+line and then we also have have an ocean
+line and then we also have have an ocean
+part keep in mind I'm not using terrain
+part keep in mind I'm not using terrain
+part keep in mind I'm not using terrain
+water in this example I'm using a
+water in this example I'm using a
+water in this example I'm using a
+separate part if you want to use terrain
+separate part if you want to use terrain
+separate part if you want to use terrain
+water you totally can you're just going
+water you totally can you're just going
+water you totally can you're just going
+to have to configure your Collision
+to have to configure your Collision
+to have to configure your Collision
+groups to have a separate one for
+groups to have a separate one for
+groups to have a separate one for
+terrain and then a separate one for the
+terrain and then a separate one for the
+terrain and then a separate one for the
+boat but it'll also mean the boat kind
+boat but it'll also mean the boat kind
+boat but it'll also mean the boat kind
+of like will be able to phase through
+of like will be able to phase through
+of like will be able to phase through
+terrain I don't know it it's a little
+terrain I don't know it it's a little
+terrain I don't know it it's a little
+too complicated for what it's worth in
+too complicated for what it's worth in
+too complicated for what it's worth in
+my opinion so if you really want terrain
+my opinion so if you really want terrain
+my opinion so if you really want terrain
+water for the looks as possible but
+water for the looks as possible but
+water for the looks as possible but
+it'll just be it'll be a doy because the
+it'll just be it'll be a doy because the
+it'll just be it'll be a doy because the
+water physics affect everything you just
+water physics affect everything you just
+water physics affect everything you just
+can't turn it off is really dumb but we
+can't turn it off is really dumb but we
+can't turn it off is really dumb but we
+have our model we have everything we
+have our model we have everything we
+have our model we have everything we
+also need a vehicle seat I'm going to
+also need a vehicle seat I'm going to
+also need a vehicle seat I'm going to
+make a vehicle seat real quick a vehicle
+make a vehicle seat real quick a vehicle
+make a vehicle seat real quick a vehicle
+seat is what will help us drive the boat
+seat is what will help us drive the boat
+seat is what will help us drive the boat
+and that will be quite useful you know
+and that will be quite useful you know
+and that will be quite useful you know
+obviously because we want to drive it
+obviously because we want to drive it
+obviously because we want to drive it
+make sure you right click on the vehicle
+make sure you right click on the vehicle
+make sure you right click on the vehicle
+seat and do show orientation indicator
+seat and do show orientation indicator
+seat and do show orientation indicator
+and it should be facing the front of
+and it should be facing the front of
+and it should be facing the front of
+your boat boat if it's not then make
+your boat boat if it's not then make
+your boat boat if it's not then make
+sure to rotate it so it is so I'm going
+sure to rotate it so it is so I'm going
+sure to rotate it so it is so I'm going
+to
+to
+to
+go and align it to the best of my
+go and align it to the best of my
+go and align it to the best of my
+ability that's actually seems pretty
+ability that's actually seems pretty
+ability that's actually seems pretty
+lined make it a little
+lined make it a little
+lined make it a little
+smaller here is our vehicle seat boom so
+smaller here is our vehicle seat boom so
+smaller here is our vehicle seat boom so
+this will help us drive the
+this will help us drive the
+this will help us drive the
+boat and so now we have everything
+boat and so now we have everything
+boat and so now we have everything
+together I'm going to select all of my
+together I'm going to select all of my
+together I'm going to select all of my
+parts go to create weld that will create
+parts go to create weld that will create
+parts go to create weld that will create
+a bunch of welds between them if you
+a bunch of welds between them if you
+a bunch of welds between them if you
+don't see these green lines and
+don't see these green lines and
+don't see these green lines and
+identifying the welds go to model and
+identifying the welds go to model and
+identifying the welds go to model and
+show welds and this will allow you to
+show welds and this will allow you to
+show welds and this will allow you to
+see all the welds make sure everything
+see all the welds make sure everything
+see all the welds make sure everything
+is nice and secure so now that we got
+is nice and secure so now that we got
+is nice and secure so now that we got
+everything welded up nice and well we
+everything welded up nice and well we
+everything welded up nice and well we
+need to
+need to
+need to
+verify that all of the parts other than
+verify that all of the parts other than
+verify that all of the parts other than
+the base have mass lless turned on so we
+the base have mass lless turned on so we
+the base have mass lless turned on so we
+can go down to properties and we can
+can go down to properties and we can
+can go down to properties and we can
+turn massless on and this means that the
+turn massless on and this means that the
+turn massless on and this means that the
+parts won't actually affect the mass
+parts won't actually affect the mass
+parts won't actually affect the mass
+other than the base because it leads to
+other than the base because it leads to
+other than the base because it leads to
+imbalances and like Center of mass kind
+imbalances and like Center of mass kind
+imbalances and like Center of mass kind
+of stuff with constraints it's it's
+of stuff with constraints it's it's
+of stuff with constraints it's it's
+nasty we we don't want that and make
+nasty we we don't want that and make
+nasty we we don't want that and make
+sure your BAS has massless turned off
+sure your BAS has massless turned off
+sure your BAS has massless turned off
+because the base should be the only part
+because the base should be the only part
+because the base should be the only part
+where the mass actually matters so now
+where the mass actually matters so now
+where the mass actually matters so now
+let's create our plane constraint to
+let's create our plane constraint to
+let's create our plane constraint to
+actually keep the boat from sinking so
+actually keep the boat from sinking so
+actually keep the boat from sinking so
+we're going to create this plane
+we're going to create this plane
+we're going to create this plane
+constraint actually first off we are
+constraint actually first off we are
+constraint actually first off we are
+going to create a new part and this part
+going to create a new part and this part
+going to create a new part and this part
+can just be
+can just be
+can just be
+wherever but it should be at C Level so
+wherever but it should be at C Level so
+wherever but it should be at C Level so
+this part is going to house our plane
+this part is going to house our plane
+this part is going to house our plane
+constraint it doesn't really matter what
+constraint it doesn't really matter what
+constraint it doesn't really matter what
+it looks like or like you know because
+it looks like or like you know because
+it looks like or like you know because
+in your actual game you'll make it in
+in your actual game you'll make it in
+in your actual game you'll make it in
+business visible and we're going to
+business visible and we're going to
+business visible and we're going to
+create a PL constraint put the first
+create a PL constraint put the first
+create a PL constraint put the first
+attachment point on top of this new part
+attachment point on top of this new part
+attachment point on top of this new part
+and then put the second attachment point
+and then put the second attachment point
+and then put the second attachment point
+on top of our base make sure the second
+on top of our base make sure the second
+on top of our base make sure the second
+attachment point is connected to the
+attachment point is connected to the
+attachment point is connected to the
+base and I'm actually going to move this
+base and I'm actually going to move this
+base and I'm actually going to move this
+down the reason I place it on the top is
+down the reason I place it on the top is
+down the reason I place it on the top is
+you want the yellow lines of these two
+you want the yellow lines of these two
+you want the yellow lines of these two
+attachments to be like parallel to each
+attachments to be like parallel to each
+attachments to be like parallel to each
+other see how this little plane thing is
+other see how this little plane thing is
+other see how this little plane thing is
+there this is the plane in which the
+there this is the plane in which the
+there this is the plane in which the
+plane constraint is going to keep our
+plane constraint is going to keep our
+plane constraint is going to keep our
+boat so I'm going to move this down
+boat so I'm going to move this down
+boat so I'm going to move this down
+about to where I want the boat to sit in
+about to where I want the boat to sit in
+about to where I want the boat to sit in
+the water so I want it sit in water like
+the water so I want it sit in water like
+the water so I want it sit in water like
+about there that should be good enough I
+about there that should be good enough I
+about there that should be good enough I
+think uh yeah I don't know I hope that's
+think uh yeah I don't know I hope that's
+think uh yeah I don't know I hope that's
+good and then we're going to move the
+good and then we're going to move the
+good and then we're going to move the
+boat
+boat
+boat
+down down just a little bit there we go
+down down just a little bit there we go
+down down just a little bit there we go
+and that should be good
+and that should be good
+and that should be good
+so so now there are like the red lines
+so so now there are like the red lines
+so so now there are like the red lines
+gone which means they're aligned in the
+gone which means they're aligned in the
+gone which means they're aligned in the
+plane I'm going to make sure this part
+plane I'm going to make sure this part
+plane I'm going to make sure this part
+here is actually anchored and can
+here is actually anchored and can
+here is actually anchored and can
+collides off because it's going to be
+collides off because it's going to be
+collides off because it's going to be
+invisible let's make it invisible now so
+invisible let's make it invisible now so
+invisible let's make it invisible now so
+it just doesn't really exist we're going
+it just doesn't really exist we're going
+it just doesn't really exist we're going
+to name this I'm just going to name it
+to name this I'm just going to name it
+to name this I'm just going to name it
+the the plane part because this part is
+the the plane part because this part is
+the the plane part because this part is
+going to contain the plane now if you're
+going to contain the plane now if you're
+going to contain the plane now if you're
+cloning this boat model from surface
+cloning this boat model from surface
+cloning this boat model from surface
+storage you're going to have to clone
+storage you're going to have to clone
+storage you're going to have to clone
+both the model and the plane part every
+both the model and the plane part every
+both the model and the plane part every
+time just so you know they're in parody
+time just so you know they're in parody
+time just so you know they're in parody
+and make sure the plane part is at your
+and make sure the plane part is at your
+and make sure the plane part is at your
+I at your sea level I know it's kind of
+I at your sea level I know it's kind of
+I at your sea level I know it's kind of
+clanky to put a separate part to put
+clanky to put a separate part to put
+clanky to put a separate part to put
+like where the boat's going to sit but I
+like where the boat's going to sit but I
+like where the boat's going to sit but I
+know if you really wanted to you could
+know if you really wanted to you could
+know if you really wanted to you could
+just duplicate plane constraints in on
+just duplicate plane constraints in on
+just duplicate plane constraints in on
+like the ocean part that you're using so
+like the ocean part that you're using so
+like the ocean part that you're using so
+like this big ocean part I can make a
+like this big ocean part I can make a
+like this big ocean part I can make a
+plane constraint that like you know
+plane constraint that like you know
+plane constraint that like you know
+deals with it but it's always up to you
+deals with it but it's always up to you
+deals with it but it's always up to you
+so let's play this and make sure the
+so let's play this and make sure the
+so let's play this and make sure the
+boat actually is on the plane so it does
+boat actually is on the plane so it does
+boat actually is on the plane so it does
+stay on the plane but you'll note it is
+stay on the plane but you'll note it is
+stay on the plane but you'll note it is
+not not very stable so we need to fix
+not not very stable so we need to fix
+not not very stable so we need to fix
+that we're going to be using an align
+that we're going to be using an align
+that we're going to be using an align
+constraint for that so I'm going to go
+constraint for that so I'm going to go
+constraint for that so I'm going to go
+to create or align orientation and I
+to create or align orientation and I
+to create or align orientation and I
+actually have a video on this if you
+actually have a video on this if you
+actually have a video on this if you
+want to check it out and we're going to
+want to check it out and we're going to
+want to check it out and we're going to
+place it there and you can place other
+place it there and you can place other
+place it there and you can place other
+attachment wherever you want I guess
+attachment wherever you want I guess
+attachment wherever you want I guess
+we're going to delete it we we're using
+we're going to delete it we we're using
+we're going to delete it we we're using
+we're going to use one attachment mode
+we're going to use one attachment mode
+we're going to use one attachment mode
+for the Align constraint and make sure
+for the Align constraint and make sure
+for the Align constraint and make sure
+it's on the base I just reuse that
+it's on the base I just reuse that
+it's on the base I just reuse that
+same attachment it's up to you whether
+same attachment it's up to you whether
+same attachment it's up to you whether
+or not you want
+or not you want
+or not you want
+to and I'm going to make the mode one
+to and I'm going to make the mode one
+to and I'm going to make the mode one
+attachment because we don't need two
+attachment because we don't need two
+attachment because we don't need two
+attachments I don't know why all of
+attachments I don't know why all of
+attachments I don't know why all of
+these body movers and roadblocks insist
+these body movers and roadblocks insist
+these body movers and roadblocks insist
+on two attachments but whatever um then
+on two attachments but whatever um then
+on two attachments but whatever um then
+we're going to change the Align type to
+we're going to change the Align type to
+we're going to change the Align type to
+primary axis parallel so what this does
+primary axis parallel so what this does
+primary axis parallel so what this does
+is our boat has an orientation like
+is our boat has an orientation like
+is our boat has an orientation like
+thing and it's like right now you know
+thing and it's like right now you know
+thing and it's like right now you know
+it's facing up and down whatever we need
+it's facing up and down whatever we need
+it's facing up and down whatever we need
+we need it to
+we need it to
+we need it to
+maintain that the primary axis of our
+maintain that the primary axis of our
+maintain that the primary axis of our
+align con straight aligns with the
+align con straight aligns with the
+align con straight aligns with the
+primary axis of this attachment right
+primary axis of this attachment right
+primary axis of this attachment right
+now the primary axis of this is on its
+now the primary axis of this is on its
+now the primary axis of this is on its
+side we want it to be up so we're going
+side we want it to be up so we're going
+side we want it to be up so we're going
+to do 0 1 0 for the primary axis and
+to do 0 1 0 for the primary axis and
+to do 0 1 0 for the primary axis and
+that means the line the yellow line of
+that means the line the yellow line of
+that means the line the yellow line of
+the Align constraint is facing up and
+the Align constraint is facing up and
+the Align constraint is facing up and
+the yellow line of our attachment is
+the yellow line of our attachment is
+the yellow line of our attachment is
+facing up everything is right in the
+facing up everything is right in the
+facing up everything is right in the
+world and it should it should float just
+world and it should it should float just
+world and it should it should float just
+fine well it's still not strong enough
+fine well it's still not strong enough
+fine well it's still not strong enough
+we can fix that though
+we can fix that though
+we can fix that though
+um we can go in increase the max torque
+um we can go in increase the max torque
+um we can go in increase the max torque
+a little bit increase the responsiveness
+a little bit increase the responsiveness
+a little bit increase the responsiveness
+a little bit oh shoot I accidentally
+a little bit oh shoot I accidentally
+a little bit oh shoot I accidentally
+deled it
+deled it
+deled it
+um and that
+um and that
+um and that
+should should fix it let wait
+should should fix it let wait
+should should fix it let wait
+again yeah so now now it's pretty pretty
+again yeah so now now it's pretty pretty
+again yeah so now now it's pretty pretty
+solid you know it's
+solid you know it's
+solid you know it's
+not it's not budging it's not moving
+not it's not budging it's not moving
+not it's not budging it's not moving
+around too much even if we like move it
+around too much even if we like move it
+around too much even if we like move it
+up it'll snap to place and nothing will
+up it'll snap to place and nothing will
+up it'll snap to place and nothing will
+make it fall over which is good that's
+make it fall over which is good that's
+make it fall over which is good that's
+exactly what we want so the boat is now
+exactly what we want so the boat is now
+exactly what we want so the boat is now
+stable in the water okay so now we need
+stable in the water okay so now we need
+stable in the water okay so now we need
+a way to propel the boat so for this I'm
+a way to propel the boat so for this I'm
+a way to propel the boat so for this I'm
+going to go to create create Vector
+going to go to create create Vector
+going to go to create create Vector
+force and put the vector force on my
+force and put the vector force on my
+force and put the vector force on my
+base make sure it's on your base about
+base make sure it's on your base about
+base make sure it's on your base about
+where you expect the boat to drive so
+where you expect the boat to drive so
+where you expect the boat to drive so
+I'm going to put it here I'm going to
+I'm going to put it here I'm going to
+I'm going to put it here I'm going to
+make sure it's centered see if it's
+make sure it's centered see if it's
+make sure it's centered see if it's
+centered I'm going to go to the
+centered I'm going to go to the
+centered I'm going to go to the
+transform in the corner make sure it
+transform in the corner make sure it
+transform in the corner make sure it
+actually is Center centered there
+actually is Center centered there
+actually is Center centered there
+um and then I'm actually going to make
+um and then I'm actually going to make
+um and then I'm actually going to make
+mine my attachment a little bit lower
+mine my attachment a little bit lower
+mine my attachment a little bit lower
+just because you'll see It'll allow the
+just because you'll see It'll allow the
+just because you'll see It'll allow the
+boat to actually raise in the water like
+boat to actually raise in the water like
+boat to actually raise in the water like
+you know in real life motor boats go
+you know in real life motor boats go
+you know in real life motor boats go
+across like the the back kind of dips
+across like the the back kind of dips
+across like the the back kind of dips
+and the front kind of raises if you
+and the front kind of raises if you
+and the front kind of raises if you
+lower your little attachment point it'll
+lower your little attachment point it'll
+lower your little attachment point it'll
+do that naturally which is pretty cool
+do that naturally which is pretty cool
+do that naturally which is pretty cool
+and you also want to go down to your
+and you also want to go down to your
+and you also want to go down to your
+axis and flip
+axis and flip
+axis and flip
+it so that the the little yellow line is
+it so that the the little yellow line is
+it so that the the little yellow line is
+facing forward and by the way use
+facing forward and by the way use
+facing forward and by the way use
+constraint details to see all of this
+constraint details to see all of this
+constraint details to see all of this
+stuff I probably should have mentioned
+stuff I probably should have mentioned
+stuff I probably should have mentioned
+that earlier but use constraint details
+that earlier but use constraint details
+that earlier but use constraint details
+keep that in mind sorry to see like the
+keep that in mind sorry to see like the
+keep that in mind sorry to see like the
+attachments and stuff um and so you you
+attachments and stuff um and so you you
+attachments and stuff um and so you you
+see this little blue line that's like
+see this little blue line that's like
+see this little blue line that's like
+the current you know Force that's facing
+the current you know Force that's facing
+the current you know Force that's facing
+that way so if we run this it should
+that way so if we run this it should
+that way so if we run this it should
+just like drive
+just like drive
+just like drive
+[Music]
+[Music]
+[Music]
+forward yeah so it it drives forward
+forward yeah so it it drives forward
+forward yeah so it it drives forward
+pretty cool um now let's script it so
+pretty cool um now let's script it so
+pretty cool um now let's script it so
+let's go into our base cre or let's go
+let's go into our base cre or let's go
+let's go into our base cre or let's go
+into our boat model I'm actually going
+into our boat model I'm actually going
+into our boat model I'm actually going
+to name this boat and then I'm also
+to name this boat and then I'm also
+to name this boat and then I'm also
+going to rename the vector Force to
+going to rename the vector Force to
+going to rename the vector Force to
+motor just to make it more make more
+motor just to make it more make more
+motor just to make it more make more
+sense and then I'm going to go into the
+sense and then I'm going to go into the
+sense and then I'm going to go into the
+boat create a new
+boat create a new
+boat create a new
+script and we're going to call the
+script and we're going to call the
+script and we're going to call the
+script the boat
+script the boat
+script the boat
+script and then we're I'm actually going
+script and then we're I'm actually going
+script and then we're I'm actually going
+to get rid of this this is annoying okay
+to get rid of this this is annoying okay
+to get rid of this this is annoying okay
+we're going to say we're going to say
+we're going to say we're going to say
+we're going to say we're going to say
+local uh boat equals script. parent
+local uh boat equals script. parent
+local uh boat equals script. parent
+local motor equals boat. b. motor and
+local motor equals boat. b. motor and
+local motor equals boat. b. motor and
+then we're also going to get the seat
+then we're also going to get the seat
+then we're also going to get the seat
+local seat equals boat. vehicle seat and
+local seat equals boat. vehicle seat and
+local seat equals boat. vehicle seat and
+we're also going to get run service so
+we're also going to get run service so
+we're also going to get run service so
+the reason we're getting run service is
+the reason we're getting run service is
+the reason we're getting run service is
+that we need to run a function every
+that we need to run a function every
+that we need to run a function every
+single uh step event every single
+single uh step event every single
+single uh step event every single
+physics so I'm going to create a
+physics so I'm going to create a
+physics so I'm going to create a
+function called Drive boat and this will
+function called Drive boat and this will
+function called Drive boat and this will
+take into two parameters both of which
+take into two parameters both of which
+take into two parameters both of which
+we're not going to use so I'm going to
+we're not going to use so I'm going to
+we're not going to use so I'm going to
+use a double underscore here to kind of
+use a double underscore here to kind of
+use a double underscore here to kind of
+say like hey yeah like I know we're
+say like hey yeah like I know we're
+say like hey yeah like I know we're
+getting two parameters but we're not
+getting two parameters but we're not
+getting two parameters but we're not
+going to use them they're like time and
+going to use them they're like time and
+going to use them they're like time and
+Delta time we don't need time or Delta
+Delta time we don't need time or Delta
+Delta time we don't need time or Delta
+time like it it really don't matter
+time like it it really don't matter
+time like it it really don't matter
+so we're going to first of all get
+so we're going to first of all get
+so we're going to first of all get
+the get the thrust by saying it equals
+the get the thrust by saying it equals
+the get the thrust by saying it equals
+seat. throttle
+seat. throttle
+seat. throttle
+foot times some constant so I'm going to
+foot times some constant so I'm going to
+foot times some constant so I'm going to
+do like I'm going to do a lot so I'm
+do like I'm going to do a lot so I'm
+do like I'm going to do a lot so I'm
+going to
+going to
+going to
+do probably a million to start out with
+do probably a million to start out with
+do probably a million to start out with
+because this boat's kind of chunky um
+because this boat's kind of chunky um
+because this boat's kind of chunky um
+and then I'm going to do local turn
+and then I'm going to do local turn
+and then I'm going to do local turn
+equals seat. steer
+equals seat. steer
+equals seat. steer
+float so I actually we don't we don't
+float so I actually we don't we don't
+float so I actually we don't we don't
+need this
+need this
+need this
+variable so what this throttle float and
+variable so what this throttle float and
+variable so what this throttle float and
+steer float are is they're like values
+steer float are is they're like values
+steer float are is they're like values
+their properties of the seat and they
+their properties of the seat and they
+their properties of the seat and they
+change whenever you press W ASD or
+change whenever you press W ASD or
+change whenever you press W ASD or
+joysticks or uh mobile touchpad whenever
+joysticks or uh mobile touchpad whenever
+joysticks or uh mobile touchpad whenever
+you drive so we're going to use that to
+you drive so we're going to use that to
+you drive so we're going to use that to
+like you know control the boat so I'm
+like you know control the boat so I'm
+like you know control the boat so I'm
+going to set the motor. force equal to
+going to set the motor. force equal to
+going to set the motor. force equal to
+cframe do angles
+cframe do angles
+cframe do angles
+0 math. pi div by we'll start out with
+0 math. pi div by we'll start out with
+0 math. pi div by we'll start out with
+like
+like
+like
+12 times seat. steer float
+12 times seat. steer float
+12 times seat. steer float
+0 right Vector times rust this is a lot
+0 right Vector times rust this is a lot
+0 right Vector times rust this is a lot
+but what we're basically doing here is
+but what we're basically doing here is
+but what we're basically doing here is
+like you know how in real life boats
+like you know how in real life boats
+like you know how in real life boats
+can't turn when they're stopped so we're
+can't turn when they're stopped so we're
+can't turn when they're stopped so we're
+taking this idea and we're make we're
+taking this idea and we're make we're
+taking this idea and we're make we're
+actually modeling a boat more
+actually modeling a boat more
+actually modeling a boat more
+accurately by basically rotating the
+accurately by basically rotating the
+accurately by basically rotating the
+vector of thrust so like whenever the
+vector of thrust so like whenever the
+vector of thrust so like whenever the
+boat goes straight straight that's the
+boat goes straight straight that's the
+boat goes straight straight that's the
+the only time it's like vector of thrust
+the only time it's like vector of thrust
+the only time it's like vector of thrust
+can be rotated so we're basically like
+can be rotated so we're basically like
+can be rotated so we're basically like
+turning the the motor like you know
+turning the the motor like you know
+turning the the motor like you know
+motor boats how they have the motor on
+motor boats how they have the motor on
+motor boats how they have the motor on
+the back and like it kind of goes side
+the back and like it kind of goes side
+the back and like it kind of goes side
+to side we're doing that but with cframe
+to side we're doing that but with cframe
+to side we're doing that but with cframe
+math so usually the right Vector is
+math so usually the right Vector is
+math so usually the right Vector is
+facing just straight like front and back
+facing just straight like front and back
+facing just straight like front and back
+on the boats because um we use the X on
+on the boats because um we use the X on
+on the boats because um we use the X on
+the vector Force to like go forward and
+the vector Force to like go forward and
+the vector Force to like go forward and
+back usually Z is forward and back but
+back usually Z is forward and back but
+back usually Z is forward and back but
+just because of attachments this is how
+just because of attachments this is how
+just because of attachments this is how
+it's set up the primary axis X so and
+it's set up the primary axis X so and
+it's set up the primary axis X so and
+then depending on the steer float we
+then depending on the steer float we
+then depending on the steer float we
+rotate it by some amount and this is I'm
+rotate it by some amount and this is I'm
+rotate it by some amount and this is I'm
+using math. pi because this is in
+using math. pi because this is in
+using math. pi because this is in
+radians so it's not degrees it's just
+radians so it's not degrees it's just
+radians so it's not degrees it's just
+easier to use this way but really all
+easier to use this way but really all
+easier to use this way but really all
+you got to know is Raising this number
+you got to know is Raising this number
+you got to know is Raising this number
+makes the like the turn amount tighter
+makes the like the turn amount tighter
+makes the like the turn amount tighter
+lowering this number makes you able to
+lowering this number makes you able to
+lowering this number makes you able to
+like turn more and quicker and yeah so
+like turn more and quicker and yeah so
+like turn more and quicker and yeah so
+we also have to connect this function by
+we also have to connect this function by
+we also have to connect this function by
+saying run service.
+saying run service.
+saying run service.
+steped connect dry boo make sure there's
+steped connect dry boo make sure there's
+steped connect dry boo make sure there's
+no parenthesis there and then we can we
+no parenthesis there and then we can we
+no parenthesis there and then we can we
+can play the game so I'm going to go
+can play the game so I'm going to go
+can play the game so I'm going to go
+Boma boat and then go to play
+here where is that
+here where is that
+here where is that
+test run play here there you
+test run play here there you
+test run play here there you
+go so I'm going to play on top of the
+go so I'm going to play on top of the
+go so I'm going to play on top of the
+boat oh that is
+boat oh that is
+boat oh that is
+fast that is very fast okay well
+fast that is very fast okay well
+fast that is very fast okay well
+obviously
+obviously
+obviously
+a million is not a good number let's go
+a million is not a good number let's go
+a million is not a good number let's go
+let's go down let's go down to like
+let's go down let's go down to like
+let's go down let's go down to like
+10,000 I guess I don't
+know okay let's try this
+again yeah so here you go
+again yeah so here you go
+again yeah so here you go
+um notice how we're not stopping that's
+um notice how we're not stopping that's
+um notice how we're not stopping that's
+an
+an
+an
+issue but you also notice that you
+issue but you also notice that you
+issue but you also notice that you
+literally cannot turn un unless you're
+literally cannot turn un unless you're
+literally cannot turn un unless you're
+like driving
+like driving
+like driving
+forward which I think is a really good
+forward which I think is a really good
+forward which I think is a really good
+feature of a boat and of a boat's
+feature of a boat and of a boat's
+feature of a boat and of a boat's
+handling so now that we have this like
+handling so now that we have this like
+handling so now that we have this like
+kind of set up before you start going
+kind of set up before you start going
+kind of set up before you start going
+and tuning these numbers like bringing
+and tuning these numbers like bringing
+and tuning these numbers like bringing
+this number up and down bringing this
+this number up and down bringing this
+this number up and down bringing this
+number up and down here we need to
+number up and down here we need to
+number up and down here we need to
+address like the elephant in room is
+address like the elephant in room is
+address like the elephant in room is
+that like there's no damping like in
+that like there's no damping like in
+that like there's no damping like in
+real life water kind of slows you down
+real life water kind of slows you down
+real life water kind of slows you down
+when you're going fast and like when
+when you're going fast and like when
+when you're going fast and like when
+you're turning we don't have that right
+you're turning we don't have that right
+you're turning we don't have that right
+now so it's pretty easy to add so I'm
+now so it's pretty easy to add so I'm
+now so it's pretty easy to add so I'm
+going to create a go model and create a
+going to create a go model and create a
+going to create a go model and create a
+new Vector Force this going to be our
+new Vector Force this going to be our
+new Vector Force this going to be our
+damping like our linear damping and I'm
+damping like our linear damping and I'm
+damping like our linear damping and I'm
+I'm going to use it reuse the same
+I'm going to use it reuse the same
+I'm going to use it reuse the same
+attachment because why not because all
+attachment because why not because all
+attachment because why not because all
+we're doing is making it relative to the
+we're doing is making it relative to the
+we're doing is making it relative to the
+world and I'm going to make sure it's
+world and I'm going to make sure it's
+world and I'm going to make sure it's
+Force to zero and we're also going to
+Force to zero and we're also going to
+Force to zero and we're also going to
+apply it at the center of mass this is
+apply it at the center of mass this is
+apply it at the center of mass this is
+just this just going to act against the
+just this just going to act against the
+just this just going to act against the
+like
+like
+like
+velocity that we currently have so I'm
+velocity that we currently have so I'm
+velocity that we currently have so I'm
+going to rename this to linear damping
+going to rename this to linear damping
+going to rename this to linear damping
+and then I'm going to create a
+and then I'm going to create a
+and then I'm going to create a
+torque object by going to create
+torque object by going to create
+torque object by going to create
+torque where is it here we go and this
+torque where is it here we go and this
+torque where is it here we go and this
+is going to counteract our rotational
+is going to counteract our rotational
+is going to counteract our rotational
+velocity I'm going to call it rot
+velocity I'm going to call it rot
+velocity I'm going to call it rot
+damping and then make sure it's zero
+damping and then make sure it's zero
+damping and then make sure it's zero
+initially and then make sure it's
+initially and then make sure it's
+initially and then make sure it's
+relative to the world and then that
+relative to the world and then that
+relative to the world and then that
+should be good so both of those should
+should be good so both of those should
+should be good so both of those should
+be good to go then we go back into our
+be good to go then we go back into our
+be good to go then we go back into our
+boat
+boat
+boat
+script we say
+script we say
+script we say
+local linear damp equals vat. base
+local linear damp equals vat. base
+local linear damp equals vat. base
+linear damping and local rot damp equals
+linear damping and local rot damp equals
+linear damping and local rot damp equals
+boat do base. rot rotation damping and
+boat do base. rot rotation damping and
+boat do base. rot rotation damping and
+then down inside of
+then down inside of
+then down inside of
+our inside of our dry boot function
+our inside of our dry boot function
+our inside of our dry boot function
+we're going to say linear damp do Force
+we're going to say linear damp do Force
+we're going to say linear damp do Force
+equals negative seat do assembly linear
+equals negative seat do assembly linear
+equals negative seat do assembly linear
+velocity times some constant that you
+velocity times some constant that you
+velocity times some constant that you
+can tune yourself I'm going to start at
+can tune yourself I'm going to start at
+can tune yourself I'm going to start at
+100 so this basically says okay wherever
+100 so this basically says okay wherever
+100 so this basically says okay wherever
+we're going like what velocity we're
+we're going like what velocity we're
+we're going like what velocity we're
+going at we're going to counteract it
+going at we're going to counteract it
+going at we're going to counteract it
+and we're going to slow us down we're
+and we're going to slow us down we're
+and we're going to slow us down we're
+going to do the same thing for rot
+going to do the same thing for rot
+going to do the same thing for rot
+damping so say rot damp do torque equals
+damping so say rot damp do torque equals
+damping so say rot damp do torque equals
+negative seat. assembly angular velocity
+negative seat. assembly angular velocity
+negative seat. assembly angular velocity
+times some constant I'm going to say a
+times some constant I'm going to say a
+times some constant I'm going to say a
+th so this basically says like okay
+th so this basically says like okay
+th so this basically says like okay
+you're going to you're going to slow
+you're going to you're going to slow
+you're going to you're going to slow
+down rotationally slow down linearly so
+down rotationally slow down linearly so
+down rotationally slow down linearly so
+it just acts more like water and like
+it just acts more like water and like
+it just acts more like water and like
+you don't just drive off and do Infinity
+you don't just drive off and do Infinity
+you don't just drive off and do Infinity
+so we're going to try this
+so we're going to try this
+so we're going to try this
+out oh I missed the boat that is very
+out oh I missed the boat that is very
+out oh I missed the boat that is very
+sad um we're going to put our our player
+sad um we're going to put our our player
+sad um we're going to put our our player
+here again there we
+go okay here we go so we drive it
+go okay here we go so we drive it
+go okay here we go so we drive it
+everything works out
+everything works out
+everything works out
+nicely and then notice we still kind of
+nicely and then notice we still kind of
+nicely and then notice we still kind of
+whip around and you can tune these
+whip around and you can tune these
+whip around and you can tune these
+values but we stop which is exactly what
+values but we stop which is exactly what
+values but we stop which is exactly what
+we want you know like we slow down and
+we want you know like we slow down and
+we want you know like we slow down and
+we eventually stop this is actually
+we eventually stop this is actually
+we eventually stop this is actually
+working great so I'm going to tune this
+working great so I'm going to tune this
+working great so I'm going to tune this
+a little bit more and then I'll be back
+a little bit more and then I'll be back
+a little bit more and then I'll be back
+and show you the finished product so
+and show you the finished product so
+and show you the finished product so
+after a while of tuning this is what I
+after a while of tuning this is what I
+after a while of tuning this is what I
+have it drives pretty nicely I can turn
+have it drives pretty nicely I can turn
+have it drives pretty nicely I can turn
+but it doesn't turn out of control which
+but it doesn't turn out of control which
+but it doesn't turn out of control which
+is nice but it sells tight tight turning
+is nice but it sells tight tight turning
+is nice but it sells tight tight turning
+radius it's kind of floaty but kind of
+radius it's kind of floaty but kind of
+radius it's kind of floaty but kind of
+kind of responsive and you know this is
+kind of responsive and you know this is
+kind of responsive and you know this is
+a game so it doesn't have to be fully
+a game so it doesn't have to be fully
+a game so it doesn't have to be fully
+accurate to a real life boat but I think
+accurate to a real life boat but I think
+accurate to a real life boat but I think
+this does a semide decent job of you
+this does a semide decent job of you
+this does a semide decent job of you
+know getting the point across of a
+know getting the point across of a
+know getting the point across of a
+speedboat
+speedboat
+speedboat
+so here are my stats if you want to take
+so here are my stats if you want to take
+so here are my stats if you want to take
+them so this this value here the more
+them so this this value here the more
+them so this this value here the more
+you increase it the
+you increase it the
+you increase it the
+more the boat will like resist turning
+more the boat will like resist turning
+more the boat will like resist turning
+so you'll have a wider turning radius
+so you'll have a wider turning radius
+so you'll have a wider turning radius
+the more this value goes up the wider
+the more this value goes up the wider
+the more this value goes up the wider
+your turning radius the more linear damp
+your turning radius the more linear damp
+your turning radius the more linear damp
+your the more linear damp that goes up
+your the more linear damp that goes up
+your the more linear damp that goes up
+the more responsive it is it'll stop
+the more responsive it is it'll stop
+the more responsive it is it'll stop
+quicker and it'll be less floaty it'll
+quicker and it'll be less floaty it'll
+quicker and it'll be less floaty it'll
+be less like dragging through the air
+be less like dragging through the air
+be less like dragging through the air
+the higher your thrust is the faster you
+the higher your thrust is the faster you
+the higher your thrust is the faster you
+go but it also means you turn faster and
+go but it also means you turn faster and
+go but it also means you turn faster and
+the higher this number is like the angle
+the higher this number is like the angle
+the higher this number is like the angle
+means the slower you turn the less
+means the slower you turn the less
+means the slower you turn the less
+powerful you turn because it's
+powerful you turn because it's
+powerful you turn because it's
+constricting the angle since we're doing
+constricting the angle since we're doing
+constricting the angle since we're doing
+map. pi divided by this number we're
+map. pi divided by this number we're
+map. pi divided by this number we're
+constricting the angle so the bigger
+constricting the angle so the bigger
+constricting the angle so the bigger
+this number is the more the angle is
+this number is the more the angle is
+this number is the more the angle is
+constricted so yeah and then in my line
+constricted so yeah and then in my line
+constricted so yeah and then in my line
+orientation here are all the stats and I
+orientation here are all the stats and I
+orientation here are all the stats and I
+also
+also
+also
+moved the attachment here to the center
+moved the attachment here to the center
+moved the attachment here to the center
+of the boat and that Mak makes things a
+of the boat and that Mak makes things a
+of the boat and that Mak makes things a
+little better with the plane constraint
+little better with the plane constraint
+little better with the plane constraint
+because everything like the plane
+because everything like the plane
+because everything like the plane
+constraint and stuff rotates around that
+constraint and stuff rotates around that
+constraint and stuff rotates around that
+so yeah so this is the boat basically
+so yeah so this is the boat basically
+so yeah so this is the boat basically
+done and if you want to use it like in
+done and if you want to use it like in
+done and if you want to use it like in
+server stores and stuff you can just
+server stores and stuff you can just
+server stores and stuff you can just
+store the boat and the plane part like
+store the boat and the plane part like
+store the boat and the plane part like
+together and then just duplicate it
+together and then just duplicate it
+together and then just duplicate it
+every time and that should should be
+every time and that should should be
+every time and that should should be
+good to go and it should work fine and
+good to go and it should work fine and
+good to go and it should work fine and
+you can put the plane part wherever you
+you can put the plane part wherever you
+you can put the plane part wherever you
+want as long as the Y is in the right
+want as long as the Y is in the right
+want as long as the Y is in the right
+place in your world for the boat but
+place in your world for the boat but
+place in your world for the boat but
+yeah that's about it so let me know if
+yeah that's about it so let me know if
+yeah that's about it so let me know if
+you have any questions in the comments I
+you have any questions in the comments I
+you have any questions in the comments I
+think this does a pretty good job of
+think this does a pretty good job of
+think this does a pretty good job of
+like being a nice boat let me know what
+like being a nice boat let me know what
+like being a nice boat let me know what
+you think and make sure to like And
+you think and make sure to like And
+you think and make sure to like And
+subscribe if you enjoy this kind of
+subscribe if you enjoy this kind of
+subscribe if you enjoy this kind of
+content give me suggestions and
+content give me suggestions and
+content give me suggestions and
+questions down below and with that I
+questions down below and with that I
+questions down below and with that I
+hope you have a nice day and
+hope you have a nice day and
+hope you have a nice day and
+[Music]
+goodbye
+goodbye
+goodbye
+[Music]

@@ -1,0 +1,779 @@
+i never thought torpedoes would swim
+i never thought torpedoes would swim
+i never thought torpedoes would swim
+around like a school of fish
+around like a school of fish
+around like a school of fish
+in my submarine game but it happens
+in my submarine game but it happens
+in my submarine game but it happens
+and it shows just how valuable grabbing
+and it shows just how valuable grabbing
+and it shows just how valuable grabbing
+a few friends and play testing
+a few friends and play testing
+a few friends and play testing
+is for your game because i don't it
+is for your game because i don't it
+is for your game because i don't it
+unearths so many bugs
+unearths so many bugs
+unearths so many bugs
+you would have never realized until
+you would have never realized until
+you would have never realized until
+release in this video
+release in this video
+release in this video
+i'll go over how i implemented torpedoes
+i'll go over how i implemented torpedoes
+i'll go over how i implemented torpedoes
+into my submarine game
+into my submarine game
+into my submarine game
+and what exactly went wrong
+and what exactly went wrong
+and what exactly went wrong
+make sure to watch the previous devlog
+make sure to watch the previous devlog
+make sure to watch the previous devlog
+if you haven't to catch up on the
+if you haven't to catch up on the
+if you haven't to catch up on the
+progress i made there
+progress i made there
+progress i made there
+and to like the video if you enjoyed it
+and to like the video if you enjoyed it
+and to like the video if you enjoyed it
+and subscribe
+and subscribe
+and subscribe
+so you can keep up to date with all the
+so you can keep up to date with all the
+so you can keep up to date with all the
+submarine warfare development
+submarine warfare development
+submarine warfare development
+so let's talk about implementing the
+so let's talk about implementing the
+so let's talk about implementing the
+torpedo
+torpedo
+torpedo
+so the first thing you have to do is get
+so the first thing you have to do is get
+so the first thing you have to do is get
+it to spawn and i'll accomplish that
+it to spawn and i'll accomplish that
+it to spawn and i'll accomplish that
+by putting attachments where each
+by putting attachments where each
+by putting attachments where each
+torpedo tube
+torpedo tube
+torpedo tube
+should be on the sub itself and then
+should be on the sub itself and then
+should be on the sub itself and then
+each repeal will spawn on an available
+each repeal will spawn on an available
+each repeal will spawn on an available
+tube
+tube
+tube
+once it spawns in we need a way to
+once it spawns in we need a way to
+once it spawns in we need a way to
+propel it
+propel it
+propel it
+i'm using vector forces for that and i
+i'm using vector forces for that and i
+i'm using vector forces for that and i
+have a video on that if you're
+have a video on that if you're
+have a video on that if you're
+interested in the topic
+interested in the topic
+interested in the topic
+and that will just make it go forward
+and that will just make it go forward
+and that will just make it go forward
+straightforward
+straightforward
+straightforward
+and then a script inside of the torpedo
+and then a script inside of the torpedo
+and then a script inside of the torpedo
+will detect
+will detect
+will detect
+when it hits a part using a raycast
+when it hits a part using a raycast
+when it hits a part using a raycast
+and then once the ray hits it'll explode
+and then once the ray hits it'll explode
+and then once the ray hits it'll explode
+if it hits a submarine it'll also cause
+if it hits a submarine it'll also cause
+if it hits a submarine it'll also cause
+a sub to take damage
+a sub to take damage
+a sub to take damage
+now this is a very basic torpedo
+now this is a very basic torpedo
+now this is a very basic torpedo
+implementation
+implementation
+implementation
+in the future i'll add support for the
+in the future i'll add support for the
+in the future i'll add support for the
+player to be able to control their
+player to be able to control their
+player to be able to control their
+torpedoes via
+torpedoes via
+torpedoes via
+like wasd and they'll have camera
+like wasd and they'll have camera
+like wasd and they'll have camera
+overview of it
+overview of it
+overview of it
+and torpedoes may or may not have sonar
+and torpedoes may or may not have sonar
+and torpedoes may or may not have sonar
+as well
+as well
+as well
+so you can control exactly where it goes
+so you can control exactly where it goes
+so you can control exactly where it goes
+and where it hits
+and where it hits
+and where it hits
+but i just want to make sure the teams
+but i just want to make sure the teams
+but i just want to make sure the teams
+and the sub
+and the sub
+and the sub
+damage are working so that's where the
+damage are working so that's where the
+damage are working so that's where the
+basic implementation
+basic implementation
+basic implementation
+is so up until this point
+is so up until this point
+is so up until this point
+when i've spawned the subs they've just
+when i've spawned the subs they've just
+when i've spawned the subs they've just
+kind of spawned in and done
+kind of spawned in and done
+kind of spawned in and done
+nothing but now we need a way
+nothing but now we need a way
+nothing but now we need a way
+for the torpedoes to hit an enemy so
+for the torpedoes to hit an enemy so
+for the torpedoes to hit an enemy so
+right now you can see me implementing
+right now you can see me implementing
+right now you can see me implementing
+the team and bunker system for submarine
+the team and bunker system for submarine
+the team and bunker system for submarine
+warfare which will be
+warfare which will be
+warfare which will be
+very useful later when we implement more
+very useful later when we implement more
+very useful later when we implement more
+features so the whole idea is there's
+features so the whole idea is there's
+features so the whole idea is there's
+like two teams
+like two teams
+like two teams
+red and blue and they each have their
+red and blue and they each have their
+red and blue and they each have their
+own submarine bunker where they can
+own submarine bunker where they can
+own submarine bunker where they can
+spawn subs and the subs can attack each
+spawn subs and the subs can attack each
+spawn subs and the subs can attack each
+other
+other
+other
+and they attack each other with
+and they attack each other with
+and they attack each other with
+torpedoes so obviously i need to
+torpedoes so obviously i need to
+torpedoes so obviously i need to
+implement the
+implement the
+implement the
+teams before i implement the torpedoes
+teams before i implement the torpedoes
+teams before i implement the torpedoes
+so
+so
+so
+the damage can get registered and you
+the damage can get registered and you
+the damage can get registered and you
+can get kills between
+can get kills between
+can get kills between
+different groups of players and i
+different groups of players and i
+different groups of players and i
+used a knit service called match service
+used a knit service called match service
+used a knit service called match service
+to
+to
+to
+handle all this logic and just a basic
+handle all this logic and just a basic
+handle all this logic and just a basic
+class for each bunker
+class for each bunker
+class for each bunker
+this will be expanded on in the future
+this will be expanded on in the future
+this will be expanded on in the future
+but it was adequate
+but it was adequate
+but it was adequate
+for what i wanted in this video
+for what i wanted in this video
+for what i wanted in this video
+[Music]
+so one funny thing that happened while
+so one funny thing that happened while
+so one funny thing that happened while
+testing
+testing
+testing
+is that each torpedo has a hinge
+is that each torpedo has a hinge
+is that each torpedo has a hinge
+constraint
+constraint
+constraint
+that acts as a propeller and animates
+that acts as a propeller and animates
+that acts as a propeller and animates
+the propeller
+the propeller
+the propeller
+but this adds torque to it so you can
+but this adds torque to it so you can
+but this adds torque to it so you can
+see in this little clip
+see in this little clip
+see in this little clip
+the torpedoes are spinning a ton it's
+the torpedoes are spinning a ton it's
+the torpedoes are spinning a ton it's
+kind of funny
+kind of funny
+kind of funny
+so i did a lot of work off camera and i
+so i did a lot of work off camera and i
+so i did a lot of work off camera and i
+fixed that
+fixed that
+fixed that
+issue that you saw in the previous clip
+issue that you saw in the previous clip
+issue that you saw in the previous clip
+and here's the final state of the
+and here's the final state of the
+and here's the final state of the
+torpedo
+torpedo
+torpedo
+class it's just a basic object-oriented
+class it's just a basic object-oriented
+class it's just a basic object-oriented
+class
+class
+class
+has a bunch of references to our sub and
+has a bunch of references to our sub and
+has a bunch of references to our sub and
+our instance
+our instance
+our instance
+and every frame it recast
+and every frame it recast
+and every frame it recast
+and it'll detect the sub if it the
+and it'll detect the sub if it the
+and it'll detect the sub if it the
+result hits and it'll explode
+result hits and it'll explode
+result hits and it'll explode
+and it'll destroy itself for some reason
+and it'll destroy itself for some reason
+and it'll destroy itself for some reason
+this line of code right here
+this line of code right here
+this line of code right here
+is has a problem because the primary
+is has a problem because the primary
+is has a problem because the primary
+part does not exist in some scenarios
+part does not exist in some scenarios
+part does not exist in some scenarios
+that's what caused the issues
+that's what caused the issues
+that's what caused the issues
+that you saw at the beginning of the
+that you saw at the beginning of the
+that you saw at the beginning of the
+video but
+video but
+video but
+i haven't quite figured it out yet it's
+i haven't quite figured it out yet it's
+i haven't quite figured it out yet it's
+probably very simple
+probably very simple
+probably very simple
+and i'm just kind of stupid but that's
+and i'm just kind of stupid but that's
+and i'm just kind of stupid but that's
+how programming usually is
+how programming usually is
+how programming usually is
+so let's go into roblox and let me just
+so let's go into roblox and let me just
+so let's go into roblox and let me just
+show you real quick
+show you real quick
+show you real quick
+how i have the model set up so let's
+how i have the model set up so let's
+how i have the model set up so let's
+bring out the victoria
+this is the go to sub for testing you
+this is the go to sub for testing you
+this is the go to sub for testing you
+can see up front
+can see up front
+can see up front
+these are all the spawn points for the
+these are all the spawn points for the
+these are all the spawn points for the
+torpedoes and they're
+torpedoes and they're
+torpedoes and they're
+roughly aligned to each torpedo tube and
+roughly aligned to each torpedo tube and
+roughly aligned to each torpedo tube and
+they're really nice because they allow
+they're really nice because they allow
+they're really nice because they allow
+me to just plop them down visually and
+me to just plop them down visually and
+me to just plop them down visually and
+then just reference their position
+then just reference their position
+then just reference their position
+and usually most people on roblox would
+and usually most people on roblox would
+and usually most people on roblox would
+use parts for this but i found it a lot
+use parts for this but i found it a lot
+use parts for this but i found it a lot
+easier to use
+easier to use
+easier to use
+attachments and that's a pretty cool
+attachments and that's a pretty cool
+attachments and that's a pretty cool
+workflow that i actually really enjoy
+workflow that i actually really enjoy
+workflow that i actually really enjoy
+so let's analyze the gameplay
+so let's analyze the gameplay
+so let's analyze the gameplay
+at first everything seemed to be going
+at first everything seemed to be going
+at first everything seemed to be going
+well
+well
+well
+and then i found a pretty bad bug
+and then i found a pretty bad bug
+and then i found a pretty bad bug
+when you shoot a torpedo it would
+when you shoot a torpedo it would
+when you shoot a torpedo it would
+usually blow up your sub if you're going
+usually blow up your sub if you're going
+usually blow up your sub if you're going
+decently fast which that's not very good
+decently fast which that's not very good
+decently fast which that's not very good
+so i went into vs code and tried to make
+so i went into vs code and tried to make
+so i went into vs code and tried to make
+a quick hotfix
+a quick hotfix
+a quick hotfix
+i really know what the issue was and i
+i really know what the issue was and i
+i really know what the issue was and i
+didn't care to find out it was kind of
+didn't care to find out it was kind of
+didn't care to find out it was kind of
+late
+late
+late
+so i just made the range of torpedoes a
+so i just made the range of torpedoes a
+so i just made the range of torpedoes a
+little longer
+little longer
+little longer
+so you had more speed to spare when you
+so you had more speed to spare when you
+so you had more speed to spare when you
+shot
+shot
+shot
+it's a very nasty fix but it did the job
+it's a very nasty fix but it did the job
+it's a very nasty fix but it did the job
+but let me tell you it was really cool
+but let me tell you it was really cool
+but let me tell you it was really cool
+to see my friend
+to see my friend
+to see my friend
+drop out and drop down in the submarine
+drop out and drop down in the submarine
+drop out and drop down in the submarine
+right next to me
+right next to me
+right next to me
+as we formed up and processed towards
+as we formed up and processed towards
+as we formed up and processed towards
+the
+the
+the
+enemy lines and he
+enemy lines and he
+enemy lines and he
+tried to do a descent strat but
+tried to do a descent strat but
+tried to do a descent strat but
+later we realized when you hit the floor
+later we realized when you hit the floor
+later we realized when you hit the floor
+of the playing field you are stuck i
+of the playing field you are stuck i
+of the playing field you are stuck i
+think it probably has to do with the
+think it probably has to do with the
+think it probably has to do with the
+buoyancy physics
+buoyancy physics
+buoyancy physics
+since the sub model is simulated by a
+since the sub model is simulated by a
+since the sub model is simulated by a
+cylinder
+cylinder
+cylinder
+so i'll probably change it to a cube and
+so i'll probably change it to a cube and
+so i'll probably change it to a cube and
+see if that fixes it
+see if that fixes it
+see if that fixes it
+but for some reason when you hit the
+but for some reason when you hit the
+but for some reason when you hit the
+ground you are stuck
+ground you are stuck
+ground you are stuck
+and by the way all the people playing in
+and by the way all the people playing in
+and by the way all the people playing in
+this video
+this video
+this video
+are the council role in my discord
+are the council role in my discord
+are the council role in my discord
+server
+server
+server
+if you want to hop on and maybe
+if you want to hop on and maybe
+if you want to hop on and maybe
+chat with them see what they thought of
+chat with them see what they thought of
+chat with them see what they thought of
+the experience you can do that
+the experience you can do that
+the experience you can do that
+and now comes the most epic part
+and now comes the most epic part
+and now comes the most epic part
+of the video the duel
+of the video the duel
+of the video the duel
+between me be ricey and my friend
+between me be ricey and my friend
+between me be ricey and my friend
+derpy unicorn also known as dark
+derpy unicorn also known as dark
+derpy unicorn also known as dark
+hawkeyes
+hawkeyes
+hawkeyes
+so this could have been really cool and
+so this could have been really cool and
+so this could have been really cool and
+really epic
+really epic
+really epic
+but the controls like the movement
+but the controls like the movement
+but the controls like the movement
+controls on the sub
+controls on the sub
+controls on the sub
+are horrible and i knew they're pretty
+are horrible and i knew they're pretty
+are horrible and i knew they're pretty
+bad but i didn't
+bad but i didn't
+bad but i didn't
+fully realize it until we tried to have
+fully realize it until we tried to have
+fully realize it until we tried to have
+a fight because they're very sluggish
+a fight because they're very sluggish
+a fight because they're very sluggish
+but when you held down either like w or
+but when you held down either like w or
+but when you held down either like w or
+s or a and d
+s or a and d
+s or a and d
+you gain so much momentum that you just
+you gain so much momentum that you just
+you gain so much momentum that you just
+flung
+flung
+flung
+past your intended direction that's
+past your intended direction that's
+past your intended direction that's
+because i'm using
+because i'm using
+because i'm using
+a vector force instead of an angular
+a vector force instead of an angular
+a vector force instead of an angular
+velocity
+velocity
+velocity
+so it just keeps on adding cork and
+so it just keeps on adding cork and
+so it just keeps on adding cork and
+torque and torque
+torque and torque
+torque and torque
+until you can't really control it
+[Music]
+[Music]
+[Music]
+and he got so pissed off he left the
+and he got so pissed off he left the
+and he got so pissed off he left the
+game
+game
+game
+so that left me turning around to go
+so that left me turning around to go
+so that left me turning around to go
+free my friend from the prison
+free my friend from the prison
+free my friend from the prison
+that the sea floor was shown to be
+my duty now completed i went to check
+my duty now completed i went to check
+my duty now completed i went to check
+the server console and a very red
+the server console and a very red
+the server console and a very red
+screen greeted me so these are all the
+screen greeted me so these are all the
+screen greeted me so these are all the
+errors that happen i think there's one
+errors that happen i think there's one
+errors that happen i think there's one
+error in
+error in
+error in
+the render step of the heartbeat i
+the render step of the heartbeat i
+the render step of the heartbeat i
+should say of the torpedo
+should say of the torpedo
+should say of the torpedo
+that caused the entire issue and
+that caused the entire issue and
+that caused the entire issue and
+those errors mounted over time causing
+those errors mounted over time causing
+those errors mounted over time causing
+enough stress to the server to
+enough stress to the server to
+enough stress to the server to
+completely break the game because my
+completely break the game because my
+completely break the game because my
+friend
+friend
+friend
+now respond started
+now respond started
+now respond started
+shooting tons and tons of torpedoes and
+shooting tons and tons of torpedoes and
+shooting tons and tons of torpedoes and
+the server just
+the server just
+the server just
+could not handle it and once he touched
+could not handle it and once he touched
+could not handle it and once he touched
+down
+down
+down
+he started firing tons of torpedoes on
+he started firing tons of torpedoes on
+he started firing tons of torpedoes on
+my screen and i think on the server
+my screen and i think on the server
+my screen and i think on the server
+we couldn't see it but i switched to his
+we couldn't see it but i switched to his
+we couldn't see it but i switched to his
+perspective
+perspective
+perspective
+and this is what he saw you can see a
+and this is what he saw you can see a
+and this is what he saw you can see a
+column of torpedoes
+column of torpedoes
+column of torpedoes
+some of them are spinning even though i
+some of them are spinning even though i
+some of them are spinning even though i
+thought i fixed that issue with the
+thought i fixed that issue with the
+thought i fixed that issue with the
+hinge constraint
+hinge constraint
+hinge constraint
+apparently when you over throttle the
+apparently when you over throttle the
+apparently when you over throttle the
+server
+server
+server
+it just forgets about it so i think i'm
+it just forgets about it so i think i'm
+it just forgets about it so i think i'm
+going to need a more permanent solution
+going to need a more permanent solution
+going to need a more permanent solution
+like
+like
+like
+instead of using hinges for the
+instead of using hinges for the
+instead of using hinges for the
+propellers i use
+propellers i use
+propellers i use
+particle emitters or something like that
+particle emitters or something like that
+particle emitters or something like that
+that should work
+that should work
+that should work
+but this continued on for a couple of
+[Music]
+[Music]
+[Music]
+minutes
+[Music]
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you enjoyed
+you enjoyed
+you enjoyed
+this devlog and stay tuned for the next
+this devlog and stay tuned for the next
+this devlog and stay tuned for the next
+one
+one
+one
+where i don't know we'll be adding more
+where i don't know we'll be adding more
+where i don't know we'll be adding more
+features
+features
+features
+i know that and we'll definitely be
+i know that and we'll definitely be
+i know that and we'll definitely be
+fixing these
+fixing these
+fixing these
+bugs so like the video if you enjoyed it
+bugs so like the video if you enjoyed it
+bugs so like the video if you enjoyed it
+subscribe to
+subscribe to
+subscribe to
+stay updated on submarine warfare
+stay updated on submarine warfare
+stay updated on submarine warfare
+and comment on the video any suggestions
+and comment on the video any suggestions
+and comment on the video any suggestions
+or questions you have about the game
+or questions you have about the game
+or questions you have about the game
+but other than that i hope you have a
+but other than that i hope you have a
+but other than that i hope you have a
+nice day and goodbye
+nice day and goodbye
+nice day and goodbye
+[Music]
+[Music]
+[Music]
+you

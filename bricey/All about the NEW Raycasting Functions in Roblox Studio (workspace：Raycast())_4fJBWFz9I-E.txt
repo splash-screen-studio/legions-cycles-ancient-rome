@@ -1,0 +1,1041 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i will be going over the
+in this video i will be going over the
+in this video i will be going over the
+new
+new
+new
+rate workspace raycast function
+rate workspace raycast function
+rate workspace raycast function
+along with raycast params and the
+along with raycast params and the
+along with raycast params and the
+raycast result
+raycast result
+raycast result
+which roblox has implemented recently
+which roblox has implemented recently
+which roblox has implemented recently
+and if you don't know already they
+and if you don't know already they
+and if you don't know already they
+deprecated the old system which was like
+deprecated the old system which was like
+deprecated the old system which was like
+workspace
+workspace
+workspace
+find part on rey and like whatever like
+find part on rey and like whatever like
+find part on rey and like whatever like
+it doesn't even show up anymore
+it doesn't even show up anymore
+it doesn't even show up anymore
+so they still kept the ray class
+so they still kept the ray class
+so they still kept the ray class
+but you really don't need to use it
+but you really don't need to use it
+but you really don't need to use it
+anymore
+anymore
+anymore
+but i hope you guys enjoy this video
+but i hope you guys enjoy this video
+but i hope you guys enjoy this video
+make sure to like and subscribe
+make sure to like and subscribe
+make sure to like and subscribe
+if you do i absolutely love these
+if you do i absolutely love these
+if you do i absolutely love these
+functions
+functions
+functions
+and the raycast programs and results
+and the raycast programs and results
+and the raycast programs and results
+they're so useful
+they're so useful
+they're so useful
+so convenient and so simple so this has
+so convenient and so simple so this has
+so convenient and so simple so this has
+been requested
+been requested
+been requested
+a lot recently and i hope you enjoy but
+a lot recently and i hope you enjoy but
+a lot recently and i hope you enjoy but
+without further ado
+without further ado
+without further ado
+let's get into the video
+[Music]
+[Music]
+[Music]
+so i have right in front of me a part
+so i have right in front of me a part
+so i have right in front of me a part
+and if you're wondering why the front
+and if you're wondering why the front
+and if you're wondering why the front
+is black that's just to show me what the
+is black that's just to show me what the
+is black that's just to show me what the
+front face is because
+front face is because
+front face is because
+they got rid of the surface like
+they got rid of the surface like
+they got rid of the surface like
+property drop down so now i can't really
+property drop down so now i can't really
+property drop down so now i can't really
+tell i have to use like a surface gui
+tell i have to use like a surface gui
+tell i have to use like a surface gui
+to do that but we're going to use this
+to do that but we're going to use this
+to do that but we're going to use this
+part to
+part to
+part to
+use the new recast function
+use the new recast function
+use the new recast function
+and so now i'm going to go into my part
+and so now i'm going to go into my part
+and so now i'm going to go into my part
+and create a script and we're just going
+and create a script and we're just going
+and create a script and we're just going
+to make a basic raycast
+to make a basic raycast
+to make a basic raycast
+and so the function that we're using is
+and so the function that we're using is
+and so the function that we're using is
+obviously
+obviously
+obviously
+workspace.raycast so this is what it
+workspace.raycast so this is what it
+workspace.raycast so this is what it
+looks like workspace
+looks like workspace
+looks like workspace
+colon raycast it's a lot simpler than
+colon raycast it's a lot simpler than
+colon raycast it's a lot simpler than
+find part on rey
+find part on rey
+find part on rey
+or like find part on where ray with
+or like find part on where ray with
+or like find part on where ray with
+whitelist or blacklist whatever
+whitelist or blacklist whatever
+whitelist or blacklist whatever
+so this function and
+so this function and
+so this function and
+everything with the new ray system in
+everything with the new ray system in
+everything with the new ray system in
+roblox does not
+roblox does not
+roblox does not
+use the ray property type it doesn't
+use the ray property type it doesn't
+use the ray property type it doesn't
+need to use it you can use it if you
+need to use it you can use it if you
+need to use it you can use it if you
+really want to
+really want to
+really want to
+but it just adds it takes away a
+but it just adds it takes away a
+but it just adds it takes away a
+layer of complexity in regards to this
+layer of complexity in regards to this
+layer of complexity in regards to this
+function so it takes in three parameters
+function so it takes in three parameters
+function so it takes in three parameters
+the origin the direction and optional
+the origin the direction and optional
+the origin the direction and optional
+parameter which is the raycast params
+there we go so obviously i haven't
+there we go so obviously i haven't
+there we go so obviously i haven't
+defined any of these so they're all red
+defined any of these so they're all red
+defined any of these so they're all red
+but and also it returns a raycast result
+so there we go so this is basically the
+so there we go so this is basically the
+so there we go so this is basically the
+signature of our
+signature of our
+signature of our
+function so let's just not let's not
+function so let's just not let's not
+function so let's just not let's not
+worry about the raycast params for now
+worry about the raycast params for now
+worry about the raycast params for now
+it's really powerful but let's just talk
+it's really powerful but let's just talk
+it's really powerful but let's just talk
+about
+about
+about
+the most useful things which are the
+the most useful things which are the
+the most useful things which are the
+origin direction and result because
+origin direction and result because
+origin direction and result because
+these are the things you'll be using
+these are the things you'll be using
+these are the things you'll be using
+most most of the time so i'm going to
+most most of the time so i'm going to
+most most of the time so i'm going to
+find the origin
+find the origin
+find the origin
+which will be part dot position and find
+which will be part dot position and find
+which will be part dot position and find
+the direction
+the direction
+the direction
+which is the part.c frame
+which is the part.c frame
+which is the part.c frame
+dot look vector times let's say 10 studs
+dot look vector times let's say 10 studs
+dot look vector times let's say 10 studs
+so this works like any other normal
+so this works like any other normal
+so this works like any other normal
+raycast
+raycast
+raycast
+and if you really want to or like you're
+and if you really want to or like you're
+and if you really want to or like you're
+using a user input service function
+using a user input service function
+using a user input service function
+you could define your array which would
+you could define your array which would
+you could define your array which would
+be array.new
+be array.new
+be array.new
+origin direction and then when you're
+origin direction and then when you're
+origin direction and then when you're
+putting it into the right cast function
+putting it into the right cast function
+putting it into the right cast function
+you can do ray
+you can do ray
+you can do ray
+dot origin and array dot direction
+dot origin and array dot direction
+dot origin and array dot direction
+there you go so you could also do that i
+there you go so you could also do that i
+there you go so you could also do that i
+wouldn't recommend it because it adds an
+wouldn't recommend it because it adds an
+wouldn't recommend it because it adds an
+extra line of code you have to
+extra line of code you have to
+extra line of code you have to
+instantiate a new object
+instantiate a new object
+instantiate a new object
+that's just not as good and simple as
+that's just not as good and simple as
+that's just not as good and simple as
+just saying origin
+just saying origin
+just saying origin
+and direction so let me just get rid of
+and direction so let me just get rid of
+and direction so let me just get rid of
+that
+that
+that
+so now if i were to run this
+so now if i were to run this
+so now if i were to run this
+you can see nothing happens obviously
+you can see nothing happens obviously
+you can see nothing happens obviously
+because we have no code that does
+because we have no code that does
+because we have no code that does
+anything but now let's talk about the
+anything but now let's talk about the
+anything but now let's talk about the
+raycast result
+raycast result
+raycast result
+which is the thing that gets returned
+which is the thing that gets returned
+which is the thing that gets returned
+when you perform a successful recast and
+when you perform a successful recast and
+when you perform a successful recast and
+since
+since
+since
+it only gets returned when you perform a
+it only gets returned when you perform a
+it only gets returned when you perform a
+successful raycast
+successful raycast
+successful raycast
+you have to check if it exists because
+you have to check if it exists because
+you have to check if it exists because
+if you cast into the sky and there's
+if you cast into the sky and there's
+if you cast into the sky and there's
+like nothing there
+like nothing there
+like nothing there
+then it won't do anything so we have to
+then it won't do anything so we have to
+then it won't do anything so we have to
+check if raycast result
+check if raycast result
+check if raycast result
+then and now let's list some of the
+then and now let's list some of the
+then and now let's list some of the
+properties
+properties
+properties
+so raycast result dot
+so raycast result dot
+so raycast result dot
+position is just the position in which
+position is just the position in which
+position is just the position in which
+the ray
+the ray
+the ray
+collides and then
+collides and then
+collides and then
+raycast result
+dot instance is the part or terrain in
+dot instance is the part or terrain in
+dot instance is the part or terrain in
+which it collides with
+which it collides with
+which it collides with
+and these are probably the two most
+and these are probably the two most
+and these are probably the two most
+important but then
+important but then
+important but then
+some really useful ones is
+raycast normal
+and so the normal is basically a vector
+and so the normal is basically a vector
+and so the normal is basically a vector
+three that just describes like the angle
+three that just describes like the angle
+three that just describes like the angle
+at which your part
+at which your part
+at which your part
+that the instance is situated so um
+that the instance is situated so um
+that the instance is situated so um
+it's kind of hard to explain i think i
+it's kind of hard to explain i think i
+it's kind of hard to explain i think i
+explained it in better detail in my
+explained it in better detail in my
+explained it in better detail in my
+light reflection simulation videos so
+light reflection simulation videos so
+light reflection simulation videos so
+you can check those out if you want a
+you can check those out if you want a
+you can check those out if you want a
+better
+better
+better
+description and lastly we have raycast
+description and lastly we have raycast
+description and lastly we have raycast
+result dot material
+result dot material
+result dot material
+and it just gives you the material of
+and it just gives you the material of
+and it just gives you the material of
+the part slash terrain
+the part slash terrain
+the part slash terrain
+where it happens so i have right here a
+where it happens so i have right here a
+where it happens so i have right here a
+little part that i set up
+little part that i set up
+little part that i set up
+earlier you didn't see me set it up
+earlier you didn't see me set it up
+earlier you didn't see me set it up
+because it was like last clip
+because it was like last clip
+because it was like last clip
+so here we have our part let's just move
+so here we have our part let's just move
+so here we have our part let's just move
+it a little closer
+it a little closer
+it a little closer
+and if we were to run this
+you can see the position is 11 well the
+you can see the position is 11 well the
+you can see the position is 11 well the
+instance is the part we have the normal
+instance is the part we have the normal
+instance is the part we have the normal
+since it's rotated a little bit and it's
+since it's rotated a little bit and it's
+since it's rotated a little bit and it's
+brick material that's exactly what we
+brick material that's exactly what we
+brick material that's exactly what we
+want let me just increase this to 100 so
+want let me just increase this to 100 so
+want let me just increase this to 100 so
+we can test this a little better
+we can test this a little better
+we can test this a little better
+so this is everything you need to know
+so this is everything you need to know
+so this is everything you need to know
+about the raycast
+about the raycast
+about the raycast
+result so now let's go into raycast
+result so now let's go into raycast
+result so now let's go into raycast
+params and so the params is the third
+params and so the params is the third
+params and so the params is the third
+parameter
+parameter
+parameter
+optional parameter that you can send to
+optional parameter that you can send to
+optional parameter that you can send to
+workspace raycast
+workspace raycast
+workspace raycast
+so let's define a raycast params object
+so let's define a raycast params object
+so let's define a raycast params object
+here so local raycast
+here so local raycast
+here so local raycast
+params equals capital raycast params
+params equals capital raycast params
+params equals capital raycast params
+if i can spell it right dot new and so
+if i can spell it right dot new and so
+if i can spell it right dot new and so
+you can sort of compare this data type
+you can sort of compare this data type
+you can sort of compare this data type
+to like a tween info
+to like a tween info
+to like a tween info
+but unlike a tween info you can't like
+but unlike a tween info you can't like
+but unlike a tween info you can't like
+instantiate
+instantiate
+instantiate
+the object with any constructor
+the object with any constructor
+the object with any constructor
+parameters so like
+parameters so like
+parameters so like
+anything i type in here won't do
+anything i type in here won't do
+anything i type in here won't do
+anything because there's no
+anything because there's no
+anything because there's no
+it only has one constructor but also
+it only has one constructor but also
+it only has one constructor but also
+unlike
+unlike
+unlike
+a tween info you can edit the properties
+a tween info you can edit the properties
+a tween info you can edit the properties
+after
+after
+after
+you make it which is really good because
+you make it which is really good because
+you make it which is really good because
+you can dynamically change
+you can dynamically change
+you can dynamically change
+what your array is like doing so
+what your array is like doing so
+what your array is like doing so
+let's start with raycast params so look
+let's start with raycast params so look
+let's start with raycast params so look
+so this is our raycast params there's a
+so this is our raycast params there's a
+so this is our raycast params there's a
+few properties that you can change
+few properties that you can change
+few properties that you can change
+first one we're going to talk about is
+first one we're going to talk about is
+first one we're going to talk about is
+filter
+filter
+filter
+descendants instances so this is just
+descendants instances so this is just
+descendants instances so this is just
+like a list
+like a list
+like a list
+of parts of models of folders that the
+of parts of models of folders that the
+of parts of models of folders that the
+ray
+ray
+ray
+will ignore so let's set this up real
+will ignore so let's set this up real
+will ignore so let's set this up real
+quick
+quick
+quick
+i'm just going to reset the orientation
+i'm just going to reset the orientation
+i'm just going to reset the orientation
+real quick
+real quick
+real quick
+because it's bothering me there we go
+because it's bothering me there we go
+because it's bothering me there we go
+let's drag this back here let's
+let's drag this back here let's
+let's drag this back here let's
+duplicate it it's going to be our
+duplicate it it's going to be our
+duplicate it it's going to be our
+red part we're gonna make it a red and
+red part we're gonna make it a red and
+red part we're gonna make it a red and
+foreboding so we're gonna name this part
+foreboding so we're gonna name this part
+foreboding so we're gonna name this part
+red
+red
+red
+and we can duplicate it and make a blue
+and we can duplicate it and make a blue
+and we can duplicate it and make a blue
+part
+part
+part
+let's say so let's give it a nice
+let's say so let's give it a nice
+let's say so let's give it a nice
+blue so if we go into here we can set
+the filter sentence instances to
+the filter sentence instances to
+the filter sentence instances to
+workspace dot red
+workspace dot red
+workspace dot red
+comma workspace dot blue
+comma workspace dot blue
+comma workspace dot blue
+and so it'll ignore these but
+and so it'll ignore these but
+and so it'll ignore these but
+in order to set it to ignore them you
+in order to set it to ignore them you
+in order to set it to ignore them you
+have to set raycast params
+have to set raycast params
+have to set raycast params
+dot filter type so you can either set it
+dot filter type so you can either set it
+dot filter type so you can either set it
+to enum
+to enum
+to enum
+dot recast filter type
+dot recast filter type
+dot recast filter type
+blacklist or whitelist so if you set it
+blacklist or whitelist so if you set it
+blacklist or whitelist so if you set it
+to blacklist
+to blacklist
+to blacklist
+it will ignore the parts in the filter
+it will ignore the parts in the filter
+it will ignore the parts in the filter
+descendants instances
+descendants instances
+descendants instances
+if you set it to whitelist it will only
+if you set it to whitelist it will only
+if you set it to whitelist it will only
+hit the parts
+hit the parts
+hit the parts
+in those things so let's just set it to
+in those things so let's just set it to
+in those things so let's just set it to
+blacklist and then let's make sure to
+blacklist and then let's make sure to
+blacklist and then let's make sure to
+pass our raycast params object into the
+pass our raycast params object into the
+pass our raycast params object into the
+function so if you were to run this
+function so if you were to run this
+function so if you were to run this
+you can see it still hits our green part
+you can see it still hits our green part
+you can see it still hits our green part
+back here
+back here
+back here
+it skips over red and blue but if we
+it skips over red and blue but if we
+it skips over red and blue but if we
+were to set it
+were to set it
+were to set it
+to whitelist
+to whitelist
+to whitelist
+it'll obviously hit the red part
+it'll obviously hit the red part
+it'll obviously hit the red part
+but then if we were to move the red and
+but then if we were to move the red and
+but then if we were to move the red and
+the blue
+the blue
+the blue
+out of the way so it should be hitting
+out of the way so it should be hitting
+out of the way so it should be hitting
+the green
+the green
+the green
+it doesn't do anything because it's
+it doesn't do anything because it's
+it doesn't do anything because it's
+whitelisted
+whitelisted
+whitelisted
+to that which is exactly what you want
+to that which is exactly what you want
+to that which is exactly what you want
+to happen
+to happen
+to happen
+and so along with the filtering there's
+and so along with the filtering there's
+and so along with the filtering there's
+another property which
+another property which
+another property which
+i rarely use but you can use it if you
+i rarely use but you can use it if you
+i rarely use but you can use it if you
+want and it's ignore water
+want and it's ignore water
+want and it's ignore water
+it's a bullion true or false
+it's a bullion true or false
+it's a bullion true or false
+that just says if it should ignore water
+that just says if it should ignore water
+that just says if it should ignore water
+when it recasts that's that's pretty
+when it recasts that's that's pretty
+when it recasts that's that's pretty
+self-explanatory
+self-explanatory
+self-explanatory
+but then you have another property which
+but then you have another property which
+but then you have another property which
+this is really really cool
+this is really really cool
+this is really really cool
+and this is actually the reason that
+and this is actually the reason that
+and this is actually the reason that
+this weight raycast caused the old
+this weight raycast caused the old
+this weight raycast caused the old
+raycasting system to be deprecated
+raycasting system to be deprecated
+raycasting system to be deprecated
+that's because raycastparams.com
+that's because raycastparams.com
+that's because raycastparams.com
+so this allows you to define a collision
+so this allows you to define a collision
+so this allows you to define a collision
+group in which
+group in which
+group in which
+your rays can be casted so let's just go
+your rays can be casted so let's just go
+your rays can be casted so let's just go
+create some collision groups real quick
+create some collision groups real quick
+create some collision groups real quick
+i'm going to go to model and then
+i'm going to go to model and then
+i'm going to go to model and then
+collision groups i already had it open
+collision groups i already had it open
+collision groups i already had it open
+i put it like i docked it down here and
+i put it like i docked it down here and
+i put it like i docked it down here and
+so you see i already have a collision
+so you see i already have a collision
+so you see i already have a collision
+group
+group
+group
+set up we can just get rid of that so
+set up we can just get rid of that so
+set up we can just get rid of that so
+now we have our default calendar group
+now we have our default calendar group
+now we have our default calendar group
+this is
+this is
+this is
+the default group where all parts can
+the default group where all parts can
+the default group where all parts can
+collide
+collide
+collide
+but let's add another group and let's
+but let's add another group and let's
+but let's add another group and let's
+add a red coding group and let's also
+add a red coding group and let's also
+add a red coding group and let's also
+add
+add
+add
+a blue collision group we'll keep our
+a blue collision group we'll keep our
+a blue collision group we'll keep our
+green one on default
+green one on default
+green one on default
+so you have all these check marks
+so you have all these check marks
+so you have all these check marks
+whatever i'm not going to explain all
+whatever i'm not going to explain all
+whatever i'm not going to explain all
+this
+this
+this
+that's a tutorial for another day but i
+that's a tutorial for another day but i
+that's a tutorial for another day but i
+can
+can
+can
+just make red and blue not collide with
+just make red and blue not collide with
+just make red and blue not collide with
+default
+default
+default
+and then make red not collide with blue
+and then make red not collide with blue
+and then make red not collide with blue
+so all of these parts will not collide
+so all of these parts will not collide
+so all of these parts will not collide
+with
+with
+with
+one another which is pretty useful in
+one another which is pretty useful in
+one another which is pretty useful in
+certain situations but
+certain situations but
+certain situations but
+what makes it even more useful is the
+what makes it even more useful is the
+what makes it even more useful is the
+fact that rays can interpret this
+fact that rays can interpret this
+fact that rays can interpret this
+so let's set our raycast params dot
+so let's set our raycast params dot
+so let's set our raycast params dot
+collision group
+collision group
+collision group
+to firstly default so this is just the
+to firstly default so this is just the
+to firstly default so this is just the
+default group
+default group
+default group
+and if we were to run this
+and if we were to run this
+and if we were to run this
+it would obviously ignore it that's
+it would obviously ignore it that's
+it would obviously ignore it that's
+because we said it earlier let's just
+because we said it earlier let's just
+because we said it earlier let's just
+actually comment these out so it doesn't
+actually comment these out so it doesn't
+actually comment these out so it doesn't
+affect our results
+affect our results
+affect our results
+the filter type and whatever so if we
+the filter type and whatever so if we
+the filter type and whatever so if we
+run this
+run this
+run this
+you can see it hits red
+because we haven't set their collision
+because we haven't set their collision
+because we haven't set their collision
+groups specifically yet so let's do that
+groups specifically yet so let's do that
+groups specifically yet so let's do that
+real quick
+real quick
+real quick
+that almost threw off that right there
+that almost threw off that right there
+that almost threw off that right there
+but so let's set our
+but so let's set our
+but so let's set our
+red part to the red collision group
+red part to the red collision group
+red part to the red collision group
+right there and our blue part to the
+right there and our blue part to the
+right there and our blue part to the
+blue collision group
+blue collision group
+blue collision group
+and our green part will be
+and our green part will be
+and our green part will be
+default so let's run this again we go to
+default so let's run this again we go to
+default so let's run this again we go to
+output
+output
+output
+it hits our part because it skips both
+it hits our part because it skips both
+it hits our part because it skips both
+of these because they're part of a
+of these because they're part of a
+of these because they're part of a
+different collision group
+different collision group
+different collision group
+which is exactly what you want
+which is exactly what you want
+which is exactly what you want
+and with that i can also
+and with that i can also
+and with that i can also
+set another collision group
+set another collision group
+set another collision group
+like blue
+like blue
+like blue
+so if we were to run this here
+so if we were to run this here
+so if we were to run this here
+it'll hit the blue one and what's really
+it'll hit the blue one and what's really
+it'll hit the blue one and what's really
+cool about this
+cool about this
+cool about this
+or it could be cool could just be a
+or it could be cool could just be a
+or it could be cool could just be a
+hassle is if let's say
+hassle is if let's say
+hassle is if let's say
+our red part can collide with blue
+our red part can collide with blue
+our red part can collide with blue
+it'll actually hit the red part since
+it'll actually hit the red part since
+it'll actually hit the red part since
+they can collide which is
+they can collide which is
+they can collide which is
+an interesting feature i wish they would
+an interesting feature i wish they would
+an interesting feature i wish they would
+allow you to toggle whether you want
+allow you to toggle whether you want
+allow you to toggle whether you want
+that or not
+that or not
+that or not
+but it still is pretty interesting could
+but it still is pretty interesting could
+but it still is pretty interesting could
+be useful
+be useful
+be useful
+if you're in that sort of situation
+if you're in that sort of situation
+if you're in that sort of situation
+and by the way the default collision
+and by the way the default collision
+and by the way the default collision
+group for this property is obviously
+group for this property is obviously
+group for this property is obviously
+default
+default
+default
+but yeah that's about it for this
+but yeah that's about it for this
+but yeah that's about it for this
+property so
+property so
+property so
+that's about it for this video i hope
+that's about it for this video i hope
+that's about it for this video i hope
+you guys enjoyed
+you guys enjoyed
+you guys enjoyed
+um sorry for my voice i'm like sort of
+um sorry for my voice i'm like sort of
+um sorry for my voice i'm like sort of
+losing it right now
+losing it right now
+losing it right now
+since it's like fall just started and
+since it's like fall just started and
+since it's like fall just started and
+whatever so i hope you could understand
+whatever so i hope you could understand
+whatever so i hope you could understand
+me
+me
+me
+but i hope you guys enjoyed because
+but i hope you guys enjoyed because
+but i hope you guys enjoyed because
+everyone's been requesting a new raycast
+everyone's been requesting a new raycast
+everyone's been requesting a new raycast
+video and
+video and
+video and
+here it is and this new raycast system i
+here it is and this new raycast system i
+here it is and this new raycast system i
+absolutely love it because it's very
+absolutely love it because it's very
+absolutely love it because it's very
+simple
+simple
+simple
+on the surface but you can make it very
+on the surface but you can make it very
+on the surface but you can make it very
+specialized
+specialized
+specialized
+the more you go and you can also
+the more you go and you can also
+the more you go and you can also
+implement this with the user input
+implement this with the user input
+implement this with the user input
+service to make your own custom mouse
+service to make your own custom mouse
+service to make your own custom mouse
+which is pretty cool i'll probably make
+which is pretty cool i'll probably make
+which is pretty cool i'll probably make
+a video that
+a video that
+a video that
+in the future but make sure to like and
+in the future but make sure to like and
+in the future but make sure to like and
+subscribe if you enjoyed
+subscribe if you enjoyed
+subscribe if you enjoyed
+and i hope you have a nice day and
+and i hope you have a nice day and
+and i hope you have a nice day and
+[Music]
+goodbye
+[Music]
+[Music]
+[Music]
+you

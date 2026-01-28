@@ -1,0 +1,781 @@
+so in this video i'm going to be talking
+so in this video i'm going to be talking
+so in this video i'm going to be talking
+about
+about
+about
+body gyros body gyros are really useful
+body gyros body gyros are really useful
+body gyros body gyros are really useful
+in roblox because they allow you to
+in roblox because they allow you to
+in roblox because they allow you to
+make a part or like an assembly
+make a part or like an assembly
+make a part or like an assembly
+point in a certain direction you can see
+point in a certain direction you can see
+point in a certain direction you can see
+here
+here
+here
+in this video i'll teach you how to make
+in this video i'll teach you how to make
+in this video i'll teach you how to make
+this little demo where i have this part
+this little demo where i have this part
+this little demo where i have this part
+with a light on it
+with a light on it
+with a light on it
+pointing towards me and gives me this
+pointing towards me and gives me this
+pointing towards me and gives me this
+really cool spot like effect so if
+really cool spot like effect so if
+really cool spot like effect so if
+you're interested in this
+you're interested in this
+you're interested in this
+if you're interested in body dryers make
+if you're interested in body dryers make
+if you're interested in body dryers make
+sure to watch this video
+sure to watch this video
+sure to watch this video
+make sure like and subscribe if you
+make sure like and subscribe if you
+make sure like and subscribe if you
+enjoy it and without further ado
+enjoy it and without further ado
+enjoy it and without further ado
+let's get into the video
+[Music]
+[Music]
+[Music]
+so a body gyro and roblox studio is a
+so a body gyro and roblox studio is a
+so a body gyro and roblox studio is a
+type of body mover that allows
+type of body mover that allows
+type of body mover that allows
+a part that it's parented to
+a part that it's parented to
+a part that it's parented to
+to point or orient in a specific
+to point or orient in a specific
+to point or orient in a specific
+direction
+direction
+direction
+and it will maintain that orientation
+and it will maintain that orientation
+and it will maintain that orientation
+depending on how much power you get it
+depending on how much power you get it
+depending on how much power you get it
+so in order to make a body gyro we first
+so in order to make a body gyro we first
+so in order to make a body gyro we first
+need a part
+need a part
+need a part
+here's our part we're going to leave
+here's our part we're going to leave
+here's our part we're going to leave
+that part there
+that part there
+that part there
+and we're going to the part type in body
+and we're going to the part type in body
+and we're going to the part type in body
+gyro and a little plus
+gyro and a little plus
+gyro and a little plus
+we see we have our body gyro and
+we see we have our body gyro and
+we see we have our body gyro and
+out of the box it does nothing
+out of the box it does nothing
+out of the box it does nothing
+and it's gonna be a really messy to try
+and it's gonna be a really messy to try
+and it's gonna be a really messy to try
+to work with our body gyro while it
+to work with our body gyro while it
+to work with our body gyro while it
+keeps on falling
+keeps on falling
+keeps on falling
+because it doesn't affect the position
+because it doesn't affect the position
+because it doesn't affect the position
+it only affects the orientation
+it only affects the orientation
+it only affects the orientation
+so in order to keep it in the same
+so in order to keep it in the same
+so in order to keep it in the same
+position i'm going to add
+position i'm going to add
+position i'm going to add
+a body position
+a body position
+a body position
+to my body you could also add
+to my body you could also add
+to my body you could also add
+a align position and if you want i can
+a align position and if you want i can
+a align position and if you want i can
+make a video on that or even a line
+make a video on that or even a line
+make a video on that or even a line
+orientation i can make a video on that
+orientation i can make a video on that
+orientation i can make a video on that
+as well
+as well
+as well
+but those just require too much of a
+but those just require too much of a
+but those just require too much of a
+hassle with all of their
+hassle with all of their
+hassle with all of their
+attachments and whatever so we have our
+attachments and whatever so we have our
+attachments and whatever so we have our
+body position here
+body position here
+body position here
+i'm going to set the position to 0 5
+i'm going to set the position to 0 5
+i'm going to set the position to 0 5
+0. so if we were to run this
+you can see it goes to that position and
+you can see it goes to that position and
+you can see it goes to that position and
+it does nothing
+it does nothing
+it does nothing
+so when we play this you'll be able to
+so when we play this you'll be able to
+so when we play this you'll be able to
+see
+see
+see
+what it actually does so right now you
+what it actually does so right now you
+what it actually does so right now you
+can spin it in whichever way you want
+can spin it in whichever way you want
+can spin it in whichever way you want
+but when i try to like make it fall down
+but when i try to like make it fall down
+but when i try to like make it fall down
+on this axis or on the other axis
+on this axis or on the other axis
+on this axis or on the other axis
+nothing happens
+nothing happens
+nothing happens
+and the reason that is is because
+and the reason that is is because
+and the reason that is is because
+we have our max torque set to like a big
+we have our max torque set to like a big
+we have our max torque set to like a big
+number
+number
+number
+zero and then big number so what this is
+zero and then big number so what this is
+zero and then big number so what this is
+saying is saying
+saying is saying
+saying is saying
+the max torque on the x and z axis is is
+the max torque on the x and z axis is is
+the max torque on the x and z axis is is
+really really high
+really really high
+really really high
+so it can rotate let me get my root it
+so it can rotate let me get my root it
+so it can rotate let me get my root it
+can rotate it can't rotate
+can rotate it can't rotate
+can rotate it can't rotate
+this way or this way
+this way or this way
+this way or this way
+but on the y-axis it can do whatever so
+but on the y-axis it can do whatever so
+but on the y-axis it can do whatever so
+it can just
+it can just
+it can just
+rotate around however much it wants
+rotate around however much it wants
+rotate around however much it wants
+and that's the whole idea so if i were
+and that's the whole idea so if i were
+and that's the whole idea so if i were
+to add
+to add
+to add
+say copy this value and add it into here
+if i play this
+you can see it's not moving at all now
+you can see it's not moving at all now
+you can see it's not moving at all now
+that's because the body jar is locking
+that's because the body jar is locking
+that's because the body jar is locking
+in position
+in position
+in position
+and you may be asking what is it locking
+and you may be asking what is it locking
+and you may be asking what is it locking
+its position to
+its position to
+its position to
+that's a good question the answer to
+that's a good question the answer to
+that's a good question the answer to
+that is a c
+that is a c
+that is a c
+frame property it's hidden in the
+frame property it's hidden in the
+frame property it's hidden in the
+explorer but we can access that
+explorer but we can access that
+explorer but we can access that
+via script so let me go into my body
+via script so let me go into my body
+via script so let me go into my body
+gyro
+gyro
+gyro
+and add a script actually i'm going to
+and add a script actually i'm going to
+and add a script actually i'm going to
+put in my part
+put in my part
+put in my part
+and then i'm going to define the part
+and then i'm going to define the part
+and then i'm going to define the part
+local part equals script
+local part equals script
+local part equals script
+dot parent local body
+dot parent local body
+dot parent local body
+gyro equals part dot body
+gyro equals part dot body
+gyro equals part dot body
+gyro and you can see
+gyro and you can see
+gyro and you can see
+since we have our body gyro if i
+since we have our body gyro if i
+since we have our body gyro if i
+have the c frame and we can set this to
+have the c frame and we can set this to
+have the c frame and we can set this to
+whatever we want so i'm going to do a
+whatever we want so i'm going to do a
+whatever we want so i'm going to do a
+quick
+quick
+quick
+little demonstration we should do wall
+little demonstration we should do wall
+little demonstration we should do wall
+tree we do
+tree we do
+tree we do
+this just shows it a little better i'm
+this just shows it a little better i'm
+this just shows it a little better i'm
+going to do weight one
+going to do weight one
+going to do weight one
+and we're basically just say body gyro
+and we're basically just say body gyro
+and we're basically just say body gyro
+dot
+dot
+dot
+c frame equals body gyro
+c frame equals body gyro
+c frame equals body gyro
+dot c frame times c
+dot c frame times c
+dot c frame times c
+frame dot angles we're gonna do
+frame dot angles we're gonna do
+frame dot angles we're gonna do
+zero then math dot red
+45 and then zero so let me explain
+45 and then zero so let me explain
+45 and then zero so let me explain
+what's happening here
+what's happening here
+what's happening here
+may seem low complex is actually very
+may seem low complex is actually very
+may seem low complex is actually very
+simple so we have our body jar receive
+simple so we have our body jar receive
+simple so we have our body jar receive
+frame
+frame
+frame
+then we're taking the c frame
+then we're taking the c frame
+then we're taking the c frame
+multiplying it remember this
+multiplying it remember this
+multiplying it remember this
+multiplication sign
+multiplication sign
+multiplication sign
+is basically the same as saying body
+is basically the same as saying body
+is basically the same as saying body
+gyro c frame
+gyro c frame
+gyro c frame
+to world space and if you don't know
+to world space and if you don't know
+to world space and if you don't know
+about world space and object space
+about world space and object space
+about world space and object space
+i have a video on that i will link it
+i have a video on that i will link it
+i have a video on that i will link it
+right now and we're multiplying it by an
+right now and we're multiplying it by an
+right now and we're multiplying it by an
+angle value
+angle value
+angle value
+and we're changing the y value by 45
+and we're changing the y value by 45
+and we're changing the y value by 45
+degrees
+degrees
+degrees
+and we're using math.rad to convert it
+and we're using math.rad to convert it
+and we're using math.rad to convert it
+from degrees
+from degrees
+from degrees
+to radians because that's what this
+to radians because that's what this
+to radians because that's what this
+function takes in and then we're waiting
+function takes in and then we're waiting
+function takes in and then we're waiting
+a second
+a second
+a second
+so what this should do
+so what this should do
+so what this should do
+is every so often it'll rotate 45
+is every so often it'll rotate 45
+is every so often it'll rotate 45
+degrees and you may be saying
+degrees and you may be saying
+degrees and you may be saying
+well why can't i just say part dot c
+well why can't i just say part dot c
+well why can't i just say part dot c
+frame equals part c frame times whatever
+frame equals part c frame times whatever
+frame equals part c frame times whatever
+degrees and the reason for that
+degrees and the reason for that
+degrees and the reason for that
+is that the body gyro can react with
+is that the body gyro can react with
+is that the body gyro can react with
+physics
+physics
+physics
+so you can see how our body positions
+so you can see how our body positions
+so you can see how our body positions
+reacting physics don't mind the body
+reacting physics don't mind the body
+reacting physics don't mind the body
+position it just makes it a lot easier
+position it just makes it a lot easier
+position it just makes it a lot easier
+to test
+to test
+to test
+and i think that's too simple for a
+and i think that's too simple for a
+and i think that's too simple for a
+video on its own if you want it
+video on its own if you want it
+video on its own if you want it
+then you can have it but i don't know so
+then you can have it but i don't know so
+then you can have it but i don't know so
+you can see we can just play around with
+you can see we can just play around with
+you can see we can just play around with
+it it's not clipping through our body
+it it's not clipping through our body
+it it's not clipping through our body
+it works perfectly fine and that's where
+it works perfectly fine and that's where
+it works perfectly fine and that's where
+body job because body gyro is basically
+body job because body gyro is basically
+body job because body gyro is basically
+act
+act
+act
+as an overlaid part c frame with physics
+as an overlaid part c frame with physics
+as an overlaid part c frame with physics
+which is the best way i can explain it
+which is the best way i can explain it
+which is the best way i can explain it
+so you can like customize all these
+so you can like customize all these
+so you can like customize all these
+values
+values
+values
+and it'll try to achieve those values
+and it'll try to achieve those values
+and it'll try to achieve those values
+but if it doesn't have enough power it
+but if it doesn't have enough power it
+but if it doesn't have enough power it
+just won't do it so
+just won't do it so
+just won't do it so
+let's start changing some of these
+let's start changing some of these
+let's start changing some of these
+values so this d right here is a
+values so this d right here is a
+values so this d right here is a
+dampening factor so the heart like the
+dampening factor so the heart like the
+dampening factor so the heart like the
+higher this is
+higher this is
+higher this is
+the like the more smoothly it'll go but
+the like the more smoothly it'll go but
+the like the more smoothly it'll go but
+let's just for
+let's just for
+let's just for
+for fun of it let's set it to zero and
+for fun of it let's set it to zero and
+for fun of it let's set it to zero and
+let's see what happens
+let's see what happens
+let's see what happens
+i'm sure to run this and so you can see
+i'm sure to run this and so you can see
+i'm sure to run this and so you can see
+because there's zero dampening it's over
+because there's zero dampening it's over
+because there's zero dampening it's over
+correcting itself
+correcting itself
+correcting itself
+like exponentially which is really bad
+like exponentially which is really bad
+like exponentially which is really bad
+so let's just increase the damping to
+so let's just increase the damping to
+so let's just increase the damping to
+like 10.
+like 10.
+like 10.
+and you can see how like jittery it is
+and you can see how like jittery it is
+and you can see how like jittery it is
+and that's why you always want to have
+and that's why you always want to have
+and that's why you always want to have
+your dampening value
+your dampening value
+your dampening value
+pretty high just to make it a little
+pretty high just to make it a little
+pretty high just to make it a little
+more natural
+and there we go so
+and there we go so
+and there we go so
+i think i think the default value was
+i think i think the default value was
+i think i think the default value was
+and then with the power we can set this
+and then with the power we can set this
+and then with the power we can set this
+power to like 10
+power to like 10
+power to like 10
+and it'll be a lot less powerful so
+and it'll be a lot less powerful so
+and it'll be a lot less powerful so
+let's see how that works
+let's see how that works
+let's see how that works
+you can see that setting the power to 10
+you can see that setting the power to 10
+you can see that setting the power to 10
+the dampening is just so high it just
+the dampening is just so high it just
+the dampening is just so high it just
+won't even do anything
+won't even do anything
+won't even do anything
+so you can play with all these values
+so you can play with all these values
+so you can play with all these values
+and do whatever you want with them
+and do whatever you want with them
+and do whatever you want with them
+so lastly i'm going to do a quick little
+so lastly i'm going to do a quick little
+so lastly i'm going to do a quick little
+demo this is a fun demo
+demo this is a fun demo
+demo this is a fun demo
+you can make like a spotlight that
+you can make like a spotlight that
+you can make like a spotlight that
+follows your player character
+follows your player character
+follows your player character
+when you're using a body gyro and this
+when you're using a body gyro and this
+when you're using a body gyro and this
+just looks pretty cool
+just looks pretty cool
+just looks pretty cool
+so what i'm going to do is i'm going to
+so what i'm going to do is i'm going to
+so what i'm going to do is i'm going to
+go to my part
+go to my part
+go to my part
+i'm going to add a spotlight
+i'm going to add a spotlight
+i'm going to add a spotlight
+and it's going to be on the front face
+and it's going to be on the front face
+and it's going to be on the front face
+that should work fine
+that should work fine
+that should work fine
+and we're gonna go into our script we're
+and we're gonna go into our script we're
+and we're gonna go into our script we're
+gonna get our player service
+game get service
+game get service
+game get service
+players and then we're going to
+players and then we're going to
+players and then we're going to
+go down here and just do players
+go down here and just do players
+go down here and just do players
+dot player added connect and since this
+dot player added connect and since this
+dot player added connect and since this
+is a single player this won't work on
+is a single player this won't work on
+is a single player this won't work on
+multiplayer
+multiplayer
+multiplayer
+but since a single player i can just do
+but since a single player i can just do
+but since a single player i can just do
+this we'll get the player
+this we'll get the player
+this we'll get the player
+and then the
+and then the
+and then the
+body gyro dot c frame will be equal to
+body gyro dot c frame will be equal to
+body gyro dot c frame will be equal to
+the player
+the player
+the player
+to be equal to c frame dot look at
+to be equal to c frame dot look at
+to be equal to c frame dot look at
+part dot position and then
+part dot position and then
+part dot position and then
+player dot character dot primary part
+player dot character dot primary part
+player dot character dot primary part
+dot position and this code is not very
+dot position and this code is not very
+dot position and this code is not very
+defensive it'll break
+defensive it'll break
+defensive it'll break
+like a ton it's just for the sake of
+like a ton it's just for the sake of
+like a ton it's just for the sake of
+demonstration
+demonstration
+demonstration
+and i just think this is pretty cool and
+and i just think this is pretty cool and
+and i just think this is pretty cool and
+obviously we need to have a little loop
+obviously we need to have a little loop
+obviously we need to have a little loop
+so we're going to say while true
+zoom out a little bit
+well true do
+well true do
+well true do
+there we go and we'll wait
+there we go and we'll wait
+there we go and we'll wait
+point three let's say so every
+point three let's say so every
+point three let's say so every
+point three seconds it'll update the
+point three seconds it'll update the
+point three seconds it'll update the
+body guys frame
+body guys frame
+body guys frame
+to look at us and let me actually change
+to look at us and let me actually change
+to look at us and let me actually change
+the power
+the power
+the power
+back to 3 000 i think it was we'll see
+back to 3 000 i think it was we'll see
+back to 3 000 i think it was we'll see
+so we have our
+so we have our
+so we have our
+c frame look at from the part looking at
+c frame look at from the part looking at
+c frame look at from the part looking at
+the player so it should be pointing
+the player so it should be pointing
+the player so it should be pointing
+towards you
+towards you
+towards you
+yeah i just had to wait for the
+yeah i just had to wait for the
+yeah i just had to wait for the
+character to load in let me fix that
+character to load in let me fix that
+character to load in let me fix that
+real quick
+character added wait
+character added wait
+character added wait
+there we go
+there we go
+there we go
+and you can see this little spotlight
+and you can see this little spotlight
+and you can see this little spotlight
+is staring at me so if we were to maybe
+is staring at me so if we were to maybe
+is staring at me so if we were to maybe
+set the time to really late at night
+set the time to really late at night
+set the time to really late at night
+will get a pretty cool effect
+so the spotlight is following me and
+so the spotlight is following me and
+so the spotlight is following me and
+since it's a body gyro it's a little
+since it's a body gyro it's a little
+since it's a body gyro it's a little
+delayed
+delayed
+delayed
+which makes it gives a really nice
+which makes it gives a really nice
+which makes it gives a really nice
+smoothing effect if that's what you're
+smoothing effect if that's what you're
+smoothing effect if that's what you're
+after
+after
+after
+and that actually looks pretty cool so
+and that actually looks pretty cool so
+and that actually looks pretty cool so
+that's about
+that's about
+that's about
+it for this video i hope you enjoyed
+it for this video i hope you enjoyed
+it for this video i hope you enjoyed
+this video
+this video
+this video
+i use body dryers a ton and
+i use body dryers a ton and
+i use body dryers a ton and
+anything that needs physics because
+anything that needs physics because
+anything that needs physics because
+personally i prefer these over
+personally i prefer these over
+personally i prefer these over
+a line orientation and if you want to
+a line orientation and if you want to
+a line orientation and if you want to
+see a video on that then make sure to
+see a video on that then make sure to
+see a video on that then make sure to
+let me know
+let me know
+let me know
+but other than that make sure to like
+but other than that make sure to like
+but other than that make sure to like
+and subscribe if you enjoyed this video
+and subscribe if you enjoyed this video
+and subscribe if you enjoyed this video
+and i hope you have a nice day and
+and i hope you have a nice day and
+and i hope you have a nice day and
+[Music]
+[Music]
+[Music]
+goodbye
+[Music]
+[Music]
+[Music]
+you

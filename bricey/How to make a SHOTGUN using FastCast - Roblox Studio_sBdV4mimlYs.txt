@@ -1,0 +1,2551 @@
+shotguns are pretty cool weapons
+shotguns are pretty cool weapons
+shotguns are pretty cool weapons
+they have bullets or pellets like a
+they have bullets or pellets like a
+they have bullets or pellets like a
+normal gun but instead of just one you
+normal gun but instead of just one you
+normal gun but instead of just one you
+know they have a spread
+know they have a spread
+know they have a spread
+and this is a really good gun for a game
+and this is a really good gun for a game
+and this is a really good gun for a game
+however they're a little bit tricky to
+however they're a little bit tricky to
+however they're a little bit tricky to
+implement in this video i will try to
+implement in this video i will try to
+implement in this video i will try to
+facilitate your implementation of a
+facilitate your implementation of a
+facilitate your implementation of a
+shotgun
+shotgun
+shotgun
+and roblox studio this will be using
+and roblox studio this will be using
+and roblox studio this will be using
+fastcast and if you don't know what
+fastcast and if you don't know what
+fastcast and if you don't know what
+fastcast is i already have a tutorial on
+fastcast is i already have a tutorial on
+fastcast is i already have a tutorial on
+how to make like a gun which is just
+how to make like a gun which is just
+how to make like a gun which is just
+basically like a pistol
+basically like a pistol
+basically like a pistol
+and this tutorial goes over all the
+and this tutorial goes over all the
+and this tutorial goes over all the
+stuff that we did there
+stuff that we did there
+stuff that we did there
+briefly and it also expands on it
+briefly and it also expands on it
+briefly and it also expands on it
+talking about the spread
+talking about the spread
+talking about the spread
+how how we can calculate the spread and
+how how we can calculate the spread and
+how how we can calculate the spread and
+make it realistic
+make it realistic
+make it realistic
+yet also random and just some extra fast
+yet also random and just some extra fast
+yet also random and just some extra fast
+cast stuff so if you enjoy this video
+cast stuff so if you enjoy this video
+cast stuff so if you enjoy this video
+make sure to like and subscribe
+make sure to like and subscribe
+make sure to like and subscribe
+make sure to join my discord server link
+make sure to join my discord server link
+make sure to join my discord server link
+is in the description
+is in the description
+is in the description
+without further ado let's get started so
+without further ado let's get started so
+without further ado let's get started so
+i've already created a basic gun model
+i've already created a basic gun model
+i've already created a basic gun model
+and you'll notice it has these visual
+and you'll notice it has these visual
+and you'll notice it has these visual
+parts but it also has a part
+parts but it also has a part
+parts but it also has a part
+named handle and it is vital that you
+named handle and it is vital that you
+named handle and it is vital that you
+have this part
+have this part
+have this part
+if you want a more in-depth tutorial on
+if you want a more in-depth tutorial on
+if you want a more in-depth tutorial on
+how to set your gun
+how to set your gun
+how to set your gun
+and the handle go check out my original
+and the handle go check out my original
+and the handle go check out my original
+fastcast tutorial
+fastcast tutorial
+fastcast tutorial
+but i already have my handle set up
+but i already have my handle set up
+but i already have my handle set up
+where the character should be holding it
+where the character should be holding it
+where the character should be holding it
+and now what i want to do is go to the
+and now what i want to do is go to the
+and now what i want to do is go to the
+handle click the plus
+handle click the plus
+handle click the plus
+and create an attachment and this
+and create an attachment and this
+and create an attachment and this
+attachment is going to be where we want
+attachment is going to be where we want
+attachment is going to be where we want
+our bullet to fire
+our bullet to fire
+our bullet to fire
+so i'm going to move it over to about
+so i'm going to move it over to about
+so i'm going to move it over to about
+where the barrel should be
+where the barrel should be
+where the barrel should be
+so it looks about right and that will be
+so it looks about right and that will be
+so it looks about right and that will be
+where our bullet will fire out
+where our bullet will fire out
+where our bullet will fire out
+and since that's its function i'm going
+and since that's its function i'm going
+and since that's its function i'm going
+to name it
+to name it
+to name it
+fire point there we go
+fire point there we go
+fire point there we go
+and now we need to make a bullet model
+and now we need to make a bullet model
+and now we need to make a bullet model
+like a little template that we'll use
+like a little template that we'll use
+like a little template that we'll use
+whenever we need a spawning bullet
+whenever we need a spawning bullet
+whenever we need a spawning bullet
+and since we're making a shotgun and
+and since we're making a shotgun and
+and since we're making a shotgun and
+pellets are roughly spherical
+pellets are roughly spherical
+pellets are roughly spherical
+i'm going to make a sphere i'm gonna
+i'm going to make a sphere i'm gonna
+i'm going to make a sphere i'm gonna
+give it
+give it
+give it
+a nice metallic cover color i'm gonna
+a nice metallic cover color i'm gonna
+a nice metallic cover color i'm gonna
+make it
+make it
+make it
+point three five point three five point
+point three five point three five point
+point three five point three five point
+three
+three
+three
+there you go so it's nice and tiny and
+there you go so it's nice and tiny and
+there you go so it's nice and tiny and
+it'll work pretty well when we're
+it'll work pretty well when we're
+it'll work pretty well when we're
+shooting it out you can customize this
+shooting it out you can customize this
+shooting it out you can customize this
+to whatever you want
+to whatever you want
+to whatever you want
+and i'm going to name it pellet
+and i'm going to name it pellet
+and i'm going to name it pellet
+then shove it into server storage
+then shove it into server storage
+then shove it into server storage
+and i'm going to take my model and we're
+and i'm going to take my model and we're
+and i'm going to take my model and we're
+going to name this
+going to name this
+going to name this
+gun model we're going to create a tool
+gun model we're going to create a tool
+gun model we're going to create a tool
+at the top and then we're going to put
+at the top and then we're going to put
+at the top and then we're going to put
+the gun model inside the tool
+the gun model inside the tool
+the gun model inside the tool
+but make sure to take your handle out
+but make sure to take your handle out
+but make sure to take your handle out
+and put it
+and put it
+and put it
+higher up so it looks like this because
+higher up so it looks like this because
+higher up so it looks like this because
+the tool needs to have the handle
+the tool needs to have the handle
+the tool needs to have the handle
+spelled exactly like this right below it
+spelled exactly like this right below it
+spelled exactly like this right below it
+and one other thing we need to do before
+and one other thing we need to do before
+and one other thing we need to do before
+we continue is
+we continue is
+we continue is
+weld all of these parts so highlight all
+weld all of these parts so highlight all
+weld all of these parts so highlight all
+of them in your explorer
+of them in your explorer
+of them in your explorer
+go to model create weld
+go to model create weld
+go to model create weld
+and then if you click draw on top and
+and then if you click draw on top and
+and then if you click draw on top and
+show welds
+show welds
+show welds
+you can see that everything is welded up
+you can see that everything is welded up
+you can see that everything is welded up
+nice
+nice
+nice
+and good this will keep all the parts
+and good this will keep all the parts
+and good this will keep all the parts
+from falling off
+from falling off
+from falling off
+and also turn can collide off
+and also turn can collide off
+and also turn can collide off
+because it's kind of weird having a tool
+because it's kind of weird having a tool
+because it's kind of weird having a tool
+that can collide on
+that can collide on
+that can collide on
+this is our tool almost done let's move
+this is our tool almost done let's move
+this is our tool almost done let's move
+it
+it
+it
+over into the starter pack so it's
+over into the starter pack so it's
+over into the starter pack so it's
+easier to debug
+easier to debug
+easier to debug
+and it'll automatically put it in the
+and it'll automatically put it in the
+and it'll automatically put it in the
+player's inventory once they spawn in
+player's inventory once they spawn in
+player's inventory once they spawn in
+and let's name it shotgun because that
+and let's name it shotgun because that
+and let's name it shotgun because that
+is what we are making
+is what we are making
+is what we are making
+so now let's start populating this tool
+so now let's start populating this tool
+so now let's start populating this tool
+with some scripts
+with some scripts
+with some scripts
+first off we need to get fastcast i have
+first off we need to get fastcast i have
+first off we need to get fastcast i have
+it in my toolbox already
+it in my toolbox already
+it in my toolbox already
+my inventory so i can find it
+my inventory so i can find it
+my inventory so i can find it
+here somewhere also we're going to want
+here somewhere also we're going to want
+here somewhere also we're going to want
+part cash
+part cash
+part cash
+so fast cash redux and part cash i will
+so fast cash redux and part cash i will
+so fast cash redux and part cash i will
+have links to these in the description
+have links to these in the description
+have links to these in the description
+just add them to your library and then
+just add them to your library and then
+just add them to your library and then
+shove them
+shove them
+shove them
+straight into your tool or if you're
+straight into your tool or if you're
+straight into your tool or if you're
+making a game with multiple guns just
+making a game with multiple guns just
+making a game with multiple guns just
+put them in like a replicated storage or
+put them in like a replicated storage or
+put them in like a replicated storage or
+something so all of your guns can get
+something so all of your guns can get
+something so all of your guns can get
+them
+them
+them
+so now we're going to make our local
+so now we're going to make our local
+so now we're going to make our local
+script
+script
+script
+and i'm going to name this client and
+and i'm going to name this client and
+and i'm going to name this client and
+then we're going to make a
+then we're going to make a
+then we're going to make a
+server script and i'm going to name this
+server script and i'm going to name this
+server script and i'm going to name this
+server and then we want to make
+server and then we want to make
+server and then we want to make
+a remote event and i'm going to name
+a remote event and i'm going to name
+a remote event and i'm going to name
+this
+this
+this
+fire event so what this is meant to do
+fire event so what this is meant to do
+fire event so what this is meant to do
+is we have our client that'll pick up
+is we have our client that'll pick up
+is we have our client that'll pick up
+the user input and the mouse position
+the user input and the mouse position
+the user input and the mouse position
+will send it to the server via this fire
+will send it to the server via this fire
+will send it to the server via this fire
+event and the server will actually
+event and the server will actually
+event and the server will actually
+create the bullets using fast cast and
+create the bullets using fast cast and
+create the bullets using fast cast and
+part cache
+part cache
+part cache
+and it will shoot them hit detect
+and it will shoot them hit detect
+and it will shoot them hit detect
+whatever that's exactly what we want in
+whatever that's exactly what we want in
+whatever that's exactly what we want in
+order
+order
+order
+for everything to be secure but also
+for everything to be secure but also
+for everything to be secure but also
+fast
+fast
+fast
+let's first set up the client script so
+let's first set up the client script so
+let's first set up the client script so
+i'm going to double click on that
+i'm going to double click on that
+i'm going to double click on that
+zoom in a little bit and get rid of this
+zoom in a little bit and get rid of this
+zoom in a little bit and get rid of this
+line
+line
+line
+and we need to do a few things so first
+and we need to do a few things so first
+and we need to do a few things so first
+of all
+of all
+of all
+let's get user input service because
+let's get user input service because
+let's get user input service because
+we're definitely going to need that
+we're definitely going to need that
+we're definitely going to need that
+user input service equals game get
+user input service equals game get
+user input service equals game get
+service user and
+service user and
+service user and
+put service there we go and then we want
+put service there we go and then we want
+put service there we go and then we want
+to
+to
+to
+get our fire event which will be equal
+get our fire event which will be equal
+get our fire event which will be equal
+to
+to
+to
+script dot parent dot fire
+script dot parent dot fire
+script dot parent dot fire
+even actually we need to wait for child
+even actually we need to wait for child
+even actually we need to wait for child
+since we're on the client
+since we're on the client
+since we're on the client
+should do fire event there we go and
+should do fire event there we go and
+should do fire event there we go and
+lastly we need the camera and the camera
+lastly we need the camera and the camera
+lastly we need the camera and the camera
+is to get
+is to get
+is to get
+the mouse position i'll say workspace
+the mouse position i'll say workspace
+the mouse position i'll say workspace
+dot current camera
+dot current camera
+dot current camera
+so what we're going to do is usually
+so what we're going to do is usually
+so what we're going to do is usually
+you'll see like most tutorials
+you'll see like most tutorials
+you'll see like most tutorials
+like oh let's use the mouse and
+like oh let's use the mouse and
+like oh let's use the mouse and
+technically
+technically
+technically
+the mouse still works like just saying
+the mouse still works like just saying
+the mouse still works like just saying
+play mouse but a better way
+play mouse but a better way
+play mouse but a better way
+of getting player input and the
+of getting player input and the
+of getting player input and the
+recommended way for roblox is using user
+recommended way for roblox is using user
+recommended way for roblox is using user
+input service and the camera
+input service and the camera
+input service and the camera
+to get a unit ray i'll show you how to
+to get a unit ray i'll show you how to
+to get a unit ray i'll show you how to
+do that
+do that
+do that
+so we also need to get the tool so i'm
+so we also need to get the tool so i'm
+so we also need to get the tool so i'm
+going to say local tool
+going to say local tool
+going to say local tool
+which we go to script dot parent there
+which we go to script dot parent there
+which we go to script dot parent there
+you go
+you go
+you go
+i know it's kind of redundant here and
+i know it's kind of redundant here and
+i know it's kind of redundant here and
+here but you can fix that if you want
+here but you can fix that if you want
+here but you can fix that if you want
+we need to say tool dot activated so
+we need to say tool dot activated so
+we need to say tool dot activated so
+when the tool is clicked
+when the tool is clicked
+when the tool is clicked
+or touched or whatever when you connect
+or touched or whatever when you connect
+or touched or whatever when you connect
+a function
+a function
+a function
+and then inside the function
+and then inside the function
+and then inside the function
+we'll say local pose this will be a
+we'll say local pose this will be a
+we'll say local pose this will be a
+vector 2 which will be equal to
+vector 2 which will be equal to
+vector 2 which will be equal to
+user input service
+get mouse location so let's look at the
+get mouse location so let's look at the
+get mouse location so let's look at the
+position of the mouse on the screen in
+position of the mouse on the screen in
+position of the mouse on the screen in
+2d space
+2d space
+2d space
+and in order to get that into a usable
+and in order to get that into a usable
+and in order to get that into a usable
+thing in 3d we need to say local
+thing in 3d we need to say local
+thing in 3d we need to say local
+ray equals camera
+ray equals camera
+ray equals camera
+viewport point to ray
+viewport point to ray
+viewport point to ray
+and then pose.x pose dot y
+and then pose.x pose dot y
+and then pose.x pose dot y
+so what this is doing is it's taking our
+so what this is doing is it's taking our
+so what this is doing is it's taking our
+vector two position
+vector two position
+vector two position
+like it's x and y it's just splitting it
+like it's x and y it's just splitting it
+like it's x and y it's just splitting it
+up and we're taking that point and we're
+up and we're taking that point and we're
+up and we're taking that point and we're
+converting it to a ray
+converting it to a ray
+converting it to a ray
+on the viewport which is like the
+on the viewport which is like the
+on the viewport which is like the
+player's viewing pane and so
+player's viewing pane and so
+player's viewing pane and so
+depending on what the camera is it'll
+depending on what the camera is it'll
+depending on what the camera is it'll
+just be array pointing in the direction
+just be array pointing in the direction
+just be array pointing in the direction
+of the mouse
+of the mouse
+of the mouse
+and this will allow us to convert that
+and this will allow us to convert that
+and this will allow us to convert that
+into a position
+into a position
+into a position
+on the server that we can then cast
+on the server that we can then cast
+on the server that we can then cast
+our bullets to in order to get that to
+our bullets to in order to get that to
+our bullets to in order to get that to
+the server we can
+the server we can
+the server we can
+say fire event fire server
+and then on the server side let's just
+and then on the server side let's just
+and then on the server side let's just
+test everything out
+test everything out
+test everything out
+so we can say local tool equals script
+so we can say local tool equals script
+so we can say local tool equals script
+dot parent just need that and let's say
+dot parent just need that and let's say
+dot parent just need that and let's say
+local
+local
+local
+fire event equals tool dot fire event
+fire event equals tool dot fire event
+fire event equals tool dot fire event
+and then we can just say just for
+and then we can just say just for
+and then we can just say just for
+testing purposes fire event dot on
+testing purposes fire event dot on
+testing purposes fire event dot on
+server event connect a function
+server event connect a function
+server event connect a function
+which will have parameters of the player
+which will have parameters of the player
+which will have parameters of the player
+and the ray
+and the ray
+and the ray
+and we can just say print player.name
+and we can just say print player.name
+and we can just say print player.name
+fired array there we go
+fired array there we go
+fired array there we go
+so let's play this make sure everything
+so let's play this make sure everything
+so let's play this make sure everything
+works properly
+we have our shotgun we click it says b i
+we have our shotgun we click it says b i
+we have our shotgun we click it says b i
+see you fired array that's perfect
+see you fired array that's perfect
+see you fired array that's perfect
+so our wave communication set up let's
+so our wave communication set up let's
+so our wave communication set up let's
+go head over back to the server
+go head over back to the server
+go head over back to the server
+and let's get some housekeeping done to
+and let's get some housekeeping done to
+and let's get some housekeeping done to
+find some variables set up the basic
+find some variables set up the basic
+find some variables set up the basic
+fastcast functionality
+fastcast functionality
+fastcast functionality
+and if you don't know too much about
+and if you don't know too much about
+and if you don't know too much about
+fastcast look at my original fastcast
+fastcast look at my original fastcast
+fastcast look at my original fastcast
+gun tutorial that'll tell you all about
+gun tutorial that'll tell you all about
+gun tutorial that'll tell you all about
+it
+it
+it
+so i'm going to say first of all get
+so i'm going to say first of all get
+so i'm going to say first of all get
+fastcast by saying local fastcast
+fastcast by saying local fastcast
+fastcast by saying local fastcast
+equals tool dot or actually require
+equals tool dot or actually require
+equals tool dot or actually require
+so this is module script tool dot
+so this is module script tool dot
+so this is module script tool dot
+fastcast redux
+fastcast redux
+fastcast redux
+i'm going to say local part cash
+i'm going to say local part cash
+i'm going to say local part cash
+equals require i can spell it right
+equals require i can spell it right
+equals require i can spell it right
+tool dot part cash
+tool dot part cash
+tool dot part cash
+and then we can define
+and then we can define
+and then we can define
+local
+caster which will equal fastcast.new
+caster which will equal fastcast.new
+caster which will equal fastcast.new
+let me just separate that and we can
+let me just separate that and we can
+let me just separate that and we can
+also get our
+also get our
+also get our
+part provider i'm just going to say
+part provider i'm just going to say
+part provider i'm just going to say
+provider equals part cash
+provider equals part cash
+provider equals part cash
+dot new so the parccas.new actually
+dot new so the parccas.new actually
+dot new so the parccas.new actually
+takes
+takes
+takes
+a few different things so let's go
+a few different things so let's go
+a few different things so let's go
+define them as well
+define them as well
+define them as well
+we need to get the pellet local pellet
+we need to get the pellet local pellet
+we need to get the pellet local pellet
+will be equal to game
+will be equal to game
+will be equal to game
+get service server
+get service server
+get service server
+storage dot pellet
+storage dot pellet
+storage dot pellet
+let me just make sure it's name that
+let me just make sure it's name that
+let me just make sure it's name that
+yeah let's name that there we go
+yeah let's name that there we go
+yeah let's name that there we go
+and we also need to get a
+and we also need to get a
+and we also need to get a
+folder where we'll store all of our
+folder where we'll store all of our
+folder where we'll store all of our
+bullets which i'll make
+bullets which i'll make
+bullets which i'll make
+right now so in the workspace click the
+right now so in the workspace click the
+right now so in the workspace click the
+plus
+plus
+plus
+create a folder and i'm just going to
+create a folder and i'm just going to
+create a folder and i'm just going to
+name this pellets
+name this pellets
+name this pellets
+folder and i can get that by saying
+folder and i can get that by saying
+folder and i can get that by saying
+local pellets
+local pellets
+local pellets
+folder equals workspace
+folder equals workspace
+folder equals workspace
+dot pellets folder there we go and then
+dot pellets folder there we go and then
+dot pellets folder there we go and then
+in our part cache constructor
+in our part cache constructor
+in our part cache constructor
+we want to send in our pellet which will
+we want to send in our pellet which will
+we want to send in our pellet which will
+be the part that we want to
+be the part that we want to
+be the part that we want to
+keep cached and we need
+keep cached and we need
+keep cached and we need
+the number of
+the number of
+the number of
+things we want any any given time you
+things we want any any given time you
+things we want any any given time you
+can do a hundred a thousand whatever you
+can do a hundred a thousand whatever you
+can do a hundred a thousand whatever you
+want
+want
+want
+for right now i'm going to do 100 that
+for right now i'm going to do 100 that
+for right now i'm going to do 100 that
+has worked well in testing for a bigger
+has worked well in testing for a bigger
+has worked well in testing for a bigger
+game you'll definitely need like a
+game you'll definitely need like a
+game you'll definitely need like a
+thousand or so
+thousand or so
+thousand or so
+but and then after that we can say
+but and then after that we can say
+but and then after that we can say
+our folder which will be the pellets
+our folder which will be the pellets
+our folder which will be the pellets
+folder
+folder
+folder
+there we go and now we need to define
+there we go and now we need to define
+there we go and now we need to define
+our cast params which will be equal to
+our cast params which will be equal to
+our cast params which will be equal to
+raycastparams.new
+raycastparams.new
+raycastparams.new
+we'll set castparams.filter
+we'll set castparams.filter
+we'll set castparams.filter
+filters type
+filters type
+filters type
+equal to
+enum dot ray cast filter type
+enum dot ray cast filter type
+enum dot ray cast filter type
+dot blacklist and then we don't want to
+dot blacklist and then we don't want to
+dot blacklist and then we don't want to
+set
+set
+set
+our stuff now
+our stuff now
+our stuff now
+with the filter just instances we
+with the filter just instances we
+with the filter just instances we
+actually want to make an event to do
+actually want to make an event to do
+actually want to make an event to do
+that
+that
+that
+so up here i'm going to say tool
+so up here i'm going to say tool
+so up here i'm going to say tool
+dot equipped
+dot equipped
+dot equipped
+connect a function and then we're going
+connect a function and then we're going
+connect a function and then we're going
+to set
+to set
+to set
+our task params dot
+our task params dot
+our task params dot
+filter descendants instances equal to
+filter descendants instances equal to
+filter descendants instances equal to
+tool dot
+tool dot
+tool dot
+a list of the tool dot parent
+a list of the tool dot parent
+a list of the tool dot parent
+and the reason we're doing this is so
+and the reason we're doing this is so
+and the reason we're doing this is so
+each time the player responds it'll
+each time the player responds it'll
+each time the player responds it'll
+update the cast params accordingly and
+update the cast params accordingly and
+update the cast params accordingly and
+if you don't know what raycast params
+if you don't know what raycast params
+if you don't know what raycast params
+are i made a
+are i made a
+are i made a
+video about it a while back i will link
+video about it a while back i will link
+video about it a while back i will link
+that right now
+that right now
+that right now
+and that is our a lot of our
+and that is our a lot of our
+and that is our a lot of our
+infrastructure done
+infrastructure done
+infrastructure done
+we still got a few more things
+we still got a few more things
+we still got a few more things
+most notably our fast cast behavior so
+most notably our fast cast behavior so
+most notably our fast cast behavior so
+i'm going to say local behavior
+i'm going to say local behavior
+i'm going to say local behavior
+equals fastcast dot new behavior
+equals fastcast dot new behavior
+equals fastcast dot new behavior
+then we say behavior dot
+then we say behavior dot
+then we say behavior dot
+raycast params will be equal to our cast
+raycast params will be equal to our cast
+raycast params will be equal to our cast
+params
+params
+params
+and then behavior.cosmetic
+and then behavior.cosmetic
+and then behavior.cosmetic
+bullet provider this is the part cache
+bullet provider this is the part cache
+bullet provider this is the part cache
+instance that we made earlier
+instance that we made earlier
+instance that we made earlier
+will be equal to provider and then the
+will be equal to provider and then the
+will be equal to provider and then the
+behavior
+behavior
+behavior
+dot cosmetic bullet container
+dot cosmetic bullet container
+dot cosmetic bullet container
+will be equal to our
+will be equal to our
+will be equal to our
+pellets folder there we go so
+pellets folder there we go so
+pellets folder there we go so
+that was a lot didn't really do much but
+that was a lot didn't really do much but
+that was a lot didn't really do much but
+trust me this will be useful
+trust me this will be useful
+trust me this will be useful
+down the line when we are making our gun
+down the line when we are making our gun
+down the line when we are making our gun
+now let's start with the actual firing
+now let's start with the actual firing
+now let's start with the actual firing
+mechanic so i'm going to get rid of this
+mechanic so i'm going to get rid of this
+mechanic so i'm going to get rid of this
+print statement because that was just
+print statement because that was just
+print statement because that was just
+for testing and
+for testing and
+for testing and
+we need to make a few things first of
+we need to make a few things first of
+we need to make a few things first of
+all
+all
+all
+i need to say if tool dot parent
+i need to say if tool dot parent
+i need to say if tool dot parent
+is a backpack then
+is a backpack then
+is a backpack then
+return end what this does is it
+return end what this does is it
+return end what this does is it
+stops our function if the
+stops our function if the
+stops our function if the
+tool is in the player's backpack in
+tool is in the player's backpack in
+tool is in the player's backpack in
+which case it should not fire under any
+which case it should not fire under any
+which case it should not fire under any
+circumstance and then next
+circumstance and then next
+circumstance and then next
+we can we can get our mouse position and
+we can we can get our mouse position and
+we can we can get our mouse position and
+this position will be
+this position will be
+this position will be
+achieved by making a new function i'm
+achieved by making a new function i'm
+achieved by making a new function i'm
+just going to make it i'm gonna make it
+just going to make it i'm gonna make it
+just going to make it i'm gonna make it
+right below here
+right below here
+right below here
+we'll call this local function
+we'll call this local function
+we'll call this local function
+get mouse
+get mouse
+get mouse
+pose it'll take in a unit ray
+pose it'll take in a unit ray
+pose it'll take in a unit ray
+which is what we created in our client
+which is what we created in our client
+which is what we created in our client
+like the little unit array
+like the little unit array
+like the little unit array
+we send that to the server and then
+we send that to the server and then
+we send that to the server and then
+we'll say local
+we'll say local
+we'll say local
+ori which is origin and endure which is
+ori which is origin and endure which is
+ori which is origin and endure which is
+direction
+direction
+direction
+equals unit ray dot origin
+equals unit ray dot origin
+equals unit ray dot origin
+unit ray dot direction
+times a certain distance so i'm going to
+times a certain distance so i'm going to
+times a certain distance so i'm going to
+go define this
+go define this
+go define this
+at the top of our script we're going to
+at the top of our script we're going to
+at the top of our script we're going to
+call this
+call this
+call this
+let's just say max dist
+let's just say max dist
+let's just say max dist
+and make mine 500 so this is the maximum
+and make mine 500 so this is the maximum
+and make mine 500 so this is the maximum
+distance your gun will be able to fire
+distance your gun will be able to fire
+distance your gun will be able to fire
+like in any direction and 500 is a
+like in any direction and 500 is a
+like in any direction and 500 is a
+pretty good number and we're going to
+pretty good number and we're going to
+pretty good number and we're going to
+multiply
+multiply
+multiply
+our direction by max dist
+our direction by max dist
+our direction by max dist
+so we have an origin at our unit rate of
+so we have an origin at our unit rate of
+so we have an origin at our unit rate of
+origin and since the unit rate we need
+origin and since the unit rate we need
+origin and since the unit rate we need
+to multiply it by whatever amount
+to multiply it by whatever amount
+to multiply it by whatever amount
+and there we go and now we can say local
+and there we go and now we can say local
+and there we go and now we can say local
+result
+result
+result
+equals
+workspace raycast
+ori oh whoops
+ori oh whoops
+ori oh whoops
+ori dur and then cast params because we
+ori dur and then cast params because we
+ori dur and then cast params because we
+want to keep the cast params
+want to keep the cast params
+want to keep the cast params
+ubiquitous throughout everything and
+ubiquitous throughout everything and
+ubiquitous throughout everything and
+then we need to return
+then we need to return
+then we need to return
+result and result dot position
+result and result dot position
+result and result dot position
+or origin plus
+or origin plus
+or origin plus
+direction so what this does is we say
+direction so what this does is we say
+direction so what this does is we say
+we get a raycast result and if the
+we get a raycast result and if the
+we get a raycast result and if the
+result exists so if result is true
+result exists so if result is true
+result exists so if result is true
+we return the result position or
+we return the result position or
+we return the result position or
+if there's no result we return
+if there's no result we return
+if there's no result we return
+the origin plus direction which will get
+the origin plus direction which will get
+the origin plus direction which will get
+us
+us
+us
+to the res like the intended result
+to the res like the intended result
+to the res like the intended result
+position
+position
+position
+and the reason we're going through all
+and the reason we're going through all
+and the reason we're going through all
+this hassle and not using the unit rate
+this hassle and not using the unit rate
+this hassle and not using the unit rate
+is it looks a lot more accurate that way
+is it looks a lot more accurate that way
+is it looks a lot more accurate that way
+because if you're just using the unit
+because if you're just using the unit
+because if you're just using the unit
+array you get stuff that's sort of on
+array you get stuff that's sort of on
+array you get stuff that's sort of on
+target
+target
+target
+to your mouse but it's not pinpoint
+to your mouse but it's not pinpoint
+to your mouse but it's not pinpoint
+accuracy and
+accuracy and
+accuracy and
+we want a good gun we want pinpoint
+we want a good gun we want pinpoint
+we want a good gun we want pinpoint
+accuracy
+accuracy
+accuracy
+so that's what you want to do so then
+so that's what you want to do so then
+so that's what you want to do so then
+down here we can say
+down here we can say
+down here we can say
+local pose equals get mouse pose
+local pose equals get mouse pose
+local pose equals get mouse pose
+for array there we go so that's our
+for array there we go so that's our
+for array there we go so that's our
+get mouse pose done now we need to
+get mouse pose done now we need to
+get mouse pose done now we need to
+get our ray direction so
+get our ray direction so
+get our ray direction so
+our direction will basically just be
+our direction will basically just be
+our direction will basically just be
+our position so our mouse position minus
+our position so our mouse position minus
+our position so our mouse position minus
+whatever little indicator attachment
+whatever little indicator attachment
+whatever little indicator attachment
+that we made
+that we made
+that we made
+so in order to get that let's call our
+so in order to get that let's call our
+so in order to get that let's call our
+new variable firepoint and this will be
+new variable firepoint and this will be
+new variable firepoint and this will be
+equal to
+equal to
+equal to
+tool dot handle dot
+tool dot handle dot
+tool dot handle dot
+fire point and that's our attachment if
+fire point and that's our attachment if
+fire point and that's our attachment if
+you recall let me just
+you recall let me just
+you recall let me just
+here you can see it down there and we
+here you can see it down there and we
+here you can see it down there and we
+want to do
+want to do
+want to do
+firepoint dot world position down in our
+firepoint dot world position down in our
+firepoint dot world position down in our
+direction
+direction
+direction
+declaration and we also want to get a
+declaration and we also want to get a
+declaration and we also want to get a
+the unit of this so what this does is
+the unit of this so what this does is
+the unit of this so what this does is
+a lot of this may seem extra but trust
+a lot of this may seem extra but trust
+a lot of this may seem extra but trust
+me i've tried just using unit ray for my
+me i've tried just using unit ray for my
+me i've tried just using unit ray for my
+guns and it
+guns and it
+guns and it
+does not work whatsoever you need to get
+does not work whatsoever you need to get
+does not work whatsoever you need to get
+the absolute position of where the mouse
+the absolute position of where the mouse
+the absolute position of where the mouse
+is clicking
+is clicking
+is clicking
+because it just looks a lot better and
+because it just looks a lot better and
+because it just looks a lot better and
+is a lot more accurate that way
+is a lot more accurate that way
+is a lot more accurate that way
+and what this does is you take the
+and what this does is you take the
+and what this does is you take the
+position we subtract it so we get the
+position we subtract it so we get the
+position we subtract it so we get the
+vector in between our muzzle and our
+vector in between our muzzle and our
+vector in between our muzzle and our
+our muzzle slash barrel and the position
+our muzzle slash barrel and the position
+our muzzle slash barrel and the position
+that we hit and we get the unit vector
+that we hit and we get the unit vector
+that we hit and we get the unit vector
+so it's
+so it's
+so it's
+less than one in magnitude and then
+less than one in magnitude and then
+less than one in magnitude and then
+we need to do a few things with that so
+we need to do a few things with that so
+we need to do a few things with that so
+since this is a shotgun
+since this is a shotgun
+since this is a shotgun
+our stuff is going to be a little bit
+our stuff is going to be a little bit
+our stuff is going to be a little bit
+different
+different
+different
+than a normal fast cast gun so instead
+than a normal fast cast gun so instead
+than a normal fast cast gun so instead
+of doing one fire call
+of doing one fire call
+of doing one fire call
+and like saying casper fire we need to
+and like saying casper fire we need to
+and like saying casper fire we need to
+do multiple so i'm going to say for i
+do multiple so i'm going to say for i
+do multiple so i'm going to say for i
+equals 1 and then let me just say
+equals 1 and then let me just say
+equals 1 and then let me just say
+10 pellets so we'll have 10 pills do
+10 pellets so we'll have 10 pills do
+10 pellets so we'll have 10 pills do
+then we'll
+then we'll
+then we'll
+fire our direction
+fire our direction
+fire our direction
+and we need to implement this fire
+and we need to implement this fire
+and we need to implement this fire
+function so we will do that right below
+function so we will do that right below
+function so we will do that right below
+the get mouse position so it's a local
+the get mouse position so it's a local
+the get mouse position so it's a local
+function
+function
+function
+fire with our direction
+fire with our direction
+fire with our direction
+there we go let's make that function
+there we go let's make that function
+there we go let's make that function
+and then inside this function we will do
+and then inside this function we will do
+and then inside this function we will do
+a few things
+a few things
+a few things
+so this will be a little bit different
+so this will be a little bit different
+so this will be a little bit different
+than your normal
+than your normal
+than your normal
+fire because as a shotgun has spread and
+fire because as a shotgun has spread and
+fire because as a shotgun has spread and
+the spread is random
+the spread is random
+the spread is random
+we want to simulate that for each pellet
+we want to simulate that for each pellet
+we want to simulate that for each pellet
+so i'm going to write some code
+so i'm going to write some code
+so i'm going to write some code
+you don't have to understand it i have a
+you don't have to understand it i have a
+you don't have to understand it i have a
+nice little infographic that will show
+nice little infographic that will show
+nice little infographic that will show
+you how it all works
+you how it all works
+you how it all works
+so just follow along so we say local
+so just follow along so we say local
+so just follow along so we say local
+direction cf equals
+direction cf equals
+direction cf equals
+c frame dot new vector
+c frame dot new vector
+c frame dot new vector
+three dot new and don't put any
+three dot new and don't put any
+three dot new and don't put any
+parameters but
+parameters but
+parameters but
+calling just vector three dot new just
+calling just vector three dot new just
+calling just vector three dot new just
+returns a vector that's zero
+returns a vector that's zero
+returns a vector that's zero
+zero zero and then the second parameter
+zero zero and then the second parameter
+zero zero and then the second parameter
+of our c frame will
+of our c frame will
+of our c frame will
+put in the direction so we create a new
+put in the direction so we create a new
+put in the direction so we create a new
+c frame
+c frame
+c frame
+with an origin of zero pointing towards
+with an origin of zero pointing towards
+with an origin of zero pointing towards
+our direction
+our direction
+our direction
+which is a unit vector and then we want
+which is a unit vector and then we want
+which is a unit vector and then we want
+to get our spread direction
+to get our spread direction
+to get our spread direction
+and this is basically like the area
+and this is basically like the area
+and this is basically like the area
+around our directional cf that we want
+around our directional cf that we want
+around our directional cf that we want
+to
+to
+to
+cast our ray
+cast our ray
+cast our ray
+for our bullet and this will be c frame
+for our bullet and this will be c frame
+for our bullet and this will be c frame
+from orientation
+from orientation
+from orientation
+0 0 and then math.random
+0 0 and then math.random
+0 0 and then math.random
+zero to math dot pi
+zero to math dot pi
+zero to math dot pi
+times two and math of pi times two is
+times two and math of pi times two is
+times two and math of pi times two is
+also known as like
+also known as like
+also known as like
+tau i think it's pronounced and all it
+tau i think it's pronounced and all it
+tau i think it's pronounced and all it
+is
+is
+is
+is like math.pi is a semicircle math.pi
+is like math.pi is a semicircle math.pi
+is like math.pi is a semicircle math.pi
+times two is an entire circle
+times two is an entire circle
+times two is an entire circle
+and you'll see what that means in just a
+and you'll see what that means in just a
+and you'll see what that means in just a
+second and then we below that we need to
+second and then we below that we need to
+second and then we below that we need to
+say our spreadangle
+say our spreadangle
+say our spreadangle
+is equal to cframe dot from
+is equal to cframe dot from
+is equal to cframe dot from
+orientation and then we need to do
+orientation and then we need to do
+orientation and then we need to do
+math.rad
+math.random and then you want two values
+math.random and then you want two values
+math.random and then you want two values
+here and i'm
+here and i'm
+here and i'm
+also going to define that on top and one
+also going to define that on top and one
+also going to define that on top and one
+of them is local going to be
+of them is local going to be
+of them is local going to be
+local min spread and set
+local min spread and set
+local min spread and set
+the one degree and local max spread
+the one degree and local max spread
+the one degree and local max spread
+and i'll set this to 4 degrees so these
+and i'll set this to 4 degrees so these
+and i'll set this to 4 degrees so these
+are degrees
+are degrees
+are degrees
+like in normal dewey's not in radians
+like in normal dewey's not in radians
+like in normal dewey's not in radians
+and they have to be pretty small numbers
+and they have to be pretty small numbers
+and they have to be pretty small numbers
+or else your spread will just be
+or else your spread will just be
+or else your spread will just be
+absolutely crazy
+absolutely crazy
+absolutely crazy
+and then down here in our from
+and then down here in our from
+and then down here in our from
+orientation we can
+orientation we can
+orientation we can
+put inside the math.random we can put
+put inside the math.random we can put
+put inside the math.random we can put
+the min spread as the first parameter
+the min spread as the first parameter
+the min spread as the first parameter
+and the max
+and the max
+and the max
+spread as a second parameter
+spread as a second parameter
+spread as a second parameter
+there we go and then for the other
+there we go and then for the other
+there we go and then for the other
+parameters
+parameters
+parameters
+for our little from orientation block we
+for our little from orientation block we
+for our little from orientation block we
+can just set those to zero
+can just set those to zero
+can just set those to zero
+and that should work perfectly fine then
+and that should work perfectly fine then
+and that should work perfectly fine then
+we need to define
+we need to define
+we need to define
+our this is our final direction and this
+our this is our final direction and this
+our this is our final direction and this
+will actually be a vector three
+will actually be a vector three
+will actually be a vector three
+and it'll be the directional cf
+times spread direction
+times spread direction
+times spread direction
+times spread angle and by the way
+times spread angle and by the way
+times spread angle and by the way
+multiplying all of these oh i spelled
+multiplying all of these oh i spelled
+multiplying all of these oh i spelled
+that wrong let me just copy paste that
+that wrong let me just copy paste that
+that wrong let me just copy paste that
+multiplying all these is basically just
+multiplying all these is basically just
+multiplying all these is basically just
+saying two world space two world space
+saying two world space two world space
+saying two world space two world space
+so you notice how all these vectors
+so you notice how all these vectors
+so you notice how all these vectors
+have like origins of zero and so this
+have like origins of zero and so this
+have like origins of zero and so this
+just makes them all relative to each
+just makes them all relative to each
+just makes them all relative to each
+other
+other
+other
+and at the very end make sure to put
+and at the very end make sure to put
+and at the very end make sure to put
+this after our direction at the very end
+this after our direction at the very end
+this after our direction at the very end
+of the line we're gonna say dot
+of the line we're gonna say dot
+of the line we're gonna say dot
+look vector so this gets a look vector
+look vector so this gets a look vector
+look vector so this gets a look vector
+of our entire block and make sure
+of our entire block and make sure
+of our entire block and make sure
+parentheses are around
+parentheses are around
+parentheses are around
+these first three values that are being
+these first three values that are being
+these first three values that are being
+multiplied together
+multiplied together
+multiplied together
+and then finally we can call caster
+and then finally we can call caster
+and then finally we can call caster
+fire and then inside
+fire and then inside
+fire and then inside
+our fire we can say our firepoint
+our fire we can say our firepoint
+our fire we can say our firepoint
+dot world position
+dot world position
+dot world position
+our direction and then our velocity i'm
+our direction and then our velocity i'm
+our direction and then our velocity i'm
+just gonna say a hundred a hundred seems
+just gonna say a hundred a hundred seems
+just gonna say a hundred a hundred seems
+to work fine
+to work fine
+to work fine
+actually let's just say a thousand
+and then we can put our behavior
+and then we can put our behavior
+and then we can put our behavior
+our cast behavior
+our cast behavior
+our cast behavior
+there we go so that's our entire code
+there we go so that's our entire code
+there we go so that's our entire code
+block done that should make everything
+block done that should make everything
+block done that should make everything
+fire properly
+fire properly
+fire properly
+down here that should work fine so now
+down here that should work fine so now
+down here that should work fine so now
+we're not going to put the bullets in
+we're not going to put the bullets in
+we're not going to put the bullets in
+just yet just to make sure everything
+just yet just to make sure everything
+just yet just to make sure everything
+works
+works
+works
+at the top we're going to call fastcast
+at the top we're going to call fastcast
+at the top we're going to call fastcast
+dot visualize cast and we're going to
+dot visualize cast and we're going to
+dot visualize cast and we're going to
+set that equal to true
+set that equal to true
+set that equal to true
+this is a good debugging value that we
+this is a good debugging value that we
+this is a good debugging value that we
+can do in order to see our cast without
+can do in order to see our cast without
+can do in order to see our cast without
+actually
+actually
+actually
+making a cosmetic bullet to
+making a cosmetic bullet to
+making a cosmetic bullet to
+visualize it and we just need to make
+visualize it and we just need to make
+visualize it and we just need to make
+sure everything is working
+so let's fire it
+so let's fire it
+so let's fire it
+there's an error
+unit raised nil let me check the client
+unit raised nil let me check the client
+unit raised nil let me check the client
+that's why i forgot to send in the ray
+that's why i forgot to send in the ray
+that's why i forgot to send in the ray
+into our fire server event so make sure
+into our fire server event so make sure
+into our fire server event so make sure
+you do that
+we'll go back in pull out our gun
+we'll go back in pull out our gun
+we'll go back in pull out our gun
+will fire and you can see all the
+will fire and you can see all the
+will fire and you can see all the
+bullets went pretty fast
+bullets went pretty fast
+bullets went pretty fast
+we'll add drop a little bit later but
+we'll add drop a little bit later but
+we'll add drop a little bit later but
+they're all random but they're all
+they're all random but they're all
+they're all random but they're all
+within a tight cone
+within a tight cone
+within a tight cone
+pretty tyco and it works pretty well we
+pretty tyco and it works pretty well we
+pretty tyco and it works pretty well we
+can shoot from wherever even in first
+can shoot from wherever even in first
+can shoot from wherever even in first
+person
+person
+person
+it looks pretty cool as well and you can
+it looks pretty cool as well and you can
+it looks pretty cool as well and you can
+see spread is working
+see spread is working
+see spread is working
+so now let me explain all of the stuff
+so now let me explain all of the stuff
+so now let me explain all of the stuff
+that we just wrote
+that we just wrote
+that we just wrote
+in a more visual form so this is a
+in a more visual form so this is a
+in a more visual form so this is a
+visual
+visual
+visual
+infographic of what we just wrote the
+infographic of what we just wrote the
+infographic of what we just wrote the
+blue line
+blue line
+blue line
+indicates our directional
+indicates our directional
+indicates our directional
+cf from the origin right here
+cf from the origin right here
+cf from the origin right here
+all the way to our direction and you
+all the way to our direction and you
+all the way to our direction and you
+know this is relative like
+know this is relative like
+know this is relative like
+horizontal but in reality it could be
+horizontal but in reality it could be
+horizontal but in reality it could be
+vertical to be wherever
+vertical to be wherever
+vertical to be wherever
+and then the first random value we
+and then the first random value we
+and then the first random value we
+calculate is calculated around
+calculate is calculated around
+calculate is calculated around
+this circle right here so this red
+this circle right here so this red
+this circle right here so this red
+circle
+circle
+circle
+the circle is perpendicular to our
+the circle is perpendicular to our
+the circle is perpendicular to our
+main cf our directional cf
+main cf our directional cf
+main cf our directional cf
+and then when we calculate our random
+and then when we calculate our random
+and then when we calculate our random
+value
+value
+value
+it's a radian which is why we use
+it's a radian which is why we use
+it's a radian which is why we use
+math.pi
+math.pi
+math.pi
+and it picks a random point on the
+and it picks a random point on the
+and it picks a random point on the
+circle and in my example it picks a
+circle and in my example it picks a
+circle and in my example it picks a
+point
+point
+point
+right here and that's what this little
+right here and that's what this little
+right here and that's what this little
+arrow is indicating
+arrow is indicating
+arrow is indicating
+and the circle is sort of indicating the
+and the circle is sort of indicating the
+and the circle is sort of indicating the
+angle at which
+angle at which
+angle at which
+we got this random value and so from
+we got this random value and so from
+we got this random value and so from
+this random value
+this random value
+this random value
+this is only like the area in which we
+this is only like the area in which we
+this is only like the area in which we
+want to project
+want to project
+want to project
+our random spread we actually need to
+our random spread we actually need to
+our random spread we actually need to
+calculate the spread
+calculate the spread
+calculate the spread
+so this the extent of this
+so this the extent of this
+so this the extent of this
+little like brownish arrow
+little like brownish arrow
+little like brownish arrow
+and like this error down here these are
+and like this error down here these are
+and like this error down here these are
+our
+our
+our
+min and max respectively in reality they
+min and max respectively in reality they
+min and max respectively in reality they
+will not look like this
+will not look like this
+will not look like this
+r's or like one and four would look more
+r's or like one and four would look more
+r's or like one and four would look more
+like
+like
+like
+this but for the sake of this
+this but for the sake of this
+this but for the sake of this
+demonstration it made a lot easier to
+demonstration it made a lot easier to
+demonstration it made a lot easier to
+draw
+draw
+draw
+by doing this and then in between these
+by doing this and then in between these
+by doing this and then in between these
+two angles we pick a random value so
+two angles we pick a random value so
+two angles we pick a random value so
+this light blue like turquoise vector
+this light blue like turquoise vector
+this light blue like turquoise vector
+is the actual bullets that will fire out
+is the actual bullets that will fire out
+is the actual bullets that will fire out
+and each time it makes a random one so
+and each time it makes a random one so
+and each time it makes a random one so
+you could have a point down here
+you could have a point down here
+you could have a point down here
+and then it will calculate a random
+and then it will calculate a random
+and then it will calculate a random
+spread so you just gotta split it up
+spread so you just gotta split it up
+spread so you just gotta split it up
+into parts
+into parts
+into parts
+and to be honest i did not this is not
+and to be honest i did not this is not
+and to be honest i did not this is not
+my own code i got this code
+my own code i got this code
+my own code i got this code
+from the fastcast
+from the fastcast
+from the fastcast
+debug gun
+debug gun
+debug gun
+you can see it here this is depot gun
+you can see it here this is depot gun
+you can see it here this is depot gun
+it's on the fast cast docks which i'll
+it's on the fast cast docks which i'll
+it's on the fast cast docks which i'll
+link in the description
+link in the description
+link in the description
+this has a wealth of code in it very
+this has a wealth of code in it very
+this has a wealth of code in it very
+very useful
+very useful
+very useful
+i use this when i was getting started
+i use this when i was getting started
+i use this when i was getting started
+with fastcast as a bunch of examples
+with fastcast as a bunch of examples
+with fastcast as a bunch of examples
+and all around it's just a great little
+and all around it's just a great little
+and all around it's just a great little
+gun
+gun
+gun
+and that's where i got my code for my
+and that's where i got my code for my
+and that's where i got my code for my
+spread and it works pretty well
+spread and it works pretty well
+spread and it works pretty well
+so we are on the home stretch
+so we are on the home stretch
+so we are on the home stretch
+so first thing we want to do to make our
+so first thing we want to do to make our
+so first thing we want to do to make our
+lines a little bit more realistic is add
+lines a little bit more realistic is add
+lines a little bit more realistic is add
+acceleration according to gravity so
+acceleration according to gravity so
+acceleration according to gravity so
+right below our behavior
+right below our behavior
+right below our behavior
+is a behavior dot
+is a behavior dot
+is a behavior dot
+acceleration let me spell that right
+acceleration let me spell that right
+acceleration let me spell that right
+equals vector three dot new zero
+equals vector three dot new zero
+equals vector three dot new zero
+then we can put negative workspace dot
+then we can put negative workspace dot
+then we can put negative workspace dot
+gravity and then zero so this will make
+gravity and then zero so this will make
+gravity and then zero so this will make
+our bullets have
+our bullets have
+our bullets have
+drop according to real life gravity
+drop according to real life gravity
+drop according to real life gravity
+which is pretty cool let's actually
+which is pretty cool let's actually
+which is pretty cool let's actually
+test that out real quick make sure it's
+test that out real quick make sure it's
+test that out real quick make sure it's
+working
+so we have a shotgun yeah you can see
+so we have a shotgun yeah you can see
+so we have a shotgun yeah you can see
+the bullets are arcing
+the bullets are arcing
+the bullets are arcing
+it's pretty cool and then
+it's pretty cool and then
+it's pretty cool and then
+the next thing we want to do is
+the next thing we want to do is
+the next thing we want to do is
+implement our actual
+implement our actual
+implement our actual
+bullet visualizer so i'm going to set
+bullet visualizer so i'm going to set
+bullet visualizer so i'm going to set
+visualize cast to false
+visualize cast to false
+visualize cast to false
+you obviously can remove this line if
+you obviously can remove this line if
+you obviously can remove this line if
+you really wanted to
+you really wanted to
+you really wanted to
+and then we can go down here and create
+and then we can go down here and create
+and then we can go down here and create
+a caster dot length change
+a caster dot length change
+a caster dot length change
+event so caster dot length changed and
+event so caster dot length changed and
+event so caster dot length changed and
+then our function
+then our function
+then our function
+will take in a few parameters the first
+will take in a few parameters the first
+will take in a few parameters the first
+is the active cast i'm going to say cast
+is the active cast i'm going to say cast
+is the active cast i'm going to say cast
+then we'll have the last point the
+then we'll have the last point the
+then we'll have the last point the
+direction like the ray direction the
+direction like the ray direction the
+direction like the ray direction the
+displacement
+displacement
+displacement
+and the segment velocity we won't really
+and the segment velocity we won't really
+and the segment velocity we won't really
+use segment velocity
+use segment velocity
+use segment velocity
+and then the actual pellet part
+and then the actual pellet part
+and then the actual pellet part
+instance that we will be using so we
+instance that we will be using so we
+instance that we will be using so we
+want to set our pellet.c frame
+want to set our pellet.c frame
+want to set our pellet.c frame
+equal to c frame dot new
+equal to c frame dot new
+equal to c frame dot new
+last point oh i turn on caps lock by
+last point oh i turn on caps lock by
+last point oh i turn on caps lock by
+accident
+accident
+accident
+last point plus
+last point plus
+last point plus
+parentheses rater
+parentheses rater
+parentheses rater
+or direction i should say
+or direction i should say
+or direction i should say
+times displacement and then
+times displacement and then
+times displacement and then
+as a second parameter we can just put in
+as a second parameter we can just put in
+as a second parameter we can just put in
+last point
+last point
+last point
+and actually we should change this to c
+and actually we should change this to c
+and actually we should change this to c
+frame dot look at
+so this will basically make a point
+so this will basically make a point
+so this will basically make a point
+that is properly centered we have our
+that is properly centered we have our
+that is properly centered we have our
+last point
+last point
+last point
+we add our the direction that we're
+we add our the direction that we're
+we add our the direction that we're
+going times our displacement which is
+going times our displacement which is
+going times our displacement which is
+like the length of the direction and
+like the length of the direction and
+like the length of the direction and
+we have our last point so it's oriented
+we have our last point so it's oriented
+we have our last point so it's oriented
+to the right direction since it's a
+to the right direction since it's a
+to the right direction since it's a
+sphere
+sphere
+sphere
+it doesn't matter but if in case you
+it doesn't matter but if in case you
+it doesn't matter but if in case you
+want a different pellet this should
+want a different pellet this should
+want a different pellet this should
+make it make the front face point in the
+make it make the front face point in the
+make it make the front face point in the
+right direction
+right direction
+right direction
+and again i got this from the debug gun
+and again i got this from the debug gun
+and again i got this from the debug gun
+there's other ways of doing this but i
+there's other ways of doing this but i
+there's other ways of doing this but i
+think this one this is the best way
+think this one this is the best way
+think this one this is the best way
+so let's test that out real quick
+yeah there we go let's see what we did
+yeah there we go let's see what we did
+yeah there we go let's see what we did
+so the issue is actually up here
+so the issue is actually up here
+so the issue is actually up here
+i spelled cosmetic wrong which is kind
+i spelled cosmetic wrong which is kind
+i spelled cosmetic wrong which is kind
+of annoying but you know those errors
+of annoying but you know those errors
+of annoying but you know those errors
+are going to happen
+are going to happen
+are going to happen
+sometimes so if you were to play this
+sometimes so if you were to play this
+sometimes so if you were to play this
+again
+again
+again
+this should work properly
+and you can see if they're a little
+and you can see if they're a little
+and you can see if they're a little
+small the pellets
+small the pellets
+small the pellets
+spawn in you see they can be pretty
+spawn in you see they can be pretty
+spawn in you see they can be pretty
+collected or if they're farther out they
+collected or if they're farther out they
+collected or if they're farther out they
+are farther apart
+are farther apart
+are farther apart
+and that works great so our pellets hit
+and that works great so our pellets hit
+and that works great so our pellets hit
+but they don't do any damage and that's
+but they don't do any damage and that's
+but they don't do any damage and that's
+what we're going to do next
+what we're going to do next
+what we're going to do next
+by implementing caster
+dot ray hit connect a function
+dot ray hit connect a function
+dot ray hit connect a function
+and this function will have our active
+and this function will have our active
+and this function will have our active
+cast the raycast result the segment
+cast the raycast result the segment
+cast the raycast result the segment
+velocity and the pellet instance
+velocity and the pellet instance
+velocity and the pellet instance
+once again so we want to get the
+once again so we want to get the
+once again so we want to get the
+character
+character
+character
+the supposed character and we'll do that
+the supposed character and we'll do that
+the supposed character and we'll do that
+by saying result.instance
+by saying result.instance
+by saying result.instance
+find first ancestor
+find first ancestor
+find first ancestor
+which is a
+model and before that we actually want
+model and before that we actually want
+model and before that we actually want
+to check
+to check
+to check
+if result.instance
+then put end down here
+then put end down here
+then put end down here
+just in case it doesn't exist the result
+just in case it doesn't exist the result
+just in case it doesn't exist the result
+the raycast result that will always
+the raycast result that will always
+the raycast result that will always
+exist it says in the fast cast docs
+exist it says in the fast cast docs
+exist it says in the fast cast docs
+but we might not always have an instance
+but we might not always have an instance
+but we might not always have an instance
+i'm not really sure but
+i'm not really sure but
+i'm not really sure but
+let's not find out and then below that
+let's not find out and then below that
+let's not find out and then below that
+we're going to find our humanoid
+we're going to find our humanoid
+we're going to find our humanoid
+which will be character find first
+which will be character find first
+which will be character find first
+child humanoid we actually need to check
+child humanoid we actually need to check
+child humanoid we actually need to check
+if the characters exist so we'll do
+if the characters exist so we'll do
+if the characters exist so we'll do
+character
+character
+character
+and character find
+and character find
+and character find
+first child humanoid so just to make
+first child humanoid so just to make
+first child humanoid so just to make
+sure
+sure
+sure
+that our character has a model and then
+that our character has a model and then
+that our character has a model and then
+it has a humanoid
+it has a humanoid
+it has a humanoid
+we can say if humanoid then will damage
+we can say if humanoid then will damage
+we can say if humanoid then will damage
+the humanoid by saying humanly take
+damage and we'll
+damage and we'll
+damage and we'll
+make him take 10 damage since the
+make him take 10 damage since the
+make him take 10 damage since the
+pellets has 10 pellets so if you get a
+pellets has 10 pellets so if you get a
+pellets has 10 pellets so if you get a
+direct hit it'll do 100 damage
+direct hit it'll do 100 damage
+direct hit it'll do 100 damage
+and then after we damage them we want to
+and then after we damage them we want to
+and then after we damage them we want to
+get rid of the booklets so they don't
+get rid of the booklets so they don't
+get rid of the booklets so they don't
+stay there because they're anchored and
+stay there because they're anchored and
+stay there because they're anchored and
+it looks really ugly and we'll do that
+it looks really ugly and we'll do that
+it looks really ugly and we'll do that
+by saying provider
+by saying provider
+by saying provider
+return part pellet
+return part pellet
+return part pellet
+so we'll get the humanoid we'll make
+so we'll get the humanoid we'll make
+so we'll get the humanoid we'll make
+sure they exist or if
+sure they exist or if
+sure they exist or if
+our hit is an actual character and we'll
+our hit is an actual character and we'll
+our hit is an actual character and we'll
+take the image and we're not actually
+take the image and we're not actually
+take the image and we're not actually
+checking if they're a player because
+checking if they're a player because
+checking if they're a player because
+in case you wanna kill npcs you don't
+in case you wanna kill npcs you don't
+in case you wanna kill npcs you don't
+want to
+want to
+want to
+have that restricted to just a player
+have that restricted to just a player
+have that restricted to just a player
+and so
+and so
+and so
+this is all good but what if we don't
+this is all good but what if we don't
+this is all good but what if we don't
+hit a humanoid now below that we'll say
+hit a humanoid now below that we'll say
+hit a humanoid now below that we'll say
+else if we don't hit a humanoid let's
+else if we don't hit a humanoid let's
+else if we don't hit a humanoid let's
+just wait a second so the bullet stays
+just wait a second so the bullet stays
+just wait a second so the bullet stays
+there to add a little bit to the realism
+there to add a little bit to the realism
+there to add a little bit to the realism
+and we can say provider return part
+and we can say provider return part
+and we can say provider return part
+pellet and we don't have to make a
+pellet and we don't have to make a
+pellet and we don't have to make a
+separate thread using delay or spawn or
+separate thread using delay or spawn or
+separate thread using delay or spawn or
+co routine
+co routine
+co routine
+because we're already creating a
+because we're already creating a
+because we're already creating a
+separate thread with this event
+separate thread with this event
+separate thread with this event
+connection
+connection
+connection
+so this should all work out just fine so
+so this should all work out just fine so
+so this should all work out just fine so
+in order to test this i'm going to go
+in order to test this i'm going to go
+in order to test this i'm going to go
+to my toolbox let's get some nice little
+to my toolbox let's get some nice little
+to my toolbox let's get some nice little
+drooling
+drooling
+drooling
+zombies and i'll put a few of them
+zombies and i'll put a few of them
+zombies and i'll put a few of them
+around
+around
+around
+and we'll be able to shoot them
+so let's go in pull out the gun
+so let's go in pull out the gun
+so let's go in pull out the gun
+they're already attacking you can see
+they're already attacking you can see
+they're already attacking you can see
+when i shoot them and if i'm sort of
+when i shoot them and if i'm sort of
+when i shoot them and if i'm sort of
+accurate and my
+accurate and my
+accurate and my
+if my spreads lucky i can hit them and
+if my spreads lucky i can hit them and
+if my spreads lucky i can hit them and
+kill them
+kill them
+kill them
+and the gun does work from far away so
+and the gun does work from far away so
+and the gun does work from far away so
+like i think most
+like i think most
+like i think most
+games have damage reduction on the
+games have damage reduction on the
+games have damage reduction on the
+shotgun so the further away they are
+shotgun so the further away they are
+shotgun so the further away they are
+the less damage they'll do but honestly
+the less damage they'll do but honestly
+the less damage they'll do but honestly
+the spread accounts for most of that
+the spread accounts for most of that
+the spread accounts for most of that
+but if you really want that you can
+but if you really want that you can
+but if you really want that you can
+obviously add that in yourself
+obviously add that in yourself
+obviously add that in yourself
+should be pretty simple you can just
+should be pretty simple you can just
+should be pretty simple you can just
+measure the range of the hit
+measure the range of the hit
+measure the range of the hit
+you can see i can kill them pretty
+you can see i can kill them pretty
+you can see i can kill them pretty
+easily if my aim's halfway decent
+easily if my aim's halfway decent
+easily if my aim's halfway decent
+but the shotgun works exactly as
+but the shotgun works exactly as
+but the shotgun works exactly as
+intended
+intended
+intended
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you enjoyed
+you enjoyed
+you enjoyed
+and if you have any questions i will
+and if you have any questions i will
+and if you have any questions i will
+link the fastcast docs they are very
+link the fastcast docs they are very
+link the fastcast docs they are very
+good very expensive in the description
+good very expensive in the description
+good very expensive in the description
+and one one thing to learn about this
+and one one thing to learn about this
+and one one thing to learn about this
+video
+video
+video
+is look at other people's code if you're
+is look at other people's code if you're
+is look at other people's code if you're
+struggling like the depot gun
+struggling like the depot gun
+struggling like the depot gun
+that was really good it helped me with
+that was really good it helped me with
+that was really good it helped me with
+the spread
+the spread
+the spread
+and when you're dealing with c frames
+and when you're dealing with c frames
+and when you're dealing with c frames
+just experiments fool around with things
+just experiments fool around with things
+just experiments fool around with things
+like there's nothing
+like there's nothing
+like there's nothing
+it's not like you're taking tests and if
+it's not like you're taking tests and if
+it's not like you're taking tests and if
+you get it wrong then you're screwed
+you get it wrong then you're screwed
+you get it wrong then you're screwed
+it's code you can run it as many times
+it's code you can run it as many times
+it's code you can run it as many times
+as you want
+as you want
+as you want
+so just play around with it see what
+so just play around with it see what
+so just play around with it see what
+works and you will be absolutely fine
+works and you will be absolutely fine
+works and you will be absolutely fine
+if you have any other fast cast
+if you have any other fast cast
+if you have any other fast cast
+tutorials
+tutorials
+tutorials
+make sure to put them in the comments
+make sure to put them in the comments
+make sure to put them in the comments
+down below
+down below
+down below
+if you liked the video like it if you
+if you liked the video like it if you
+if you liked the video like it if you
+really enjoyed it make sure to subscribe
+really enjoyed it make sure to subscribe
+really enjoyed it make sure to subscribe
+other than that hope you have a nice day
+other than that hope you have a nice day
+other than that hope you have a nice day
+and goodbye and also make sure to join
+and goodbye and also make sure to join
+and goodbye and also make sure to join
+my discord server
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+[Music]
+you

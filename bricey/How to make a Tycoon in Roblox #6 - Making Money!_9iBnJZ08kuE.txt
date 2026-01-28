@@ -1,0 +1,1551 @@
+so in the last video we created a
+so in the last video we created a
+so in the last video we created a
+dropper and conveyor to convey our juicy
+dropper and conveyor to convey our juicy
+dropper and conveyor to convey our juicy
+drops
+drops
+drops
+to nothing but in this video we'll be
+to nothing but in this video we'll be
+to nothing but in this video we'll be
+creating this collector to collect our
+creating this collector to collect our
+creating this collector to collect our
+drops
+drops
+drops
+and turn it into some money that's held
+and turn it into some money that's held
+and turn it into some money that's held
+within our bank
+within our bank
+within our bank
+we can collect that money from our bank
+we can collect that money from our bank
+we can collect that money from our bank
+and then buy stuff
+and then buy stuff
+and then buy stuff
+with it so stay tuned for that
+with it so stay tuned for that
+with it so stay tuned for that
+make sure to like the video if you enjoy
+make sure to like the video if you enjoy
+make sure to like the video if you enjoy
+it subscribe to my channel to stay up to
+it subscribe to my channel to stay up to
+it subscribe to my channel to stay up to
+date with
+date with
+date with
+the tycoon videos and make sure to watch
+the tycoon videos and make sure to watch
+the tycoon videos and make sure to watch
+the previous tycoon video if
+the previous tycoon video if
+the previous tycoon video if
+you haven't so without further ado
+you haven't so without further ado
+you haven't so without further ado
+let's get started
+so we're going to start with what i like
+so we're going to start with what i like
+so we're going to start with what i like
+to call
+to call
+to call
+the collector because it's responsible
+the collector because it's responsible
+the collector because it's responsible
+for collecting the items that are
+for collecting the items that are
+for collecting the items that are
+dropper drops at the end of the conveyor
+dropper drops at the end of the conveyor
+dropper drops at the end of the conveyor
+so in front of me i have a very simple
+so in front of me i have a very simple
+so in front of me i have a very simple
+model which consists of four parts
+model which consists of four parts
+model which consists of four parts
+and the middle part this is important
+and the middle part this is important
+and the middle part this is important
+it's named collider
+it's named collider
+it's named collider
+you can see right here collider because
+you can see right here collider because
+you can see right here collider because
+it collides with
+it collides with
+it collides with
+our parts when they are dropped and
+our parts when they are dropped and
+our parts when they are dropped and
+that'll be responsible for
+that'll be responsible for
+that'll be responsible for
+getting the touched event for when it's
+getting the touched event for when it's
+getting the touched event for when it's
+hit so
+hit so
+hit so
+let's make this into a component i'm
+let's make this into a component i'm
+let's make this into a component i'm
+going to hover over the
+going to hover over the
+going to hover over the
+model go to add new tag and the tag
+model go to add new tag and the tag
+model go to add new tag and the tag
+editor
+editor
+editor
+and you can find that in plugins or
+and you can find that in plugins or
+and you can find that in plugins or
+something if you can't
+something if you can't
+something if you can't
+and then we're going to check
+and then we're going to check
+and then we're going to check
+the box after the tag
+the box after the tag
+the box after the tag
+because tagging your plugin got an
+because tagging your plugin got an
+because tagging your plugin got an
+update recently now you have check boxes
+update recently now you have check boxes
+update recently now you have check boxes
+which is a lot better than the other
+which is a lot better than the other
+which is a lot better than the other
+system i'm glad they changed that
+system i'm glad they changed that
+system i'm glad they changed that
+and now we can take our collector and
+and now we can take our collector and
+and now we can take our collector and
+shove it
+shove it
+shove it
+into our tycoon so let's bring our
+into our tycoon so let's bring our
+into our tycoon so let's bring our
+tycoon template
+tycoon template
+tycoon template
+from server storage into the workspace
+from server storage into the workspace
+from server storage into the workspace
+and we can take our collector move it
+and we can take our collector move it
+and we can take our collector move it
+down here
+down here
+down here
+i'm going to rotate it using ctrl r just
+i'm going to rotate it using ctrl r just
+i'm going to rotate it using ctrl r just
+to get into a nice spot
+to get into a nice spot
+to get into a nice spot
+that looks pretty good because we need
+that looks pretty good because we need
+that looks pretty good because we need
+it to be at the very end of the conveyor
+it to be at the very end of the conveyor
+it to be at the very end of the conveyor
+line
+line
+line
+and that looks about right i'm just
+and that looks about right i'm just
+and that looks about right i'm just
+gonna move it a little closer just so
+gonna move it a little closer just so
+gonna move it a little closer just so
+it touches all the parts that get
+it touches all the parts that get
+it touches all the parts that get
+collected
+collected
+collected
+and that seems to be good so i'm gonna
+and that seems to be good so i'm gonna
+and that seems to be good so i'm gonna
+shove it into the
+shove it into the
+shove it into the
+template in the explorer window
+template in the explorer window
+template in the explorer window
+so we have our template with the
+so we have our template with the
+so we have our template with the
+collector inside of it and i can take it
+collector inside of it and i can take it
+collector inside of it and i can take it
+and put it into
+and put it into
+and put it into
+server storage now we can start
+server storage now we can start
+server storage now we can start
+scripting let's go to server script
+scripting let's go to server script
+scripting let's go to server script
+service components
+service components
+service components
+and we can create a new module script
+and we can create a new module script
+and we can create a new module script
+and this will be yet another component
+and this will be yet another component
+and this will be yet another component
+this time with the name of
+this time with the name of
+this time with the name of
+collector matching our tag name
+collector matching our tag name
+collector matching our tag name
+and you know the drill same stuff as
+and you know the drill same stuff as
+and you know the drill same stuff as
+always
+always
+always
+make an object-oriented class
+and we will need references to both
+and we will need references to both
+and we will need references to both
+tycoon
+tycoon
+tycoon
+and our instance so i'm going to do that
+and our instance so i'm going to do that
+and our instance so i'm going to do that
+now
+okay so we have the basic class
+okay so we have the basic class
+okay so we have the basic class
+constructed
+constructed
+constructed
+and now we need to do a few things so
+and now we need to do a few things so
+and now we need to do a few things so
+let's go into our collector init
+let's go into our collector init
+let's go into our collector init
+and add a little function block we're
+and add a little function block we're
+and add a little function block we're
+going to say self.instance
+going to say self.instance
+going to say self.instance
+dot collider dot
+dot collider dot
+dot collider dot
+touch connect a function
+touch connect a function
+touch connect a function
+with some ellipses and then we're going
+with some ellipses and then we're going
+with some ellipses and then we're going
+to
+to
+to
+call another function and we'll make
+call another function and we'll make
+call another function and we'll make
+that down here this function will be
+that down here this function will be
+that down here this function will be
+named self
+named self
+named self
+or collector i should say on
+or collector i should say on
+or collector i should say on
+touch and this will have a hit part
+touch and this will have a hit part
+touch and this will have a hit part
+the part that hits our collector
+the part that hits our collector
+the part that hits our collector
+and then up here we can say self on
+and then up here we can say self on
+and then up here we can say self on
+touched in within the touched event
+touched in within the touched event
+touched in within the touched event
+and we can send in the ellipses which
+and we can send in the ellipses which
+and we can send in the ellipses which
+will pass in our hip part
+will pass in our hip part
+will pass in our hip part
+variable okay so all we're doing is
+variable okay so all we're doing is
+variable okay so all we're doing is
+getting the part when it's touched
+getting the part when it's touched
+getting the part when it's touched
+and we send the part that touched it
+and we send the part that touched it
+and we send the part that touched it
+just so we can handle it
+just so we can handle it
+just so we can handle it
+and then we what we want to do is
+and then we what we want to do is
+and then we what we want to do is
+destroy the parts that are dropped so
+destroy the parts that are dropped so
+destroy the parts that are dropped so
+you don't want to destroy all the parts
+you don't want to destroy all the parts
+you don't want to destroy all the parts
+because if the player hits it we don't
+because if the player hits it we don't
+because if the player hits it we don't
+want their legs falling off that would
+want their legs falling off that would
+want their legs falling off that would
+not be good
+not be good
+not be good
+so we need a way to verify that the part
+so we need a way to verify that the part
+so we need a way to verify that the part
+that hit us is an actual drop and we're
+that hit us is an actual drop and we're
+that hit us is an actual drop and we're
+gonna kill two birds with one stone
+gonna kill two birds with one stone
+gonna kill two birds with one stone
+by also giving each drop an attribute
+by also giving each drop an attribute
+by also giving each drop an attribute
+named worth so i'm gonna go to my copper
+named worth so i'm gonna go to my copper
+named worth so i'm gonna go to my copper
+go down to add attribute and set the
+go down to add attribute and set the
+go down to add attribute and set the
+attribute
+attribute
+attribute
+to a number and then the name i'm just
+to a number and then the name i'm just
+to a number and then the name i'm just
+gonna say worth
+gonna say worth
+gonna say worth
+i'm gonna set that to let's say five so
+i'm gonna set that to let's say five so
+i'm gonna set that to let's say five so
+each copper block will be worth five
+each copper block will be worth five
+each copper block will be worth five
+money
+money
+money
+and since this worth attribute is unique
+and since this worth attribute is unique
+and since this worth attribute is unique
+to
+to
+to
+our drop we can use that to verify if
+our drop we can use that to verify if
+our drop we can use that to verify if
+the hit part is an
+the hit part is an
+the hit part is an
+actual drop so let's do that in our
+actual drop so let's do that in our
+actual drop so let's do that in our
+ontouch function block we can say
+ontouch function block we can say
+ontouch function block we can say
+let me just zoom in real quick there you
+let me just zoom in real quick there you
+let me just zoom in real quick there you
+go local
+go local
+go local
+worth equals hit part get attribute
+worth equals hit part get attribute
+worth equals hit part get attribute
+worth and then below that we can say if
+worth and then below that we can say if
+worth and then below that we can say if
+worth
+worth
+worth
+so if our part
+so if our part
+so if our part
+has a worth value then we know it is a
+has a worth value then we know it is a
+has a worth value then we know it is a
+copper drop unless you have other
+copper drop unless you have other
+copper drop unless you have other
+attributes with war i would not
+attributes with war i would not
+attributes with war i would not
+recommend that
+recommend that
+recommend that
+you'd have to check for that on your own
+you'd have to check for that on your own
+you'd have to check for that on your own
+now what we can do is we're not going to
+now what we can do is we're not going to
+now what we can do is we're not going to
+automatically assign money to
+automatically assign money to
+automatically assign money to
+the player because we need them to
+the player because we need them to
+the player because we need them to
+collect it at the little like
+collect it at the little like
+collect it at the little like
+atm looking machines that most most
+atm looking machines that most most
+atm looking machines that most most
+tycoons have where you have to go and
+tycoons have where you have to go and
+tycoons have where you have to go and
+touch it you can obviously
+touch it you can obviously
+touch it you can obviously
+assign the money directly to the player
+assign the money directly to the player
+assign the money directly to the player
+if you want right here but i'm just
+if you want right here but i'm just
+if you want right here but i'm just
+gonna
+gonna
+gonna
+go for a more complete example and do
+go for a more complete example and do
+go for a more complete example and do
+the
+the
+the
+first scenario so how are we going to do
+first scenario so how are we going to do
+first scenario so how are we going to do
+that we want to
+that we want to
+that we want to
+notify our tycoon basically that
+notify our tycoon basically that
+notify our tycoon basically that
+there is money that is meant to be had
+there is money that is meant to be had
+there is money that is meant to be had
+so we're going to use the previously
+so we're going to use the previously
+so we're going to use the previously
+implemented topic system so i'm going to
+implemented topic system so i'm going to
+implemented topic system so i'm going to
+do
+do
+do
+self dot tycoon publish
+self dot tycoon publish
+self dot tycoon publish
+topic and it's going to be worth
+topic and it's going to be worth
+topic and it's going to be worth
+change and we'll send in the
+change and we'll send in the
+change and we'll send in the
+worst value and then
+worst value and then
+worst value and then
+after we have published it we can just
+after we have published it we can just
+after we have published it we can just
+destroy the hit part
+destroy the hit part
+destroy the hit part
+because it's a you know drop we don't
+because it's a you know drop we don't
+because it's a you know drop we don't
+really need anymore
+really need anymore
+really need anymore
+and just to keep our game from getting
+and just to keep our game from getting
+and just to keep our game from getting
+cluttered as well so we'll publish this
+cluttered as well so we'll publish this
+cluttered as well so we'll publish this
+topic and then another component will
+topic and then another component will
+topic and then another component will
+consume
+consume
+consume
+the topic or subscribe to the topic and
+the topic or subscribe to the topic and
+the topic or subscribe to the topic and
+then when the player touches that
+then when the player touches that
+then when the player touches that
+part and the money will get added to
+part and the money will get added to
+part and the money will get added to
+their leader stats
+their leader stats
+their leader stats
+so right now let's just verify that it
+so right now let's just verify that it
+so right now let's just verify that it
+works with a print statement
+works with a print statement
+works with a print statement
+so you can say print worth
+so you can say print worth
+so you can say print worth
+change and keep in mind
+change and keep in mind
+change and keep in mind
+our collector at this moment
+our collector at this moment
+our collector at this moment
+does not have an unlockable so it will
+does not have an unlockable so it will
+does not have an unlockable so it will
+be a lot unlocked
+be a lot unlocked
+be a lot unlocked
+off the bat which is what we want
+off the bat which is what we want
+off the bat which is what we want
+so here we are let's hold it to get our
+so here we are let's hold it to get our
+so here we are let's hold it to get our
+copper dropper
+copper dropper
+copper dropper
+and then you can see the drops will
+and then you can see the drops will
+and then you can see the drops will
+steadily make their way towards the end
+steadily make their way towards the end
+steadily make their way towards the end
+in which they will be destroyed and you
+in which they will be destroyed and you
+in which they will be destroyed and you
+can see worth changed is being
+can see worth changed is being
+can see worth changed is being
+printed out if it doesn't work make sure
+printed out if it doesn't work make sure
+printed out if it doesn't work make sure
+to check your spelling
+to check your spelling
+to check your spelling
+because spelling is important in this
+because spelling is important in this
+because spelling is important in this
+situation so now that everything's
+situation so now that everything's
+situation so now that everything's
+working
+working
+working
+we can get rid of our worth changed and
+we can get rid of our worth changed and
+we can get rid of our worth changed and
+then go back
+then go back
+then go back
+into our base plate so i have a
+into our base plate so i have a
+into our base plate so i have a
+another model in front of me this is
+another model in front of me this is
+another model in front of me this is
+going to be our
+going to be our
+going to be our
+bank which is the part responsible for
+bank which is the part responsible for
+bank which is the part responsible for
+receiving the collector's publishes
+receiving the collector's publishes
+receiving the collector's publishes
+and then distributing that money for the
+and then distributing that money for the
+and then distributing that money for the
+players so in that regard it's like a
+players so in that regard it's like a
+players so in that regard it's like a
+bank it gets the money
+bank it gets the money
+bank it gets the money
+that you have and like distributes it to
+that you have and like distributes it to
+that you have and like distributes it to
+you i mean it's more like an atm but
+you i mean it's more like an atm but
+you i mean it's more like an atm but
+whatever
+whatever
+whatever
+so we want to have this bank display
+so we want to have this bank display
+so we want to have this bank display
+your
+your
+your
+current balance that's waiting to get
+current balance that's waiting to get
+current balance that's waiting to get
+cashed in
+cashed in
+cashed in
+or recovered so i'm going to use a
+or recovered so i'm going to use a
+or recovered so i'm going to use a
+surface guy for that because it looks
+surface guy for that because it looks
+surface guy for that because it looks
+pretty cool
+pretty cool
+pretty cool
+this part right here this little black
+this part right here this little black
+this part right here this little black
+part is going to be our screen
+part is going to be our screen
+part is going to be our screen
+and it's named displaylist the name
+and it's named displaylist the name
+and it's named displaylist the name
+doesn't matter because i'm going to put
+doesn't matter because i'm going to put
+doesn't matter because i'm going to put
+the surface gui in the model itself so
+the surface gui in the model itself so
+the surface gui in the model itself so
+i'm going to
+i'm going to
+i'm going to
+create a service gui and then i'm going
+create a service gui and then i'm going
+create a service gui and then i'm going
+to name the surface scooby display
+to name the surface scooby display
+to name the surface scooby display
+and then i'm going to set the adorning
+and then i'm going to set the adorning
+and then i'm going to set the adorning
+which is the part that it
+which is the part that it
+which is the part that it
+that it will like reside on to the
+that it will like reside on to the
+that it will like reside on to the
+display
+display
+display
+base and if you've done that you can see
+base and if you've done that you can see
+base and if you've done that you can see
+there's a little blue outline now around
+there's a little blue outline now around
+there's a little blue outline now around
+the part and if you can't see the blue
+the part and if you can't see the blue
+the part and if you can't see the blue
+outline most likely your part is rotated
+outline most likely your part is rotated
+outline most likely your part is rotated
+the wrong way
+the wrong way
+the wrong way
+so you can just like rotate it around
+so you can just like rotate it around
+so you can just like rotate it around
+and make sure you see that
+and make sure you see that
+and make sure you see that
+and then underneath my display
+and then underneath my display
+and then underneath my display
+i'm going to create a text label
+i'm going to create a text label
+i'm going to create a text label
+and this label looks really stupid so
+and this label looks really stupid so
+and this label looks really stupid so
+i'm going to go
+i'm going to go
+i'm going to go
+to size and set the size
+to size and set the size
+to size and set the size
+to zero on the offset one on the
+to zero on the offset one on the
+to zero on the offset one on the
+scale and then set zero to the offset
+scale and then set zero to the offset
+scale and then set zero to the offset
+one on the scale for both x
+one on the scale for both x
+one on the scale for both x
+and y so it fills up the entire space
+and y so it fills up the entire space
+and y so it fills up the entire space
+and then i also want to make it
+and then i also want to make it
+and then i also want to make it
+transparent so i'm going to set
+transparent so i'm going to set
+transparent so i'm going to set
+background transparency to 1
+background transparency to 1
+background transparency to 1
+and i'm going to go down to the text
+and i'm going to go down to the text
+and i'm going to go down to the text
+section
+section
+section
+make the text like a sample value
+make the text like a sample value
+make the text like a sample value
+something like zero
+something like zero
+something like zero
+you can see it faintly i'm first going
+you can see it faintly i'm first going
+you can see it faintly i'm first going
+to
+to
+to
+click the check scale or text scale
+click the check scale or text scale
+click the check scale or text scale
+button
+button
+button
+so our text is scaled properly and then
+so our text is scaled properly and then
+so our text is scaled properly and then
+i'm going to change the color to i don't
+i'm going to change the color to i don't
+i'm going to change the color to i don't
+know like a green
+know like a green
+know like a green
+yeah that green looks pretty good so
+yeah that green looks pretty good so
+yeah that green looks pretty good so
+there is
+there is
+there is
+our display done and i'm going to name
+our display done and i'm going to name
+our display done and i'm going to name
+this text label
+this text label
+this text label
+money so this is the money text label
+money so this is the money text label
+money so this is the money text label
+so that's the model done we can
+so that's the model done we can
+so that's the model done we can
+bring back our template from server
+bring back our template from server
+bring back our template from server
+storage
+storage
+storage
+and shove our bank model in so here's
+and shove our bank model in so here's
+and shove our bank model in so here's
+our template
+our template
+our template
+here's our bank i'm going to drag
+here's our bank i'm going to drag
+here's our bank i'm going to drag
+the bank just about over here
+the bank just about over here
+the bank just about over here
+so i want like the front of my tycoon to
+so i want like the front of my tycoon to
+so i want like the front of my tycoon to
+be around this area so the bank will be
+be around this area so the bank will be
+be around this area so the bank will be
+close by and that seems pretty good so
+close by and that seems pretty good so
+close by and that seems pretty good so
+i'm going to shove the bank
+i'm going to shove the bank
+i'm going to shove the bank
+into the template and then in here in
+into the template and then in here in
+into the template and then in here in
+the tag editor i'm going to add a new
+the tag editor i'm going to add a new
+the tag editor i'm going to add a new
+tag
+tag
+tag
+called bank and i'm going to assign my
+called bank and i'm going to assign my
+called bank and i'm going to assign my
+bank tag to
+bank tag to
+bank tag to
+the model you can see it's already done
+the model you can see it's already done
+the model you can see it's already done
+here there we go make sure the check bar
+here there we go make sure the check bar
+here there we go make sure the check bar
+is checked and this will be unlocked off
+is checked and this will be unlocked off
+is checked and this will be unlocked off
+the start
+the start
+the start
+so let's take our template shove it into
+so let's take our template shove it into
+so let's take our template shove it into
+server storage
+server storage
+server storage
+and get to scripting once again
+so our basic component is built up let's
+so our basic component is built up let's
+so our basic component is built up let's
+get to scripting so we will need our
+get to scripting so we will need our
+get to scripting so we will need our
+tycoon in our instance
+tycoon in our instance
+tycoon in our instance
+and we're also going to create another
+and we're also going to create another
+and we're also going to create another
+value called self.balance
+value called self.balance
+value called self.balance
+i'm going to set this to 0. this is
+i'm going to set this to 0. this is
+i'm going to set this to 0. this is
+going to be a number value that will
+going to be a number value that will
+going to be a number value that will
+represent your
+represent your
+represent your
+money balance that's in the bank
+money balance that's in the bank
+money balance that's in the bank
+currently so what will happen
+currently so what will happen
+currently so what will happen
+is when the collector
+is when the collector
+is when the collector
+gets a drop it will add to our balance
+gets a drop it will add to our balance
+gets a drop it will add to our balance
+and then once the player steps on the
+and then once the player steps on the
+and then once the player steps on the
+bank pad
+bank pad
+bank pad
+it will reset that balance and by the
+it will reset that balance and by the
+it will reset that balance and by the
+way i did not mention this
+way i did not mention this
+way i did not mention this
+if i go into my template and back into
+if i go into my template and back into
+if i go into my template and back into
+my bank i have a part
+my bank i have a part
+my bank i have a part
+named pad that was a little green part
+named pad that was a little green part
+named pad that was a little green part
+at the bottom
+at the bottom
+at the bottom
+and when you touch that you'll be able
+and when you touch that you'll be able
+and when you touch that you'll be able
+to get your money back
+to get your money back
+to get your money back
+and i you could use a proximity prompt
+and i you could use a proximity prompt
+and i you could use a proximity prompt
+if you wanted to but i think the pad is
+if you wanted to but i think the pad is
+if you wanted to but i think the pad is
+a little bit easier
+a little bit easier
+a little bit easier
+so make sure you have a part named pad
+so make sure you have a part named pad
+so make sure you have a part named pad
+but back in our code we can go to our
+but back in our code we can go to our
+but back in our code we can go to our
+init function
+init function
+init function
+and we want to first subscribe to our
+and we want to first subscribe to our
+and we want to first subscribe to our
+topic so self.iqueen.subscribe
+topic so self.iqueen.subscribe
+topic so self.iqueen.subscribe
+topic to our worth change topic
+topic to our worth change topic
+topic to our worth change topic
+and then connect a function
+and then here we'll say self
+and then here we'll say self
+and then here we'll say self
+on worth change and then send in the
+on worth change and then send in the
+on worth change and then send in the
+ellipses that we got
+ellipses that we got
+ellipses that we got
+from our function so now let's define
+from our function so now let's define
+from our function so now let's define
+the function
+the function
+the function
+self on worth change
+and it should be bank so bank on worth
+and it should be bank so bank on worth
+and it should be bank so bank on worth
+change so when our worth
+change so when our worth
+change so when our worth
+is changed we will get the worth that'll
+is changed we will get the worth that'll
+is changed we will get the worth that'll
+be changed by
+be changed by
+be changed by
+and then all we want to do is say self
+and then all we want to do is say self
+and then all we want to do is say self
+dot balance
+dot balance
+dot balance
+plus equals worth so we'll just add
+plus equals worth so we'll just add
+plus equals worth so we'll just add
+the worth to our balance and then what
+the worth to our balance and then what
+the worth to our balance and then what
+we also want to do is change that little
+we also want to do is change that little
+we also want to do is change that little
+gui that display gui to the actual
+gui that display gui to the actual
+gui that display gui to the actual
+balance that we have currently so we
+balance that we have currently so we
+balance that we have currently so we
+won't update it and i'm going to make a
+won't update it and i'm going to make a
+won't update it and i'm going to make a
+dedicated function for that because
+dedicated function for that because
+dedicated function for that because
+we're going to be using it quite a bit
+we're going to be using it quite a bit
+we're going to be using it quite a bit
+so i'm going to do function
+so i'm going to do function
+so i'm going to do function
+bank set display and this will take in
+bank set display and this will take in
+bank set display and this will take in
+the string that we want to set our
+the string that we want to set our
+the string that we want to set our
+display to
+display to
+display to
+and all we do here is say self.instance
+and all we do here is say self.instance
+and all we do here is say self.instance
+dot
+dot
+dot
+display dot money dot text there's a lot
+display dot money dot text there's a lot
+display dot money dot text there's a lot
+of dots here
+of dots here
+of dots here
+sorry but has to be done equals string
+sorry but has to be done equals string
+sorry but has to be done equals string
+so this will just this is a little
+so this will just this is a little
+so this will just this is a little
+shortcut just to set
+shortcut just to set
+shortcut just to set
+our money label we can say that here by
+our money label we can say that here by
+our money label we can say that here by
+saying
+saying
+saying
+self set display and our onward
+self set display and our onward
+self set display and our onward
+change function we can say self set
+change function we can say self set
+change function we can say self set
+display
+display
+display
+to a dollar sign
+to a dollar sign
+to a dollar sign
+and then do a dot dot self dot balance
+and then do a dot dot self dot balance
+and then do a dot dot self dot balance
+so it'll take the dollar sign
+so it'll take the dollar sign
+so it'll take the dollar sign
+concatenate it to our current
+concatenate it to our current
+concatenate it to our current
+balance which is exactly what we want
+balance which is exactly what we want
+balance which is exactly what we want
+so we can try that out right now
+and then if we get our then you can see
+and then if we get our then you can see
+and then if we get our then you can see
+our
+our
+our
+bank is sitting there proudly and as the
+bank is sitting there proudly and as the
+bank is sitting there proudly and as the
+money flows in
+money flows in
+money flows in
+the number is changing but right now we
+the number is changing but right now we
+the number is changing but right now we
+step on it it does absolutely nothing
+step on it it does absolutely nothing
+step on it it does absolutely nothing
+so we need to add that so we need to
+so we need to add that so we need to
+so we need to add that so we need to
+hook another event to our bank in it and
+hook another event to our bank in it and
+hook another event to our bank in it and
+this will be self.instance
+this will be self.instance
+this will be self.instance
+dot pad dot touch
+dot pad dot touch
+dot pad dot touch
+connect a function with ellipses
+connect a function with ellipses
+connect a function with ellipses
+as per usual we'll just do self on
+as per usual we'll just do self on
+as per usual we'll just do self on
+touched and we'll send in the ellipses
+touched and we'll send in the ellipses
+touched and we'll send in the ellipses
+so
+so
+so
+below our set display we can just make a
+below our set display we can just make a
+below our set display we can just make a
+function
+function
+function
+bank on a touch when our pad is touched
+bank on a touch when our pad is touched
+bank on a touch when our pad is touched
+and make sure the self.instance dot is
+and make sure the self.instance dot is
+and make sure the self.instance dot is
+changed to whatever
+changed to whatever
+changed to whatever
+part you have that will act as your pad
+part you have that will act as your pad
+part you have that will act as your pad
+my case it's a pad
+my case it's a pad
+my case it's a pad
+named pad so that works out quite well
+named pad so that works out quite well
+named pad so that works out quite well
+so when it's touched we'll
+so when it's touched we'll
+so when it's touched we'll
+get our hit part so in our untouched
+get our hit part so in our untouched
+get our hit part so in our untouched
+function
+function
+function
+the parameters will be our hit part and
+the parameters will be our hit part and
+the parameters will be our hit part and
+then
+then
+then
+we need to verify if this part is a
+we need to verify if this part is a
+we need to verify if this part is a
+player and if it is a player we need to
+player and if it is a player we need to
+player and if it is a player we need to
+make sure it's our owner
+make sure it's our owner
+make sure it's our owner
+so let's do that we're going to say
+so let's do that we're going to say
+so let's do that we're going to say
+local character
+local character
+local character
+equals hit find
+equals hit find
+equals hit find
+first ancestor which
+first ancestor which
+first ancestor which
+is a model so we'll just find the first
+is a model so we'll just find the first
+is a model so we'll just find the first
+ancestor that's a model
+ancestor that's a model
+ancestor that's a model
+i should change this to hit part whoops
+i should change this to hit part whoops
+i should change this to hit part whoops
+and then
+and then
+and then
+we want to get the players so i'm going
+we want to get the players so i'm going
+we want to get the players so i'm going
+to say local player equals game
+to say local player equals game
+to say local player equals game
+get service players
+get service players
+get service players
+get player from character
+character so
+character so
+character so
+this will get the character from or this
+this will get the character from or this
+this will get the character from or this
+will get the player from our character i
+will get the player from our character i
+will get the player from our character i
+should say
+should say
+should say
+so then we can say if player
+so then we can say if player
+so then we can say if player
+and player equals self.tycoon.owner
+and player equals self.tycoon.owner
+and player equals self.tycoon.owner
+then so if the player exists and the
+then so if the player exists and the
+then so if the player exists and the
+player is our owner
+player is our owner
+player is our owner
+then we can do something and i just want
+then we can do something and i just want
+then we can do something and i just want
+to make sure the character exists
+to make sure the character exists
+to make sure the character exists
+so i'm going to say if character
+then and then below r and down here i'm
+then and then below r and down here i'm
+then and then below r and down here i'm
+just gonna say end
+just gonna say end
+just gonna say end
+and then tab it all in there we go just
+and then tab it all in there we go just
+and then tab it all in there we go just
+to make sure
+to make sure
+to make sure
+it should work normally because gate
+it should work normally because gate
+it should work normally because gate
+player from character shouldn't error on
+player from character shouldn't error on
+player from character shouldn't error on
+no value
+no value
+no value
+but let's not risk it let's just put if
+but let's not risk it let's just put if
+but let's not risk it let's just put if
+character up here
+character up here
+character up here
+and so we need to do down here we need
+and so we need to do down here we need
+and so we need to do down here we need
+to
+to
+to
+access our player manager that we made a
+access our player manager that we made a
+access our player manager that we made a
+couple videos ago with the button
+couple videos ago with the button
+couple videos ago with the button
+and then we need to add the money so i'm
+and then we need to add the money so i'm
+and then we need to add the money so i'm
+going to go to the top of my script
+going to go to the top of my script
+going to go to the top of my script
+and define the player manager by saying
+and define the player manager by saying
+and define the player manager by saying
+local
+local
+local
+player manager equals require
+player manager equals require
+player manager equals require
+script dot parent dot parent
+script dot parent dot parent
+script dot parent dot parent
+dot player manager and then all we need
+dot player manager and then all we need
+dot player manager and then all we need
+to do down here
+to do down here
+to do down here
+is just set our money so i can say
+is just set our money so i can say
+is just set our money so i can say
+player manager
+player manager
+player manager
+set money to our player
+set money to our player
+set money to our player
+and then we want to
+and then we want to
+and then we want to
+define a value that will represent the
+define a value that will represent the
+define a value that will represent the
+new money value we want to set so i'm
+new money value we want to set so i'm
+new money value we want to set so i'm
+going to say local player money
+going to say local player money
+going to say local player money
+equals player manager get money for
+equals player manager get money for
+equals player manager get money for
+our player
+and then plus
+and then plus
+and then plus
+our self dot balance so
+our self dot balance so
+our self dot balance so
+we get the money for our current player
+we get the money for our current player
+we get the money for our current player
+and we add our current balance
+and we add our current balance
+and we add our current balance
+and then we set our player money to
+and then we set our player money to
+and then we set our player money to
+player money so set money player player
+player money so set money player player
+player money so set money player player
+money
+money
+money
+and this is obviously not necessary i'm
+and this is obviously not necessary i'm
+and this is obviously not necessary i'm
+just doing this for visual sake
+just doing this for visual sake
+just doing this for visual sake
+you could just take this block and put
+you could just take this block and put
+you could just take this block and put
+it right here if you wanted to
+it right here if you wanted to
+it right here if you wanted to
+and then after we set our player money
+and then after we set our player money
+and then after we set our player money
+we want to reset our balance by saying
+we want to reset our balance by saying
+we want to reset our balance by saying
+self.balance equals zero
+self.balance equals zero
+self.balance equals zero
+and also reset the display so we can say
+and also reset the display so we can say
+and also reset the display so we can say
+self set display to
+self set display to
+self set display to
+a dollar sign and then zero so
+a dollar sign and then zero so
+a dollar sign and then zero so
+now when we step on the part it should
+now when we step on the part it should
+now when we step on the part it should
+make sure we exist and we are the owner
+make sure we exist and we are the owner
+make sure we exist and we are the owner
+and then give us the appropriate money
+and then give us the appropriate money
+and then give us the appropriate money
+and resetting the bank
+and resetting the bank
+and resetting the bank
+let's try that out there's a couple
+let's try that out there's a couple
+let's try that out there's a couple
+errors
+errors
+errors
+let's see what went wrong i misspelled
+let's see what went wrong i misspelled
+let's see what went wrong i misspelled
+it required that is
+it required that is
+it required that is
+quite unfortunate let's try it again
+quite unfortunate let's try it again
+quite unfortunate let's try it again
+okay there you go that was a really
+okay there you go that was a really
+okay there you go that was a really
+embarrassing
+embarrassing
+embarrassing
+error but you can see drops are coming
+error but you can see drops are coming
+error but you can see drops are coming
+in
+in
+in
+as per usual and once we step on the
+as per usual and once we step on the
+as per usual and once we step on the
+bank pad part the money gets added to
+bank pad part the money gets added to
+bank pad part the money gets added to
+our leader stats
+our leader stats
+our leader stats
+and so let's do an official official
+and so let's do an official official
+and so let's do an official official
+test by
+test by
+test by
+setting our little test component that
+setting our little test component that
+setting our little test component that
+we had from
+we had from
+we had from
+like one of the very first videos to
+like one of the very first videos to
+like one of the very first videos to
+actually cost money to unlock so i'm
+actually cost money to unlock so i'm
+actually cost money to unlock so i'm
+going to go back to one of our buttons
+going to go back to one of our buttons
+going to go back to one of our buttons
+let me see which one it is it's this
+let me see which one it is it's this
+let me see which one it is it's this
+button down here
+button down here
+button down here
+i'm going to set the cost to like 10
+i'm going to set the cost to like 10
+i'm going to set the cost to like 10
+and this is the one that unlocks it like
+and this is the one that unlocks it like
+and this is the one that unlocks it like
+a really pointless part but we're just
+a really pointless part but we're just
+a really pointless part but we're just
+going to see if this works
+going to see if this works
+going to see if this works
+so easy this part here can't unlock it
+so easy this part here can't unlock it
+so easy this part here can't unlock it
+so let's get our dropper to make us
+so let's get our dropper to make us
+so let's get our dropper to make us
+money
+so now we have ten dollars in our bank
+so now we have ten dollars in our bank
+so now we have ten dollars in our bank
+we collect that money we are 20 money in
+we collect that money we are 20 money in
+we collect that money we are 20 money in
+our account then we can
+our account then we can
+our account then we can
+buy this part and you can see
+buy this part and you can see
+buy this part and you can see
+the entire tycoon system works as plain
+the entire tycoon system works as plain
+the entire tycoon system works as plain
+so i mean honestly you you can like stop
+so i mean honestly you you can like stop
+so i mean honestly you you can like stop
+here
+here
+here
+and you have a pretty much complete
+and you have a pretty much complete
+and you have a pretty much complete
+tycoon
+tycoon
+tycoon
+but there's a bunch of other things that
+but there's a bunch of other things that
+but there's a bunch of other things that
+you have to add to obviously make it
+you have to add to obviously make it
+you have to add to obviously make it
+polished and that's what we'll be doing
+polished and that's what we'll be doing
+polished and that's what we'll be doing
+in the future
+in the future
+in the future
+videos so that's it for
+videos so that's it for
+videos so that's it for
+this video i hope you enjoyed we got a
+this video i hope you enjoyed we got a
+this video i hope you enjoyed we got a
+lot done today
+lot done today
+lot done today
+we actually have a functioning tycoon
+we actually have a functioning tycoon
+we actually have a functioning tycoon
+in all ways so the next couple of videos
+in all ways so the next couple of videos
+in all ways so the next couple of videos
+we're going to be polishing the system
+we're going to be polishing the system
+we're going to be polishing the system
+adding some extra features like data
+adding some extra features like data
+adding some extra features like data
+saving and like tycoon spawning and
+saving and like tycoon spawning and
+saving and like tycoon spawning and
+stuff like that
+stuff like that
+stuff like that
+so stay tuned for that make sure to
+so stay tuned for that make sure to
+so stay tuned for that make sure to
+comment any questions or suggestions you
+comment any questions or suggestions you
+comment any questions or suggestions you
+have down below
+have down below
+have down below
+join my discord servers and to talk
+join my discord servers and to talk
+join my discord servers and to talk
+about the tycoon or anything else
+about the tycoon or anything else
+about the tycoon or anything else
+related to
+related to
+related to
+roblox scripting and subscribe to my
+roblox scripting and subscribe to my
+roblox scripting and subscribe to my
+channel if you want to
+channel if you want to
+channel if you want to
+keep up to date with the tycoon series
+keep up to date with the tycoon series
+keep up to date with the tycoon series
+like the video if you enjoyed it
+like the video if you enjoyed it
+like the video if you enjoyed it
+but other than that i hope you have a
+but other than that i hope you have a
+but other than that i hope you have a
+nice day and
+goodbye
+[Music]
+you

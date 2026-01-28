@@ -1,0 +1,1965 @@
+behold
+behold
+behold
+the AI laser turret
+the AI laser turret
+the AI laser turret
+for use of inverse kinematics with both
+for use of inverse kinematics with both
+for use of inverse kinematics with both
+with two hinges this thing can aim at
+with two hinges this thing can aim at
+with two hinges this thing can aim at
+you shoot at you with a cool down and
+you shoot at you with a cool down and
+you shoot at you with a cool down and
+once you leave its Target area it does
+once you leave its Target area it does
+once you leave its Target area it does
+this cute little idle animation where it
+this cute little idle animation where it
+this cute little idle animation where it
+looks around trying to search for a new
+looks around trying to search for a new
+looks around trying to search for a new
+Target this thing is absolutely sick it
+Target this thing is absolutely sick it
+Target this thing is absolutely sick it
+has smooth animations it looks at you it
+has smooth animations it looks at you it
+has smooth animations it looks at you it
+does all the stuff that you want it do
+does all the stuff that you want it do
+does all the stuff that you want it do
+so in this two-part video series I'm
+so in this two-part video series I'm
+so in this two-part video series I'm
+going to be teaching you how to make
+going to be teaching you how to make
+going to be teaching you how to make
+this this thing involves a lot of
+this this thing involves a lot of
+this this thing involves a lot of
+Technology we use hinge constraints
+Technology we use hinge constraints
+Technology we use hinge constraints
+Vector three angle that method and it
+Vector three angle that method and it
+Vector three angle that method and it
+almost uses inverse kinematics basically
+almost uses inverse kinematics basically
+almost uses inverse kinematics basically
+and then for the AI part we do some
+and then for the AI part we do some
+and then for the AI part we do some
+overlap queries we do a lot of
+overlap queries we do a lot of
+overlap queries we do a lot of
+raycasting and a lot of C frame map so
+raycasting and a lot of C frame map so
+raycasting and a lot of C frame map so
+if you're interested in any of that or
+if you're interested in any of that or
+if you're interested in any of that or
+you're just interested in having a sick
+you're just interested in having a sick
+you're just interested in having a sick
+turret to defend your base in your game
+turret to defend your base in your game
+turret to defend your base in your game
+just stay tuned and watch this video it
+just stay tuned and watch this video it
+just stay tuned and watch this video it
+is kind of tough so I would I would warn
+is kind of tough so I would I would warn
+is kind of tough so I would I would warn
+you but I cover it pretty well at least
+you but I cover it pretty well at least
+you but I cover it pretty well at least
+in my opinion and it should be able to
+in my opinion and it should be able to
+in my opinion and it should be able to
+teach you everything you need to do to
+teach you everything you need to do to
+teach you everything you need to do to
+not only use my turret model to make a
+not only use my turret model to make a
+not only use my turret model to make a
+turret but also make your own AI turrets
+turret but also make your own AI turrets
+turret but also make your own AI turrets
+in whatever style that suits your game
+in whatever style that suits your game
+in whatever style that suits your game
+so in this video we'll be covering the
+so in this video we'll be covering the
+so in this video we'll be covering the
+model setup and the basic aiming so
+model setup and the basic aiming so
+model setup and the basic aiming so
+aiming at a specific Direction in the
+aiming at a specific Direction in the
+aiming at a specific Direction in the
+next video we'll be covering he's
+next video we'll be covering he's
+next video we'll be covering he's
+shooting and the AI portion so stay
+shooting and the AI portion so stay
+shooting and the AI portion so stay
+tuned for that I hope you're excited as
+tuned for that I hope you're excited as
+tuned for that I hope you're excited as
+I am to get into this but without
+I am to get into this but without
+I am to get into this but without
+further Ado let's Jump Right In
+so this is the model that I will be
+so this is the model that I will be
+so this is the model that I will be
+using to create my AI laser turret it
+using to create my AI laser turret it
+using to create my AI laser turret it
+will be in the description if you want
+will be in the description if you want
+will be in the description if you want
+to follow along with me setting it up
+to follow along with me setting it up
+to follow along with me setting it up
+and getting it working but if you want
+and getting it working but if you want
+and getting it working but if you want
+to make your own they are a couple
+to make your own they are a couple
+to make your own they are a couple
+little requirements that you have to do
+little requirements that you have to do
+little requirements that you have to do
+for the tutorial for it to work the best
+for the tutorial for it to work the best
+for the tutorial for it to work the best
+it can and I encourage you to make your
+it can and I encourage you to make your
+it can and I encourage you to make your
+own because it'll be a nice learning
+own because it'll be a nice learning
+own because it'll be a nice learning
+experience and it'll better fit your
+experience and it'll better fit your
+experience and it'll better fit your
+game so my AI laser turret in the
+game so my AI laser turret in the
+game so my AI laser turret in the
+Explorer let's drop it down you see
+Explorer let's drop it down you see
+Explorer let's drop it down you see
+there's a couple different parts the
+there's a couple different parts the
+there's a couple different parts the
+bass is just the base of everything it
+bass is just the base of everything it
+bass is just the base of everything it
+won't move it just sits there make sure
+won't move it just sits there make sure
+won't move it just sits there make sure
+that thing is anchored mine is Anchor
+that thing is anchored mine is Anchor
+that thing is anchored mine is Anchor
+good a Collide doesn't really matter
+good a Collide doesn't really matter
+good a Collide doesn't really matter
+should probably be on and then we have
+should probably be on and then we have
+should probably be on and then we have
+two sub models we have housing which is
+two sub models we have housing which is
+two sub models we have housing which is
+like gun housing it'll move like up and
+like gun housing it'll move like up and
+like gun housing it'll move like up and
+down for elevation and depression and
+down for elevation and depression and
+down for elevation and depression and
+then we got the platform which will
+then we got the platform which will
+then we got the platform which will
+rotate around like a turntable
+rotate around like a turntable
+rotate around like a turntable
+so inside of the platform you notice we
+so inside of the platform you notice we
+so inside of the platform you notice we
+have another bass part and by the way
+have another bass part and by the way
+have another bass part and by the way
+these bass parts are the primary parts
+these bass parts are the primary parts
+these bass parts are the primary parts
+of their parent model so this is a AI
+of their parent model so this is a AI
+of their parent model so this is a AI
+laser term oh yeah the primary part is
+laser term oh yeah the primary part is
+laser term oh yeah the primary part is
+the base or the platform the primary pot
+the base or the platform the primary pot
+the base or the platform the primary pot
+or is this base this base is also where
+or is this base this base is also where
+or is this base this base is also where
+the model will be rotating about so when
+the model will be rotating about so when
+the model will be rotating about so when
+we eventually make a hinge it'll rotate
+we eventually make a hinge it'll rotate
+we eventually make a hinge it'll rotate
+about this bass part and the hinge will
+about this bass part and the hinge will
+about this bass part and the hinge will
+be there so let's go into our housing
+be there so let's go into our housing
+be there so let's go into our housing
+this is where there's some important
+this is where there's some important
+this is where there's some important
+Keynotes
+Keynotes
+Keynotes
+so to start off we have to make sure
+so to start off we have to make sure
+so to start off we have to make sure
+that our Barrel The Gun Barrel whatever
+that our Barrel The Gun Barrel whatever
+that our Barrel The Gun Barrel whatever
+your gun will be shooting out is in line
+your gun will be shooting out is in line
+your gun will be shooting out is in line
+with the pivot like access of rotation
+with the pivot like access of rotation
+with the pivot like access of rotation
+where it'll be rotating up and down to
+where it'll be rotating up and down to
+where it'll be rotating up and down to
+make sure they're exactly in line that's
+make sure they're exactly in line that's
+make sure they're exactly in line that's
+because we want the gun to aim properly
+because we want the gun to aim properly
+because we want the gun to aim properly
+and when we measure the angles we'll be
+and when we measure the angles we'll be
+and when we measure the angles we'll be
+doing it relative to a part that will be
+doing it relative to a part that will be
+doing it relative to a part that will be
+at that point and we want to make sure
+at that point and we want to make sure
+at that point and we want to make sure
+it's at the appropriate angle
+it's at the appropriate angle
+it's at the appropriate angle
+issue properly because if this Barrel is
+issue properly because if this Barrel is
+issue properly because if this Barrel is
+kind of out of out of line it'll lead to
+kind of out of out of line it'll lead to
+kind of out of out of line it'll lead to
+inaccuracies when you're shooting your
+inaccuracies when you're shooting your
+inaccuracies when you're shooting your
+gun
+gun
+gun
+so make sure that and also make sure the
+so make sure that and also make sure the
+so make sure that and also make sure the
+bass part is that Pivot Point the
+bass part is that Pivot Point the
+bass part is that Pivot Point the
+primary part is that pivot point because
+primary part is that pivot point because
+primary part is that pivot point because
+it'll allow you to do better testing
+it'll allow you to do better testing
+it'll allow you to do better testing
+and it doesn't really matter that much
+and it doesn't really matter that much
+and it doesn't really matter that much
+for the actual functioning since we'll
+for the actual functioning since we'll
+for the actual functioning since we'll
+be using constraints but it'll be better
+be using constraints but it'll be better
+be using constraints but it'll be better
+so speaking of that let's go to our
+so speaking of that let's go to our
+so speaking of that let's go to our
+housing make sure that base is that
+housing make sure that base is that
+housing make sure that base is that
+primary part because you'll be able to
+primary part because you'll be able to
+primary part because you'll be able to
+rotate it up like this and verify that
+rotate it up like this and verify that
+rotate it up like this and verify that
+the bottom of your gun does not collide
+the bottom of your gun does not collide
+the bottom of your gun does not collide
+with the platform should not do that
+with the platform should not do that
+with the platform should not do that
+because your gun will need to be able to
+because your gun will need to be able to
+because your gun will need to be able to
+go this High we will be handling
+go this High we will be handling
+go this High we will be handling
+depression in the code the gun does not
+depression in the code the gun does not
+depression in the code the gun does not
+need to be able to go all the way down
+need to be able to go all the way down
+need to be able to go all the way down
+because we'll handle that in the code
+because we'll handle that in the code
+because we'll handle that in the code
+but it will need to be able to go all
+but it will need to be able to go all
+but it will need to be able to go all
+the way around
+the way around
+the way around
+so that's that everything is good and
+so that's that everything is good and
+so that's that everything is good and
+make sure that anchored is set to false
+make sure that anchored is set to false
+make sure that anchored is set to false
+on all of your parts except for your
+on all of your parts except for your
+on all of your parts except for your
+base
+base
+base
+so moving on the next step is going to
+so moving on the next step is going to
+so moving on the next step is going to
+be to add our hinges
+be to add our hinges
+be to add our hinges
+so let's start with the platform we're
+so let's start with the platform we're
+so let's start with the platform we're
+gonna we're going to move up the
+gonna we're going to move up the
+gonna we're going to move up the
+platform up a little bit there we go
+platform up a little bit there we go
+platform up a little bit there we go
+we're going to go to model
+we're going to go to model
+we're going to go to model
+great
+great
+great
+inch and I have a video on hinges going
+inch and I have a video on hinges going
+inch and I have a video on hinges going
+more in depth if you want that and just
+more in depth if you want that and just
+more in depth if you want that and just
+arbitrarily place the engine doesn't
+arbitrarily place the engine doesn't
+arbitrarily place the engine doesn't
+really matter if it's centered but just
+really matter if it's centered but just
+really matter if it's centered but just
+place that
+place that
+place that
+and then place this somewhere I don't
+and then place this somewhere I don't
+and then place this somewhere I don't
+really know don't really care because
+really know don't really care because
+really know don't really care because
+what you're going to do is you're going
+what you're going to do is you're going
+what you're going to do is you're going
+to go to your attachment and if you
+to go to your attachment and if you
+to go to your attachment and if you
+cannot see these attachments make sure
+cannot see these attachments make sure
+cannot see these attachments make sure
+to go to model constraint details that
+to go to model constraint details that
+to go to model constraint details that
+allow you to see the attachment which
+allow you to see the attachment which
+allow you to see the attachment which
+should be nice and you're going to
+should be nice and you're going to
+should be nice and you're going to
+select that
+select that
+select that
+and then you're going to go
+and then you're going to go
+and then you're going to go
+to the position and depending on what
+to the position and depending on what
+to the position and depending on what
+part this is since this is the cylinder
+part this is since this is the cylinder
+part this is since this is the cylinder
+part
+part
+part
+we're going to have to play around to
+we're going to have to play around to
+we're going to have to play around to
+see what values we actually want these
+see what values we actually want these
+see what values we actually want these
+one would be centered horizontally but
+one would be centered horizontally but
+one would be centered horizontally but
+the vertical offset should still be
+the vertical offset should still be
+the vertical offset should still be
+there so if I set this to zero that's
+there so if I set this to zero that's
+there so if I set this to zero that's
+not what we want then I know I need to
+not what we want then I know I need to
+not what we want then I know I need to
+set both of these other values because
+set both of these other values because
+set both of these other values because
+when I set the x value to zero it moved
+when I set the x value to zero it moved
+when I set the x value to zero it moved
+up I want it to be Central that's
+up I want it to be Central that's
+up I want it to be Central that's
+Central and it's still down like it's
+Central and it's still down like it's
+Central and it's still down like it's
+still at the edge of a part which is
+still at the edge of a part which is
+still at the edge of a part which is
+what we want we're going to do the same
+what we want we're going to do the same
+what we want we're going to do the same
+thing for the bottom
+thing for the bottom
+thing for the bottom
+we're going to make sure
+there we go that's exactly it
+there we go that's exactly it
+there we go that's exactly it
+and if you've done it correctly they
+and if you've done it correctly they
+and if you've done it correctly they
+should be like vertical on top of each
+should be like vertical on top of each
+should be like vertical on top of each
+other that is also assuming that your
+other that is also assuming that your
+other that is also assuming that your
+housing and platform are perfectly
+housing and platform are perfectly
+housing and platform are perfectly
+centered on your base part which they
+centered on your base part which they
+centered on your base part which they
+should be so now we can select both of
+should be so now we can select both of
+should be so now we can select both of
+them move
+them move
+them move
+move them down like that that's good and
+move them down like that that's good and
+move them down like that that's good and
+the reason it snapped like that is
+the reason it snapped like that is
+the reason it snapped like that is
+because I have my model move mode set to
+because I have my model move mode set to
+because I have my model move mode set to
+physical I would turn that back to
+physical I would turn that back to
+physical I would turn that back to
+geometric for testing purposes but you
+geometric for testing purposes but you
+geometric for testing purposes but you
+can leave it at physical test it which
+can leave it at physical test it which
+can leave it at physical test it which
+we will do in a moment but now let's go
+we will do in a moment but now let's go
+we will do in a moment but now let's go
+to our housing
+to our housing
+to our housing
+and we can move this off to the side
+and we can move this off to the side
+and we can move this off to the side
+because we need to add another hinge we
+because we need to add another hinge we
+because we need to add another hinge we
+need to go to create
+need to go to create
+need to go to create
+hinge and we're going to select our
+hinge and we're going to select our
+hinge and we're going to select our
+little pivot access point here
+little pivot access point here
+little pivot access point here
+doesn't really matter where and since
+doesn't really matter where and since
+doesn't really matter where and since
+this part I'm doing as a union we don't
+this part I'm doing as a union we don't
+this part I'm doing as a union we don't
+we have zero snapage which is kind of
+we have zero snapage which is kind of
+we have zero snapage which is kind of
+annoying but what we can do is we can go
+annoying but what we can do is we can go
+annoying but what we can do is we can go
+to this part double check that it's
+to this part double check that it's
+to this part double check that it's
+centered it's almost centered we got our
+centered it's almost centered we got our
+centered it's almost centered we got our
+0.071
+0.071
+0.071
+but now we Center it and
+but now we Center it and
+but now we Center it and
+now we can go to the world C frame not
+now we can go to the world C frame not
+now we can go to the world C frame not
+just the normalcy the world C frame copy
+just the normalcy the world C frame copy
+just the normalcy the world C frame copy
+that position then go to that attachment
+that position then go to that attachment
+that position then go to that attachment
+paste that into the world C frame
+paste that into the world C frame
+paste that into the world C frame
+position you'll notice it moves back to
+position you'll notice it moves back to
+position you'll notice it moves back to
+where the part is and we want to just
+where the part is and we want to just
+where the part is and we want to just
+drag it across
+drag it across
+drag it across
+the edge of the part that we want to
+the edge of the part that we want to
+the edge of the part that we want to
+connect to there we go that's perfect
+connect to there we go that's perfect
+connect to there we go that's perfect
+and move this over
+and if you've done it correctly there
+and if you've done it correctly there
+and if you've done it correctly there
+should be no red arrows indicating that
+should be no red arrows indicating that
+should be no red arrows indicating that
+your constraints are kind of off
+your constraints are kind of off
+your constraints are kind of off
+and that's all you need to do keep in
+and that's all you need to do keep in
+and that's all you need to do keep in
+mind that I selected the base of the
+mind that I selected the base of the
+mind that I selected the base of the
+platform and then clicked the bottom
+platform and then clicked the bottom
+platform and then clicked the bottom
+part that I want to connect to I
+part that I want to connect to I
+part that I want to connect to I
+selected the base of my housing and then
+selected the base of my housing and then
+selected the base of my housing and then
+clicked the platform just some key steps
+clicked the platform just some key steps
+clicked the platform just some key steps
+note but if we were to run this
+note but if we were to run this
+note but if we were to run this
+what would happen is the all the parts
+what would happen is the all the parts
+what would happen is the all the parts
+would fall apart because they're not
+would fall apart because they're not
+would fall apart because they're not
+welded together I have a video on weld
+welded together I have a video on weld
+welded together I have a video on weld
+that go into more detail if you want to
+that go into more detail if you want to
+that go into more detail if you want to
+check that out but they're quite simple
+check that out but they're quite simple
+check that out but they're quite simple
+so what we need to do is we need to weld
+so what we need to do is we need to weld
+so what we need to do is we need to weld
+the platform to itself and nothing else
+the platform to itself and nothing else
+the platform to itself and nothing else
+so I'm going to go to platform select
+so I'm going to go to platform select
+so I'm going to go to platform select
+all three of the union or the union the
+all three of the union or the union the
+all three of the union or the union the
+union and the base and I'm going to go
+union and the base and I'm going to go
+union and the base and I'm going to go
+to create
+to create
+to create
+weld to create welds and then if I want
+weld to create welds and then if I want
+weld to create welds and then if I want
+to see these welds make sure show welds
+to see these welds make sure show welds
+to see these welds make sure show welds
+is toggle you can see everything is
+is toggle you can see everything is
+is toggle you can see everything is
+stuck to each other which is great I can
+stuck to each other which is great I can
+stuck to each other which is great I can
+do the same for my housing by selecting
+do the same for my housing by selecting
+do the same for my housing by selecting
+all of these parts
+all of these parts
+all of these parts
+go to create weld
+go to create weld
+go to create weld
+boom there we go
+boom there we go
+boom there we go
+and then that's that that's pretty cool
+and then that's that that's pretty cool
+and then that's that that's pretty cool
+and so if I were to run this
+and so if I were to run this
+and so if I were to run this
+everything should be connected
+everything should be connected
+everything should be connected
+yeah so there you go you see how the gun
+yeah so there you go you see how the gun
+yeah so there you go you see how the gun
+kind of depresses
+kind of depresses
+kind of depresses
+but that's exactly what we want and then
+but that's exactly what we want and then
+but that's exactly what we want and then
+if you want more testing you can go to
+if you want more testing you can go to
+if you want more testing you can go to
+model mode or physical or physical move
+model mode or physical or physical move
+model mode or physical or physical move
+mode you can kind of like drag this
+mode you can kind of like drag this
+mode you can kind of like drag this
+around and you can see how it rotates
+around and you can see how it rotates
+around and you can see how it rotates
+you can drag it up and down
+you can drag it up and down
+you can drag it up and down
+be cool
+be cool
+be cool
+so I just use Ctrl Z to reset it because
+so I just use Ctrl Z to reset it because
+so I just use Ctrl Z to reset it because
+I don't really want that extra movement
+I don't really want that extra movement
+I don't really want that extra movement
+for now
+for now
+for now
+so that's all the physical stuff handled
+so that's all the physical stuff handled
+so that's all the physical stuff handled
+but before we can do anything else we
+but before we can do anything else we
+but before we can do anything else we
+got to remember to go back into our
+got to remember to go back into our
+got to remember to go back into our
+hinges this bottom hinge I'm going to
+hinges this bottom hinge I'm going to
+hinges this bottom hinge I'm going to
+read the yaw
+read the yaw
+read the yaw
+and I'm going to just add the actuator
+and I'm going to just add the actuator
+and I'm going to just add the actuator
+type to a servo and then I'm going to
+type to a servo and then I'm going to
+type to a servo and then I'm going to
+set the speed until something like five
+set the speed until something like five
+set the speed until something like five
+the max torque I'm going to make this a
+the max torque I'm going to make this a
+the max torque I'm going to make this a
+big number like 50 000 because you need
+big number like 50 000 because you need
+big number like 50 000 because you need
+a lot of torque to get things moving
+a lot of torque to get things moving
+a lot of torque to get things moving
+properly set that to a big number as
+properly set that to a big number as
+properly set that to a big number as
+large as you need it and leave the
+large as you need it and leave the
+large as you need it and leave the
+target angle we don't care about that
+target angle we don't care about that
+target angle we don't care about that
+I'm going to go to my housing go to my
+I'm going to go to my housing go to my
+I'm going to go to my housing go to my
+base and my other hinge rename this to
+base and my other hinge rename this to
+base and my other hinge rename this to
+the pitch hinge because if you've ever
+the pitch hinge because if you've ever
+the pitch hinge because if you've ever
+made an airplane game or like looked at
+made an airplane game or like looked at
+made an airplane game or like looked at
+airplanes you know like pitching yaws
+airplanes you know like pitching yaws
+airplanes you know like pitching yaws
+like kind of the horizontal motion
+like kind of the horizontal motion
+like kind of the horizontal motion
+pitches up and down that's what we want
+pitches up and down that's what we want
+pitches up and down that's what we want
+for the hinges we're going to set the
+for the hinges we're going to set the
+for the hinges we're going to set the
+actuator type to a Servo and then do the
+actuator type to a Servo and then do the
+actuator type to a Servo and then do the
+same here server next
+same here server next
+same here server next
+need to like five work the leg fifty
+need to like five work the leg fifty
+need to like five work the leg fifty
+thousands
+thousands
+thousands
+there we go so that should be more than
+there we go so that should be more than
+there we go so that should be more than
+enough we may have to adjust those
+enough we may have to adjust those
+enough we may have to adjust those
+torque values later but that should be
+torque values later but that should be
+torque values later but that should be
+good enough so now what I'm going to do
+good enough so now what I'm going to do
+good enough so now what I'm going to do
+is I'm going to create a completely new
+is I'm going to create a completely new
+is I'm going to create a completely new
+part just in the workspace actually make
+part just in the workspace actually make
+part just in the workspace actually make
+this part a sphere
+this part a sphere
+this part a sphere
+make it
+make it
+make it
+um transparent doesn't we don't need to
+um transparent doesn't we don't need to
+um transparent doesn't we don't need to
+see it make it small one one one and
+see it make it small one one one and
+see it make it small one one one and
+this part is going to be our reference
+this part is going to be our reference
+this part is going to be our reference
+part to calculate angles for our hinges
+part to calculate angles for our hinges
+part to calculate angles for our hinges
+so I'm going to name this part ref
+so I'm going to name this part ref
+so I'm going to name this part ref
+and this part is going to have can
+and this part is going to have can
+and this part is going to have can
+Collide off an anchor to true because
+Collide off an anchor to true because
+Collide off an anchor to true because
+it's only there for the code it's not
+it's only there for the code it's not
+it's only there for the code it's not
+necessarily used for like actual
+necessarily used for like actual
+necessarily used for like actual
+visual stuff or physical stuff but we
+visual stuff or physical stuff but we
+visual stuff or physical stuff but we
+need this part to be centered at the
+need this part to be centered at the
+need this part to be centered at the
+point at which the model will be
+point at which the model will be
+point at which the model will be
+rotating always and that is at this
+rotating always and that is at this
+rotating always and that is at this
+fulcrum the base of our housing which
+fulcrum the base of our housing which
+fulcrum the base of our housing which
+I'm going to select by Alt clicking it
+I'm going to select by Alt clicking it
+I'm going to select by Alt clicking it
+through the model I'm going to copy the
+through the model I'm going to copy the
+through the model I'm going to copy the
+position I'm going to go back to my ref
+position I'm going to go back to my ref
+position I'm going to go back to my ref
+part workspace position exactly where I
+part workspace position exactly where I
+part workspace position exactly where I
+want it to right there by using Ctrl C
+want it to right there by using Ctrl C
+want it to right there by using Ctrl C
+Ctrl V to copy paste that I'm going to
+Ctrl V to copy paste that I'm going to
+Ctrl V to copy paste that I'm going to
+move it into the AI laser turret so it's
+move it into the AI laser turret so it's
+move it into the AI laser turret so it's
+underneath the model and then to double
+underneath the model and then to double
+underneath the model and then to double
+check everything
+check everything
+check everything
+we're going to run it once again make
+we're going to run it once again make
+we're going to run it once again make
+sure everything still is physically
+sure everything still is physically
+sure everything still is physically
+simulated and you'll notice that the
+simulated and you'll notice that the
+simulated and you'll notice that the
+models no longer dropping down because
+models no longer dropping down because
+models no longer dropping down because
+we set them to servos and they're
+we set them to servos and they're
+we set them to servos and they're
+holding up everything in position which
+holding up everything in position which
+holding up everything in position which
+is good that's kind of what we want and
+is good that's kind of what we want and
+is good that's kind of what we want and
+our ref is not interfering with anything
+our ref is not interfering with anything
+our ref is not interfering with anything
+so that is good one more thing is I'm
+so that is good one more thing is I'm
+so that is good one more thing is I'm
+going to check the refs by right
+going to check the refs by right
+going to check the refs by right
+clicking it show orientation indicator
+clicking it show orientation indicator
+clicking it show orientation indicator
+make sure yeah the front is facing the
+make sure yeah the front is facing the
+make sure yeah the front is facing the
+front of the barrel
+front of the barrel
+front of the barrel
+which is just something that we want to
+which is just something that we want to
+which is just something that we want to
+make sure of
+make sure of
+make sure of
+okay
+okay
+okay
+that's the setup there's a lot of setup
+that's the setup there's a lot of setup
+that's the setup there's a lot of setup
+but I want to make sure you guys can get
+but I want to make sure you guys can get
+but I want to make sure you guys can get
+this because I remember when I used to
+this because I remember when I used to
+this because I remember when I used to
+watch these videos myself and people
+watch these videos myself and people
+watch these videos myself and people
+didn't tell me how to properly set
+didn't tell me how to properly set
+didn't tell me how to properly set
+things up it was nasty and it we don't
+things up it was nasty and it we don't
+things up it was nasty and it we don't
+want that I want you to know how
+want that I want you to know how
+want that I want you to know how
+everything should be made so now
+everything should be made so now
+everything should be made so now
+we're going to create a test part
+we're going to create a test part
+we're going to create a test part
+another sphere I'm just gonna make it
+another sphere I'm just gonna make it
+another sphere I'm just gonna make it
+um like
+um like
+um like
+testing green that we are testing
+testing green that we are testing
+testing green that we are testing
+I get a neon because I love Neon make it
+I get a neon because I love Neon make it
+I get a neon because I love Neon make it
+mostly transparent you can make it
+and then we're going to make this a
+and then we're going to make this a
+and then we're going to make this a
+little small
+little small
+little small
+there we go this will be named our
+there we go this will be named our
+there we go this will be named our
+Target part this is where we're going to
+Target part this is where we're going to
+Target part this is where we're going to
+be using for testing before we get it
+be using for testing before we get it
+be using for testing before we get it
+like the AI actually working just a part
+like the AI actually working just a part
+like the AI actually working just a part
+that we can aim at
+that we can aim at
+that we can aim at
+okay so now let's go into the turret and
+okay so now let's go into the turret and
+okay so now let's go into the turret and
+let's get actually scripting this is
+let's get actually scripting this is
+let's get actually scripting this is
+what you're here for it's not about all
+what you're here for it's not about all
+what you're here for it's not about all
+the setup but the setup is quite
+the setup but the setup is quite
+the setup but the setup is quite
+important if you want easy scripting I'm
+important if you want easy scripting I'm
+important if you want easy scripting I'm
+going to rename the script to the turret
+going to rename the script to the turret
+going to rename the script to the turret
+script
+script
+script
+I'm gonna zoom in so you guys can see
+I'm gonna zoom in so you guys can see
+I'm gonna zoom in so you guys can see
+we're going to do a couple things so
+we're going to do a couple things so
+we're going to do a couple things so
+first of all we need the turret turret
+first of all we need the turret turret
+first of all we need the turret turret
+will be equal to script dot parent
+will be equal to script dot parent
+will be equal to script dot parent
+now we need to get our reference part of
+now we need to get our reference part of
+now we need to get our reference part of
+course which will be equal to the
+course which will be equal to the
+course which will be equal to the
+current dot ref and then our hinges so
+current dot ref and then our hinges so
+current dot ref and then our hinges so
+I'm gonna get the yaw hinge first which
+I'm gonna get the yaw hinge first which
+I'm gonna get the yaw hinge first which
+will be in the turret in the platform
+will be in the turret in the platform
+will be in the turret in the platform
+and the bass and the yaw hinge there we
+and the bass and the yaw hinge there we
+and the bass and the yaw hinge there we
+go then our pitch hinge will be the same
+go then our pitch hinge will be the same
+go then our pitch hinge will be the same
+housing dot base dot itch there we go so
+housing dot base dot itch there we go so
+housing dot base dot itch there we go so
+we've got our pitch we got our hinge
+we've got our pitch we got our hinge
+we've got our pitch we got our hinge
+change these references as needed in
+change these references as needed in
+change these references as needed in
+your own model
+your own model
+your own model
+and
+and
+and
+now
+now
+now
+all we need is to get our run service
+all we need is to get our run service
+all we need is to get our run service
+because we're going to be using a run
+because we're going to be using a run
+because we're going to be using a run
+surface event in just a moment the game
+surface event in just a moment the game
+surface event in just a moment the game
+get service run service
+get service run service
+get service run service
+and then we're going to need our Target
+and then we're going to need our Target
+and then we're going to need our Target
+part say local Target part equals or
+part say local Target part equals or
+part say local Target part equals or
+space dot Target there we go and now
+space dot Target there we go and now
+space dot Target there we go and now
+we're going to do run service dot
+we're going to do run service dot
+we're going to do run service dot
+stepped
+stepped
+stepped
+connect a function with elapsed time I'm
+connect a function with elapsed time I'm
+connect a function with elapsed time I'm
+going to say ET add Delta time DT
+going to say ET add Delta time DT
+going to say ET add Delta time DT
+and in here reason we're using step is
+and in here reason we're using step is
+and in here reason we're using step is
+because this comes before the physical
+because this comes before the physical
+because this comes before the physical
+simulation step of each frame so we're
+simulation step of each frame so we're
+simulation step of each frame so we're
+going to be setting the target Parts
+going to be setting the target Parts
+going to be setting the target Parts
+Target position or the hinges I should
+Target position or the hinges I should
+Target position or the hinges I should
+say their target angle every frame so we
+say their target angle every frame so we
+say their target angle every frame so we
+want them to be set before they're
+want them to be set before they're
+want them to be set before they're
+actually simulated which is what we want
+actually simulated which is what we want
+actually simulated which is what we want
+and
+and
+and
+this step to runs every single physics
+this step to runs every single physics
+this step to runs every single physics
+frame which is
+frame which is
+frame which is
+okay and then outside of that we also
+okay and then outside of that we also
+okay and then outside of that we also
+need to get a direction and this will be
+need to get a direction and this will be
+need to get a direction and this will be
+equal to initially just vector3.x axis
+equal to initially just vector3.x axis
+equal to initially just vector3.x axis
+because we need like an initial
+because we need like an initial
+because we need like an initial
+Direction This is where we want a point
+Direction This is where we want a point
+Direction This is where we want a point
+but obviously for testing we're going to
+but obviously for testing we're going to
+but obviously for testing we're going to
+be pointing at the Target part so we're
+be pointing at the Target part so we're
+be pointing at the Target part so we're
+going to say local are going to say
+going to say local are going to say
+going to say local are going to say
+direction we're going to reset Direction
+direction we're going to reset Direction
+direction we're going to reset Direction
+every physics step to be equal to
+every physics step to be equal to
+every physics step to be equal to
+our reference dot C frame
+our reference dot C frame
+our reference dot C frame
+points to object space
+points to object space
+points to object space
+and we're going to send in our Target
+and we're going to send in our Target
+and we're going to send in our Target
+part dot position I have a video on this
+part dot position I have a video on this
+part dot position I have a video on this
+as well if you want to check that out
+as well if you want to check that out
+as well if you want to check that out
+but basically we're converting our
+but basically we're converting our
+but basically we're converting our
+Target Parts position to relatively to
+Target Parts position to relatively to
+Target Parts position to relatively to
+our reference so we can actually aim at
+our reference so we can actually aim at
+our reference so we can actually aim at
+it no matter the orientation because the
+it no matter the orientation because the
+it no matter the orientation because the
+goal is to be able to rotate our turret
+goal is to be able to rotate our turret
+goal is to be able to rotate our turret
+in any direction like the base and
+in any direction like the base and
+in any direction like the base and
+whatever it'll still be able to aim at
+whatever it'll still be able to aim at
+whatever it'll still be able to aim at
+the part that'll be really good for
+the part that'll be really good for
+the part that'll be really good for
+stuff like vehicles and if you ever want
+stuff like vehicles and if you ever want
+stuff like vehicles and if you ever want
+to make the turret move or just be in a
+to make the turret move or just be in a
+to make the turret move or just be in a
+weird angle
+weird angle
+weird angle
+so let's go in and let's do the yaw
+so let's go in and let's do the yaw
+so let's go in and let's do the yaw
+hinge first of all so I'm going to start
+hinge first of all so I'm going to start
+hinge first of all so I'm going to start
+by getting the flat Direction so flat
+by getting the flat Direction so flat
+by getting the flat Direction so flat
+direction will be equal to Direction
+direction will be equal to Direction
+direction will be equal to Direction
+times Vector 3 dot Nu one zero one so
+times Vector 3 dot Nu one zero one so
+times Vector 3 dot Nu one zero one so
+what this does is we flatten our
+what this does is we flatten our
+what this does is we flatten our
+direction we take our X Y and Z we
+direction we take our X Y and Z we
+direction we take our X Y and Z we
+multiply the Y by zero so it disappears
+multiply the Y by zero so it disappears
+multiply the Y by zero so it disappears
+and we keep the x and z
+and we keep the x and z
+and we keep the x and z
+so that we have a flat Direction because
+so that we have a flat Direction because
+so that we have a flat Direction because
+when we're calculating our
+we don't care about the up and down nest
+we don't care about the up and down nest
+we don't care about the up and down nest
+because we're only looking at it from a
+because we're only looking at it from a
+because we're only looking at it from a
+bird's eye view we only need to know
+bird's eye view we only need to know
+bird's eye view we only need to know
+where where it's actually pointing to
+where where it's actually pointing to
+where where it's actually pointing to
+it's like the flat Direction here would
+it's like the flat Direction here would
+it's like the flat Direction here would
+just be pointing directly to the Target
+just be pointing directly to the Target
+just be pointing directly to the Target
+part we don't care about up and down
+part we don't care about up and down
+part we don't care about up and down
+and
+and
+and
+the way we're actually going to get that
+the way we're actually going to get that
+the way we're actually going to get that
+angle is we're going to say Yahoo dot
+angle is we're going to say Yahoo dot
+angle is we're going to say Yahoo dot
+Target angle is equal to math.degrees
+Target angle is equal to math.degrees
+Target angle is equal to math.degrees
+Vector 3 dots let's do
+Vector 3 dots let's do
+Vector 3 dots let's do
+the X unless you Z axis angle
+the X unless you Z axis angle
+the X unless you Z axis angle
+or colon angle with the other Vector
+or colon angle with the other Vector
+or colon angle with the other Vector
+which is going to be our flat Direction
+which is going to be our flat Direction
+which is going to be our flat Direction
+with the axis as the vector 3 dot Y at
+with the axis as the vector 3 dot Y at
+with the axis as the vector 3 dot Y at
+there we go so what we're doing here is
+there we go so what we're doing here is
+there we go so what we're doing here is
+we're calculating the angle between Z
+we're calculating the angle between Z
+we're calculating the angle between Z
+axis which in this case is just
+axis which in this case is just
+axis which in this case is just
+access facing like that layers and
+access facing like that layers and
+access facing like that layers and
+and the flat Direction which will be
+and the flat Direction which will be
+and the flat Direction which will be
+pointing towards our
+pointing towards our
+pointing towards our
+heart and I have a video that goes much
+heart and I have a video that goes much
+heart and I have a video that goes much
+more in depth into Vector 3 angle if you
+more in depth into Vector 3 angle if you
+more in depth into Vector 3 angle if you
+want to check that out but all you need
+want to check that out but all you need
+want to check that out but all you need
+to know is between the z-axis and the
+to know is between the z-axis and the
+to know is between the z-axis and the
+flat Direction because we need like a
+flat Direction because we need like a
+flat Direction because we need like a
+reference to calculate it against we're
+reference to calculate it against we're
+reference to calculate it against we're
+sending the axis so we get a signed
+sending the axis so we get a signed
+sending the axis so we get a signed
+angle what that means is we can do a
+angle what that means is we can do a
+angle what that means is we can do a
+full 360 degrees because it goes from 0
+full 360 degrees because it goes from 0
+full 360 degrees because it goes from 0
+to 180 and it'll go back to zero and
+to 180 and it'll go back to zero and
+to 180 and it'll go back to zero and
+then go back to 180 but if we add in an
+then go back to 180 but if we add in an
+then go back to 180 but if we add in an
+axis which is just the y-axis so the
+axis which is just the y-axis so the
+axis which is just the y-axis so the
+axis which is rotating through will get
+axis which is rotating through will get
+axis which is rotating through will get
+0 to 180 and then to negative 180 so we
+0 to 180 and then to negative 180 so we
+0 to 180 and then to negative 180 so we
+get all the full 360. even though it's
+get all the full 360. even though it's
+get all the full 360. even though it's
+180 but positive and negative we get
+180 but positive and negative we get
+180 but positive and negative we get
+360. so
+360. so
+360. so
+if we were to just test this out now and
+if we were to just test this out now and
+if we were to just test this out now and
+also we have to convert it to degrees
+also we have to convert it to degrees
+also we have to convert it to degrees
+because this gives you an angle in
+because this gives you an angle in
+because this gives you an angle in
+radians
+radians
+radians
+we want to get it in degrees because the
+we want to get it in degrees because the
+we want to get it in degrees because the
+hinge actually works in degrees let's
+hinge actually works in degrees let's
+hinge actually works in degrees let's
+run this
+run this
+run this
+see if it works see what happens
+see if it works see what happens
+see if it works see what happens
+but you'll notice
+but you'll notice
+but you'll notice
+it's facing back we can't have that it's
+it's facing back we can't have that it's
+it's facing back we can't have that it's
+facing backwards we need this gun to
+facing backwards we need this gun to
+facing backwards we need this gun to
+point towards the the thing so
+point towards the the thing so
+point towards the the thing so
+what we're gonna have to do is just
+what we're gonna have to do is just
+what we're gonna have to do is just
+negates our flat Direction
+negates our flat Direction
+negates our flat Direction
+let's play this
+let's play this
+let's play this
+five Direction's negated boom we're
+five Direction's negated boom we're
+five Direction's negated boom we're
+aiming the yaw is aiming that's perfect
+aiming the yaw is aiming that's perfect
+aiming the yaw is aiming that's perfect
+so your gun might be different than mine
+so your gun might be different than mine
+so your gun might be different than mine
+and that's okay because between a
+and that's okay because between a
+and that's okay because between a
+combination of negating this direction
+combination of negating this direction
+combination of negating this direction
+here or negating math dot degrees or
+here or negating math dot degrees or
+here or negating math dot degrees or
+changing this
+changing this
+changing this
+vector3.z axis to Vector 3.x axis you
+vector3.z axis to Vector 3.x axis you
+vector3.z axis to Vector 3.x axis you
+will be able to get your turret to aim
+will be able to get your turret to aim
+will be able to get your turret to aim
+in the proper direction so those are the
+in the proper direction so those are the
+in the proper direction so those are the
+three things
+three things
+three things
+that when you change them will have an
+that when you change them will have an
+that when you change them will have an
+effect so if I change this to negative
+effect so if I change this to negative
+effect so if I change this to negative
+math.t degrees
+math.t degrees
+math.t degrees
+you'll see now that it kind of rotates
+you'll see now that it kind of rotates
+you'll see now that it kind of rotates
+opposite of our part which is not what
+opposite of our part which is not what
+opposite of our part which is not what
+we want but depending on your gun
+we want but depending on your gun
+we want but depending on your gun
+situation you might have to do that and
+situation you might have to do that and
+situation you might have to do that and
+then if I change the z-axis to x-axis
+then if I change the z-axis to x-axis
+then if I change the z-axis to x-axis
+it'll it'll just make it go out of phase
+it'll it'll just make it go out of phase
+it'll it'll just make it go out of phase
+like 90 degrees to the side you see how
+like 90 degrees to the side you see how
+like 90 degrees to the side you see how
+like the side is pointing there that is
+like the side is pointing there that is
+like the side is pointing there that is
+a symptom of having the wrong axis so
+a symptom of having the wrong axis so
+a symptom of having the wrong axis so
+we'll set this back to d-axis and then
+we'll set this back to d-axis and then
+we'll set this back to d-axis and then
+you can change your flat direction to
+you can change your flat direction to
+you can change your flat direction to
+flip it around if it's facing like the
+flip it around if it's facing like the
+flip it around if it's facing like the
+exact opposite direction so depending on
+exact opposite direction so depending on
+exact opposite direction so depending on
+your gun you may have to do that now
+your gun you may have to do that now
+your gun you may have to do that now
+before you move on to the next step you
+before you move on to the next step you
+before you move on to the next step you
+want to make sure your Barrel is
+want to make sure your Barrel is
+want to make sure your Barrel is
+pointing where this is
+pointing where this is
+pointing where this is
+and once you have that you're now good
+and once you have that you're now good
+and once you have that you're now good
+to move on to the pitch because honestly
+to move on to the pitch because honestly
+to move on to the pitch because honestly
+I don't want to teach you guys how to
+I don't want to teach you guys how to
+I don't want to teach you guys how to
+follow exactly along with my model I
+follow exactly along with my model I
+follow exactly along with my model I
+want you to be able to adapt this to
+want you to be able to adapt this to
+want you to be able to adapt this to
+your own game so you might have to do
+your own game so you might have to do
+your own game so you might have to do
+some special debugging but I've given
+some special debugging but I've given
+some special debugging but I've given
+you the tools to get this negate this or
+you the tools to get this negate this or
+you the tools to get this negate this or
+change this to x-axis and you should be
+change this to x-axis and you should be
+change this to x-axis and you should be
+able to get everything push comes to
+able to get everything push comes to
+able to get everything push comes to
+shove you can always add a vector a
+shove you can always add a vector a
+shove you can always add a vector a
+number offset to the degrees because
+number offset to the degrees because
+number offset to the degrees because
+this is in degrees from negative 180 to
+this is in degrees from negative 180 to
+this is in degrees from negative 180 to
+180 you always add like 90 degrees I
+180 you always add like 90 degrees I
+180 you always add like 90 degrees I
+would not I don't have to do that I've
+would not I don't have to do that I've
+would not I don't have to do that I've
+never had to do that but
+never had to do that but
+never had to do that but
+if you're really getting desperate you
+if you're really getting desperate you
+if you're really getting desperate you
+could try doing that I'm not sure how it
+could try doing that I'm not sure how it
+could try doing that I'm not sure how it
+would work but it's just other options
+would work but it's just other options
+would work but it's just other options
+so now we pitch this is a little
+so now we pitch this is a little
+so now we pitch this is a little
+complicated because what we want to do
+complicated because what we want to do
+complicated because what we want to do
+is we have our flat direction we have
+is we have our flat direction we have
+is we have our flat direction we have
+our Direction which like in this case
+our Direction which like in this case
+our Direction which like in this case
+would just be pointing here pointing
+would just be pointing here pointing
+would just be pointing here pointing
+down and we can calculate the angle
+down and we can calculate the angle
+down and we can calculate the angle
+between them but we need an axis and
+between them but we need an axis and
+between them but we need an axis and
+this axis will be pointing out
+this axis will be pointing out
+this axis will be pointing out
+perpendicular so how do we get a
+perpendicular so how do we get a
+perpendicular so how do we get a
+perpendicular Vector to our flat
+perpendicular Vector to our flat
+perpendicular Vector to our flat
+Direction in our Direction
+Direction in our Direction
+Direction in our Direction
+we need to use cross products so we're
+we need to use cross products so we're
+we need to use cross products so we're
+going to do access equals
+going to do access equals
+going to do access equals
+local access equals vector3. y axis so
+local access equals vector3. y axis so
+local access equals vector3. y axis so
+since the local space we can use the
+since the local space we can use the
+since the local space we can use the
+y-axis we can cross that with the flat
+y-axis we can cross that with the flat
+y-axis we can cross that with the flat
+Direction so the y-axis will be pointing
+Direction so the y-axis will be pointing
+Direction so the y-axis will be pointing
+like up like this flat direction will be
+like up like this flat direction will be
+like up like this flat direction will be
+pointing out like this we'll get the
+pointing out like this we'll get the
+pointing out like this we'll get the
+cross product which will give us a
+cross product which will give us a
+cross product which will give us a
+vector pointing out to the side and then
+vector pointing out to the side and then
+vector pointing out to the side and then
+in here
+in here
+in here
+we want to go set the actual pitch hinge
+we want to go set the actual pitch hinge
+we want to go set the actual pitch hinge
+equal to math.degree once again
+equal to math.degree once again
+equal to math.degree once again
+I thought dag I'm going to do flat
+I thought dag I'm going to do flat
+I thought dag I'm going to do flat
+direction now
+direction now
+direction now
+the angle of a flat rate so flat
+the angle of a flat rate so flat
+the angle of a flat rate so flat
+Direction angle in the direction using
+Direction angle in the direction using
+Direction angle in the direction using
+the axis as our
+the axis as our
+the axis as our
+access parameter to our Vector 3 angle
+access parameter to our Vector 3 angle
+access parameter to our Vector 3 angle
+so the flat Direction goes like out this
+so the flat Direction goes like out this
+so the flat Direction goes like out this
+way the direction goes down out that way
+way the direction goes down out that way
+way the direction goes down out that way
+we need the angle between there using
+we need the angle between there using
+we need the angle between there using
+the perpendicular bit it's our reference
+the perpendicular bit it's our reference
+the perpendicular bit it's our reference
+so if we run this let's just see if it
+so if we run this let's just see if it
+so if we run this let's just see if it
+works first try
+works first try
+works first try
+does it
+but it still doesn't oh also r
+but it still doesn't oh also r
+but it still doesn't oh also r
+part is not Inc
+part is not Inc
+part is not Inc
+I mean anchor we need anchor our Target
+I mean anchor we need anchor our Target
+I mean anchor we need anchor our Target
+part
+part
+part
+so I set that
+so I set that
+so I set that
+didn't really do much
+didn't really do much
+didn't really do much
+let's go double check it again
+let's go double check it again
+let's go double check it again
+oh you know why because I said Pitch
+oh you know why because I said Pitch
+oh you know why because I said Pitch
+hinge it's not the pitch hinges.target
+hinge it's not the pitch hinges.target
+hinge it's not the pitch hinges.target
+angle stupid me so pitch in is our
+angle stupid me so pitch in is our
+angle stupid me so pitch in is our
+Target angle equals this stuff
+Target angle equals this stuff
+Target angle equals this stuff
+debugging with B rice
+debugging with B rice
+debugging with B rice
+um there you go so look the points of
+um there you go so look the points of
+um there you go so look the points of
+the thing wonderful this is exactly what
+the thing wonderful this is exactly what
+the thing wonderful this is exactly what
+we want we can move it around move it up
+we want we can move it around move it up
+we want we can move it around move it up
+and down
+and boom
+and boom
+and boom
+oh so Purdy isn't it oh cool so again if
+oh so Purdy isn't it oh cool so again if
+oh so Purdy isn't it oh cool so again if
+this doesn't work out
+this doesn't work out
+this doesn't work out
+change change the same parameters that I
+change change the same parameters that I
+change change the same parameters that I
+did you can set your direction you can
+did you can set your direction you can
+did you can set your direction you can
+put a negative here put a negative in
+put a negative here put a negative in
+put a negative here put a negative in
+front of here
+front of here
+front of here
+you could change
+you could change
+you could change
+that's really all you could do for the
+that's really all you could do for the
+that's really all you could do for the
+pitch so if the pitch ain't working
+pitch so if the pitch ain't working
+pitch so if the pitch ain't working
+go back and change your yaw try to fix
+go back and change your yaw try to fix
+go back and change your yaw try to fix
+your yaw first so the barrel points
+your yaw first so the barrel points
+your yaw first so the barrel points
+properly and you should be set to do
+properly and you should be set to do
+properly and you should be set to do
+your pitch properly I hope that helps if
+your pitch properly I hope that helps if
+your pitch properly I hope that helps if
+you have any comments please put them
+you have any comments please put them
+you have any comments please put them
+down in the description because this is
+down in the description because this is
+down in the description because this is
+complicated but it's a lot better to
+complicated but it's a lot better to
+complicated but it's a lot better to
+learn this yourself so you can apply
+learn this yourself so you can apply
+learn this yourself so you can apply
+this to your own games then to follow me
+this to your own games then to follow me
+this to your own games then to follow me
+blindly so learn how to do that evolve
+blindly so learn how to do that evolve
+blindly so learn how to do that evolve
+and just work with it because you don't
+and just work with it because you don't
+and just work with it because you don't
+need to understand how all this math
+need to understand how all this math
+need to understand how all this math
+works all you need to do is understand
+works all you need to do is understand
+works all you need to do is understand
+how to play with numbers and play with
+how to play with numbers and play with
+how to play with numbers and play with
+uh constraints to get everything working
+uh constraints to get everything working
+uh constraints to get everything working
+nicely because they provide you all the
+nicely because they provide you all the
+nicely because they provide you all the
+methods and they get you to do all that
+methods and they get you to do all that
+methods and they get you to do all that
+stuff there's always absolutely
+stuff there's always absolutely
+stuff there's always absolutely
+wonderful
+wonderful
+wonderful
+so using this framework that we have the
+so using this framework that we have the
+so using this framework that we have the
+reason it's so complex is like it's easy
+reason it's so complex is like it's easy
+reason it's so complex is like it's easy
+to do this on a 2d plane what if we take
+to do this on a 2d plane what if we take
+to do this on a 2d plane what if we take
+our our AI laser turn we move this thing
+our our AI laser turn we move this thing
+our our AI laser turn we move this thing
+up
+up
+up
+I change my mode to geometric there you
+I change my mode to geometric there you
+I change my mode to geometric there you
+go move this thing up and we were to
+go move this thing up and we were to
+go move this thing up and we were to
+like rotate it like no surely surely it
+like rotate it like no surely surely it
+like rotate it like no surely surely it
+wouldn't work
+wouldn't work
+wouldn't work
+but if you look at that it does it's
+but if you look at that it does it's
+but if you look at that it does it's
+still by some Magic by some miracle
+still by some Magic by some miracle
+still by some Magic by some miracle
+we can still aim directly at that point
+we can still aim directly at that point
+we can still aim directly at that point
+you see Barrel the barrels are loaded
+you see Barrel the barrels are loaded
+you see Barrel the barrels are loaded
+it's ready to go
+it's ready to go
+it's ready to go
+we're aiming directly at that point
+we're aiming directly at that point
+we're aiming directly at that point
+which is absolutely phenomenal
+which is absolutely phenomenal
+which is absolutely phenomenal
+you can put it wherever it looks exactly
+you can put it wherever it looks exactly
+you can put it wherever it looks exactly
+at it we could we can move this up it
+at it we could we can move this up it
+at it we could we can move this up it
+still reacts properly it could rotate
+still reacts properly it could rotate
+still reacts properly it could rotate
+this fully upside down or like fully
+this fully upside down or like fully
+this fully upside down or like fully
+sideways like that it still does the the
+sideways like that it still does the the
+sideways like that it still does the the
+trick oh that's like you look Barrel
+trick oh that's like you look Barrel
+trick oh that's like you look Barrel
+through it there you go you can see it's
+through it there you go you can see it's
+through it there you go you can see it's
+lined up perfectly so this is because
+lined up perfectly so this is because
+lined up perfectly so this is because
+we're using our relative object space
+we're using our relative object space
+we're using our relative object space
+everything is relative to our turret and
+everything is relative to our turret and
+everything is relative to our turret and
+we're just kind of converting everything
+we're just kind of converting everything
+we're just kind of converting everything
+from the world to relative
+from the world to relative
+from the world to relative
+it just works it's beautiful complex
+it just works it's beautiful complex
+it just works it's beautiful complex
+Vector math but it gets the job done
+Vector math but it gets the job done
+Vector math but it gets the job done
+I know this is a lot
+I know this is a lot
+I know this is a lot
+but that's why I'm studying this into a
+but that's why I'm studying this into a
+but that's why I'm studying this into a
+series so that's about it for this video
+series so that's about it for this video
+series so that's about it for this video
+I really hope you enjoyed learning
+I really hope you enjoyed learning
+I really hope you enjoyed learning
+how to do all this stuff it's
+how to do all this stuff it's
+how to do all this stuff it's
+complicated but it looks it looks
+complicated but it looks it looks
+complicated but it looks it looks
+freaking sick like you can't you can't
+freaking sick like you can't you can't
+freaking sick like you can't you can't
+sell me
+sell me
+sell me
+this doesn't look really cool because
+this doesn't look really cool because
+this doesn't look really cool because
+it's a freaking gun
+it's a freaking gun
+it's a freaking gun
+wanting physically simulated has has
+wanting physically simulated has has
+wanting physically simulated has has
+travel time too it doesn't doesn't snap
+travel time too it doesn't doesn't snap
+travel time too it doesn't doesn't snap
+exactly it has actually like moves and
+exactly it has actually like moves and
+exactly it has actually like moves and
+it looks very smooth animated animated
+it looks very smooth animated animated
+it looks very smooth animated animated
+well both on the client and the server
+well both on the client and the server
+well both on the client and the server
+because we're using these physical
+because we're using these physical
+because we're using these physical
+constraints and it's dead on accurate
+constraints and it's dead on accurate
+constraints and it's dead on accurate
+and that is wonderful so there will be
+and that is wonderful so there will be
+and that is wonderful so there will be
+help in the description with a bunch of
+help in the description with a bunch of
+help in the description with a bunch of
+other videos because it builds on a lot
+other videos because it builds on a lot
+other videos because it builds on a lot
+of stuff that I've already taught
+of stuff that I've already taught
+of stuff that I've already taught
+there will be the model and the finished
+there will be the model and the finished
+there will be the model and the finished
+product of this video will also be in
+product of this video will also be in
+product of this video will also be in
+there to check out
+there to check out
+there to check out
+and yeah so stay tuned for the next
+and yeah so stay tuned for the next
+and yeah so stay tuned for the next
+video like And subscribe if you enjoyed
+video like And subscribe if you enjoyed
+video like And subscribe if you enjoyed
+it please comment down below any
+it please comment down below any
+it please comment down below any
+questions or suggestions but with that I
+questions or suggestions but with that I
+questions or suggestions but with that I
+hope you have a nice day and goodbye
+hope you have a nice day and goodbye
+hope you have a nice day and goodbye
+[Music]
+thank you

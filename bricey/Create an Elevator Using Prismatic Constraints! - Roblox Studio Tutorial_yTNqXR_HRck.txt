@@ -1,0 +1,978 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i will be showing you how
+in this video i will be showing you how
+in this video i will be showing you how
+to make
+to make
+to make
+your very own elevator using prismatic
+your very own elevator using prismatic
+your very own elevator using prismatic
+constraints
+constraints
+constraints
+in roblox studio i'll show you how to
+in roblox studio i'll show you how to
+in roblox studio i'll show you how to
+use prismatic constraints what they are
+use prismatic constraints what they are
+use prismatic constraints what they are
+how they work
+how they work
+how they work
+and we'll also be doing a little bit of
+and we'll also be doing a little bit of
+and we'll also be doing a little bit of
+scripting for our
+scripting for our
+scripting for our
+elevator so prismatic constraints are
+elevator so prismatic constraints are
+elevator so prismatic constraints are
+basically
+basically
+basically
+a constraint that allow
+a constraint that allow
+a constraint that allow
+your attachments to slide along an axis
+your attachments to slide along an axis
+your attachments to slide along an axis
+they're super cool
+they're super cool
+they're super cool
+super useful make sure to like and
+super useful make sure to like and
+super useful make sure to like and
+subscribe if you enjoy this video
+subscribe if you enjoy this video
+subscribe if you enjoy this video
+and without further ado let's get into
+and without further ado let's get into
+and without further ado let's get into
+the video
+[Music]
+[Music]
+[Music]
+so in front of me i have two parts one
+so in front of me i have two parts one
+so in front of me i have two parts one
+of which
+of which
+of which
+is the platform for elevator and the
+is the platform for elevator and the
+is the platform for elevator and the
+next is our little
+next is our little
+next is our little
+where our elevator will slide on so
+where our elevator will slide on so
+where our elevator will slide on so
+the way we're going to make our elevator
+the way we're going to make our elevator
+the way we're going to make our elevator
+is by using prismatic
+is by using prismatic
+is by using prismatic
+constraints of course so i'm going to go
+constraints of course so i'm going to go
+constraints of course so i'm going to go
+to model
+to model
+to model
+then create then go to the drop down
+then create then go to the drop down
+then create then go to the drop down
+select
+select
+select
+prismatic and i'm going to start with my
+prismatic and i'm going to start with my
+prismatic and i'm going to start with my
+pull
+pull
+pull
+and then go all the way over to my
+and then go all the way over to my
+and then go all the way over to my
+platform
+platform
+platform
+and here is our prismatic constraint
+and here is our prismatic constraint
+and here is our prismatic constraint
+done
+done
+done
+so you see the first thing we get is an
+so you see the first thing we get is an
+so you see the first thing we get is an
+alignment issue because
+alignment issue because
+alignment issue because
+both the attachments and our
+both the attachments and our
+both the attachments and our
+prismatic constraint have to be
+prismatic constraint have to be
+prismatic constraint have to be
+their x-axis so their yellow axis is
+their x-axis so their yellow axis is
+their x-axis so their yellow axis is
+they have to be aligned
+they have to be aligned
+they have to be aligned
+but they're slider axis which in this
+but they're slider axis which in this
+but they're slider axis which in this
+case
+case
+case
+is like the y-axis they do not have to
+is like the y-axis they do not have to
+is like the y-axis they do not have to
+be aligned
+be aligned
+be aligned
+so wherever they're pointing is where
+so wherever they're pointing is where
+so wherever they're pointing is where
+our prismatic
+our prismatic
+our prismatic
+constraint can slide and that's all a
+constraint can slide and that's all a
+constraint can slide and that's all a
+prismatic constraint does it allows
+prismatic constraint does it allows
+prismatic constraint does it allows
+your two attachments to slide along one
+your two attachments to slide along one
+your two attachments to slide along one
+axis no rotation whatsoever
+axis no rotation whatsoever
+axis no rotation whatsoever
+but and they can't really move in
+but and they can't really move in
+but and they can't really move in
+other axises either so let's go move
+other axises either so let's go move
+other axises either so let's go move
+this
+this
+this
+into position so the attachments are
+into position so the attachments are
+into position so the attachments are
+both in the same slot
+both in the same slot
+both in the same slot
+so if i were to press play
+so if i were to press play
+so if i were to press play
+you can see that the part falls
+you can see that the part falls
+you can see that the part falls
+if i move it up it does not move
+if i move it up it does not move
+if i move it up it does not move
+away from like the central axis so i can
+away from like the central axis so i can
+away from like the central axis so i can
+move it away it just stays there
+move it away it just stays there
+move it away it just stays there
+so it's constrained to
+so it's constrained to
+so it's constrained to
+this one axis of the pole and that's
+this one axis of the pole and that's
+this one axis of the pole and that's
+exactly what you want with your
+exactly what you want with your
+exactly what you want with your
+prismatic constraint
+prismatic constraint
+prismatic constraint
+so just like a hinge constraint if you
+so just like a hinge constraint if you
+so just like a hinge constraint if you
+didn't see my video on that make sure to
+didn't see my video on that make sure to
+didn't see my video on that make sure to
+check it out
+check it out
+check it out
+a prismatic constraint has a few
+a prismatic constraint has a few
+a prismatic constraint has a few
+properties that you can change that
+properties that you can change that
+properties that you can change that
+allow it to do like different things
+allow it to do like different things
+allow it to do like different things
+and these look familiar you have limits
+and these look familiar you have limits
+and these look familiar you have limits
+you have actuator type
+you have actuator type
+you have actuator type
+and they're just both for what they are
+and they're just both for what they are
+and they're just both for what they are
+for the hinge constraint
+for the hinge constraint
+for the hinge constraint
+so if i enable limits real quick
+so if i enable limits real quick
+so if i enable limits real quick
+the limits start according to
+the limits start according to
+the limits start according to
+the attachment zero i believe
+the attachment zero i believe
+the attachment zero i believe
+yep that's the attachment zero
+and they basically are just the amount
+and they basically are just the amount
+and they basically are just the amount
+of studs
+of studs
+of studs
+where the prismatic constraint can move
+where the prismatic constraint can move
+where the prismatic constraint can move
+so right now the limits are
+so right now the limits are
+so right now the limits are
+lower limbs zero upper limits five and
+lower limbs zero upper limits five and
+lower limbs zero upper limits five and
+they're defined by these little like
+they're defined by these little like
+they're defined by these little like
+yellow things if you don't see that make
+yellow things if you don't see that make
+yellow things if you don't see that make
+sure to go to model
+sure to go to model
+sure to go to model
+constraint details draw on top and right
+constraint details draw on top and right
+constraint details draw on top and right
+now if we were to play this
+now if we were to play this
+now if we were to play this
+this won't move because the limits are
+this won't move because the limits are
+this won't move because the limits are
+set accordingly
+set accordingly
+set accordingly
+but for this elevator i'm just going to
+but for this elevator i'm just going to
+but for this elevator i'm just going to
+set my lower limit
+set my lower limit
+set my lower limit
+to negative 10 let's actually set it to
+to negative 10 let's actually set it to
+to negative 10 let's actually set it to
+negative
+negative
+negative
+20. there we go that's about good and my
+20. there we go that's about good and my
+20. there we go that's about good and my
+upper limit to zero
+upper limit to zero
+upper limit to zero
+so it won't be able to go above the
+so it won't be able to go above the
+so it won't be able to go above the
+upper limit and it'll stop at the lower
+upper limit and it'll stop at the lower
+upper limit and it'll stop at the lower
+limit so right now you can see
+limit so right now you can see
+limit so right now you can see
+it stops right there which is exactly
+it stops right there which is exactly
+it stops right there which is exactly
+what we want
+what we want
+what we want
+and you can also add some restitution so
+and you can also add some restitution so
+and you can also add some restitution so
+it bounces i'm just going to do
+it bounces i'm just going to do
+it bounces i'm just going to do
+0.5 let's see how that works you see it
+0.5 let's see how that works you see it
+0.5 let's see how that works you see it
+sort of bounces
+sort of bounces
+sort of bounces
+at the bottom so you can change that to
+at the bottom so you can change that to
+at the bottom so you can change that to
+whatever you want
+whatever you want
+whatever you want
+now we have our actuator type so in this
+now we have our actuator type so in this
+now we have our actuator type so in this
+case
+case
+case
+we're going to use a servo
+we're going to use a servo
+we're going to use a servo
+and the server will basically move our
+and the server will basically move our
+and the server will basically move our
+elevator platform to whatever position
+elevator platform to whatever position
+elevator platform to whatever position
+we define so my target position right
+we define so my target position right
+we define so my target position right
+now and this uses the same positioning
+now and this uses the same positioning
+now and this uses the same positioning
+system as our upper and lower limit
+system as our upper and lower limit
+system as our upper and lower limit
+so right now you can see the current
+so right now you can see the current
+so right now you can see the current
+position is at zero
+position is at zero
+position is at zero
+but we want to set our position let's
+but we want to set our position let's
+but we want to set our position let's
+say let's set it to
+negative 10
+negative 10
+negative 10
+and you can see it's indicated by this
+and you can see it's indicated by this
+and you can see it's indicated by this
+little blue line right here
+little blue line right here
+little blue line right here
+so we're gonna have to give it a lot of
+so we're gonna have to give it a lot of
+so we're gonna have to give it a lot of
+max force and a lot of speed
+max force and a lot of speed
+max force and a lot of speed
+if it's going to actually hold up the
+if it's going to actually hold up the
+if it's going to actually hold up the
+weight of
+weight of
+weight of
+our little part so let's see if that's
+our little part so let's see if that's
+our little part so let's see if that's
+enough
+enough
+enough
+yeah it is enough so there you go it
+yeah it is enough so there you go it
+yeah it is enough so there you go it
+holds up the way of our part and it's
+holds up the way of our part and it's
+holds up the way of our part and it's
+positioned right there so
+positioned right there so
+positioned right there so
+let me just turn on constraint detail so
+let me just turn on constraint detail so
+let me just turn on constraint detail so
+i can change it mid game real quick
+i can change it mid game real quick
+i can change it mid game real quick
+and i'm going to set the target position
+and i'm going to set the target position
+and i'm going to set the target position
+back to zero
+back to zero
+back to zero
+and you can see it moves up and the real
+and you can see it moves up and the real
+and you can see it moves up and the real
+beauty about
+beauty about
+beauty about
+prismatic constraints is unlike tweening
+prismatic constraints is unlike tweening
+prismatic constraints is unlike tweening
+i'm gonna be like okay i can just tweet
+i'm gonna be like okay i can just tweet
+i'm gonna be like okay i can just tweet
+this part up and down
+this part up and down
+this part up and down
+this part or this part is physically
+this part or this part is physically
+this part or this part is physically
+active so it can hit things your player
+active so it can hit things your player
+active so it can hit things your player
+will add weight to it so it'll struggle
+will add weight to it so it'll struggle
+will add weight to it so it'll struggle
+a little bit to lift
+a little bit to lift
+a little bit to lift
+it up and that's exactly what we want
+it up and that's exactly what we want
+it up and that's exactly what we want
+and there's also another actuator type
+and there's also another actuator type
+and there's also another actuator type
+you could change it to a motor
+you could change it to a motor
+you could change it to a motor
+but that's just for like constant
+but that's just for like constant
+but that's just for like constant
+movement with prismatic constraints
+movement with prismatic constraints
+movement with prismatic constraints
+you're honestly not going to use that
+you're honestly not going to use that
+you're honestly not going to use that
+that much
+that much
+that much
+i usually just use a servo so
+i usually just use a servo so
+i usually just use a servo so
+now we can actually script our elevator
+now we can actually script our elevator
+now we can actually script our elevator
+but before we do that we first have to
+but before we do that we first have to
+but before we do that we first have to
+make a little part with a click detector
+make a little part with a click detector
+make a little part with a click detector
+to detect when we want to go up or down
+to detect when we want to go up or down
+to detect when we want to go up or down
+a floor
+a floor
+a floor
+so i'm just going to make a little part
+so i'm just going to make a little part
+so i'm just going to make a little part
+and we're going to
+and we're going to
+and we're going to
+make it neon
+make it neon
+make it neon
+red just so it's nice and flashy and
+red just so it's nice and flashy and
+red just so it's nice and flashy and
+this will you just have to click this to
+this will you just have to click this to
+this will you just have to click this to
+go up or down the floor
+go up or down the floor
+go up or down the floor
+this is kind of ugly but we're not going
+this is kind of ugly but we're not going
+this is kind of ugly but we're not going
+for style here it doesn't really matter
+for style here it doesn't really matter
+for style here it doesn't really matter
+so i'm going to weld the part and the
+so i'm going to weld the part and the
+so i'm going to weld the part and the
+platform together
+platform together
+platform together
+and this will be our little click part
+and this will be our little click part
+and this will be our little click part
+i'm going to add a click detector to
+i'm going to add a click detector to
+i'm going to add a click detector to
+this part
+this part
+this part
+click detector there we go and we're
+click detector there we go and we're
+click detector there we go and we're
+just going to name it
+just going to name it
+just going to name it
+this part the clicker let's say
+this part the clicker let's say
+this part the clicker let's say
+and right now would be a good time to
+and right now would be a good time to
+and right now would be a good time to
+highlight all of the parts
+highlight all of the parts
+highlight all of the parts
+in our elevator control g create a model
+in our elevator control g create a model
+in our elevator control g create a model
+and this will be our elevator model
+and this will be our elevator model
+and this will be our elevator model
+there we go so let's first make sure
+there we go so let's first make sure
+there we go so let's first make sure
+that
+that
+that
+our elevator can support the added
+our elevator can support the added
+our elevator can support the added
+weight of
+weight of
+weight of
+our clicker so right now target position
+our clicker so right now target position
+our clicker so right now target position
+is negative 10. let's just play this
+is negative 10. let's just play this
+is negative 10. let's just play this
+there you go look at that it's
+there you go look at that it's
+there you go look at that it's
+absolutely perfect it goes to the exact
+absolutely perfect it goes to the exact
+absolutely perfect it goes to the exact
+spot
+spot
+spot
+it doesn't move anymore any less that's
+it doesn't move anymore any less that's
+it doesn't move anymore any less that's
+exactly what we want right now i'm going
+exactly what we want right now i'm going
+exactly what we want right now i'm going
+to set the target position
+to set the target position
+to set the target position
+to negative 20
+to negative 20
+to negative 20
+at the very bottom and i'm going to move
+at the very bottom and i'm going to move
+at the very bottom and i'm going to move
+the whole platform
+the whole platform
+the whole platform
+plus the clicker down
+plus the clicker down
+plus the clicker down
+there so let's just move this down
+just so the elevator starts at the very
+just so the elevator starts at the very
+just so the elevator starts at the very
+bottom because you wouldn't want it
+bottom because you wouldn't want it
+bottom because you wouldn't want it
+starting at the top
+starting at the top
+starting at the top
+so let's just verify this that this
+so let's just verify this that this
+so let's just verify this that this
+works there we go it goes to the target
+works there we go it goes to the target
+works there we go it goes to the target
+position
+position
+position
+that's exactly what we want
+that's exactly what we want
+that's exactly what we want
+so i'm going to go create a script in my
+so i'm going to go create a script in my
+so i'm going to go create a script in my
+elevator
+elevator
+elevator
+let me zoom in a little bit and we're
+let me zoom in a little bit and we're
+let me zoom in a little bit and we're
+first going to define
+first going to define
+first going to define
+our clicker
+our clicker
+our clicker
+or click detector i should say s will be
+or click detector i should say s will be
+or click detector i should say s will be
+equal to script
+equal to script
+equal to script
+dot parent dot clicker
+dot parent dot clicker
+dot parent dot clicker
+class name dot clicker dot click
+class name dot clicker dot click
+class name dot clicker dot click
+detector there we go
+detector there we go
+detector there we go
+and now we just need our prismatic
+and now we just need our prismatic
+and now we just need our prismatic
+constraint so i'm just gonna
+constraint so i'm just gonna
+constraint so i'm just gonna
+abbreviate this as pc and this will be
+abbreviate this as pc and this will be
+abbreviate this as pc and this will be
+script
+script
+script
+dot parent
+dot parent
+dot parent
+dot shaft i spelled that
+dot shaft i spelled that
+dot shaft i spelled that
+horribly wrong dot prismatic constraint
+horribly wrong dot prismatic constraint
+horribly wrong dot prismatic constraint
+there we go so we have our click
+there we go so we have our click
+there we go so we have our click
+detector and our pc
+detector and our pc
+detector and our pc
+i'm going to make a boolean variable
+i'm going to make a boolean variable
+i'm going to make a boolean variable
+this will be up
+this will be up
+this will be up
+up will be equal to false so this
+up will be equal to false so this
+up will be equal to false so this
+elevator is going to be simple it's only
+elevator is going to be simple it's only
+elevator is going to be simple it's only
+going to have two fours
+going to have two fours
+going to have two fours
+up and down and so i can just set it as
+up and down and so i can just set it as
+up and down and so i can just set it as
+a boolean you could obviously make this
+a boolean you could obviously make this
+a boolean you could obviously make this
+a number that's the beauty of the servo
+a number that's the beauty of the servo
+a number that's the beauty of the servo
+because you could set the target
+because you could set the target
+because you could set the target
+position
+position
+position
+to an increment of like 10 so target
+to an increment of like 10 so target
+to an increment of like 10 so target
+position negative 20 target position
+position negative 20 target position
+position negative 20 target position
+negative 10 and then target position
+negative 10 and then target position
+negative 10 and then target position
+zero
+zero
+zero
+you just do that do whatever you want
+you just do that do whatever you want
+you just do that do whatever you want
+and your click detector will just like
+and your click detector will just like
+and your click detector will just like
+cycle through it but
+cycle through it but
+cycle through it but
+for the sake of simplifying this video
+for the sake of simplifying this video
+for the sake of simplifying this video
+we're just going to leave this as
+we're just going to leave this as
+we're just going to leave this as
+two floors but it's still a pretty cool
+two floors but it's still a pretty cool
+two floors but it's still a pretty cool
+system
+system
+system
+so up will be equal to false then we're
+so up will be equal to false then we're
+so up will be equal to false then we're
+going to set click detector
+going to set click detector
+going to set click detector
+dot mouse click and this will be an
+dot mouse click and this will be an
+dot mouse click and this will be an
+event we're going to connect
+event we're going to connect
+event we're going to connect
+a function to it
+a function to it
+a function to it
+so this will fire whenever the player
+so this will fire whenever the player
+so this will fire whenever the player
+clicks on our
+clicks on our
+clicks on our
+part and the first thing we'll want to
+part and the first thing we'll want to
+part and the first thing we'll want to
+do in this
+do in this
+do in this
+event is set up equal to not up
+event is set up equal to not up
+event is set up equal to not up
+so this will set if up is false up will
+so this will set if up is false up will
+so this will set if up is false up will
+be set to true
+be set to true
+be set to true
+if up is true then up will be set to
+if up is true then up will be set to
+if up is true then up will be set to
+false and then all we need to do is just
+false and then all we need to do is just
+false and then all we need to do is just
+set the target position
+set the target position
+set the target position
+so pc dot target position
+so pc dot target position
+so pc dot target position
+will be equal to up
+will be equal to up
+will be equal to up
+and 0 or
+and 0 or
+and 0 or
+negative 20. so this is another wacky
+negative 20. so this is another wacky
+negative 20. so this is another wacky
+sort of logic statement basically what
+sort of logic statement basically what
+sort of logic statement basically what
+this means is if uh
+this means is if uh
+this means is if uh
+if up is true we're setting the target
+if up is true we're setting the target
+if up is true we're setting the target
+position to zero which is at the very
+position to zero which is at the very
+position to zero which is at the very
+top
+top
+top
+but if up is false then we set it to
+but if up is false then we set it to
+but if up is false then we set it to
+negative 20 which is what it's at
+negative 20 which is what it's at
+negative 20 which is what it's at
+right now and by the way if you are
+right now and by the way if you are
+right now and by the way if you are
+wondering why
+wondering why
+wondering why
+it's like negative 20 and like not
+it's like negative 20 and like not
+it's like negative 20 and like not
+positive 20 and like the bottom zero it
+positive 20 and like the bottom zero it
+positive 20 and like the bottom zero it
+just depends on wherever your
+just depends on wherever your
+just depends on wherever your
+attachment zero is so right now my
+attachment zero is so right now my
+attachment zero is so right now my
+attachment zero is at the very top
+attachment zero is at the very top
+attachment zero is at the very top
+of my pole so anything below it is
+of my pole so anything below it is
+of my pole so anything below it is
+negative anything above it is positive
+negative anything above it is positive
+negative anything above it is positive
+and right on it is zero
+and right on it is zero
+and right on it is zero
+but if we were to go in right now
+but if we were to go in right now
+but if we were to go in right now
+and test our elevator let's hop on we
+and test our elevator let's hop on we
+and test our elevator let's hop on we
+click this
+click this
+click this
+and you can see it brings us all the way
+and you can see it brings us all the way
+and you can see it brings us all the way
+to the top of our elevator
+to the top of our elevator
+to the top of our elevator
+and unlike tweeting or whatever
+and unlike tweeting or whatever
+and unlike tweeting or whatever
+our character is pretty smooth sometimes
+our character is pretty smooth sometimes
+our character is pretty smooth sometimes
+we get bounced up but
+we get bounced up but
+we get bounced up but
+it's pretty smooth when we go up and
+it's pretty smooth when we go up and
+it's pretty smooth when we go up and
+down
+down
+down
+and it's simulated pretty well
+and it's simulated pretty well
+and it's simulated pretty well
+so i think that works great and that's
+so i think that works great and that's
+so i think that works great and that's
+about it
+about it
+about it
+for this video so i hope you guys
+for this video so i hope you guys
+for this video so i hope you guys
+enjoyed this video on prismatic
+enjoyed this video on prismatic
+enjoyed this video on prismatic
+constraints
+constraints
+constraints
+these constraints are super useful you
+these constraints are super useful you
+these constraints are super useful you
+can use them for elevators you can use
+can use them for elevators you can use
+can use them for elevators you can use
+them for
+them for
+them for
+a moving platform a sliding door
+a moving platform a sliding door
+a moving platform a sliding door
+and the real benefit of using these is
+and the real benefit of using these is
+and the real benefit of using these is
+the fact that
+the fact that
+the fact that
+physics work on them unlike tweening and
+physics work on them unlike tweening and
+physics work on them unlike tweening and
+you can also tween models a lot
+you can also tween models a lot
+you can also tween models a lot
+easier with this sort of thing you don't
+easier with this sort of thing you don't
+easier with this sort of thing you don't
+need to tween them you can just weld
+need to tween them you can just weld
+need to tween them you can just weld
+them all together like we did
+them all together like we did
+them all together like we did
+here and overall they're just really fun
+here and overall they're just really fun
+here and overall they're just really fun
+to play around with
+to play around with
+to play around with
+but i encourage you guys to play around
+but i encourage you guys to play around
+but i encourage you guys to play around
+with it fool around with these prismatic
+with it fool around with these prismatic
+with it fool around with these prismatic
+constraints
+constraints
+constraints
+because the only way you're ever going
+because the only way you're ever going
+because the only way you're ever going
+to fully understand these constraints is
+to fully understand these constraints is
+to fully understand these constraints is
+just by
+just by
+just by
+using them and playing around with them
+using them and playing around with them
+using them and playing around with them
+that's how i learned
+that's how i learned
+that's how i learned
+how to use all these constraints and
+how to use all these constraints and
+how to use all these constraints and
+they are a lot of fun
+they are a lot of fun
+they are a lot of fun
+they are kind of confusing sometimes but
+they are kind of confusing sometimes but
+they are kind of confusing sometimes but
+they're super powerful
+they're super powerful
+they're super powerful
+and very very useful but other than that
+and very very useful but other than that
+and very very useful but other than that
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+enjoyed this video
+enjoyed this video
+enjoyed this video
+comment any quick questions or
+comment any quick questions or
+comment any quick questions or
+suggestions down below
+suggestions down below
+suggestions down below
+i hope you have a nice day and goodbye
+[Music]
+[Music]
+[Music]
+you

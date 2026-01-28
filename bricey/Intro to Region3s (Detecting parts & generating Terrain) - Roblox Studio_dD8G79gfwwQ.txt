@@ -1,0 +1,827 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial in this video
+tutorial in this video
+tutorial in this video
+i will be going over region threes and
+i will be going over region threes and
+i will be going over region threes and
+roblox
+roblox
+roblox
+so region threes are a very versatile
+so region threes are a very versatile
+so region threes are a very versatile
+type of class and roblox they can be
+type of class and roblox they can be
+type of class and roblox they can be
+used
+used
+used
+to detect parts they can be used to
+to detect parts they can be used to
+to detect parts they can be used to
+create
+create
+create
+terrain and they're overall just a very
+terrain and they're overall just a very
+terrain and they're overall just a very
+good thing
+good thing
+good thing
+to know about when dealing with roblox
+to know about when dealing with roblox
+to know about when dealing with roblox
+studio
+studio
+studio
+so make sure to like and subscribe if
+so make sure to like and subscribe if
+so make sure to like and subscribe if
+you enjoy the video
+you enjoy the video
+you enjoy the video
+and let's get it started
+so what exactly is a region 3 a region 3
+so what exactly is a region 3 a region 3
+so what exactly is a region 3 a region 3
+is a rectangular prism
+is a rectangular prism
+is a rectangular prism
+just like a part in roblox but unlike a
+just like a part in roblox but unlike a
+just like a part in roblox but unlike a
+part a region's size and position are
+part a region's size and position are
+part a region's size and position are
+defined by two vectors
+defined by two vectors
+defined by two vectors
+the min and the max
+the min and the max
+the min and the max
+and so basically let me let me show you
+and so basically let me let me show you
+and so basically let me let me show you
+here
+here
+here
+is our rectangular prism apart its
+is our rectangular prism apart its
+is our rectangular prism apart its
+position
+position
+position
+is defined by a point in the center so
+is defined by a point in the center so
+is defined by a point in the center so
+like let's say right there
+like let's say right there
+like let's say right there
+and its size is determined by a vector
+and its size is determined by a vector
+and its size is determined by a vector
+that gives us
+that gives us
+that gives us
+the length the height and
+the length the height and
+the length the height and
+the width but in a region three
+the width but in a region three
+the width but in a region three
+it's defined by the min vector and the
+it's defined by the min vector and the
+it's defined by the min vector and the
+max vector so the min vector
+max vector so the min vector
+max vector so the min vector
+would be around right here and the max
+would be around right here and the max
+would be around right here and the max
+vector would be right
+vector would be right
+vector would be right
+here so using these two vectors
+here so using these two vectors
+here so using these two vectors
+you can basically already get the size
+you can basically already get the size
+you can basically already get the size
+and the position of our region
+and the position of our region
+and the position of our region
+the thing about using a minimum and a
+the thing about using a minimum and a
+the thing about using a minimum and a
+maximum vector
+maximum vector
+maximum vector
+is the fact that if you switch them up
+is the fact that if you switch them up
+is the fact that if you switch them up
+or if you mix them up your region will
+or if you mix them up your region will
+or if you mix them up your region will
+have a negative size and
+have a negative size and
+have a negative size and
+a weird position so when you're making
+a weird position so when you're making
+a weird position so when you're making
+your regions you always have to make
+your regions you always have to make
+your regions you always have to make
+sure that your
+sure that your
+sure that your
+minimum is your first vector and your
+minimum is your first vector and your
+minimum is your first vector and your
+maximum is your second
+maximum is your second
+maximum is your second
+so now let's go into roblox studio and
+so now let's go into roblox studio and
+so now let's go into roblox studio and
+make a region
+make a region
+make a region
+so usually in roblox you don't just make
+so usually in roblox you don't just make
+so usually in roblox you don't just make
+a region using code using a min and a
+a region using code using a min and a
+a region using code using a min and a
+max vector
+max vector
+max vector
+you make a part that represents your
+you make a part that represents your
+you make a part that represents your
+region and then you just make a region
+region and then you just make a region
+region and then you just make a region
+around that part
+around that part
+around that part
+so let me just make a quick little part
+so let me just make a quick little part
+so let me just make a quick little part
+right here there we go i'm going to make
+right here there we go i'm going to make
+right here there we go i'm going to make
+it
+it
+it
+a little bit transparent i'm going to
+a little bit transparent i'm going to
+a little bit transparent i'm going to
+anchor it and turn can collide off and
+anchor it and turn can collide off and
+anchor it and turn can collide off and
+we're just going to name this my
+we're just going to name this my
+we're just going to name this my
+re if i can spell it region part
+re if i can spell it region part
+re if i can spell it region part
+there we go and i'm going to create a
+there we go and i'm going to create a
+there we go and i'm going to create a
+script inside
+script inside
+script inside
+of this part let me zoom in
+of this part let me zoom in
+of this part let me zoom in
+this is going to be our
+this is going to be our
+this is going to be our
+region script i'm just going to name it
+region script i'm just going to name it
+region script i'm just going to name it
+region script
+region script
+region script
+first thing i'm going to define is our
+first thing i'm going to define is our
+first thing i'm going to define is our
+region part so local part will be equal
+region part so local part will be equal
+region part so local part will be equal
+to script
+to script
+to script
+dot parent and creating a region three
+dot parent and creating a region three
+dot parent and creating a region three
+is actually pretty easy so let's just
+is actually pretty easy so let's just
+is actually pretty easy so let's just
+disregard our part for a second so i can
+disregard our part for a second so i can
+disregard our part for a second so i can
+define my region
+define my region
+define my region
+as equal to region three
+as equal to region three
+as equal to region three
+dot new and it takes in two vectors a
+dot new and it takes in two vectors a
+dot new and it takes in two vectors a
+min
+min
+min
+and a max so unlike a part if you were
+and a max so unlike a part if you were
+and a max so unlike a part if you were
+to create a part you would give it a
+to create a part you would give it a
+to create a part you would give it a
+position or c
+position or c
+position or c
+frame and size with our region we have
+frame and size with our region we have
+frame and size with our region we have
+to give it a minimum and a maximum
+to give it a minimum and a maximum
+to give it a minimum and a maximum
+vector so in
+vector so in
+vector so in
+roblox our min vector would be
+roblox our min vector would be
+roblox our min vector would be
+like right there at the bottom left and
+like right there at the bottom left and
+like right there at the bottom left and
+the max vector would be like right there
+the max vector would be like right there
+the max vector would be like right there
+at the top
+so let's go back into our script and
+so let's go back into our script and
+so let's go back into our script and
+the way you would define this for our
+the way you would define this for our
+the way you would define this for our
+part is by saying
+the part dot position minus
+the part dot position minus
+the part dot position minus
+the part dot size divided by two and the
+the part dot size divided by two and the
+the part dot size divided by two and the
+part.position
+part.position
+part.position
+plus let me zoom out the part dot
+plus let me zoom out the part dot
+plus let me zoom out the part dot
+size divided by two so what this means
+size divided by two so what this means
+size divided by two so what this means
+is
+is
+is
+let me go back to my little picture
+let me go back to my little picture
+let me go back to my little picture
+let me just make this smaller so this is
+let me just make this smaller so this is
+let me just make this smaller so this is
+our part dot position
+our part dot position
+our part dot position
+and we want to get the minimum and the
+and we want to get the minimum and the
+and we want to get the minimum and the
+max with this position and with our size
+max with this position and with our size
+max with this position and with our size
+so the way we do that
+so the way we do that
+so the way we do that
+is we take the size and we divide it by
+is we take the size and we divide it by
+is we take the size and we divide it by
+two so size would usually just be a
+two so size would usually just be a
+two so size would usually just be a
+vector
+vector
+vector
+that expands the whole rectangular prism
+that expands the whole rectangular prism
+that expands the whole rectangular prism
+let's say
+let's say
+let's say
+but if you divide it by two then we can
+but if you divide it by two then we can
+but if you divide it by two then we can
+offset our position
+offset our position
+offset our position
+either plus or minus by this so it'll
+either plus or minus by this so it'll
+either plus or minus by this so it'll
+offset it by size divided by twos it'll
+offset it by size divided by twos it'll
+offset it by size divided by twos it'll
+go here
+go here
+go here
+to here for the minimum and then go from
+to here for the minimum and then go from
+to here for the minimum and then go from
+here
+here
+here
+to here for the maximum
+and so if you were to just run this
+nothing would happen because there's our
+nothing would happen because there's our
+nothing would happen because there's our
+a few functions that we have to use to
+a few functions that we have to use to
+a few functions that we have to use to
+actually make
+actually make
+actually make
+our region 3 useful and the first one
+our region 3 useful and the first one
+our region 3 useful and the first one
+is workspace find part and region three
+is workspace find part and region three
+is workspace find part and region three
+so i'm going to say a local variable
+so i'm going to say a local variable
+so i'm going to say a local variable
+parts and this is a list and it's going
+parts and this is a list and it's going
+parts and this is a list and it's going
+to be equal to workspace
+to be equal to workspace
+to be equal to workspace
+find part on region three
+find part on region three
+find part on region three
+it's in region three my bad in region
+it's in region three my bad in region
+it's in region three my bad in region
+three
+three
+three
+find parts in region three and you just
+find parts in region three and you just
+find parts in region three and you just
+send in the region let's just do that
+send in the region let's just do that
+send in the region let's just do that
+for now
+for now
+for now
+and if we were to loop through the parts
+and pairs for i part and pairs
+and pairs for i part and pairs
+and pairs for i part and pairs
+parts do print
+parts do print
+parts do print
+part dot name let's just run this
+part dot name let's just run this
+part dot name let's just run this
+so you can see our region is detecting
+so you can see our region is detecting
+so you can see our region is detecting
+our base plate which is down here and
+our base plate which is down here and
+our base plate which is down here and
+our region part
+our region part
+our region part
+and our region part is just the part
+and our region part is just the part
+and our region part is just the part
+that we use to define our region
+that we use to define our region
+that we use to define our region
+so usually you don't want that to happen
+so usually you don't want that to happen
+so usually you don't want that to happen
+you don't want
+you don't want
+you don't want
+our region three to be detecting the
+our region three to be detecting the
+our region three to be detecting the
+part that's supposed to
+part that's supposed to
+part that's supposed to
+represent itself because that just
+represent itself because that just
+represent itself because that just
+doesn't really make sense so the way
+doesn't really make sense so the way
+doesn't really make sense so the way
+you'd get around this
+you'd get around this
+you'd get around this
+is in the second parameter of this fine
+is in the second parameter of this fine
+is in the second parameter of this fine
+parts and region 3 function
+parts and region 3 function
+parts and region 3 function
+you would define a part which would be
+you would define a part which would be
+you would define a part which would be
+the ignore descendants instance
+the ignore descendants instance
+the ignore descendants instance
+so what that basically means is when our
+so what that basically means is when our
+so what that basically means is when our
+region is searching for all the parts
+region is searching for all the parts
+region is searching for all the parts
+within the
+within the
+within the
+region of this like rectangular prism it
+region of this like rectangular prism it
+region of this like rectangular prism it
+would ignore our region part
+would ignore our region part
+would ignore our region part
+so if we were to run this you can see it
+so if we were to run this you can see it
+so if we were to run this you can see it
+only detects the base plate
+only detects the base plate
+only detects the base plate
+and now if you were if you want to set
+and now if you were if you want to set
+and now if you were if you want to set
+this up for a player
+this up for a player
+this up for a player
+what i do is i'd say a while loop while
+what i do is i'd say a while loop while
+what i do is i'd say a while loop while
+true
+true
+true
+do and then just put the n down here
+do and then just put the n down here
+do and then just put the n down here
+let me just tab this in and wait a
+let me just tab this in and wait a
+let me just tab this in and wait a
+second
+second
+second
+each loop and then if we were to run
+each loop and then if we were to run
+each loop and then if we were to run
+this with our player
+you can see the loop's working well and
+you can see the loop's working well and
+you can see the loop's working well and
+when i go into my
+when i go into my
+when i go into my
+region you can see it detects where
+region you can see it detects where
+region you can see it detects where
+i go through which is great and if i'm
+i go through which is great and if i'm
+i go through which is great and if i'm
+out of the region it doesn't detect
+out of the region it doesn't detect
+out of the region it doesn't detect
+anything it does detect the base plate
+anything it does detect the base plate
+anything it does detect the base plate
+and go back in it detects all of my body
+and go back in it detects all of my body
+and go back in it detects all of my body
+parts and if you want to actually
+parts and if you want to actually
+parts and if you want to actually
+get the player out of this you would
+get the player out of this you would
+get the player out of this you would
+just
+just
+just
+say local character equals game
+say local character equals game
+say local character equals game
+dot actually i would say local player
+dot actually i would say local player
+dot actually i would say local player
+equals game dot players get player from
+equals game dot players get player from
+equals game dot players get player from
+character
+character
+character
+part dot parent and then i'd say if
+part dot parent and then i'd say if
+part dot parent and then i'd say if
+player then
+player then
+player then
+print player dot name there we go so if
+print player dot name there we go so if
+print player dot name there we go so if
+i were to run this
+i were to run this
+i were to run this
+it should say nothing because the region
+it should say nothing because the region
+it should say nothing because the region
+is not a player
+is not a player
+is not a player
+ignore these errors this is just some
+ignore these errors this is just some
+ignore these errors this is just some
+roblox stuff i think it has to do
+roblox stuff i think it has to do
+roblox stuff i think it has to do
+with loading some textures or whatever
+with loading some textures or whatever
+with loading some textures or whatever
+but when i go into my
+but when i go into my
+but when i go into my
+region you can see it detects me but
+region you can see it detects me but
+region you can see it detects me but
+since all of my body parts are in the
+since all of my body parts are in the
+since all of my body parts are in the
+region
+region
+region
+it detects me multiple times
+but that should not be a problem for
+but that should not be a problem for
+but that should not be a problem for
+most of your scripts
+most of your scripts
+most of your scripts
+so region 3s and roblox are very useful
+so region 3s and roblox are very useful
+so region 3s and roblox are very useful
+for detecting parts and detecting
+for detecting parts and detecting
+for detecting parts and detecting
+players but one of the biggest uses
+players but one of the biggest uses
+players but one of the biggest uses
+for our regions is making terrain
+for our regions is making terrain
+for our regions is making terrain
+and so let's do that first i'm going to
+and so let's do that first i'm going to
+and so let's do that first i'm going to
+comment out our infinite loop because we
+comment out our infinite loop because we
+comment out our infinite loop because we
+don't want that messing up our code
+don't want that messing up our code
+don't want that messing up our code
+and now i'm going to create our
+and now i'm going to create our
+and now i'm going to create our
+terrain and before you create your
+terrain and before you create your
+terrain and before you create your
+terrain you have to do
+terrain you have to do
+terrain you have to do
+region equals region expand
+region equals region expand
+region equals region expand
+to grid 4. so
+to grid 4. so
+to grid 4. so
+what this basically does is it aligns
+what this basically does is it aligns
+what this basically does is it aligns
+our region
+our region
+our region
+with the native voxel based terrain
+with the native voxel based terrain
+with the native voxel based terrain
+system and
+system and
+system and
+roblox so if you don't know a voxel
+roblox so if you don't know a voxel
+roblox so if you don't know a voxel
+is a basically a 3d pixel so a pixel is
+is a basically a 3d pixel so a pixel is
+is a basically a 3d pixel so a pixel is
+like you know any point on your screen
+like you know any point on your screen
+like you know any point on your screen
+a voxel is like a 3d pixel think of it
+a voxel is like a 3d pixel think of it
+a voxel is like a 3d pixel think of it
+as a with a
+as a with a
+as a with a
+like a part with a defined size
+like a part with a defined size
+like a part with a defined size
+that is like a cube so each voxel on
+that is like a cube so each voxel on
+that is like a cube so each voxel on
+roblox is
+roblox is
+roblox is
+four by four by four studs and it's
+four by four by four studs and it's
+four by four by four studs and it's
+used to generate terrain so when we
+used to generate terrain so when we
+used to generate terrain so when we
+ought to create terrain using our region
+ought to create terrain using our region
+ought to create terrain using our region
+it has to be aligned to this voxel grid
+it has to be aligned to this voxel grid
+it has to be aligned to this voxel grid
+and that's exactly what this function
+and that's exactly what this function
+and that's exactly what this function
+does so remember to use it
+does so remember to use it
+does so remember to use it
+and then making the terrain is pretty
+and then making the terrain is pretty
+and then making the terrain is pretty
+simple after that let's do
+simple after that let's do
+simple after that let's do
+game.workspace.terrain and then you do
+game.workspace.terrain and then you do
+game.workspace.terrain and then you do
+fill or region and it takes three
+fill or region and it takes three
+fill or region and it takes three
+parameters the region
+parameters the region
+parameters the region
+that you want to fill the resolution
+that you want to fill the resolution
+that you want to fill the resolution
+the resolution should always be for i
+the resolution should always be for i
+the resolution should always be for i
+don't know why it's a parameter but it
+don't know why it's a parameter but it
+don't know why it's a parameter but it
+just
+just
+just
+is so just always leave that to four and
+is so just always leave that to four and
+is so just always leave that to four and
+then you have to set the material
+then you have to set the material
+then you have to set the material
+enum dot material dot let's say grass
+enum dot material dot let's say grass
+enum dot material dot let's say grass
+there we go so if we were to run this
+there we go so if we were to run this
+there we go so if we were to run this
+you can see the textures take a little
+you can see the textures take a little
+you can see the textures take a little
+while to load in but our region is now
+while to load in but our region is now
+while to load in but our region is now
+filled
+filled
+filled
+with grass and you can see it's not
+with grass and you can see it's not
+with grass and you can see it's not
+necessarily
+necessarily
+necessarily
+conforming to our part our part is like
+conforming to our part our part is like
+conforming to our part our part is like
+in there
+in there
+in there
+because it has had to expand to the grid
+because it has had to expand to the grid
+because it has had to expand to the grid
+but that's how you generate terrain and
+but that's how you generate terrain and
+but that's how you generate terrain and
+you can do whatever
+you can do whatever
+you can do whatever
+material you want like i can do basalt
+material you want like i can do basalt
+material you want like i can do basalt
+let's say
+let's say
+let's say
+you have a nice stony look you can also
+you have a nice stony look you can also
+you have a nice stony look you can also
+notice how it generates differently
+notice how it generates differently
+notice how it generates differently
+that's pretty interesting
+that's pretty interesting
+that's pretty interesting
+but yeah so that's about it for this
+but yeah so that's about it for this
+but yeah so that's about it for this
+video i hope you guys
+video i hope you guys
+video i hope you guys
+enjoyed learning about region threes i
+enjoyed learning about region threes i
+enjoyed learning about region threes i
+think they're a very cool part of roblox
+think they're a very cool part of roblox
+think they're a very cool part of roblox
+and they're pretty useful i'm sorry this
+and they're pretty useful i'm sorry this
+and they're pretty useful i'm sorry this
+video took so long to make
+video took so long to make
+video took so long to make
+i've been working a lot on my pod racing
+i've been working a lot on my pod racing
+i've been working a lot on my pod racing
+game i'll have a video out on that very
+game i'll have a video out on that very
+game i'll have a video out on that very
+soon
+soon
+soon
+and that's been taking up most of my
+and that's been taking up most of my
+and that's been taking up most of my
+time but make sure to comment any of
+time but make sure to comment any of
+time but make sure to comment any of
+your questions
+your questions
+your questions
+and suggestions down below i think some
+and suggestions down below i think some
+and suggestions down below i think some
+people wanted to see
+people wanted to see
+people wanted to see
+me make some like music regions out of
+me make some like music regions out of
+me make some like music regions out of
+this i could definitely do that
+this i could definitely do that
+this i could definitely do that
+just put your feedback in the comments
+just put your feedback in the comments
+just put your feedback in the comments
+but other than that i will have my code
+but other than that i will have my code
+but other than that i will have my code
+in the description if you want that with
+in the description if you want that with
+in the description if you want that with
+a paste bin
+a paste bin
+a paste bin
+and make sure to like and subscribe if
+and make sure to like and subscribe if
+and make sure to like and subscribe if
+you enjoyed the video
+you enjoyed the video
+you enjoyed the video
+but i hope you guys have a nice day and
+goodbye
+[Music]
+[Music]
+[Music]
+you

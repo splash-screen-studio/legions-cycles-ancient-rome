@@ -1,0 +1,1315 @@
+have you ever wanted to make vehicles
+have you ever wanted to make vehicles
+have you ever wanted to make vehicles
+with perfect handling
+with perfect handling
+with perfect handling
+and velocity control or have you ever
+and velocity control or have you ever
+and velocity control or have you ever
+wondered about
+wondered about
+wondered about
+body positions and body velocities and
+body positions and body velocities and
+body positions and body velocities and
+how they work and how you can make your
+how they work and how you can make your
+how they work and how you can make your
+own custom versions
+own custom versions
+own custom versions
+that could fit your desires better
+that could fit your desires better
+that could fit your desires better
+well all this can be accomplished with
+well all this can be accomplished with
+well all this can be accomplished with
+pid
+pid
+pid
+control which stands for proportional
+control which stands for proportional
+control which stands for proportional
+integral
+integral
+integral
+derivative and i've implemented pid
+derivative and i've implemented pid
+derivative and i've implemented pid
+in roblox with my own custom module
+in roblox with my own custom module
+in roblox with my own custom module
+called
+called
+called
+row pid in this video i'll explain it
+row pid in this video i'll explain it
+row pid in this video i'll explain it
+and i'll show you how it works what you
+and i'll show you how it works what you
+and i'll show you how it works what you
+can do with it
+can do with it
+can do with it
+and of course the downloads and the
+and of course the downloads and the
+and of course the downloads and the
+github repository will be in the
+github repository will be in the
+github repository will be in the
+description
+description
+description
+so like and subscribe if you enjoy and
+so like and subscribe if you enjoy and
+so like and subscribe if you enjoy and
+make sure to join my discord server the
+make sure to join my discord server the
+make sure to join my discord server the
+link will be in the description
+link will be in the description
+link will be in the description
+but without further ado let's get
+but without further ado let's get
+but without further ado let's get
+started so i'm here at the row pid
+started so i'm here at the row pid
+started so i'm here at the row pid
+github repository which i will link in
+github repository which i will link in
+github repository which i will link in
+the description
+the description
+the description
+and i want to do a quick explanation of
+and i want to do a quick explanation of
+and i want to do a quick explanation of
+pid
+pid
+pid
+so pid is this little algorithm right
+so pid is this little algorithm right
+so pid is this little algorithm right
+here
+here
+here
+and you can see it has a bunch of like
+and you can see it has a bunch of like
+and you can see it has a bunch of like
+weird greek letters and a bunch of
+weird greek letters and a bunch of
+weird greek letters and a bunch of
+variables but all you have to know is it
+variables but all you have to know is it
+variables but all you have to know is it
+has three components the
+has three components the
+has three components the
+proportional integral and derivative
+proportional integral and derivative
+proportional integral and derivative
+part derivative
+part derivative
+part derivative
+is basically like the damping that's
+is basically like the damping that's
+is basically like the damping that's
+what i like to think of it of
+what i like to think of it of
+what i like to think of it of
+proportional is just like the force an
+proportional is just like the force an
+proportional is just like the force an
+integral just helps
+integral just helps
+integral just helps
+with the proportional that's a very
+with the proportional that's a very
+with the proportional that's a very
+basic
+basic
+basic
+understanding and i will link a youtube
+understanding and i will link a youtube
+understanding and i will link a youtube
+series that goes
+series that goes
+series that goes
+much more in depth than my quick
+much more in depth than my quick
+much more in depth than my quick
+explanation but that's the basic idea
+explanation but that's the basic idea
+explanation but that's the basic idea
+and it's a closed feedback loop meaning
+and it's a closed feedback loop meaning
+and it's a closed feedback loop meaning
+the result of this calculation is fed
+the result of this calculation is fed
+the result of this calculation is fed
+back into the algorithm
+back into the algorithm
+back into the algorithm
+to compute another result so it's aware
+to compute another result so it's aware
+to compute another result so it's aware
+of its surroundings
+of its surroundings
+of its surroundings
+so normal open feedback loop like in
+so normal open feedback loop like in
+so normal open feedback loop like in
+real life if a motor is set to turn at a
+real life if a motor is set to turn at a
+real life if a motor is set to turn at a
+specific speed
+specific speed
+specific speed
+it'll just turn that speed if something
+it'll just turn that speed if something
+it'll just turn that speed if something
+stops it it won't really understand but
+stops it it won't really understand but
+stops it it won't really understand but
+with pid
+with pid
+with pid
+it will and it will try to adjust
+it will and it will try to adjust
+it will and it will try to adjust
+accordingly
+accordingly
+accordingly
+but this algorithm does not work on its
+but this algorithm does not work on its
+but this algorithm does not work on its
+own there are
+own there are
+own there are
+three constants that you must adjust the
+three constants that you must adjust the
+three constants that you must adjust the
+kp the ki
+kp the ki
+kp the ki
+and the kd and these are called the
+and the kd and these are called the
+and the kd and these are called the
+gains
+gains
+gains
+and tuning the gains is probably the
+and tuning the gains is probably the
+and tuning the gains is probably the
+hardest part of pid in my opinion
+hardest part of pid in my opinion
+hardest part of pid in my opinion
+but luckily the module i've created
+but luckily the module i've created
+but luckily the module i've created
+helps with that
+helps with that
+helps with that
+and also one thing you want to note is
+and also one thing you want to note is
+and also one thing you want to note is
+that the
+that the
+that the
+some terminology the set point is the
+some terminology the set point is the
+some terminology the set point is the
+value you want to achieve so it's your
+value you want to achieve so it's your
+value you want to achieve so it's your
+goal your desired position
+goal your desired position
+goal your desired position
+your desired velocity your desired
+your desired velocity your desired
+your desired velocity your desired
+temperature or whatever
+temperature or whatever
+temperature or whatever
+and the process value is the number
+and the process value is the number
+and the process value is the number
+quantity
+quantity
+quantity
+read from the environment so this little
+read from the environment so this little
+read from the environment so this little
+line going down here
+line going down here
+line going down here
+it's kind of weird to see since i'm
+it's kind of weird to see since i'm
+it's kind of weird to see since i'm
+using github dark but
+using github dark but
+using github dark but
+it's fine and so real pid
+it's fine and so real pid
+it's fine and so real pid
+does all of this and it has a bunch of
+does all of this and it has a bunch of
+does all of this and it has a bunch of
+utility that helps
+utility that helps
+utility that helps
+as well and you may be wondering oh i've
+as well and you may be wondering oh i've
+as well and you may be wondering oh i've
+heard of this before
+heard of this before
+heard of this before
+error game framework has something very
+error game framework has something very
+error game framework has something very
+similar
+similar
+similar
+in this pid module but mine has a bunch
+in this pid module but mine has a bunch
+in this pid module but mine has a bunch
+of utility
+of utility
+of utility
+and it also also implements interval
+and it also also implements interval
+and it also also implements interval
+wind-up clamping which is basically when
+wind-up clamping which is basically when
+wind-up clamping which is basically when
+the integral
+the integral
+the integral
+just doesn't is being stopped
+just doesn't is being stopped
+just doesn't is being stopped
+it will start ramping up all the air
+it will start ramping up all the air
+it will start ramping up all the air
+and once that pressure is released it'll
+and once that pressure is released it'll
+and once that pressure is released it'll
+like fling out and it'll cause drastic
+like fling out and it'll cause drastic
+like fling out and it'll cause drastic
+changes
+changes
+changes
+again it's explained more in the youtube
+again it's explained more in the youtube
+again it's explained more in the youtube
+series
+series
+series
+but it's a really nice feature that
+but it's a really nice feature that
+but it's a really nice feature that
+prevents
+prevents
+prevents
+your systems from going crazy so here
+your systems from going crazy so here
+your systems from going crazy so here
+i will show you a few examples so i want
+i will show you a few examples so i want
+i will show you a few examples so i want
+to make a quick example let's say you
+to make a quick example let's say you
+to make a quick example let's say you
+want a ball
+want a ball
+want a ball
+to roll at a certain velocity and i know
+to roll at a certain velocity and i know
+to roll at a certain velocity and i know
+this can be achieved with a body
+this can be achieved with a body
+this can be achieved with a body
+velocity
+velocity
+velocity
+but pid gives you a little bit more
+but pid gives you a little bit more
+but pid gives you a little bit more
+control
+control
+control
+over what's happening so the first thing
+over what's happening so the first thing
+over what's happening so the first thing
+i'm going to do
+i'm going to do
+i'm going to do
+is create a ball or a sphere
+is create a ball or a sphere
+is create a ball or a sphere
+and i'm going to add a vector force to
+and i'm going to add a vector force to
+and i'm going to add a vector force to
+it just to get it
+it just to get it
+it just to get it
+something to move and really i want the
+something to move and really i want the
+something to move and really i want the
+attachment to be at the very center of
+attachment to be at the very center of
+attachment to be at the very center of
+the part
+the part
+the part
+so i'm going to make the orientation
+so i'm going to make the orientation
+so i'm going to make the orientation
+zero zero zero make the position
+zero zero zero make the position
+zero zero zero make the position
+also zero and that
+also zero and that
+also zero and that
+should be good
+should be good
+should be good
+and also i want to change the vector
+and also i want to change the vector
+and also i want to change the vector
+force from relative to
+force from relative to
+force from relative to
+attachment zero to relative to the world
+attachment zero to relative to the world
+attachment zero to relative to the world
+then i want to add the row pid module so
+then i want to add the row pid module so
+then i want to add the row pid module so
+i'm going to
+i'm going to
+i'm going to
+take it from the toolbox link will be in
+take it from the toolbox link will be in
+take it from the toolbox link will be in
+the description for this you can also
+the description for this you can also
+the description for this you can also
+sync this in
+sync this in
+sync this in
+using rojo and i'm going to take the
+using rojo and i'm going to take the
+using rojo and i'm going to take the
+rope
+rope
+rope
+id shove it into replicated storage then
+id shove it into replicated storage then
+id shove it into replicated storage then
+in my part
+in my part
+in my part
+i can create a script
+and i want to get let me zoom in i want
+and i want to get let me zoom in i want
+and i want to get let me zoom in i want
+to get row pid so i'm going to say row
+to get row pid so i'm going to say row
+to get row pid so i'm going to say row
+pid
+pid
+pid
+equals require
+equals require
+equals require
+game get service
+game get service
+game get service
+replicated storage dot row pid
+replicated storage dot row pid
+replicated storage dot row pid
+there we go and then we can also get the
+there we go and then we can also get the
+there we go and then we can also get the
+part which will be equal to
+part which will be equal to
+part which will be equal to
+script dot parent and then
+script dot parent and then
+script dot parent and then
+i want to get the vector for so i'm just
+i want to get the vector for so i'm just
+i want to get the vector for so i'm just
+say vf equals part dot
+say vf equals part dot
+say vf equals part dot
+vector force and then
+vector force and then
+vector force and then
+now we can actually create our pid
+now we can actually create our pid
+now we can actually create our pid
+controller so we can say local
+controller so we can say local
+controller so we can say local
+controller
+controller
+controller
+equals row pid pid.new and
+equals row pid pid.new and
+equals row pid pid.new and
+this function constructor takes
+this function constructor takes
+this function constructor takes
+five parameters the first three are the
+five parameters the first three are the
+five parameters the first three are the
+gains so the kp
+gains so the kp
+gains so the kp
+ki kd in that order and the last and
+ki kd in that order and the last and
+ki kd in that order and the last and
+there's two extra that are optional
+there's two extra that are optional
+there's two extra that are optional
+the min and the max because sometimes in
+the min and the max because sometimes in
+the min and the max because sometimes in
+game development you need to restrict
+game development you need to restrict
+game development you need to restrict
+the amount of force
+the amount of force
+the amount of force
+that a part can exert
+that a part can exert
+that a part can exert
+so for the gains i'm just going to put a
+so for the gains i'm just going to put a
+so for the gains i'm just going to put a
+bunch of test gains we'll tune it later
+bunch of test gains we'll tune it later
+bunch of test gains we'll tune it later
+so i'm just going to say
+so i'm just going to say
+so i'm just going to say
+actually we'll do like three zero point
+actually we'll do like three zero point
+actually we'll do like three zero point
+five
+five
+five
+and like one and then we really don't
+and like one and then we really don't
+and like one and then we really don't
+need a min and match
+need a min and match
+need a min and match
+max it's going to be going slow enough
+max it's going to be going slow enough
+max it's going to be going slow enough
+and while we're here we can actually
+and while we're here we can actually
+and while we're here we can actually
+define or goal
+define or goal
+define or goal
+velocity whoops velocity and i'll set
+velocity whoops velocity and i'll set
+velocity whoops velocity and i'll set
+that to
+that to
+that to
+two studs per second let's see
+two studs per second let's see
+two studs per second let's see
+studs per actually won't only be two
+studs per actually won't only be two
+studs per actually won't only be two
+such per second
+such per second
+such per second
+let's just leave that at two for now and
+let's just leave that at two for now and
+let's just leave that at two for now and
+then down here
+then down here
+then down here
+we want to say game get service
+we want to say game get service
+we want to say game get service
+run service dot stepped
+connect function et
+connect function et
+connect function et
+dt which is elapsed time and delta time
+dt which is elapsed time and delta time
+dt which is elapsed time and delta time
+and the reason we're making this
+and the reason we're making this
+and the reason we're making this
+event to run every single frame is be
+event to run every single frame is be
+event to run every single frame is be
+the controller
+the controller
+the controller
+is meant to be as lightweight as
+is meant to be as lightweight as
+is meant to be as lightweight as
+possible so it only
+possible so it only
+possible so it only
+updates when you update it and the best
+updates when you update it and the best
+updates when you update it and the best
+way to update your controller is every
+way to update your controller is every
+way to update your controller is every
+single frame so it has the most accurate
+single frame so it has the most accurate
+single frame so it has the most accurate
+information and can
+information and can
+information and can
+provide the most accurate results i'm
+provide the most accurate results i'm
+provide the most accurate results i'm
+pretty sure you can test this
+pretty sure you can test this
+pretty sure you can test this
+with a loop it would be a lot slower and
+with a loop it would be a lot slower and
+with a loop it would be a lot slower and
+a lot more clunky
+a lot more clunky
+a lot more clunky
+but i mean the options there
+but i mean the options there
+but i mean the options there
+but for now we're going to stick with
+but for now we're going to stick with
+but for now we're going to stick with
+this event structure
+this event structure
+this event structure
+so the way we get our output from our
+so the way we get our output from our
+so the way we get our output from our
+controller is just by saying
+controller is just by saying
+controller is just by saying
+local output equals controller calculate
+local output equals controller calculate
+local output equals controller calculate
+and then for the calculation we have to
+and then for the calculation we have to
+and then for the calculation we have to
+put in a
+put in a
+put in a
+three variables the first one is the set
+three variables the first one is the set
+three variables the first one is the set
+point so our goal
+point so our goal
+point so our goal
+i'm just going to say goal velocity the
+i'm just going to say goal velocity the
+i'm just going to say goal velocity the
+next is our
+next is our
+next is our
+process value which i'm going to say as
+process value which i'm going to say as
+process value which i'm going to say as
+the part
+the part
+the part
+dot assembly
+dot assembly
+dot assembly
+linear velocity actually let me check
+linear velocity actually let me check
+linear velocity actually let me check
+what direction it is
+what direction it is
+what direction it is
+so it's facing x so we have to get the
+so it's facing x so we have to get the
+so it's facing x so we have to get the
+linear velocity dot x and then
+linear velocity dot x and then
+linear velocity dot x and then
+for our delta time make sure to put in
+for our delta time make sure to put in
+for our delta time make sure to put in
+dt so that's the three parameters you
+dt so that's the three parameters you
+dt so that's the three parameters you
+have the set point
+have the set point
+have the set point
+the process value and then delta time do
+the process value and then delta time do
+the process value and then delta time do
+not forget delta time whenever i make
+not forget delta time whenever i make
+not forget delta time whenever i make
+my controllers i always forget to put
+my controllers i always forget to put
+my controllers i always forget to put
+delta time but it will
+delta time but it will
+delta time but it will
+air if you don't have that because it's
+air if you don't have that because it's
+air if you don't have that because it's
+essential to getting the output correct
+essential to getting the output correct
+essential to getting the output correct
+and then after that we just have to
+and then after that we just have to
+and then after that we just have to
+apply our force so we can say vf.force
+apply our force so we can say vf.force
+apply our force so we can say vf.force
+equals vector3 dot new
+equals vector3 dot new
+equals vector3 dot new
+and we'll send in the output 0 and zero
+and we'll send in the output 0 and zero
+and we'll send in the output 0 and zero
+so oh i spelled it wrong whoops
+so oh i spelled it wrong whoops
+so oh i spelled it wrong whoops
+so what this should do is it'll update
+so what this should do is it'll update
+so what this should do is it'll update
+our
+our
+our
+velocity given the current velocity and
+velocity given the current velocity and
+velocity given the current velocity and
+our goal velocity
+our goal velocity
+our goal velocity
+and we'll put that back into the fourth
+and we'll put that back into the fourth
+and we'll put that back into the fourth
+and then it'll like reciprocate it'll go
+and then it'll like reciprocate it'll go
+and then it'll like reciprocate it'll go
+back and forth
+back and forth
+back and forth
+so now we can test it out to see if
+so now we can test it out to see if
+so now we can test it out to see if
+anything is messed up
+and you can see it starts rolling a
+and you can see it starts rolling a
+and you can see it starts rolling a
+little bit now one thing i've noticed
+little bit now one thing i've noticed
+little bit now one thing i've noticed
+when dealing with this sort of example
+when dealing with this sort of example
+when dealing with this sort of example
+is most of the time it's better just to
+is most of the time it's better just to
+is most of the time it's better just to
+use a p
+use a p
+use a p
+controller so the way you would only
+controller so the way you would only
+controller so the way you would only
+isolate
+isolate
+isolate
+one single gain is by setting the other
+one single gain is by setting the other
+one single gain is by setting the other
+gains to zero
+gains to zero
+gains to zero
+so this is called a p controller because
+so this is called a p controller because
+so this is called a p controller because
+p is set to three
+p is set to three
+p is set to three
+i is zero and d is zero so it's just a
+i is zero and d is zero so it's just a
+i is zero and d is zero so it's just a
+basic p controller which is the simplest
+basic p controller which is the simplest
+basic p controller which is the simplest
+type of controller
+type of controller
+type of controller
+but for an application like this it
+but for an application like this it
+but for an application like this it
+should work
+should work
+should work
+so let's run this again
+let's get rid of this and you can see it
+let's get rid of this and you can see it
+let's get rid of this and you can see it
+goes up to speed and it rolls
+goes up to speed and it rolls
+goes up to speed and it rolls
+at approximately two it's getting up
+at approximately two it's getting up
+at approximately two it's getting up
+there right now it i guess it's taking a
+there right now it i guess it's taking a
+there right now it i guess it's taking a
+little time to
+little time to
+little time to
+get up but you are at like 1.6 so if i
+get up but you are at like 1.6 so if i
+get up but you are at like 1.6 so if i
+were to
+were to
+were to
+toggle the gains a little bit you can
+toggle the gains a little bit you can
+toggle the gains a little bit you can
+see that happen
+see that happen
+see that happen
+and speaking of that we can actually
+and speaking of that we can actually
+and speaking of that we can actually
+test it out with the tuner so i'm gonna
+test it out with the tuner so i'm gonna
+test it out with the tuner so i'm gonna
+say local tuner
+say local tuner
+say local tuner
+equals require row pid
+equals require row pid
+equals require row pid
+dot util dot tuner and this tuner is
+dot util dot tuner and this tuner is
+dot util dot tuner and this tuner is
+meant to
+meant to
+meant to
+tune our gains of our pid controller and
+tune our gains of our pid controller and
+tune our gains of our pid controller and
+the way you do that
+the way you do that
+the way you do that
+is by saying local tuner equals
+is by saying local tuner equals
+is by saying local tuner equals
+tuner.new
+tuner.new
+tuner.new
+what's the name of our tuner we're going
+what's the name of our tuner we're going
+what's the name of our tuner we're going
+to say the name is
+to say the name is
+to say the name is
+ball tuner and then the controller we
+ball tuner and then the controller we
+ball tuner and then the controller we
+want to pass in as our controller
+want to pass in as our controller
+want to pass in as our controller
+and then there's an optional third
+and then there's an optional third
+and then there's an optional third
+argument which is the parent
+argument which is the parent
+argument which is the parent
+but it defaults to the workspace so i'm
+but it defaults to the workspace so i'm
+but it defaults to the workspace so i'm
+going to leave it as the workspace and
+going to leave it as the workspace and
+going to leave it as the workspace and
+what this tuner.new does
+what this tuner.new does
+what this tuner.new does
+is it creates a new folder inside of the
+is it creates a new folder inside of the
+is it creates a new folder inside of the
+workspace
+workspace
+workspace
+with attributes assigned to each of the
+with attributes assigned to each of the
+with attributes assigned to each of the
+gains of
+gains of
+gains of
+our controller so if i were to run this
+our controller so if i were to run this
+our controller so if i were to run this
+let me just get rid of that again you
+let me just get rid of that again you
+let me just get rid of that again you
+can see there's a folder in my workspace
+can see there's a folder in my workspace
+can see there's a folder in my workspace
+named the ball tuna
+named the ball tuna
+named the ball tuna
+and on the right side you can see the
+and on the right side you can see the
+and on the right side you can see the
+attributes of our kdki and kp
+attributes of our kdki and kp
+attributes of our kdki and kp
+and our max and our in so if i said the
+and our max and our in so if i said the
+and our max and our in so if i said the
+kp to something like 10
+kp to something like 10
+kp to something like 10
+it should start going a little faster
+and you can see it's sort of getting
+and you can see it's sort of getting
+and you can see it's sort of getting
+there and like we can also set it to
+there and like we can also set it to
+there and like we can also set it to
+something like 100
+and now it's actually going but if we
+and now it's actually going but if we
+and now it's actually going but if we
+were to say set the
+were to say set the
+were to say set the
+kd to like five it would slow it down a
+kd to like five it would slow it down a
+kd to like five it would slow it down a
+lot
+lot
+lot
+which that is not ideal actually right
+which that is not ideal actually right
+which that is not ideal actually right
+now it's going a good speed that's
+now it's going a good speed that's
+now it's going a good speed that's
+because it like had some time to ramp up
+because it like had some time to ramp up
+because it like had some time to ramp up
+but sometimes it just wouldn't do that
+but sometimes it just wouldn't do that
+but sometimes it just wouldn't do that
+and like if he said the k
+and like if he said the k
+and like if he said the k
+i to a thousand you can see stuff starts
+i to a thousand you can see stuff starts
+i to a thousand you can see stuff starts
+happening really weirdly
+happening really weirdly
+happening really weirdly
+doesn't really work that well but i
+doesn't really work that well but i
+doesn't really work that well but i
+found that
+found that
+found that
+setting only the kp works the best in
+setting only the kp works the best in
+setting only the kp works the best in
+the situation
+the situation
+the situation
+now one limitation of this tuner is that
+now one limitation of this tuner is that
+now one limitation of this tuner is that
+it only
+it only
+it only
+the changes only persist during a run
+the changes only persist during a run
+the changes only persist during a run
+time so once you
+time so once you
+time so once you
+close out of it it's gone and so you
+close out of it it's gone and so you
+close out of it it's gone and so you
+just have to remember
+just have to remember
+just have to remember
+all of these gains that you tuned in and
+all of these gains that you tuned in and
+all of these gains that you tuned in and
+just set them up
+just set them up
+just set them up
+in your constructor now i could create a
+in your constructor now i could create a
+in your constructor now i could create a
+plug-in to do this for me but
+plug-in to do this for me but
+plug-in to do this for me but
+this module is already big enough i just
+this module is already big enough i just
+this module is already big enough i just
+want to get it out there maybe in the
+want to get it out there maybe in the
+want to get it out there maybe in the
+future i could do that
+future i could do that
+future i could do that
+if there is enough demand but that is a
+if there is enough demand but that is a
+if there is enough demand but that is a
+most basic example
+most basic example
+most basic example
+and code for this similar to what i've
+and code for this similar to what i've
+and code for this similar to what i've
+done here
+done here
+done here
+will be in the repository under the
+will be in the repository under the
+will be in the repository under the
+examples so let me just bring it up
+examples so let me just bring it up
+examples so let me just bring it up
+right now
+right now
+right now
+you can see there's an examples folder
+you can see there's an examples folder
+you can see there's an examples folder
+and you have a ton of these
+and you have a ton of these
+and you have a ton of these
+we just did the velocity and it has some
+we just did the velocity and it has some
+we just did the velocity and it has some
+basic stuff
+basic stuff
+basic stuff
+here so along with the one i just showed
+here so along with the one i just showed
+here so along with the one i just showed
+you i also created two
+you i also created two
+you i also created two
+others this is the one that we did up
+others this is the one that we did up
+others this is the one that we did up
+here i also made a gui
+here i also made a gui
+here i also made a gui
+that follows your mouse let me zoom in
+that follows your mouse let me zoom in
+that follows your mouse let me zoom in
+i know the resolution kind of sucks but
+i know the resolution kind of sucks but
+i know the resolution kind of sucks but
+you can see the gooby just kind of
+you can see the gooby just kind of
+you can see the gooby just kind of
+follows your mouse
+follows your mouse
+follows your mouse
+and this gives you some dynamic
+and this gives you some dynamic
+and this gives you some dynamic
+animations if you don't want to use just
+animations if you don't want to use just
+animations if you don't want to use just
+tweens
+tweens
+tweens
+and then lastly i created the equivalent
+and then lastly i created the equivalent
+and then lastly i created the equivalent
+of a
+of a
+of a
+body position and it kind of looks like
+body position and it kind of looks like
+body position and it kind of looks like
+it's
+it's
+it's
+welded to the part just like the big
+welded to the part just like the big
+welded to the part just like the big
+outside ball but
+outside ball but
+outside ball but
+it's just following it very well i don't
+it's just following it very well i don't
+it's just following it very well i don't
+know how i got the gains that good i'm
+know how i got the gains that good i'm
+know how i got the gains that good i'm
+kind of crap at tuning
+kind of crap at tuning
+kind of crap at tuning
+my ph pid gains but you know it works
+my ph pid gains but you know it works
+my ph pid gains but you know it works
+pretty well
+pretty well
+pretty well
+and the cool thing about doing something
+and the cool thing about doing something
+and the cool thing about doing something
+like this is the normal body position in
+like this is the normal body position in
+like this is the normal body position in
+roblox
+roblox
+roblox
+does not have an eye component but
+does not have an eye component but
+does not have an eye component but
+using my system you can add that if you
+using my system you can add that if you
+using my system you can add that if you
+so desire and one thing i've really
+so desire and one thing i've really
+so desire and one thing i've really
+noticed about using something like this
+noticed about using something like this
+noticed about using something like this
+is very good for
+is very good for
+is very good for
+stuff like the submarine i made in my
+stuff like the submarine i made in my
+stuff like the submarine i made in my
+previous video
+previous video
+previous video
+and i'll link that right now and the
+and i'll link that right now and the
+and i'll link that right now and the
+submarine uses
+submarine uses
+submarine uses
+pid for the pitch the yaw
+pid for the pitch the yaw
+pid for the pitch the yaw
+and the roll as well as the velocity in
+and the roll as well as the velocity in
+and the roll as well as the velocity in
+like my second inversion
+like my second inversion
+like my second inversion
+and that allows you to control the
+and that allows you to control the
+and that allows you to control the
+handling almost perfectly
+handling almost perfectly
+handling almost perfectly
+depending on how you tune it it gives
+depending on how you tune it it gives
+depending on how you tune it it gives
+you a lot more control than a body gyro
+you a lot more control than a body gyro
+you a lot more control than a body gyro
+or a like any other velocity or
+or a like any other velocity or
+or a like any other velocity or
+something like that
+something like that
+something like that
+and in this repository you can also see
+and in this repository you can also see
+and in this repository you can also see
+the installation the
+the installation the
+the installation the
+quick start guide and all the api if you
+quick start guide and all the api if you
+quick start guide and all the api if you
+guys want to see it
+guys want to see it
+guys want to see it
+also one thing to note i forgot to
+also one thing to note i forgot to
+also one thing to note i forgot to
+mention is there is a few
+mention is there is a few
+mention is there is a few
+helper modules along with the tuner
+helper modules along with the tuner
+helper modules along with the tuner
+specifically vector 2 and vector 3
+specifically vector 2 and vector 3
+specifically vector 2 and vector 3
+and these just create controllers with
+and these just create controllers with
+and these just create controllers with
+three controllers inside of them so
+three controllers inside of them so
+three controllers inside of them so
+normally you're not just going to deal
+normally you're not just going to deal
+normally you're not just going to deal
+with normal numbers so this will create
+with normal numbers so this will create
+with normal numbers so this will create
+a
+a
+a
+three controllers but instead of
+three controllers but instead of
+three controllers but instead of
+only doing like one like making
+only doing like one like making
+only doing like one like making
+different gains it keeps the gains the
+different gains it keeps the gains the
+different gains it keeps the gains the
+same and it also works
+same and it also works
+same and it also works
+with the tuner and you can see an
+with the tuner and you can see an
+with the tuner and you can see an
+example of that in
+example of that in
+example of that in
+the ball example which is a last example
+the ball example which is a last example
+the ball example which is a last example
+and all these scripts are very short
+and all these scripts are very short
+and all these scripts are very short
+which shows you how simple it is
+which shows you how simple it is
+which shows you how simple it is
+to work with this and so overall this
+to work with this and so overall this
+to work with this and so overall this
+was a great
+was a great
+was a great
+project to work on i initially tried it
+project to work on i initially tried it
+project to work on i initially tried it
+just to get better at pid because at my
+just to get better at pid because at my
+just to get better at pid because at my
+school
+school
+school
+in my robotics club that's what we're
+in my robotics club that's what we're
+in my robotics club that's what we're
+starting to work on and i needed to
+starting to work on and i needed to
+starting to work on and i needed to
+figure it out
+figure it out
+figure it out
+and it's also gave me an opportunity to
+and it's also gave me an opportunity to
+and it's also gave me an opportunity to
+work with continuous integration
+work with continuous integration
+work with continuous integration
+using github actions you can see my
+using github actions you can see my
+using github actions you can see my
+little script here
+little script here
+little script here
+and also using remodel which is a tool
+and also using remodel which is a tool
+and also using remodel which is a tool
+like
+like
+like
+rojo and it allows you to automatically
+rojo and it allows you to automatically
+rojo and it allows you to automatically
+publish your model so when i commit
+publish your model so when i commit
+publish your model so when i commit
+to my github repository it will
+to my github repository it will
+to my github repository it will
+automatically publish the model to
+automatically publish the model to
+automatically publish the model to
+roblox
+roblox
+roblox
+and release a release in
+and release a release in
+and release a release in
+the repository itself which is
+the repository itself which is
+the repository itself which is
+absolutely wonderful it was really fun
+absolutely wonderful it was really fun
+absolutely wonderful it was really fun
+to use
+to use
+to use
+and i might make tutorials on all of
+and i might make tutorials on all of
+and i might make tutorials on all of
+these tools
+these tools
+these tools
+in the future but other than that
+in the future but other than that
+in the future but other than that
+i hope you like and subscribe if you
+i hope you like and subscribe if you
+i hope you like and subscribe if you
+enjoyed this video
+enjoyed this video
+enjoyed this video
+comment any questions or suggestions
+comment any questions or suggestions
+comment any questions or suggestions
+down below keep in mind i will have
+down below keep in mind i will have
+down below keep in mind i will have
+all of the necessary links down in the
+all of the necessary links down in the
+all of the necessary links down in the
+description
+description
+description
+and i hope you have a nice day and
+and i hope you have a nice day and
+and i hope you have a nice day and
+goodbye
+goodbye
+goodbye
+[Music]
+[Music]
+[Music]
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+[Music]
+you

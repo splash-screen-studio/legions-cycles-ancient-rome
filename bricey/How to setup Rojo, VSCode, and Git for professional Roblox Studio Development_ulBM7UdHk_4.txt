@@ -1,0 +1,1199 @@
+rojo or rojo depending on how you want
+rojo or rojo depending on how you want
+rojo or rojo depending on how you want
+to pronounce it
+to pronounce it
+to pronounce it
+is a tool that allows you to sync things
+is a tool that allows you to sync things
+is a tool that allows you to sync things
+from your file system such as scripts
+from your file system such as scripts
+from your file system such as scripts
+or text files into roblox studio
+or text files into roblox studio
+or text files into roblox studio
+as instances and this is super useful
+as instances and this is super useful
+as instances and this is super useful
+because it allows you to
+because it allows you to
+because it allows you to
+get access to professional tooling such
+get access to professional tooling such
+get access to professional tooling such
+as git
+as git
+as git
+and visual studio code with all the
+and visual studio code with all the
+and visual studio code with all the
+extensions that come with it which are
+extensions that come with it which are
+extensions that come with it which are
+all really really nice
+all really really nice
+all really really nice
+the one big problem is that the
+the one big problem is that the
+the one big problem is that the
+installation can
+installation can
+installation can
+be quite tedious and keyword is can
+be quite tedious and keyword is can
+be quite tedious and keyword is can
+because in this video i'll show you the
+because in this video i'll show you the
+because in this video i'll show you the
+simplest way to get ro rojo
+simplest way to get ro rojo
+simplest way to get ro rojo
+and visual studio code and get up and
+and visual studio code and get up and
+and visual studio code and get up and
+running with as little command line
+running with as little command line
+running with as little command line
+usage as possible because the command
+usage as possible because the command
+usage as possible because the command
+line it's finicky
+line it's finicky
+line it's finicky
+it's kind of foreign it's kind of scary
+it's kind of foreign it's kind of scary
+it's kind of foreign it's kind of scary
+and really you don't need to use it
+and really you don't need to use it
+and really you don't need to use it
+so if you enjoy this video make sure to
+so if you enjoy this video make sure to
+so if you enjoy this video make sure to
+like and subscribe
+like and subscribe
+like and subscribe
+and make sure to join my discord server
+and make sure to join my discord server
+and make sure to join my discord server
+where we talk about
+where we talk about
+where we talk about
+roblox and scripting and everything in
+roblox and scripting and everything in
+roblox and scripting and everything in
+between links are in the description
+between links are in the description
+between links are in the description
+so the first thing we're going to
+so the first thing we're going to
+so the first thing we're going to
+install is git so in summary git
+install is git so in summary git
+install is git so in summary git
+is just basically a tool that allows you
+is just basically a tool that allows you
+is just basically a tool that allows you
+to manage your code
+to manage your code
+to manage your code
+and back it up on the cloud and allow
+and back it up on the cloud and allow
+and back it up on the cloud and allow
+you to revert to previous versions
+you to revert to previous versions
+you to revert to previous versions
+if something goes wrong or if you just
+if something goes wrong or if you just
+if something goes wrong or if you just
+want to check it out and it just saves
+want to check it out and it just saves
+want to check it out and it just saves
+it it's really nice because
+it it's really nice because
+it it's really nice because
+you can have different branches so like
+you can have different branches so like
+you can have different branches so like
+a production branch where
+a production branch where
+a production branch where
+the code released to the public goes and
+the code released to the public goes and
+the code released to the public goes and
+you could have like an alpha and a beta
+you could have like an alpha and a beta
+you could have like an alpha and a beta
+branch
+branch
+branch
+which allow you to test code like
+which allow you to test code like
+which allow you to test code like
+provided to other people without
+provided to other people without
+provided to other people without
+screwing up
+screwing up
+screwing up
+your main build there's a lot better
+your main build there's a lot better
+your main build there's a lot better
+videos on youtube
+videos on youtube
+videos on youtube
+that explain git so i'll link one right
+that explain git so i'll link one right
+that explain git so i'll link one right
+now if you want to check it out and the
+now if you want to check it out and the
+now if you want to check it out and the
+installation
+installation
+installation
+is quite straightforward so just go to
+is quite straightforward so just go to
+is quite straightforward so just go to
+get scm.com downloads
+get scm.com downloads
+get scm.com downloads
+you want to just download for windows
+you want to just download for windows
+you want to just download for windows
+and then follow the installer i assume
+and then follow the installer i assume
+and then follow the installer i assume
+you guys can follow the installer but
+you guys can follow the installer but
+you guys can follow the installer but
+i'll just go through it as well
+i'll just go through it as well
+i'll just go through it as well
+here we go get whatever all the defaults
+here we go get whatever all the defaults
+here we go get whatever all the defaults
+should be just fine for you
+so git in essence is a command line tool
+so git in essence is a command line tool
+so git in essence is a command line tool
+and while the command line is very
+and while the command line is very
+and while the command line is very
+powerful it's also
+powerful it's also
+powerful it's also
+hard to use and not very intuitive
+hard to use and not very intuitive
+hard to use and not very intuitive
+luckily there's a solution
+luckily there's a solution
+luckily there's a solution
+and that's in the form of github desktop
+and that's in the form of github desktop
+and that's in the form of github desktop
+so github
+so github
+so github
+desktop like is built on top of git by
+desktop like is built on top of git by
+desktop like is built on top of git by
+github which is like a cloud hosting
+github which is like a cloud hosting
+github which is like a cloud hosting
+website for git and it allows you to
+website for git and it allows you to
+website for git and it allows you to
+backup your code to the cloud
+backup your code to the cloud
+backup your code to the cloud
+it gives you a nice interface to do
+it gives you a nice interface to do
+it gives you a nice interface to do
+stuff with
+stuff with
+stuff with
+git so it has all the power of git with
+git so it has all the power of git with
+git so it has all the power of git with
+all the usability so in order to
+all the usability so in order to
+all the usability so in order to
+download github desktop
+download github desktop
+download github desktop
+you simply go to desktop.github.com
+you simply go to desktop.github.com
+you simply go to desktop.github.com
+download and then i'll just install it
+download and then i'll just install it
+download and then i'll just install it
+and then once it's done downloading you
+and then once it's done downloading you
+and then once it's done downloading you
+can open it
+can open it
+can open it
+and it will install and it has installed
+and it will install and it has installed
+and it will install and it has installed
+so one thing you want to notice is i've
+so one thing you want to notice is i've
+so one thing you want to notice is i've
+already
+already
+already
+installed github desktop beforehand
+installed github desktop beforehand
+installed github desktop beforehand
+and i'm signed into my github account so
+and i'm signed into my github account so
+and i'm signed into my github account so
+what you want to do
+what you want to do
+what you want to do
+is go to file options
+is go to file options
+is go to file options
+accounts and in your github.com
+accounts and in your github.com
+accounts and in your github.com
+you want to create a github account and
+you want to create a github account and
+you want to create a github account and
+sign into it so just go to github.com
+sign into it so just go to github.com
+sign into it so just go to github.com
+create an account there
+create an account there
+create an account there
+sign in on github desktop it'll just
+sign in on github desktop it'll just
+sign in on github desktop it'll just
+make you sign in on your browser
+make you sign in on your browser
+make you sign in on your browser
+and you should be good to go you see i
+and you should be good to go you see i
+and you should be good to go you see i
+already have some stuff here
+already have some stuff here
+already have some stuff here
+you don't have to worry about this this
+you don't have to worry about this this
+you don't have to worry about this this
+is just an existing repository
+is just an existing repository
+is just an existing repository
+now we need to get all of this stuff
+now we need to get all of this stuff
+now we need to get all of this stuff
+first
+first
+first
+because rojo uses git
+because rojo uses git
+because rojo uses git
+when it initializes a project and it
+when it initializes a project and it
+when it initializes a project and it
+just makes it easier that way you don't
+just makes it easier that way you don't
+just makes it easier that way you don't
+have to initialize
+have to initialize
+have to initialize
+a repository which stores all of your
+a repository which stores all of your
+a repository which stores all of your
+code
+code
+code
+by yourself so now we have our
+by yourself so now we have our
+by yourself so now we have our
+version control software down git
+version control software down git
+version control software down git
+and github desktop both are very good
+and github desktop both are very good
+and github desktop both are very good
+tools and in combination they're great
+tools and in combination they're great
+tools and in combination they're great
+now let's get our code editor and for
+now let's get our code editor and for
+now let's get our code editor and for
+that
+that
+that
+i'll be using visual studio code which
+i'll be using visual studio code which
+i'll be using visual studio code which
+is a glorified text editor
+is a glorified text editor
+is a glorified text editor
+made by microsoft it's for all platforms
+made by microsoft it's for all platforms
+made by microsoft it's for all platforms
+super super nice it's my favorite
+super super nice it's my favorite
+super super nice it's my favorite
+tech code editor for sure and it's very
+tech code editor for sure and it's very
+tech code editor for sure and it's very
+versatile very nice so
+versatile very nice so
+versatile very nice so
+you want to download that same thing you
+you want to download that same thing you
+you want to download that same thing you
+have a getting started guide
+have a getting started guide
+have a getting started guide
+conveniently over here
+it's very lightweight as well very tiny
+and then you just want to go through
+and then you just want to go through
+and then you just want to go through
+all of the installation
+all of the installation
+all of the installation
+so once the installation is done you
+so once the installation is done you
+so once the installation is done you
+should be able to boot it up
+should be able to boot it up
+should be able to boot it up
+i'm just going to go to visual studio
+i'm just going to go to visual studio
+i'm just going to go to visual studio
+code over here
+code over here
+code over here
+let me just get rid of that so here is
+let me just get rid of that so here is
+let me just get rid of that so here is
+visual studio
+visual studio
+visual studio
+code it's kind of blank right now
+code it's kind of blank right now
+code it's kind of blank right now
+there's nothing in it because you have
+there's nothing in it because you have
+there's nothing in it because you have
+to put
+to put
+to put
+files in it you have to give it things
+files in it you have to give it things
+files in it you have to give it things
+to work
+to work
+to work
+so now that visual studio code has been
+so now that visual studio code has been
+so now that visual studio code has been
+installed we can
+installed we can
+installed we can
+install the rojo plug-in which gives us
+install the rojo plug-in which gives us
+install the rojo plug-in which gives us
+access to the roblox studio plugin
+access to the roblox studio plugin
+access to the roblox studio plugin
+as well as the file system management as
+as well as the file system management as
+as well as the file system management as
+i spoke of before so in the left hand
+i spoke of before so in the left hand
+i spoke of before so in the left hand
+bar
+bar
+bar
+go down to this little block icon which
+go down to this little block icon which
+go down to this little block icon which
+is the extensions or you can do control
+is the extensions or you can do control
+is the extensions or you can do control
+shift
+shift
+shift
+x and you can see i have a ton of
+x and you can see i have a ton of
+x and you can see i have a ton of
+extension installed that's for
+extension installed that's for
+extension installed that's for
+the different languages that i use like
+the different languages that i use like
+the different languages that i use like
+c sharp javascript
+c sharp javascript
+c sharp javascript
+whatever it's really nice i can have all
+whatever it's really nice i can have all
+whatever it's really nice i can have all
+of them in the same place
+of them in the same place
+of them in the same place
+i also have some cosmetic themes
+i also have some cosmetic themes
+i also have some cosmetic themes
+installed which is pretty nice
+installed which is pretty nice
+installed which is pretty nice
+you'll probably only have intellicode or
+you'll probably only have intellicode or
+you'll probably only have intellicode or
+it'll ask you to install intellicode
+it'll ask you to install intellicode
+it'll ask you to install intellicode
+that's also super nice
+that's also super nice
+that's also super nice
+it just gives you like ai assisted
+it just gives you like ai assisted
+it just gives you like ai assisted
+autocompletion
+autocompletion
+autocompletion
+but we want rojo right now so i'm going
+but we want rojo right now so i'm going
+but we want rojo right now so i'm going
+to type in rojo in the search bar
+to type in rojo in the search bar
+to type in rojo in the search bar
+here it is we can install it
+here it is we can install it
+here it is we can install it
+and the first thing we want to do is go
+and the first thing we want to do is go
+and the first thing we want to do is go
+into extension settings
+into extension settings
+into extension settings
+and we want to make sure let me just get
+and we want to make sure let me just get
+and we want to make sure let me just get
+rid of that
+rid of that
+rid of that
+we want to make sure plug-in management
+we want to make sure plug-in management
+we want to make sure plug-in management
+is turned
+is turned
+is turned
+on and then in order to find our roblox
+on and then in order to find our roblox
+on and then in order to find our roblox
+studio plugins path
+studio plugins path
+studio plugins path
+we can go to roblox studio
+let me boot it up i'm going to create a
+let me boot it up i'm going to create a
+let me boot it up i'm going to create a
+baseplate
+baseplate
+baseplate
+then navigate to the plugins tab go to
+then navigate to the plugins tab go to
+then navigate to the plugins tab go to
+the plugins folder
+the plugins folder
+the plugins folder
+and in the plugins folder you can
+and in the plugins folder you can
+and in the plugins folder you can
+already see
+already see
+already see
+i have the rojo extension i'm just going
+i have the rojo extension i'm just going
+i have the rojo extension i'm just going
+to delete that so i show you it actually
+to delete that so i show you it actually
+to delete that so i show you it actually
+installs
+installs
+installs
+click in this little top bar area to
+click in this little top bar area to
+click in this little top bar area to
+highlight
+highlight
+highlight
+your path hit ctrl c to copy it
+your path hit ctrl c to copy it
+your path hit ctrl c to copy it
+go back into visual studio code
+go back into visual studio code
+go back into visual studio code
+then go to the studio plugins path
+then go to the studio plugins path
+then go to the studio plugins path
+hit control v to paste and then
+hit control v to paste and then
+hit control v to paste and then
+rojo should automatically manage our
+rojo should automatically manage our
+rojo should automatically manage our
+roblox studio plugin because you need
+roblox studio plugin because you need
+roblox studio plugin because you need
+the two halves you need the normal like
+the two halves you need the normal like
+the two halves you need the normal like
+computer side and you need the roblox
+computer side and you need the roblox
+computer side and you need the roblox
+studio plugin
+studio plugin
+studio plugin
+and that's great so next you want to
+and that's great so next you want to
+and that's great so next you want to
+presumably get up your file explorer
+presumably get up your file explorer
+presumably get up your file explorer
+so here we go and
+so here we go and
+so here we go and
+let's create our first rojo project
+let's create our first rojo project
+let's create our first rojo project
+so i like to make my projects in a
+so i like to make my projects in a
+so i like to make my projects in a
+nice sensible place like documents you
+nice sensible place like documents you
+nice sensible place like documents you
+could make it on your desktop you could
+could make it on your desktop you could
+could make it on your desktop you could
+make it wherever you want
+make it wherever you want
+make it wherever you want
+but documents is a nice secure spot
+but documents is a nice secure spot
+but documents is a nice secure spot
+where you can store
+where you can store
+where you can store
+your folder with all of your stuff
+your folder with all of your stuff
+your folder with all of your stuff
+so i'm going to create a new folder
+so i'm going to create a new folder
+so i'm going to create a new folder
+inside of documents
+inside of documents
+inside of documents
+and i'll name this my first
+and i'll name this my first
+and i'll name this my first
+rojo project
+rojo project
+rojo project
+and then in visual studio code
+and then in visual studio code
+and then in visual studio code
+we want to go to file open
+we want to go to file open
+we want to go to file open
+folder and then navigate to
+folder and then navigate to
+folder and then navigate to
+documents and then find
+documents and then find
+documents and then find
+that folder that you created so mine's
+that folder that you created so mine's
+that folder that you created so mine's
+right there
+right there
+right there
+i'm going to click select and the folder
+i'm going to click select and the folder
+i'm going to click select and the folder
+is empty
+is empty
+is empty
+because we haven't put anything in it
+because we haven't put anything in it
+because we haven't put anything in it
+luckily rojo has a nice
+luckily rojo has a nice
+luckily rojo has a nice
+function that allows you to populate
+function that allows you to populate
+function that allows you to populate
+this folder with
+this folder with
+this folder with
+a bunch of boilerplate assets
+a bunch of boilerplate assets
+a bunch of boilerplate assets
+so go to view command palette or you can
+so go to view command palette or you can
+so go to view command palette or you can
+use ctrl shift p
+use ctrl shift p
+use ctrl shift p
+start typing rojo and then you want to
+start typing rojo and then you want to
+start typing rojo and then you want to
+go to
+go to
+go to
+rojo initialize and hit enter
+so you can see in the bottom right it
+so you can see in the bottom right it
+so you can see in the bottom right it
+has installed the plugin
+has installed the plugin
+has installed the plugin
+so if we were to actually go back into
+so if we were to actually go back into
+so if we were to actually go back into
+roblox studio go into the plugins folder
+roblox studio go into the plugins folder
+roblox studio go into the plugins folder
+you can see
+you can see
+you can see
+the plugin is there which is exactly
+the plugin is there which is exactly
+the plugin is there which is exactly
+what we want
+what we want
+what we want
+so back inside of visual studio code
+so back inside of visual studio code
+so back inside of visual studio code
+you can see we have a few things we have
+you can see we have a few things we have
+you can see we have a few things we have
+this default.project.json
+this default.project.json
+this default.project.json
+file that i will talk about in just a
+file that i will talk about in just a
+file that i will talk about in just a
+sec
+sec
+sec
+and you have the source that's what src
+and you have the source that's what src
+and you have the source that's what src
+stands for with client
+stands for with client
+stands for with client
+server and shared so before i talk about
+server and shared so before i talk about
+server and shared so before i talk about
+this file
+this file
+this file
+and how these files work let's just get
+and how these files work let's just get
+and how these files work let's just get
+a
+a
+a
+setup going so i'm going to type
+setup going so i'm going to type
+setup going so i'm going to type
+rojo build
+rojo build
+rojo build
+place model file and you can see
+place model file and you can see
+place model file and you can see
+this build.rbx lx file has been created
+this build.rbx lx file has been created
+this build.rbx lx file has been created
+and then we want to let's just get rid
+and then we want to let's just get rid
+and then we want to let's just get rid
+of this roblox studio window
+of this roblox studio window
+of this roblox studio window
+we can go back into the file explorer go
+we can go back into the file explorer go
+we can go back into the file explorer go
+to
+to
+to
+our project go to the build dot
+our project go to the build dot
+our project go to the build dot
+rb xlx and then double click it
+rb xlx and then double click it
+rb xlx and then double click it
+and it should open up in roblox studio
+and it should open up in roblox studio
+and it should open up in roblox studio
+so this has been generated completely by
+so this has been generated completely by
+so this has been generated completely by
+rojo and there's a few like basic
+rojo and there's a few like basic
+rojo and there's a few like basic
+scripts
+scripts
+scripts
+this is server script this is replicated
+this is server script this is replicated
+this is server script this is replicated
+storage and then we have
+storage and then we have
+storage and then we have
+starter play scripts and you'll see
+starter play scripts and you'll see
+starter play scripts and you'll see
+if i go back into rojo hit control shift
+if i go back into rojo hit control shift
+if i go back into rojo hit control shift
+p
+p
+p
+to get the command palette go to rojo
+to get the command palette go to rojo
+to get the command palette go to rojo
+start server
+and then it has a bunch of these like
+and then it has a bunch of these like
+and then it has a bunch of these like
+localhost you have to worry about that
+localhost you have to worry about that
+localhost you have to worry about that
+defaults are all fine if you go to
+defaults are all fine if you go to
+defaults are all fine if you go to
+plugins
+plugins
+plugins
+and row i already have it docked down
+and row i already have it docked down
+and row i already have it docked down
+here
+here
+here
+and then if you just hit connect you can
+and then if you just hit connect you can
+and then if you just hit connect you can
+see the defaults
+see the defaults
+see the defaults
+match so localhost matches
+match so localhost matches
+match so localhost matches
+localhost and the three four eight seven
+localhost and the three four eight seven
+localhost and the three four eight seven
+two
+two
+two
+matches three four eight seven you can
+matches three four eight seven you can
+matches three four eight seven you can
+hit connect
+hit connect
+hit connect
+and if it doesn't work it'll have an
+and if it doesn't work it'll have an
+and if it doesn't work it'll have an
+error message but ours works
+error message but ours works
+error message but ours works
+it says our project and it says
+it says our project and it says
+it says our project and it says
+localhost so
+localhost so
+localhost so
+nothing visibly changes but if we go
+nothing visibly changes but if we go
+nothing visibly changes but if we go
+back to the visual studio code
+back to the visual studio code
+back to the visual studio code
+let's go to our net.server.lua so
+let's go to our net.server.lua so
+let's go to our net.server.lua so
+unit.server.lua file
+unit.server.lua file
+unit.server.lua file
+is a basic server script but it has a
+is a basic server script but it has a
+is a basic server script but it has a
+nic
+nic
+nic
+and it is a special keyword that
+and it is a special keyword that
+and it is a special keyword that
+basically goes
+basically goes
+basically goes
+and takes it and puts it in its parents
+and takes it and puts it in its parents
+and takes it and puts it in its parents
+position and
+position and
+position and
+takes everything else in the folder and
+takes everything else in the folder and
+takes everything else in the folder and
+makes it descendants and you can learn
+makes it descendants and you can learn
+makes it descendants and you can learn
+more about that
+more about that
+more about that
+in the rojo documentation and which i'll
+in the rojo documentation and which i'll
+in the rojo documentation and which i'll
+link in the description
+link in the description
+link in the description
+so i change this to print rojo works
+so i change this to print rojo works
+so i change this to print rojo works
+and hit control s to save the file
+and hit control s to save the file
+and hit control s to save the file
+i can go back into roblox studio and i'm
+i can go back into roblox studio and i'm
+i can go back into roblox studio and i'm
+on the client right now
+on the client right now
+on the client right now
+you can see it says rojo work so
+you can see it says rojo work so
+you can see it says rojo work so
+our changes from visual studio code have
+our changes from visual studio code have
+our changes from visual studio code have
+replicated
+replicated
+replicated
+into roblox studio now this does not
+into roblox studio now this does not
+into roblox studio now this does not
+work the other way around so if i say
+work the other way around so if i say
+work the other way around so if i say
+put something like there it does not go
+put something like there it does not go
+put something like there it does not go
+into visual studio one day they're
+into visual studio one day they're
+into visual studio one day they're
+planning to add that but that is not the
+planning to add that but that is not the
+planning to add that but that is not the
+case right now
+case right now
+case right now
+and that's the whole idea behind rojo
+and that's the whole idea behind rojo
+and that's the whole idea behind rojo
+and it's really really nice super cool
+and it's really really nice super cool
+and it's really really nice super cool
+so now let's talk about this
+so now let's talk about this
+so now let's talk about this
+default.project.json file
+default.project.json file
+default.project.json file
+so json basically stands for javascript
+so json basically stands for javascript
+so json basically stands for javascript
+object notation and that sounds scary
+object notation and that sounds scary
+object notation and that sounds scary
+it may look scary but it's actually
+it may look scary but it's actually
+it may look scary but it's actually
+quite simple
+quite simple
+quite simple
+so each of these little like brackets is
+so each of these little like brackets is
+so each of these little like brackets is
+like a
+like a
+like a
+new scope it this is like a roblox table
+new scope it this is like a roblox table
+new scope it this is like a roblox table
+basically except instead of equal signs
+basically except instead of equal signs
+basically except instead of equal signs
+we have colons
+we have colons
+we have colons
+and instead of just like variables we
+and instead of just like variables we
+and instead of just like variables we
+have everything
+have everything
+have everything
+as strings or other like objects
+as strings or other like objects
+as strings or other like objects
+and each thing in this tree corresponds
+and each thing in this tree corresponds
+and each thing in this tree corresponds
+to something
+to something
+to something
+in the actual roblox project so
+in the actual roblox project so
+in the actual roblox project so
+you can see replica replicated storage
+you can see replica replicated storage
+you can see replica replicated storage
+here common
+here common
+here common
+and then common has a path this is a
+and then common has a path this is a
+and then common has a path this is a
+special like
+special like
+special like
+attribute that connects it to
+attribute that connects it to
+attribute that connects it to
+src shared which coincidentally
+src shared which coincidentally
+src shared which coincidentally
+is right here so everything in this
+is right here so everything in this
+is right here so everything in this
+folder in our file system will get
+folder in our file system will get
+folder in our file system will get
+copied over to roblox so if i go back to
+copied over to roblox so if i go back to
+copied over to roblox so if i go back to
+the roblox you can see
+the roblox you can see
+the roblox you can see
+common hello and the reason it's called
+common hello and the reason it's called
+common hello and the reason it's called
+comma is because we define the name here
+comma is because we define the name here
+comma is because we define the name here
+it doesn't have to be exactly
+it doesn't have to be exactly
+it doesn't have to be exactly
+the same name and this is super cool you
+the same name and this is super cool you
+the same name and this is super cool you
+can do this for the
+can do this for the
+can do this for the
+server as well as a client you can do it
+server as well as a client you can do it
+server as well as a client you can do it
+wherever you want
+wherever you want
+wherever you want
+though most of the time i get rid of
+though most of the time i get rid of
+though most of the time i get rid of
+everything else because
+everything else because
+everything else because
+right now the support for total rojo
+right now the support for total rojo
+right now the support for total rojo
+projects is quite limited so
+projects is quite limited so
+projects is quite limited so
+i just get rid of everything except for
+i just get rid of everything except for
+i just get rid of everything except for
+the scripts
+the scripts
+the scripts
+so it doesn't like change anything it
+so it doesn't like change anything it
+so it doesn't like change anything it
+just makes everything a little bit
+just makes everything a little bit
+just makes everything a little bit
+easier
+easier
+easier
+and you'll notice that the dot lua files
+and you'll notice that the dot lua files
+and you'll notice that the dot lua files
+are module scripts the dot server.lua
+are module scripts the dot server.lua
+are module scripts the dot server.lua
+files
+files
+files
+are server scripts and the dot
+are server scripts and the dot
+are server scripts and the dot
+client.lua
+client.lua
+client.lua
+are local scripts
+are local scripts
+are local scripts
+and if you go back you can see we have a
+and if you go back you can see we have a
+and if you go back you can see we have a
+module script
+module script
+module script
+server script local script and it's
+server script local script and it's
+server script local script and it's
+pretty simple
+pretty simple
+pretty simple
+makes a lot of sense so when you're
+makes a lot of sense so when you're
+makes a lot of sense so when you're
+editing your
+editing your
+editing your
+default.project.json just make sure to
+default.project.json just make sure to
+default.project.json just make sure to
+link your path to whatever directory or
+link your path to whatever directory or
+link your path to whatever directory or
+folder you want to
+folder you want to
+folder you want to
+copy the scripts into and i encourage
+copy the scripts into and i encourage
+copy the scripts into and i encourage
+you to play around with it it's good to
+you to play around with it it's good to
+you to play around with it it's good to
+understand this so in the future
+understand this so in the future
+understand this so in the future
+it's easier to set up whatever file
+it's easier to set up whatever file
+it's easier to set up whatever file
+structure you want
+structure you want
+structure you want
+and that's it for the basic rojo setup
+and that's it for the basic rojo setup
+and that's it for the basic rojo setup
+but there's a lot more you can do
+but there's a lot more you can do
+but there's a lot more you can do
+and that's in terms of the extensions i
+and that's in terms of the extensions i
+and that's in terms of the extensions i
+encourage you to
+encourage you to
+encourage you to
+go to the store check out a few roblox
+go to the store check out a few roblox
+go to the store check out a few roblox
+extensions i'll put my favorites
+extensions i'll put my favorites
+extensions i'll put my favorites
+in the description so you can check them
+in the description so you can check them
+in the description so you can check them
+out and install them for yourself
+out and install them for yourself
+out and install them for yourself
+it really streamlines your roblox
+it really streamlines your roblox
+it really streamlines your roblox
+experience and makes it a lot better
+experience and makes it a lot better
+experience and makes it a lot better
+and that's about it for this video so
+and that's about it for this video so
+and that's about it for this video so
+this video was kind of abbreviated i
+this video was kind of abbreviated i
+this video was kind of abbreviated i
+went through things pretty quickly
+went through things pretty quickly
+went through things pretty quickly
+like version control and just the json
+like version control and just the json
+like version control and just the json
+so i encourage you to look those up
+so i encourage you to look those up
+so i encourage you to look those up
+online
+online
+online
+i will also have resources in the
+i will also have resources in the
+i will also have resources in the
+description
+description
+description
+make sure to check out the rojo
+make sure to check out the rojo
+make sure to check out the rojo
+documentation
+documentation
+documentation
+it's pretty expansive
+it's pretty expansive
+it's pretty expansive
+and it'll help you a lot when installing
+and it'll help you a lot when installing
+and it'll help you a lot when installing
+it
+it
+it
+but other than that make sure to like
+but other than that make sure to like
+but other than that make sure to like
+and subscribe
+and subscribe
+and subscribe
+if you enjoyed the video comment any of
+if you enjoyed the video comment any of
+if you enjoyed the video comment any of
+your questions down below because this
+your questions down below because this
+your questions down below because this
+was overwhelming when i
+was overwhelming when i
+was overwhelming when i
+first did it but the benefits are just
+first did it but the benefits are just
+first did it but the benefits are just
+crazy it's so so good
+crazy it's so so good
+crazy it's so so good
+other than that though i hope you have a
+other than that though i hope you have a
+other than that though i hope you have a
+nice day and goodbye
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+[Music]
+you

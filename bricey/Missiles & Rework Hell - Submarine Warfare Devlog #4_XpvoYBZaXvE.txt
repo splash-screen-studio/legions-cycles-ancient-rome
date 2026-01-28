@@ -1,0 +1,1462 @@
+[Music]
+every good submarine games needs
+every good submarine games needs
+every good submarine games needs
+ballistic missiles because they are one
+ballistic missiles because they are one
+ballistic missiles because they are one
+of the most powerful weapons a submarine
+of the most powerful weapons a submarine
+of the most powerful weapons a submarine
+can hold and they're one of the primary
+can hold and they're one of the primary
+can hold and they're one of the primary
+reasons nuclear submarines exist to this
+reasons nuclear submarines exist to this
+reasons nuclear submarines exist to this
+day
+day
+day
+but you may be wondering
+but you may be wondering
+but you may be wondering
+how is it taking you
+how is it taking you
+how is it taking you
+over six months to get
+over six months to get
+over six months to get
+submarines to have missiles because it's
+submarines to have missiles because it's
+submarines to have missiles because it's
+been six months since the last devlog
+been six months since the last devlog
+been six months since the last devlog
+well that's a long story and we'll get
+well that's a long story and we'll get
+well that's a long story and we'll get
+to that a little bit later but for now
+to that a little bit later but for now
+to that a little bit later but for now
+let's talk about these missiles so you
+let's talk about these missiles so you
+let's talk about these missiles so you
+may remember back in november i think i
+may remember back in november i think i
+may remember back in november i think i
+made a video on
+made a video on
+made a video on
+icbms like intercontinental ballistic
+icbms like intercontinental ballistic
+icbms like intercontinental ballistic
+missiles and that is mainly for
+missiles and that is mainly for
+missiles and that is mainly for
+uh the submarine game so i made that in
+uh the submarine game so i made that in
+uh the submarine game so i made that in
+a separate place just like play around
+a separate place just like play around
+a separate place just like play around
+with the code and make something that
+with the code and make something that
+with the code and make something that
+works and now i have something
+works and now i have something
+works and now i have something
+and submarine warfare that largely
+and submarine warfare that largely
+and submarine warfare that largely
+resembles this
+resembles this
+resembles this
+so i can launch them real quick
+so i can launch them real quick
+so i can launch them real quick
+you can see
+you can see
+you can see
+they all launch from the things and i
+they all launch from the things and i
+they all launch from the things and i
+have a hotkey where i can press to lock
+have a hotkey where i can press to lock
+have a hotkey where i can press to lock
+on
+on
+on
+to the camera of one of the missiles
+to the camera of one of the missiles
+to the camera of one of the missiles
+which is cool and i can see it detonate
+which is cool and i can see it detonate
+which is cool and i can see it detonate
+right now they're all targeted on this
+right now they're all targeted on this
+right now they're all targeted on this
+little test sphere
+little test sphere
+little test sphere
+because eventually i want to add some
+because eventually i want to add some
+because eventually i want to add some
+targets that i can hit
+targets that i can hit
+targets that i can hit
+like a bunker or a ship or something
+like a bunker or a ship or something
+like a bunker or a ship or something
+like that
+like that
+like that
+and it will do damage to it and
+and it will do damage to it and
+and it will do damage to it and
+eventually we'll have better vfx for the
+eventually we'll have better vfx for the
+eventually we'll have better vfx for the
+explosions as well
+explosions as well
+explosions as well
+but for now it's just a test of the
+but for now it's just a test of the
+but for now it's just a test of the
+trajectory and the launch sequence which
+trajectory and the launch sequence which
+trajectory and the launch sequence which
+i think turned out pretty cool
+i think turned out pretty cool
+i think turned out pretty cool
+so the way the whole thing works is that
+so the way the whole thing works is that
+so the way the whole thing works is that
+each of these little hatches is a hinge
+each of these little hatches is a hinge
+each of these little hatches is a hinge
+constraint and i can set the target
+constraint and i can set the target
+constraint and i can set the target
+angle of that hinge constraint i have a
+angle of that hinge constraint i have a
+angle of that hinge constraint i have a
+video and constraints if you want to
+video and constraints if you want to
+video and constraints if you want to
+check it out
+check it out
+check it out
+and that basically allows me to
+and that basically allows me to
+and that basically allows me to
+angle them up in a nice animated way
+angle them up in a nice animated way
+angle them up in a nice animated way
+without without actually animating
+without without actually animating
+without without actually animating
+anything and they're all physically
+anything and they're all physically
+anything and they're all physically
+actuated which is nice
+actuated which is nice
+actuated which is nice
+and then
+and then
+and then
+we launch all the missiles although this
+we launch all the missiles although this
+we launch all the missiles although this
+is not very realistic you probably only
+is not very realistic you probably only
+is not very realistic you probably only
+want one missile at a time it still
+want one missile at a time it still
+want one missile at a time it still
+looks really freaking cool so that's the
+looks really freaking cool so that's the
+looks really freaking cool so that's the
+reason i kept it
+reason i kept it
+reason i kept it
+and all of the missiles
+and all of the missiles
+and all of the missiles
+have a nice arc trajectory where they
+have a nice arc trajectory where they
+have a nice arc trajectory where they
+land on the target and they're more or
+land on the target and they're more or
+land on the target and they're more or
+less accurate it is physically simulated
+less accurate it is physically simulated
+less accurate it is physically simulated
+so they're not always guaranteed to land
+so they're not always guaranteed to land
+so they're not always guaranteed to land
+on target
+on target
+on target
+but
+but
+but
+it should still work out just fine
+it should still work out just fine
+it should still work out just fine
+because you're launching 12 you you
+because you're launching 12 you you
+because you're launching 12 you you
+might you're going to hit your target if
+might you're going to hit your target if
+might you're going to hit your target if
+you want it'll do a lot of damage as
+you want it'll do a lot of damage as
+you want it'll do a lot of damage as
+well
+well
+well
+so now let's go and check out a little
+so now let's go and check out a little
+so now let's go and check out a little
+bit of the code because i did something
+bit of the code because i did something
+bit of the code because i did something
+pretty interesting
+pretty interesting
+pretty interesting
+that is kind of cool so let me go
+that is kind of cool so let me go
+that is kind of cool so let me go
+to the missile launcher
+you can see
+you can see
+you can see
+in here this is the launch sequence so
+in here this is the launch sequence so
+in here this is the launch sequence so
+what i basically do is instead of just
+what i basically do is instead of just
+what i basically do is instead of just
+doing a bunch of actions and then
+doing a bunch of actions and then
+doing a bunch of actions and then
+calling weight in between them
+calling weight in between them
+calling weight in between them
+i use these things called promises now
+i use these things called promises now
+i use these things called promises now
+promises are a way to basically
+promises are a way to basically
+promises are a way to basically
+encapsulate a call that takes time
+encapsulate a call that takes time
+encapsulate a call that takes time
+and return of value later
+and return of value later
+and return of value later
+and the main benefit of promises is that
+and the main benefit of promises is that
+and the main benefit of promises is that
+i can add them to my trove so my trove
+i can add them to my trove so my trove
+i can add them to my trove so my trove
+is basically
+is basically
+is basically
+what collects all of the stuff that i
+what collects all of the stuff that i
+what collects all of the stuff that i
+want to garbage collect when the
+want to garbage collect when the
+want to garbage collect when the
+sub is destroyed so for example if your
+sub is destroyed so for example if your
+sub is destroyed so for example if your
+sub is in the middle of launching
+sub is in the middle of launching
+sub is in the middle of launching
+missiles
+missiles
+missiles
+and it gets killed or it or the game
+and it gets killed or it or the game
+and it gets killed or it or the game
+stops or something like that the trove
+stops or something like that the trove
+stops or something like that the trove
+gets destroyed when the trove gets
+gets destroyed when the trove gets
+gets destroyed when the trove gets
+destroyed it destroys everything that's
+destroyed it destroys everything that's
+destroyed it destroys everything that's
+added to it and since we added the
+added to it and since we added the
+added to it and since we added the
+promise this entire chain of code will
+promise this entire chain of code will
+promise this entire chain of code will
+cease to run
+cease to run
+cease to run
+so that means that we can avoid errors
+so that means that we can avoid errors
+so that means that we can avoid errors
+when we're trying to reference like the
+when we're trying to reference like the
+when we're trying to reference like the
+self.instance or when we're trying to
+self.instance or when we're trying to
+self.instance or when we're trying to
+reference the
+reference the
+reference the
+missile tube that we're trying to launch
+missile tube that we're trying to launch
+missile tube that we're trying to launch
+from we can avoid those errors or when
+from we can avoid those errors or when
+from we can avoid those errors or when
+trying to reference the hinge you can
+trying to reference the hinge you can
+trying to reference the hinge you can
+avoid those errors and instead of like
+avoid those errors and instead of like
+avoid those errors and instead of like
+just doing a bunch of statements like if
+just doing a bunch of statements like if
+just doing a bunch of statements like if
+the left hinge exists if the right hand
+the left hinge exists if the right hand
+the left hinge exists if the right hand
+exists we can literally just the codes
+exists we can literally just the codes
+exists we can literally just the codes
+will not run because it will have
+will not run because it will have
+will not run because it will have
+already stopped now i did not make this
+already stopped now i did not make this
+already stopped now i did not make this
+function library it's a great library
+function library it's a great library
+function library it's a great library
+made by
+made by
+made by
+someone else i will link it in the
+someone else i will link it in the
+someone else i will link it in the
+description if you want to check it out
+description if you want to check it out
+description if you want to check it out
+and i can make a video on it if anyone
+and i can make a video on it if anyone
+and i can make a video on it if anyone
+is
+is
+is
+interested
+so this snippet of code right here only
+so this snippet of code right here only
+so this snippet of code right here only
+handles the launch sequence as for the
+handles the launch sequence as for the
+handles the launch sequence as for the
+missiles when they're actually in the
+missiles when they're actually in the
+missiles when they're actually in the
+air
+air
+air
+i have a separate component for that
+i have a separate component for that
+i have a separate component for that
+and this works very similarly to the
+and this works very similarly to the
+and this works very similarly to the
+icbm that i demo
+icbm that i demo
+icbm that i demo
+a couple months ago
+a couple months ago
+a couple months ago
+except
+except
+except
+for the proportion so it's basically a
+for the proportion so it's basically a
+for the proportion so it's basically a
+pid controller with only the p term and
+pid controller with only the p term and
+pid controller with only the p term and
+i also have video pid controllers if you
+i also have video pid controllers if you
+i also have video pid controllers if you
+want to check that out too
+want to check that out too
+want to check that out too
+and
+and
+and
+in that pid controller
+in that pid controller
+in that pid controller
+the
+the
+the
+p
+p
+p
+constant is actually not constant it's
+constant is actually not constant it's
+constant is actually not constant it's
+changing depending on the time the
+changing depending on the time the
+changing depending on the time the
+rocket's been in the air so in real life
+rocket's been in the air so in real life
+rocket's been in the air so in real life
+rockets start
+rockets start
+rockets start
+at a certain speed but as they burn more
+at a certain speed but as they burn more
+at a certain speed but as they burn more
+fuel they have less weight and they
+fuel they have less weight and they
+fuel they have less weight and they
+accelerate more and they accelerate more
+accelerate more and they accelerate more
+accelerate more and they accelerate more
+quickly so it's like compounding
+quickly so it's like compounding
+quickly so it's like compounding
+acceleration plus more and more velocity
+acceleration plus more and more velocity
+acceleration plus more and more velocity
+so i'm changing the proportion
+so i'm changing the proportion
+so i'm changing the proportion
+by an arbitrary value and i'm editing
+by an arbitrary value and i'm editing
+by an arbitrary value and i'm editing
+each of them specifically because
+each of them specifically because
+each of them specifically because
+i want
+i want
+i want
+the rocket to initially go up a lot and
+the rocket to initially go up a lot and
+the rocket to initially go up a lot and
+then turn to the side so
+here it is in desmos
+here it is in desmos
+here it is in desmos
+which is a graphing calculator
+which is a graphing calculator
+which is a graphing calculator
+so this bottom line is for the x and z
+so this bottom line is for the x and z
+so this bottom line is for the x and z
+this is what
+this is what
+this is what
+proportion is going to be applied to
+proportion is going to be applied to
+proportion is going to be applied to
+correct the velocities of them and this
+correct the velocities of them and this
+correct the velocities of them and this
+is for the y
+is for the y
+is for the y
+so what happens is the x and z don't
+so what happens is the x and z don't
+so what happens is the x and z don't
+really have an initial
+really have an initial
+really have an initial
+influence and that's because i don't
+influence and that's because i don't
+influence and that's because i don't
+want the missiles to hit the torp to hit
+want the missiles to hit the torp to hit
+want the missiles to hit the torp to hit
+the missile tube and get a lot of whack
+the missile tube and get a lot of whack
+the missile tube and get a lot of whack
+because they're like hitting the walls
+because they're like hitting the walls
+because they're like hitting the walls
+of the tube i want it to go nice and
+of the tube i want it to go nice and
+of the tube i want it to go nice and
+elegantly straight up and then i want it
+elegantly straight up and then i want it
+elegantly straight up and then i want it
+to turn so after a couple of seconds
+to turn so after a couple of seconds
+to turn so after a couple of seconds
+it'll ramp up and then turn but the y
+it'll ramp up and then turn but the y
+it'll ramp up and then turn but the y
+the y axis has to start early because it
+the y axis has to start early because it
+the y axis has to start early because it
+needs to get height so it starts at
+needs to get height so it starts at
+needs to get height so it starts at
+around like six and they each have the
+around like six and they each have the
+around like six and they each have the
+same rate of change so the
+same rate of change so the
+same rate of change so the
+launch in the end is more or less equal
+launch in the end is more or less equal
+launch in the end is more or less equal
+if they have different rate of chains it
+if they have different rate of chains it
+if they have different rate of chains it
+makes something really weird and it also
+makes something really weird and it also
+makes something really weird and it also
+makes them a lot less accurate
+makes them a lot less accurate
+makes them a lot less accurate
+and so this that's the one change from
+and so this that's the one change from
+and so this that's the one change from
+the icbm it's pretty elegant it
+the icbm it's pretty elegant it
+the icbm it's pretty elegant it
+makes it so that i don't have to do
+makes it so that i don't have to do
+makes it so that i don't have to do
+extra
+extra
+extra
+weights and stuff like that to
+weights and stuff like that to
+weights and stuff like that to
+actually like manually micromanage each
+actually like manually micromanage each
+actually like manually micromanage each
+part of the launch
+part of the launch
+part of the launch
+and also we have the standard
+and also we have the standard
+and also we have the standard
+run-of-the-mill
+run-of-the-mill
+run-of-the-mill
+explosion with a raycast which honestly
+explosion with a raycast which honestly
+explosion with a raycast which honestly
+doesn't really work half the time i will
+doesn't really work half the time i will
+doesn't really work half the time i will
+have to fix that a little later
+have to fix that a little later
+have to fix that a little later
+and when the missile hits
+and when the missile hits
+and when the missile hits
+it does damage right now it doesn't
+it does damage right now it doesn't
+it does damage right now it doesn't
+really do damage to anything important
+really do damage to anything important
+really do damage to anything important
+because it's targeted on that test
+because it's targeted on that test
+because it's targeted on that test
+little
+little
+little
+thing but i have made it in such a way
+thing but i have made it in such a way
+thing but i have made it in such a way
+all i have to do is set the target
+all i have to do is set the target
+all i have to do is set the target
+position of the missile
+position of the missile
+position of the missile
+and it will automatically lock on to
+and it will automatically lock on to
+and it will automatically lock on to
+whatever is the target position which is
+whatever is the target position which is
+whatever is the target position which is
+great
+great
+great
+as for the state of the game right now
+as for the state of the game right now
+as for the state of the game right now
+it is still
+it is still
+it is still
+very unfinished and honestly quite
+very unfinished and honestly quite
+very unfinished and honestly quite
+broken but you can still order submarine
+broken but you can still order submarine
+broken but you can still order submarine
+and i made a nice little menu to order
+and i made a nice little menu to order
+and i made a nice little menu to order
+your sub
+your sub
+your sub
+so
+so
+so
+right now the only two ones that are
+right now the only two ones that are
+right now the only two ones that are
+proven to work is the victoria and the
+proven to work is the victoria and the
+proven to work is the victoria and the
+gin class victoria is just normal attack
+gin class victoria is just normal attack
+gin class victoria is just normal attack
+a diesel sub while the gin is a
+a diesel sub while the gin is a
+a diesel sub while the gin is a
+nuclear warhead sub which can launch
+nuclear warhead sub which can launch
+nuclear warhead sub which can launch
+missiles so you can press order you
+missiles so you can press order you
+missiles so you can press order you
+spawn in
+spawn in
+spawn in
+and you can drive it around and you can
+and you can drive it around and you can
+and you can drive it around and you can
+launch missiles to the target
+launch missiles to the target
+launch missiles to the target
+now one issue is
+now one issue is
+now one issue is
+is for some reason in my edits and
+is for some reason in my edits and
+is for some reason in my edits and
+countless reworks torpedoes are now
+countless reworks torpedoes are now
+countless reworks torpedoes are now
+kind of broken
+it's a really it's a really interesting
+it's a really it's a really interesting
+it's a really it's a really interesting
+phenomenon using the vector forces so if
+phenomenon using the vector forces so if
+phenomenon using the vector forces so if
+i fire the torpedo you can see it works
+i fire the torpedo you can see it works
+i fire the torpedo you can see it works
+fine on this normal plane it may be a
+fine on this normal plane it may be a
+fine on this normal plane it may be a
+little too jittery but that's okay but
+little too jittery but that's okay but
+little too jittery but that's okay but
+when you angle it down
+when you angle it down
+when you angle it down
+i'm only doing a and b
+i'm only doing a and b
+i'm only doing a and b
+and it levels out for some reason which
+and it levels out for some reason which
+and it levels out for some reason which
+is quite interesting it probably has to
+is quite interesting it probably has to
+is quite interesting it probably has to
+do with the body gyro
+do with the body gyro
+do with the body gyro
+and how it affects the vector force at
+and how it affects the vector force at
+and how it affects the vector force at
+the same time
+the same time
+the same time
+but
+but
+but
+that is something to figure out in the
+that is something to figure out in the
+that is something to figure out in the
+future
+future
+future
+so what happened to the project why has
+so what happened to the project why has
+so what happened to the project why has
+it been so long
+it been so long
+it been so long
+since i last made any progress
+since i last made any progress
+since i last made any progress
+so it's a typical story of game
+so it's a typical story of game
+so it's a typical story of game
+development so back in november i took a
+development so back in november i took a
+development so back in november i took a
+little break from the project to work on
+little break from the project to work on
+little break from the project to work on
+like icbm and some other stuff and i
+like icbm and some other stuff and i
+like icbm and some other stuff and i
+came back and oh what do you know
+came back and oh what do you know
+came back and oh what do you know
+uh the good people in the roblox open
+uh the good people in the roblox open
+uh the good people in the roblox open
+source community released wall-e which
+source community released wall-e which
+source community released wall-e which
+is a package manager for roblox similar
+is a package manager for roblox similar
+is a package manager for roblox similar
+to node.js
+to node.js
+to node.js
+or npm i guess i should say node package
+or npm i guess i should say node package
+or npm i guess i should say node package
+manager and
+manager and
+manager and
+cargo
+cargo
+cargo
+for
+for
+for
+rust
+rust
+rust
+and i was like okay cool so i went to my
+and i was like okay cool so i went to my
+and i was like okay cool so i went to my
+project
+project
+project
+i made a wally.tunnel i reworked all of
+i made a wally.tunnel i reworked all of
+i made a wally.tunnel i reworked all of
+my projects to
+my projects to
+my projects to
+use
+use
+use
+the new package manager which is great
+the new package manager which is great
+the new package manager which is great
+honestly if you want a video on it just
+honestly if you want a video on it just
+honestly if you want a video on it just
+make sure to comment
+make sure to comment
+make sure to comment
+and
+and
+and
+it was really nice and really good and
+it was really nice and really good and
+it was really nice and really good and
+it's really streamlined my workflow but
+it's really streamlined my workflow but
+it's really streamlined my workflow but
+that took a lot of time
+that took a lot of time
+that took a lot of time
+and what do you know knit got a massive
+and what do you know knit got a massive
+and what do you know knit got a massive
+overhaul to work with wally and just to
+overhaul to work with wally and just to
+overhaul to work with wally and just to
+make it more modern it basically became
+make it more modern it basically became
+make it more modern it basically became
+a collection of
+a collection of
+a collection of
+modules that were less interconnected
+modules that were less interconnected
+modules that were less interconnected
+and more just there
+and more just there
+and more just there
+and so i had to rework again because the
+and so i had to rework again because the
+and so i had to rework again because the
+component module which is one of the
+component module which is one of the
+component module which is one of the
+biggest honestly the biggest thing i
+biggest honestly the biggest thing i
+biggest honestly the biggest thing i
+used from knit became its own separate
+used from knit became its own separate
+used from knit became its own separate
+module and i was able to use it on its
+module and i was able to use it on its
+module and i was able to use it on its
+own
+own
+own
+which is good but it also required a lot
+which is good but it also required a lot
+which is good but it also required a lot
+more
+more
+more
+reworks and then components got an
+reworks and then components got an
+reworks and then components got an
+update and it added these things called
+update and it added these things called
+update and it added these things called
+component extensions so extensions are
+component extensions so extensions are
+component extensions so extensions are
+really cool because they allowed me to
+really cool because they allowed me to
+really cool because they allowed me to
+make a lot of my parts my code that were
+make a lot of my parts my code that were
+make a lot of my parts my code that were
+a little janky a little more secure and
+a little janky a little more secure and
+a little janky a little more secure and
+more robust and they just looked a
+more robust and they just looked a
+more robust and they just looked a
+little better and they sat better with
+little better and they sat better with
+little better and they sat better with
+me
+me
+me
+[Music]
+[Music]
+[Music]
+and then
+and then
+and then
+i needed to work on ui and that's why i
+i needed to work on ui and that's why i
+i needed to work on ui and that's why i
+had that little mini map and the depth
+had that little mini map and the depth
+had that little mini map and the depth
+counter and the speed at the bottom
+counter and the speed at the bottom
+counter and the speed at the bottom
+those are all little minor additions
+those are all little minor additions
+those are all little minor additions
+because i was trying to make a massive
+because i was trying to make a massive
+because i was trying to make a massive
+ui update but i ended up stopping
+ui update but i ended up stopping
+ui update but i ended up stopping
+because
+because
+because
+working with real act and rodex is good
+working with real act and rodex is good
+working with real act and rodex is good
+but it's a lot hard to couple your
+but it's a lot hard to couple your
+but it's a lot hard to couple your
+systems with it in the long run
+systems with it in the long run
+systems with it in the long run
+and so what i ended up doing is i
+and so what i ended up doing is i
+and so what i ended up doing is i
+already wrote that a bunch of times i
+already wrote that a bunch of times i
+already wrote that a bunch of times i
+got bored with the gooeys so i went back
+got bored with the gooeys so i went back
+got bored with the gooeys so i went back
+and forth between getting new modules
+and forth between getting new modules
+and forth between getting new modules
+and
+and
+and
+dealing things with updates because
+dealing things with updates because
+dealing things with updates because
+slutnick the guy who made knit made a
+slutnick the guy who made knit made a
+slutnick the guy who made knit made a
+bunch of other modules that i wanted to
+bunch of other modules that i wanted to
+bunch of other modules that i wanted to
+incorporate because they all were really
+incorporate because they all were really
+incorporate because they all were really
+nice
+nice
+nice
+and also
+and also
+and also
+the same person who made the
+the same person who made the
+the same person who made the
+promises
+promises
+promises
+package also made this package called
+package also made this package called
+package also made this package called
+commander which is like a admin console
+commander which is like a admin console
+commander which is like a admin console
+type library and i've never used that
+type library and i've never used that
+type library and i've never used that
+before i'm like okay sure i'll try it
+before i'm like okay sure i'll try it
+before i'm like okay sure i'll try it
+and that took another couple weeks to
+and that took another couple weeks to
+and that took another couple weeks to
+get working as well
+get working as well
+get working as well
+so thing after thing after thing i kept
+so thing after thing after thing i kept
+so thing after thing after thing i kept
+on reworking the game and along with all
+on reworking the game and along with all
+on reworking the game and along with all
+of this
+of this
+of this
+i wasn't really satisfied with the whole
+i wasn't really satisfied with the whole
+i wasn't really satisfied with the whole
+structure of the game as a whole i
+structure of the game as a whole i
+structure of the game as a whole i
+wanted everything to be more modular i
+wanted everything to be more modular i
+wanted everything to be more modular i
+wanted it to be more expandable i wanted
+wanted it to be more expandable i wanted
+wanted it to be more expandable i wanted
+to be more scalable so i kept on
+to be more scalable so i kept on
+to be more scalable so i kept on
+reworking the base component system to
+reworking the base component system to
+reworking the base component system to
+work with subs and missiles and
+work with subs and missiles and
+work with subs and missiles and
+torpedoes all to be
+torpedoes all to be
+torpedoes all to be
+the same and all to work with each other
+the same and all to work with each other
+the same and all to work with each other
+so i have a lot of less code reviews and
+so i have a lot of less code reviews and
+so i have a lot of less code reviews and
+i was basically trying to make the
+i was basically trying to make the
+i was basically trying to make the
+perfect back end for my submarine
+perfect back end for my submarine
+perfect back end for my submarine
+game but
+game but
+game but
+when you're making a back end
+when you're making a back end
+when you're making a back end
+not much progress is being made at all
+not much progress is being made at all
+not much progress is being made at all
+so when i was going through back and
+so when i was going through back and
+so when i was going through back and
+forth like
+forth like
+forth like
+writing a lot of code spending a lot of
+writing a lot of code spending a lot of
+writing a lot of code spending a lot of
+hours on the project nothing was
+hours on the project nothing was
+hours on the project nothing was
+happening and that was really
+happening and that was really
+happening and that was really
+demotivating because when you make a
+demotivating because when you make a
+demotivating because when you make a
+game you want to see the game being made
+game you want to see the game being made
+game you want to see the game being made
+you don't want to just keep on changing
+you don't want to just keep on changing
+you don't want to just keep on changing
+code
+code
+code
+and then
+and then
+and then
+spend a lot of time but then not see a
+spend a lot of time but then not see a
+spend a lot of time but then not see a
+lot of work come out from that a lot of
+lot of work come out from that a lot of
+lot of work come out from that a lot of
+visible work come out from that
+visible work come out from that
+visible work come out from that
+and that can be very motivating so that
+and that can be very motivating so that
+and that can be very motivating so that
+along with school and my wrestling
+along with school and my wrestling
+along with school and my wrestling
+season i kind of got burnt out as well
+season i kind of got burnt out as well
+season i kind of got burnt out as well
+as i started learning some new languages
+as i started learning some new languages
+as i started learning some new languages
+like haskell and some other functional
+like haskell and some other functional
+like haskell and some other functional
+programming languages which then again
+programming languages which then again
+programming languages which then again
+the knowledge from that came back and i
+the knowledge from that came back and i
+the knowledge from that came back and i
+started using a lot of functions from
+started using a lot of functions from
+started using a lot of functions from
+table util library which
+table util library which
+table util library which
+has a lot of functional programming
+has a lot of functional programming
+has a lot of functional programming
+paradigms in it
+paradigms in it
+paradigms in it
+and so i started changing my code to
+and so i started changing my code to
+and so i started changing my code to
+look like that as well
+look like that as well
+look like that as well
+so rework after rework after rework
+so rework after rework after rework
+so rework after rework after rework
+occurred no progress so around
+occurred no progress so around
+occurred no progress so around
+like march-ish i stopped working for a
+like march-ish i stopped working for a
+like march-ish i stopped working for a
+very long time
+very long time
+very long time
+and only started back
+and only started back
+and only started back
+right now in the summer since i have
+right now in the summer since i have
+right now in the summer since i have
+more time
+more time
+more time
+but i was honestly questioning whether
+but i was honestly questioning whether
+but i was honestly questioning whether
+or not to return this project and
+or not to return this project and
+or not to return this project and
+whether or not to finish it because both
+whether or not to finish it because both
+whether or not to finish it because both
+me and my partner were extremely busy we
+me and my partner were extremely busy we
+me and my partner were extremely busy we
+were both doing a lot of stuff
+were both doing a lot of stuff
+were both doing a lot of stuff
+and even though the idea was really cool
+and even though the idea was really cool
+and even though the idea was really cool
+i absolutely love the idea of a
+i absolutely love the idea of a
+i absolutely love the idea of a
+submarine game especially since i'm
+submarine game especially since i'm
+submarine game especially since i'm
+really into tom clancy and his books
+really into tom clancy and his books
+really into tom clancy and his books
+like red october
+like red october
+like red october
+i still just didn't think i had time and
+i still just didn't think i had time and
+i still just didn't think i had time and
+i was so in love with functional
+i was so in love with functional
+i was so in love with functional
+programming that i didn't really think i
+programming that i didn't really think i
+programming that i didn't really think i
+could return to lua
+could return to lua
+could return to lua
+but one of my subscribers mentioned to
+but one of my subscribers mentioned to
+but one of my subscribers mentioned to
+me
+me
+me
+that when you look up roblox submarine
+that when you look up roblox submarine
+that when you look up roblox submarine
+games
+games
+games
+in google my video is the very first
+in google my video is the very first
+in google my video is the very first
+thing to come up
+thing to come up
+thing to come up
+which is kind of crazy
+which is kind of crazy
+which is kind of crazy
+so that means that there's a there's
+so that means that there's a there's
+so that means that there's a there's
+a void a content void for this sort of
+a void a content void for this sort of
+a void a content void for this sort of
+content and a lot of people would really
+content and a lot of people would really
+content and a lot of people would really
+enjoy it
+enjoy it
+enjoy it
+so
+so
+so
+that means i really should finish it so
+that means i really should finish it so
+that means i really should finish it so
+i will finish it i'm not sure how long
+i will finish it i'm not sure how long
+i will finish it i'm not sure how long
+it will take i'm not sure how long this
+it will take i'm not sure how long this
+it will take i'm not sure how long this
+will take
+will take
+will take
+but
+but
+but
+this game
+this game
+this game
+will get finished whether i want to
+will get finished whether i want to
+will get finished whether i want to
+finish it or not
+finish it or not
+finish it or not
+and that's a very
+and that's a very
+and that's a very
+good lesson to learn
+good lesson to learn
+good lesson to learn
+and luckily i have my subscribers to
+and luckily i have my subscribers to
+and luckily i have my subscribers to
+hold me accountable but some people
+hold me accountable but some people
+hold me accountable but some people
+don't
+don't
+don't
+so the main takeaway from my experience
+so the main takeaway from my experience
+so the main takeaway from my experience
+is you you can't really give up on
+is you you can't really give up on
+is you you can't really give up on
+projects you can't you either have to
+projects you can't you either have to
+projects you can't you either have to
+set your project's goals a little more
+set your project's goals a little more
+set your project's goals a little more
+manageable or you have to finish them
+manageable or you have to finish them
+manageable or you have to finish them
+because if you make a habit of not
+because if you make a habit of not
+because if you make a habit of not
+finishing projects you'll never be able
+finishing projects you'll never be able
+finishing projects you'll never be able
+to finish
+to finish
+to finish
+anything
+anything
+anything
+but also it's okay to take breaks
+but also it's okay to take breaks
+but also it's okay to take breaks
+because now since i've taken a break
+because now since i've taken a break
+because now since i've taken a break
+from roblox for a bit i've delved into
+from roblox for a bit i've delved into
+from roblox for a bit i've delved into
+functional programming as another
+functional programming as another
+functional programming as another
+paradigm i've learned a couple new
+paradigm i've learned a couple new
+paradigm i've learned a couple new
+languages
+languages
+languages
+i'm now able to come back end of this
+i'm now able to come back end of this
+i'm now able to come back end of this
+project with a
+project with a
+project with a
+fresh mind look at my code in a new way
+fresh mind look at my code in a new way
+fresh mind look at my code in a new way
+and i'm able to innovate in places where
+and i'm able to innovate in places where
+and i'm able to innovate in places where
+i wasn't able before
+i wasn't able before
+i wasn't able before
+and if your perfection is like me you
+and if your perfection is like me you
+and if your perfection is like me you
+also have to realize your code
+also have to realize your code
+also have to realize your code
+especially in a video game will never be
+especially in a video game will never be
+especially in a video game will never be
+perfect and the main goal is to get
+perfect and the main goal is to get
+perfect and the main goal is to get
+something out that is fun to play and
+something out that is fun to play and
+something out that is fun to play and
+relatively glitchless and
+relatively glitchless and
+relatively glitchless and
+is secure and safe for exploiters you
+is secure and safe for exploiters you
+is secure and safe for exploiters you
+can't make a perfect back end no matter
+can't make a perfect back end no matter
+can't make a perfect back end no matter
+how much you want to and i always want
+how much you want to and i always want
+how much you want to and i always want
+to make perfect code whenever i
+to make perfect code whenever i
+to make perfect code whenever i
+make a new game project i learned so
+make a new game project i learned so
+make a new game project i learned so
+much during my project that i end up
+much during my project that i end up
+much during my project that i end up
+hating and resenting the code that i'm
+hating and resenting the code that i'm
+hating and resenting the code that i'm
+writing at the moment which is kind of
+writing at the moment which is kind of
+writing at the moment which is kind of
+bad because
+bad because
+bad because
+code can still be good even if it's not
+code can still be good even if it's not
+code can still be good even if it's not
+perfect you can still make a good code
+perfect you can still make a good code
+perfect you can still make a good code
+and make a good perfectly good game even
+and make a good perfectly good game even
+and make a good perfectly good game even
+if it looks like crap may be hard to
+if it looks like crap may be hard to
+if it looks like crap may be hard to
+expand
+expand
+expand
+but that's why you can make a game and
+but that's why you can make a game and
+but that's why you can make a game and
+then rework it later
+but that's about it for this video thank
+but that's about it for this video thank
+but that's about it for this video thank
+you if you got this far to listening to
+you if you got this far to listening to
+you if you got this far to listening to
+my rants hopefully you'll be able to
+my rants hopefully you'll be able to
+my rants hopefully you'll be able to
+learn something
+learn something
+learn something
+valuable to you and for your game
+valuable to you and for your game
+valuable to you and for your game
+projects
+projects
+projects
+because
+because
+because
+even though i've watched countless and
+even though i've watched countless and
+even though i've watched countless and
+countless
+countless
+countless
+videos from other creators not only on
+videos from other creators not only on
+videos from other creators not only on
+roblox but on other platforms keep on
+roblox but on other platforms keep on
+roblox but on other platforms keep on
+telling me hey finish your games get it
+telling me hey finish your games get it
+telling me hey finish your games get it
+done you can't give up
+done you can't give up
+done you can't give up
+i still almost did and that would have
+i still almost did and that would have
+i still almost did and that would have
+been pretty bad
+been pretty bad
+been pretty bad
+so i will continue making videos on
+so i will continue making videos on
+so i will continue making videos on
+submarine warfare
+submarine warfare
+submarine warfare
+i'm not sure when they'll come out
+i'm not sure when they'll come out
+i'm not sure when they'll come out
+because
+because
+because
+again i'm doing this as a fun project
+again i'm doing this as a fun project
+again i'm doing this as a fun project
+it's not like it's going to have a fixed
+it's not like it's going to have a fixed
+it's not like it's going to have a fixed
+release date
+release date
+release date
+just whenever i have time i'll be
+just whenever i have time i'll be
+just whenever i have time i'll be
+working
+working
+working
+and i'll still make other roblox videos
+and i'll still make other roblox videos
+and i'll still make other roblox videos
+as well of course and keep those up
+as well of course and keep those up
+as well of course and keep those up
+so like the video if you enjoyed it
+so like the video if you enjoyed it
+so like the video if you enjoyed it
+subscribe to my channel for more
+subscribe to my channel for more
+subscribe to my channel for more
+submarine warfare content and other
+submarine warfare content and other
+submarine warfare content and other
+roblox scripting content comment any
+roblox scripting content comment any
+roblox scripting content comment any
+questions or suggestions especially for
+questions or suggestions especially for
+questions or suggestions especially for
+all the technology i was using this
+all the technology i was using this
+all the technology i was using this
+video if you want any videos on that
+video if you want any videos on that
+video if you want any videos on that
+make sure you comment
+make sure you comment
+make sure you comment
+and without further ado i hope you have
+and without further ado i hope you have
+and without further ado i hope you have
+a nice day and goodbye
+a nice day and goodbye
+a nice day and goodbye
+[Music]
+[Music]
+[Music]
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+[Music]
+you

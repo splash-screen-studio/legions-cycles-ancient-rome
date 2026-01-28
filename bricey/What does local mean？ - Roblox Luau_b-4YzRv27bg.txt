@@ -1,0 +1,250 @@
+why is everything so local in
+why is everything so local in
+why is everything so local in
+Lua because you see everyone these days
+Lua because you see everyone these days
+Lua because you see everyone these days
+is writing their variables local my VAR
+is writing their variables local my VAR
+is writing their variables local my VAR
+equals something or another let's just
+equals something or another let's just
+equals something or another let's just
+set it to one why local because in Lua
+set it to one why local because in Lua
+set it to one why local because in Lua
+you can technically say my VAR equals 1
+you can technically say my VAR equals 1
+you can technically say my VAR equals 1
+and this is all okay this is just a
+and this is all okay this is just a
+and this is all okay this is just a
+global variable what does that even mean
+global variable what does that even mean
+global variable what does that even mean
+well if it means anything to you a
+well if it means anything to you a
+well if it means anything to you a
+global variable you you can get it by
+global variable you you can get it by
+global variable you you can get it by
+also saying get fnv do that variable
+also saying get fnv do that variable
+also saying get fnv do that variable
+because this is a dictionary this is a
+because this is a dictionary this is a
+because this is a dictionary this is a
+interesting thing about Lua that you can
+interesting thing about Lua that you can
+interesting thing about Lua that you can
+do will it be
+do will it be
+do will it be
+useful no but it does work it prints out
+useful no but it does work it prints out
+useful no but it does work it prints out
+one but instead these globals
+one but instead these globals
+one but instead these globals
+just aren't really good because they are
+just aren't really good because they are
+just aren't really good because they are
+useful by saying like like if something
+useful by saying like like if something
+useful by saying like like if something
+or another if like
+or another if like
+or another if like
+hello or if
+hello or if
+hello or if
+true then we can like do something like
+true then we can like do something like
+true then we can like do something like
+set some Global variable myar equal to
+set some Global variable myar equal to
+set some Global variable myar equal to
+one and then now we can print myar and
+one and then now we can print myar and
+one and then now we can print myar and
+it'll still be equal to
+it'll still be equal to
+it'll still be equal to
+one you can't do that with a local
+one you can't do that with a local
+one you can't do that with a local
+variable because Global variables aren't
+variable because Global variables aren't
+variable because Global variables aren't
+limited by scope scope is basically how
+limited by scope scope is basically how
+limited by scope scope is basically how
+indented your code is now it's more
+indented your code is now it's more
+indented your code is now it's more
+complicated than that because a a inner
+complicated than that because a a inner
+complicated than that because a a inner
+scope is defined by a block which is
+scope is defined by a block which is
+scope is defined by a block which is
+usually ended by n it can be a then end
+usually ended by n it can be a then end
+usually ended by n it can be a then end
+or a do end stuff like that defines your
+or a do end stuff like that defines your
+or a do end stuff like that defines your
+scope the more the farther in your scope
+scope the more the farther in your scope
+scope the more the farther in your scope
+is that's just the farther in your code
+is that's just the farther in your code
+is that's just the farther in your code
+is and a local variable is confined to
+is and a local variable is confined to
+is and a local variable is confined to
+the scope that it was created in it can
+the scope that it was created in it can
+the scope that it was created in it can
+go to like lower inner Scopes like you
+go to like lower inner Scopes like you
+go to like lower inner Scopes like you
+can access this bar and another if
+can access this bar and another if
+can access this bar and another if
+statement below but you can't access
+statement below but you can't access
+statement below but you can't access
+thata and you notice when I write local
+thata and you notice when I write local
+thata and you notice when I write local
+in front of my bar it doesn't let me
+in front of my bar it doesn't let me
+in front of my bar it doesn't let me
+access it here it says say unknown
+access it here it says say unknown
+access it here it says say unknown
+Global myar but you may be saying oh
+Global myar but you may be saying oh
+Global myar but you may be saying oh
+this is useful because I can you know
+this is useful because I can you know
+this is useful because I can you know
+leave my variable
+leave my variable
+leave my variable
+here and just like deal with it and deal
+here and just like deal with it and deal
+here and just like deal with it and deal
+with it out here but there's an easier
+with it out here but there's an easier
+with it out here but there's an easier
+way you say local myar equals nil or you
+way you say local myar equals nil or you
+way you say local myar equals nil or you
+said it zero or some like default value
+said it zero or some like default value
+said it zero or some like default value
+and this solves the issue down here now
+and this solves the issue down here now
+and this solves the issue down here now
+this is more code but local is way more
+this is more code but local is way more
+this is more code but local is way more
+performant because a global kind of just
+performant because a global kind of just
+performant because a global kind of just
+exists and like The Interpreter has to
+exists and like The Interpreter has to
+exists and like The Interpreter has to
+keep track of it whereas a local is
+keep track of it whereas a local is
+keep track of it whereas a local is
+confined to its scope and this also
+confined to its scope and this also
+confined to its scope and this also
+prevents other issues like if you have a
+prevents other issues like if you have a
+prevents other issues like if you have a
+highly nested variable it's a global
+highly nested variable it's a global
+highly nested variable it's a global
+variable then accessing out accessing it
+variable then accessing out accessing it
+variable then accessing out accessing it
+out up
+out up
+out up
+above will could lead to like naming
+above will could lead to like naming
+above will could lead to like naming
+overlaps or other issues so that's why
+overlaps or other issues so that's why
+overlaps or other issues so that's why
+you always always should use local
+you always always should use local
+you always always should use local
+performance and just general code Cloe
+performance and just general code Cloe
+performance and just general code Cloe
+cleanliness a lot of languages don't
+cleanliness a lot of languages don't
+cleanliness a lot of languages don't
+even allow you to make Global variables
+even allow you to make Global variables
+even allow you to make Global variables
+because keeping stuff at a global scope
+because keeping stuff at a global scope
+because keeping stuff at a global scope
+just is frowned upon because you're
+just is frowned upon because you're
+just is frowned upon because you're
+never actually going to need anything
+never actually going to need anything
+never actually going to need anything
+globally you should compartmentalize
+globally you should compartmentalize
+globally you should compartmentalize
+your code and make all of your variables
+your code and make all of your variables
+your code and make all of your variables
+local and if you really think about it
+local and if you really think about it
+local and if you really think about it
+Lu's naming conventions do a very good
+Lu's naming conventions do a very good
+Lu's naming conventions do a very good
+job of this because in other languages
+job of this because in other languages
+job of this because in other languages
+you have let you have bar I thought
+you have let you have bar I thought
+you have let you have bar I thought
+doesn't even have a modifier in front of
+doesn't even have a modifier in front of
+doesn't even have a modifier in front of
+their variables but local tells you
+their variables but local tells you
+their variables but local tells you
+exactly what it needs to be although it
+exactly what it needs to be although it
+exactly what it needs to be although it
+is five characters which is a bunch too
+is five characters which is a bunch too
+is five characters which is a bunch too
+long but it tells you that your
+long but it tells you that your
+long but it tells you that your
+variables are confined they're local
+variables are confined they're local
+variables are confined they're local
+when you should get out of the scope you
+when you should get out of the scope you
+when you should get out of the scope you
+don't have to worry about them and in my
+don't have to worry about them and in my
+don't have to worry about them and in my
+opinion that's pretty cool thanks for
+opinion that's pretty cool thanks for
+opinion that's pretty cool thanks for
+watching

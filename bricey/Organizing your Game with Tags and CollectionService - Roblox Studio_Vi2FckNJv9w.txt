@@ -1,0 +1,1094 @@
+so let's say you're making a landmine
+so let's say you're making a landmine
+so let's say you're making a landmine
+for a combat game now most people what
+for a combat game now most people what
+for a combat game now most people what
+they would do is they'd make their part
+they would do is they'd make their part
+they would do is they'd make their part
+they'd customize it to whatever they
+they'd customize it to whatever they
+they'd customize it to whatever they
+want for our landmine i'm just going to
+want for our landmine i'm just going to
+want for our landmine i'm just going to
+make mine anchored
+make mine anchored
+make mine anchored
+and there we go looks pretty good let's
+and there we go looks pretty good let's
+and there we go looks pretty good let's
+change the material like metal or
+change the material like metal or
+change the material like metal or
+something
+something
+something
+and then they'd make a script inside of
+and then they'd make a script inside of
+and then they'd make a script inside of
+the part
+the part
+the part
+now this approach may seem really simple
+now this approach may seem really simple
+now this approach may seem really simple
+and easy at first
+and easy at first
+and easy at first
+but it does have some flaws but let's go
+but it does have some flaws but let's go
+but it does have some flaws but let's go
+through it and see exactly what those
+through it and see exactly what those
+through it and see exactly what those
+flaws are
+flaws are
+flaws are
+and we'll say local to start we'll say
+and we'll say local to start we'll say
+and we'll say local to start we'll say
+local part equals
+local part equals
+local part equals
+script dot parent just to get our part
+script dot parent just to get our part
+script dot parent just to get our part
+and i'm gonna say part dot touched
+and i'm gonna say part dot touched
+and i'm gonna say part dot touched
+connect function hit like the hit
+connect function hit like the hit
+connect function hit like the hit
+part and we want this landing to explode
+part and we want this landing to explode
+part and we want this landing to explode
+when it comes in contact with another
+when it comes in contact with another
+when it comes in contact with another
+humanoid so in order to do that we can
+humanoid so in order to do that we can
+humanoid so in order to do that we can
+just say local character
+just say local character
+just say local character
+this will be the assumed character of
+this will be the assumed character of
+this will be the assumed character of
+the humanoid will be hit
+the humanoid will be hit
+the humanoid will be hit
+find first ancestor the ancestors like
+find first ancestor the ancestors like
+find first ancestor the ancestors like
+the parent or the parent's parent or the
+the parent or the parent's parent or the
+the parent or the parent's parent or the
+parent's parent's parent like whatever
+parent's parent's parent like whatever
+parent's parent's parent like whatever
+how long it is it's just whatever is
+how long it is it's just whatever is
+how long it is it's just whatever is
+above it in the hierarchy
+above it in the hierarchy
+above it in the hierarchy
+we'll find the first ancestor which is a
+we'll find the first ancestor which is a
+we'll find the first ancestor which is a
+model
+model
+model
+because all characters have models and
+because all characters have models and
+because all characters have models and
+we'll make sure the character exists by
+we'll make sure the character exists by
+we'll make sure the character exists by
+saying if character
+saying if character
+saying if character
+then we'll define a humanoid and the
+then we'll define a humanoid and the
+then we'll define a humanoid and the
+reason we're doing this and not a player
+reason we're doing this and not a player
+reason we're doing this and not a player
+is because
+is because
+is because
+the we want this to work against like
+the we want this to work against like
+the we want this to work against like
+zombies or npcs or whatever
+zombies or npcs or whatever
+zombies or npcs or whatever
+and then we'll say character find first
+and then we'll say character find first
+and then we'll say character find first
+child
+child
+child
+humanoid and we say if humanoid
+humanoid and we say if humanoid
+humanoid and we say if humanoid
+then let's just explode the landmine and
+then let's just explode the landmine and
+then let's just explode the landmine and
+we can do this by saying local explosion
+we can do this by saying local explosion
+we can do this by saying local explosion
+equals instance dot new
+equals instance dot new
+equals instance dot new
+explosion then we can say explosion
+explosion then we can say explosion
+explosion then we can say explosion
+dot position equals part dot position
+dot position equals part dot position
+dot position equals part dot position
+and explosion dot parent equals
+and explosion dot parent equals
+and explosion dot parent equals
+workspace
+workspace
+workspace
+then we can just destroy our part by
+then we can just destroy our part by
+then we can just destroy our part by
+saying part destroy
+saying part destroy
+saying part destroy
+so this is a nice little landmine
+so this is a nice little landmine
+so this is a nice little landmine
+implementation
+we can run this step in the landmine
+we can run this step in the landmine
+we can run this step in the landmine
+we utterly explode and that's pretty
+we utterly explode and that's pretty
+we utterly explode and that's pretty
+cool
+cool
+cool
+but let's say you want to change some
+but let's say you want to change some
+but let's say you want to change some
+aspect
+aspect
+aspect
+of your landmine like instead of getting
+of your landmine like instead of getting
+of your landmine like instead of getting
+humanoids
+humanoids
+humanoids
+and exploding them you want to take down
+and exploding them you want to take down
+and exploding them you want to take down
+their health by
+their health by
+their health by
+25 points or something
+25 points or something
+25 points or something
+now right now that'd be really easy just
+now right now that'd be really easy just
+now right now that'd be really easy just
+go in the script and change it
+go in the script and change it
+go in the script and change it
+but what if you were to duplicate the
+but what if you were to duplicate the
+but what if you were to duplicate the
+landmine
+landmine
+landmine
+duplicate some more and maybe you want
+duplicate some more and maybe you want
+duplicate some more and maybe you want
+to make an entire map with hundreds
+to make an entire map with hundreds
+to make an entire map with hundreds
+of landmines you don't want to go into
+of landmines you don't want to go into
+of landmines you don't want to go into
+each of those scripts
+each of those scripts
+each of those scripts
+and change all their codes individually
+and change all their codes individually
+and change all their codes individually
+now i've done this before i made a game
+now i've done this before i made a game
+now i've done this before i made a game
+a long time ago where
+a long time ago where
+a long time ago where
+i had a bunch of cannons and whenever i
+i had a bunch of cannons and whenever i
+i had a bunch of cannons and whenever i
+changed the value i had to
+changed the value i had to
+changed the value i had to
+destroy all the scripts and copy and
+destroy all the scripts and copy and
+destroy all the scripts and copy and
+paste the new ones and i hated it
+paste the new ones and i hated it
+paste the new ones and i hated it
+and i knew there had to be a better way
+and i knew there had to be a better way
+and i knew there had to be a better way
+and the better way
+and the better way
+and the better way
+is using collection service
+is using collection service
+is using collection service
+so collection service is basically a way
+so collection service is basically a way
+so collection service is basically a way
+to
+to
+to
+centralize your scripts for a situation
+centralize your scripts for a situation
+centralize your scripts for a situation
+like this
+like this
+like this
+and keep all the code in one spot that
+and keep all the code in one spot that
+and keep all the code in one spot that
+you can change
+you can change
+you can change
+on the fly whenever you want so let's
+on the fly whenever you want so let's
+on the fly whenever you want so let's
+get rid of all these extra
+get rid of all these extra
+get rid of all these extra
+landmines and then let's move our script
+landmines and then let's move our script
+landmines and then let's move our script
+into service script service so before we
+into service script service so before we
+into service script service so before we
+refactor the scripts
+refactor the scripts
+refactor the scripts
+first thing we want to do is tag our
+first thing we want to do is tag our
+first thing we want to do is tag our
+landmine and make a landmine tag and the
+landmine and make a landmine tag and the
+landmine and make a landmine tag and the
+whole idea behind this is
+whole idea behind this is
+whole idea behind this is
+collection service handles tagging stuff
+collection service handles tagging stuff
+collection service handles tagging stuff
+in roblox and since you know tags
+in roblox and since you know tags
+in roblox and since you know tags
+are just identifiers for collections of
+are just identifiers for collections of
+are just identifiers for collections of
+objects that's how the whole name goes
+objects that's how the whole name goes
+objects that's how the whole name goes
+and i have a convenient plugin for this
+and i have a convenient plugin for this
+and i have a convenient plugin for this
+name like the tag
+name like the tag
+name like the tag
+window and tag editor and i'll have a
+window and tag editor and i'll have a
+window and tag editor and i'll have a
+link to that in the description that you
+link to that in the description that you
+link to that in the description that you
+can get and so once you have it
+can get and so once you have it
+can get and so once you have it
+just click it mine appears here and you
+just click it mine appears here and you
+just click it mine appears here and you
+have a few options
+have a few options
+have a few options
+you want to create an ad add new tag and
+you want to create an ad add new tag and
+you want to create an ad add new tag and
+i'm going to name this
+i'm going to name this
+i'm going to name this
+tag landmine and then the the process of
+tag landmine and then the the process of
+tag landmine and then the the process of
+tagging an object is kind of weird
+tagging an object is kind of weird
+tagging an object is kind of weird
+you have to select it so select it
+you have to select it so select it
+you have to select it so select it
+either in the sidebar or in the
+either in the sidebar or in the
+either in the sidebar or in the
+workspace
+workspace
+workspace
+and then click on the tag and then just
+and then click on the tag and then just
+and then click on the tag and then just
+deselect it and now it's tagged there's
+deselect it and now it's tagged there's
+deselect it and now it's tagged there's
+no
+no
+no
+indicator or whatever it's just tagged
+indicator or whatever it's just tagged
+indicator or whatever it's just tagged
+and now you can check that by
+and now you can check that by
+and now you can check that by
+saying by going to world view and the
+saying by going to world view and the
+saying by going to world view and the
+plugins
+plugins
+plugins
+and it has this nice little highlight
+and it has this nice little highlight
+and it has this nice little highlight
+and you hover over it and it says like
+and you hover over it and it says like
+and you hover over it and it says like
+it's part of the landmine tag
+it's part of the landmine tag
+it's part of the landmine tag
+and that's pretty cool so you can also
+and that's pretty cool so you can also
+and that's pretty cool so you can also
+go to the
+go to the
+go to the
+settings and click tagged instances
+settings and click tagged instances
+settings and click tagged instances
+to also get a nice little dialogue
+to also get a nice little dialogue
+to also get a nice little dialogue
+with all the tagged objects in the
+with all the tagged objects in the
+with all the tagged objects in the
+workspace
+workspace
+workspace
+so now we can go into the server and
+so now we can go into the server and
+so now we can go into the server and
+start
+start
+start
+refactoring our code so at the top
+refactoring our code so at the top
+refactoring our code so at the top
+we want to add a reference to the
+we want to add a reference to the
+we want to add a reference to the
+collection service
+collection service
+collection service
+so i'll say local collection service
+so i'll say local collection service
+so i'll say local collection service
+equals game
+equals game
+equals game
+get service collection
+get service collection
+get service collection
+service and then what we want to do at
+service and then what we want to do at
+service and then what we want to do at
+the start of the game
+the start of the game
+the start of the game
+is make all the parts with the landmine
+is make all the parts with the landmine
+is make all the parts with the landmine
+tag
+tag
+tag
+into landmines so basically just adding
+into landmines so basically just adding
+into landmines so basically just adding
+this part of code
+this part of code
+this part of code
+so the easiest way to do that is let's
+so the easiest way to do that is let's
+so the easiest way to do that is let's
+get rid of this part definition real
+get rid of this part definition real
+get rid of this part definition real
+quick
+quick
+quick
+and let's make a function make landmine
+and let's make a function make landmine
+and let's make a function make landmine
+and we'll take in a part and then we can
+and we'll take in a part and then we can
+and we'll take in a part and then we can
+indent this and add an end at the bottom
+indent this and add an end at the bottom
+indent this and add an end at the bottom
+so this is a function that will do
+so this is a function that will do
+so this is a function that will do
+what we just showed with the script but
+what we just showed with the script but
+what we just showed with the script but
+in a nice little function
+in a nice little function
+in a nice little function
+and now we can say 4 i'm just going to
+and now we can say 4 i'm just going to
+and now we can say 4 i'm just going to
+use an underscore since i don't really
+use an underscore since i don't really
+use an underscore since i don't really
+need this value
+need this value
+need this value
+say for underscore uh
+say for underscore uh
+say for underscore uh
+landmine in pairs
+landmine in pairs
+landmine in pairs
+collection service get tagged
+and then get tagged it takes in a the
+and then get tagged it takes in a the
+and then get tagged it takes in a the
+tag name
+tag name
+tag name
+and just copy this tag name from here
+and just copy this tag name from here
+and just copy this tag name from here
+mine is landmine
+and this returns a list and that's why
+and this returns a list and that's why
+and this returns a list and that's why
+we're iterating through it
+we're iterating through it
+we're iterating through it
+via a loop and so for each of these
+via a loop and so for each of these
+via a loop and so for each of these
+parts and by the way this will return
+parts and by the way this will return
+parts and by the way this will return
+the instance that's tagged in our case
+the instance that's tagged in our case
+the instance that's tagged in our case
+it's going to
+it's going to
+it's going to
+always be a part if it's not a part then
+always be a part if it's not a part then
+always be a part if it's not a part then
+it's probably an issue
+it's probably an issue
+it's probably an issue
+we just need to say make landmine of
+we just need to say make landmine of
+we just need to say make landmine of
+the landmine so we just make our part
+the landmine so we just make our part
+the landmine so we just make our part
+into a landmine
+into a landmine
+into a landmine
+so right now as long as our part and the
+so right now as long as our part and the
+so right now as long as our part and the
+workspace is tagged
+workspace is tagged
+workspace is tagged
+this should work exactly the same so
+this should work exactly the same so
+this should work exactly the same so
+let's try it out
+there we go we step on our part and we
+there we go we step on our part and we
+there we go we step on our part and we
+die
+die
+die
+and that's exactly what we want to
+and that's exactly what we want to
+and that's exactly what we want to
+happen
+happen
+happen
+but our game is going to be dynamic
+but our game is going to be dynamic
+but our game is going to be dynamic
+we're going to have
+we're going to have
+we're going to have
+landmines spawning in and out depending
+landmines spawning in and out depending
+landmines spawning in and out depending
+on the situation and you can defuse a
+on the situation and you can defuse a
+on the situation and you can defuse a
+land mine for example
+land mine for example
+land mine for example
+and so it wouldn't explode when you
+and so it wouldn't explode when you
+and so it wouldn't explode when you
+touch it and collection service has
+touch it and collection service has
+touch it and collection service has
+convenient methods for that
+convenient methods for that
+convenient methods for that
+as well so let's say we want to add a
+as well so let's say we want to add a
+as well so let's say we want to add a
+new landmine in the middle of the game
+new landmine in the middle of the game
+new landmine in the middle of the game
+so we can do that is by saying
+so we can do that is by saying
+so we can do that is by saying
+collection service
+get instance added signal
+get instance added signal
+get instance added signal
+of a tag and we'll put our tag in as
+of a tag and we'll put our tag in as
+of a tag and we'll put our tag in as
+landmine once again and i will connect
+landmine once again and i will connect
+landmine once again and i will connect
+a function that takes in the instance
+a function that takes in the instance
+a function that takes in the instance
+that was added
+that was added
+that was added
+so what happens here is whenever we add
+so what happens here is whenever we add
+so what happens here is whenever we add
+a new tag
+a new tag
+a new tag
+to a part it'll fire this
+to a part it'll fire this
+to a part it'll fire this
+event and we'll get a reference to our
+event and we'll get a reference to our
+event and we'll get a reference to our
+port
+port
+port
+and all we have to do is say make
+and all we have to do is say make
+and all we have to do is say make
+landmine
+landmine
+landmine
+of our instance that's
+of our instance that's
+of our instance that's
+new and then for diffusing it's going to
+new and then for diffusing it's going to
+new and then for diffusing it's going to
+be
+be
+be
+the same sort of idea we'll just say
+the same sort of idea we'll just say
+the same sort of idea we'll just say
+collection service
+collection service
+collection service
+get instance removed signal
+get instance removed signal
+get instance removed signal
+of landmine once again whoops
+of landmine once again whoops
+of landmine once again whoops
+then we'll connect a function that has
+then we'll connect a function that has
+then we'll connect a function that has
+the instance
+the instance
+the instance
+that was removed and the way to do this
+that was removed and the way to do this
+that was removed and the way to do this
+will be a little bit more complicated
+will be a little bit more complicated
+will be a little bit more complicated
+so we're gonna have to do is go up to
+so we're gonna have to do is go up to
+so we're gonna have to do is go up to
+the top of our script and we're gonna
+the top of our script and we're gonna
+the top of our script and we're gonna
+define
+define
+define
+a list and call it connections and set
+a list and call it connections and set
+a list and call it connections and set
+it to a blank
+it to a blank
+it to a blank
+table and if you don't know about tables
+table and if you don't know about tables
+table and if you don't know about tables
+i have a video on that and i will put it
+i have a video on that and i will put it
+i have a video on that and i will put it
+in the card in the top right of your
+in the card in the top right of your
+in the card in the top right of your
+screen
+screen
+screen
+and then what we want to do in the
+and then what we want to do in the
+and then what we want to do in the
+part.touch block is say local connection
+part.touch block is say local connection
+part.touch block is say local connection
+equals part dot touch and so a
+equals part dot touch and so a
+equals part dot touch and so a
+connection is just a little handle
+connection is just a little handle
+connection is just a little handle
+to this event and when we're done with
+to this event and when we're done with
+to this event and when we're done with
+the event we want to
+the event we want to
+the event we want to
+get rid of it so in our case we want to
+get rid of it so in our case we want to
+get rid of it so in our case we want to
+just like stop our landline from
+just like stop our landline from
+just like stop our landline from
+exploding we want to
+exploding we want to
+exploding we want to
+shut down this event we want to
+shut down this event we want to
+shut down this event we want to
+disconnect it and in order to
+disconnect it and in order to
+disconnect it and in order to
+have their ability to get that event
+have their ability to get that event
+have their ability to get that event
+later down the road
+later down the road
+later down the road
+like in the function down here we'll
+like in the function down here we'll
+like in the function down here we'll
+have to add it to this
+have to add it to this
+have to add it to this
+table up at the top so what we're going
+table up at the top so what we're going
+table up at the top so what we're going
+to do
+to do
+to do
+is we're going to say connections
+is we're going to say connections
+is we're going to say connections
+with an index of part
+with an index of part
+with an index of part
+will be equal to the connection so this
+will be equal to the connection so this
+will be equal to the connection so this
+is a really convenient
+is a really convenient
+is a really convenient
+thing to do i suppose wrong where we
+thing to do i suppose wrong where we
+thing to do i suppose wrong where we
+set the index to our part so all we have
+set the index to our part so all we have
+set the index to our part so all we have
+to do down here
+to do down here
+to do down here
+is say if we first need to make sure it
+is say if we first need to make sure it
+is say if we first need to make sure it
+exists obviously
+exists obviously
+exists obviously
+if connections instance
+if connections instance
+if connections instance
+then i keep on spelling connections
+then i keep on spelling connections
+then i keep on spelling connections
+wrong
+wrong
+wrong
+then we can just say connections
+then we can just say connections
+then we can just say connections
+instance disconnect and what this will
+instance disconnect and what this will
+instance disconnect and what this will
+do is this will prevent our landmine
+do is this will prevent our landmine
+do is this will prevent our landmine
+from exploding when we touch it because
+from exploding when we touch it because
+from exploding when we touch it because
+the touched event will no longer be
+the touched event will no longer be
+the touched event will no longer be
+listening
+listening
+listening
+because we disconnect it and since we're
+because we disconnect it and since we're
+because we disconnect it and since we're
+using a dictionary here
+using a dictionary here
+using a dictionary here
+we can easily index our stuff and make
+we can easily index our stuff and make
+we can easily index our stuff and make
+sure it exists
+sure it exists
+sure it exists
+and just disconnect it whenever
+so let's try this out let's go create
+so let's try this out let's go create
+so let's try this out let's go create
+another part in our workspace
+another part in our workspace
+another part in our workspace
+i'm just not going to use that one
+i'm just not going to use that one
+i'm just not going to use that one
+because it'll still be tagged we'll make
+because it'll still be tagged we'll make
+because it'll still be tagged we'll make
+a completely new part
+a completely new part
+a completely new part
+and we'll make it a little bit sized
+and we'll make it a little bit sized
+and we'll make it a little bit sized
+differently there we go
+differently there we go
+differently there we go
+so this is our second part and we can
+so this is our second part and we can
+so this is our second part and we can
+name this
+name this
+name this
+test so we can test it and then we'll go
+test so we can test it and then we'll go
+test so we can test it and then we'll go
+back into service script service
+back into service script service
+back into service script service
+create another script and then in this
+create another script and then in this
+create another script and then in this
+script we'll just say
+script we'll just say
+script we'll just say
+local tests equals workspace dot test
+local tests equals workspace dot test
+local tests equals workspace dot test
+and then we also need the collection
+and then we also need the collection
+and then we also need the collection
+service
+service
+service
+and i'm just doing this in a separate
+and i'm just doing this in a separate
+and i'm just doing this in a separate
+trip to show that it does
+trip to show that it does
+trip to show that it does
+work globally which is one of the key
+work globally which is one of the key
+work globally which is one of the key
+benefits of something like this
+benefits of something like this
+benefits of something like this
+so we can say game get service
+so we can say game get service
+so we can say game get service
+collection
+collection
+collection
+service there we go so now we
+service there we go so now we
+service there we go so now we
+can wait a few seconds like let's wait
+can wait a few seconds like let's wait
+can wait a few seconds like let's wait
+five seconds
+five seconds
+five seconds
+then say collection service add tag and
+then say collection service add tag and
+then say collection service add tag and
+this shows another
+this shows another
+this shows another
+api of collection service where you can
+api of collection service where you can
+api of collection service where you can
+just add the tag to the instance
+just add the tag to the instance
+just add the tag to the instance
+and all of the functions of our
+and all of the functions of our
+and all of the functions of our
+collection servers they're very
+collection servers they're very
+collection servers they're very
+intuitive and they're very simple to
+intuitive and they're very simple to
+intuitive and they're very simple to
+understand
+understand
+understand
+i'll have a link to the api
+i'll have a link to the api
+i'll have a link to the api
+documentation for it in the description
+documentation for it in the description
+documentation for it in the description
+if you just want to read through it and
+if you just want to read through it and
+if you just want to read through it and
+find
+find
+find
+some useful stuff and so we can add our
+some useful stuff and so we can add our
+some useful stuff and so we can add our
+tag
+tag
+tag
+to what instance we want to add to the
+to what instance we want to add to the
+to what instance we want to add to the
+test part
+test part
+test part
+and the tag name will be our landmine
+and the tag name will be our landmine
+and the tag name will be our landmine
+tag and then this
+tag and then this
+tag and then this
+will prime the landmine will be active
+will prime the landmine will be active
+will prime the landmine will be active
+and then let's wait another
+and then let's wait another
+and then let's wait another
+let me get that up let's wait another
+let me get that up let's wait another
+let me get that up let's wait another
+five seconds and then say
+five seconds and then say
+five seconds and then say
+collection service remove tag from our
+collection service remove tag from our
+collection service remove tag from our
+instance which is test
+instance which is test
+instance which is test
+and we'll remove the landmine tag from
+and we'll remove the landmine tag from
+and we'll remove the landmine tag from
+that instance
+that instance
+that instance
+and by the way you can have multiple
+and by the way you can have multiple
+and by the way you can have multiple
+tags per part which makes the system
+tags per part which makes the system
+tags per part which makes the system
+even more versatile
+even more versatile
+even more versatile
+so let's play this
+now if we step on this part we don't die
+now if we step on this part we don't die
+now if we step on this part we don't die
+but if we wait a little bit
+we die so now let's try that
+we die so now let's try that
+we die so now let's try that
+but instead of waiting a little bit
+but instead of waiting a little bit
+but instead of waiting a little bit
+let's wait the full 10 seconds
+let's wait the full 10 seconds
+let's wait the full 10 seconds
+so it becomes a landmine then it stops
+so it becomes a landmine then it stops
+so it becomes a landmine then it stops
+and it reverts back to its normal part
+and it reverts back to its normal part
+and it reverts back to its normal part
+state and then we can just step on it
+state and then we can just step on it
+state and then we can just step on it
+normally let's say we like defuse it in
+normally let's say we like defuse it in
+normally let's say we like defuse it in
+a game or something
+a game or something
+a game or something
+and you can see we can step on it
+and you can see we can step on it
+and you can see we can step on it
+without dying and that's great
+without dying and that's great
+without dying and that's great
+and you can see how not only can this be
+and you can see how not only can this be
+and you can see how not only can this be
+used for landmines and not only can it
+used for landmines and not only can it
+used for landmines and not only can it
+be used for multiple landmines so this
+be used for multiple landmines so this
+be used for multiple landmines so this
+one's already tagged
+one's already tagged
+one's already tagged
+and we can duplicate it a few times to
+and we can duplicate it a few times to
+and we can duplicate it a few times to
+just
+just
+just
+add more landmines without adding
+add more landmines without adding
+add more landmines without adding
+scripts
+scripts
+scripts
+and all of them work as they should
+and all of them work as they should
+and all of them work as they should
+and i've used this for vehicle systems
+and i've used this for vehicle systems
+and i've used this for vehicle systems
+this is very useful
+this is very useful
+this is very useful
+and component systems like knit knits
+and component systems like knit knits
+and component systems like knit knits
+component system uses
+component system uses
+component system uses
+these collections of tags in order to
+these collections of tags in order to
+these collections of tags in order to
+add components and remove components and
+add components and remove components and
+add components and remove components and
+it overall makes larger games or any
+it overall makes larger games or any
+it overall makes larger games or any
+games in general
+games in general
+games in general
+more organized and easier to deal with
+more organized and easier to deal with
+more organized and easier to deal with
+because you have to deal with less
+because you have to deal with less
+because you have to deal with less
+scripts
+scripts
+scripts
+and in a more centralized location like
+and in a more centralized location like
+and in a more centralized location like
+server script
+server script
+server script
+service and that's about it for this
+service and that's about it for this
+service and that's about it for this
+video so i hope you enjoyed if you did
+video so i hope you enjoyed if you did
+video so i hope you enjoyed if you did
+make sure to like
+make sure to like
+make sure to like
+and subscribe and join my discord server
+and subscribe and join my discord server
+and subscribe and join my discord server
+the link
+the link
+the link
+is in the description and i encourage
+is in the description and i encourage
+is in the description and i encourage
+you to play around with collection
+you to play around with collection
+you to play around with collection
+service see what you can do with it
+service see what you can do with it
+service see what you can do with it
+super powerful super useful i use it in
+super powerful super useful i use it in
+super powerful super useful i use it in
+almost every game that i make and it's
+almost every game that i make and it's
+almost every game that i make and it's
+really good
+really good
+really good
+so i hope you have a nice day and
+so i hope you have a nice day and
+so i hope you have a nice day and
+goodbye
+[Music]
+you

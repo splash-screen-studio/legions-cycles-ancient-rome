@@ -1,0 +1,820 @@
+so in this video i'll be showing you
+so in this video i'll be showing you
+so in this video i'll be showing you
+how to use c frame dot look at
+how to use c frame dot look at
+how to use c frame dot look at
+in roblox studio and this is a very
+in roblox studio and this is a very
+in roblox studio and this is a very
+powerful function that allows you to do
+powerful function that allows you to do
+powerful function that allows you to do
+some really
+some really
+some really
+crazy stuff with c frames using a very
+crazy stuff with c frames using a very
+crazy stuff with c frames using a very
+simple concept
+simple concept
+simple concept
+so make sure to like and subscribe if
+so make sure to like and subscribe if
+so make sure to like and subscribe if
+you enjoy the video but without further
+you enjoy the video but without further
+you enjoy the video but without further
+ado
+ado
+ado
+let's get into it
+let's get into it
+let's get into it
+so i'm going to start by creating two
+so i'm going to start by creating two
+so i'm going to start by creating two
+parts
+parts
+parts
+just so we can work with some parts
+just so we can work with some parts
+just so we can work with some parts
+easier to visualize than
+easier to visualize than
+easier to visualize than
+arbitrary points in space so
+arbitrary points in space so
+arbitrary points in space so
+with our two parts i'm going to take the
+with our two parts i'm going to take the
+with our two parts i'm going to take the
+bottom one we're gonna make sure both of
+bottom one we're gonna make sure both of
+bottom one we're gonna make sure both of
+them are anchored first of all
+them are anchored first of all
+them are anchored first of all
+and i'm gonna take the bottom one just
+and i'm gonna take the bottom one just
+and i'm gonna take the bottom one just
+rename it to
+rename it to
+rename it to
+look part and then in order to see where
+look part and then in order to see where
+look part and then in order to see where
+the faces
+the faces
+the faces
+of this part are because that's really
+of this part are because that's really
+of this part are because that's really
+good when debugging with c frames
+good when debugging with c frames
+good when debugging with c frames
+i'm going to add a surface
+i'm going to add a surface
+i'm going to add a surface
+selection you could use a decal you
+selection you could use a decal you
+selection you could use a decal you
+could use a surface gui but this is just
+could use a surface gui but this is just
+could use a surface gui but this is just
+for
+for
+for
+the purposes of looking at where the
+the purposes of looking at where the
+the purposes of looking at where the
+faces are it's only for debugging
+faces are it's only for debugging
+faces are it's only for debugging
+so i'm going to set the authority to
+so i'm going to set the authority to
+so i'm going to set the authority to
+look part face
+look part face
+look part face
+to front duplicate that we're going to
+to front duplicate that we're going to
+to front duplicate that we're going to
+have one for the front and then
+have one for the front and then
+have one for the front and then
+one for the top we're going to change
+one for the top we're going to change
+one for the top we're going to change
+the color to
+the color to
+the color to
+green there you go so i'm going to go
+green there you go so i'm going to go
+green there you go so i'm going to go
+into my look part
+into my look part
+into my look part
+and create a script zoom in a little bit
+and create a script zoom in a little bit
+and create a script zoom in a little bit
+just for ease of use i'm going to define
+just for ease of use i'm going to define
+just for ease of use i'm going to define
+our part
+our part
+our part
+or look part which should be equal to
+or look part which should be equal to
+or look part which should be equal to
+script
+script
+script
+dot parent and then our
+dot parent and then our
+dot parent and then our
+part which is going to be our target
+part which is going to be our target
+part which is going to be our target
+part but i'll just leave it as part
+part but i'll just leave it as part
+part but i'll just leave it as part
+we're going to say workspace
+we're going to say workspace
+we're going to say workspace
+if i can spell that right we're just
+if i can spell that right we're just
+if i can spell that right we're just
+going to use autocomplete workspace
+going to use autocomplete workspace
+going to use autocomplete workspace
+dot part there we go
+dot part there we go
+dot part there we go
+so first demonstration we're gonna make
+so first demonstration we're gonna make
+so first demonstration we're gonna make
+our
+our
+our
+bottom part look part look at our top
+bottom part look part look at our top
+bottom part look part look at our top
+part so we're gonna set
+part so we're gonna set
+part so we're gonna set
+our look part dot c frame equal to
+our look part dot c frame equal to
+our look part dot c frame equal to
+c frame dot look at
+look part dot position then
+look part dot position then
+look part dot position then
+part dot position so what this is
+part dot position so what this is
+part dot position so what this is
+basically doing
+basically doing
+basically doing
+is if you were if you've been coding on
+is if you were if you've been coding on
+is if you were if you've been coding on
+roblox for a while
+roblox for a while
+roblox for a while
+this looks kind of familiar because
+this looks kind of familiar because
+this looks kind of familiar because
+there used to be a c frame constructor
+there used to be a c frame constructor
+there used to be a c frame constructor
+c frame dot new that took in a
+c frame dot new that took in a
+c frame dot new that took in a
+like starting position and they look at
+like starting position and they look at
+like starting position and they look at
+vector but they've converted this
+vector but they've converted this
+vector but they've converted this
+into a new function temporarily they had
+into a new function temporarily they had
+into a new function temporarily they had
+c frame from matrix
+c frame from matrix
+c frame from matrix
+sort of holding that role with like a
+sort of holding that role with like a
+sort of holding that role with like a
+little function that you could make
+little function that you could make
+little function that you could make
+but c frame look at basically takes in
+but c frame look at basically takes in
+but c frame look at basically takes in
+two parameters we're looking at a two
+two parameters we're looking at a two
+two parameters we're looking at a two
+parameter i'll go into the three
+parameter i'll go into the three
+parameter i'll go into the three
+parameter version a little bit later
+parameter version a little bit later
+parameter version a little bit later
+it takes the position that we're
+it takes the position that we're
+it takes the position that we're
+starting at
+starting at
+starting at
+and the position we want to look at it's
+and the position we want to look at it's
+and the position we want to look at it's
+that simple so all you do
+that simple so all you do
+that simple so all you do
+is you're taking this look part position
+is you're taking this look part position
+is you're taking this look part position
+and we want it to look
+and we want it to look
+and we want it to look
+at the part up position so if you were
+at the part up position so if you were
+at the part up position so if you were
+to run this
+to run this
+to run this
+you can see the blue face which is
+you can see the blue face which is
+you can see the blue face which is
+denoting our front face is facing
+denoting our front face is facing
+denoting our front face is facing
+upwards looking at our other part
+upwards looking at our other part
+upwards looking at our other part
+and this works if we move it so if i say
+and this works if we move it so if i say
+and this works if we move it so if i say
+move this out this way
+move this out this way
+move this out this way
+it points exactly to where that part is
+it points exactly to where that part is
+it points exactly to where that part is
+and doesn't matter how far away it is i
+and doesn't matter how far away it is i
+and doesn't matter how far away it is i
+can drag it all the way down here
+can drag it all the way down here
+can drag it all the way down here
+it looks at it and that's really really
+it looks at it and that's really really
+it looks at it and that's really really
+really cool
+really cool
+really cool
+and the real benefit of this is just
+and the real benefit of this is just
+and the real benefit of this is just
+allows you to make your
+allows you to make your
+allows you to make your
+stuff very very like simple and very
+stuff very very like simple and very
+stuff very very like simple and very
+robust so you can do
+robust so you can do
+robust so you can do
+like another example what if i just want
+like another example what if i just want
+like another example what if i just want
+to rotate apart but i don't want to deal
+to rotate apart but i don't want to deal
+to rotate apart but i don't want to deal
+with
+with
+with
+angles you could just say look part dot
+angles you could just say look part dot
+angles you could just say look part dot
+c
+c
+c
+frame to or
+frame to or
+frame to or
+point to object space or to world space
+point to object space or to world space
+point to object space or to world space
+i should say
+i should say
+i should say
+and then we'll say vector three dot new
+and then we'll say vector three dot new
+and then we'll say vector three dot new
+let's just do a point in front of it so
+let's just do a point in front of it so
+let's just do a point in front of it so
+it'll be zero zero
+it'll be zero zero
+it'll be zero zero
+negative ten actually let's do
+negative ten actually let's do
+negative ten actually let's do
+zero five negative ten so if you don't
+zero five negative ten so if you don't
+zero five negative ten so if you don't
+know what point to world space or like
+know what point to world space or like
+know what point to world space or like
+object space and world space is make
+object space and world space is make
+object space and world space is make
+sure to check out my video on that
+sure to check out my video on that
+sure to check out my video on that
+i will link it right now but what this
+i will link it right now but what this
+i will link it right now but what this
+will basically do is it'll take our
+will basically do is it'll take our
+will basically do is it'll take our
+position and it'll make it point
+position and it'll make it point
+position and it'll make it point
+towards a position that's
+towards a position that's
+towards a position that's
+ten studs up front and five studs up
+ten studs up front and five studs up
+ten studs up front and five studs up
+of our part so if you run this
+of our part so if you run this
+of our part so if you run this
+you can see it's pointing at like an
+you can see it's pointing at like an
+you can see it's pointing at like an
+arbitrary point in space so instead of
+arbitrary point in space so instead of
+arbitrary point in space so instead of
+say rotating this like 45 degrees
+say rotating this like 45 degrees
+say rotating this like 45 degrees
+you could do something like this just to
+you could do something like this just to
+you could do something like this just to
+make it a little makes a little more
+make it a little makes a little more
+make it a little makes a little more
+sense since it's pointing at it
+sense since it's pointing at it
+sense since it's pointing at it
+so for right now we've only been using c
+so for right now we've only been using c
+so for right now we've only been using c
+frame look at with two arguments but
+frame look at with two arguments but
+frame look at with two arguments but
+there is an optional overload let me
+there is an optional overload let me
+there is an optional overload let me
+just show you down here
+just show you down here
+just show you down here
+see frame dot look at and you see
+see frame dot look at and you see
+see frame dot look at and you see
+there's a one out of two we can go to
+there's a one out of two we can go to
+there's a one out of two we can go to
+the second one
+the second one
+the second one
+and we have the at the target and the up
+and we have the at the target and the up
+and we have the at the target and the up
+factor
+factor
+factor
+so what this means is we can specify
+so what this means is we can specify
+so what this means is we can specify
+our point that we're starting at the
+our point that we're starting at the
+our point that we're starting at the
+point that we want to look at
+point that we want to look at
+point that we want to look at
+and then an optional up vector which is
+and then an optional up vector which is
+and then an optional up vector which is
+basically saying
+basically saying
+basically saying
+what we want to look at relative to
+what we want to look at relative to
+what we want to look at relative to
+our part so the only really good way i
+our part so the only really good way i
+our part so the only really good way i
+can explain this only way
+can explain this only way
+can explain this only way
+i've ever used it is on like a like a
+i've ever used it is on like a like a
+i've ever used it is on like a like a
+ship for example like a spaceship
+ship for example like a spaceship
+ship for example like a spaceship
+so when you want your part to look at
+so when you want your part to look at
+so when you want your part to look at
+the player's mouse
+the player's mouse
+the player's mouse
+you want the part to continually
+you want the part to continually
+you want the part to continually
+like rotate around a given point so
+like rotate around a given point so
+like rotate around a given point so
+actually let me
+actually let me
+actually let me
+get rid of this so let me take our part
+get rid of this so let me take our part
+get rid of this so let me take our part
+here so
+here so
+here so
+without specifying anything in
+without specifying anything in
+without specifying anything in
+your like look at what would happen
+your like look at what would happen
+your like look at what would happen
+is like let's say this is a spaceship so
+is like let's say this is a spaceship so
+is like let's say this is a spaceship so
+let me get my rotate tools here we go
+let me get my rotate tools here we go
+let me get my rotate tools here we go
+when you're doing like a loop for
+when you're doing like a loop for
+when you're doing like a loop for
+example
+example
+example
+you would go up but
+you would go up but
+you would go up but
+once look at passes this central point
+once look at passes this central point
+once look at passes this central point
+so it's facing up right
+so it's facing up right
+so it's facing up right
+once it passes the central point
+once it passes the central point
+once it passes the central point
+the part would completely flip so let me
+the part would completely flip so let me
+the part would completely flip so let me
+get this
+get this
+get this
+so it would like completely flip and
+so it would like completely flip and
+so it would like completely flip and
+then it would
+then it would
+then it would
+go this way because it wants the top of
+go this way because it wants the top of
+go this way because it wants the top of
+this part to be facing upwards as much
+this part to be facing upwards as much
+this part to be facing upwards as much
+as possible but that's
+as possible but that's
+as possible but that's
+stupid because we want our part to be
+stupid because we want our part to be
+stupid because we want our part to be
+inverted so whenever you want to
+inverted so whenever you want to
+inverted so whenever you want to
+change the front face of the up up
+change the front face of the up up
+change the front face of the up up
+vector
+vector
+vector
+like the up vector of your far part like
+like the up vector of your far part like
+like the up vector of your far part like
+the top face
+the top face
+the top face
+relative to your point you'd use the up
+relative to your point you'd use the up
+relative to your point you'd use the up
+factor so an
+factor so an
+factor so an
+example of this is obviously i'm not
+example of this is obviously i'm not
+example of this is obviously i'm not
+gonna like bring in a whole spaceship
+gonna like bring in a whole spaceship
+gonna like bring in a whole spaceship
+whatever
+whatever
+whatever
+i have a little simple script and server
+i have a little simple script and server
+i have a little simple script and server
+storage i'm just gonna drag that in
+storage i'm just gonna drag that in
+storage i'm just gonna drag that in
+and i'm gonna disable my old script
+and i'm gonna disable my old script
+and i'm gonna disable my old script
+so here it is basically what's happening
+so here it is basically what's happening
+so here it is basically what's happening
+here
+here
+here
+is let me place our my part correctly
+is let me place our my part correctly
+is let me place our my part correctly
+so i want to have my part
+so i want to have my part
+so i want to have my part
+get placed above and behind
+get placed above and behind
+get placed above and behind
+this part our look part so what this
+this part our look part so what this
+this part our look part so what this
+script basically does
+script basically does
+script basically does
+is let me get it up here we go what this
+is let me get it up here we go what this
+is let me get it up here we go what this
+script does is it basically
+script does is it basically
+script does is it basically
+takes it has a wall to do
+takes it has a wall to do
+takes it has a wall to do
+and we start at a point three studs in
+and we start at a point three studs in
+and we start at a point three studs in
+front of our player or in front of our
+front of our player or in front of our
+front of our player or in front of our
+look part
+look part
+look part
+and then we lerp it which basically
+and then we lerp it which basically
+and then we lerp it which basically
+means linear interpolate
+means linear interpolate
+means linear interpolate
+between it's basically like a tween
+between it's basically like a tween
+between it's basically like a tween
+except instead of it doing all at once
+except instead of it doing all at once
+except instead of it doing all at once
+we have to manually color each
+iteration of our loop so we lurp it
+iteration of our loop so we lurp it
+iteration of our loop so we lurp it
+to the intended position by 0.1 which is
+to the intended position by 0.1 which is
+to the intended position by 0.1 which is
+the alpha value for the lerp
+the alpha value for the lerp
+the alpha value for the lerp
+you don't have to understand this line
+you don't have to understand this line
+you don't have to understand this line
+but the biggest difference is
+but the biggest difference is
+but the biggest difference is
+what will happen when we don't have an
+what will happen when we don't have an
+what will happen when we don't have an
+up vector so let's right now we're
+up vector so let's right now we're
+up vector so let's right now we're
+setting lookpart.c
+setting lookpart.c
+setting lookpart.c
+frame equal to c frame.look at the
+frame equal to c frame.look at the
+frame equal to c frame.look at the
+position and the look at
+position and the look at
+position and the look at
+vector that we're calculating up here so
+vector that we're calculating up here so
+vector that we're calculating up here so
+if right now ignore this
+if right now ignore this
+if right now ignore this
+and just notice how there's only two
+and just notice how there's only two
+and just notice how there's only two
+parameters so we've run this
+parameters so we've run this
+parameters so we've run this
+you can see that as the part rotates
+you can see that as the part rotates
+you can see that as the part rotates
+it'll start like twisting and that's not
+it'll start like twisting and that's not
+it'll start like twisting and that's not
+what we want we want the
+what we want we want the
+what we want we want the
+top face like loop around so
+top face like loop around so
+top face like loop around so
+what we're gonna do is we're gonna set
+what we're gonna do is we're gonna set
+what we're gonna do is we're gonna set
+the up vector
+the up vector
+the up vector
+to our look part dot c
+to our look part dot c
+to our look part dot c
+frame dot up factor so it it does
+frame dot up factor so it it does
+frame dot up factor so it it does
+the transformation relative to our
+the transformation relative to our
+the transformation relative to our
+current up vector
+current up vector
+current up vector
+so we'll get a little bit of a different
+so we'll get a little bit of a different
+so we'll get a little bit of a different
+result
+and you can see the part is staying
+and you can see the part is staying
+and you can see the part is staying
+constantly tilting
+constantly tilting
+constantly tilting
+towards this part and the face front
+towards this part and the face front
+towards this part and the face front
+face is facing down
+face is facing down
+face is facing down
+so honestly that's probably not a good
+so honestly that's probably not a good
+so honestly that's probably not a good
+explanation
+explanation
+explanation
+of a vector but whenever i've used it
+of a vector but whenever i've used it
+of a vector but whenever i've used it
+i've just kind of like guessed around
+i've just kind of like guessed around
+i've just kind of like guessed around
+with it i don't know all of the
+with it i don't know all of the
+with it i don't know all of the
+mechanics inside of it
+mechanics inside of it
+mechanics inside of it
+because c frames are pretty
+because c frames are pretty
+because c frames are pretty
+simple like matrix matrices but i
+simple like matrix matrices but i
+simple like matrix matrices but i
+haven't really gone into matrices in
+haven't really gone into matrices in
+haven't really gone into matrices in
+depth
+depth
+depth
+so i don't really understand what i'm
+so i don't really understand what i'm
+so i don't really understand what i'm
+doing but i sort of know how these work
+doing but i sort of know how these work
+doing but i sort of know how these work
+and really that should be enough for
+and really that should be enough for
+and really that should be enough for
+roblox because
+roblox because
+roblox because
+we're programming we're not taking a
+we're programming we're not taking a
+we're programming we're not taking a
+test so you can guess
+test so you can guess
+test so you can guess
+you can fool around you can experiment
+you can fool around you can experiment
+you can fool around you can experiment
+and
+and
+and
+an up vector is just basically telling
+an up vector is just basically telling
+an up vector is just basically telling
+you where
+you where
+you where
+the top face should go relative to the
+the top face should go relative to the
+the top face should go relative to the
+rest of the port and it helps orient
+rest of the port and it helps orient
+rest of the port and it helps orient
+your whole c
+your whole c
+your whole c
+frame so that's about it
+frame so that's about it
+frame so that's about it
+for this video i hope you enjoyed
+for this video i hope you enjoyed
+for this video i hope you enjoyed
+this c frame look at is a very simple
+this c frame look at is a very simple
+this c frame look at is a very simple
+concept but very powerful it's very good
+concept but very powerful it's very good
+concept but very powerful it's very good
+for debugging
+for debugging
+for debugging
+and for readability it it works wonders
+and for readability it it works wonders
+and for readability it it works wonders
+it's so
+it's so
+it's so
+intuitive instead of using matrixes or
+intuitive instead of using matrixes or
+intuitive instead of using matrixes or
+some other c frame functions and it's
+some other c frame functions and it's
+some other c frame functions and it's
+just really really good
+just really really good
+just really really good
+so i hope you enjoyed this video make
+so i hope you enjoyed this video make
+so i hope you enjoyed this video make
+sure to like and subscribe if you did
+sure to like and subscribe if you did
+sure to like and subscribe if you did
+comment any questions down below because
+comment any questions down below because
+comment any questions down below because
+this can get complex
+this can get complex
+this can get complex
+very quickly but i encourage you to test
+very quickly but i encourage you to test
+very quickly but i encourage you to test
+this out for yourself just play around
+this out for yourself just play around
+this out for yourself just play around
+that's the best way to learn
+that's the best way to learn
+that's the best way to learn
+because you'll just get develop an
+because you'll just get develop an
+because you'll just get develop an
+intuition and you'll be able to figure
+intuition and you'll be able to figure
+intuition and you'll be able to figure
+out what to do and when to do it
+out what to do and when to do it
+out what to do and when to do it
+but other than that i hope you guys have
+but other than that i hope you guys have
+but other than that i hope you guys have
+a nice day and goodbye
+a nice day and goodbye
+a nice day and goodbye
+[Music]

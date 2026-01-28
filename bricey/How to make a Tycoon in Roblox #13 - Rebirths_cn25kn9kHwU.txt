@@ -1,0 +1,1527 @@
+the long awaited video is finally here
+the long awaited video is finally here
+the long awaited video is finally here
+in this video i'll be showing you how to
+in this video i'll be showing you how to
+in this video i'll be showing you how to
+make your tycoon rebirth where all of
+make your tycoon rebirth where all of
+make your tycoon rebirth where all of
+your progress will be reset all of your
+your progress will be reset all of your
+your progress will be reset all of your
+money will be reset but you'll get a new
+money will be reset but you'll get a new
+money will be reset but you'll get a new
+and fresh money multiplier to increase
+and fresh money multiplier to increase
+and fresh money multiplier to increase
+the money you get per drop
+the money you get per drop
+the money you get per drop
+now rebirth adds a lot of replayability
+now rebirth adds a lot of replayability
+now rebirth adds a lot of replayability
+for you in your game for
+for you in your game for
+for you in your game for
+a lot less
+a lot less
+a lot less
+scripting and work so it's a great
+scripting and work so it's a great
+scripting and work so it's a great
+feature for any tycoon
+feature for any tycoon
+feature for any tycoon
+so stay tuned to learn about reverse if
+so stay tuned to learn about reverse if
+so stay tuned to learn about reverse if
+you enjoyed this video make sure to like
+you enjoyed this video make sure to like
+you enjoyed this video make sure to like
+it subscribe to my channel for
+it subscribe to my channel for
+it subscribe to my channel for
+more tycoon content and for more roblox
+more tycoon content and for more roblox
+more tycoon content and for more roblox
+scripting content but without further
+scripting content but without further
+scripting content but without further
+ado
+ado
+ado
+let's jump right into the video
+so let's get started with making our
+so let's get started with making our
+so let's get started with making our
+rebirth so what i want to do for my
+rebirth so what i want to do for my
+rebirth so what i want to do for my
+specific tycoon is make a button where
+specific tycoon is make a button where
+specific tycoon is make a button where
+you can press on it like any normal
+you can press on it like any normal
+you can press on it like any normal
+button and it'll just allow you to
+button and it'll just allow you to
+button and it'll just allow you to
+rebirth which will give you
+rebirth which will give you
+rebirth which will give you
+a money multiplier in the next run so
+a money multiplier in the next run so
+a money multiplier in the next run so
+you'll get more money
+you'll get more money
+you'll get more money
+per drop
+per drop
+per drop
+now you can change it to whatever you
+now you can change it to whatever you
+now you can change it to whatever you
+want because this thing will be making
+want because this thing will be making
+want because this thing will be making
+will be
+will be
+will be
+more more or less expandable
+more more or less expandable
+more more or less expandable
+so let's get started i'm going to go
+so let's get started i'm going to go
+so let's get started i'm going to go
+into server storage
+into server storage
+into server storage
+take my template out of server storage
+take my template out of server storage
+take my template out of server storage
+into the workspace so i can work on it
+into the workspace so i can work on it
+into the workspace so i can work on it
+and i want the rebirth button to be like
+and i want the rebirth button to be like
+and i want the rebirth button to be like
+the last one to be unlocked so right now
+the last one to be unlocked so right now
+the last one to be unlocked so right now
+our like last button is like the uh test
+our like last button is like the uh test
+our like last button is like the uh test
+part button so i'm just going to take
+part button so i'm just going to take
+part button so i'm just going to take
+this button here i selected it by
+this button here i selected it by
+this button here i selected it by
+holding alt and then clicking on it and
+holding alt and then clicking on it and
+holding alt and then clicking on it and
+i'm going to use ctrl d to duplicate it
+i'm going to use ctrl d to duplicate it
+i'm going to use ctrl d to duplicate it
+then i'm going to drag it off to the
+then i'm going to drag it off to the
+then i'm going to drag it off to the
+side
+side
+side
+and change some of the attributes oh
+and change some of the attributes oh
+and change some of the attributes oh
+whoops there you go
+whoops there you go
+whoops there you go
+so i want the i want to add an unlock id
+so i want the i want to add an unlock id
+so i want the i want to add an unlock id
+so i'm going to make this unlockable in
+so i'm going to make this unlockable in
+so i'm going to make this unlockable in
+the tag editor by clicking the check
+the tag editor by clicking the check
+the tag editor by clicking the check
+arrow here
+arrow here
+arrow here
+and then i'm going to add
+and then i'm going to add
+and then i'm going to add
+a attribute that says unlock id
+a attribute that says unlock id
+a attribute that says unlock id
+and the unlock id will be the actual id
+and the unlock id will be the actual id
+and the unlock id will be the actual id
+of the button that we just copied so i'm
+of the button that we just copied so i'm
+of the button that we just copied so i'm
+going to take this
+going to take this
+going to take this
+just cut it and paste it there
+just cut it and paste it there
+just cut it and paste it there
+and for the actual id i'm just going to
+and for the actual id i'm just going to
+and for the actual id i'm just going to
+do rebirth
+do rebirth
+do rebirth
+and then for the display i'm going to do
+and then for the display i'm going to do
+and then for the display i'm going to do
+rebirth as well as for the cost i'm just
+rebirth as well as for the cost i'm just
+rebirth as well as for the cost i'm just
+going to set it something like 25. you
+going to set it something like 25. you
+going to set it something like 25. you
+can obviously adjust that to balance
+can obviously adjust that to balance
+can obviously adjust that to balance
+your game
+your game
+your game
+when you want it
+when you want it
+when you want it
+so now i'm going to
+so now i'm going to
+so now i'm going to
+go
+go
+go
+into our tycoon script actually first of
+into our tycoon script actually first of
+into our tycoon script actually first of
+all let's move our template back into
+all let's move our template back into
+all let's move our template back into
+server storage before we forget it's
+server storage before we forget it's
+server storage before we forget it's
+very important nothing will work if you
+very important nothing will work if you
+very important nothing will work if you
+leave it in the workspace
+leave it in the workspace
+leave it in the workspace
+and then i'm going to go to the
+and then i'm going to go to the
+and then i'm going to go to the
+tycoon and scroll all the way down just
+tycoon and scroll all the way down just
+tycoon and scroll all the way down just
+to a new area
+to a new area
+to a new area
+i'm going to make a function
+i'm going to make a function
+i'm going to make a function
+called tycoon wait
+called tycoon wait
+called tycoon wait
+for rebirth
+for rebirth
+for rebirth
+now you may be thinking
+now you may be thinking
+now you may be thinking
+why is this not a
+why is this not a
+why is this not a
+component
+component
+component
+so when i was demoing out this feature i
+so when i was demoing out this feature i
+so when i was demoing out this feature i
+went through and i made it a component
+went through and i made it a component
+went through and i made it a component
+and i realized this function the
+and i realized this function the
+and i realized this function the
+component will need to access a lot of
+component will need to access a lot of
+component will need to access a lot of
+aspects of our tycoon it'll need to
+aspects of our tycoon it'll need to
+aspects of our tycoon it'll need to
+access this private spawn
+access this private spawn
+access this private spawn
+and it'll need to access a bunch of
+and it'll need to access a bunch of
+and it'll need to access a bunch of
+those
+those
+those
+more or less tycoon specific functions
+more or less tycoon specific functions
+more or less tycoon specific functions
+and variables
+and variables
+and variables
+and there's only ever going to be one
+and there's only ever going to be one
+and there's only ever going to be one
+rebirth button really
+rebirth button really
+rebirth button really
+i don't really see a use case where they
+i don't really see a use case where they
+i don't really see a use case where they
+be multiple so in this case i thought
+be multiple so in this case i thought
+be multiple so in this case i thought
+it'd be okay to put the button
+it'd be okay to put the button
+it'd be okay to put the button
+functionality in the tycoon itself
+functionality in the tycoon itself
+functionality in the tycoon itself
+because we're not going to make
+because we're not going to make
+because we're not going to make
+multiple it's not going to be as
+multiple it's not going to be as
+multiple it's not going to be as
+expandable
+expandable
+expandable
+as the other portions of our tycoon and
+as the other portions of our tycoon and
+as the other portions of our tycoon and
+it has to access a bunch of stuff that
+it has to access a bunch of stuff that
+it has to access a bunch of stuff that
+really the only the tycoon should be
+really the only the tycoon should be
+really the only the tycoon should be
+able to access it'd be kind of confusing
+able to access it'd be kind of confusing
+able to access it'd be kind of confusing
+if the component were to dab with some
+if the component were to dab with some
+if the component were to dab with some
+things and you just didn't know about
+things and you just didn't know about
+things and you just didn't know about
+and tycoon got kind of confused so
+and tycoon got kind of confused so
+and tycoon got kind of confused so
+that's why i have it here
+that's why i have it here
+that's why i have it here
+it's one of those decisions where
+it's one of those decisions where
+it's one of those decisions where
+there's not no really right answer but
+there's not no really right answer but
+there's not no really right answer but
+this is just what i chose
+this is just what i chose
+this is just what i chose
+so now we're gonna have to set up our
+so now we're gonna have to set up our
+so now we're gonna have to set up our
+uh subscribe
+uh subscribe
+uh subscribe
+so i'm gonna do self subscribe
+so i'm gonna do self subscribe
+so i'm gonna do self subscribe
+topic
+topic
+topic
+the
+the
+the
+we're going to subscribe to the button
+we're going to subscribe to the button
+we're going to subscribe to the button
+topic and function
+topic and function
+topic and function
+id
+id
+id
+so we need to make sure if the id equals
+so we need to make sure if the id equals
+so we need to make sure if the id equals
+rebirth
+rebirth
+rebirth
+then
+then
+then
+we can do a rebirth so this is similar
+we can do a rebirth so this is similar
+we can do a rebirth so this is similar
+to what the button component does
+to what the button component does
+to what the button component does
+which is nice
+which is nice
+which is nice
+but
+but
+but
+now we have to reference the spawn point
+now we have to reference the spawn point
+now we have to reference the spawn point
+of the tycoon
+of the tycoon
+of the tycoon
+will be self
+will be self
+will be self
+underscore spawn
+underscore spawn
+underscore spawn
+and what i want to do is i want to
+and what i want to do is i want to
+and what i want to do is i want to
+basically
+basically
+basically
+destroy the players cycle and then
+destroy the players cycle and then
+destroy the players cycle and then
+remake it from scratch because when you
+remake it from scratch because when you
+remake it from scratch because when you
+rebirth you're basically
+rebirth you're basically
+rebirth you're basically
+going to reset all of your progress
+going to reset all of your progress
+going to reset all of your progress
+right so
+right so
+right so
+instead of trying to manually go back
+instead of trying to manually go back
+instead of trying to manually go back
+and lock everything back up and reset it
+and lock everything back up and reset it
+and lock everything back up and reset it
+we're just gonna destroy it and recreate
+we're just gonna destroy it and recreate
+we're just gonna destroy it and recreate
+it
+it
+it
+so that will help you especially if
+so that will help you especially if
+so that will help you especially if
+there's something bugged in the tycoon
+there's something bugged in the tycoon
+there's something bugged in the tycoon
+by accident or something it'll just
+by accident or something it'll just
+by accident or something it'll just
+make everything have a clean slate from
+make everything have a clean slate from
+make everything have a clean slate from
+scratch which is nice
+scratch which is nice
+scratch which is nice
+so we're also going to reference the
+so we're also going to reference the
+so we're also going to reference the
+owner which will be self.owner
+owner which will be self.owner
+owner which will be self.owner
+and then
+and then
+and then
+what we want to do is for now we can
+what we want to do is for now we can
+what we want to do is for now we can
+just say
+just say
+just say
+set playermanager.set
+to set money of the owner to zero so
+to set money of the owner to zero so
+to set money of the owner to zero so
+we're going to reset the players money
+we're going to reset the players money
+we're going to reset the players money
+because they're gonna rebirth they're
+because they're gonna rebirth they're
+because they're gonna rebirth they're
+gonna start from scratch
+gonna start from scratch
+gonna start from scratch
+and then
+and then
+and then
+we're gonna call self destroy
+we're gonna call self destroy
+we're gonna call self destroy
+so we're gonna self-destruct our tycoon
+so we're gonna self-destruct our tycoon
+so we're gonna self-destruct our tycoon
+and since this function is still running
+and since this function is still running
+and since this function is still running
+don't keep in mind that when we destroy
+don't keep in mind that when we destroy
+don't keep in mind that when we destroy
+it all we're doing is destroying the
+it all we're doing is destroying the
+it all we're doing is destroying the
+model destroying the event
+model destroying the event
+model destroying the event
+and setting it to unoccupied but then
+and setting it to unoccupied but then
+and setting it to unoccupied but then
+we're going to instantly reoccupy it by
+we're going to instantly reoccupy it by
+we're going to instantly reoccupy it by
+saying local tycoon or tyke i guess
+saying local tycoon or tyke i guess
+saying local tycoon or tyke i guess
+equals tycoon.new
+equals tycoon.new
+equals tycoon.new
+owner
+owner
+owner
+and then we're going to send in this
+and then we're going to send in this
+and then we're going to send in this
+same exact spawn point
+same exact spawn point
+same exact spawn point
+and we're going to say take init
+and we're going to say take init
+and we're going to say take init
+so we're going to initialize the new
+so we're going to initialize the new
+so we're going to initialize the new
+tycoon and everything should be back to
+tycoon and everything should be back to
+tycoon and everything should be back to
+normal but one other thing we have to do
+normal but one other thing we have to do
+normal but one other thing we have to do
+is clear
+is clear
+is clear
+the unlock ids of
+the unlock ids of
+the unlock ids of
+the player because we don't want the new
+the player because we don't want the new
+the player because we don't want the new
+tycoon to have all the progress that the
+tycoon to have all the progress that the
+tycoon to have all the progress that the
+old one we want them to completely reset
+old one we want them to completely reset
+old one we want them to completely reset
+we do not have the functionality for
+we do not have the functionality for
+we do not have the functionality for
+that in our player manager yet so let's
+that in our player manager yet so let's
+that in our player manager yet so let's
+go to our player manager
+go to our player manager
+go to our player manager
+and we can scroll down
+and we can scroll down
+and we can scroll down
+to
+to
+to
+[Music]
+[Music]
+[Music]
+let's just scroll down to the unlock id
+let's just scroll down to the unlock id
+let's just scroll down to the unlock id
+area
+area
+area
+and we can do function
+and we can do function
+and we can do function
+player manager dot clear
+player manager dot clear
+player manager dot clear
+unlock
+unlock
+unlock
+ids
+ids
+ids
+we're taking the player that we want it
+we're taking the player that we want it
+we're taking the player that we want it
+to clear
+to clear
+to clear
+and then all we have to do is say local
+and then all we have to do is say local
+and then all we have to do is say local
+data equals session data
+data equals session data
+data equals session data
+player dot user id
+player dot user id
+player dot user id
+and we can say table dot clear
+and we can say table dot clear
+and we can say table dot clear
+data dot unlock ids
+data dot unlock ids
+data dot unlock ids
+so what table.clear does is it just
+so what table.clear does is it just
+so what table.clear does is it just
+removes all the values in a table and we
+removes all the values in a table and we
+removes all the values in a table and we
+have a table of unlock ids that we
+have a table of unlock ids that we
+have a table of unlock ids that we
+started off with here that we can just
+started off with here that we can just
+started off with here that we can just
+clear
+clear
+clear
+and
+and
+and
+what will happen is when the player
+what will happen is when the player
+what will happen is when the player
+leaves the game it will save their
+leaves the game it will save their
+leaves the game it will save their
+current unlock id so if they rebirth and
+current unlock id so if they rebirth and
+current unlock id so if they rebirth and
+they leave it'll save it in this state
+they leave it'll save it in this state
+they leave it'll save it in this state
+since we're just saving it to session
+since we're just saving it to session
+since we're just saving it to session
+data
+data
+data
+so we don't have to immediately save it
+so we don't have to immediately save it
+so we don't have to immediately save it
+to the data store we can just let our
+to the data store we can just let our
+to the data store we can just let our
+entire data source system handle it as
+entire data source system handle it as
+entire data source system handle it as
+time goes on which is exactly what we
+time goes on which is exactly what we
+time goes on which is exactly what we
+want it's nice and modular and reusable
+want it's nice and modular and reusable
+want it's nice and modular and reusable
+but this also we also have another issue
+but this also we also have another issue
+but this also we also have another issue
+now since
+now since
+now since
+we need to add a multiplier
+we need to add a multiplier
+we need to add a multiplier
+we can't really use the
+we can't really use the
+we can't really use the
+game pass multiplier that we had that we
+game pass multiplier that we had that we
+game pass multiplier that we had that we
+made in
+made in
+made in
+the last video or two videos ago i
+the last video or two videos ago i
+the last video or two videos ago i
+believe
+believe
+believe
+because
+because
+because
+the way that one works
+the way that one works
+the way that one works
+is
+is
+is
+we just set a money multiplier attribute
+we just set a money multiplier attribute
+we just set a money multiplier attribute
+each time they join if they have the
+each time they join if they have the
+each time they join if they have the
+game pass and that's a very robust
+game pass and that's a very robust
+game pass and that's a very robust
+system because
+system because
+system because
+even if they buy the game game pass
+even if they buy the game game pass
+even if they buy the game game pass
+and they don't and something messes up
+and they don't and something messes up
+and they don't and something messes up
+when they rejoin the game
+when they rejoin the game
+when they rejoin the game
+roblox has very has much better data
+roblox has very has much better data
+roblox has very has much better data
+storage than our system it'll be okay so
+storage than our system it'll be okay so
+storage than our system it'll be okay so
+we're going to need to design a
+we're going to need to design a
+we're going to need to design a
+different saving system for this
+different saving system for this
+different saving system for this
+situation
+situation
+situation
+so initially that might seem pretty easy
+so initially that might seem pretty easy
+so initially that might seem pretty easy
+we go up all the way to
+we go up all the way to
+we go up all the way to
+the on player added function
+the on player added function
+the on player added function
+and we just add another line here
+and we just add another line here
+and we just add another line here
+underneath unlock ids that has a
+underneath unlock ids that has a
+underneath unlock ids that has a
+multiplier and this multiplier will
+multiplier and this multiplier will
+multiplier and this multiplier will
+increase
+increase
+increase
+every time the player rebirth
+every time the player rebirth
+every time the player rebirth
+but there's an issue what about the
+but there's an issue what about the
+but there's an issue what about the
+players who've already joined the game
+players who've already joined the game
+players who've already joined the game
+with money and unlock ids they won't
+with money and unlock ids they won't
+with money and unlock ids they won't
+have this multiplier
+have this multiplier
+have this multiplier
+variable in their little table because
+variable in their little table because
+variable in their little table because
+we have it right here
+we have it right here
+we have it right here
+so
+so
+so
+we could just have an if statement say
+we could just have an if statement say
+we could just have an if statement say
+hey if data doesn't have multiplier we
+hey if data doesn't have multiplier we
+hey if data doesn't have multiplier we
+add multiplier but that's not really
+add multiplier but that's not really
+add multiplier but that's not really
+expandable what if we want to add more
+expandable what if we want to add more
+expandable what if we want to add more
+things to save
+things to save
+things to save
+that's where a really handy function
+that's where a really handy function
+that's where a really handy function
+that we can make comes into play so i'm
+that we can make comes into play so i'm
+that we can make comes into play so i'm
+going to go up to the top of our script
+going to go up to the top of our script
+going to go up to the top of our script
+and we're going to make a function
+and we're going to make a function
+and we're going to make a function
+called local function reconcile
+called local function reconcile
+called local function reconcile
+and i'll take in a source table
+and i'll take in a source table
+and i'll take in a source table
+source table and a template table
+source table and a template table
+source table and a template table
+there we go
+there we go
+there we go
+so what we can do here is we can just
+so what we can do here is we can just
+so what we can do here is we can just
+say 4k v in pairs template
+say 4k v in pairs template
+say 4k v in pairs template
+do
+do
+do
+they can say if not source
+they can say if not source
+they can say if not source
+k
+then
+then
+then
+source
+source
+source
+k
+k
+k
+equals v
+equals v
+equals v
+so we're going to run through the
+so we're going to run through the
+so we're going to run through the
+template table
+template table
+template table
+and we're going to put all of the values
+and we're going to put all of the values
+and we're going to put all of the values
+in the template table
+in the template table
+in the template table
+that are not in the source table into
+that are not in the source table into
+that are not in the source table into
+the source table
+the source table
+the source table
+so it'll basically compare our template
+so it'll basically compare our template
+so it'll basically compare our template
+to our source whatever the source
+to our source whatever the source
+to our source whatever the source
+doesn't have from the template it'll be
+doesn't have from the template it'll be
+doesn't have from the template it'll be
+injected in
+injected in
+injected in
+but
+but
+but
+this function importantly is
+this function importantly is
+this function importantly is
+shallow meaning that it doesn't do
+shallow meaning that it doesn't do
+shallow meaning that it doesn't do
+anything for the sub tables
+anything for the sub tables
+anything for the sub tables
+which in our case is perfectly fine
+which in our case is perfectly fine
+which in our case is perfectly fine
+if you have nested
+if you have nested
+if you have nested
+tables with data in them then you'll
+tables with data in them then you'll
+tables with data in them then you'll
+have to change that but for our case
+have to change that but for our case
+have to change that but for our case
+it'll work just fine
+it'll work just fine
+it'll work just fine
+so now we have to kind of restructure
+so now we have to kind of restructure
+so now we have to kind of restructure
+this equals block right here it'll be
+this equals block right here it'll be
+this equals block right here it'll be
+pretty simple though all we got to do
+pretty simple though all we got to do
+pretty simple though all we got to do
+is
+let's just delete this
+let's just delete this
+let's just delete this
+you can just say
+you can just say
+you can just say
+session data user player.userid equals
+session data user player.userid equals
+session data user player.userid equals
+reconcile
+reconcile
+reconcile
+and then our source table will be a
+and then our source table will be a
+and then our source table will be a
+little interesting we're going to say if
+little interesting we're going to say if
+little interesting we're going to say if
+success
+success
+success
+then
+then
+then
+data else a blank table
+data else a blank table
+data else a blank table
+and then
+and then
+and then
+we're going to put the money equals
+we're going to put the money equals
+we're going to put the money equals
+zero
+zero
+zero
+unlock ids equals a blank table and then
+unlock ids equals a blank table and then
+unlock ids equals a blank table and then
+the multiplier
+the multiplier
+the multiplier
+equals one because anything multiplied
+equals one because anything multiplied
+equals one because anything multiplied
+by one is itself according to like the
+by one is itself according to like the
+by one is itself according to like the
+identity property and when we rebirth
+identity property and when we rebirth
+identity property and when we rebirth
+we'll probably increase this by like
+we'll probably increase this by like
+we'll probably increase this by like
+0.25 each time
+0.25 each time
+0.25 each time
+so what we're doing here is this may
+so what we're doing here is this may
+so what we're doing here is this may
+seem a little confusing so let's just
+seem a little confusing so let's just
+seem a little confusing so let's just
+focus on this first argument here
+focus on this first argument here
+focus on this first argument here
+so this is
+so this is
+so this is
+a um a little block that basically says
+a um a little block that basically says
+a um a little block that basically says
+if success so if we have successful data
+if success so if we have successful data
+if success so if we have successful data
+then we just you return the data table
+then we just you return the data table
+then we just you return the data table
+else we have a
+else we have a
+else we have a
+normal table if you don't know this is
+normal table if you don't know this is
+normal table if you don't know this is
+just a new
+just a new
+just a new
+feature in luau that allows you to
+feature in luau that allows you to
+feature in luau that allows you to
+do an inline like comparison expression
+do an inline like comparison expression
+do an inline like comparison expression
+that returns a value
+that returns a value
+that returns a value
+and
+and
+and
+what happens is we reconcile this with
+what happens is we reconcile this with
+what happens is we reconcile this with
+our template table which has everything
+our template table which has everything
+our template table which has everything
+here so if they already have data it'll
+here so if they already have data it'll
+here so if they already have data it'll
+populate
+populate
+populate
+their data table with anything they
+their data table with anything they
+their data table with anything they
+don't have if they have no data
+don't have if they have no data
+don't have if they have no data
+this entire source table will be
+this entire source table will be
+this entire source table will be
+replicated into a blank table
+replicated into a blank table
+replicated into a blank table
+which is exactly what we want so now
+which is exactly what we want so now
+which is exactly what we want so now
+let's add some little infrastructure for
+let's add some little infrastructure for
+let's add some little infrastructure for
+our multiplier function
+our multiplier function
+our multiplier function
+let's go down let's just go down to the
+let's go down let's just go down to the
+let's go down let's just go down to the
+money area we can just say
+money area we can just say
+money area we can just say
+create a function player manager dot
+create a function player manager dot
+create a function player manager dot
+add multiplier i'll take in the player
+add multiplier i'll take in the player
+add multiplier i'll take in the player
+and the multiplier that we wish to add
+and the multiplier that we wish to add
+and the multiplier that we wish to add
+and then
+and then
+and then
+we can just say
+we can just say
+we can just say
+session data
+session data
+session data
+player dot user id dot multiplier
+player dot user id dot multiplier
+player dot user id dot multiplier
+times equals multiplier
+times equals multiplier
+times equals multiplier
+so
+so
+so
+we're taking the multiplier or
+we're taking the multiplier or
+we're taking the multiplier or
+multiplying it by itself
+multiplying it by itself
+multiplying it by itself
+or we're taking multiplier we're
+or we're taking multiplier we're
+or we're taking multiplier we're
+multiplying it by the new multiplier so
+multiplying it by the new multiplier so
+multiplying it by the new multiplier so
+for example if we want to add a 1.25
+for example if we want to add a 1.25
+for example if we want to add a 1.25
+multiplier so you get 25 percent more
+multiplier so you get 25 percent more
+multiplier so you get 25 percent more
+money
+money
+money
+you will just call this function with
+you will just call this function with
+you will just call this function with
+1.25 here it'll multiply it by itself
+1.25 here it'll multiply it by itself
+1.25 here it'll multiply it by itself
+and it'll stack on top of other
+and it'll stack on top of other
+and it'll stack on top of other
+multipliers because all the multipliers
+multipliers because all the multipliers
+multipliers because all the multipliers
+will go multiplier will get multiplied
+will go multiplier will get multiplied
+will go multiplier will get multiplied
+by themselves that's a that's a mouthful
+by themselves that's a that's a mouthful
+by themselves that's a that's a mouthful
+so now we have to just do the get block
+so now we have to just do the get block
+so now we have to just do the get block
+as well so player manager dot get
+as well so player manager dot get
+as well so player manager dot get
+multiplier which is pretty
+multiplier which is pretty
+multiplier which is pretty
+straightforward if we take the player we
+straightforward if we take the player we
+straightforward if we take the player we
+return the session data player.user id
+return the session data player.user id
+return the session data player.user id
+and then
+and then
+and then
+dot multiplier
+dot multiplier
+dot multiplier
+and this will be used similarly to our
+and this will be used similarly to our
+and this will be used similarly to our
+game pass multiplier that we made a
+game pass multiplier that we made a
+game pass multiplier that we made a
+little earlier
+so now we can go back to our tycoon
+so now we can go back to our tycoon
+so now we can go back to our tycoon
+revisit our wait for re-riff function we
+revisit our wait for re-riff function we
+revisit our wait for re-riff function we
+can add
+can add
+can add
+our player manager dot
+our player manager dot
+our player manager dot
+clear unlock ids
+clear unlock ids
+clear unlock ids
+and we send in the
+and we send in the
+and we send in the
+owner
+owner
+owner
+as the player
+as the player
+as the player
+and then also
+and then also
+and then also
+we can add
+we can add
+we can add
+the function to
+the function to
+the function to
+give the player more multiplier by
+give the player more multiplier by
+give the player more multiplier by
+saying player manager add multiplier
+saying player manager add multiplier
+saying player manager add multiplier
+owner
+owner
+owner
+and then
+and then
+and then
+1.25 you can change this to whatever you
+1.25 you can change this to whatever you
+1.25 you can change this to whatever you
+want
+want
+want
+but it has to be greater than one for
+but it has to be greater than one for
+but it has to be greater than one for
+the player to get a positive multiplier
+the player to get a positive multiplier
+the player to get a positive multiplier
+and honestly i'm going to put this below
+and honestly i'm going to put this below
+and honestly i'm going to put this below
+the tycoon in it
+the tycoon in it
+the tycoon in it
+just so
+just so
+just so
+that i can ask me initialize before the
+that i can ask me initialize before the
+that i can ask me initialize before the
+multiplier is added
+multiplier is added
+multiplier is added
+but honestly i don't think it really
+but honestly i don't think it really
+but honestly i don't think it really
+matters
+but we need to actually call this
+but we need to actually call this
+but we need to actually call this
+function so let's go up all the way
+function so let's go up all the way
+function so let's go up all the way
+to our tycoon init
+to our tycoon init
+to our tycoon init
+and then just wherever we can just say
+and then just wherever we can just say
+and then just wherever we can just say
+self
+self
+self
+wait
+wait
+wait
+for rebirth
+for rebirth
+for rebirth
+so it'll call the function call away for
+so it'll call the function call away for
+so it'll call the function call away for
+reader function
+reader function
+reader function
+which will wait until the button is
+which will wait until the button is
+which will wait until the button is
+pressed
+pressed
+pressed
+set all these things in motion and we'll
+set all these things in motion and we'll
+set all these things in motion and we'll
+be set to go
+be set to go
+be set to go
+so let's just test it out now we're
+so let's just test it out now we're
+so let's just test it out now we're
+still not fully done
+still not fully done
+still not fully done
+we could still test it out though
+we could still test it out though
+we could still test it out though
+it's an issue
+it's an issue
+it's an issue
+so there's a slight issue and that's
+so there's a slight issue and that's
+so there's a slight issue and that's
+just a really simple one that i just
+just a really simple one that i just
+just a really simple one that i just
+forgot
+forgot
+forgot
+in our reconcile function of the player
+in our reconcile function of the player
+in our reconcile function of the player
+manager we have to return the source
+manager we have to return the source
+manager we have to return the source
+table again even though we are just
+table again even though we are just
+table again even though we are just
+mutating it we need to return it because
+mutating it we need to return it because
+mutating it we need to return it because
+down
+down
+down
+here we're setting it equal
+here we're setting it equal
+here we're setting it equal
+to something and if it returns nothing
+to something and if it returns nothing
+to something and if it returns nothing
+it'll be setting data player.userid
+it'll be setting data player.userid
+it'll be setting data player.userid
+equal to nil we don't want that we want
+equal to nil we don't want that we want
+equal to nil we don't want that we want
+to set it to
+to set it to
+to set it to
+this newly reconciled function
+this newly reconciled function
+this newly reconciled function
+so now let's just try again
+so now let's just try again
+so now let's just try again
+here we go
+here we go
+here we go
+and i'm going to get my basic dropper
+and i'm going to get my basic dropper
+and i'm going to get my basic dropper
+and upgrader why not
+and upgrader why not
+and upgrader why not
+let's get let's get tons of money
+let's get let's get tons of money
+let's get let's get tons of money
+there we go now we should be able to get
+there we go now we should be able to get
+there we go now we should be able to get
+our rebirth
+our rebirth
+our rebirth
+and then you can see
+and then you can see
+and then you can see
+it resets our tycoon
+it resets our tycoon
+it resets our tycoon
+which is perfect so now the last thing
+which is perfect so now the last thing
+which is perfect so now the last thing
+we need to do
+we need to do
+we need to do
+is go into our collector
+is go into our collector
+is go into our collector
+and our components
+and our components
+and our components
+go to the collector
+go to the collector
+go to the collector
+and honestly
+and honestly
+and honestly
+all we have to do is do we have a player
+all we have to do is do we have a player
+all we have to do is do we have a player
+manager we do not so we need to first
+manager we do not so we need to first
+manager we do not so we need to first
+get the player manager
+get the player manager
+get the player manager
+so we'll say local player manager
+so we'll say local player manager
+so we'll say local player manager
+equals require script dot parent
+equals require script dot parent
+equals require script dot parent
+dot parent dot player manager there we
+dot parent dot player manager there we
+dot parent dot player manager there we
+go
+go
+go
+and then all we have to do is i'm just
+and then all we have to do is i'm just
+and then all we have to do is i'm just
+gonna say local rebirth
+gonna say local rebirth
+gonna say local rebirth
+multiplier equals self
+multiplier equals self
+multiplier equals self
+or equals player manager dot get
+or equals player manager dot get
+or equals player manager dot get
+multiplier
+multiplier
+multiplier
+from the
+from the
+from the
+[Music]
+[Music]
+[Music]
+self.tycoon.owner there we go and then
+self.tycoon.owner there we go and then
+self.tycoon.owner there we go and then
+we have to
+we have to
+we have to
+multiply our normal gain pass multiplier
+multiply our normal gain pass multiplier
+multiply our normal gain pass multiplier
+by the rebirth multiplier
+by the rebirth multiplier
+by the rebirth multiplier
+there we go
+there we go
+there we go
+so
+so
+so
+in reality we
+in reality we
+in reality we
+probably should combine these two
+probably should combine these two
+probably should combine these two
+multiplier systems as i said earlier
+multiplier systems as i said earlier
+multiplier systems as i said earlier
+for our data saving solution now it'd
+for our data saving solution now it'd
+for our data saving solution now it'd
+just be better to make our game pass
+just be better to make our game pass
+just be better to make our game pass
+multiplier a little bit more reliable if
+multiplier a little bit more reliable if
+multiplier a little bit more reliable if
+you're using a more advanced data store
+you're using a more advanced data store
+you're using a more advanced data store
+library
+library
+library
+you would want to combine these for sure
+you would want to combine these for sure
+you would want to combine these for sure
+but since we're just doing this and our
+but since we're just doing this and our
+but since we're just doing this and our
+data store system is more of a learning
+data store system is more of a learning
+data store system is more of a learning
+experience than anything else that's
+experience than anything else that's
+experience than anything else that's
+just what we're doing
+but if you are making this a full
+but if you are making this a full
+but if you are making this a full
+production game i would encourage you to
+production game i would encourage you to
+production game i would encourage you to
+use one of the more established data
+use one of the more established data
+use one of the more established data
+storage libraries like profile servers
+storage libraries like profile servers
+storage libraries like profile servers
+or something like that
+or something like that
+or something like that
+so let's test this again let's get our
+so let's test this again let's get our
+so let's test this again let's get our
+basic part
+basic part
+basic part
+and we can get our rebirth
+and so if i get the copper dropper which
+and so if i get the copper dropper which
+and so if i get the copper dropper which
+i think
+i think
+i think
+should give me five by default
+should give me five by default
+should give me five by default
+or i guess since so what's happening is
+or i guess since so what's happening is
+or i guess since so what's happening is
+we get the two times bonus from the game
+we get the two times bonus from the game
+we get the two times bonus from the game
+pass and we get the 0.25 bonus and
+pass and we get the 0.25 bonus and
+pass and we get the 0.25 bonus and
+that's why there's these decimals coming
+that's why there's these decimals coming
+that's why there's these decimals coming
+up
+up
+up
+which means it works which is cool so
+which means it works which is cool so
+which means it works which is cool so
+now our rebirth is successful and we
+now our rebirth is successful and we
+now our rebirth is successful and we
+have tons of more money and it adds some
+have tons of more money and it adds some
+have tons of more money and it adds some
+replayability to your tycoon
+replayability to your tycoon
+replayability to your tycoon
+and that's about it for this video i
+and that's about it for this video i
+and that's about it for this video i
+hope you enjoyed this is a long-awaited
+hope you enjoyed this is a long-awaited
+hope you enjoyed this is a long-awaited
+video everyone's been wanting the reverb
+video everyone's been wanting the reverb
+video everyone's been wanting the reverb
+video so if you have any questions or
+video so if you have any questions or
+video so if you have any questions or
+suggestions put them down below in the
+suggestions put them down below in the
+suggestions put them down below in the
+comments subscribe to my channel for
+comments subscribe to my channel for
+comments subscribe to my channel for
+more tycoon and roblox scripting content
+more tycoon and roblox scripting content
+more tycoon and roblox scripting content
+like the video if you enjoyed it and
+like the video if you enjoyed it and
+like the video if you enjoyed it and
+with that i hope you have a nice day and
+with that i hope you have a nice day and
+with that i hope you have a nice day and
+goodbye
+goodbye
+goodbye
+[Music]
+[Music]
+[Music]
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+[Music]
+you

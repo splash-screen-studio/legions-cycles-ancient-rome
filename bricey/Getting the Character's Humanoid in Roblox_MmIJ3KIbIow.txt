@@ -1,0 +1,355 @@
+I want to get my humanoid well first of
+I want to get my humanoid well first of
+I want to get my humanoid well first of
+all what is a
+all what is a
+all what is a
+humanoid if you know you can go play the
+humanoid if you know you can go play the
+humanoid if you know you can go play the
+game go into workspace find this model
+game go into workspace find this model
+game go into workspace find this model
+which is your actual character open it
+which is your actual character open it
+which is your actual character open it
+up and you'll see this humanoid thing
+up and you'll see this humanoid thing
+up and you'll see this humanoid thing
+this is what makes your character human
+this is what makes your character human
+this is what makes your character human
+gives it the ability to walk like the
+gives it the ability to walk like the
+gives it the ability to walk like the
+animations and stuff and you can also
+animations and stuff and you can also
+animations and stuff and you can also
+damage it this how you damage your
+damage it this how you damage your
+damage it this how you damage your
+humanoid this how you increase the walk
+humanoid this how you increase the walk
+humanoid this how you increase the walk
+speed do a bunch of things with this guy
+speed do a bunch of things with this guy
+speed do a bunch of things with this guy
+but is Buried buried beneath your
+but is Buried buried beneath your
+but is Buried buried beneath your
+character and buried beneath your player
+character and buried beneath your player
+character and buried beneath your player
+so how do we get this character in the
+so how do we get this character in the
+so how do we get this character in the
+first place like you could go into the
+first place like you could go into the
+first place like you could go into the
+workspace search by name but that
+workspace search by name but that
+workspace search by name but that
+doesn't really that doesn't sound right
+doesn't really that doesn't sound right
+doesn't really that doesn't sound right
+well if you go into your players go into
+well if you go into your players go into
+well if you go into your players go into
+your go into your player click on your
+your go into your player click on your
+your go into your player click on your
+name you can actually find a property
+name you can actually find a property
+name you can actually find a property
+called character which is a little value
+called character which is a little value
+called character which is a little value
+object value type thing that links
+object value type thing that links
+object value type thing that links
+directly to your player character and
+directly to your player character and
+directly to your player character and
+this is all knowledge that you can get
+this is all knowledge that you can get
+this is all knowledge that you can get
+from just playing around in like the
+from just playing around in like the
+from just playing around in like the
+game itself by viewing it in the
+game itself by viewing it in the
+game itself by viewing it in the
+workspace so I want to get this guy well
+workspace so I want to get this guy well
+workspace so I want to get this guy well
+how the heck am I going to do that okay
+how the heck am I going to do that okay
+how the heck am I going to do that okay
+so here we have a little script and
+so here we have a little script and
+so here we have a little script and
+server script service that checks for
+server script service that checks for
+server script service that checks for
+every player added just so we get a a
+every player added just so we get a a
+every player added just so we get a a
+free player value
+free player value
+free player value
+so let's get the humanoid now on first
+so let's get the humanoid now on first
+so let's get the humanoid now on first
+glance you should be able to say oh well
+glance you should be able to say oh well
+glance you should be able to say oh well
+I can just say local humanoid equals
+I can just say local humanoid equals
+I can just say local humanoid equals
+player. character
+player. character
+player. character
+humanoid I can do humanoid take damage
+humanoid I can do humanoid take damage
+humanoid I can do humanoid take damage
+like 100 so I can kill my my Char player
+like 100 so I can kill my my Char player
+like 100 so I can kill my my Char player
+character but this is not guaranteed to
+character but this is not guaranteed to
+character but this is not guaranteed to
+be safe look we get an air because when
+be safe look we get an air because when
+be safe look we get an air because when
+the player for sponds in their
+the player for sponds in their
+the player for sponds in their
+characters null or the character is nil
+characters null or the character is nil
+characters null or the character is nil
+it's not actually in the game so we have
+it's not actually in the game so we have
+it's not actually in the game so we have
+to be careful we have to check if our
+to be careful we have to check if our
+to be careful we have to check if our
+humanoid exists but you'll notice it
+humanoid exists but you'll notice it
+humanoid exists but you'll notice it
+says attempt to index nil with the
+says attempt to index nil with the
+says attempt to index nil with the
+humanoid this character is nil so
+humanoid this character is nil so
+humanoid this character is nil so
+there's two instances of like object
+there's two instances of like object
+there's two instances of like object
+nity in our player the character could
+nity in our player the character could
+nity in our player the character could
+be nil or the humanity could be nil how
+be nil or the humanity could be nil how
+be nil or the humanity could be nil how
+could we how could we figure this out
+could we how could we figure this out
+could we how could we figure this out
+well a naive approach would be if
+well a naive approach would be if
+well a naive approach would be if
+player. character then then we could do
+player. character then then we could do
+player. character then then we could do
+if
+if
+if
+player do character find first child
+player do character find first child
+player do character find first child
+humanoid then and then we could do
+humanoid then and then we could do
+humanoid then and then we could do
+layer.
+character. humanoid take damage
+character. humanoid take damage
+character. humanoid take damage
+100 now this would totally work but the
+100 now this would totally work but the
+100 now this would totally work but the
+issue is also we got to add a task. we
+issue is also we got to add a task. we
+issue is also we got to add a task. we
+here to wait until the humanoid actually
+here to wait until the humanoid actually
+here to wait until the humanoid actually
+is in the game because we're we are
+is in the game because we're we are
+is in the game because we're we are
+actually going to want to damage this
+actually going to want to damage this
+actually going to want to damage this
+but to get the humanoid in like this
+but to get the humanoid in like this
+but to get the humanoid in like this
+many lines this much nesting this is not
+many lines this much nesting this is not
+many lines this much nesting this is not
+good we have two nested statements this
+good we have two nested statements this
+good we have two nested statements this
+is just ugly imagine trying to get the
+is just ugly imagine trying to get the
+is just ugly imagine trying to get the
+humanoid a bunch of times in like a
+humanoid a bunch of times in like a
+humanoid a bunch of times in like a
+bunch of different functions like this
+bunch of different functions like this
+bunch of different functions like this
+is just not very readable although it
+is just not very readable although it
+is just not very readable although it
+does work but let's let's double check
+does work but let's let's double check
+does work but let's let's double check
+make sure it works real
+make sure it works real
+make sure it works real
+quick and it totally does but I don't
+quick and it totally does but I don't
+quick and it totally does but I don't
+like the look of this we can make this
+like the look of this we can make this
+like the look of this we can make this
+better okay so what do we want to do
+better okay so what do we want to do
+better okay so what do we want to do
+well we want to reduce the nesting so
+well we want to reduce the nesting so
+well we want to reduce the nesting so
+let's delete this all and
+let's delete this all and
+let's delete this all and
+instead let's do something a little
+instead let's do something a little
+instead let's do something a little
+smarter so we can say local humanoid
+equals if player. character then player.
+equals if player. character then player.
+equals if player. character then player.
+character
+character
+character
+find first child
+find first child
+find first child
+humanoid else no so what this does here
+humanoid else no so what this does here
+humanoid else no so what this does here
+is it's a way to check if the player.
+is it's a way to check if the player.
+is it's a way to check if the player.
+character exist then get the humanoid
+character exist then get the humanoid
+character exist then get the humanoid
+otherwise we give nil and notice this is
+otherwise we give nil and notice this is
+otherwise we give nil and notice this is
+after the equal sign this is an if else
+after the equal sign this is an if else
+after the equal sign this is an if else
+expression not an if else statement and
+expression not an if else statement and
+expression not an if else statement and
+this allows you to return one value like
+this allows you to return one value like
+this allows you to return one value like
+the P based on a condition and another
+the P based on a condition and another
+the P based on a condition and another
+otherwise now in the past we used to do
+otherwise now in the past we used to do
+otherwise now in the past we used to do
+this by doing player. character and
+this by doing player. character and
+this by doing player. character and
+player.
+player.
+player.
+character find first child blah blah
+character find first child blah blah
+character find first child blah blah
+blah but these days this is the more
+blah but these days this is the more
+blah but these days this is the more
+canical solution although it may be a
+canical solution although it may be a
+canical solution although it may be a
+little bit longer but this simplifies
+little bit longer but this simplifies
+little bit longer but this simplifies
+our double nested like five line long
+our double nested like five line long
+our double nested like five line long
+statement into a single statement now
+statement into a single statement now
+statement into a single statement now
+all we have to do is check if humanoid
+all we have to do is check if humanoid
+all we have to do is check if humanoid
+then we do humanoid take damage 100
+then we do humanoid take damage 100
+then we do humanoid take damage 100
+and this should work the same exact
+way and indeed it
+way and indeed it
+way and indeed it
+does now I think a lot of people would
+does now I think a lot of people would
+does now I think a lot of people would
+try to abstract this functionality into
+try to abstract this functionality into
+try to abstract this functionality into
+a separate function but in reality if
+a separate function but in reality if
+a separate function but in reality if
+you can simplify it into this oneliner
+you can simplify it into this oneliner
+you can simplify it into this oneliner
+albeit it's a quite long oneliner then
+albeit it's a quite long oneliner then
+albeit it's a quite long oneliner then
+it makes everything a little bit easier
+it makes everything a little bit easier
+it makes everything a little bit easier
+to work with so that's it that's how you
+to work with so that's it that's how you
+to work with so that's it that's how you
+get the humanoid as ainly as I can think
+get the humanoid as ainly as I can think
+get the humanoid as ainly as I can think
+and as readable as I can think because
+and as readable as I can think because
+and as readable as I can think because
+anyone looks at this and makes sense
+anyone looks at this and makes sense
+anyone looks at this and makes sense
+you're trying to get the humanoid but
+you're trying to get the humanoid but
+you're trying to get the humanoid but
+you have to go through the character
+you have to go through the character
+you have to go through the character
+first and this is all knowledge gained
+first and this is all knowledge gained
+first and this is all knowledge gained
+by just exploring the workspace
+by just exploring the workspace
+by just exploring the workspace
+exploring your player so I hope this
+exploring your player so I hope this
+exploring your player so I hope this
+helps you have a nice day and
+helps you have a nice day and
+helps you have a nice day and
+goodbye

@@ -1,0 +1,1753 @@
+unlocking objects is the backbone of any
+unlocking objects is the backbone of any
+unlocking objects is the backbone of any
+tycoon
+tycoon
+tycoon
+that's why in this video i'll show you
+that's why in this video i'll show you
+that's why in this video i'll show you
+how to
+how to
+how to
+write the code and lock and make the
+write the code and lock and make the
+write the code and lock and make the
+systems to make your tycoon
+systems to make your tycoon
+systems to make your tycoon
+have unlockable objects
+have unlockable objects
+have unlockable objects
+to allow you to progress through a
+to allow you to progress through a
+to allow you to progress through a
+tycoon and eventually
+tycoon and eventually
+tycoon and eventually
+beat it so make sure to watch the
+beat it so make sure to watch the
+beat it so make sure to watch the
+previous tycoon video
+previous tycoon video
+previous tycoon video
+to get caught up with all the progress
+to get caught up with all the progress
+to get caught up with all the progress
+we made with the component system
+we made with the component system
+we made with the component system
+because we're definitely going to be
+because we're definitely going to be
+because we're definitely going to be
+using that today
+using that today
+using that today
+and stay tuned for this video where
+and stay tuned for this video where
+and stay tuned for this video where
+we'll implement the unlockable yes and
+we'll implement the unlockable yes and
+we'll implement the unlockable yes and
+also
+also
+also
+topics to allow our tycoon components to
+topics to allow our tycoon components to
+topics to allow our tycoon components to
+communicate with each other
+communicate with each other
+communicate with each other
+and some various bits and bobs just make
+and some various bits and bobs just make
+and some various bits and bobs just make
+our tycoon better
+our tycoon better
+our tycoon better
+so like the video if you enjoy and
+so like the video if you enjoy and
+so like the video if you enjoy and
+subscribe to my channel to never miss
+subscribe to my channel to never miss
+subscribe to my channel to never miss
+another
+another
+another
+tycoon series video but without further
+tycoon series video but without further
+tycoon series video but without further
+ado
+ado
+ado
+let's get started
+so we need a way to allow
+so we need a way to allow
+so we need a way to allow
+our components to communicate in our
+our components to communicate in our
+our components to communicate in our
+tycoon so we can implement
+tycoon so we can implement
+tycoon so we can implement
+all the features in this video and then
+all the features in this video and then
+all the features in this video and then
+the upcoming videos
+the upcoming videos
+the upcoming videos
+so for that we're going to be using a
+so for that we're going to be using a
+so for that we're going to be using a
+system called like the topic
+system called like the topic
+system called like the topic
+system it's based off of the robot
+system it's based off of the robot
+system it's based off of the robot
+operating systems
+operating systems
+operating systems
+topic system and i'll link that in the
+topic system and i'll link that in the
+topic system and i'll link that in the
+description if you're interested
+description if you're interested
+description if you're interested
+and the premise is sort of like youtube
+and the premise is sort of like youtube
+and the premise is sort of like youtube
+so let's say every channel on youtube
+so let's say every channel on youtube
+so let's say every channel on youtube
+is called a topic you can subscribe to a
+is called a topic you can subscribe to a
+is called a topic you can subscribe to a
+channel so you can subscribe to a topic
+channel so you can subscribe to a topic
+channel so you can subscribe to a topic
+and then whenever the topic publishes a
+and then whenever the topic publishes a
+and then whenever the topic publishes a
+video
+video
+video
+you're more likely to see it as a
+you're more likely to see it as a
+you're more likely to see it as a
+subscriber
+subscriber
+subscriber
+this is the same exact way that our
+this is the same exact way that our
+this is the same exact way that our
+topic system is going to work we're
+topic system is going to work we're
+topic system is going to work we're
+going to have
+going to have
+going to have
+an event that will handle all of our
+an event that will handle all of our
+an event that will handle all of our
+topics going in and out
+topics going in and out
+topics going in and out
+and you'll be able to publish
+and you'll be able to publish
+and you'll be able to publish
+a topic and subscribe to a topic as a
+a topic and subscribe to a topic as a
+a topic and subscribe to a topic as a
+component
+component
+component
+so let's get started let's go to server
+so let's get started let's go to server
+so let's get started let's go to server
+script service
+script service
+script service
+then to our tycoon and now
+then to our tycoon and now
+then to our tycoon and now
+on in our tycoon dot new function
+on in our tycoon dot new function
+on in our tycoon dot new function
+we can say self
+we can say self
+we can say self
+dot underscore topic event
+dot underscore topic event
+dot underscore topic event
+equals instance dot new bindable
+equals instance dot new bindable
+equals instance dot new bindable
+event the underscore in this situation
+event the underscore in this situation
+event the underscore in this situation
+doesn't do anything it's just to let
+doesn't do anything it's just to let
+doesn't do anything it's just to let
+viewers of the script know
+viewers of the script know
+viewers of the script know
+this parameter this property should be
+this parameter this property should be
+this parameter this property should be
+private it should not be used by
+private it should not be used by
+private it should not be used by
+anything outside
+anything outside
+anything outside
+of the tycoon class and since we're
+of the tycoon class and since we're
+of the tycoon class and since we're
+creating a bindable event
+creating a bindable event
+creating a bindable event
+we want to eventually destroy it so
+we want to eventually destroy it so
+we want to eventually destroy it so
+let's go to our destroy function
+let's go to our destroy function
+let's go to our destroy function
+and say self dot underscore
+and say self dot underscore
+and say self dot underscore
+topic event destroy just to make sure
+topic event destroy just to make sure
+topic event destroy just to make sure
+everything is cleaned up
+everything is cleaned up
+everything is cleaned up
+when our tycoon is cleaned up so now
+when our tycoon is cleaned up so now
+when our tycoon is cleaned up so now
+let's add
+let's add
+let's add
+publishing and subscribing and that
+publishing and subscribing and that
+publishing and subscribing and that
+should be pretty simple as well
+should be pretty simple as well
+should be pretty simple as well
+so we're going to say function tycoon
+so we're going to say function tycoon
+so we're going to say function tycoon
+publish topic
+publish topic
+publish topic
+and it'll take in a parameter of topic
+and it'll take in a parameter of topic
+and it'll take in a parameter of topic
+name and then
+name and then
+name and then
+three dots or three periods also known
+three dots or three periods also known
+three dots or three periods also known
+as ellipses
+as ellipses
+as ellipses
+and these represent the extra parameters
+and these represent the extra parameters
+and these represent the extra parameters
+that we'll send in after the topic name
+that we'll send in after the topic name
+that we'll send in after the topic name
+and now inside of this we can simply say
+and now inside of this we can simply say
+and now inside of this we can simply say
+self
+self
+self
+topic event fire with
+topic event fire with
+topic event fire with
+topic name and the ellipses
+topic name and the ellipses
+topic name and the ellipses
+and bindable events all they do is just
+and bindable events all they do is just
+and bindable events all they do is just
+fire events they're like a touched event
+fire events they're like a touched event
+fire events they're like a touched event
+for example so
+for example so
+for example so
+if you're wondering about that that's
+if you're wondering about that that's
+if you're wondering about that that's
+just what they do and then we want to
+just what they do and then we want to
+just what they do and then we want to
+publish a topic we publish it with a
+publish a topic we publish it with a
+publish a topic we publish it with a
+name
+name
+name
+and then the extra parameters we have to
+and then the extra parameters we have to
+and then the extra parameters we have to
+encapsulate this in a function just to
+encapsulate this in a function just to
+encapsulate this in a function just to
+make it easier in case you want to
+make it easier in case you want to
+make it easier in case you want to
+change any functionality in the future
+change any functionality in the future
+change any functionality in the future
+so subscribing is going to be a little
+so subscribing is going to be a little
+so subscribing is going to be a little
+more complicated but it'll still be
+more complicated but it'll still be
+more complicated but it'll still be
+quite simple
+quite simple
+quite simple
+i'm going to say tycoon subscribe topic
+i'm going to say tycoon subscribe topic
+i'm going to say tycoon subscribe topic
+and then the topic name
+and then the topic name
+and then the topic name
+and then the callback which is going to
+and then the callback which is going to
+and then the callback which is going to
+be a function
+be a function
+be a function
+that is called when the appropriate
+that is called when the appropriate
+that is called when the appropriate
+topic name
+topic name
+topic name
+is published to and that's pretty easy
+is published to and that's pretty easy
+is published to and that's pretty easy
+to implement
+to implement
+to implement
+we can just say local connection equals
+we can just say local connection equals
+we can just say local connection equals
+self topic event
+dot event oh i spelled this wrong topic
+dot event oh i spelled this wrong topic
+dot event oh i spelled this wrong topic
+event dot event make sure to
+event dot event make sure to
+event dot event make sure to
+remember the event since we are dealing
+remember the event since we are dealing
+remember the event since we are dealing
+with a binaural event and we'll connect
+with a binaural event and we'll connect
+with a binaural event and we'll connect
+a function that'll have the parameters
+a function that'll have the parameters
+a function that'll have the parameters
+of
+of
+of
+name and then more ellipses and this
+name and then more ellipses and this
+name and then more ellipses and this
+name and ellipses corresponds to this
+name and ellipses corresponds to this
+name and ellipses corresponds to this
+when it's sent out
+when it's sent out
+when it's sent out
+so now we need to check if name equals
+so now we need to check if name equals
+so now we need to check if name equals
+topic
+topic
+topic
+name then we can call the callback by
+name then we can call the callback by
+name then we can call the callback by
+saying callback and then parentheses
+saying callback and then parentheses
+saying callback and then parentheses
+with the ellipses so whenever
+with the ellipses so whenever
+with the ellipses so whenever
+the topic that we're subscribed to is
+the topic that we're subscribed to is
+the topic that we're subscribed to is
+fired
+fired
+fired
+it will trigger our callbacks so this is
+it will trigger our callbacks so this is
+it will trigger our callbacks so this is
+just a fancier way of making a normal
+just a fancier way of making a normal
+just a fancier way of making a normal
+event
+event
+event
+and just connecting it but we don't want
+and just connecting it but we don't want
+and just connecting it but we don't want
+multiple events so it's going to be kind
+multiple events so it's going to be kind
+multiple events so it's going to be kind
+of hard to clean up so we're just
+of hard to clean up so we're just
+of hard to clean up so we're just
+sticking to one since
+sticking to one since
+sticking to one since
+we can deal with that simplicity and
+we can deal with that simplicity and
+we can deal with that simplicity and
+make sure to
+make sure to
+make sure to
+return the connection and that's just
+return the connection and that's just
+return the connection and that's just
+good for memory management and
+good for memory management and
+good for memory management and
+preventing memory leaks which you'll see
+preventing memory leaks which you'll see
+preventing memory leaks which you'll see
+in just a little bit so now we can start
+in just a little bit so now we can start
+in just a little bit so now we can start
+work
+work
+work
+on the unlockable component which is
+on the unlockable component which is
+on the unlockable component which is
+responsible for
+responsible for
+responsible for
+unlocking certain sections of the tycoon
+unlocking certain sections of the tycoon
+unlocking certain sections of the tycoon
+when we need it when do we like press a
+when we need it when do we like press a
+when we need it when do we like press a
+button or something like that
+button or something like that
+button or something like that
+so let's follow our normal
+so let's follow our normal
+so let's follow our normal
+component creation cycle by taking our
+component creation cycle by taking our
+component creation cycle by taking our
+template in server storage
+template in server storage
+template in server storage
+dragging it to our workspace let me go
+dragging it to our workspace let me go
+dragging it to our workspace let me go
+to our workspace
+to our workspace
+to our workspace
+and then we can create a new tag if you
+and then we can create a new tag if you
+and then we can create a new tag if you
+can't see the tag editor go to
+can't see the tag editor go to
+can't see the tag editor go to
+plugins and then tag window
+plugins and then tag window
+plugins and then tag window
+and i'm going to add a new tag and call
+and i'm going to add a new tag and call
+and i'm going to add a new tag and call
+this tag unlockable
+this tag unlockable
+this tag unlockable
+and by the way in the previous clips if
+and by the way in the previous clips if
+and by the way in the previous clips if
+you saw this unlockable that was just
+you saw this unlockable that was just
+you saw this unlockable that was just
+from
+from
+from
+earlier testing so ignore that let's say
+earlier testing so ignore that let's say
+earlier testing so ignore that let's say
+we're creating it from new here
+we're creating it from new here
+we're creating it from new here
+and now we can select our part
+and now we can select our part
+and now we can select our part
+by going into our template and selecting
+by going into our template and selecting
+by going into our template and selecting
+the port and then click
+the port and then click
+the port and then click
+on the unlockable and the reason i'm
+on the unlockable and the reason i'm
+on the unlockable and the reason i'm
+doing it to our test part from last
+doing it to our test part from last
+doing it to our test part from last
+video
+video
+video
+is to showcase how we can have multiple
+is to showcase how we can have multiple
+is to showcase how we can have multiple
+components on a single
+components on a single
+components on a single
+part which is really cool and now that
+part which is really cool and now that
+part which is really cool and now that
+it's tagged you can see that because
+it's tagged you can see that because
+it's tagged you can see that because
+both these are highlighted
+both these are highlighted
+both these are highlighted
+take the template and put it back into
+take the template and put it back into
+take the template and put it back into
+server storage
+server storage
+server storage
+let's go back into our tycoon actually
+let's go back into our tycoon actually
+let's go back into our tycoon actually
+let's go
+let's go
+let's go
+into our component folder and create a
+into our component folder and create a
+into our component folder and create a
+module script within that
+module script within that
+module script within that
+and i'll name this module script
+and i'll name this module script
+and i'll name this module script
+unlockable and the reason it seems
+unlockable and the reason it seems
+unlockable and the reason it seems
+unlockable because it's something that
+unlockable because it's something that
+unlockable because it's something that
+can be unlocked
+can be unlocked
+can be unlocked
+if that makes sense and then inside here
+if that makes sense and then inside here
+if that makes sense and then inside here
+we can just say unlockable
+we can just say unlockable
+we can just say unlockable
+unlockable let me zoom in real quick and
+unlockable let me zoom in real quick and
+unlockable let me zoom in real quick and
+that'll just replace everything
+that'll just replace everything
+that'll just replace everything
+and then we can make a normal object
+and then we can make a normal object
+and then we can make a normal object
+oriented class by saying unlockable
+oriented class by saying unlockable
+oriented class by saying unlockable
+dot underscore underscore index equals
+dot underscore underscore index equals
+dot underscore underscore index equals
+unlockable
+unlockable
+unlockable
+and then by making a function unlockable
+and then by making a function unlockable
+and then by making a function unlockable
+dot new
+dot new
+dot new
+which will take in the tycoon and the
+which will take in the tycoon and the
+which will take in the tycoon and the
+instance and which is bound to
+instance and which is bound to
+instance and which is bound to
+which in our case is going to be that
+which in our case is going to be that
+which in our case is going to be that
+part that we tagged earlier
+part that we tagged earlier
+part that we tagged earlier
+and we can just find self by saying
+and we can just find self by saying
+and we can just find self by saying
+local self equal set
+local self equal set
+local self equal set
+meta table
+meta table
+meta table
+and then with a blank table and
+and then with a blank table and
+and then with a blank table and
+unlockable as the parameters
+unlockable as the parameters
+unlockable as the parameters
+then we can return self don't forget to
+then we can return self don't forget to
+then we can return self don't forget to
+do that
+do that
+do that
+and we're going to need to use the
+and we're going to need to use the
+and we're going to need to use the
+tycoon and the instance later so i'm
+tycoon and the instance later so i'm
+tycoon and the instance later so i'm
+just going to self.tycoon
+just going to self.tycoon
+just going to self.tycoon
+equals tycoon and then self.instance
+equals tycoon and then self.instance
+equals tycoon and then self.instance
+equals instance that's just for later
+equals instance that's just for later
+equals instance that's just for later
+use and by later use i mean
+use and by later use i mean
+use and by later use i mean
+over here and the function unlockable
+over here and the function unlockable
+over here and the function unlockable
+init so in our init function we want to
+init so in our init function we want to
+init so in our init function we want to
+hook the unlockable to
+hook the unlockable to
+hook the unlockable to
+a topic and we can do that by saying
+a topic and we can do that by saying
+a topic and we can do that by saying
+self.subscription
+self.subscription
+self.subscription
+equals self.tycoon
+equals self.tycoon
+equals self.tycoon
+so scribe topic
+so scribe topic
+so scribe topic
+and then our topic name is going to be
+and then our topic name is going to be
+and then our topic name is going to be
+button
+button
+button
+and then a function with ellipses
+and then a function with ellipses
+and then a function with ellipses
+and then enter and all this is going to
+and then enter and all this is going to
+and then enter and all this is going to
+do
+do
+do
+is hook up to another function that
+is hook up to another function that
+is hook up to another function that
+we'll define down here
+we'll define down here
+we'll define down here
+function unlockable on
+function unlockable on
+function unlockable on
+button pressed that will take in
+button pressed that will take in
+button pressed that will take in
+a parameter of id and then up here we
+a parameter of id and then up here we
+a parameter of id and then up here we
+can say
+can say
+can say
+self on button
+self on button
+self on button
+pressed and pass in the ellipses
+pressed and pass in the ellipses
+pressed and pass in the ellipses
+so really i could just say id here but
+so really i could just say id here but
+so really i could just say id here but
+this is more symbolic saying
+this is more symbolic saying
+this is more symbolic saying
+all this init is doing is hooking up our
+all this init is doing is hooking up our
+all this init is doing is hooking up our
+function
+function
+function
+to hooking up our topic i should say to
+to hooking up our topic i should say to
+to hooking up our topic i should say to
+this function it doesn't have to know
+this function it doesn't have to know
+this function it doesn't have to know
+the parameters it just has to pass them
+the parameters it just has to pass them
+the parameters it just has to pass them
+on
+on
+on
+really i'd like just to connect it
+really i'd like just to connect it
+really i'd like just to connect it
+straight to on button press but sadly in
+straight to on button press but sadly in
+straight to on button press but sadly in
+lua you can't
+lua you can't
+lua you can't
+do that without losing this variable
+do that without losing this variable
+do that without losing this variable
+self which is really annoying but
+self which is really annoying but
+self which is really annoying but
+just got to do it and so what we're
+just got to do it and so what we're
+just got to do it and so what we're
+doing here is we're saving our
+doing here is we're saving our
+doing here is we're saving our
+subscription which is the connection
+subscription which is the connection
+subscription which is the connection
+that we
+that we
+that we
+talked about earlier we can just call it
+talked about earlier we can just call it
+talked about earlier we can just call it
+subscription and we're subscribing to
+subscription and we're subscribing to
+subscription and we're subscribing to
+the button topic so whatever a button is
+the button topic so whatever a button is
+the button topic so whatever a button is
+pressed that will implement in
+pressed that will implement in
+pressed that will implement in
+next video i believe it will
+next video i believe it will
+next video i believe it will
+fire this out and this will connect to
+fire this out and this will connect to
+fire this out and this will connect to
+it and call the on button press function
+it and call the on button press function
+it and call the on button press function
+so what exactly
+so what exactly
+so what exactly
+does this function have to do it has to
+does this function have to do it has to
+does this function have to do it has to
+compare
+compare
+compare
+the id that's given so each button in
+the id that's given so each button in
+the id that's given so each button in
+our tycoon will have
+our tycoon will have
+our tycoon will have
+an id and each unlockable
+an id and each unlockable
+an id and each unlockable
+and its instance will have a respective
+and its instance will have a respective
+and its instance will have a respective
+unlock id
+unlock id
+unlock id
+so whenever a button fires with a
+so whenever a button fires with a
+so whenever a button fires with a
+certain id
+certain id
+certain id
+if the unlock id of our current item
+if the unlock id of our current item
+if the unlock id of our current item
+matches it or current part i should say
+matches it or current part i should say
+matches it or current part i should say
+then we'll unlock it and the reason the
+then we'll unlock it and the reason the
+then we'll unlock it and the reason the
+way we'll be storing these
+way we'll be storing these
+way we'll be storing these
+ids is using attributes so let me drag
+ids is using attributes so let me drag
+ids is using attributes so let me drag
+the template back into the workspace
+the template back into the workspace
+the template back into the workspace
+and go back to our unlockable part i'm
+and go back to our unlockable part i'm
+and go back to our unlockable part i'm
+going to go to the properties window
+going to go to the properties window
+going to go to the properties window
+scroll the way down
+scroll the way down
+scroll the way down
+and go to attributes you see this little
+and go to attributes you see this little
+and go to attributes you see this little
+attributes right here
+attributes right here
+attributes right here
+and then i can click add attribute it'll
+and then i can click add attribute it'll
+and then i can click add attribute it'll
+be a string and i'll call it
+be a string and i'll call it
+be a string and i'll call it
+unlock id so each unlockable will need
+unlock id so each unlockable will need
+unlock id so each unlockable will need
+this attribute unlock id and it's just a
+this attribute unlock id and it's just a
+this attribute unlock id and it's just a
+string it's an id you can name whatever
+string it's an id you can name whatever
+string it's an id you can name whatever
+you want i'm going to say
+you want i'm going to say
+you want i'm going to say
+i'm just going to name this basic
+i'm just going to name this basic
+i'm just going to name this basic
+part so whenever we fire a topic
+part so whenever we fire a topic
+part so whenever we fire a topic
+under the button topic that has a
+under the button topic that has a
+under the button topic that has a
+parameter of
+parameter of
+parameter of
+basic part as a string we want our
+basic part as a string we want our
+basic part as a string we want our
+unlockable to unlock
+unlockable to unlock
+unlockable to unlock
+so in here i'll say if id equals
+so in here i'll say if id equals
+so in here i'll say if id equals
+self.instance
+self.instance
+self.instance
+which in our case will be the part get
+which in our case will be the part get
+which in our case will be the part get
+attribute which is the attribute section
+attribute which is the attribute section
+attribute which is the attribute section
+down here
+down here
+down here
+and the string attribute name is the
+and the string attribute name is the
+and the string attribute name is the
+unlock
+unlock
+unlock
+id so if our id equals our unlock id
+id so if our id equals our unlock id
+id so if our id equals our unlock id
+then we want to unlock
+then we want to unlock
+then we want to unlock
+the part that we have in our tycoon so
+the part that we have in our tycoon so
+the part that we have in our tycoon so
+let me drag
+let me drag
+let me drag
+the template back into server storage
+the template back into server storage
+the template back into server storage
+and in order to implement this unlock
+and in order to implement this unlock
+and in order to implement this unlock
+functionality we're having
+functionality we're having
+functionality we're having
+we're going to have to go back to our
+we're going to have to go back to our
+we're going to have to go back to our
+tycoon module script
+tycoon module script
+tycoon module script
+so coming to this module script has
+so coming to this module script has
+so coming to this module script has
+brought up
+brought up
+brought up
+another interesting point the parts
+another interesting point the parts
+another interesting point the parts
+that are unlockable that can be unlocked
+that are unlockable that can be unlocked
+that are unlockable that can be unlocked
+and our tycoon never actually are locked
+and our tycoon never actually are locked
+and our tycoon never actually are locked
+in the first place so before we finish
+in the first place so before we finish
+in the first place so before we finish
+our unlockable implementation
+our unlockable implementation
+our unlockable implementation
+we actually need to make our parts lock
+we actually need to make our parts lock
+we actually need to make our parts lock
+first and that's actually quite simple
+first and that's actually quite simple
+first and that's actually quite simple
+so first function i'm going to define
+so first function i'm going to define
+so first function i'm going to define
+underneath tycoon init is going to be
+underneath tycoon init is going to be
+underneath tycoon init is going to be
+called
+called
+called
+tycoon lock and it'll take in the
+tycoon lock and it'll take in the
+tycoon lock and it'll take in the
+instance
+instance
+instance
+in which you want to lock so
+in which you want to lock so
+in which you want to lock so
+basically all we have to do is just put
+basically all we have to do is just put
+basically all we have to do is just put
+it somewhere so i'm gonna go make a
+it somewhere so i'm gonna go make a
+it somewhere so i'm gonna go make a
+folder in server storage
+folder in server storage
+folder in server storage
+and name this folder like tycoon storage
+and name this folder like tycoon storage
+and name this folder like tycoon storage
+and then up at the very top of our
+and then up at the very top of our
+and then up at the very top of our
+script i can say
+script i can say
+script i can say
+local tycoon storage equals game
+local tycoon storage equals game
+local tycoon storage equals game
+get service server storage
+get service server storage
+get service server storage
+dot tycoon storage
+dot tycoon storage
+dot tycoon storage
+and then i can say tycoon storage
+or i can just say instance dot parent
+or i can just say instance dot parent
+or i can just say instance dot parent
+equals tycoon storage so this may seem a
+equals tycoon storage so this may seem a
+equals tycoon storage so this may seem a
+little
+little
+little
+counterproductive like why do we spawn
+counterproductive like why do we spawn
+counterproductive like why do we spawn
+it in and then instantly
+it in and then instantly
+it in and then instantly
+parent it it's just so it retains the
+parent it it's just so it retains the
+parent it it's just so it retains the
+positional data that is received by
+positional data that is received by
+positional data that is received by
+setting the primary
+setting the primary
+setting the primary
+part c frame trust me i've tried more
+part c frame trust me i've tried more
+part c frame trust me i've tried more
+like performant
+like performant
+like performant
+and simpler seaming methods but they
+and simpler seaming methods but they
+and simpler seaming methods but they
+require a lot more
+require a lot more
+require a lot more
+programming overhead that was beyond the
+programming overhead that was beyond the
+programming overhead that was beyond the
+scope
+scope
+scope
+of this series so we're just going to
+of this series so we're just going to
+of this series so we're just going to
+set the instance parent to
+set the instance parent to
+set the instance parent to
+our tycoon storage and we also want our
+our tycoon storage and we also want our
+our tycoon storage and we also want our
+locked instance to
+locked instance to
+locked instance to
+listen for when it should be unlocked in
+listen for when it should be unlocked in
+listen for when it should be unlocked in
+order to do that
+order to do that
+order to do that
+we're going to call self create
+we're going to call self create
+we're going to call self create
+component
+instance and we can just say components
+instance and we can just say components
+instance and we can just say components
+folder dot
+folder dot
+folder dot
+unlockable we don't really have to do
+unlockable we don't really have to do
+unlockable we don't really have to do
+add components because we don't want
+add components because we don't want
+add components because we don't want
+like for example if a dropper is in
+like for example if a dropper is in
+like for example if a dropper is in
+tycoon storage we don't want it to
+tycoon storage we don't want it to
+tycoon storage we don't want it to
+actively be dropping items while it's
+actively be dropping items while it's
+actively be dropping items while it's
+just sitting there all we want to do
+just sitting there all we want to do
+just sitting there all we want to do
+is for it to listen and in order to
+is for it to listen and in order to
+is for it to listen and in order to
+sort all of our tycoon objects because
+sort all of our tycoon objects because
+sort all of our tycoon objects because
+some of them will be locked off the
+some of them will be locked off the
+some of them will be locked off the
+start some of them will be unlocked off
+start some of them will be unlocked off
+start some of them will be unlocked off
+the start like the base that we have
+the start like the base that we have
+the start like the base that we have
+right now
+right now
+right now
+we can define another function and this
+we can define another function and this
+we can define another function and this
+will be named
+will be named
+will be named
+function tycoon lock
+function tycoon lock
+function tycoon lock
+all and then inside here we want to
+all and then inside here we want to
+all and then inside here we want to
+run through all the instances are of our
+run through all the instances are of our
+run through all the instances are of our
+tycoon by saying for
+tycoon by saying for
+tycoon by saying for
+underscore instance in
+underscore instance in
+underscore instance in
+ipairs self.model
+ipairs self.model
+ipairs self.model
+get descendants and then do
+get descendants and then do
+get descendants and then do
+and i'm just using ipad since it's an
+and i'm just using ipad since it's an
+and i'm just using ipad since it's an
+array and this underscore
+array and this underscore
+array and this underscore
+is just because i'm not using the value
+is just because i'm not using the value
+is just because i'm not using the value
+of the index
+of the index
+of the index
+and then in here we can say if
+and then in here we can say if
+and then in here we can say if
+collection service
+collection service
+collection service
+has tag the instance
+has tag the instance
+has tag the instance
+that we're running through and then the
+that we're running through and then the
+that we're running through and then the
+tag of unlockable
+tag of unlockable
+tag of unlockable
+which is a string then we want to
+which is a string then we want to
+which is a string then we want to
+lock it so self lock instance so
+lock it so self lock instance so
+lock it so self lock instance so
+if this component or not component
+if this component or not component
+if this component or not component
+this part or item of our tycoon has the
+this part or item of our tycoon has the
+this part or item of our tycoon has the
+component
+component
+component
+unlockable it's not unlocked yet so we
+unlockable it's not unlocked yet so we
+unlockable it's not unlocked yet so we
+need to lock it
+need to lock it
+need to lock it
+so it can be unlocked in the future
+so it can be unlocked in the future
+so it can be unlocked in the future
+and then for all other parts we just
+and then for all other parts we just
+and then for all other parts we just
+want to
+want to
+want to
+unlock them and leave them unlocked and
+unlock them and leave them unlocked and
+unlock them and leave them unlocked and
+since they're already being spawned in
+since they're already being spawned in
+since they're already being spawned in
+and put in the workspace as defined by
+and put in the workspace as defined by
+and put in the workspace as defined by
+our
+our
+our
+new model function here all we have to
+new model function here all we have to
+new model function here all we have to
+do is give it components so you can do
+do is give it components so you can do
+do is give it components so you can do
+that by saying self
+that by saying self
+that by saying self
+add components to our instance
+add components to our instance
+add components to our instance
+and right now this obviously does
+and right now this obviously does
+and right now this obviously does
+nothing with our current template
+nothing with our current template
+nothing with our current template
+because the base does not have any
+because the base does not have any
+because the base does not have any
+components so therefore this add
+components so therefore this add
+components so therefore this add
+components won't
+components won't
+components won't
+add anything but for future things like
+add anything but for future things like
+add anything but for future things like
+droppers and
+droppers and
+droppers and
+buttons it will work just fine
+and so now we can go up to our init or
+and so now we can go up to our init or
+and so now we can go up to our init or
+tycoon init
+tycoon init
+tycoon init
+delete the line where we added the
+delete the line where we added the
+delete the line where we added the
+component because we already have the
+component because we already have the
+component because we already have the
+add component stuff the
+add component stuff the
+add component stuff the
+here and when it will unlock we'll
+here and when it will unlock we'll
+here and when it will unlock we'll
+eventually add the rest of the
+eventually add the rest of the
+eventually add the rest of the
+components we'll do that a little bit
+components we'll do that a little bit
+components we'll do that a little bit
+later
+later
+later
+but for now let's test the lock all
+but for now let's test the lock all
+but for now let's test the lock all
+functionality by calling self
+functionality by calling self
+functionality by calling self
+lock all and if we run this
+you can see the tycoon plate
+you can see the tycoon plate
+you can see the tycoon plate
+is here but the part is not
+is here but the part is not
+is here but the part is not
+so i'm going to go to home and then go
+so i'm going to go to home and then go
+so i'm going to go to home and then go
+press the current client button
+press the current client button
+press the current client button
+it'll change this to the server and
+it'll change this to the server and
+it'll change this to the server and
+let's go check tycoon storage and our
+let's go check tycoon storage and our
+let's go check tycoon storage and our
+part
+part
+part
+is here it is ready and waiting for the
+is here it is ready and waiting for the
+is here it is ready and waiting for the
+unlock id
+unlock id
+unlock id
+to occur or to be called with our
+to occur or to be called with our
+to occur or to be called with our
+topic so now let's implement that
+topic so now let's implement that
+topic so now let's implement that
+functionality
+functionality
+functionality
+the actual unlocking so
+the actual unlocking so
+the actual unlocking so
+underneath our tycoon lock
+underneath our tycoon lock
+underneath our tycoon lock
+i'm going to make a function that is
+i'm going to make a function that is
+i'm going to make a function that is
+going to be aptly named
+going to be aptly named
+going to be aptly named
+tycoon unlock inside here
+tycoon unlock inside here
+tycoon unlock inside here
+we're going to take the parameter of the
+we're going to take the parameter of the
+we're going to take the parameter of the
+unlockable component
+unlockable component
+unlockable component
+that in which it wants to unlock and
+that in which it wants to unlock and
+that in which it wants to unlock and
+then the id
+then the id
+then the id
+or unlock id i guess i should say that
+or unlock id i guess i should say that
+or unlock id i guess i should say that
+we want to unlock
+we want to unlock
+we want to unlock
+now all we have to do in here is just
+now all we have to do in here is just
+now all we have to do in here is just
+say local instance
+say local instance
+say local instance
+equals unlockable dot instance this is
+equals unlockable dot instance this is
+equals unlockable dot instance this is
+just a helper
+just a helper
+just a helper
+it's easier to reference this instead of
+it's easier to reference this instead of
+it's easier to reference this instead of
+these two words with a thought
+these two words with a thought
+these two words with a thought
+so it just makes it easier and then the
+so it just makes it easier and then the
+so it just makes it easier and then the
+first thing we want to do and this is
+first thing we want to do and this is
+first thing we want to do and this is
+very very important is say collection
+very very important is say collection
+very very important is say collection
+service
+service
+service
+remove tag from our instance
+remove tag from our instance
+remove tag from our instance
+which is going to be the unlockable tag
+which is going to be the unlockable tag
+which is going to be the unlockable tag
+so two parameters
+so two parameters
+so two parameters
+is instance unlockable the reason we're
+is instance unlockable the reason we're
+is instance unlockable the reason we're
+doing this is because
+doing this is because
+doing this is because
+eventually in like two lines we're going
+eventually in like two lines we're going
+eventually in like two lines we're going
+to
+to
+to
+add components to our instance and this
+add components to our instance and this
+add components to our instance and this
+ad components is
+ad components is
+ad components is
+indiscriminate if it sees an unlockable
+indiscriminate if it sees an unlockable
+indiscriminate if it sees an unlockable
+even though
+even though
+even though
+we're done with it it'll create another
+we're done with it it'll create another
+we're done with it it'll create another
+unlockable
+unlockable
+unlockable
+which that's not good we don't want a
+which that's not good we don't want a
+which that's not good we don't want a
+random component just sitting around
+random component just sitting around
+random component just sitting around
+on our part when we don't need it
+on our part when we don't need it
+on our part when we don't need it
+because the unlockable after this
+because the unlockable after this
+because the unlockable after this
+stuff is unlocked is not used anymore so
+stuff is unlocked is not used anymore so
+stuff is unlocked is not used anymore so
+why would we create it when we add
+why would we create it when we add
+why would we create it when we add
+components down the line
+components down the line
+components down the line
+that's why we have to remove it so the
+that's why we have to remove it so the
+that's why we have to remove it so the
+ad components knows
+ad components knows
+ad components knows
+not to put it down and underneath
+not to put it down and underneath
+not to put it down and underneath
+our removal we can just say
+our removal we can just say
+our removal we can just say
+self add components
+instance and it will add all the
+instance and it will add all the
+instance and it will add all the
+components except
+components except
+components except
+are unlockable which is exactly what we
+are unlockable which is exactly what we
+are unlockable which is exactly what we
+want and then all we have to do
+want and then all we have to do
+want and then all we have to do
+here is just set the instance dot parent
+here is just set the instance dot parent
+here is just set the instance dot parent
+equal to self
+equal to self
+equal to self
+dot model which will effectively make it
+dot model which will effectively make it
+dot model which will effectively make it
+appear
+appear
+appear
+in front of us when we unlock it
+in front of us when we unlock it
+in front of us when we unlock it
+you could also make a cool animation for
+you could also make a cool animation for
+you could also make a cool animation for
+to spawn in but that's
+to spawn in but that's
+to spawn in but that's
+up to you you can do that this is more
+up to you you can do that this is more
+up to you you can do that this is more
+for programming and just getting things
+for programming and just getting things
+for programming and just getting things
+done
+done
+done
+but in the future if you want that then
+but in the future if you want that then
+but in the future if you want that then
+comment down below
+comment down below
+comment down below
+so now we can finish our unlockable
+so now we can finish our unlockable
+so now we can finish our unlockable
+component let's go to our unlockable and
+component let's go to our unlockable and
+component let's go to our unlockable and
+underneath or inside of if statement we
+underneath or inside of if statement we
+underneath or inside of if statement we
+can say
+can say
+can say
+self.tycoon unlock
+self.tycoon unlock
+self.tycoon unlock
+and then the unlock takes the unlockable
+and then the unlock takes the unlockable
+and then the unlock takes the unlockable
+and the id
+and the id
+and the id
+so for the unlockable we can just say
+so for the unlockable we can just say
+so for the unlockable we can just say
+self
+self
+self
+and then for the id we can just say
+and then for the id we can just say
+and then for the id we can just say
+our id that we get honestly now that i
+our id that we get honestly now that i
+our id that we get honestly now that i
+think about it
+think about it
+think about it
+we don't even need to send the
+we don't even need to send the
+we don't even need to send the
+unlockable all we have to do is send the
+unlockable all we have to do is send the
+unlockable all we have to do is send the
+instance so i can just say self.instance
+instance so i can just say self.instance
+instance so i can just say self.instance
+and go back to our tycoon and then
+and go back to our tycoon and then
+and go back to our tycoon and then
+change this unlockable
+change this unlockable
+change this unlockable
+to instance and then delete this line
+to instance and then delete this line
+to instance and then delete this line
+it's kind of funny that i just thought
+it's kind of funny that i just thought
+it's kind of funny that i just thought
+of this now
+of this now
+of this now
+don't mind that little hiccup this
+don't mind that little hiccup this
+don't mind that little hiccup this
+should work the same way but just a
+should work the same way but just a
+should work the same way but just a
+little more efficient
+little more efficient
+little more efficient
+so let's leave it there and then once
+so let's leave it there and then once
+so let's leave it there and then once
+we've unlocked
+we've unlocked
+we've unlocked
+our part the unlockables jobs is done
+our part the unlockables jobs is done
+our part the unlockables jobs is done
+so therefore there's no point for it to
+so therefore there's no point for it to
+so therefore there's no point for it to
+be subscribed to
+be subscribed to
+be subscribed to
+our button topic anymore and then all we
+our button topic anymore and then all we
+our button topic anymore and then all we
+have to do is just say self.subscription
+have to do is just say self.subscription
+have to do is just say self.subscription
+disconnect so it does not listen to
+disconnect so it does not listen to
+disconnect so it does not listen to
+our button topic anymore just to keep
+our button topic anymore just to keep
+our button topic anymore just to keep
+things
+things
+things
+nice clean and simple so let's
+nice clean and simple so let's
+nice clean and simple so let's
+play and see if it works
+and there's no errors but obviously
+and there's no errors but obviously
+and there's no errors but obviously
+since we're not
+since we're not
+since we're not
+publishing any events it won't really do
+publishing any events it won't really do
+publishing any events it won't really do
+anything
+anything
+anything
+so let's do that now i'm going to put it
+so let's do that now i'm going to put it
+so let's do that now i'm going to put it
+in
+in
+in
+tycoon init this should work we're just
+tycoon init this should work we're just
+tycoon init this should work we're just
+going to wait
+going to wait
+going to wait
+like three seconds and then call self
+like three seconds and then call self
+like three seconds and then call self
+publish topic
+under button and the id is going to be
+under button and the id is going to be
+under button and the id is going to be
+basic
+basic
+basic
+part so let me double check in our
+part so let me double check in our
+part so let me double check in our
+template
+template
+template
+the id the unlock id is indeed basic
+the id the unlock id is indeed basic
+the id the unlock id is indeed basic
+part
+part
+part
+so this should work perfectly fine so
+so this should work perfectly fine so
+so this should work perfectly fine so
+let's play it
+and if we wait three seconds you can see
+and if we wait three seconds you can see
+and if we wait three seconds you can see
+the part appears and it says test was
+the part appears and it says test was
+the part appears and it says test was
+initialized
+initialized
+initialized
+and that just shows you how just with
+and that just shows you how just with
+and that just shows you how just with
+that
+that
+that
+this code is 26 27 lines of code i mean
+this code is 26 27 lines of code i mean
+this code is 26 27 lines of code i mean
+not mining the tycoon code obviously
+not mining the tycoon code obviously
+not mining the tycoon code obviously
+we've created a new component
+we've created a new component
+we've created a new component
+that unlocks parts in our tycoon and
+that unlocks parts in our tycoon and
+that unlocks parts in our tycoon and
+then the other component from last video
+then the other component from last video
+then the other component from last video
+works seamlessly with this new system
+works seamlessly with this new system
+works seamlessly with this new system
+because it's unaware of what it
+because it's unaware of what it
+because it's unaware of what it
+what happened it doesn't even care that
+what happened it doesn't even care that
+what happened it doesn't even care that
+it's been unlocked it just knows it's
+it's been unlocked it just knows it's
+it's been unlocked it just knows it's
+been created
+been created
+been created
+and executes normally so that's is
+and executes normally so that's is
+and executes normally so that's is
+excellent
+excellent
+excellent
+so that's it for this video we got a lot
+so that's it for this video we got a lot
+so that's it for this video we got a lot
+done
+done
+done
+today we got topics done we have our
+today we got topics done we have our
+today we got topics done we have our
+unlockable and all of its respective
+unlockable and all of its respective
+unlockable and all of its respective
+functionality within the tycoon module
+functionality within the tycoon module
+functionality within the tycoon module
+this is the backbone of the entire
+this is the backbone of the entire
+this is the backbone of the entire
+tycoon and all we have to do now
+tycoon and all we have to do now
+tycoon and all we have to do now
+is just add more features so in the next
+is just add more features so in the next
+is just add more features so in the next
+video we'll add the button
+video we'll add the button
+video we'll add the button
+and some other stuff and then we'll
+and some other stuff and then we'll
+and some other stuff and then we'll
+continue adding more and more components
+continue adding more and more components
+continue adding more and more components
+that can be unlocked dynamically
+that can be unlocked dynamically
+that can be unlocked dynamically
+in the future so i hope you enjoyed make
+in the future so i hope you enjoyed make
+in the future so i hope you enjoyed make
+sure to subscribe to my channel
+sure to subscribe to my channel
+sure to subscribe to my channel
+if you did and like the video if you
+if you did and like the video if you
+if you did and like the video if you
+enjoyed it
+enjoyed it
+enjoyed it
+comment any questions or suggestions
+comment any questions or suggestions
+comment any questions or suggestions
+down below
+down below
+down below
+and i'll put the code in the description
+and i'll put the code in the description
+and i'll put the code in the description
+if i
+if i
+if i
+remember because last time i kind of
+remember because last time i kind of
+remember because last time i kind of
+didn't and i had to do it later
+didn't and i had to do it later
+didn't and i had to do it later
+but other than that i hope you have a
+but other than that i hope you have a
+but other than that i hope you have a
+nice day and goodbye
+[Music]
+you

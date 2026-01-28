@@ -1,0 +1,639 @@
+welcome to another tallest tower
+welcome to another tallest tower
+welcome to another tallest tower
+devlog in this video i do some
+devlog in this video i do some
+devlog in this video i do some
+improvements to my game and then
+improvements to my game and then
+improvements to my game and then
+play test it with my friends and the
+play test it with my friends and the
+play test it with my friends and the
+play testing
+play testing
+play testing
+was very interesting i'll talk about
+was very interesting i'll talk about
+was very interesting i'll talk about
+that later in the video
+that later in the video
+that later in the video
+make sure to watch it because it just
+make sure to watch it because it just
+make sure to watch it because it just
+shows you about the game design process
+shows you about the game design process
+shows you about the game design process
+and if you like this video make sure to
+and if you like this video make sure to
+and if you like this video make sure to
+like and subscribe
+like and subscribe
+like and subscribe
+join my discord server link is in the
+join my discord server link is in the
+join my discord server link is in the
+description
+description
+description
+but without further ado let's get into
+but without further ado let's get into
+but without further ado let's get into
+the video
+[Music]
+[Music]
+[Music]
+so the first thing i want to do is
+so the first thing i want to do is
+so the first thing i want to do is
+create a podium
+create a podium
+create a podium
+so that the winner with the tallest
+so that the winner with the tallest
+so that the winner with the tallest
+tower can stand on it
+tower can stand on it
+tower can stand on it
+and done so here you have the basic
+and done so here you have the basic
+and done so here you have the basic
+podium looks kind of ugly but
+podium looks kind of ugly but
+podium looks kind of ugly but
+i'll fix that later and a cool thing
+i'll fix that later and a cool thing
+i'll fix that later and a cool thing
+about this
+about this
+about this
+is there's a little wall here so the
+is there's a little wall here so the
+is there's a little wall here so the
+player will
+player will
+player will
+get dropped off like right here the
+get dropped off like right here the
+get dropped off like right here the
+winning player and they'll be able to
+winning player and they'll be able to
+winning player and they'll be able to
+celebrate emo whatever in the bounds of
+celebrate emo whatever in the bounds of
+celebrate emo whatever in the bounds of
+the wall so just give you a little more
+the wall so just give you a little more
+the wall so just give you a little more
+freedom
+freedom
+freedom
+in your celebration sort of like rocket
+in your celebration sort of like rocket
+in your celebration sort of like rocket
+league celebrations if you've ever
+league celebrations if you've ever
+league celebrations if you've ever
+played that game
+played that game
+played that game
+but and that podium was looking
+but and that podium was looking
+but and that podium was looking
+kinda lonely so i programmed some
+kinda lonely so i programmed some
+kinda lonely so i programmed some
+functionality
+functionality
+functionality
+that makes it filled
+that makes it filled
+that makes it filled
+with a player so here i am i can jump
+with a player so here i am i can jump
+with a player so here i am i can jump
+around i can celebrate
+around i can celebrate
+around i can celebrate
+the ceiling's a little too low but yeah
+the ceiling's a little too low but yeah
+the ceiling's a little too low but yeah
+so that works pretty well i can jump i
+so that works pretty well i can jump i
+so that works pretty well i can jump i
+can celebrate and it teleports your
+can celebrate and it teleports your
+can celebrate and it teleports your
+camera over there so
+camera over there so
+camera over there so
+everyone can see it and you also saw
+everyone can see it and you also saw
+everyone can see it and you also saw
+just there how the game loop
+just there how the game loop
+just there how the game loop
+worked just seamlessly after i
+worked just seamlessly after i
+worked just seamlessly after i
+celebrated i got killed which i might
+celebrated i got killed which i might
+celebrated i got killed which i might
+need to fix that like make it a little
+need to fix that like make it a little
+need to fix that like make it a little
+less graphic because it looks kind of
+less graphic because it looks kind of
+less graphic because it looks kind of
+stupid
+stupid
+stupid
+when you're like watching the guy and
+when you're like watching the guy and
+when you're like watching the guy and
+then he just suddenly dies
+then he just suddenly dies
+then he just suddenly dies
+but after that you get teleported to the
+but after that you get teleported to the
+but after that you get teleported to the
+lobby again
+lobby again
+lobby again
+and then the game will start again
+and then the game will start again
+and then the game will start again
+i don't know why this part stayed there
+i don't know why this part stayed there
+i don't know why this part stayed there
+that is a bug but we'll fix that
+that is a bug but we'll fix that
+that is a bug but we'll fix that
+so now that i have the base game done
+so now that i have the base game done
+so now that i have the base game done
+i'm going to get a little decorating
+i'm going to get a little decorating
+i'm going to get a little decorating
+done
+done
+done
+so it doesn't look as ugly
+so i added a few visual improvements
+so i added a few visual improvements
+so i added a few visual improvements
+originally i tried messing around with
+originally i tried messing around with
+originally i tried messing around with
+like messy meshes or something
+like messy meshes or something
+like messy meshes or something
+and like that was a little too laggy so
+and like that was a little too laggy so
+and like that was a little too laggy so
+i just went for something simple i
+i just went for something simple i
+i just went for something simple i
+changed it to grass
+changed it to grass
+changed it to grass
+which looks a lot better doesn't really
+which looks a lot better doesn't really
+which looks a lot better doesn't really
+fit the theme
+fit the theme
+fit the theme
+if there even is a theme to be honest
+if there even is a theme to be honest
+if there even is a theme to be honest
+but i don't really know
+but i don't really know
+but i don't really know
+if you guys have any ideas on what i
+if you guys have any ideas on what i
+if you guys have any ideas on what i
+should like theme the aesthetic of this
+should like theme the aesthetic of this
+should like theme the aesthetic of this
+game on
+game on
+game on
+make sure to put them in this in the
+make sure to put them in this in the
+make sure to put them in this in the
+comments
+comments
+comments
+because i'm kind of lost with this like
+because i'm kind of lost with this like
+because i'm kind of lost with this like
+i can do the coding
+i can do the coding
+i can do the coding
+and you know i'm a decent 3d modeler but
+and you know i'm a decent 3d modeler but
+and you know i'm a decent 3d modeler but
+like the atmosphere i just can't really
+like the atmosphere i just can't really
+like the atmosphere i just can't really
+get it and i don't really know what to
+get it and i don't really know what to
+get it and i don't really know what to
+do in the first place
+do in the first place
+do in the first place
+but yeah all these parts are now
+but yeah all these parts are now
+but yeah all these parts are now
+randomly colored for some reason
+randomly colored for some reason
+randomly colored for some reason
+a lot of them are brownish i might have
+a lot of them are brownish i might have
+a lot of them are brownish i might have
+to change it so it's only a few colors
+to change it so it's only a few colors
+to change it so it's only a few colors
+but
+but
+but
+it's fine i don't really see the problem
+it's fine i don't really see the problem
+it's fine i don't really see the problem
+with it so we're good
+with it so we're good
+with it so we're good
+it's time to test it
+so i got to my friends on and
+so i got to my friends on and
+so i got to my friends on and
+we played my game and
+we played my game and
+we played my game and
+it was kind of silly it was kind of fun
+it was kind of silly it was kind of fun
+it was kind of silly it was kind of fun
+but i noticed the most
+but i noticed the most
+but i noticed the most
+fun part of the game was like
+fun part of the game was like
+fun part of the game was like
+interacting with the other players and
+interacting with the other players and
+interacting with the other players and
+like trying to knock each other's towers
+like trying to knock each other's towers
+like trying to knock each other's towers
+down but first of all you're kind of far
+down but first of all you're kind of far
+down but first of all you're kind of far
+apart
+apart
+apart
+and really the only part of the game
+and really the only part of the game
+and really the only part of the game
+that matters
+that matters
+that matters
+is like the last 10 seconds because
+is like the last 10 seconds because
+is like the last 10 seconds because
+you could knock down so like ev your
+you could knock down so like ev your
+you could knock down so like ev your
+progress could get lost at any point and
+progress could get lost at any point and
+progress could get lost at any point and
+the last 10 seconds depending on whose
+the last 10 seconds depending on whose
+the last 10 seconds depending on whose
+was the tallest that was the only thing
+was the tallest that was the only thing
+was the tallest that was the only thing
+that mattered
+that mattered
+that mattered
+and i don't like that i really like the
+and i don't like that i really like the
+and i don't like that i really like the
+building my friends they like the
+building my friends they like the
+building my friends they like the
+building as well
+building as well
+building as well
+but the game itself just lacks something
+but the game itself just lacks something
+but the game itself just lacks something
+i'm trying to figure out what to do
+i'm trying to figure out what to do
+i'm trying to figure out what to do
+because i don't think i can fix
+because i don't think i can fix
+because i don't think i can fix
+this current iteration there's just too
+this current iteration there's just too
+this current iteration there's just too
+much
+much
+much
+that just doesn't work because the plots
+that just doesn't work because the plots
+that just doesn't work because the plots
+are too far apart
+are too far apart
+are too far apart
+there's very little player interaction
+there's very little player interaction
+there's very little player interaction
+with the blocks i mean
+with the blocks i mean
+with the blocks i mean
+because you saw just right there like i
+because you saw just right there like i
+because you saw just right there like i
+threw apart but really it doesn't matter
+threw apart but really it doesn't matter
+threw apart but really it doesn't matter
+he can rebuild that tower within like 10
+he can rebuild that tower within like 10
+he can rebuild that tower within like 10
+seconds
+seconds
+seconds
+and there's no real strategy other than
+and there's no real strategy other than
+and there's no real strategy other than
+knocking other people's towers and just
+knocking other people's towers and just
+knocking other people's towers and just
+making your tower
+making your tower
+making your tower
+as like short and sturdy as possible
+as like short and sturdy as possible
+as like short and sturdy as possible
+which
+which
+which
+is not what i want the game to be and i
+is not what i want the game to be and i
+is not what i want the game to be and i
+could
+could
+could
+like make the part stronger like make
+like make the part stronger like make
+like make the part stronger like make
+you
+you
+you
+closer but there's just something
+closer but there's just something
+closer but there's just something
+missing so if you guys have any ideas
+missing so if you guys have any ideas
+missing so if you guys have any ideas
+make sure to let me know down in the
+make sure to let me know down in the
+make sure to let me know down in the
+comments
+comments
+comments
+i have a few different ideas like i was
+i have a few different ideas like i was
+i have a few different ideas like i was
+thinking maybe doing
+thinking maybe doing
+thinking maybe doing
+jenga like some sort of jenga game where
+jenga like some sort of jenga game where
+jenga like some sort of jenga game where
+like you
+like you
+like you
+have to but instead of jenga you build a
+have to but instead of jenga you build a
+have to but instead of jenga you build a
+tower so each player has a turn they
+tower so each player has a turn they
+tower so each player has a turn they
+have to use one of the parts to build
+have to use one of the parts to build
+have to use one of the parts to build
+the tower
+the tower
+the tower
+if it falls over during your turn you
+if it falls over during your turn you
+if it falls over during your turn you
+are eliminated or something like that
+are eliminated or something like that
+are eliminated or something like that
+that could be an idea there's already a
+that could be an idea there's already a
+that could be an idea there's already a
+game similar like that on roblox i
+game similar like that on roblox i
+game similar like that on roblox i
+looked it up it's called stackables
+looked it up it's called stackables
+looked it up it's called stackables
+so i might not do that but
+so i might not do that but
+so i might not do that but
+i also had like an idea maybe like king
+i also had like an idea maybe like king
+i also had like an idea maybe like king
+of the hill so
+of the hill so
+of the hill so
+uh you would have the part spawn in the
+uh you would have the part spawn in the
+uh you would have the part spawn in the
+middle and that sort of tower form
+middle and that sort of tower form
+middle and that sort of tower form
+and you could just like drag and move
+and you could just like drag and move
+and you could just like drag and move
+the parts and whichever player was the
+the parts and whichever player was the
+the parts and whichever player was the
+tallest at the end would win
+tallest at the end would win
+tallest at the end would win
+maybe you could have like a rising floor
+maybe you could have like a rising floor
+maybe you could have like a rising floor
+of lava and the players have to fight
+of lava and the players have to fight
+of lava and the players have to fight
+for parts to like build themselves up
+for parts to like build themselves up
+for parts to like build themselves up
+but i don't know these are just a couple
+but i don't know these are just a couple
+but i don't know these are just a couple
+ideas
+ideas
+ideas
+and i think it'd be really fun to make a
+and i think it'd be really fun to make a
+and i think it'd be really fun to make a
+collaborative building game
+collaborative building game
+collaborative building game
+but we're talking about roblox here and
+but we're talking about roblox here and
+but we're talking about roblox here and
+i honestly can't see roblox players
+i honestly can't see roblox players
+i honestly can't see roblox players
+being collaborative in a building game
+being collaborative in a building game
+being collaborative in a building game
+like this it just
+like this it just
+like this it just
+there'd be so many trolls there's no way
+there'd be so many trolls there's no way
+there'd be so many trolls there's no way
+it would work but that that's probably
+it would work but that that's probably
+it would work but that that's probably
+the most promising idea because it's
+the most promising idea because it's
+the most promising idea because it's
+really fun to work with friends in this
+really fun to work with friends in this
+really fun to work with friends in this
+game or work against them
+game or work against them
+game or work against them
+so if you guys have any ideas make sure
+so if you guys have any ideas make sure
+so if you guys have any ideas make sure
+to let me know down in the comments
+to let me know down in the comments
+to let me know down in the comments
+but i mean me my friends had fun it just
+but i mean me my friends had fun it just
+but i mean me my friends had fun it just
+wasn't there
+but that's about it for this video so i
+but that's about it for this video so i
+but that's about it for this video so i
+hope you guys enjoyed
+hope you guys enjoyed
+hope you guys enjoyed
+there was really wasn't much progress in
+there was really wasn't much progress in
+there was really wasn't much progress in
+this game it was or in this dev vlog it
+this game it was or in this dev vlog it
+this game it was or in this dev vlog it
+was just a bunch of testing
+was just a bunch of testing
+was just a bunch of testing
+and the testing was very valuable and
+and the testing was very valuable and
+and the testing was very valuable and
+this is one thing that you should know
+this is one thing that you should know
+this is one thing that you should know
+whenever you're making a game make sure
+whenever you're making a game make sure
+whenever you're making a game make sure
+to test because
+to test because
+to test because
+if i would have kept on working on this
+if i would have kept on working on this
+if i would have kept on working on this
+game and not knowing if it was fun or
+game and not knowing if it was fun or
+game and not knowing if it was fun or
+not
+not
+not
+i could have wasted months of my time
+i could have wasted months of my time
+i could have wasted months of my time
+working on a game that wasn't fun but
+working on a game that wasn't fun but
+working on a game that wasn't fun but
+now i know that this
+now i know that this
+now i know that this
+game is fun just in a different way than
+game is fun just in a different way than
+game is fun just in a different way than
+i
+i
+i
+intended and the game like the mechanics
+intended and the game like the mechanics
+intended and the game like the mechanics
+are fun but the game itself just is not
+are fun but the game itself just is not
+are fun but the game itself just is not
+fun
+fun
+fun
+so i'll need to find a fix to that again
+so i'll need to find a fix to that again
+so i'll need to find a fix to that again
+if you have an idea
+if you have an idea
+if you have an idea
+make sure to let me know either through
+make sure to let me know either through
+make sure to let me know either through
+the comments or through discord i'm open
+the comments or through discord i'm open
+the comments or through discord i'm open
+to whatever i've been thinking really
+to whatever i've been thinking really
+to whatever i've been thinking really
+hard i had a few ideas they're all
+hard i had a few ideas they're all
+hard i had a few ideas they're all
+they're all just crap though like
+they're all just crap though like
+they're all just crap though like
+i need i need a solid idea and i can't
+i need i need a solid idea and i can't
+i need i need a solid idea and i can't
+really find it
+really find it
+really find it
+but i mean that's how game development
+but i mean that's how game development
+but i mean that's how game development
+is you know i might take a break
+is you know i might take a break
+is you know i might take a break
+and i just think of it for a little bit
+and i just think of it for a little bit
+and i just think of it for a little bit
+maybe it'll come to me
+maybe it'll come to me
+maybe it'll come to me
+but make sure to like and subscribe if
+but make sure to like and subscribe if
+but make sure to like and subscribe if
+you enjoyed this video
+you enjoyed this video
+you enjoyed this video
+and i hope you have a nice day and
+and i hope you have a nice day and
+and i hope you have a nice day and
+goodbye
+[Music]
+[Music]
+[Music]
+you

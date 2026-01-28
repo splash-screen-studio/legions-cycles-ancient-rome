@@ -1,0 +1,1051 @@
+in the last video we implemented the
+in the last video we implemented the
+in the last video we implemented the
+dropping behavior for the depot and the
+dropping behavior for the depot and the
+dropping behavior for the depot and the
+delivery method
+delivery method
+delivery method
+for the Drone
+for the Drone
+for the Drone
+that we're using a finite State machine
+that we're using a finite State machine
+that we're using a finite State machine
+to model so now in this video
+to model so now in this video
+to model so now in this video
+we're going to implement the dropping
+we're going to implement the dropping
+we're going to implement the dropping
+off Behavior or state and the avoidance
+off Behavior or state and the avoidance
+off Behavior or state and the avoidance
+state to avoid walls and stuff I'm super
+state to avoid walls and stuff I'm super
+state to avoid walls and stuff I'm super
+excited to get into it this is kind of
+excited to get into it this is kind of
+excited to get into it this is kind of
+the bread and butter of finite State
+the bread and butter of finite State
+the bread and butter of finite State
+machines this is where you go where
+machines this is where you go where
+machines this is where you go where
+things get nice and juicy as where
+things get nice and juicy as where
+things get nice and juicy as where
+they're actually good he's up to this
+they're actually good he's up to this
+they're actually good he's up to this
+point you probably could have used an if
+point you probably could have used an if
+point you probably could have used an if
+statement pretty easily
+statement pretty easily
+statement pretty easily
+so let's get right into it
+so it's time for droppage action
+so it's time for droppage action
+so it's time for droppage action
+let's go back into our drone script I'm
+let's go back into our drone script I'm
+let's go back into our drone script I'm
+actually going to get rid of the depot
+actually going to get rid of the depot
+actually going to get rid of the depot
+script just to clean things up
+script just to clean things up
+script just to clean things up
+and we're going to create our dropping
+and we're going to create our dropping
+and we're going to create our dropping
+off Behavior
+off Behavior
+off Behavior
+I keep on saying Behavior behavior and
+I keep on saying Behavior behavior and
+I keep on saying Behavior behavior and
+state you know same thing they state DOT
+state you know same thing they state DOT
+state you know same thing they state DOT
+dropping off
+dropping off
+dropping off
+and in here
+and in here
+and in here
+what we need to do is basically just
+what we need to do is basically just
+what we need to do is basically just
+like
+like
+like
+create make the base or make the Drone
+create make the base or make the Drone
+create make the base or make the Drone
+bass bar like uncollidable and Collide
+bass bar like uncollidable and Collide
+bass bar like uncollidable and Collide
+off make it a little bit transparent for
+off make it a little bit transparent for
+off make it a little bit transparent for
+visual feedback and then once it's gone
+visual feedback and then once it's gone
+visual feedback and then once it's gone
+once the package is like off of your own
+once the package is like off of your own
+once the package is like off of your own
+we just return back to home base you get
+we just return back to home base you get
+we just return back to home base you get
+another one because that's all this
+another one because that's all this
+another one because that's all this
+drone is good for going back and forth
+drone is good for going back and forth
+drone is good for going back and forth
+let's do that should be pretty easy so
+let's do that should be pretty easy so
+let's do that should be pretty easy so
+we're going to say base dot can Collide
+we're going to say base dot can Collide
+we're going to say base dot can Collide
+equals false
+equals false
+equals false
+I'm going to say base dot transparency
+I'm going to say base dot transparency
+I'm going to say base dot transparency
+equals 0.5 make it sort of translucent
+equals 0.5 make it sort of translucent
+equals 0.5 make it sort of translucent
+and then after this we're going to say
+and then after this we're going to say
+and then after this we're going to say
+if not package
+if not package
+if not package
+then
+then
+then
+we're going to reset the transparency
+we're going to reset the transparency
+we're going to reset the transparency
+and stuff
+and stuff
+and stuff
+the can Collide is going to be true base
+the can Collide is going to be true base
+the can Collide is going to be true base
+dot transparency is going to be zero
+dot transparency is going to be zero
+dot transparency is going to be zero
+once again perfectly opaque and then
+once again perfectly opaque and then
+once again perfectly opaque and then
+we're going to say current state
+we're going to say current state
+we're going to say current state
+equals State DOT returning there we go
+equals State DOT returning there we go
+equals State DOT returning there we go
+so this will just you know open up the
+so this will just you know open up the
+so this will just you know open up the
+part until the package is gone and
+part until the package is gone and
+part until the package is gone and
+dropped off it falls through the part
+dropped off it falls through the part
+dropped off it falls through the part
+and then goes out of the range of the
+and then goes out of the range of the
+and then goes out of the range of the
+little sphere detection we have up here
+little sphere detection we have up here
+little sphere detection we have up here
+and then
+and then
+and then
+going to return but right now dropping
+going to return but right now dropping
+going to return but right now dropping
+off has never really triggered so we
+off has never really triggered so we
+off has never really triggered so we
+need to go back to the delivering State
+need to go back to the delivering State
+need to go back to the delivering State
+and add another Branch to our
+and add another Branch to our
+and add another Branch to our
+little if statement
+little if statement
+little if statement
+so actually we're going to do it inside
+so actually we're going to do it inside
+so actually we're going to do it inside
+of this if statement here nested if
+of this if statement here nested if
+of this if statement here nested if
+statements I know it's gross but it's
+statements I know it's gross but it's
+statements I know it's gross but it's
+fine for now you could always use guard
+fine for now you could always use guard
+fine for now you could always use guard
+Clauses if you don't like it
+Clauses if you don't like it
+Clauses if you don't like it
+by making a premature return I'm not
+by making a premature return I'm not
+by making a premature return I'm not
+fine with it it's not that bad let's get
+fine with it it's not that bad let's get
+fine with it it's not that bad let's get
+into it so we're going to say if
+into it so we're going to say if
+into it so we're going to say if
+a Target pose minus drone get pivot
+a Target pose minus drone get pivot
+a Target pose minus drone get pivot
+position so basically the vector from
+position so basically the vector from
+position so basically the vector from
+the
+the
+the
+drone like drone's actual position it
+drone like drone's actual position it
+drone like drone's actual position it
+has Target position there's a DOT
+has Target position there's a DOT
+has Target position there's a DOT
+magnitude
+is less than two so if it's within two
+is less than two so if it's within two
+is less than two so if it's within two
+studs if the Drone is within two studs
+studs if the Drone is within two studs
+studs if the Drone is within two studs
+of its Target
+of its Target
+of its Target
+we're gonna drop off that part so we're
+we're gonna drop off that part so we're
+we're gonna drop off that part so we're
+gonna say current state
+gonna say current state
+gonna say current state
+equals State DOT dropping off
+equals State DOT dropping off
+equals State DOT dropping off
+now you could obviously make this two
+now you could obviously make this two
+now you could obviously make this two
+more precise like to a one or even a 0.5
+more precise like to a one or even a 0.5
+more precise like to a one or even a 0.5
+but you know
+but you know
+but you know
+it's always good to leave a little bit
+it's always good to leave a little bit
+it's always good to leave a little bit
+of leeway because if you check to see if
+of leeway because if you check to see if
+of leeway because if you check to see if
+the target pose is equal
+the target pose is equal
+the target pose is equal
+the Drone get pivot dot position
+the Drone get pivot dot position
+the Drone get pivot dot position
+it won't really work because there's a
+it won't really work because there's a
+it won't really work because there's a
+lot of you know boat ambiguity going on
+lot of you know boat ambiguity going on
+lot of you know boat ambiguity going on
+so like the numbers may not exactly line
+so like the numbers may not exactly line
+so like the numbers may not exactly line
+up even more or less
+up even more or less
+up even more or less
+but this should work fine so let's try
+but this should work fine so let's try
+but this should work fine so let's try
+it out
+it out
+it out
+we pick up our part
+we pick up our part
+we pick up our part
+boom we fly away to our Target position
+boom we fly away to our Target position
+boom we fly away to our Target position
+looking nice looking nice now once we
+looking nice looking nice now once we
+looking nice looking nice now once we
+get there it should drop off and then
+get there it should drop off and then
+get there it should drop off and then
+you come back
+you come back
+you come back
+no drops solidifies and it comes back
+no drops solidifies and it comes back
+no drops solidifies and it comes back
+perfect now we have delivered our first
+perfect now we have delivered our first
+perfect now we have delivered our first
+package
+package
+package
+successfully
+successfully
+successfully
+which is which is nice nice I appreciate
+which is which is nice nice I appreciate
+which is which is nice nice I appreciate
+it the package you know goes back
+it the package you know goes back
+it the package you know goes back
+we do the same thing cool cool
+we do the same thing cool cool
+we do the same thing cool cool
+but what if
+but what if
+but what if
+there's a wall
+there's a wall
+there's a wall
+be scared well we're even gonna anchor
+be scared well we're even gonna anchor
+be scared well we're even gonna anchor
+this wall it's gonna be immovable and
+this wall it's gonna be immovable and
+this wall it's gonna be immovable and
+impenetrable
+impenetrable
+impenetrable
+what shall we do
+what shall we do
+what shall we do
+here we go
+here we go
+here we go
+boom
+boom
+boom
+the wall
+the wall
+the wall
+obviously this poor little drone
+obviously this poor little drone
+obviously this poor little drone
+is not going to be able to
+is not going to be able to
+is not going to be able to
+ask us well it's not programmed to do
+ask us well it's not programmed to do
+ask us well it's not programmed to do
+that yet
+that yet
+that yet
+so why is it stopping it's kind of weird
+so why is it stopping it's kind of weird
+so why is it stopping it's kind of weird
+one sec
+there you go I don't know why I didn't
+there you go I don't know why I didn't
+there you go I don't know why I didn't
+do it but
+do it but
+do it but
+the wall
+the wall
+the wall
+stops not good so you know drones you
+stops not good so you know drones you
+stops not good so you know drones you
+know they can fly right so we're gonna
+know they can fly right so we're gonna
+know they can fly right so we're gonna
+make the height of the Drone a little
+make the height of the Drone a little
+make the height of the Drone a little
+bit higher you try to avoid obstacles
+bit higher you try to avoid obstacles
+bit higher you try to avoid obstacles
+and that's going to be the avoiding
+and that's going to be the avoiding
+and that's going to be the avoiding
+Behavior
+Behavior
+Behavior
+so down here we're gonna make it
+so down here we're gonna make it
+so down here we're gonna make it
+ahead of after delivering but before
+ahead of after delivering but before
+ahead of after delivering but before
+dropping off because this will usually
+dropping off because this will usually
+dropping off because this will usually
+happen while you're delivering
+happen while you're delivering
+happen while you're delivering
+as a function state
+as a function state
+as a function state
+dot avoiding
+dot avoiding
+dot avoiding
+and
+and
+and
+the tricky thing about the avoiding
+the tricky thing about the avoiding
+the tricky thing about the avoiding
+Behavior state
+Behavior state
+Behavior state
+favorites same thing
+favorites same thing
+favorites same thing
+um
+um
+um
+is that we need to check if it's blocked
+is that we need to check if it's blocked
+is that we need to check if it's blocked
+so let's do that
+so let's do that
+so let's do that
+right next to the get package function
+right next to the get package function
+right next to the get package function
+we're going to make a local function is
+we're going to make a local function is
+we're going to make a local function is
+blocked
+blocked
+blocked
+check if the path of the Drone is
+check if the path of the Drone is
+check if the path of the Drone is
+blocked
+so we're going to
+so we're going to
+so we're going to
+say local flat Direction
+say local flat Direction
+say local flat Direction
+equals mover dot position
+equals mover dot position
+equals mover dot position
+minus drone get pivot dot position
+minus drone get pivot dot position
+minus drone get pivot dot position
+dot unit
+so we're going to start off with a
+so we're going to start off with a
+so we're going to start off with a
+Direction so we take the target goal
+Direction so we take the target goal
+Direction so we take the target goal
+position of the Drone minus its current
+position of the Drone minus its current
+position of the Drone minus its current
+position we get the unit Vector of that
+position we get the unit Vector of that
+position we get the unit Vector of that
+but think about this is when we
+but think about this is when we
+but think about this is when we
+are trying to avoid the obstacle by
+are trying to avoid the obstacle by
+are trying to avoid the obstacle by
+moving up
+moving up
+moving up
+the we're actually going to set them
+the we're actually going to set them
+the we're actually going to set them
+actually let's do that now we're going
+actually let's do that now we're going
+actually let's do that now we're going
+to set the Mover type position so in
+to set the Mover type position so in
+to set the Mover type position so in
+state of avoiding we're going to say
+state of avoiding we're going to say
+state of avoiding we're going to say
+we're going to say mover
+we're going to say mover
+we're going to say mover
+dot position equals drone get pivot dot
+dot position equals drone get pivot dot
+dot position equals drone get pivot dot
+position
+position
+position
+plus vector3 dot y-axis
+plus vector3 dot y-axis
+plus vector3 dot y-axis
+times five so
+times five so
+times five so
+every stick while we are blocked we're
+every stick while we are blocked we're
+every stick while we are blocked we're
+going to move up of I5 studs in the y
+going to move up of I5 studs in the y
+going to move up of I5 studs in the y
+direction so the mover.position is going
+direction so the mover.position is going
+direction so the mover.position is going
+to be set to above us but keep in mind
+to be set to above us but keep in mind
+to be set to above us but keep in mind
+the package is also on top of us so it
+the package is also on top of us so it
+the package is also on top of us so it
+would just feel like it's blocked for
+would just feel like it's blocked for
+would just feel like it's blocked for
+Infinity if we didn't actually flatten
+Infinity if we didn't actually flatten
+Infinity if we didn't actually flatten
+out this direction
+out this direction
+out this direction
+flattening a vector by flattening I mean
+flattening a vector by flattening I mean
+flattening a vector by flattening I mean
+getting rid of the Y component is pretty
+getting rid of the Y component is pretty
+getting rid of the Y component is pretty
+easy so all we do is say Vector three
+easy so all we do is say Vector three
+easy so all we do is say Vector three
+we multiply by Vector field new one zero
+we multiply by Vector field new one zero
+we multiply by Vector field new one zero
+one so we keep the X we delete the Y by
+one so we keep the X we delete the Y by
+one so we keep the X we delete the Y by
+multiplying by zero any number
+multiplying by zero any number
+multiplying by zero any number
+multiplied by zero zero obviously and we
+multiplied by zero zero obviously and we
+multiplied by zero zero obviously and we
+multiply it by one once again
+multiply it by one once again
+multiply it by one once again
+and one more thing we need to do here
+and one more thing we need to do here
+and one more thing we need to do here
+is to give it some you know length we're
+is to give it some you know length we're
+is to give it some you know length we're
+going to say multiplying it by five so
+going to say multiplying it by five so
+going to say multiplying it by five so
+it's a it'll be we'll make a ray that's
+it's a it'll be we'll make a ray that's
+it's a it'll be we'll make a ray that's
+cast you know five studs to where you're
+cast you know five studs to where you're
+cast you know five studs to where you're
+going so I'm going to say local asked
+going so I'm going to say local asked
+going so I'm going to say local asked
+equals workspace
+equals workspace
+equals workspace
+raycast drone get pivot top position
+raycast drone get pivot top position
+raycast drone get pivot top position
+to the flat
+to the flat
+to the flat
+flat Direction there you go so
+flat Direction there you go so
+flat Direction there you go so
+we flatten out the direction where it's
+we flatten out the direction where it's
+we flatten out the direction where it's
+going we cast array from where it is to
+going we cast array from where it is to
+going we cast array from where it is to
+where it's going
+where it's going
+where it's going
+like the direction
+like the direction
+like the direction
+and then
+and then
+and then
+what we need to do to check if it's
+what we need to do to check if it's
+what we need to do to check if it's
+blocked is
+blocked is
+blocked is
+just to make it a little bit more
+just to make it a little bit more
+just to make it a little bit more
+canonical let's say since is blocked
+canonical let's say since is blocked
+canonical let's say since is blocked
+should return a Boolean we're going to
+should return a Boolean we're going to
+should return a Boolean we're going to
+say return if cast and cast dot instance
+say return if cast and cast dot instance
+say return if cast and cast dot instance
+then true
+then true
+then true
+else false
+else false
+else false
+so this is kind of redundant but if you
+so this is kind of redundant but if you
+so this is kind of redundant but if you
+want to keep your types all in line
+want to keep your types all in line
+want to keep your types all in line
+which I know I'm not using type checking
+which I know I'm not using type checking
+which I know I'm not using type checking
+right now but I think it's a good
+right now but I think it's a good
+right now but I think it's a good
+practice again too
+practice again too
+practice again too
+we could obviously just say cast and
+we could obviously just say cast and
+we could obviously just say cast and
+cast an instance because it'll basically
+cast an instance because it'll basically
+cast an instance because it'll basically
+say if
+say if
+say if
+there is a part in front of you
+there is a part in front of you
+there is a part in front of you
+then
+then
+then
+then like
+then like
+then like
+say that your block
+say that your block
+say that your block
+Ed
+Ed
+Ed
+but
+but
+but
+actually this will probably only work
+actually this will probably only work
+actually this will probably only work
+for far as it may not work for drain
+for far as it may not work for drain
+for far as it may not work for drain
+optionally remove the and Castle
+optionally remove the and Castle
+optionally remove the and Castle
+instance I don't know I only tested on
+instance I don't know I only tested on
+instance I don't know I only tested on
+Parts you can test it for yourself but
+Parts you can test it for yourself but
+Parts you can test it for yourself but
+um this will return like the cast itself
+um this will return like the cast itself
+um this will return like the cast itself
+that's kind of extra baggage for it is
+that's kind of extra baggage for it is
+that's kind of extra baggage for it is
+blocked function we kind of only want
+blocked function we kind of only want
+blocked function we kind of only want
+true or false so we just say we use this
+true or false so we just say we use this
+true or false so we just say we use this
+little if else expression here to say
+little if else expression here to say
+little if else expression here to say
+you know if the cast exists then we give
+you know if the cast exists then we give
+you know if the cast exists then we give
+it true else false
+it true else false
+it true else false
+redundant but at the same time more
+redundant but at the same time more
+redundant but at the same time more
+clear and I would rather have something
+clear and I would rather have something
+clear and I would rather have something
+that's more clear to the reader and have
+that's more clear to the reader and have
+that's more clear to the reader and have
+something that's you know an extra
+something that's you know an extra
+something that's you know an extra
+couple of letters
+couple of letters
+couple of letters
+so now in our avoiding State all we have
+so now in our avoiding State all we have
+so now in our avoiding State all we have
+to do
+to do
+to do
+is say if not is blocked so if it's not
+is say if not is blocked so if it's not
+is say if not is blocked so if it's not
+blocked then we set the current state
+blocked then we set the current state
+blocked then we set the current state
+equal to State DOT delivery
+equal to State DOT delivery
+equal to State DOT delivery
+making sure to get rid of the
+making sure to get rid of the
+making sure to get rid of the
+parentheses
+parentheses
+parentheses
+but right now the avoiding state is
+but right now the avoiding state is
+but right now the avoiding state is
+never triggered when would we ever
+never triggered when would we ever
+never triggered when would we ever
+trigger the block State well that'd be
+trigger the block State well that'd be
+trigger the block State well that'd be
+while we're delivering or returning
+while we're delivering or returning
+while we're delivering or returning
+so Andy delivering let's start with that
+so Andy delivering let's start with that
+so Andy delivering let's start with that
+below the target pose kind of like
+below the target pose kind of like
+below the target pose kind of like
+detecting for drop off we're going to
+detecting for drop off we're going to
+detecting for drop off we're going to
+say if
+say if
+say if
+is blocked
+is blocked
+is blocked
+then
+then
+then
+that's State equals state DOT avoiding
+that's State equals state DOT avoiding
+that's State equals state DOT avoiding
+boom so a for blocked then we avoid the
+boom so a for blocked then we avoid the
+boom so a for blocked then we avoid the
+blockage once we avoid the blockage
+blockage once we avoid the blockage
+blockage once we avoid the blockage
+we go and deliver
+we go and deliver
+we go and deliver
+and then up here
+and then up here
+and then up here
+and the returning we basically say
+and the returning we basically say
+and the returning we basically say
+if
+if
+if
+is blocked then
+is blocked then
+is blocked then
+current state equals state DOT avoiding
+current state equals state DOT avoiding
+current state equals state DOT avoiding
+boom there we go so I think you could
+boom there we go so I think you could
+boom there we go so I think you could
+also do this as an elsif it doesn't
+also do this as an elsif it doesn't
+also do this as an elsif it doesn't
+really matter if it's blocked we'll
+really matter if it's blocked we'll
+really matter if it's blocked we'll
+avoid it and the beauty of okay this is
+avoid it and the beauty of okay this is
+avoid it and the beauty of okay this is
+where the beauty of State machines
+where the beauty of State machines
+where the beauty of State machines
+really comes in so think about it if
+really comes in so think about it if
+really comes in so think about it if
+we're avoiding we set to state.del
+we're avoiding we set to state.del
+we're avoiding we set to state.del
+delivering what if we're returning like
+delivering what if we're returning like
+delivering what if we're returning like
+what if we're already returning and we
+what if we're already returning and we
+what if we're already returning and we
+have to avoid as well well it'll set you
+have to avoid as well well it'll set you
+have to avoid as well well it'll set you
+to delivery and once you're delivering
+to delivery and once you're delivering
+to delivery and once you're delivering
+it'll say oh there's no package so we go
+it'll say oh there's no package so we go
+it'll say oh there's no package so we go
+to returning so it handles the extra
+to returning so it handles the extra
+to returning so it handles the extra
+logic this avoiding doesn't have to know
+logic this avoiding doesn't have to know
+logic this avoiding doesn't have to know
+whether or not you're returning or
+whether or not you're returning or
+whether or not you're returning or
+delivering it'll just automatically
+delivering it'll just automatically
+delivering it'll just automatically
+default to delivering and if delivering
+default to delivering and if delivering
+default to delivering and if delivering
+says oh no we're actually not delivering
+says oh no we're actually not delivering
+says oh no we're actually not delivering
+then we'll go and return it same thing
+then we'll go and return it same thing
+then we'll go and return it same thing
+with this
+with this
+with this
+um same thing with returning I think you
+um same thing with returning I think you
+um same thing with returning I think you
+could also do it the other way around by
+could also do it the other way around by
+could also do it the other way around by
+saying that it's returning it'll detect
+saying that it's returning it'll detect
+saying that it's returning it'll detect
+the package and immediately go to
+the package and immediately go to
+the package and immediately go to
+delivering so it handles the state
+delivering so it handles the state
+delivering so it handles the state
+changes
+changes
+changes
+it handles that sort of change and state
+it handles that sort of change and state
+it handles that sort of change and state
+automatically which is absolutely
+automatically which is absolutely
+automatically which is absolutely
+wonderful so all that's left is to test
+wonderful so all that's left is to test
+wonderful so all that's left is to test
+it out
+so we pick up the part
+so we pick up the part
+so we pick up the part
+we go away
+we go away
+we go away
+also you can see it kind of raising over
+also you can see it kind of raising over
+also you can see it kind of raising over
+there I think it was like also been
+there I think it was like also been
+there I think it was like also been
+detecting a little small part there so
+detecting a little small part there so
+detecting a little small part there so
+then we scale the wall
+then we scale the wall
+then we scale the wall
+and we deliver the porn successfully
+and we deliver the porn successfully
+and we deliver the porn successfully
+absolutely wonderful and then once we're
+absolutely wonderful and then once we're
+absolutely wonderful and then once we're
+returning
+returning
+returning
+it'll do the exact same thing scale the
+it'll do the exact same thing scale the
+it'll do the exact same thing scale the
+wall and then laser back
+wall and then laser back
+wall and then laser back
+the position
+the position
+the position
+uh I might just take that little bar
+uh I might just take that little bar
+uh I might just take that little bar
+there who knew yeah I did whatever the
+there who knew yeah I did whatever the
+there who knew yeah I did whatever the
+cool thing is automatically do goes back
+cool thing is automatically do goes back
+cool thing is automatically do goes back
+to the returning state which is
+to the returning state which is
+to the returning state which is
+absolutely wonderful
+absolutely wonderful
+absolutely wonderful
+oh yeah so that's about it this is
+oh yeah so that's about it this is
+oh yeah so that's about it this is
+finite save machines in a nutshell the
+finite save machines in a nutshell the
+finite save machines in a nutshell the
+most basic form of push down automata
+most basic form of push down automata
+most basic form of push down automata
+and it's absolutely wonderful this
+and it's absolutely wonderful this
+and it's absolutely wonderful this
+example
+example
+example
+did not include the best practices for
+did not include the best practices for
+did not include the best practices for
+making a game but it did include the
+making a game but it did include the
+making a game but it did include the
+best practices or at least my opinion
+best practices or at least my opinion
+best practices or at least my opinion
+making a FSM financing machine in Roblox
+making a FSM financing machine in Roblox
+making a FSM financing machine in Roblox
+really easily this is the basics for any
+really easily this is the basics for any
+really easily this is the basics for any
+AI
+AI
+AI
+are we doing a lot of like robotics
+are we doing a lot of like robotics
+are we doing a lot of like robotics
+programming recently making autonomous
+programming recently making autonomous
+programming recently making autonomous
+robots and
+robots and
+robots and
+these are found a Galore in them
+these are found a Galore in them
+these are found a Galore in them
+and they're absolutely wonderful and
+and they're absolutely wonderful and
+and they're absolutely wonderful and
+they handle a lot of State changes
+they handle a lot of State changes
+they handle a lot of State changes
+really nicely
+really nicely
+really nicely
+I'm really into this sort of thing so
+I'm really into this sort of thing so
+I'm really into this sort of thing so
+you may see more like you know AI type
+you may see more like you know AI type
+you may see more like you know AI type
+videos progressing in the universe of
+videos progressing in the universe of
+videos progressing in the universe of
+push down automata this is a nice little
+push down automata this is a nice little
+push down automata this is a nice little
+ease back into video recording because I
+ease back into video recording because I
+ease back into video recording because I
+haven't done a video and
+haven't done a video and
+haven't done a video and
+I don't want to say how many months
+I don't want to say how many months
+I don't want to say how many months
+because it's been a long time
+because it's been a long time
+because it's been a long time
+but it's great
+but it's great
+but it's great
+so I hope you really enjoyed it this is
+so I hope you really enjoyed it this is
+so I hope you really enjoyed it this is
+something I'm really passionate about
+something I'm really passionate about
+something I'm really passionate about
+let me know if it's good if it's bad I
+let me know if it's good if it's bad I
+let me know if it's good if it's bad I
+know some stuff was a little buggy and
+know some stuff was a little buggy and
+know some stuff was a little buggy and
+error prone but you know that's not the
+error prone but you know that's not the
+error prone but you know that's not the
+point the point is the date machine
+point the point is the date machine
+point the point is the date machine
+eight machines are great
+eight machines are great
+eight machines are great
+I'll leave you with that so like And
+I'll leave you with that so like And
+I'll leave you with that so like And
+subscribe if you enjoyed the video
+subscribe if you enjoyed the video
+subscribe if you enjoyed the video
+comment questions suggestions
+comment questions suggestions
+comment questions suggestions
+queries no
+queries no
+queries no
+I hope you have a nice day
+I hope you have a nice day
+I hope you have a nice day
+and goodbye
+and goodbye
+and goodbye
+[Music]

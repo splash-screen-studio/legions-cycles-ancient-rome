@@ -1,0 +1,717 @@
+hello and welcome to another devlog
+hello and welcome to another devlog
+hello and welcome to another devlog
+so in this video i
+so in this video i
+so in this video i
+continue work on my latest roblox game
+continue work on my latest roblox game
+continue work on my latest roblox game
+the tallest tower and i add this cool
+the tallest tower and i add this cool
+the tallest tower and i add this cool
+little plot system
+little plot system
+little plot system
+where i can add blocks to my plot
+where i can add blocks to my plot
+where i can add blocks to my plot
+and raise it up and make it taller so
+and raise it up and make it taller so
+and raise it up and make it taller so
+eventually
+eventually
+eventually
+the player that has the highest studs
+the player that has the highest studs
+the player that has the highest studs
+count
+count
+count
+will have the tallest tower and they
+will have the tallest tower and they
+will have the tallest tower and they
+will win the game
+will win the game
+will win the game
+so in this video i'll show you the
+so in this video i'll show you the
+so in this video i'll show you the
+process of making this and some other
+process of making this and some other
+process of making this and some other
+little fixes and tweaks that i
+little fixes and tweaks that i
+little fixes and tweaks that i
+made in the process so if you enjoy make
+made in the process so if you enjoy make
+made in the process so if you enjoy make
+sure to like and subscribe and if you
+sure to like and subscribe and if you
+sure to like and subscribe and if you
+want to
+want to
+want to
+get in contact with me discuss anything
+get in contact with me discuss anything
+get in contact with me discuss anything
+or just hang out
+or just hang out
+or just hang out
+make sure to join my discord channel
+make sure to join my discord channel
+make sure to join my discord channel
+or server links in the description
+or server links in the description
+or server links in the description
+without further ado
+without further ado
+without further ado
+let's get into the video
+[Music]
+so the first thing i started to work on
+so the first thing i started to work on
+so the first thing i started to work on
+was some basic controls
+was some basic controls
+was some basic controls
+to allow the player to reel in and like
+to allow the player to reel in and like
+to allow the player to reel in and like
+push out
+push out
+push out
+the part that they're holding and you
+the part that they're holding and you
+the part that they're holding and you
+can do this by
+can do this by
+can do this by
+using q and e so this is just a quick
+using q and e so this is just a quick
+using q and e so this is just a quick
+time lapse of me doing just that
+[Music]
+so earlier this week i spent a lot of
+so earlier this week i spent a lot of
+so earlier this week i spent a lot of
+time
+time
+time
+working on a component system
+working on a component system
+working on a component system
+for the client of my game where i can
+for the client of my game where i can
+for the client of my game where i can
+add
+add
+add
+and remove components from the player
+and remove components from the player
+and remove components from the player
+which makes it really easy to implement
+which makes it really easy to implement
+which makes it really easy to implement
+things such as the part controller
+things such as the part controller
+things such as the part controller
+which is the thing that allows you to
+which is the thing that allows you to
+which is the thing that allows you to
+pick up and grab parts and so i just
+pick up and grab parts and so i just
+pick up and grab parts and so i just
+made a quick little change of the part
+made a quick little change of the part
+made a quick little change of the part
+controller
+controller
+controller
+that allows me to pick up
+that allows me to pick up
+that allows me to pick up
+parts and the distance stays the same
+parts and the distance stays the same
+parts and the distance stays the same
+when you pick it up and you can use q
+when you pick it up and you can use q
+when you pick it up and you can use q
+and e to bring it forward and backwards
+and e to bring it forward and backwards
+and e to bring it forward and backwards
+which is pretty cool it makes building a
+which is pretty cool it makes building a
+which is pretty cool it makes building a
+lot easier that's for sure because i can
+lot easier that's for sure because i can
+lot easier that's for sure because i can
+i can like
+i can like
+i can like
+push it into the ground if i want to and
+push it into the ground if i want to and
+push it into the ground if i want to and
+it can stick
+it can stick
+it can stick
+which is nice and good or if i don't
+which is nice and good or if i don't
+which is nice and good or if i don't
+like that i can just
+like that i can just
+like that i can just
+you know throw a part i can pick it up
+you know throw a part i can pick it up
+you know throw a part i can pick it up
+throw it away
+throw it away
+throw it away
+you know this is this is a really
+you know this is this is a really
+you know this is this is a really
+intuitive building system
+intuitive building system
+intuitive building system
+i am actually kind of enjoying it but
+i am actually kind of enjoying it but
+i am actually kind of enjoying it but
+that's about it
+so now i got to work fixing a
+so now i got to work fixing a
+so now i got to work fixing a
+few little bugs that i had encountered
+few little bugs that i had encountered
+few little bugs that i had encountered
+along the way
+along the way
+along the way
+one of which was the player being able
+one of which was the player being able
+one of which was the player being able
+to collide with the part that they were
+to collide with the part that they were
+to collide with the part that they were
+picking up
+picking up
+picking up
+which allowed them to accelerate really
+which allowed them to accelerate really
+which allowed them to accelerate really
+quickly and you could basically
+quickly and you could basically
+quickly and you could basically
+fly so i had to make some no collision
+fly so i had to make some no collision
+fly so i had to make some no collision
+constraints
+constraints
+constraints
+to prevent if you guys want a video on
+to prevent if you guys want a video on
+to prevent if you guys want a video on
+no collisions constraints make sure to
+no collisions constraints make sure to
+no collisions constraints make sure to
+comment down below and i will definitely
+comment down below and i will definitely
+comment down below and i will definitely
+do that
+so while doing some testing i came
+so while doing some testing i came
+so while doing some testing i came
+across as a very interesting
+across as a very interesting
+across as a very interesting
+bug so to speak so you know i can
+bug so to speak so you know i can
+bug so to speak so you know i can
+normally grab my parts and move them
+normally grab my parts and move them
+normally grab my parts and move them
+around
+around
+around
+it works fine right and you can also
+it works fine right and you can also
+it works fine right and you can also
+throw them which also works fine
+throw them which also works fine
+throw them which also works fine
+but if you like angle your mouse at the
+but if you like angle your mouse at the
+but if you like angle your mouse at the
+bottom of the part and like drag down
+bottom of the part and like drag down
+bottom of the part and like drag down
+at like a certain angle you can
+at like a certain angle you can
+at like a certain angle you can
+send the part to space
+send the part to space
+send the part to space
+and this is actually sort of the
+and this is actually sort of the
+and this is actually sort of the
+intended behavior
+intended behavior
+intended behavior
+because i'm basically just dragging the
+because i'm basically just dragging the
+because i'm basically just dragging the
+base
+base
+base
+of the part into the ground and like the
+of the part into the ground and like the
+of the part into the ground and like the
+collisions are just trying to resolve
+collisions are just trying to resolve
+collisions are just trying to resolve
+each other and once i let go
+each other and once i let go
+each other and once i let go
+it just like flings it because it's like
+it just like flings it because it's like
+it just like flings it because it's like
+trying to push itself
+trying to push itself
+trying to push itself
+out of contact with the base plate
+out of contact with the base plate
+out of contact with the base plate
+which makes a lot of sense so i'm really
+which makes a lot of sense so i'm really
+which makes a lot of sense so i'm really
+not sure if i want to remove this
+not sure if i want to remove this
+not sure if i want to remove this
+or if i want to keep it because if you
+or if i want to keep it because if you
+or if i want to keep it because if you
+like not many people are going to like
+like not many people are going to like
+like not many people are going to like
+figure this out
+figure this out
+figure this out
+but if you know how to do it then you
+but if you know how to do it then you
+but if you know how to do it then you
+can just eat parts into space
+but obviously like when i'm actually
+but obviously like when i'm actually
+but obviously like when i'm actually
+building the arena there will be a
+building the arena there will be a
+building the arena there will be a
+roof and wall so stuff like that won't
+roof and wall so stuff like that won't
+roof and wall so stuff like that won't
+be able to go
+be able to go
+be able to go
+off the map but it could be you know
+off the map but it could be you know
+off the map but it could be you know
+pretty cool if you wanna
+pretty cool if you wanna
+pretty cool if you wanna
+do something like sort of stupid but
+do something like sort of stupid but
+do something like sort of stupid but
+after i resolved all the bugs pertaining
+after i resolved all the bugs pertaining
+after i resolved all the bugs pertaining
+to the grabbing system
+to the grabbing system
+to the grabbing system
+i started working on a system to allow
+i started working on a system to allow
+i started working on a system to allow
+the player
+the player
+the player
+or allow the game to create a plot for
+or allow the game to create a plot for
+or allow the game to create a plot for
+the player which will
+the player which will
+the player which will
+put their parts in order to make the
+put their parts in order to make the
+put their parts in order to make the
+tallest
+tallest
+tallest
+tower that's kind of like your zone
+tower that's kind of like your zone
+tower that's kind of like your zone
+where you want to protect it from other
+where you want to protect it from other
+where you want to protect it from other
+people
+people
+people
+but you want to make yours as tall as
+but you want to make yours as tall as
+but you want to make yours as tall as
+possible and i
+possible and i
+possible and i
+named the system the plot system makes a
+named the system the plot system makes a
+named the system the plot system makes a
+lot of sense and
+lot of sense and
+lot of sense and
+right now i'm just setting up all the
+right now i'm just setting up all the
+right now i'm just setting up all the
+modules to allow me
+modules to allow me
+modules to allow me
+to control everything with the player
+to control everything with the player
+to control everything with the player
+and you can see my use of getters and
+and you can see my use of getters and
+and you can see my use of getters and
+setters a lot where i do like
+setters a lot where i do like
+setters a lot where i do like
+you know plot manager get plots or like
+you know plot manager get plots or like
+you know plot manager get plots or like
+get
+get
+get
+player and the reason i'm using this is
+player and the reason i'm using this is
+player and the reason i'm using this is
+because it works a lot better with
+because it works a lot better with
+because it works a lot better with
+the type system than just referencing
+the type system than just referencing
+the type system than just referencing
+a table value directly which allows me
+a table value directly which allows me
+a table value directly which allows me
+to access
+to access
+to access
+like autocomplete for that since i can
+like autocomplete for that since i can
+like autocomplete for that since i can
+tell function what it can return
+tell function what it can return
+tell function what it can return
+but yeah
+so i finished the
+so i finished the
+so i finished the
+beginnings and the framework of my plot
+beginnings and the framework of my plot
+beginnings and the framework of my plot
+system so you can
+system so you can
+system so you can
+see here when i spawn in i get my own
+see here when i spawn in i get my own
+see here when i spawn in i get my own
+plot which is this
+plot which is this
+plot which is this
+little square and i can control parts
+little square and i can control parts
+little square and i can control parts
+and this is what would happen at the
+and this is what would happen at the
+and this is what would happen at the
+start of the game
+start of the game
+start of the game
+and what you just saw there the game
+and what you just saw there the game
+and what you just saw there the game
+ended my plot got destroyed and now i
+ended my plot got destroyed and now i
+ended my plot got destroyed and now i
+can no longer
+can no longer
+can no longer
+pick up parts and the cool thing about
+pick up parts and the cool thing about
+pick up parts and the cool thing about
+the system that i'm using
+the system that i'm using
+the system that i'm using
+is it's all like a reusable framework so
+is it's all like a reusable framework so
+is it's all like a reusable framework so
+every time the game starts and finishes
+every time the game starts and finishes
+every time the game starts and finishes
+we can use these functions end and
+we can use these functions end and
+we can use these functions end and
+start which is all the way up here
+start which is all the way up here
+start which is all the way up here
+to start and end our game and we also
+to start and end our game and we also
+to start and end our game and we also
+have a new function so we'll call this
+have a new function so we'll call this
+have a new function so we'll call this
+new function every iteration of the game
+new function every iteration of the game
+new function every iteration of the game
+so that our player
+so that our player
+so that our player
+that our whole game stays fresh and just
+that our whole game stays fresh and just
+that our whole game stays fresh and just
+because the server lives long doesn't
+because the server lives long doesn't
+because the server lives long doesn't
+mean stuff will get broken
+mean stuff will get broken
+mean stuff will get broken
+which is exactly what we want
+which is exactly what we want
+which is exactly what we want
+okay so i think i've basically finalized
+okay so i think i've basically finalized
+okay so i think i've basically finalized
+the plot system
+the plot system
+the plot system
+in this game you can see i added this
+in this game you can see i added this
+in this game you can see i added this
+nice little display that says my name
+nice little display that says my name
+nice little display that says my name
+and then the studs tall right now it's
+and then the studs tall right now it's
+and then the studs tall right now it's
+1.0 because this little
+1.0 because this little
+1.0 because this little
+platform right here that counts towards
+platform right here that counts towards
+platform right here that counts towards
+the height
+the height
+the height
+of our platform so you can see
+of our platform so you can see
+of our platform so you can see
+when i bring this in when i drop
+when i bring this in when i drop
+when i bring this in when i drop
+the part onto the plot it turns a
+the part onto the plot it turns a
+the part onto the plot it turns a
+different color that's just for debug
+different color that's just for debug
+different color that's just for debug
+we won't leave that and this little
+we won't leave that and this little
+we won't leave that and this little
+label it moves up physically and it also
+label it moves up physically and it also
+label it moves up physically and it also
+changes the number to two
+changes the number to two
+changes the number to two
+and you can see when i'm adjusting it on
+and you can see when i'm adjusting it on
+and you can see when i'm adjusting it on
+my platform it discards it because
+my platform it discards it because
+my platform it discards it because
+i don't want the player to be able to do
+i don't want the player to be able to do
+i don't want the player to be able to do
+something like this like at the end of
+something like this like at the end of
+something like this like at the end of
+the game
+the game
+the game
+they just like shove the part up into
+they just like shove the part up into
+they just like shove the part up into
+the sky and it counts
+the sky and it counts
+the sky and it counts
+towards your overall count we don't want
+towards your overall count we don't want
+towards your overall count we don't want
+that
+that
+that
+so you can see i can just build a little
+so you can see i can just build a little
+so you can see i can just build a little
+tower
+tower
+tower
+and we can make it pretty tall
+and we can make it pretty tall
+and we can make it pretty tall
+maybe i can even get one of these
+maybe i can even get one of these
+maybe i can even get one of these
+i can angle it properly yeah no i
+i can angle it properly yeah no i
+i can angle it properly yeah no i
+screwed up
+screwed up
+screwed up
+and you can see it just adjusts a little
+and you can see it just adjusts a little
+and you can see it just adjusts a little
+bit i can't prevent it from adjusting
+bit i can't prevent it from adjusting
+bit i can't prevent it from adjusting
+like up and down
+like up and down
+like up and down
+as stuff's falling i guess i could
+as stuff's falling i guess i could
+as stuff's falling i guess i could
+detect the velocity
+detect the velocity
+detect the velocity
+but for right now it's fine i think one
+but for right now it's fine i think one
+but for right now it's fine i think one
+common issue though is when you take
+common issue though is when you take
+common issue though is when you take
+apart
+apart
+apart
+and like throw it you can see
+and like throw it you can see
+and like throw it you can see
+temporarily it changes
+temporarily it changes
+temporarily it changes
+to a higher value but that should be a
+to a higher value but that should be a
+to a higher value but that should be a
+pretty simple fix i guess i could just
+pretty simple fix i guess i could just
+pretty simple fix i guess i could just
+check for the velocity
+check for the velocity
+check for the velocity
+in each part but right now this works
+in each part but right now this works
+in each part but right now this works
+pretty well i'm
+pretty well i'm
+pretty well i'm
+very happy with this system so the next
+very happy with this system so the next
+very happy with this system so the next
+thing i have to do which i'll probably
+thing i have to do which i'll probably
+thing i have to do which i'll probably
+do in the next devlog
+do in the next devlog
+do in the next devlog
+is make every player have a plot
+is make every player have a plot
+is make every player have a plot
+and make the game loop and the arena and
+and make the game loop and the arena and
+and make the game loop and the arena and
+all the parts
+all the parts
+all the parts
+spawning so yeah and that's about it
+spawning so yeah and that's about it
+spawning so yeah and that's about it
+for this video so i hope you guys
+for this video so i hope you guys
+for this video so i hope you guys
+enjoyed
+enjoyed
+enjoyed
+make sure to comment any suggestions or
+make sure to comment any suggestions or
+make sure to comment any suggestions or
+questions
+questions
+questions
+if you want any tutorials make sure to
+if you want any tutorials make sure to
+if you want any tutorials make sure to
+tell me that as well
+tell me that as well
+tell me that as well
+and make sure also comment if you guys
+and make sure also comment if you guys
+and make sure also comment if you guys
+like these dev vlogs or if you want more
+like these dev vlogs or if you want more
+like these dev vlogs or if you want more
+tutorials because i'm open to do
+tutorials because i'm open to do
+tutorials because i'm open to do
+whatever
+whatever
+whatever
+i just like to use these devlogs because
+i just like to use these devlogs because
+i just like to use these devlogs because
+they keep me on track as well as giving
+they keep me on track as well as giving
+they keep me on track as well as giving
+you guys an insight
+you guys an insight
+you guys an insight
+as to how i actually develop my games so
+as to how i actually develop my games so
+as to how i actually develop my games so
+it's good for me it could be good for
+it's good for me it could be good for
+it's good for me it could be good for
+some of you
+some of you
+some of you
+just let me know your opinions on them
+just let me know your opinions on them
+just let me know your opinions on them
+in general
+in general
+in general
+and you can do that via comments you can
+and you can do that via comments you can
+and you can do that via comments you can
+also join my discord server
+also join my discord server
+also join my discord server
+which is in the description but other
+which is in the description but other
+which is in the description but other
+than that i hope you guys have a nice
+than that i hope you guys have a nice
+than that i hope you guys have a nice
+day
+day
+day
+and goodbye
+and goodbye
+and goodbye
+[Music]
+[Music]
+[Music]
+you

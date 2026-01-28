@@ -1,0 +1,1278 @@
+do you want to learn how to use remote
+do you want to learn how to use remote
+do you want to learn how to use remote
+events and functions
+events and functions
+events and functions
+to communicate between the server and
+to communicate between the server and
+to communicate between the server and
+the client
+the client
+the client
+or maybe you want to learn how to
+or maybe you want to learn how to
+or maybe you want to learn how to
+prevent your game
+prevent your game
+prevent your game
+from getting exploited using these very
+from getting exploited using these very
+from getting exploited using these very
+powerful remote events and functions
+powerful remote events and functions
+powerful remote events and functions
+if you fall into any of these categories
+if you fall into any of these categories
+if you fall into any of these categories
+or just want to learn something new
+or just want to learn something new
+or just want to learn something new
+in roblox stay tuned and watch
+in roblox stay tuned and watch
+in roblox stay tuned and watch
+this video
+[Music]
+[Music]
+[Music]
+so before you use remote events and
+so before you use remote events and
+so before you use remote events and
+remote functions you first need to know
+remote functions you first need to know
+remote functions you first need to know
+what they do
+what they do
+what they do
+and how they work so basically the main
+and how they work so basically the main
+and how they work so basically the main
+purpose of these
+purpose of these
+purpose of these
+functions and events is to communicate
+functions and events is to communicate
+functions and events is to communicate
+between the server
+between the server
+between the server
+which is where like scripts are run and
+which is where like scripts are run and
+which is where like scripts are run and
+the client which is each
+the client which is each
+the client which is each
+player and that's where like local
+player and that's where like local
+player and that's where like local
+scripts and like the player character is
+scripts and like the player character is
+scripts and like the player character is
+simulated and whatever
+simulated and whatever
+simulated and whatever
+so you can do that with either remote
+so you can do that with either remote
+so you can do that with either remote
+events or remote functions and
+events or remote functions and
+events or remote functions and
+prior to filtering enabled you didn't
+prior to filtering enabled you didn't
+prior to filtering enabled you didn't
+really need this but
+really need this but
+really need this but
+since filtering enables a thing where
+since filtering enables a thing where
+since filtering enables a thing where
+basically the client can't really edit
+basically the client can't really edit
+basically the client can't really edit
+whatever the server sees unless the
+whatever the server sees unless the
+whatever the server sees unless the
+server like lets it happen
+server like lets it happen
+server like lets it happen
+we have to use remote events and remote
+we have to use remote events and remote
+we have to use remote events and remote
+functions which is good
+functions which is good
+functions which is good
+so people can't just exploit your game
+so people can't just exploit your game
+so people can't just exploit your game
+to oblivion
+to oblivion
+to oblivion
+so let's start with remote events a
+so let's start with remote events a
+so let's start with remote events a
+remote event basically
+remote event basically
+remote event basically
+sends a signal from either the server to
+sends a signal from either the server to
+sends a signal from either the server to
+the client
+the client
+the client
+or client to the server i'm drawing
+or client to the server i'm drawing
+or client to the server i'm drawing
+right here
+right here
+right here
+or the server to the client there you go
+or the server to the client there you go
+or the server to the client there you go
+so it's one way so you can send you can
+so it's one way so you can send you can
+so it's one way so you can send you can
+send a signal that just tells it to do
+send a signal that just tells it to do
+send a signal that just tells it to do
+something you can also send
+something you can also send
+something you can also send
+like parameters with it depending on
+like parameters with it depending on
+like parameters with it depending on
+like what you want to do
+like what you want to do
+like what you want to do
+and that's good but that only works if
+and that's good but that only works if
+and that's good but that only works if
+you want
+you want
+you want
+a one-way connection if you want to
+a one-way connection if you want to
+a one-way connection if you want to
+send something if the client wants to
+send something if the client wants to
+send something if the client wants to
+send something to the server
+send something to the server
+send something to the server
+and the server wants to give something
+and the server wants to give something
+and the server wants to give something
+back to the client
+back to the client
+back to the client
+in order to like verify it that's when
+in order to like verify it that's when
+in order to like verify it that's when
+you use a remote function
+you use a remote function
+you use a remote function
+so let's say the client sends something
+so let's say the client sends something
+so let's say the client sends something
+to the server
+to the server
+to the server
+the server processes it and in the end
+the server processes it and in the end
+the server processes it and in the end
+it sends back another value
+it sends back another value
+it sends back another value
+and this is exactly how a function a
+and this is exactly how a function a
+and this is exactly how a function a
+non-void function
+non-void function
+non-void function
+would work in lua so you could have a
+would work in lua so you could have a
+would work in lua so you could have a
+function like
+here and you could return something
+and that's exactly how it would work but
+and that's exactly how it would work but
+and that's exactly how it would work but
+instead of a normal function
+instead of a normal function
+instead of a normal function
+it'd just be a remote function
+it'd just be a remote function
+it'd just be a remote function
+so i'm here in roblox studio and let's
+so i'm here in roblox studio and let's
+so i'm here in roblox studio and let's
+get started so
+get started so
+get started so
+first thing you want to keep in mind
+first thing you want to keep in mind
+first thing you want to keep in mind
+when you're making your remote event
+when you're making your remote event
+when you're making your remote event
+events and functions is where to put
+events and functions is where to put
+events and functions is where to put
+them so
+them so
+them so
+you want to put in a place where both
+you want to put in a place where both
+you want to put in a place where both
+the client and server can see it
+the client and server can see it
+the client and server can see it
+so a good thing to keep in mind is that
+so a good thing to keep in mind is that
+so a good thing to keep in mind is that
+server anything with server like service
+server anything with server like service
+server anything with server like service
+script service or server storage
+script service or server storage
+script service or server storage
+client can't see that the server can
+client can't see that the server can
+client can't see that the server can
+technically
+technically
+technically
+see inside each player but that's just a
+see inside each player but that's just a
+see inside each player but that's just a
+bad spot to put it because
+bad spot to put it because
+bad spot to put it because
+it'll be replicated across each client
+it'll be replicated across each client
+it'll be replicated across each client
+and you'll have to
+and you'll have to
+and you'll have to
+work with each client individually so
+work with each client individually so
+work with each client individually so
+that leaves workspace
+that leaves workspace
+that leaves workspace
+replicated first replicate storage so
+replicated first replicate storage so
+replicated first replicate storage so
+you could put your stuff in workspace
+you could put your stuff in workspace
+you could put your stuff in workspace
+but
+but
+but
+i like to reserve that for parts and
+i like to reserve that for parts and
+i like to reserve that for parts and
+other things that will like appear in
+other things that will like appear in
+other things that will like appear in
+the world
+the world
+the world
+replicated first just goes from the
+replicated first just goes from the
+replicated first just goes from the
+client
+client
+client
+into the like it replicates into the
+into the like it replicates into the
+into the like it replicates into the
+client
+client
+client
+originally so that's not really a good
+originally so that's not really a good
+originally so that's not really a good
+spot either visa only does it once it
+spot either visa only does it once it
+spot either visa only does it once it
+won't really continue replicating
+won't really continue replicating
+won't really continue replicating
+replicated storage is the best candidate
+replicated storage is the best candidate
+replicated storage is the best candidate
+so i'm going to go and replicate storage
+so i'm going to go and replicate storage
+so i'm going to go and replicate storage
+create a remote event and let's also
+create a remote event and let's also
+create a remote event and let's also
+create a remote function and then we can
+create a remote function and then we can
+create a remote function and then we can
+just deal with these
+just deal with these
+just deal with these
+so i'm going to go into startup player
+so i'm going to go into startup player
+so i'm going to go into startup player
+starter player scripts and create a
+starter player scripts and create a
+starter player scripts and create a
+local script
+local script
+local script
+let me zoom in a little bit let me get
+let me zoom in a little bit let me get
+let me zoom in a little bit let me get
+our remote
+our remote
+our remote
+event which would be equal to game dot
+event which would be equal to game dot
+event which would be equal to game dot
+replicated
+replicated
+replicated
+storage let's just do a wait for trial
+storage let's just do a wait for trial
+storage let's just do a wait for trial
+just to be safe
+just to be safe
+just to be safe
+remote event and then our
+remote event and then our
+remote event and then our
+remote function which is game
+remote function which is game
+remote function which is game
+dot replicated storage wait for child
+dot replicated storage wait for child
+dot replicated storage wait for child
+remote function there we go and i'm
+remote function there we go and i'm
+remote function there we go and i'm
+going to do the same thing
+going to do the same thing
+going to do the same thing
+in server script service but instead of
+in server script service but instead of
+in server script service but instead of
+a local script i'm going
+a local script i'm going
+a local script i'm going
+to create a script and just to make it
+to create a script and just to make it
+to create a script and just to make it
+easier i'm going to
+easier i'm going to
+easier i'm going to
+copy all of these variable declarations
+copy all of these variable declarations
+copy all of these variable declarations
+and just shove them in here
+and just shove them in here
+and just shove them in here
+and a good indicator that the client or
+and a good indicator that the client or
+and a good indicator that the client or
+the server can't see your stuff
+the server can't see your stuff
+the server can't see your stuff
+is if you can't copy the lines and it'll
+is if you can't copy the lines and it'll
+is if you can't copy the lines and it'll
+still run so like
+still run so like
+still run so like
+they're both looking in replicative
+they're both looking in replicative
+they're both looking in replicative
+storage they both can see replicated
+storage they both can see replicated
+storage they both can see replicated
+storage
+storage
+storage
+so we're good so we're going to start by
+so we're good so we're going to start by
+so we're good so we're going to start by
+sending a message to the server
+sending a message to the server
+sending a message to the server
+i'm on the local script right now i'm
+i'm on the local script right now i'm
+i'm on the local script right now i'm
+going to say remote event
+going to say remote event
+going to say remote event
+fire server now this is the
+fire server now this is the
+fire server now this is the
+only function that allows you to fire
+only function that allows you to fire
+only function that allows you to fire
+the server on a remote event
+the server on a remote event
+the server on a remote event
+and this will basically just send the
+and this will basically just send the
+and this will basically just send the
+server and you can also put
+server and you can also put
+server and you can also put
+whatever parameters you want
+whatever parameters you want
+whatever parameters you want
+so this can be just like to print a
+so this can be just like to print a
+so this can be just like to print a
+message on the server let's say
+message on the server let's say
+message on the server let's say
+so remote event dot on
+so remote event dot on
+so remote event dot on
+server event connect
+server event connect
+server event connect
+and we have a function here so the first
+and we have a function here so the first
+and we have a function here so the first
+thing you want to know
+thing you want to know
+thing you want to know
+is whatever parameters you send
+is whatever parameters you send
+is whatever parameters you send
+it's going to be offset by another
+it's going to be offset by another
+it's going to be offset by another
+parameter it always
+parameter it always
+parameter it always
+whenever you're sending from the client
+whenever you're sending from the client
+whenever you're sending from the client
+to the server
+to the server
+to the server
+it'll always send the player who sent it
+it'll always send the player who sent it
+it'll always send the player who sent it
+first so no matter if you use this
+first so no matter if you use this
+first so no matter if you use this
+variable or not
+variable or not
+variable or not
+it will always be the player variable
+it will always be the player variable
+it will always be the player variable
+first so that could screw you up
+first so that could screw you up
+first so that could screw you up
+really badly if you don't know that
+really badly if you don't know that
+really badly if you don't know that
+because if for say i say
+because if for say i say
+because if for say i say
+message which would be like hello it
+message which would be like hello it
+message which would be like hello it
+would actually be player and i try to
+would actually be player and i try to
+would actually be player and i try to
+print out
+print out
+print out
+message it just print my player's name
+message it just print my player's name
+message it just print my player's name
+and i'd be very confused
+and i'd be very confused
+and i'd be very confused
+so put player comma message because you
+so put player comma message because you
+so put player comma message because you
+always get the player sent
+always get the player sent
+always get the player sent
+so and now we can print player.name
+says
+message there we go so if we run this
+message there we go so if we run this
+message there we go so if we run this
+your ic763 says hello that's
+your ic763 says hello that's
+your ic763 says hello that's
+exactly what you want
+exactly what you want
+exactly what you want
+so now if we want to do that in the
+so now if we want to do that in the
+so now if we want to do that in the
+reverse direction
+reverse direction
+reverse direction
+you can say remote event fire
+you can say remote event fire
+you can say remote event fire
+client or we could say remote event
+client or we could say remote event
+client or we could say remote event
+fire all clients so fire client
+fire all clients so fire client
+fire all clients so fire client
+basically fires a single client and
+basically fires a single client and
+basically fires a single client and
+it'll take in the parameter
+it'll take in the parameter
+it'll take in the parameter
+of the player that you want so let's
+of the player that you want so let's
+of the player that you want so let's
+just do fire client
+just do fire client
+just do fire client
+whoops game dot
+whoops game dot
+whoops game dot
+players get players
+players get players
+players get players
+one so let's just just get the first
+one so let's just just get the first
+one so let's just just get the first
+player actually let's wait a second
+player actually let's wait a second
+player actually let's wait a second
+because we have to wait for the
+because we have to wait for the
+because we have to wait for the
+character to load in and then
+character to load in and then
+character to load in and then
+we'll get the player and we'll fire the
+we'll get the player and we'll fire the
+we'll get the player and we'll fire the
+first player which should be me since
+first player which should be me since
+first player which should be me since
+i'm playing a single player
+i'm playing a single player
+i'm playing a single player
+so we'll do remote event dot on client
+so we'll do remote event dot on client
+so we'll do remote event dot on client
+event so you notice that syntax is the
+event so you notice that syntax is the
+event so you notice that syntax is the
+same
+same
+same
+other than saying on client and on
+other than saying on client and on
+other than saying on client and on
+server which is good
+server which is good
+server which is good
+so on client event connect a function
+and the client does not get any default
+and the client does not get any default
+and the client does not get any default
+parameters so we can just print
+parameters so we can just print
+parameters so we can just print
+client was called
+and there you go so that's the basics of
+and there you go so that's the basics of
+and there you go so that's the basics of
+remote events so you'll notice that this
+remote events so you'll notice that this
+remote events so you'll notice that this
+is a one-way single so if i were to
+is a one-way single so if i were to
+is a one-way single so if i were to
+return one or like return a value
+return one or like return a value
+return one or like return a value
+no one would get that like the remote
+no one would get that like the remote
+no one would get that like the remote
+event would not pick that up it would
+event would not pick that up it would
+event would not pick that up it would
+not capture that and return it
+not capture that and return it
+not capture that and return it
+that's where remote functions come in
+so now let's access our remote function
+so now let's access our remote function
+so now let's access our remote function
+so i'm just going to firstly
+so i'm just going to firstly
+so i'm just going to firstly
+comment out these lines of code real
+comment out these lines of code real
+comment out these lines of code real
+quick
+quick
+quick
+and they change the shortcut it used to
+and they change the shortcut it used to
+and they change the shortcut it used to
+be ctrl shift c
+be ctrl shift c
+be ctrl shift c
+but now it's control like slash
+but now it's control like slash
+but now it's control like slash
+and you can obviously change that in the
+and you can obviously change that in the
+and you can obviously change that in the
+settings but
+settings but
+settings but
+i just noticed that because that's more
+i just noticed that because that's more
+i just noticed that because that's more
+in line with like visual studio
+in line with like visual studio
+in line with like visual studio
+but that's a tangent okay so let's get
+but that's a tangent okay so let's get
+but that's a tangent okay so let's get
+back to remove functions so
+back to remove functions so
+back to remove functions so
+we have our remote function and
+we have our remote function and
+we have our remote function and
+the idea is very similar the s the
+the idea is very similar the s the
+the idea is very similar the s the
+syntax is very similar but slightly
+syntax is very similar but slightly
+syntax is very similar but slightly
+different
+different
+different
+and those differences will get you if
+and those differences will get you if
+and those differences will get you if
+you ever
+you ever
+you ever
+are unsure or confused honestly it
+are unsure or confused honestly it
+are unsure or confused honestly it
+happens to me a lot they're both so
+happens to me a lot they're both so
+happens to me a lot they're both so
+similar
+similar
+similar
+just look up the documentation that's
+just look up the documentation that's
+just look up the documentation that's
+what i always do and it works really
+what i always do and it works really
+what i always do and it works really
+well
+well
+well
+so first thing we'll do we're on the
+so first thing we'll do we're on the
+so first thing we'll do we're on the
+client and we're going to invoke
+client and we're going to invoke
+client and we're going to invoke
+the server and we're actually going to
+the server and we're actually going to
+the server and we're actually going to
+capture our value we're going to say
+capture our value we're going to say
+capture our value we're going to say
+local
+local
+local
+server value equals remote function
+server value equals remote function
+server value equals remote function
+invoke
+invoke
+invoke
+server
+and now on the server we're going to say
+and now on the server we're going to say
+and now on the server we're going to say
+remote function
+remote function
+remote function
+dot on server invoke don't connect we
+dot on server invoke don't connect we
+dot on server invoke don't connect we
+have to say
+have to say
+have to say
+equals so we're basically setting a
+equals so we're basically setting a
+equals so we're basically setting a
+property of our remote function and this
+property of our remote function and this
+property of our remote function and this
+property
+property
+property
+is a function property that may or may
+is a function property that may or may
+is a function property that may or may
+not return a value and
+not return a value and
+not return a value and
+most of the time it should return a
+most of the time it should return a
+most of the time it should return a
+value if it does not return a value use
+value if it does not return a value use
+value if it does not return a value use
+a remote event
+a remote event
+a remote event
+so i have a function and it obviously
+so i have a function and it obviously
+so i have a function and it obviously
+gets the player so we can
+gets the player so we can
+gets the player so we can
+return 10 or something
+return 10 or something
+return 10 or something
+and so we can print server
+and so we can print server
+and so we can print server
+value
+and it prints 10. and a very useful you
+and it prints 10. and a very useful you
+and it prints 10. and a very useful you
+like this
+like this
+like this
+on the surface and may not seem that
+on the surface and may not seem that
+on the surface and may not seem that
+useful you could maybe get a constant
+useful you could maybe get a constant
+useful you could maybe get a constant
+like
+like
+like
+define a constant here say local
+define a constant here say local
+define a constant here say local
+constant equals 10 and you could return
+constant equals 10 and you could return
+constant equals 10 and you could return
+a constant so that
+a constant so that
+a constant so that
+only the client the client can get that
+only the client the client can get that
+only the client the client can get that
+value it can't actually change it on the
+value it can't actually change it on the
+value it can't actually change it on the
+server
+server
+server
+but one of the biggest uses for this is
+but one of the biggest uses for this is
+but one of the biggest uses for this is
+some like
+some like
+some like
+client-side verification so let's rename
+client-side verification so let's rename
+client-side verification so let's rename
+this value to success
+this value to success
+this value to success
+and this will be a boolean value success
+and this will be a boolean value success
+and this will be a boolean value success
+so on the server script we can basically
+so on the server script we can basically
+so on the server script we can basically
+say like do
+say like do
+say like do
+like a transaction for example say um
+like a transaction for example say um
+like a transaction for example say um
+like
+like
+like
+if true you'd obviously change this
+if true you'd obviously change this
+if true you'd obviously change this
+then like do something so if the player
+then like do something so if the player
+then like do something so if the player
+if some
+if some
+if some
+action is true then we'll do something
+action is true then we'll do something
+action is true then we'll do something
+and we'll have a variable local success
+and we'll have a variable local success
+and we'll have a variable local success
+equals false so if this is true then we
+equals false so if this is true then we
+equals false so if this is true then we
+set success
+set success
+set success
+equal to true and regardless we return
+equal to true and regardless we return
+equal to true and regardless we return
+success so basically what would happen
+success so basically what would happen
+success so basically what would happen
+here is like let's say the player wants
+here is like let's say the player wants
+here is like let's say the player wants
+to buy something
+to buy something
+to buy something
+so what will happen is we'll get the
+so what will happen is we'll get the
+so what will happen is we'll get the
+player we'll
+player we'll
+player we'll
+check here presumably if they have
+check here presumably if they have
+check here presumably if they have
+enough money
+enough money
+enough money
+then we'll set success to true and will
+then we'll set success to true and will
+then we'll set success to true and will
+return success so the client will know
+return success so the client will know
+return success so the client will know
+if their transaction was successful and
+if their transaction was successful and
+if their transaction was successful and
+they'll know it immediately
+they'll know it immediately
+they'll know it immediately
+which that is a very good use and that
+which that is a very good use and that
+which that is a very good use and that
+also brings up
+also brings up
+also brings up
+another good point and that is sanity
+another good point and that is sanity
+another good point and that is sanity
+checks
+checks
+checks
+so we're going to do a basic sanity
+so we're going to do a basic sanity
+so we're going to do a basic sanity
+check right here
+check right here
+check right here
+so i just quickly set up a simple
+so i just quickly set up a simple
+so i just quickly set up a simple
+example
+example
+example
+of when a sanity check would be useful
+of when a sanity check would be useful
+of when a sanity check would be useful
+and insanity check is basically when
+and insanity check is basically when
+and insanity check is basically when
+you're checking if your variables
+you're checking if your variables
+you're checking if your variables
+make sense and they usually occur on the
+make sense and they usually occur on the
+make sense and they usually occur on the
+server
+server
+server
+so i have this in my main script i
+so i have this in my main script i
+so i have this in my main script i
+basically set up some leader stats real
+basically set up some leader stats real
+basically set up some leader stats real
+quick
+quick
+quick
+and then i have the on server invoke
+and then i have the on server invoke
+and then i have the on server invoke
+function
+function
+function
+that let's say they want to buy
+that let's say they want to buy
+that let's say they want to buy
+something so
+something so
+something so
+they take the money value and subtract
+they take the money value and subtract
+they take the money value and subtract
+it by the cost but
+it by the cost but
+it by the cost but
+if i were to run this right now like if
+if i were to run this right now like if
+if i were to run this right now like if
+i send in a cost value
+i send in a cost value
+i send in a cost value
+of like a thousand
+of like a thousand
+of like a thousand
+we'll see what happens so it gives me
+we'll see what happens so it gives me
+we'll see what happens so it gives me
+negative money
+negative money
+negative money
+which that's not good and by the way
+which that's not good and by the way
+which that's not good and by the way
+it's negative 900 because i started with
+it's negative 900 because i started with
+it's negative 900 because i started with
+a hundred money originally and if you
+a hundred money originally and if you
+a hundred money originally and if you
+don't know what this is
+don't know what this is
+don't know what this is
+uh just look it up leaderboards and
+uh just look it up leaderboards and
+uh just look it up leaderboards and
+leader sites are pretty simple
+leader sites are pretty simple
+leader sites are pretty simple
+if you want i'll make a video on it but
+if you want i'll make a video on it but
+if you want i'll make a video on it but
+back to here so
+back to here so
+back to here so
+this we need a sanity check right here
+this we need a sanity check right here
+this we need a sanity check right here
+and basically what do we want our sanity
+and basically what do we want our sanity
+and basically what do we want our sanity
+check to do we want to check
+check to do we want to check
+check to do we want to check
+if our player is able to buy this so we
+if our player is able to buy this so we
+if our player is able to buy this so we
+can just say
+can just say
+can just say
+if money dot value is greater than or
+if money dot value is greater than or
+if money dot value is greater than or
+equal to cost
+equal to cost
+equal to cost
+then we can
+then we can
+then we can
+subtract the money value so you'll see
+subtract the money value so you'll see
+subtract the money value so you'll see
+if you run this now
+if you run this now
+if you run this now
+it doesn't do anything and also to
+it doesn't do anything and also to
+it doesn't do anything and also to
+couple with this we could add our
+couple with this we could add our
+couple with this we could add our
+success flag variable
+success flag variable
+success flag variable
+success which will originally equal
+success which will originally equal
+success which will originally equal
+false
+false
+false
+and then we'll set success equal to true
+and then we'll set success equal to true
+and then we'll set success equal to true
+but
+but
+but
+if we're not successful we'll set
+if we're not successful we'll set
+if we're not successful we'll set
+success equal to false
+and i'm just doing this for readability
+and i'm just doing this for readability
+and i'm just doing this for readability
+it's already full so you don't really
+it's already full so you don't really
+it's already full so you don't really
+need it but
+need it but
+need it but
+basically this could be used to like
+basically this could be used to like
+basically this could be used to like
+make a little buy system so you could
+make a little buy system so you could
+make a little buy system so you could
+print success so
+print success so
+print success so
+this won't be successful
+so it'll print false but if you want to
+so it'll print false but if you want to
+so it'll print false but if you want to
+buy something that's let's say
+buy something that's let's say
+buy something that's let's say
+50 money
+it will be successful and it'll subtract
+it will be successful and it'll subtract
+it will be successful and it'll subtract
+our money so just add like so you can
+our money so just add like so you can
+our money so just add like so you can
+maybe do a gui pop-up that says
+maybe do a gui pop-up that says
+maybe do a gui pop-up that says
+transaction successful minus 50 money or
+transaction successful minus 50 money or
+transaction successful minus 50 money or
+if you're not successful you could just
+if you're not successful you could just
+if you're not successful you could just
+say like transaction
+say like transaction
+say like transaction
+failed you do not have enough money or
+failed you do not have enough money or
+failed you do not have enough money or
+something like that
+something like that
+something like that
+so this is a really basic example of
+so this is a really basic example of
+so this is a really basic example of
+sanity checks
+sanity checks
+sanity checks
+and don't get me wrong it will not
+and don't get me wrong it will not
+and don't get me wrong it will not
+always be like this depending on your
+always be like this depending on your
+always be like this depending on your
+variables you might need to check the
+variables you might need to check the
+variables you might need to check the
+type of a variable you might need to
+type of a variable you might need to
+type of a variable you might need to
+check
+check
+check
+a like value or a certain
+a like value or a certain
+a like value or a certain
+property but the biggest thing to keep
+property but the biggest thing to keep
+property but the biggest thing to keep
+in mind is never
+in mind is never
+in mind is never
+ever trust the client and the reason you
+ever trust the client and the reason you
+ever trust the client and the reason you
+never want to trust a client
+never want to trust a client
+never want to trust a client
+is for things like exploits so an
+is for things like exploits so an
+is for things like exploits so an
+explainer can create a local script
+explainer can create a local script
+explainer can create a local script
+and it can look through replicated
+and it can look through replicated
+and it can look through replicated
+storage find all the remote functions at
+storage find all the remote functions at
+storage find all the remote functions at
+remote events and fire them
+remote events and fire them
+remote events and fire them
+let's say with an arbitrary value of
+let's say with an arbitrary value of
+let's say with an arbitrary value of
+like
+like
+like
+hundred thousand or something so let's
+hundred thousand or something so let's
+hundred thousand or something so let's
+say you have a
+say you have a
+say you have a
+a remote event that says like add money
+a remote event that says like add money
+a remote event that says like add money
+and you don't check at all for the
+and you don't check at all for the
+and you don't check at all for the
+client
+client
+client
+so x wider could basically just add like
+so x wider could basically just add like
+so x wider could basically just add like
+millions and millions of dollars
+millions and millions of dollars
+millions and millions of dollars
+to their money without doing anything
+to their money without doing anything
+to their money without doing anything
+just because they're calling one of your
+just because they're calling one of your
+just because they're calling one of your
+unprotected remote events so you need to
+unprotected remote events so you need to
+unprotected remote events so you need to
+add these little if statements
+add these little if statements
+add these little if statements
+and make your code very defensive
+and make your code very defensive
+and make your code very defensive
+meaning that like it doesn't let
+meaning that like it doesn't let
+meaning that like it doesn't let
+errors through but it doesn't actually
+errors through but it doesn't actually
+errors through but it doesn't actually
+air it just
+air it just
+air it just
+catches these errors before anything
+catches these errors before anything
+catches these errors before anything
+else can happen so you can even put like
+else can happen so you can even put like
+else can happen so you can even put like
+a warrant statement for debugging
+a warrant statement for debugging
+a warrant statement for debugging
+say like transaction
+say like transaction
+say like transaction
+not successful so this would be good for
+not successful so this would be good for
+not successful so this would be good for
+debugging or something like that
+debugging or something like that
+debugging or something like that
+and that's about it for this video so i
+and that's about it for this video so i
+and that's about it for this video so i
+hope you guys enjoyed
+hope you guys enjoyed
+hope you guys enjoyed
+and if you want i use a little different
+and if you want i use a little different
+and if you want i use a little different
+method for my remote communications and
+method for my remote communications and
+method for my remote communications and
+it works pretty well i use like a
+it works pretty well i use like a
+it works pretty well i use like a
+command system so if you want to see a
+command system so if you want to see a
+command system so if you want to see a
+video on that then
+video on that then
+video on that then
+i will make it just comment down below
+i will make it just comment down below
+i will make it just comment down below
+but i hope you guys enjoyed this video
+but i hope you guys enjoyed this video
+but i hope you guys enjoyed this video
+is kind of simple
+is kind of simple
+is kind of simple
+but it's a good base for any like remote
+but it's a good base for any like remote
+but it's a good base for any like remote
+functions or remote event
+functions or remote event
+functions or remote event
+use and i hope you enjoyed the extra
+use and i hope you enjoyed the extra
+use and i hope you enjoyed the extra
+sanity checks part that would be very
+sanity checks part that would be very
+sanity checks part that would be very
+important
+important
+important
+especially if you have a good game that
+especially if you have a good game that
+especially if you have a good game that
+needs to be secure because it has a lot
+needs to be secure because it has a lot
+needs to be secure because it has a lot
+of players and more players brings
+of players and more players brings
+of players and more players brings
+more exploiters and people with mal
+more exploiters and people with mal
+more exploiters and people with mal
+intent
+intent
+intent
+so i hope that helps and other than that
+so i hope that helps and other than that
+so i hope that helps and other than that
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+enjoyed i hope you have a nice day
+enjoyed i hope you have a nice day
+enjoyed i hope you have a nice day
+and goodbye
+[Music]
+[Music]
+[Music]
+you

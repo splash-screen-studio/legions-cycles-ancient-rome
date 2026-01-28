@@ -1,0 +1,1637 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+this video is the first in a series
+this video is the first in a series
+this video is the first in a series
+where i will be making
+where i will be making
+where i will be making
+a grapple gun in a roblox studio
+a grapple gun in a roblox studio
+a grapple gun in a roblox studio
+now this project was really fun to make
+now this project was really fun to make
+now this project was really fun to make
+and i had to share it with y'all
+and i had to share it with y'all
+and i had to share it with y'all
+because it's a super cool thing it
+because it's a super cool thing it
+because it's a super cool thing it
+teaches you a lot of good stuff about
+teaches you a lot of good stuff about
+teaches you a lot of good stuff about
+constraints and roblox and just general
+constraints and roblox and just general
+constraints and roblox and just general
+coding and tools
+coding and tools
+coding and tools
+so i hope you guys enjoy and this is the
+so i hope you guys enjoy and this is the
+so i hope you guys enjoy and this is the
+first video in a series
+first video in a series
+first video in a series
+so just keep that in mind you have to
+so just keep that in mind you have to
+so just keep that in mind you have to
+watch the whole thing to get it to work
+watch the whole thing to get it to work
+watch the whole thing to get it to work
+and because it's in the series format
+and because it's in the series format
+and because it's in the series format
+this first video is just the basic
+this first video is just the basic
+this first video is just the basic
+setup of our grapple gun which may not
+setup of our grapple gun which may not
+setup of our grapple gun which may not
+be the most interesting but it's
+be the most interesting but it's
+be the most interesting but it's
+necessary
+necessary
+necessary
+to get the finished product and it does
+to get the finished product and it does
+to get the finished product and it does
+teach you
+teach you
+teach you
+many good things so without further ado
+many good things so without further ado
+many good things so without further ado
+let's get into the video
+let's get into the video
+let's get into the video
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+enjoy and comment any questions
+enjoy and comment any questions
+enjoy and comment any questions
+down below
+down below
+down below
+[Music]
+so let's get started i have here a
+so let's get started i have here a
+so let's get started i have here a
+little basic
+little basic
+little basic
+model actually just two parts this is
+model actually just two parts this is
+model actually just two parts this is
+gonna be like my barrel and it's going
+gonna be like my barrel and it's going
+gonna be like my barrel and it's going
+to be my
+to be my
+to be my
+handle and they're all just visual this
+handle and they're all just visual this
+handle and they're all just visual this
+is just to help visualize our tool of
+is just to help visualize our tool of
+is just to help visualize our tool of
+course when you're making your grapple
+course when you're making your grapple
+course when you're making your grapple
+gun
+gun
+gun
+you can change this to whatever you want
+you can change this to whatever you want
+you can change this to whatever you want
+but one thing you have to do is make
+but one thing you have to do is make
+but one thing you have to do is make
+sure all the parts are welded
+sure all the parts are welded
+sure all the parts are welded
+so i'm going to select all the parts go
+so i'm going to select all the parts go
+so i'm going to select all the parts go
+to model
+to model
+to model
+create weld and you can see
+create weld and you can see
+create weld and you can see
+if you have show welds turned on and
+if you have show welds turned on and
+if you have show welds turned on and
+draw on top
+draw on top
+draw on top
+turned on you can see this weld
+turned on you can see this weld
+turned on you can see this weld
+constraint formed
+constraint formed
+constraint formed
+between my two parts which is exactly
+between my two parts which is exactly
+between my two parts which is exactly
+what we want
+what we want
+what we want
+so now i'm going to go create a new part
+so now i'm going to go create a new part
+so now i'm going to go create a new part
+and this will be our actual handle for
+and this will be our actual handle for
+and this will be our actual handle for
+our gun so let me just move this to
+our gun so let me just move this to
+our gun so let me just move this to
+where
+where
+where
+the player should be holding it and
+the player should be holding it and
+the player should be holding it and
+we're going to resize it a little bit
+we're going to resize it a little bit
+we're going to resize it a little bit
+make it smaller and actually we're just
+make it smaller and actually we're just
+make it smaller and actually we're just
+going to take
+going to take
+going to take
+the position of our like little diagonal
+the position of our like little diagonal
+the position of our like little diagonal
+part
+part
+part
+and just put that as our handle so there
+and just put that as our handle so there
+and just put that as our handle so there
+we go and then we're just going to move
+we go and then we're just going to move
+we go and then we're just going to move
+it back a little bit so it's aligned
+it back a little bit so it's aligned
+it back a little bit so it's aligned
+properly and for testing purposes we're
+properly and for testing purposes we're
+properly and for testing purposes we're
+going to make it semi-transparent like a
+going to make it semi-transparent like a
+going to make it semi-transparent like a
+0.5 transparency
+0.5 transparency
+0.5 transparency
+and then we're going to name this part
+and then we're going to name this part
+and then we're going to name this part
+handle there we go
+handle there we go
+handle there we go
+and now we need to make another part and
+and now we need to make another part and
+and now we need to make another part and
+this will be
+this will be
+this will be
+our hook base
+our hook base
+our hook base
+part and this is basically the part
+part and this is basically the part
+part and this is basically the part
+where
+where
+where
+our little grappling hook will be
+our little grappling hook will be
+our little grappling hook will be
+attached to but we'll get to that in a
+attached to but we'll get to that in a
+attached to but we'll get to that in a
+little bit
+little bit
+little bit
+and i'm just going to name this part
+and i'm just going to name this part
+and i'm just going to name this part
+base
+base
+base
+and i'm going to resize it a little bit
+and i'm going to resize it a little bit
+and i'm going to resize it a little bit
+so it fits
+so it fits
+so it fits
+with our barrel this is just preference
+with our barrel this is just preference
+with our barrel this is just preference
+to be honest doesn't really change
+to be honest doesn't really change
+to be honest doesn't really change
+anything there we go
+anything there we go
+anything there we go
+and i'm going to duplicate this part and
+and i'm going to duplicate this part and
+and i'm going to duplicate this part and
+bring it out a little bit and this will
+bring it out a little bit and this will
+bring it out a little bit and this will
+be
+be
+be
+our hook because it's a grapple gun and
+our hook because it's a grapple gun and
+our hook because it's a grapple gun and
+every grapple gun has a hook and this
+every grapple gun has a hook and this
+every grapple gun has a hook and this
+will be the part that will be flinging
+will be the part that will be flinging
+will be the part that will be flinging
+out and
+out and
+out and
+grabbing on whatever object that we
+grabbing on whatever object that we
+grabbing on whatever object that we
+touch
+touch
+touch
+so now all we need to do is duplicate
+so now all we need to do is duplicate
+so now all we need to do is duplicate
+our hook
+our hook
+our hook
+and name this part the hook reference
+and name this part the hook reference
+and name this part the hook reference
+and this part will be static which means
+and this part will be static which means
+and this part will be static which means
+it won't move and it'll be a reference
+it won't move and it'll be a reference
+it won't move and it'll be a reference
+to move the hook back to where it
+to move the hook back to where it
+to move the hook back to where it
+started once we're done
+started once we're done
+started once we're done
+grappling something so
+grappling something so
+grappling something so
+now we need to do is we need to weld all
+now we need to do is we need to weld all
+now we need to do is we need to weld all
+of these so it's kind of specific what
+of these so it's kind of specific what
+of these so it's kind of specific what
+you have to do
+you have to do
+you have to do
+so let me just show you i have my handle
+so let me just show you i have my handle
+so let me just show you i have my handle
+selected i'm going to just go to create
+selected i'm going to just go to create
+selected i'm going to just go to create
+world it's going to give me this little
+world it's going to give me this little
+world it's going to give me this little
+red arrow
+red arrow
+red arrow
+and i can connect it there and then i
+and i can connect it there and then i
+and i can connect it there and then i
+want to weld
+want to weld
+want to weld
+my base to this part right here
+my base to this part right here
+my base to this part right here
+did that and then i want to weld my hook
+did that and then i want to weld my hook
+did that and then i want to weld my hook
+to the base and i'm going to name this
+to the base and i'm going to name this
+to the base and i'm going to name this
+world
+world
+world
+my hook weld there we go
+my hook weld there we go
+my hook weld there we go
+so because we're not we're going to need
+so because we're not we're going to need
+so because we're not we're going to need
+to deactivate it at some point so it's
+to deactivate it at some point so it's
+to deactivate it at some point so it's
+good to have a good name
+good to have a good name
+good to have a good name
+and for right now we're going to move
+and for right now we're going to move
+and for right now we're going to move
+the hook out of the way
+the hook out of the way
+the hook out of the way
+and then we're going to go to the hook
+and then we're going to go to the hook
+and then we're going to go to the hook
+reference and
+reference and
+reference and
+we're going to weld this also with the
+we're going to weld this also with the
+we're going to weld this also with the
+base but we're not going to change
+base but we're not going to change
+base but we're not going to change
+anything because it's always going to be
+anything because it's always going to be
+anything because it's always going to be
+welded like that
+welded like that
+welded like that
+and then we're going to move this back
+and then we're going to move this back
+and then we're going to move this back
+down
+down
+down
+there we go so that's all of our parts
+there we go so that's all of our parts
+there we go so that's all of our parts
+done let me just make my hook
+done let me just make my hook
+done let me just make my hook
+opaque and now let me just
+opaque and now let me just
+opaque and now let me just
+make all the parts non-collidable
+make all the parts non-collidable
+make all the parts non-collidable
+because with tools you never really want
+because with tools you never really want
+because with tools you never really want
+them to be collidable
+them to be collidable
+them to be collidable
+so now i'm going to highlight all of
+so now i'm going to highlight all of
+so now i'm going to highlight all of
+these parts press ctrl
+these parts press ctrl
+these parts press ctrl
+g put them into a model
+g put them into a model
+g put them into a model
+and we can name this model gun and then
+and we can name this model gun and then
+and we can name this model gun and then
+in the workspace we're going to go to
+in the workspace we're going to go to
+in the workspace we're going to go to
+the plus menu
+the plus menu
+the plus menu
+and create a tool and we're going to put
+and create a tool and we're going to put
+and create a tool and we're going to put
+our gun model
+our gun model
+our gun model
+inside of the tool and we're going to
+inside of the tool and we're going to
+inside of the tool and we're going to
+name this tool
+name this tool
+name this tool
+grapple gun you can name it whatever you
+grapple gun you can name it whatever you
+grapple gun you can name it whatever you
+want but that's going to be my name
+want but that's going to be my name
+want but that's going to be my name
+and then once we're inside the tool take
+and then once we're inside the tool take
+and then once we're inside the tool take
+your handle
+your handle
+your handle
+and drag it out of the gun and also take
+and drag it out of the gun and also take
+and drag it out of the gun and also take
+your hook and your hook reference
+your hook and your hook reference
+your hook and your hook reference
+because these are the parts that we'll
+because these are the parts that we'll
+because these are the parts that we'll
+be referencing a lot
+be referencing a lot
+be referencing a lot
+in our script so we want easy access to
+in our script so we want easy access to
+in our script so we want easy access to
+them
+them
+them
+through our tool so now it's time to
+through our tool so now it's time to
+through our tool so now it's time to
+test that everything works
+test that everything works
+test that everything works
+let me drop my tool into starter player
+let me drop my tool into starter player
+let me drop my tool into starter player
+or starter pack i should say and then we
+or starter pack i should say and then we
+or starter pack i should say and then we
+can
+can
+can
+play this and we can see how they fit
+play this and we can see how they fit
+play this and we can see how they fit
+together
+together
+together
+so right now the tool sizing and all the
+so right now the tool sizing and all the
+so right now the tool sizing and all the
+parts fit together but right now it's
+parts fit together but right now it's
+parts fit together but right now it's
+sideways
+sideways
+sideways
+so what i can do obviously if you have a
+so what i can do obviously if you have a
+so what i can do obviously if you have a
+tool grip editor plug-in you can use
+tool grip editor plug-in you can use
+tool grip editor plug-in you can use
+that
+that
+that
+but what i'm going to do which is a
+but what i'm going to do which is a
+but what i'm going to do which is a
+little bit simpler is just rotate
+little bit simpler is just rotate
+little bit simpler is just rotate
+my handle by 90 degrees using the
+my handle by 90 degrees using the
+my handle by 90 degrees using the
+keyboard shortcut
+keyboard shortcut
+keyboard shortcut
+ctrl r so i did that nothing changed we
+ctrl r so i did that nothing changed we
+ctrl r so i did that nothing changed we
+can see the orientation changed a little
+can see the orientation changed a little
+can see the orientation changed a little
+bit
+bit
+bit
+now let's go put it back in our starter
+now let's go put it back in our starter
+now let's go put it back in our starter
+pack
+we can pull it out now it's backwards so
+we can pull it out now it's backwards so
+we can pull it out now it's backwards so
+now we need to rotate it by
+now we need to rotate it by
+now we need to rotate it by
+180 degrees it's kind of a tedious
+180 degrees it's kind of a tedious
+180 degrees it's kind of a tedious
+process but
+process but
+process but
+you got to make sure that it's facing
+you got to make sure that it's facing
+you got to make sure that it's facing
+the right direction so we're going to
+the right direction so we're going to
+the right direction so we're going to
+rotate it
+rotate it
+rotate it
+again and again there we go
+again and again there we go
+again and again there we go
+that should be good let's shove that
+that should be good let's shove that
+that should be good let's shove that
+back in there
+back in there
+back in there
+now that's in starter players start to
+now that's in starter players start to
+now that's in starter players start to
+pack there we go
+and there we go the part is working so
+and there we go the part is working so
+and there we go the part is working so
+just for aesthetics i'm going to make
+just for aesthetics i'm going to make
+just for aesthetics i'm going to make
+our handle completely invisible by
+our handle completely invisible by
+our handle completely invisible by
+setting the transparency to one
+setting the transparency to one
+setting the transparency to one
+and that is our setup done
+and that is our setup done
+and that is our setup done
+so now that our tool setup is done i'm
+so now that our tool setup is done i'm
+so now that our tool setup is done i'm
+going to drag my
+going to drag my
+going to drag my
+tool back into the workspace because we
+tool back into the workspace because we
+tool back into the workspace because we
+need to do one more crucial thing
+need to do one more crucial thing
+need to do one more crucial thing
+for our like part setup for our grapple
+for our like part setup for our grapple
+for our like part setup for our grapple
+gun and that is actually make
+gun and that is actually make
+gun and that is actually make
+the grappling like rope and so you might
+the grappling like rope and so you might
+the grappling like rope and so you might
+be asking like what are we going to use
+be asking like what are we going to use
+be asking like what are we going to use
+because roblox does have a rope
+because roblox does have a rope
+because roblox does have a rope
+constraint
+constraint
+constraint
+and i tried making a grapple gun with a
+and i tried making a grapple gun with a
+and i tried making a grapple gun with a
+rope constraint it was very
+rope constraint it was very
+rope constraint it was very
+like buggy and it was very constraining
+like buggy and it was very constraining
+like buggy and it was very constraining
+so i ended up just using a spring
+so i ended up just using a spring
+so i ended up just using a spring
+constraint and that's what we'll be
+constraint and that's what we'll be
+constraint and that's what we'll be
+using
+using
+using
+to represent our rope and give our gun
+to represent our rope and give our gun
+to represent our rope and give our gun
+physics because it actually
+physics because it actually
+physics because it actually
+is really fun and it gives it some very
+is really fun and it gives it some very
+is really fun and it gives it some very
+nice physics so i'm going to go to model
+nice physics so i'm going to go to model
+nice physics so i'm going to go to model
+create then spring i'm going to make
+create then spring i'm going to make
+create then spring i'm going to make
+sure to select
+sure to select
+sure to select
+your base first i'm going to click
+your base first i'm going to click
+your base first i'm going to click
+to create one attachment drag it over
+to create one attachment drag it over
+to create one attachment drag it over
+and go on to the other part
+and go on to the other part
+and go on to the other part
+and click there we go so let's see where
+and click there we go so let's see where
+and click there we go so let's see where
+did that attachment go
+did that attachment go
+did that attachment go
+the attachment went into our hook which
+the attachment went into our hook which
+the attachment went into our hook which
+is good make sure it goes into your hook
+is good make sure it goes into your hook
+is good make sure it goes into your hook
+and not your hook reference because you
+and not your hook reference because you
+and not your hook reference because you
+don't want the hook reference to be the
+don't want the hook reference to be the
+don't want the hook reference to be the
+one
+one
+one
+that has the spring attached that
+that has the spring attached that
+that has the spring attached that
+wouldn't make sense it wouldn't work
+wouldn't make sense it wouldn't work
+wouldn't make sense it wouldn't work
+very well at all so i'm going to rename
+very well at all so i'm going to rename
+very well at all so i'm going to rename
+our spring constraint
+our spring constraint
+our spring constraint
+just spring so we can reference it a
+just spring so we can reference it a
+just spring so we can reference it a
+little easier
+little easier
+little easier
+and i'm also going to
+and i'm also going to
+and i'm also going to
+change the stiffness actually all of
+change the stiffness actually all of
+change the stiffness actually all of
+these are pretty good i'm going to set
+these are pretty good i'm going to set
+these are pretty good i'm going to set
+the free length to like one
+the free length to like one
+the free length to like one
+all of the settings are pretty good and
+all of the settings are pretty good and
+all of the settings are pretty good and
+i forgot to mention
+i forgot to mention
+i forgot to mention
+make sure to take your base and drag it
+make sure to take your base and drag it
+make sure to take your base and drag it
+out into the actual model itself
+out into the actual model itself
+out into the actual model itself
+i forgot to do that your handle is
+i forgot to do that your handle is
+i forgot to do that your handle is
+mandatory
+mandatory
+mandatory
+but your base your hook and your hook
+but your base your hook and your hook
+but your base your hook and your hook
+reference this is all just ease of use
+reference this is all just ease of use
+reference this is all just ease of use
+for when you're scripting it so i'm
+for when you're scripting it so i'm
+for when you're scripting it so i'm
+going to drag this
+going to drag this
+going to drag this
+back in so now it's time to start
+back in so now it's time to start
+back in so now it's time to start
+scripting i'm going to go into my tool
+scripting i'm going to go into my tool
+scripting i'm going to go into my tool
+model
+model
+model
+and my tool not my model because this
+and my tool not my model because this
+and my tool not my model because this
+tool consists of a bunch of parts and
+tool consists of a bunch of parts and
+tool consists of a bunch of parts and
+then a model
+then a model
+then a model
+let's go into our just tool and create a
+let's go into our just tool and create a
+let's go into our just tool and create a
+module
+module
+module
+script and this module script i'm going
+script and this module script i'm going
+script and this module script i'm going
+to name it
+to name it
+to name it
+grapple gun
+and i guess we could put module at the
+and i guess we could put module at the
+and i guess we could put module at the
+end grapple gun
+end grapple gun
+end grapple gun
+module and then instead of doing local
+module and then instead of doing local
+module and then instead of doing local
+module because this return module
+module because this return module
+module because this return module
+we're going to change it to grapple gun
+we're going to change it to grapple gun
+we're going to change it to grapple gun
+then
+then
+then
+copy this there we go grapple gun and
+copy this there we go grapple gun and
+copy this there we go grapple gun and
+this module won't do anything on its own
+this module won't do anything on its own
+this module won't do anything on its own
+but what we're going to do
+but what we're going to do
+but what we're going to do
+is we're going to create a script
+is we're going to create a script
+is we're going to create a script
+and then we're also going to create a
+and then we're also going to create a
+and then we're also going to create a
+local script
+local script
+local script
+so in this script i'm going to rename
+so in this script i'm going to rename
+so in this script i'm going to rename
+this to server and rename the local
+this to server and rename the local
+this to server and rename the local
+script
+script
+script
+to client just so
+to client just so
+to client just so
+we know what it's doing and we're going
+we know what it's doing and we're going
+we know what it's doing and we're going
+to just say
+to just say
+to just say
+local grapple
+local grapple
+local grapple
+gun equals require script
+gun equals require script
+gun equals require script
+dot parent i'm going to copy this line
+dot parent i'm going to copy this line
+dot parent i'm going to copy this line
+and put it into our client so what this
+and put it into our client so what this
+and put it into our client so what this
+line does is it requires
+line does is it requires
+line does is it requires
+our grapple gun module
+our grapple gun module
+our grapple gun module
+and since it's requiring it from both
+and since it's requiring it from both
+and since it's requiring it from both
+the server and the client
+the server and the client
+the server and the client
+it'll create two instances of this
+it'll create two instances of this
+it'll create two instances of this
+module
+module
+module
+because the server and client can't
+because the server and client can't
+because the server and client can't
+interact directly
+interact directly
+interact directly
+which is why we need to use like remote
+which is why we need to use like remote
+which is why we need to use like remote
+events and
+events and
+events and
+just like bull values whatever because
+just like bull values whatever because
+just like bull values whatever because
+even when they're on the same module
+even when they're on the same module
+even when they're on the same module
+they they're not like getting the same
+they they're not like getting the same
+they they're not like getting the same
+values from each other
+values from each other
+values from each other
+so just to prove that we can put like a
+so just to prove that we can put like a
+so just to prove that we can put like a
+print statement in our in our
+print statement in our in our
+print statement in our in our
+module and just print hi and if we run
+module and just print hi and if we run
+module and just print hi and if we run
+this
+you'll see that don't mind these errors
+you'll see that don't mind these errors
+you'll see that don't mind these errors
+it's from a plug-in that i have
+it's from a plug-in that i have
+it's from a plug-in that i have
+it says hi from the server and then hi
+it says hi from the server and then hi
+it says hi from the server and then hi
+from the client so each of them is
+from the client so each of them is
+from the client so each of them is
+getting
+getting
+getting
+our module and causing it to run
+our module and causing it to run
+our module and causing it to run
+and on its own this feature is pretty
+and on its own this feature is pretty
+and on its own this feature is pretty
+useless
+useless
+useless
+because they can't really interact with
+because they can't really interact with
+because they can't really interact with
+each other but using the run service
+each other but using the run service
+each other but using the run service
+we can actually detect whether we're
+we can actually detect whether we're
+we can actually detect whether we're
+running code on the client or on the
+running code on the client or on the
+running code on the client or on the
+server
+server
+server
+which allows us to put all of our code
+which allows us to put all of our code
+which allows us to put all of our code
+into one module
+into one module
+into one module
+while being able to communicate with
+while being able to communicate with
+while being able to communicate with
+both the client and the server which is
+both the client and the server which is
+both the client and the server which is
+really good for organization
+really good for organization
+really good for organization
+may not make sense initially but it's a
+may not make sense initially but it's a
+may not make sense initially but it's a
+really really cool
+really really cool
+really really cool
+way of doing things so at the very top
+way of doing things so at the very top
+way of doing things so at the very top
+of my script i'm going to
+of my script i'm going to
+of my script i'm going to
+find local run service
+find local run service
+find local run service
+equals game get service
+equals game get service
+equals game get service
+run service there we go and we're just
+run service there we go and we're just
+run service there we go and we're just
+going to set up a little test
+going to set up a little test
+going to set up a little test
+i'm going to say if
+i'm going to say if
+i'm going to say if
+run service is client
+run service is client
+run service is client
+then enter and then we're going to do
+then enter and then we're going to do
+then enter and then we're going to do
+elsif
+elsif
+elsif
+run service
+run service
+run service
+is server then and we're going to print
+is server then and we're going to print
+is server then and we're going to print
+running from the client
+running from the client
+running from the client
+and then we're just going to copy this
+and then we're just going to copy this
+and then we're just going to copy this
+running from the server there we go so
+running from the server there we go so
+running from the server there we go so
+if you run this
+if you run this
+if you run this
+you can see that it says running from
+you can see that it says running from
+you can see that it says running from
+the server on the server and then
+the server on the server and then
+the server on the server and then
+running from the client
+running from the client
+running from the client
+on the client so it does exactly what we
+on the client so it does exactly what we
+on the client so it does exactly what we
+want it to do
+want it to do
+want it to do
+which is really nice and we can make
+which is really nice and we can make
+which is really nice and we can make
+this a little bit better
+this a little bit better
+this a little bit better
+but let me just delete these lines
+but let me just delete these lines
+but let me just delete these lines
+we can make this a function we're going
+we can make this a function we're going
+we can make this a function we're going
+to find local
+to find local
+to find local
+function init and this is this is the
+function init and this is this is the
+function init and this is this is the
+initializer function for when our module
+initializer function for when our module
+initializer function for when our module
+gets required
+gets required
+gets required
+it'll set everything up and get
+it'll set everything up and get
+it'll set everything up and get
+everything to work
+everything to work
+everything to work
+so we have our init function and then
+so we have our init function and then
+so we have our init function and then
+make sure this is a very very very
+make sure this is a very very very
+make sure this is a very very very
+important step
+important step
+important step
+that you write and knit at the very
+that you write and knit at the very
+that you write and knit at the very
+bottom of your script
+bottom of your script
+bottom of your script
+and this will cause this function to run
+and this will cause this function to run
+and this will cause this function to run
+once our module is required if you don't
+once our module is required if you don't
+once our module is required if you don't
+have this nothing will happen
+have this nothing will happen
+have this nothing will happen
+ever when you're making your grapple gun
+ever when you're making your grapple gun
+ever when you're making your grapple gun
+and you won't be able to do absolutely
+and you won't be able to do absolutely
+and you won't be able to do absolutely
+anything
+anything
+anything
+and so right above this in that function
+and so right above this in that function
+and so right above this in that function
+we're going to define two functions
+we're going to define two functions
+we're going to define two functions
+local function
+server init and then above that we're
+server init and then above that we're
+server init and then above that we're
+gonna do a local
+gonna do a local
+gonna do a local
+function client in it
+function client in it
+function client in it
+there you go so you know where this is
+there you go so you know where this is
+there you go so you know where this is
+going
+going
+going
+when we initialize we want to check if
+when we initialize we want to check if
+when we initialize we want to check if
+it's the client if it is a client we
+it's the client if it is a client we
+it's the client if it is a client we
+run a client init and then if is is a
+run a client init and then if is is a
+run a client init and then if is is a
+server we run a server in it
+server we run a server in it
+server we run a server in it
+so it just like depends on which one is
+so it just like depends on which one is
+so it just like depends on which one is
+running which and using this run service
+running which and using this run service
+running which and using this run service
+it's really really
+it's really really
+it's really really
+cool that you can do this and now we
+cool that you can do this and now we
+cool that you can do this and now we
+just need to fill
+just need to fill
+just need to fill
+each of these function blocks with
+each of these function blocks with
+each of these function blocks with
+functionality
+functionality
+functionality
+so let's add some basic functionality to
+so let's add some basic functionality to
+so let's add some basic functionality to
+our initialized functions
+our initialized functions
+our initialized functions
+but before we do that we have to define
+but before we do that we have to define
+but before we do that we have to define
+a bunch of variables
+a bunch of variables
+a bunch of variables
+at the very top of our script so firstly
+at the very top of our script so firstly
+at the very top of our script so firstly
+we're going to do local tool
+we're going to do local tool
+we're going to do local tool
+equal script dot parent
+equal script dot parent
+equal script dot parent
+and then we're going to do local
+let's do local if i can spell local
+let's do local if i can spell local
+let's do local if i can spell local
+correctly local
+correctly local
+correctly local
+base equals tool wait
+base equals tool wait
+base equals tool wait
+for child base
+for child base
+for child base
+i'm gonna do local hook equals tool
+i'm gonna do local hook equals tool
+i'm gonna do local hook equals tool
+wait for child hook
+wait for child hook
+wait for child hook
+and do local hook reference
+and do local hook reference
+and do local hook reference
+equals tool wait for child
+equals tool wait for child
+equals tool wait for child
+hook ref reference there we go
+hook ref reference there we go
+hook ref reference there we go
+and let's go get our hook weld
+and let's go get our hook weld
+and let's go get our hook weld
+and just make sure let's see our hook
+and just make sure let's see our hook
+and just make sure let's see our hook
+weld is in our hook
+weld is in our hook
+weld is in our hook
+so local hook world equals hook
+so local hook world equals hook
+so local hook world equals hook
+dot hook weld
+dot hook weld
+dot hook weld
+and then local
+and then local
+and then local
+let's move this up here local spring
+let's move this up here local spring
+let's move this up here local spring
+equals base dot spring
+equals base dot spring
+equals base dot spring
+base dot spring there we go so let's run
+base dot spring there we go so let's run
+base dot spring there we go so let's run
+this make sure everything is working
+this make sure everything is working
+this make sure everything is working
+properly let's just
+properly let's just
+properly let's just
+run around so there's no like wait for
+run around so there's no like wait for
+run around so there's no like wait for
+child error so that's good
+child error so that's good
+child error so that's good
+let's go back into our module
+let's go back into our module
+let's go back into our module
+and now let's define a few more
+and now let's define a few more
+and now let's define a few more
+variables
+variables
+variables
+so these are going to be the variables
+so these are going to be the variables
+so these are going to be the variables
+that are only been only going to be
+that are only been only going to be
+that are only been only going to be
+initialized by the client
+so the server really should not use them
+so the server really should not use them
+so the server really should not use them
+it's going to be local player
+it's going to be local player
+it's going to be local player
+and we're going to set that to nil and
+and we're going to set that to nil and
+and we're going to set that to nil and
+local
+local
+local
+mouse which we're also going to set to
+mouse which we're also going to set to
+mouse which we're also going to set to
+nil and the reason we're doing this is
+nil and the reason we're doing this is
+nil and the reason we're doing this is
+because
+because
+because
+we don't want the server or we don't
+we don't want the server or we don't
+we don't want the server or we don't
+want the client
+want the client
+want the client
+to give variables to the server that it
+to give variables to the server that it
+to give variables to the server that it
+doesn't can't use because
+doesn't can't use because
+doesn't can't use because
+if we set this to
+if we set this to
+if we set this to
+game.players.localplayer
+game.players.localplayer
+game.players.localplayer
+the server really won't be able to use
+the server really won't be able to use
+the server really won't be able to use
+that since there is no local player for
+that since there is no local player for
+that since there is no local player for
+the server
+the server
+the server
+so we just got to make sure that
+so we just got to make sure that
+so we just got to make sure that
+the client is the only one that can
+the client is the only one that can
+the client is the only one that can
+initialize these
+initialize these
+initialize these
+but that's honestly just a scripture
+but that's honestly just a scripture
+but that's honestly just a scripture
+thing you could initialize it on the
+thing you could initialize it on the
+thing you could initialize it on the
+server
+server
+server
+just make sure that you don't make sure
+just make sure that you don't make sure
+just make sure that you don't make sure
+that you know those variables are only
+that you know those variables are only
+that you know those variables are only
+going to be used by the client
+going to be used by the client
+going to be used by the client
+so underneath our very top run service
+so underneath our very top run service
+so underneath our very top run service
+declaration
+declaration
+declaration
+we have to define local players which
+we have to define local players which
+we have to define local players which
+will be
+will be
+will be
+game get service players and this is for
+game get service players and this is for
+game get service players and this is for
+our local players so
+our local players so
+our local players so
+now in our client in it we can say
+now in our client in it we can say
+now in our client in it we can say
+player equals
+player equals
+player equals
+players dot local player and we can do
+players dot local player and we can do
+players dot local player and we can do
+mouse equals player
+mouse equals player
+mouse equals player
+get mouse and the mouse is obviously
+get mouse and the mouse is obviously
+get mouse and the mouse is obviously
+gonna be used to
+gonna be used to
+gonna be used to
+detect where we hit on the screen and
+detect where we hit on the screen and
+detect where we hit on the screen and
+what we do and also
+what we do and also
+what we do and also
+we need to define our tool dot activated
+we need to define our tool dot activated
+we need to define our tool dot activated
+event
+event
+event
+and let's just test if this works so
+and let's just test if this works so
+and let's just test if this works so
+tool activate is connect a function and
+tool activate is connect a function and
+tool activate is connect a function and
+we can print hello
+we can print hello
+we can print hello
+world there you go so we've run this
+world there you go so we've run this
+world there you go so we've run this
+everything should work fine we pick up
+everything should work fine we pick up
+everything should work fine we pick up
+our gun we click
+our gun we click
+our gun we click
+it prints hello world in the bottom
+it prints hello world in the bottom
+it prints hello world in the bottom
+right exactly
+right exactly
+right exactly
+what we want it to do that is great but
+what we want it to do that is great but
+what we want it to do that is great but
+you'll notice right now
+you'll notice right now
+you'll notice right now
+there is no way to communicate between
+there is no way to communicate between
+there is no way to communicate between
+the client and the server
+the client and the server
+the client and the server
+in regards to our like tool activation
+in regards to our like tool activation
+in regards to our like tool activation
+and whatever
+and whatever
+and whatever
+so let's go back to our rapport gun
+so let's go back to our rapport gun
+so let's go back to our rapport gun
+module create
+module create
+module create
+a remote event and
+a remote event and
+a remote event and
+we can name this event the
+we can name this event the
+we can name this event the
+message event or you can name it
+message event or you can name it
+message event or you can name it
+whatever you want just make sure to
+whatever you want just make sure to
+whatever you want just make sure to
+change your names accordingly
+change your names accordingly
+change your names accordingly
+and we can define it here so local
+message event equals
+message event equals
+message event equals
+script dot message event there we go
+script dot message event there we go
+script dot message event there we go
+and so what we can do now is we can say
+and so what we can do now is we can say
+and so what we can do now is we can say
+when the tools activated we can do
+when the tools activated we can do
+when the tools activated we can do
+message event
+message event
+message event
+fire server and this is the test that
+fire server and this is the test that
+fire server and this is the test that
+our server can receive our event
+our server can receive our event
+our server can receive our event
+so in our server in it function we can
+so in our server in it function we can
+so in our server in it function we can
+run
+run
+run
+message event
+message event
+message event
+on server event connect
+on server event connect
+on server event connect
+a function and this function
+a function and this function
+a function and this function
+by default takes in the player parameter
+by default takes in the player parameter
+by default takes in the player parameter
+which is a player who sent it
+which is a player who sent it
+which is a player who sent it
+and we can just print got it
+and we can just print got it
+and we can just print got it
+and the reason we don't have to verify
+and the reason we don't have to verify
+and the reason we don't have to verify
+the player is a player owning the tool
+the player is a player owning the tool
+the player is a player owning the tool
+is because
+is because
+is because
+this message event is unique to each
+this message event is unique to each
+this message event is unique to each
+tool in our game which means that we
+tool in our game which means that we
+tool in our game which means that we
+don't have to detect like oh is a player
+don't have to detect like oh is a player
+don't have to detect like oh is a player
+who's firing at the actual player that
+who's firing at the actual player that
+who's firing at the actual player that
+we want
+we want
+we want
+we can just leave it like that they may
+we can just leave it like that they may
+we can just leave it like that they may
+they may not be the safest practice
+they may not be the safest practice
+they may not be the safest practice
+but it should work
+but it should work
+but it should work
+pretty well for our purposes
+pretty well for our purposes
+pretty well for our purposes
+so we got an error message event is not
+so we got an error message event is not
+so we got an error message event is not
+a valid
+a valid
+a valid
+member maybe we have to add a weight for
+member maybe we have to add a weight for
+member maybe we have to add a weight for
+child let's see that
+child let's see that
+child let's see that
+wait for child
+message event
+there we go let me just copy the name
+there we go let me just copy the name
+there we go let me just copy the name
+just to be sure
+just to be sure
+just to be sure
+yeah the name looks fine
+let's run it again
+and you can see in the bottom right it
+and you can see in the bottom right it
+and you can see in the bottom right it
+says got it four times
+says got it four times
+says got it four times
+so no matter how many times you click it
+so no matter how many times you click it
+so no matter how many times you click it
+keeps on saying got it make sure to put
+keeps on saying got it make sure to put
+keeps on saying got it make sure to put
+that weight for child
+that weight for child
+that weight for child
+am i testing that actually wasn't a
+am i testing that actually wasn't a
+am i testing that actually wasn't a
+problem i don't know why it's a problem
+problem i don't know why it's a problem
+problem i don't know why it's a problem
+now
+now
+now
+but make sure to put that there because
+but make sure to put that there because
+but make sure to put that there because
+you need it apparently
+you need it apparently
+you need it apparently
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you guys
+you guys
+you guys
+enjoyed this is only part one
+enjoyed this is only part one
+enjoyed this is only part one
+of two i believe of my grapple gun
+of two i believe of my grapple gun
+of two i believe of my grapple gun
+series because if i made this one video
+series because if i made this one video
+series because if i made this one video
+it would have been like
+it would have been like
+it would have been like
+40 minutes long that would not have been
+40 minutes long that would not have been
+40 minutes long that would not have been
+good i wouldn't want to watch it
+good i wouldn't want to watch it
+good i wouldn't want to watch it
+you probably wouldn't want to watch it
+you probably wouldn't want to watch it
+you probably wouldn't want to watch it
+so i'm going to split it up into two
+so i'm going to split it up into two
+so i'm going to split it up into two
+parts and the next part will be
+parts and the next part will be
+parts and the next part will be
+finishing the scripting
+finishing the scripting
+finishing the scripting
+and making our gun actually work this
+and making our gun actually work this
+and making our gun actually work this
+part was just a set of
+part was just a set of
+part was just a set of
+i know it's kind of boring but you have
+i know it's kind of boring but you have
+i know it's kind of boring but you have
+to get this done in order to get
+to get this done in order to get
+to get this done in order to get
+the fun stuff in i hope i taught you a
+the fun stuff in i hope i taught you a
+the fun stuff in i hope i taught you a
+little bit using this little module
+little bit using this little module
+little bit using this little module
+setup and using like springs and welds
+setup and using like springs and welds
+setup and using like springs and welds
+and whatever
+and whatever
+and whatever
+but stay tuned for the next video to
+but stay tuned for the next video to
+but stay tuned for the next video to
+actually finish
+actually finish
+actually finish
+this project and trust me it's worth the
+this project and trust me it's worth the
+this project and trust me it's worth the
+wait
+wait
+wait
+it's a really fun thing to play around
+it's a really fun thing to play around
+it's a really fun thing to play around
+with you can put this in all of your
+with you can put this in all of your
+with you can put this in all of your
+games
+games
+games
+super nice super fun and yeah so make
+super nice super fun and yeah so make
+super nice super fun and yeah so make
+sure to like and subscribe
+sure to like and subscribe
+sure to like and subscribe
+if you enjoyed and i hope you have a
+if you enjoyed and i hope you have a
+if you enjoyed and i hope you have a
+nice day
+nice day
+nice day
+and goodbye
+and goodbye
+and goodbye
+[Music]
+[Music]
+[Music]
+you

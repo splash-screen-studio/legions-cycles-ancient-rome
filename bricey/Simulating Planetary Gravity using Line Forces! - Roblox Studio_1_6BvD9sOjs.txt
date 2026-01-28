@@ -1,0 +1,901 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i will be teaching you
+in this video i will be teaching you
+in this video i will be teaching you
+how to make this planet gravity
+how to make this planet gravity
+how to make this planet gravity
+simulation
+simulation
+simulation
+using line forces
+using line forces
+using line forces
+and line forces are very useful in
+and line forces are very useful in
+and line forces are very useful in
+roblox they allow you to simulate
+roblox they allow you to simulate
+roblox they allow you to simulate
+many real life things with little to no
+many real life things with little to no
+many real life things with little to no
+math and or scripting in fact in this
+math and or scripting in fact in this
+math and or scripting in fact in this
+video
+video
+video
+i don't use any scripting and i still
+i don't use any scripting and i still
+i don't use any scripting and i still
+get this result
+get this result
+get this result
+and this is sort of inspired by
+and this is sort of inspired by
+and this is sort of inspired by
+one of my unity games that i've made and
+one of my unity games that i've made and
+one of my unity games that i've made and
+you guys should check that out if you
+you guys should check that out if you
+you guys should check that out if you
+haven't
+haven't
+haven't
+and i use the same concept in unity but
+and i use the same concept in unity but
+and i use the same concept in unity but
+in unity you had to use a bunch of
+in unity you had to use a bunch of
+in unity you had to use a bunch of
+weird math using like the gravitational
+weird math using like the gravitational
+weird math using like the gravitational
+constant a bunch of formulas
+constant a bunch of formulas
+constant a bunch of formulas
+but in roblox all you had to do is use
+but in roblox all you had to do is use
+but in roblox all you had to do is use
+these really nice
+these really nice
+these really nice
+line force constraints
+line force constraints
+line force constraints
+so if you guys enjoy this video make
+so if you guys enjoy this video make
+so if you guys enjoy this video make
+sure to like and subscribe
+sure to like and subscribe
+sure to like and subscribe
+and comment if you want to see any more
+and comment if you want to see any more
+and comment if you want to see any more
+constraint
+constraint
+constraint
+videos but without further ado let's get
+videos but without further ado let's get
+videos but without further ado let's get
+into the video
+into the video
+into the video
+[Music]
+[Music]
+[Music]
+so what exactly is a line force so a
+so what exactly is a line force so a
+so what exactly is a line force so a
+line force is basically used to apply a
+line force is basically used to apply a
+line force is basically used to apply a
+force
+force
+force
+along a line between two points it's
+along a line between two points it's
+along a line between two points it's
+like a vector force
+like a vector force
+like a vector force
+but instead of applying a force in a
+but instead of applying a force in a
+but instead of applying a force in a
+certain direction it applies it along a
+certain direction it applies it along a
+certain direction it applies it along a
+line
+line
+line
+so let's demonstrate how it works so i'm
+so let's demonstrate how it works so i'm
+so let's demonstrate how it works so i'm
+going to create a block
+going to create a block
+going to create a block
+right here and then i'm going to
+right here and then i'm going to
+right here and then i'm going to
+duplicate it
+duplicate it
+duplicate it
+move it across real quick there we go
+move it across real quick there we go
+move it across real quick there we go
+and then i'm going to make a line force
+and then i'm going to make a line force
+and then i'm going to make a line force
+in between them so i'm going to go to
+in between them so i'm going to go to
+in between them so i'm going to go to
+model create
+model create
+model create
+line force and then we're going to put
+line force and then we're going to put
+line force and then we're going to put
+an attachment there
+an attachment there
+an attachment there
+and drag it all the way over and put an
+and drag it all the way over and put an
+and drag it all the way over and put an
+attachment there so this is a line force
+attachment there so this is a line force
+attachment there so this is a line force
+it consists of
+it consists of
+it consists of
+two attachments as opposed to the one of
+two attachments as opposed to the one of
+two attachments as opposed to the one of
+the vector force
+the vector force
+the vector force
+and it basically just
+and it basically just
+and it basically just
+pulls this part along whichever part has
+pulls this part along whichever part has
+pulls this part along whichever part has
+a line for so in this case this part
+a line for so in this case this part
+a line for so in this case this part
+it'll pull it along to meet that part
+it'll pull it along to meet that part
+it'll pull it along to meet that part
+so let's just run it out with his
+so let's just run it out with his
+so let's just run it out with his
+default settings real quick
+default settings real quick
+default settings real quick
+you can see it pulls it along and since
+you can see it pulls it along and since
+you can see it pulls it along and since
+this part isn't anchored it just brings
+this part isn't anchored it just brings
+this part isn't anchored it just brings
+it along with it let's just anchor it so
+it along with it let's just anchor it so
+it along with it let's just anchor it so
+it looks a little bit better
+it looks a little bit better
+it looks a little bit better
+you see it rails into it and it's
+you see it rails into it and it's
+you see it rails into it and it's
+attracted to that part
+attracted to that part
+attracted to that part
+and no matter where you put it it'll
+and no matter where you put it it'll
+and no matter where you put it it'll
+always go
+always go
+always go
+towards the part and a line so if we go
+towards the part and a line so if we go
+towards the part and a line so if we go
+to model
+to model
+to model
+constraint details you can see when i
+constraint details you can see when i
+constraint details you can see when i
+drag it you see that little arrow
+drag it you see that little arrow
+drag it you see that little arrow
+it's pointing towards the part no matter
+it's pointing towards the part no matter
+it's pointing towards the part no matter
+where you put it
+where you put it
+where you put it
+and so to be honest you could probably
+and so to be honest you could probably
+and so to be honest you could probably
+make a vector force do this as well
+make a vector force do this as well
+make a vector force do this as well
+using a bunch of vector math but this
+using a bunch of vector math but this
+using a bunch of vector math but this
+makes it a lot easier
+makes it a lot easier
+makes it a lot easier
+to do this without using any code
+to do this without using any code
+to do this without using any code
+whatsoever
+whatsoever
+whatsoever
+that's the benefit of using a line force
+that's the benefit of using a line force
+that's the benefit of using a line force
+and a really cool thing with line forces
+and a really cool thing with line forces
+and a really cool thing with line forces
+is all the nice properties you have so
+is all the nice properties you have so
+is all the nice properties you have so
+let me unanchor this real quick to show
+let me unanchor this real quick to show
+let me unanchor this real quick to show
+you one of the best ones
+you one of the best ones
+you one of the best ones
+is the reaction force so this basically
+is the reaction force so this basically
+is the reaction force so this basically
+makes it so that both
+makes it so that both
+makes it so that both
+parts are attracted to each other so
+parts are attracted to each other so
+parts are attracted to each other so
+this is sort of like a
+this is sort of like a
+this is sort of like a
+magnet for example
+magnet for example
+magnet for example
+so you can see when you play they both
+so you can see when you play they both
+so you can see when you play they both
+get attracted towards
+get attracted towards
+get attracted towards
+each other which is really cool
+each other which is really cool
+each other which is really cool
+and so along with being able to attract
+and so along with being able to attract
+and so along with being able to attract
+the two attachments
+the two attachments
+the two attachments
+using line forces you can also repel
+using line forces you can also repel
+using line forces you can also repel
+them by setting the magnitude property
+them by setting the magnitude property
+them by setting the magnitude property
+which is basically the strength of the
+which is basically the strength of the
+which is basically the strength of the
+line force
+line force
+line force
+to a negative value and that gives you
+to a negative value and that gives you
+to a negative value and that gives you
+something like that which is
+something like that which is
+something like that which is
+quite cool and also you can turn
+quite cool and also you can turn
+quite cool and also you can turn
+on the inverse square law little thing
+on the inverse square law little thing
+on the inverse square law little thing
+and this basically means that depending
+and this basically means that depending
+and this basically means that depending
+on the distance or the inverse of the
+on the distance or the inverse of the
+on the distance or the inverse of the
+distance
+distance
+distance
+squared of the parts the
+squared of the parts the
+squared of the parts the
+force will be reduced so the basically
+force will be reduced so the basically
+force will be reduced so the basically
+the farther away
+the farther away
+the farther away
+apart is less force will be added
+apart is less force will be added
+apart is less force will be added
+so you can see there it's a lot slower
+so you can see there it's a lot slower
+so you can see there it's a lot slower
+initially and
+initially and
+initially and
+the further they move out the slower the
+the further they move out the slower the
+the further they move out the slower the
+parts
+parts
+parts
+will get and this is this uses the same
+will get and this is this uses the same
+will get and this is this uses the same
+math
+math
+math
+that magnetism and gravity in real life
+that magnetism and gravity in real life
+that magnetism and gravity in real life
+use which could lead to some very
+use which could lead to some very
+use which could lead to some very
+realistic behavior
+realistic behavior
+realistic behavior
+in your games and speaking of gravity
+in your games and speaking of gravity
+in your games and speaking of gravity
+we're going to make our planet gravity
+we're going to make our planet gravity
+we're going to make our planet gravity
+simulation
+simulation
+simulation
+right now so let's get this set up
+right now so let's get this set up
+right now so let's get this set up
+i'm going to delete these parts real
+i'm going to delete these parts real
+i'm going to delete these parts real
+quick and we're going to use
+quick and we're going to use
+quick and we're going to use
+some spheres because spheres look
+some spheres because spheres look
+some spheres because spheres look
+more like planets than blocks obviously
+more like planets than blocks obviously
+more like planets than blocks obviously
+we're going to move this up then we're
+we're going to move this up then we're
+we're going to move this up then we're
+going to go to workspace
+going to go to workspace
+going to go to workspace
+set the gravity to zero oh look at that
+set the gravity to zero oh look at that
+set the gravity to zero oh look at that
+it's already set to zero that's because
+it's already set to zero that's because
+it's already set to zero that's because
+i was setting this up beforehand
+i was setting this up beforehand
+i was setting this up beforehand
+but usually it's at like negative like
+but usually it's at like negative like
+but usually it's at like negative like
+192 or something like that
+192 or something like that
+192 or something like that
+but just set it to zero so that when we
+but just set it to zero so that when we
+but just set it to zero so that when we
+run this
+it floats and we want this just so the
+it floats and we want this just so the
+it floats and we want this just so the
+normal
+normal
+normal
+roblox gravity does not affect our parts
+roblox gravity does not affect our parts
+roblox gravity does not affect our parts
+so we can
+so we can
+so we can
+simulate our own gravity
+simulate our own gravity
+simulate our own gravity
+so let me just scale this up a little
+so let me just scale this up a little
+so let me just scale this up a little
+bit let's make it a little prettier
+bit let's make it a little prettier
+bit let's make it a little prettier
+let's make it a nice blue like earth
+let's make it a nice blue like earth
+let's make it a nice blue like earth
+you can change it yeah that's a bad
+you can change it yeah that's a bad
+you can change it yeah that's a bad
+texture let's go
+texture let's go
+texture let's go
+sand oh that scent that the sand
+sand oh that scent that the sand
+sand oh that scent that the sand
+actually looks pretty nice
+actually looks pretty nice
+actually looks pretty nice
+so we're gonna leave it like that let's
+so we're gonna leave it like that let's
+so we're gonna leave it like that let's
+duplicate this
+and i duplicated it with ctrl d and then
+and i duplicated it with ctrl d and then
+and i duplicated it with ctrl d and then
+this can be
+this can be
+this can be
+the moon let's say so let's make it a
+the moon let's say so let's make it a
+the moon let's say so let's make it a
+nice
+nice
+nice
+whitish color and then change it to
+whitish color and then change it to
+whitish color and then change it to
+cobblestone to like marble there we go
+cobblestone to like marble there we go
+cobblestone to like marble there we go
+so we have our two parts now let's go to
+so we have our two parts now let's go to
+so we have our two parts now let's go to
+model create
+model create
+model create
+and then line force and we're going to
+and then line force and we're going to
+and then line force and we're going to
+create a line force in between these two
+create a line force in between these two
+create a line force in between these two
+parts
+parts
+parts
+and the initials points of the
+and the initials points of the
+and the initials points of the
+attachments aren't really good because
+attachments aren't really good because
+attachments aren't really good because
+they're off center
+they're off center
+they're off center
+really you can use you can go to the
+really you can use you can go to the
+really you can use you can go to the
+line force and you can set
+line force and you can set
+line force and you can set
+the applied center of mass to true but
+the applied center of mass to true but
+the applied center of mass to true but
+just
+just
+just
+for organization's sake i'm going to
+for organization's sake i'm going to
+for organization's sake i'm going to
+position
+position
+position
+these attachments in the center of the
+these attachments in the center of the
+these attachments in the center of the
+part and i'm going to do that by going
+part and i'm going to do that by going
+part and i'm going to do that by going
+to whichever attachment then going to
+to whichever attachment then going to
+to whichever attachment then going to
+the position property setting it to
+the position property setting it to
+the position property setting it to
+zero zero oh zero zero
+zero zero oh zero zero
+zero zero oh zero zero
+zero don't set the world position to
+zero don't set the world position to
+zero don't set the world position to
+zero zero zero
+zero zero zero
+zero zero zero
+only set the like relative position and
+only set the like relative position and
+only set the like relative position and
+that's because we want it to be
+that's because we want it to be
+that's because we want it to be
+positioned at the very center of the
+positioned at the very center of the
+positioned at the very center of the
+part
+part
+part
+not at the center of the world so let's
+not at the center of the world so let's
+not at the center of the world so let's
+do that with this next attachment real
+do that with this next attachment real
+do that with this next attachment real
+quick
+there we go and now let's set up our
+there we go and now let's set up our
+there we go and now let's set up our
+line force so i'm going to turn apply it
+line force so i'm going to turn apply it
+line force so i'm going to turn apply it
+center of mass to true
+center of mass to true
+center of mass to true
+inverse square law to true leave the
+inverse square law to true leave the
+inverse square law to true leave the
+magnitude and turn reaction force
+magnitude and turn reaction force
+magnitude and turn reaction force
+enabled to on
+enabled to on
+enabled to on
+and because this is using roblox physics
+and because this is using roblox physics
+and because this is using roblox physics
+it takes
+it takes
+it takes
+mass and like stuff like that into a
+mass and like stuff like that into a
+mass and like stuff like that into a
+count so depending on how big the object
+count so depending on how big the object
+count so depending on how big the object
+is
+is
+is
+the farther it'll pull it in so like the
+the farther it'll pull it in so like the
+the farther it'll pull it in so like the
+bigger the object
+bigger the object
+bigger the object
+the harder it'll be to move and that's
+the harder it'll be to move and that's
+the harder it'll be to move and that's
+because of inertia
+because of inertia
+because of inertia
+and so all the physics like in real life
+and so all the physics like in real life
+and so all the physics like in real life
+basically apply
+basically apply
+basically apply
+and hear which is really really nice
+and hear which is really really nice
+and hear which is really really nice
+so now all i have to do is if we were to
+so now all i have to do is if we were to
+so now all i have to do is if we were to
+run this
+run this
+run this
+it doesn't look too good because the
+it doesn't look too good because the
+it doesn't look too good because the
+parts just slowly collide into each
+parts just slowly collide into each
+parts just slowly collide into each
+other and
+other and
+other and
+obviously if that were to happen in real
+obviously if that were to happen in real
+obviously if that were to happen in real
+life
+life
+life
+there'd be a massive crater where the
+there'd be a massive crater where the
+there'd be a massive crater where the
+moon would collide with the earth
+moon would collide with the earth
+moon would collide with the earth
+but the moon has some initial velocity
+but the moon has some initial velocity
+but the moon has some initial velocity
+and we're going to set that by going to
+and we're going to set that by going to
+and we're going to set that by going to
+the part
+the part
+the part
+and let's quickly name this
+and let's quickly name this
+and let's quickly name this
+moon and then name this part earth
+moon and then name this part earth
+moon and then name this part earth
+there we go and we can set the velocity
+there we go and we can set the velocity
+there we go and we can set the velocity
+on the z axis to five
+on the z axis to five
+on the z axis to five
+let's say so if you run this
+let's say so if you run this
+let's say so if you run this
+oh that was the wrong velocity okay so
+oh that was the wrong velocity okay so
+oh that was the wrong velocity okay so
+let's set the velocity on the x-axis
+let's set the velocity on the x-axis
+let's set the velocity on the x-axis
+to five you gotta have to play around
+to five you gotta have to play around
+to five you gotta have to play around
+with it
+with it
+with it
+there we go so if i might be a little
+there we go so if i might be a little
+there we go so if i might be a little
+too much let's reduce it a little bit to
+too much let's reduce it a little bit to
+too much let's reduce it a little bit to
+like
+like
+like
+two that should be a little bit better
+two that should be a little bit better
+two that should be a little bit better
+and there we go we have ourselves an
+and there we go we have ourselves an
+and there we go we have ourselves an
+orbit and it's
+orbit and it's
+orbit and it's
+slightly elliptical actually a little
+slightly elliptical actually a little
+slightly elliptical actually a little
+too elliptical
+too elliptical
+too elliptical
+let's increase our velocity to three
+let's increase our velocity to three
+let's increase our velocity to three
+you kinda have to play around with these
+you kinda have to play around with these
+you kinda have to play around with these
+settings
+because depending on the parts it'll
+because depending on the parts it'll
+because depending on the parts it'll
+give you different
+give you different
+give you different
+results so this is a pretty nice and
+results so this is a pretty nice and
+results so this is a pretty nice and
+stable orbit
+stable orbit
+stable orbit
+and since gravity is zero it's perfectly
+and since gravity is zero it's perfectly
+and since gravity is zero it's perfectly
+level and a very cool thing about this
+level and a very cool thing about this
+level and a very cool thing about this
+is you can see the moon the moon's like
+is you can see the moon the moon's like
+is you can see the moon the moon's like
+rotating around or orbiting
+rotating around or orbiting
+rotating around or orbiting
+our little earth ball right here but
+our little earth ball right here but
+our little earth ball right here but
+this
+this
+this
+is also moving very slightly but it is
+is also moving very slightly but it is
+is also moving very slightly but it is
+getting attracted by the moon
+getting attracted by the moon
+getting attracted by the moon
+which is interesting because this act
+which is interesting because this act
+which is interesting because this act
+how it works in real life which is very
+how it works in real life which is very
+how it works in real life which is very
+very cool even though it doesn't really
+very cool even though it doesn't really
+very cool even though it doesn't really
+affect anything when you add
+affect anything when you add
+affect anything when you add
+more more and more objects into the
+more more and more objects into the
+more more and more objects into the
+workspace
+workspace
+workspace
+you can see it'll make a cool little
+you can see it'll make a cool little
+you can see it'll make a cool little
+effect
+effect
+effect
+so i set up here a another little
+so i set up here a another little
+so i set up here a another little
+demonstration
+demonstration
+demonstration
+with obviously the sun in it
+with obviously the sun in it
+with obviously the sun in it
+and it works sort of well but at some
+and it works sort of well but at some
+and it works sort of well but at some
+point
+the moon collides with earth which
+the moon collides with earth which
+the moon collides with earth which
+probably isn't good but you can see you
+probably isn't good but you can see you
+probably isn't good but you can see you
+can have
+can have
+can have
+whole solar systems with this concept
+whole solar systems with this concept
+whole solar systems with this concept
+though the magnitude does need a lot of
+though the magnitude does need a lot of
+though the magnitude does need a lot of
+tweaking
+tweaking
+tweaking
+when you want to do this you could
+when you want to do this you could
+when you want to do this you could
+automate it by using
+automate it by using
+automate it by using
+scripts to get the mass of each object
+scripts to get the mass of each object
+scripts to get the mass of each object
+and then putting that into the magnitude
+and then putting that into the magnitude
+and then putting that into the magnitude
+but if you guys want to see that make
+but if you guys want to see that make
+but if you guys want to see that make
+sure to comment down below
+sure to comment down below
+sure to comment down below
+and also i do manually set up the line
+and also i do manually set up the line
+and also i do manually set up the line
+forces you can definitely automate that
+forces you can definitely automate that
+forces you can definitely automate that
+with scripting
+with scripting
+with scripting
+so also if you guys want to see that
+so also if you guys want to see that
+so also if you guys want to see that
+make sure just to notify me
+make sure just to notify me
+make sure just to notify me
+in the comments but that's about it for
+in the comments but that's about it for
+in the comments but that's about it for
+this
+this
+this
+video so i hope you guys enjoyed kind of
+video so i hope you guys enjoyed kind of
+video so i hope you guys enjoyed kind of
+a short one but this is a really cool
+a short one but this is a really cool
+a short one but this is a really cool
+concept you can make some really cool
+concept you can make some really cool
+concept you can make some really cool
+games off of this
+games off of this
+games off of this
+but i just thought i would share this
+but i just thought i would share this
+but i just thought i would share this
+with you and of course we're
+with you and of course we're
+with you and of course we're
+marching through all of the constraints
+marching through all of the constraints
+marching through all of the constraints
+we have done
+we have done
+we have done
+vector forces line forces we've done
+vector forces line forces we've done
+vector forces line forces we've done
+almost
+almost
+almost
+all of these up here which is really
+all of these up here which is really
+all of these up here which is really
+nice
+nice
+nice
+and by the end of the year we should
+and by the end of the year we should
+and by the end of the year we should
+have done every single
+have done every single
+have done every single
+constraint and roblox and i'll start
+constraint and roblox and i'll start
+constraint and roblox and i'll start
+doing some legacy constraints like
+doing some legacy constraints like
+doing some legacy constraints like
+body gyros or like rocket pull
+body gyros or like rocket pull
+body gyros or like rocket pull
+propulsions or whatever
+propulsions or whatever
+propulsions or whatever
+if you guys want that as well because
+if you guys want that as well because
+if you guys want that as well because
+some of those are pretty useful
+some of those are pretty useful
+some of those are pretty useful
+as well but make sure to like and
+as well but make sure to like and
+as well but make sure to like and
+subscribe if you enjoyed
+subscribe if you enjoyed
+subscribe if you enjoyed
+and i hope you have a nice day and
+and i hope you have a nice day and
+and i hope you have a nice day and
+[Music]
+goodbye
+goodbye
+goodbye
+[Music]
+[Music]
+[Music]
+you

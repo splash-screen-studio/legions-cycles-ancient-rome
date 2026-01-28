@@ -1,0 +1,817 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i will be showing you how
+in this video i will be showing you how
+in this video i will be showing you how
+to use vector forces which is a type of
+to use vector forces which is a type of
+to use vector forces which is a type of
+constraint
+constraint
+constraint
+and roblox studio at the end of the
+and roblox studio at the end of the
+and roblox studio at the end of the
+video i'll be showing you how to use
+video i'll be showing you how to use
+video i'll be showing you how to use
+vector forces to make an anti-gravity
+vector forces to make an anti-gravity
+vector forces to make an anti-gravity
+effect to your parts
+effect to your parts
+effect to your parts
+so stick around but before we get into
+so stick around but before we get into
+so stick around but before we get into
+the video
+the video
+the video
+i just want to thank you all for the
+i just want to thank you all for the
+i just want to thank you all for the
+boost and subscribers we've had recently
+boost and subscribers we've had recently
+boost and subscribers we've had recently
+and if you enjoy the content make sure
+and if you enjoy the content make sure
+and if you enjoy the content make sure
+to like and subscribe
+to like and subscribe
+to like and subscribe
+and also join my discord server links in
+and also join my discord server links in
+and also join my discord server links in
+the description you can get scripting
+the description you can get scripting
+the description you can get scripting
+help we can just talk about roblox talk
+help we can just talk about roblox talk
+help we can just talk about roblox talk
+about code whatever
+about code whatever
+about code whatever
+so make sure to join but without further
+so make sure to join but without further
+so make sure to join but without further
+ado let's get into the video
+[Music]
+[Music]
+[Music]
+so a vector force in roblox studio is
+so a vector force in roblox studio is
+so a vector force in roblox studio is
+a constraint that applies a force
+a constraint that applies a force
+a constraint that applies a force
+in the direction of a vector
+in the direction of a vector
+in the direction of a vector
+and it's the equivalent of a legacy
+and it's the equivalent of a legacy
+and it's the equivalent of a legacy
+body force if you don't know what that
+body force if you don't know what that
+body force if you don't know what that
+is that's fine but it was just it's an
+is that's fine but it was just it's an
+is that's fine but it was just it's an
+old way of
+old way of
+old way of
+applying a force to a part in roblox but
+applying a force to a part in roblox but
+applying a force to a part in roblox but
+nowadays we use vector forces so
+nowadays we use vector forces so
+nowadays we use vector forces so
+i'm going to make a part here here's my
+i'm going to make a part here here's my
+i'm going to make a part here here's my
+part i'm going to move it up a little
+part i'm going to move it up a little
+part i'm going to move it up a little
+bit
+bit
+bit
+there we go and the way you create a
+there we go and the way you create a
+there we go and the way you create a
+vector force is go to
+vector force is go to
+vector force is go to
+model then to create then go to
+model then to create then go to
+model then to create then go to
+vector force so here i have this little
+vector force so here i have this little
+vector force so here i have this little
+green thing this is your attachment
+green thing this is your attachment
+green thing this is your attachment
+the arrow is where the default force
+the arrow is where the default force
+the arrow is where the default force
+will be applied
+will be applied
+will be applied
+so i'm just going to put my force right
+so i'm just going to put my force right
+so i'm just going to put my force right
+there and
+there and
+there and
+if you can't see your vector force make
+if you can't see your vector force make
+if you can't see your vector force make
+sure to turn on constraint details draw
+sure to turn on constraint details draw
+sure to turn on constraint details draw
+on top is optional
+on top is optional
+on top is optional
+i guess i'll just leave it off like you
+i guess i'll just leave it off like you
+i guess i'll just leave it off like you
+can see the difference there you go
+can see the difference there you go
+can see the difference there you go
+so here's our vector force
+so here's our vector force
+so here's our vector force
+and if we look at the properties here
+and if we look at the properties here
+and if we look at the properties here
+are the basic properties and this arrow
+are the basic properties and this arrow
+are the basic properties and this arrow
+just tells you where
+just tells you where
+just tells you where
+it's going to go so i'm going to play
+it's going to go so i'm going to play
+it's going to go so i'm going to play
+this just to show you
+this just to show you
+this just to show you
+the vector force takes it that way so in
+the vector force takes it that way so in
+the vector force takes it that way so in
+its default state without changing
+its default state without changing
+its default state without changing
+anything about your force
+anything about your force
+anything about your force
+no matter where you orient your part so
+no matter where you orient your part so
+no matter where you orient your part so
+let me just
+let me just
+let me just
+put it there it always goes in the
+put it there it always goes in the
+put it there it always goes in the
+direction
+direction
+direction
+of that arrow it does not change and
+of that arrow it does not change and
+of that arrow it does not change and
+this is really useful
+this is really useful
+this is really useful
+to make relative forces so let's
+to make relative forces so let's
+to make relative forces so let's
+actually get into the force
+actually get into the force
+actually get into the force
+here we go
+here we go
+here we go
+and you can see there are a bunch of
+and you can see there are a bunch of
+and you can see there are a bunch of
+properties so let's first start at this
+properties so let's first start at this
+properties so let's first start at this
+force property this is a vector 3
+force property this is a vector 3
+force property this is a vector 3
+telling you where the force is going to
+telling you where the force is going to
+telling you where the force is going to
+go
+go
+go
+in our vector force so you may be
+in our vector force so you may be
+in our vector force so you may be
+looking at okay it's x y and z that's
+looking at okay it's x y and z that's
+looking at okay it's x y and z that's
+pretty normal right you have
+pretty normal right you have
+pretty normal right you have
+you know y's up and down and x is across
+you know y's up and down and x is across
+you know y's up and down and x is across
+and z
+and z
+and z
+is like front back but the x y and z
+is like front back but the x y and z
+is like front back but the x y and z
+of this force are determined by
+of this force are determined by
+of this force are determined by
+the primary and secondary axis of your
+the primary and secondary axis of your
+the primary and secondary axis of your
+attachment zero so here's my attachment
+attachment zero so here's my attachment
+attachment zero so here's my attachment
+zero
+zero
+zero
+you can see it right here the yellow
+you can see it right here the yellow
+you can see it right here the yellow
+axis
+axis
+axis
+the yellow arrow is the
+the yellow arrow is the
+the yellow arrow is the
+primary axis which is also the x-axis
+primary axis which is also the x-axis
+primary axis which is also the x-axis
+and the orange axis is the
+and the orange axis is the
+and the orange axis is the
+y-axis so if i were to take my
+y-axis so if i were to take my
+y-axis so if i were to take my
+attachment you can
+attachment you can
+attachment you can
+position and orient an attachment just
+position and orient an attachment just
+position and orient an attachment just
+like a normal
+like a normal
+like a normal
+part if i were to take it and angle it
+part if i were to take it and angle it
+part if i were to take it and angle it
+upward you can see the force
+upward you can see the force
+upward you can see the force
+moves with it so let's just play this
+it flips around because the force is
+it flips around because the force is
+it flips around because the force is
+bringing it upwards
+bringing it upwards
+bringing it upwards
+and this also brings up another point
+and this also brings up another point
+and this also brings up another point
+the vector forces are applied on
+the vector forces are applied on
+the vector forces are applied on
+attachment zero they're not applied
+attachment zero they're not applied
+attachment zero they're not applied
+at the middle of your part they're
+at the middle of your part they're
+at the middle of your part they're
+applied exactly on attachment zero
+applied exactly on attachment zero
+applied exactly on attachment zero
+so this allows you with your body forces
+so this allows you with your body forces
+so this allows you with your body forces
+let me just
+let me just
+let me just
+move it this way this allows you to make
+move it this way this allows you to make
+move it this way this allows you to make
+your part spin just by applying a force
+your part spin just by applying a force
+your part spin just by applying a force
+so you can see when i play this
+so you can see when i play this
+so you can see when i play this
+that the part spins because the arrow is
+that the part spins because the arrow is
+that the part spins because the arrow is
+pointing that way
+pointing that way
+pointing that way
+so it like pulls the part and since the
+so it like pulls the part and since the
+so it like pulls the part and since the
+forces only be applied on the edge of
+forces only be applied on the edge of
+forces only be applied on the edge of
+the part
+the part
+the part
+it makes it turn and you can change this
+it makes it turn and you can change this
+it makes it turn and you can change this
+behavior
+behavior
+behavior
+in the properties tab so for example if
+in the properties tab so for example if
+in the properties tab so for example if
+i want to
+i want to
+i want to
+only apply the force in the center of
+only apply the force in the center of
+only apply the force in the center of
+part or the center of mass i can just
+part or the center of mass i can just
+part or the center of mass i can just
+check apply center of mass
+check apply center of mass
+check apply center of mass
+and if i were to run this it would only
+and if i were to run this it would only
+and if i were to run this it would only
+go forward
+go forward
+go forward
+and also one big thing to note is this
+and also one big thing to note is this
+and also one big thing to note is this
+relative to
+relative to
+relative to
+property this basically just tells you
+property this basically just tells you
+property this basically just tells you
+what the force should be applied
+what the force should be applied
+what the force should be applied
+relative to
+relative to
+relative to
+so usually i stick to attachment zero
+so usually i stick to attachment zero
+so usually i stick to attachment zero
+and world you could do attachment one it
+and world you could do attachment one it
+and world you could do attachment one it
+brings you another property there but
+brings you another property there but
+brings you another property there but
+i just like to go with world sometimes
+i just like to go with world sometimes
+i just like to go with world sometimes
+our attachment zero so the difference
+our attachment zero so the difference
+our attachment zero so the difference
+between world and attachment zero
+between world and attachment zero
+between world and attachment zero
+is the axes of our force
+is the axes of our force
+is the axes of our force
+vector when you set it to world r and d
+vector when you set it to world r and d
+vector when you set it to world r and d
+oriented to the world x y and z so if i
+oriented to the world x y and z so if i
+oriented to the world x y and z so if i
+were to change it back to
+were to change it back to
+were to change it back to
+attachment zero you can see the arrow
+attachment zero you can see the arrow
+attachment zero you can see the arrow
+changes and if i were to change it back
+changes and if i were to change it back
+changes and if i were to change it back
+to world
+to world
+to world
+and like let's say i set it to zero and
+and like let's say i set it to zero and
+and like let's say i set it to zero and
+i set y
+i set y
+i set y
+to a thousand this would be pointing up
+to a thousand this would be pointing up
+to a thousand this would be pointing up
+regardless of the orientation of the
+regardless of the orientation of the
+regardless of the orientation of the
+part so if i were to
+part so if i were to
+part so if i were to
+rotate the part you can see the vector
+rotate the part you can see the vector
+rotate the part you can see the vector
+force is still pointing up no matter
+force is still pointing up no matter
+force is still pointing up no matter
+where i rotate the part
+where i rotate the part
+where i rotate the part
+and this can be useful in some
+and this can be useful in some
+and this can be useful in some
+situations it just depends but
+situations it just depends but
+situations it just depends but
+make sure if you just want a force like
+make sure if you just want a force like
+make sure if you just want a force like
+going in a constant direction
+going in a constant direction
+going in a constant direction
+you set it relative to to world that's
+you set it relative to to world that's
+you set it relative to to world that's
+basically all you need to know
+basically all you need to know
+basically all you need to know
+in regards to the properties of our
+in regards to the properties of our
+in regards to the properties of our
+vector force
+vector force
+vector force
+so when it comes to scripting your
+so when it comes to scripting your
+so when it comes to scripting your
+vector force
+vector force
+vector force
+it's very straightforward a one thing to
+it's very straightforward a one thing to
+it's very straightforward a one thing to
+note though
+note though
+note though
+is most of the time i would only change
+is most of the time i would only change
+is most of the time i would only change
+my force
+my force
+my force
+property all the other properties really
+property all the other properties really
+property all the other properties really
+should be set by the beginning i guess
+should be set by the beginning i guess
+should be set by the beginning i guess
+other than enabled because you might
+other than enabled because you might
+other than enabled because you might
+want to turn your force
+want to turn your force
+want to turn your force
+on and off so i'm just going to go
+on and off so i'm just going to go
+on and off so i'm just going to go
+create a script
+create a script
+create a script
+in my part zoom in a little bit
+in my part zoom in a little bit
+in my part zoom in a little bit
+let's define some variables i'm going to
+let's define some variables i'm going to
+let's define some variables i'm going to
+give myself some space we're going to
+give myself some space we're going to
+give myself some space we're going to
+find local part would be equal to script
+find local part would be equal to script
+find local part would be equal to script
+dot parent and then local force
+dot parent and then local force
+dot parent and then local force
+actually let's do vector force would be
+actually let's do vector force would be
+actually let's do vector force would be
+equal to
+equal to
+equal to
+part dot vector force there we go
+part dot vector force there we go
+part dot vector force there we go
+this is our vector force you can access
+this is our vector force you can access
+this is our vector force you can access
+all the properties like you could
+all the properties like you could
+all the properties like you could
+normally do
+normally do
+normally do
+you said the vector force dot force
+you said the vector force dot force
+you said the vector force dot force
+equals vector three dot new
+equals vector three dot new
+equals vector three dot new
+zero a thousand zero
+zero a thousand zero
+zero a thousand zero
+you could also set the relative to
+relative to and this is an enum
+actuator relative to and you can set it
+actuator relative to and you can set it
+actuator relative to and you can set it
+to whatever
+to whatever
+to whatever
+so make sure to make your relative to an
+so make sure to make your relative to an
+so make sure to make your relative to an
+enum because it's enum
+enum because it's enum
+enum because it's enum
+actuator relative to attachment zero
+actuator relative to attachment zero
+actuator relative to attachment zero
+attachment one or world
+attachment one or world
+attachment one or world
+yeah whatever i usually never change
+yeah whatever i usually never change
+yeah whatever i usually never change
+that i don't
+that i don't
+that i don't
+ever need to change that if i need to
+ever need to change that if i need to
+ever need to change that if i need to
+change that i usually just have
+change that i usually just have
+change that i usually just have
+two two or more vector forces that each
+two two or more vector forces that each
+two two or more vector forces that each
+have their own like spot
+have their own like spot
+have their own like spot
+to work and so now
+to work and so now
+to work and so now
+i'm going to show you how to make your
+i'm going to show you how to make your
+i'm going to show you how to make your
+part have like an anti-gravity effect
+part have like an anti-gravity effect
+part have like an anti-gravity effect
+using
+using
+using
+our vector force so you want to make
+our vector force so you want to make
+our vector force so you want to make
+sure with your force
+sure with your force
+sure with your force
+that applied center of mass is true and
+that applied center of mass is true and
+that applied center of mass is true and
+it's relative to
+it's relative to
+it's relative to
+the world and we're just going to go
+the world and we're just going to go
+the world and we're just going to go
+back into our script
+back into our script
+back into our script
+and we're going to set the force so what
+and we're going to set the force so what
+and we're going to set the force so what
+you want to set the force to
+you want to set the force to
+you want to set the force to
+is a vector3 dot new
+zero and then for the y
+zero and then for the y
+zero and then for the y
+you want to do workspace
+you want to do workspace
+you want to do workspace
+dot gravity times
+dot gravity times
+dot gravity times
+part get mass let me zoom out a little
+part get mass let me zoom out a little
+part get mass let me zoom out a little
+bit so you can see the whole
+bit so you can see the whole
+bit so you can see the whole
+thing so here's our anti-gravity
+thing so here's our anti-gravity
+thing so here's our anti-gravity
+and this just basically offsets
+and this just basically offsets
+and this just basically offsets
+workspace type gravity because obviously
+workspace type gravity because obviously
+workspace type gravity because obviously
+in your game you could change workspace
+in your game you could change workspace
+in your game you could change workspace
+dot gravity
+dot gravity
+dot gravity
+to whatever you want but the thing is is
+to whatever you want but the thing is is
+to whatever you want but the thing is is
+what if you only want certain parts to
+what if you only want certain parts to
+what if you only want certain parts to
+have anti-gravity that's when you would
+have anti-gravity that's when you would
+have anti-gravity that's when you would
+use
+use
+use
+this sort of force thing
+and so if i were to run this let me just
+and so if i were to run this let me just
+and so if i were to run this let me just
+go back here if i were to run this
+go back here if i were to run this
+go back here if i were to run this
+you can see the part does not move it
+you can see the part does not move it
+you can see the part does not move it
+looks like it's anchored but just to
+looks like it's anchored but just to
+looks like it's anchored but just to
+show you i'm going to go actually play
+show you i'm going to go actually play
+show you i'm going to go actually play
+it
+and so now if i were to hit the part you
+and so now if i were to hit the part you
+and so now if i were to hit the part you
+can see it maintains all this momentum
+can see it maintains all this momentum
+can see it maintains all this momentum
+and there's no air resistance in roblox
+and there's no air resistance in roblox
+and there's no air resistance in roblox
+so it'll just keep on going like that
+so it'll just keep on going like that
+so it'll just keep on going like that
+forever and one thing to note
+forever and one thing to note
+forever and one thing to note
+about this is you can just multiply this
+about this is you can just multiply this
+about this is you can just multiply this
+y value by whatever you want so i'm
+y value by whatever you want so i'm
+y value by whatever you want so i'm
+going to say
+going to say
+going to say
+0.5 so now the part has
+0.5 so now the part has
+0.5 so now the part has
+half the gravity of earth
+and then if you well i assume it's earth
+and then if you well i assume it's earth
+and then if you well i assume it's earth
+it's just the default
+it's just the default
+it's just the default
+gravity in the workspace and you can
+gravity in the workspace and you can
+gravity in the workspace and you can
+also change this to like a bigger value
+also change this to like a bigger value
+also change this to like a bigger value
+so it falls quicker
+so it falls quicker
+so it falls quicker
+but you can do whatever you want with
+but you can do whatever you want with
+but you can do whatever you want with
+that and i actually use this
+that and i actually use this
+that and i actually use this
+in my hover car video i use this as my
+in my hover car video i use this as my
+in my hover car video i use this as my
+basis
+basis
+basis
+for my hover car to orient it
+for my hover car to orient it
+for my hover car to orient it
+it's altitude and it worked very well
+it's altitude and it worked very well
+it's altitude and it worked very well
+and this is something
+and this is something
+and this is something
+that's super useful i use it a lot
+that's super useful i use it a lot
+that's super useful i use it a lot
+and it's a good intro to vector forces
+and it's a good intro to vector forces
+and it's a good intro to vector forces
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you guys enjoyed it was kind of
+you guys enjoyed it was kind of
+you guys enjoyed it was kind of
+short but vector forces are
+short but vector forces are
+short but vector forces are
+intentionally made a simple thing by
+intentionally made a simple thing by
+intentionally made a simple thing by
+roblox because
+roblox because
+roblox because
+they can be used by whomever or whatever
+they can be used by whomever or whatever
+they can be used by whomever or whatever
+you want
+you want
+you want
+and they're just generally useful and
+and they're just generally useful and
+and they're just generally useful and
+easy to
+easy to
+easy to
+use so this is just an experiment if you
+use so this is just an experiment if you
+use so this is just an experiment if you
+guys like this video make sure to
+guys like this video make sure to
+guys like this video make sure to
+comment down below because i might make
+comment down below because i might make
+comment down below because i might make
+some more
+some more
+some more
+constraint tutorials some people my
+constraint tutorials some people my
+constraint tutorials some people my
+discord server have been asking about
+discord server have been asking about
+discord server have been asking about
+that
+that
+that
+because constraints are kind of weird
+because constraints are kind of weird
+because constraints are kind of weird
+and roblox they take a while to learn
+and roblox they take a while to learn
+and roblox they take a while to learn
+especially like attachments
+especially like attachments
+especially like attachments
+but make sure to comment if you enjoyed
+but make sure to comment if you enjoyed
+but make sure to comment if you enjoyed
+this type of video and you want to see
+this type of video and you want to see
+this type of video and you want to see
+more
+more
+more
+roblox forces constraints whatever
+roblox forces constraints whatever
+roblox forces constraints whatever
+and make sure to like and subscribe if
+and make sure to like and subscribe if
+and make sure to like and subscribe if
+you enjoyed i hope you have a nice day
+you enjoyed i hope you have a nice day
+you enjoyed i hope you have a nice day
+and goodbye
+[Music]
+[Music]
+[Music]
+you

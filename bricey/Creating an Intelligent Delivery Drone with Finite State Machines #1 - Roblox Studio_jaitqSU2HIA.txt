@@ -1,0 +1,2028 @@
+have you ever wondered what makes
+have you ever wondered what makes
+have you ever wondered what makes
+artificial intelligence or AI
+artificial intelligence or AI
+artificial intelligence or AI
+well in this video I'm going to show you
+well in this video I'm going to show you
+well in this video I'm going to show you
+how to make this little autonomous
+how to make this little autonomous
+how to make this little autonomous
+delivery drone
+delivery drone
+delivery drone
+that teaches you some of the basics of
+that teaches you some of the basics of
+that teaches you some of the basics of
+AI using a finite State machine which is
+AI using a finite State machine which is
+AI using a finite State machine which is
+a great primitive structure or
+a great primitive structure or
+a great primitive structure or
+structuring different behaviors called
+structuring different behaviors called
+structuring different behaviors called
+States into you know functional code
+States into you know functional code
+States into you know functional code
+blocks that you can use to make stuff
+blocks that you can use to make stuff
+blocks that you can use to make stuff
+like this this thing's pretty cool it's
+like this this thing's pretty cool it's
+like this this thing's pretty cool it's
+a two-part mini series this is the first
+a two-part mini series this is the first
+a two-part mini series this is the first
+video second video should be releasing
+video second video should be releasing
+video second video should be releasing
+with this video should be pretty cool
+with this video should be pretty cool
+with this video should be pretty cool
+and I hope you enjoy like And subscribe
+and I hope you enjoy like And subscribe
+and I hope you enjoy like And subscribe
+if you do but without further ado
+if you do but without further ado
+if you do but without further ado
+let's get started
+I want to make a little drone
+I want to make a little drone
+I want to make a little drone
+that takes packages from point A and
+that takes packages from point A and
+that takes packages from point A and
+brings them to point B
+brings them to point B
+brings them to point B
+seems very simple
+seems very simple
+seems very simple
+right
+right
+right
+well what if the package gets you know
+well what if the package gets you know
+well what if the package gets you know
+like knocked off due to some like
+like knocked off due to some like
+like knocked off due to some like
+turbulate weather or something you know
+turbulate weather or something you know
+turbulate weather or something you know
+the Drone can't go to a point B it'll go
+the Drone can't go to a point B it'll go
+the Drone can't go to a point B it'll go
+to point B without a package so it'll
+to point B without a package so it'll
+to point B without a package so it'll
+have to go back to 1A
+have to go back to 1A
+have to go back to 1A
+and what if there's like a you know like
+and what if there's like a you know like
+and what if there's like a you know like
+a wall here has to avoid the wall
+a wall here has to avoid the wall
+a wall here has to avoid the wall
+somehow
+somehow
+somehow
+and when you go to implement this sort
+and when you go to implement this sort
+and when you go to implement this sort
+of behavior and code
+of behavior and code
+of behavior and code
+you start off with a singular if
+you start off with a singular if
+you start off with a singular if
+statement okay if the package is gone
+statement okay if the package is gone
+statement okay if the package is gone
+then you return
+then you return
+then you return
+and then you know if the wall they're
+and then you know if the wall they're
+and then you know if the wall they're
+like oh if the wall is there
+like oh if the wall is there
+like oh if the wall is there
+you like go back but
+you like go back but
+you like go back but
+in reality there's a lot of like
+in reality there's a lot of like
+in reality there's a lot of like
+different behaviors
+different behaviors
+different behaviors
+that have to work together and scaling
+that have to work together and scaling
+that have to work together and scaling
+It Up by just leaving a bunch of
+It Up by just leaving a bunch of
+It Up by just leaving a bunch of
+isolated conditionals is a bad idea
+isolated conditionals is a bad idea
+isolated conditionals is a bad idea
+so
+so
+so
+we're going to model this Behavior to
+we're going to model this Behavior to
+we're going to model this Behavior to
+make a delivery drone in Roblox
+make a delivery drone in Roblox
+make a delivery drone in Roblox
+using something called a finite State
+using something called a finite State
+using something called a finite State
+machine
+machine
+machine
+or f s m
+and this drone you know could be good
+and this drone you know could be good
+and this drone you know could be good
+for
+for
+for
+like a package delivery game but in
+like a package delivery game but in
+like a package delivery game but in
+reality this is just an excuse to learn
+reality this is just an excuse to learn
+reality this is just an excuse to learn
+about these things because they're
+about these things because they're
+about these things because they're
+really good for any type of AI and any
+really good for any type of AI and any
+really good for any type of AI and any
+game that you're trying to make
+game that you're trying to make
+game that you're trying to make
+so the first thing you want to do when
+so the first thing you want to do when
+so the first thing you want to do when
+making a finite State machine
+making a finite State machine
+making a finite State machine
+is to kind of model out your state so
+is to kind of model out your state so
+is to kind of model out your state so
+this drone is going to have a bunch of
+this drone is going to have a bunch of
+this drone is going to have a bunch of
+different states so like what it's doing
+different states so like what it's doing
+different states so like what it's doing
+so for example
+so for example
+so for example
+when the Drone is going back to point a
+when the Drone is going back to point a
+when the Drone is going back to point a
+to pick up its package because it'll be
+to pick up its package because it'll be
+to pick up its package because it'll be
+like you know spawn point where all
+like you know spawn point where all
+like you know spawn point where all
+packages will be sourced from
+packages will be sourced from
+packages will be sourced from
+I call the state the returning state
+I call the state the returning state
+I call the state the returning state
+so I'm going to make a little box and
+so I'm going to make a little box and
+so I'm going to make a little box and
+you know say it's returning
+that you got to admire the beautiful
+that you got to admire the beautiful
+that you got to admire the beautiful
+cursive I know read handwriting
+cursive I know read handwriting
+cursive I know read handwriting
+and so this returning state
+and so this returning state
+and so this returning state
+will go
+will go
+will go
+and when it goes to point B
+and when it goes to point B
+and when it goes to point B
+like the transit phase is going to be
+like the transit phase is going to be
+like the transit phase is going to be
+called the delivering phase I got
+called the delivering phase I got
+called the delivering phase I got
+another box we're gonna do
+another box we're gonna do
+another box we're gonna do
+to live this time we're going for print
+to live this time we're going for print
+to live this time we're going for print
+I guess it's more legible but what
+I guess it's more legible but what
+I guess it's more legible but what
+happens when the Drone kind of like you
+happens when the Drone kind of like you
+happens when the Drone kind of like you
+know drops a package by accident or
+know drops a package by accident or
+know drops a package by accident or
+something happens on the way you go from
+something happens on the way you go from
+something happens on the way you go from
+the delivery phase back to the returning
+the delivery phase back to the returning
+the delivery phase back to the returning
+phase
+phase
+phase
+and what you're here
+and what you're here
+and what you're here
+I'm going to implement a specific state
+I'm going to implement a specific state
+I'm going to implement a specific state
+for when it's like actually dropping off
+for when it's like actually dropping off
+for when it's like actually dropping off
+the package so it's going to be a
+the package so it's going to be a
+the package so it's going to be a
+dropping state
+I'm just going to call it drop
+looks like prop but it is indeed a drop
+looks like prop but it is indeed a drop
+looks like prop but it is indeed a drop
+don't mind that and from the dropping
+don't mind that and from the dropping
+don't mind that and from the dropping
+State obviously you return back to the
+State obviously you return back to the
+State obviously you return back to the
+returning State because that's where you
+returning State because that's where you
+returning State because that's where you
+go
+go
+go
+now to handle walls we're going to make
+now to handle walls we're going to make
+now to handle walls we're going to make
+a state called like avoiding
+a state called like avoiding
+a state called like avoiding
+so
+so
+so
+from delivery you detect a wall
+from delivery you detect a wall
+from delivery you detect a wall
+and this would be like the avoiding
+and this would be like the avoiding
+and this would be like the avoiding
+state
+it's just gonna be a void
+it's just gonna be a void
+it's just gonna be a void
+and so if you successfully avoid it
+and so if you successfully avoid it
+and so if you successfully avoid it
+you can go straight back to the deliver
+state
+state
+state
+and then
+and then
+and then
+obviously something happens you would go
+obviously something happens you would go
+obviously something happens you would go
+back to the returning state
+back to the returning state
+back to the returning state
+so yeah that's all this is a finite
+so yeah that's all this is a finite
+so yeah that's all this is a finite
+State machine is basically just a bunch
+State machine is basically just a bunch
+State machine is basically just a bunch
+of different states you know kind of
+of different states you know kind of
+of different states you know kind of
+like
+like
+like
+what it's doing at the moment and ways
+what it's doing at the moment and ways
+what it's doing at the moment and ways
+to move to and from them and by clearly
+to move to and from them and by clearly
+to move to and from them and by clearly
+defining this you know in a kind of
+defining this you know in a kind of
+defining this you know in a kind of
+diagram beforehand be able to implement
+diagram beforehand be able to implement
+diagram beforehand be able to implement
+it a lot easier in code to make it a lot
+it a lot easier in code to make it a lot
+it a lot easier in code to make it a lot
+simpler so now let's hop into Roblox
+simpler so now let's hop into Roblox
+simpler so now let's hop into Roblox
+studio and get to work on this drone
+studio and get to work on this drone
+studio and get to work on this drone
+okay so here we are in Roblox let's
+okay so here we are in Roblox let's
+okay so here we are in Roblox let's
+start so for our point a which is like
+start so for our point a which is like
+start so for our point a which is like
+kind of you know
+kind of you know
+kind of you know
+the drop-off point for like our package
+the drop-off point for like our package
+the drop-off point for like our package
+we're going to call this the depot
+we're going to call this the depot
+we're going to call this the depot
+we're gonna make the depot real quick
+we're gonna make the depot real quick
+we're gonna make the depot real quick
+it's just gonna be a random anchored
+it's just gonna be a random anchored
+it's just gonna be a random anchored
+part this is just for visual aid
+part this is just for visual aid
+part this is just for visual aid
+make it a little bit bigger
+make it a little bit bigger
+make it a little bit bigger
+but whatever
+but whatever
+but whatever
+I'm going to use Ctrl G on it to turn it
+I'm going to use Ctrl G on it to turn it
+I'm going to use Ctrl G on it to turn it
+into a model
+into a model
+into a model
+rename this model to the depot
+rename this model to the depot
+rename this model to the depot
+this is going to be called the base
+this is going to be called the base
+this is going to be called the base
+and then I'm gonna make two little
+and then I'm gonna make two little
+and then I'm gonna make two little
+spheres as basically like references
+spheres as basically like references
+spheres as basically like references
+or some other stuff
+or some other stuff
+or some other stuff
+so I'm gonna make sure paint Glide is
+so I'm gonna make sure paint Glide is
+so I'm gonna make sure paint Glide is
+off
+off
+off
+and anchor it is set to true
+and anchor it is set to true
+and anchor it is set to true
+make this just like a one by one by one
+make this just like a one by one by one
+make this just like a one by one by one
+size
+size
+size
+oh I did that one
+oh I did that one
+oh I did that one
+one I can type right there we go make it
+one I can type right there we go make it
+one I can type right there we go make it
+you know
+you know
+you know
+ice recognizable and Beyond
+ice recognizable and Beyond
+ice recognizable and Beyond
+red let's say
+red let's say
+red let's say
+a little bit transparent this is all
+a little bit transparent this is all
+a little bit transparent this is all
+visual aid just for testing but I like
+visual aid just for testing but I like
+visual aid just for testing but I like
+it to look somewhat decent
+it to look somewhat decent
+it to look somewhat decent
+and we're going to move it up a little
+and we're going to move it up a little
+and we're going to move it up a little
+bit this is going to be the gup White
+I'm going to rename it to pick a point
+I'm going to rename it to pick a point
+I'm going to rename it to pick a point
+move it in the depot duplicate it
+move it in the depot duplicate it
+move it in the depot duplicate it
+move it up a little bit by the way that
+move it up a little bit by the way that
+move it up a little bit by the way that
+duplication was Ctrl D to duplicate and
+duplication was Ctrl D to duplicate and
+duplication was Ctrl D to duplicate and
+then we're gonna make a blue point and
+then we're gonna make a blue point and
+then we're gonna make a blue point and
+it's going to be the drop point so the
+it's going to be the drop point so the
+it's going to be the drop point so the
+packages will drop
+packages will drop
+packages will drop
+onto the Drone
+onto the Drone
+onto the Drone
+from here
+from here
+from here
+for the pickup point
+for the pickup point
+for the pickup point
+and so the reason the packages are
+and so the reason the packages are
+and so the reason the packages are
+dropping like I know in a little graphic
+dropping like I know in a little graphic
+dropping like I know in a little graphic
+I had it was kind of dangling but we
+I had it was kind of dangling but we
+I had it was kind of dangling but we
+don't really have time to implement that
+don't really have time to implement that
+don't really have time to implement that
+in Roblox you obviously can
+in Roblox you obviously can
+in Roblox you obviously can
+like on your own but for this video this
+like on your own but for this video this
+like on your own but for this video this
+is mainly focused on the state machine
+is mainly focused on the state machine
+is mainly focused on the state machine
+itself I'm gonna make a simple system
+itself I'm gonna make a simple system
+itself I'm gonna make a simple system
+where the Drone which I'm going to make
+where the Drone which I'm going to make
+where the Drone which I'm going to make
+now is just going to be
+now is just going to be
+now is just going to be
+a singular part
+a singular part
+a singular part
+so if I can read a part
+so if I can read a part
+so if I can read a part
+so it's going to be like a basic little
+so it's going to be like a basic little
+so it's going to be like a basic little
+part I'm gonna make it make it like 25
+part I'm gonna make it make it like 25
+part I'm gonna make it make it like 25
+by
+by
+by
+two
+I can type it again
+I can type it again
+I can type it again
+there we go so this is going to be our
+there we go so this is going to be our
+there we go so this is going to be our
+little drone I'm gonna make it you know
+little drone I'm gonna make it you know
+little drone I'm gonna make it you know
+like a metal
+like a metal
+like a metal
+ER
+ER
+ER
+it's going to not be anchored have can
+it's going to not be anchored have can
+it's going to not be anchored have can
+Collide on
+Collide on
+Collide on
+and we're gonna group it once again
+and we're gonna group it once again
+and we're gonna group it once again
+pulling it
+pulling it
+pulling it
+the Drone the part here I'm going to
+the Drone the part here I'm going to
+the Drone the part here I'm going to
+name the base because it's you know it's
+name the base because it's you know it's
+name the base because it's you know it's
+like the base part
+like the base part
+like the base part
+and this is this is the entire drone to
+and this is this is the entire drone to
+and this is this is the entire drone to
+be honest because the part will or the
+be honest because the part will or the
+be honest because the part will or the
+package will drop on top of this
+package will drop on top of this
+package will drop on top of this
+and it'll deliver it to
+and it'll deliver it to
+and it'll deliver it to
+some point and that should work out
+some point and that should work out
+some point and that should work out
+perfectly fine
+perfectly fine
+perfectly fine
+so
+so
+so
+this drone needs to move we're going to
+this drone needs to move we're going to
+this drone needs to move we're going to
+use an aligned position for that I made
+use an aligned position for that I made
+use an aligned position for that I made
+a video on aligned positions if you want
+a video on aligned positions if you want
+a video on aligned positions if you want
+to check that out but they've actually
+to check that out but they've actually
+to check that out but they've actually
+gotten a lot better since that video so
+gotten a lot better since that video so
+gotten a lot better since that video so
+I'm going to click here to create the
+I'm going to click here to create the
+I'm going to click here to create the
+alarm position and for the second
+alarm position and for the second
+alarm position and for the second
+attachment just shove it wherever and
+attachment just shove it wherever and
+attachment just shove it wherever and
+then just instantly delete it because
+then just instantly delete it because
+then just instantly delete it because
+align positions usually require two
+align positions usually require two
+align positions usually require two
+attachments to
+attachments to
+attachments to
+go to like you start here and you go to
+go to like you start here and you go to
+go to like you start here and you go to
+the second attachment but if you go to
+the second attachment but if you go to
+the second attachment but if you go to
+the Align position go to mode and change
+the Align position go to mode and change
+the Align position go to mode and change
+it to one attachment you actually only
+it to one attachment you actually only
+it to one attachment you actually only
+need one attachment and you can specify
+need one attachment and you can specify
+need one attachment and you can specify
+a position that it goes to
+a position that it goes to
+a position that it goes to
+so that's great and we'll use that in
+so that's great and we'll use that in
+so that's great and we'll use that in
+the code later right now I'm going to
+the code later right now I'm going to
+the code later right now I'm going to
+turn on apply at Center Master Drew make
+turn on apply at Center Master Drew make
+turn on apply at Center Master Drew make
+sure this
+sure this
+sure this
+transfer that make sure the transform of
+transfer that make sure the transform of
+transfer that make sure the transform of
+the C frame is centered at the part this
+the C frame is centered at the part this
+the C frame is centered at the part this
+is relative transform not the world C
+is relative transform not the world C
+is relative transform not the world C
+frame and then I'm also going to set the
+frame and then I'm also going to set the
+frame and then I'm also going to set the
+orientation to zero zero zero
+orientation to zero zero zero
+orientation to zero zero zero
+so it's you know
+so it's you know
+so it's you know
+facing
+facing
+facing
+a normal error
+a normal error
+a normal error
+which
+which
+which
+be cool
+be cool
+be cool
+now let's also add an align and a line
+now let's also add an align and a line
+now let's also add an align and a line
+orientation just to keep everything
+orientation just to keep everything
+orientation just to keep everything
+straight click on the same attachment
+straight click on the same attachment
+straight click on the same attachment
+that you created
+that you created
+that you created
+and then for the second attachment again
+and then for the second attachment again
+and then for the second attachment again
+just shove it somewhere else delete it
+just shove it somewhere else delete it
+just shove it somewhere else delete it
+and then
+and then
+and then
+change the Align orientation to
+change the Align orientation to
+change the Align orientation to
+one attachment
+one attachment
+one attachment
+property leave everything the same
+property leave everything the same
+property leave everything the same
+one other thing you need to do is
+one other thing you need to do is
+one other thing you need to do is
+actually go back to the line position I
+actually go back to the line position I
+actually go back to the line position I
+just remembered change the max velocity
+just remembered change the max velocity
+just remembered change the max velocity
+to something like n
+to something like n
+to something like n
+or 20 or whatever because
+or 20 or whatever because
+or 20 or whatever because
+when this thing's moving it'll work
+when this thing's moving it'll work
+when this thing's moving it'll work
+at whatever Max velocity you set it by
+at whatever Max velocity you set it by
+at whatever Max velocity you set it by
+default it's Infinity so if I tell it to
+default it's Infinity so if I tell it to
+default it's Infinity so if I tell it to
+go like you know over there it'll Zoom
+go like you know over there it'll Zoom
+go like you know over there it'll Zoom
+there really quickly and the package on
+there really quickly and the package on
+there really quickly and the package on
+top will just fall off we don't want
+top will just fall off we don't want
+top will just fall off we don't want
+that we want our package to say nice and
+that we want our package to say nice and
+that we want our package to say nice and
+safe don't need to be pulling like 10
+safe don't need to be pulling like 10
+safe don't need to be pulling like 10
+G's on this thing so
+G's on this thing so
+G's on this thing so
+we'll leave it
+we'll leave it
+we'll leave it
+at like 10.
+at like 10.
+at like 10.
+okay there we go so that's everything
+okay there we go so that's everything
+okay there we go so that's everything
+more or less done let's just double
+more or less done let's just double
+more or less done let's just double
+check everything works by playing it
+check everything works by playing it
+check everything works by playing it
+the part should just move wherever I can
+the part should just move wherever I can
+the part should just move wherever I can
+think it sets like zero zeros you see
+think it sets like zero zeros you see
+think it sets like zero zeros you see
+how it's moving towards its Target
+how it's moving towards its Target
+how it's moving towards its Target
+position which is always great
+position which is always great
+position which is always great
+and it obviously gets stopped by this
+and it obviously gets stopped by this
+and it obviously gets stopped by this
+thing
+thing
+thing
+yeah it does okay so that works
+yeah it does okay so that works
+yeah it does okay so that works
+wonderful
+wonderful
+wonderful
+now it's time to start scripting we've
+now it's time to start scripting we've
+now it's time to start scripting we've
+all been here for
+all been here for
+all been here for
+let's go to the depot create a new
+let's go to the depot create a new
+let's go to the depot create a new
+script
+script
+script
+there you go
+there you go
+there you go
+Depot script's gonna be pretty simple
+Depot script's gonna be pretty simple
+Depot script's gonna be pretty simple
+all we need to do is drop packages onto
+all we need to do is drop packages onto
+all we need to do is drop packages onto
+the Drone so we're gonna say local drop
+the Drone so we're gonna say local drop
+the Drone so we're gonna say local drop
+it equals script.parent dot drop point
+it equals script.parent dot drop point
+it equals script.parent dot drop point
+and we're going to find a local tick
+and we're going to find a local tick
+and we're going to find a local tick
+speed
+speed
+speed
+and I'm going to set this to something
+and I'm going to set this to something
+and I'm going to set this to something
+like three seconds
+like three seconds
+like three seconds
+so
+so
+so
+realistically in an actual game you'd
+realistically in an actual game you'd
+realistically in an actual game you'd
+probably want to use
+probably want to use
+probably want to use
+a run service event
+a run service event
+a run service event
+or
+or
+or
+no spawning in the package but if I'm
+no spawning in the package but if I'm
+no spawning in the package but if I'm
+being honest
+being honest
+being honest
+it's more performant to do something
+it's more performant to do something
+it's more performant to do something
+like this where you have a wall true do
+like this where you have a wall true do
+like this where you have a wall true do
+and you do a task dot weight
+and you do a task dot weight
+and you do a task dot weight
+take speed
+take speed
+take speed
+because this will only run every three
+because this will only run every three
+because this will only run every three
+seconds and yes it is infinite Loop but
+seconds and yes it is infinite Loop but
+seconds and yes it is infinite Loop but
+it's okay because we this is like our
+it's okay because we this is like our
+it's okay because we this is like our
+event we want this to run all times and
+event we want this to run all times and
+event we want this to run all times and
+since the actual like spawning of the
+since the actual like spawning of the
+since the actual like spawning of the
+package is not really time critical
+package is not really time critical
+package is not really time critical
+because of our finite State machine
+because of our finite State machine
+because of our finite State machine
+It'll like stay there until it receives
+It'll like stay there until it receives
+It'll like stay there until it receives
+the package I think this is fine
+the package I think this is fine
+the package I think this is fine
+so now what I want to do this Depot has
+so now what I want to do this Depot has
+so now what I want to do this Depot has
+to be a little bit smart so first we're
+to be a little bit smart so first we're
+to be a little bit smart so first we're
+going to detect if the Drone actually
+going to detect if the Drone actually
+going to detect if the Drone actually
+exists underneath it so we're going to
+exists underneath it so we're going to
+exists underneath it so we're going to
+say local cast equals workspace raycast
+say local cast equals workspace raycast
+say local cast equals workspace raycast
+a drop point dot position and then we're
+a drop point dot position and then we're
+a drop point dot position and then we're
+just going to look down so we're going
+just going to look down so we're going
+just going to look down so we're going
+to do Vector three dot y-axis so that's
+to do Vector three dot y-axis so that's
+to do Vector three dot y-axis so that's
+a new Vector that has X go x and z is
+a new Vector that has X go x and z is
+a new Vector that has X go x and z is
+zero and then Y is one and we're gonna
+zero and then Y is one and we're gonna
+zero and then Y is one and we're gonna
+multiply it by negative five so this is
+multiply it by negative five so this is
+multiply it by negative five so this is
+gonna be array at the drop point looking
+gonna be array at the drop point looking
+gonna be array at the drop point looking
+down about five studs
+down about five studs
+down about five studs
+and we're going to
+and we're going to
+and we're going to
+we're going to say ifcast.instance
+we're going to say ifcast.instance
+we're going to say ifcast.instance
+and cast.instance is
+and cast.instance is
+and cast.instance is
+descendant of workspace.drone
+descendant of workspace.drone
+descendant of workspace.drone
+then
+then
+then
+we're going to create a new package so
+we're going to create a new package so
+we're going to create a new package so
+this is basically saying if we detect
+this is basically saying if we detect
+this is basically saying if we detect
+something below us and it's a descendant
+something below us and it's a descendant
+something below us and it's a descendant
+of the Drone
+of the Drone
+of the Drone
+we spawn the pack so one slight
+we spawn the pack so one slight
+we spawn the pack so one slight
+correction here if
+correction here if
+correction here if
+the cast does not exist this will Air so
+the cast does not exist this will Air so
+the cast does not exist this will Air so
+we need to add another Safeguard say if
+we need to add another Safeguard say if
+we need to add another Safeguard say if
+cast and password Essence and Castle
+cast and password Essence and Castle
+cast and password Essence and Castle
+instance is the center of workspace or
+instance is the center of workspace or
+instance is the center of workspace or
+drone because if you shoot a little Ray
+drone because if you shoot a little Ray
+drone because if you shoot a little Ray
+down and it doesn't hit you got some
+down and it doesn't hit you got some
+down and it doesn't hit you got some
+issue so just make sure to put that in a
+issue so just make sure to put that in a
+issue so just make sure to put that in a
+little Quick Fix sorry about that
+little Quick Fix sorry about that
+little Quick Fix sorry about that
+we need to create said package so I'm
+we need to create said package so I'm
+we need to create said package so I'm
+just going to create a new part
+just going to create a new part
+just going to create a new part
+give it size of one one one
+give it size of one one one
+give it size of one one one
+give it a nice little material
+give it a nice little material
+give it a nice little material
+let's do
+let's do
+let's do
+let's do a nice fabric there we go
+let's do a nice fabric there we go
+let's do a nice fabric there we go
+we can make it a fancy color like this
+we can make it a fancy color like this
+we can make it a fancy color like this
+nice blue
+nice blue
+nice blue
+and making sure to leave it unacored
+and making sure to leave it unacored
+and making sure to leave it unacored
+and everything else is more or less fine
+and everything else is more or less fine
+and everything else is more or less fine
+but what I'm going to do and this is
+but what I'm going to do and this is
+but what I'm going to do and this is
+just like you know kind of a nice
+just like you know kind of a nice
+just like you know kind of a nice
+feature to delineate the package because
+feature to delineate the package because
+feature to delineate the package because
+I'm going to name this package just for
+I'm going to name this package just for
+I'm going to name this package just for
+our sake
+our sake
+our sake
+but every package you know like has like
+but every package you know like has like
+but every package you know like has like
+in real life you have like you know an
+in real life you have like you know an
+in real life you have like you know an
+address that you have to send it to so
+address that you have to send it to so
+address that you have to send it to so
+in Roblox we're gonna make this address
+in Roblox we're gonna make this address
+in Roblox we're gonna make this address
+a vector three and we're going to call
+a vector three and we're going to call
+a vector three and we're going to call
+it
+it
+it
+Target so this is the target position
+Target so this is the target position
+Target so this is the target position
+that this package needs to get delivered
+that this package needs to get delivered
+that this package needs to get delivered
+to
+to
+to
+so in an actual game you could
+so in an actual game you could
+so in an actual game you could
+dynamically set this based off the depot
+dynamically set this based off the depot
+dynamically set this based off the depot
+like where it needs to go
+like where it needs to go
+like where it needs to go
+but this also serves the other
+but this also serves the other
+but this also serves the other
+purpose of letting us use an attribute
+purpose of letting us use an attribute
+purpose of letting us use an attribute
+that will like tell us this is indeed a
+that will like tell us this is indeed a
+that will like tell us this is indeed a
+package because sometimes you can't
+package because sometimes you can't
+package because sometimes you can't
+really rely on names
+really rely on names
+really rely on names
+this way you always know it's a package
+this way you always know it's a package
+this way you always know it's a package
+might have started now if you have
+might have started now if you have
+might have started now if you have
+another part that also has
+another part that also has
+another part that also has
+a attribute Target kind of screwed but
+a attribute Target kind of screwed but
+a attribute Target kind of screwed but
+for this simple example it'll work fine
+for this simple example it'll work fine
+for this simple example it'll work fine
+so I'm going to shove the package into
+so I'm going to shove the package into
+so I'm going to shove the package into
+server storage go back to the script
+server storage go back to the script
+server storage go back to the script
+say local
+say local
+say local
+package equals game get service server
+package equals game get service server
+package equals game get service server
+storage
+storage
+storage
+you got package
+you got package
+you got package
+there's our package
+there's our package
+there's our package
+we say local new package
+we say local new package
+we say local new package
+equals package clone so we clone the
+equals package clone so we clone the
+equals package clone so we clone the
+package we need to set the new package
+package we need to set the new package
+package we need to set the new package
+dot position equal to
+dot position equal to
+dot position equal to
+a draw Point dot position
+a draw Point dot position
+a draw Point dot position
+and we also need to say new package
+and we also need to say new package
+and we also need to say new package
+dot parent
+dot parent
+dot parent
+equals the workspace there we go so
+equals the workspace there we go so
+equals the workspace there we go so
+let's test this thing
+let's test this thing
+let's test this thing
+really quick
+really quick
+really quick
+move
+move
+move
+the Drone about here
+and it does indeed drop a package and
+and it does indeed drop a package and
+and it does indeed drop a package and
+you can see the Drone is just hauling
+you can see the Drone is just hauling
+you can see the Drone is just hauling
+away with this package right now take
+away with this package right now take
+away with this package right now take
+the package off nothing the drone's not
+the package off nothing the drone's not
+the package off nothing the drone's not
+even going to the Target position
+even going to the Target position
+even going to the Target position
+we have to change that
+we have to change that
+we have to change that
+how might we change that well let's
+how might we change that well let's
+how might we change that well let's
+script the Drone
+script the Drone
+script the Drone
+going to the Drone create a new script
+going to the Drone create a new script
+going to the Drone create a new script
+here you go
+here you go
+here you go
+we're going to say
+we're going to say
+we're going to say
+local or local drone
+there you go zoom in some more local
+there you go zoom in some more local
+there you go zoom in some more local
+drone
+drone
+drone
+equals script dot parent
+equals script dot parent
+equals script dot parent
+we also need to get the base for later
+we also need to get the base for later
+we also need to get the base for later
+so we're going to say bass equals Brown
+so we're going to say bass equals Brown
+so we're going to say bass equals Brown
+dot base
+dot base
+dot base
+local I'm going to call it mover like
+local I'm going to call it mover like
+local I'm going to call it mover like
+for the Align position equals base dot
+for the Align position equals base dot
+for the Align position equals base dot
+align position because it's kind of like
+align position because it's kind of like
+align position because it's kind of like
+what moves the Drone around we don't
+what moves the Drone around we don't
+what moves the Drone around we don't
+need a line orientation it's just kind
+need a line orientation it's just kind
+need a line orientation it's just kind
+of there to keep it stable it's like a
+of there to keep it stable it's like a
+of there to keep it stable it's like a
+gyroscope basically
+gyroscope basically
+gyroscope basically
+and let's get started
+and let's get started
+and let's get started
+so to start off we need to implement the
+so to start off we need to implement the
+so to start off we need to implement the
+returning state
+returning state
+returning state
+and since Lua is so great and wonderful
+and since Lua is so great and wonderful
+and since Lua is so great and wonderful
+we're going to use a dictionary so I
+we're going to use a dictionary so I
+we're going to use a dictionary so I
+want to say local state
+want to say local state
+want to say local state
+equal or I guess it's called a table
+equal or I guess it's called a table
+equal or I guess it's called a table
+canonically local state equals a blank
+canonically local state equals a blank
+canonically local state equals a blank
+evil I got a video on tables lots of
+evil I got a video on tables lots of
+evil I got a video on tables lots of
+stuff on that tables are very very
+stuff on that tables are very very
+stuff on that tables are very very
+powerful because in most other languages
+powerful because in most other languages
+powerful because in most other languages
+if you want to implement a state machine
+if you want to implement a state machine
+if you want to implement a state machine
+you would make an enum and then use a
+you would make an enum and then use a
+you would make an enum and then use a
+case statement to like you know switch
+case statement to like you know switch
+case statement to like you know switch
+between them but
+between them but
+between them but
+Lua gives you the option to Define
+Lua gives you the option to Define
+Lua gives you the option to Define
+functions inside of a table
+functions inside of a table
+functions inside of a table
+so we're just going to make all of our
+so we're just going to make all of our
+so we're just going to make all of our
+state
+state
+state
+'s handled by a function as the name of
+'s handled by a function as the name of
+'s handled by a function as the name of
+the state in the state table
+the state in the state table
+the state in the state table
+so it's kind of confusing but the way it
+so it's kind of confusing but the way it
+so it's kind of confusing but the way it
+looks like is we say function state DOT
+looks like is we say function state DOT
+looks like is we say function state DOT
+return
+this is a new function
+this is a new function
+this is a new function
+that is part of the state table
+that is part of the state table
+that is part of the state table
+that will eventually you know deal with
+that will eventually you know deal with
+that will eventually you know deal with
+later to set the current state or
+later to set the current state or
+later to set the current state or
+whatever so this returning State all we
+whatever so this returning State all we
+whatever so this returning State all we
+need to set
+need to set
+need to set
+is the target position so it would be
+is the target position so it would be
+is the target position so it would be
+mover.position because it's a line
+mover.position because it's a line
+mover.position because it's a line
+position you know tells the wrong where
+position you know tells the wrong where
+position you know tells the wrong where
+to go
+to go
+to go
+set that to the pickup point so let's
+set that to the pickup point so let's
+set that to the pickup point so let's
+get the pickup Point by saying local
+get the pickup Point by saying local
+get the pickup Point by saying local
+pickup Point equals workspace dot Depot
+pickup Point equals workspace dot Depot
+pickup Point equals workspace dot Depot
+dot pickup point
+dot pickup point
+dot pickup point
+so we need to basically just say
+so we need to basically just say
+so we need to basically just say
+mover.position equals pickup point
+mover.position equals pickup point
+mover.position equals pickup point
+not position that's all we need to do
+not position that's all we need to do
+not position that's all we need to do
+now
+now
+now
+and so we're going to do the same sort
+and so we're going to do the same sort
+and so we're going to do the same sort
+of like update loop as the depot we're
+of like update loop as the depot we're
+of like update loop as the depot we're
+gonna say local I'm going to say wall
+gonna say local I'm going to say wall
+gonna say local I'm going to say wall
+true do
+true do
+true do
+are you task dot weight another tick
+are you task dot weight another tick
+are you task dot weight another tick
+speed I'm going to make
+speed I'm going to make
+speed I'm going to make
+local tick speed equal to
+local tick speed equal to
+local tick speed equal to
+like 0.5 I honestly would recommend an
+like 0.5 I honestly would recommend an
+like 0.5 I honestly would recommend an
+actual game you use run service like
+actual game you use run service like
+actual game you use run service like
+steps for this or something just because
+steps for this or something just because
+steps for this or something just because
+it runs a little faster but I don't need
+it runs a little faster but I don't need
+it runs a little faster but I don't need
+a performance to be honest so we're just
+a performance to be honest so we're just
+a performance to be honest so we're just
+going to use this little Loop runs every
+going to use this little Loop runs every
+going to use this little Loop runs every
+half second not too often not too
+half second not too often not too
+half second not too often not too
+stressful for the game
+stressful for the game
+stressful for the game
+and in here
+and in here
+and in here
+we basically need to do is just run the
+we basically need to do is just run the
+we basically need to do is just run the
+state that we're currently in
+state that we're currently in
+state that we're currently in
+but right now we have no way
+but right now we have no way
+but right now we have no way
+to figure out
+to figure out
+to figure out
+the current state
+the current state
+the current state
+so we're going to do that we're going to
+so we're going to do that we're going to
+so we're going to do that we're going to
+find a variable say local current state
+find a variable say local current state
+find a variable say local current state
+equals no because
+equals no because
+equals no because
+some of these State values
+some of these State values
+some of these State values
+down the line are going to reference
+down the line are going to reference
+down the line are going to reference
+current state and actually Set current
+current state and actually Set current
+current state and actually Set current
+state so I'm going to start at nil just
+state so I'm going to start at nil just
+state so I'm going to start at nil just
+so these guys can reference it but right
+so these guys can reference it but right
+so these guys can reference it but right
+before the wall true do we're going to
+before the wall true do we're going to
+before the wall true do we're going to
+set current state equals to State DOT
+set current state equals to State DOT
+set current state equals to State DOT
+returning because the default state of
+returning because the default state of
+returning because the default state of
+the Drone should be going back to home
+the Drone should be going back to home
+the Drone should be going back to home
+base
+base
+base
+and now in our Walter do we're going to
+and now in our Walter do we're going to
+and now in our Walter do we're going to
+say current state parentheses what this
+say current state parentheses what this
+say current state parentheses what this
+is going to do is it's going to call
+is going to do is it's going to call
+is going to do is it's going to call
+whatever the current state is this is
+whatever the current state is this is
+whatever the current state is this is
+very important because luo although it's
+very important because luo although it's
+very important because luo although it's
+great because you do things like this it
+great because you do things like this it
+great because you do things like this it
+also doesn't have okay I also guess I
+also doesn't have okay I also guess I
+also doesn't have okay I also guess I
+should be saying luau because it's not
+should be saying luau because it's not
+should be saying luau because it's not
+you know but forgive me luau does not
+you know but forgive me luau does not
+you know but forgive me luau does not
+have the safeguards actually luau does
+have the safeguards actually luau does
+have the safeguards actually luau does
+have the safeguards but I'm using it
+have the safeguards but I'm using it
+have the safeguards but I'm using it
+without types this is a tangent okay I'm
+without types this is a tangent okay I'm
+without types this is a tangent okay I'm
+using it without types so it you know
+using it without types so it you know
+using it without types so it you know
+kind of doesn't
+kind of doesn't
+kind of doesn't
+to like verify this is a function so
+to like verify this is a function so
+to like verify this is a function so
+when you're doing this you're assuming
+when you're doing this you're assuming
+when you're doing this you're assuming
+that the current state is always a
+that the current state is always a
+that the current state is always a
+function so whenever you're writing your
+function so whenever you're writing your
+function so whenever you're writing your
+state machines you always want to set
+state machines you always want to set
+state machines you always want to set
+State equal
+State equal
+State equal
+to a valid State and be careful you
+to a valid State and be careful you
+to a valid State and be careful you
+never want to put parentheses at the end
+never want to put parentheses at the end
+never want to put parentheses at the end
+of this like you know returning block
+of this like you know returning block
+of this like you know returning block
+because that actually calls the function
+because that actually calls the function
+because that actually calls the function
+you want to just set it as a value so it
+you want to just set it as a value so it
+you want to just set it as a value so it
+can be called later here
+can be called later here
+can be called later here
+and wherever this current state changes
+and wherever this current state changes
+and wherever this current state changes
+just changes to it'll be called so each
+just changes to it'll be called so each
+just changes to it'll be called so each
+tick will call the current state right
+tick will call the current state right
+tick will call the current state right
+now we only have one state it doesn't
+now we only have one state it doesn't
+now we only have one state it doesn't
+matter but it'll obviously get crazier
+matter but it'll obviously get crazier
+matter but it'll obviously get crazier
+as time goes on let's run this
+as time goes on let's run this
+as time goes on let's run this
+does it work
+does it work
+does it work
+indeed it does work absolutely wonderful
+indeed it does work absolutely wonderful
+indeed it does work absolutely wonderful
+let's stop it
+let's stop it
+let's stop it
+and now what we have to do
+and now what we have to do
+and now what we have to do
+is we actually have to implement the
+is we actually have to implement the
+is we actually have to implement the
+delivering State
+delivering State
+delivering State
+so actually I'm going to go back to our
+so actually I'm going to go back to our
+so actually I'm going to go back to our
+package just for testing purposes I'm
+package just for testing purposes I'm
+package just for testing purposes I'm
+going to set
+going to set
+going to set
+the target position just something a
+the target position just something a
+the target position just something a
+little bit more easier to reason about
+little bit more easier to reason about
+little bit more easier to reason about
+you know okay so it's kind of a positive
+you know okay so it's kind of a positive
+you know okay so it's kind of a positive
+X Direction a little bit so we'll set
+X Direction a little bit so we'll set
+X Direction a little bit so we'll set
+this to like
+this to like
+this to like
+you know positive 10 in the X
+you know positive 10 in the X
+you know positive 10 in the X
+and we'll leave
+and we'll leave
+and we'll leave
+we'll set y to like five I guess and
+we'll set y to like five I guess and
+we'll set y to like five I guess and
+we'll leave Z at zero it's just gonna be
+we'll leave Z at zero it's just gonna be
+we'll leave Z at zero it's just gonna be
+better for testing so I'll just change
+better for testing so I'll just change
+better for testing so I'll just change
+the target position
+the target position
+the target position
+not really necessary just quality of
+not really necessary just quality of
+not really necessary just quality of
+life
+life
+life
+in an actual game I'd recommend setting
+in an actual game I'd recommend setting
+in an actual game I'd recommend setting
+it to like some predefined part that
+it to like some predefined part that
+it to like some predefined part that
+doesn't unimportant here where it goes
+doesn't unimportant here where it goes
+doesn't unimportant here where it goes
+so we're just gonna leave it there
+so we're just gonna leave it there
+so we're just gonna leave it there
+so because we're only going to care
+so because we're only going to care
+so because we're only going to care
+about you know picking it up and like
+about you know picking it up and like
+about you know picking it up and like
+dropping it off we don't really care
+dropping it off we don't really care
+dropping it off we don't really care
+what the drop-off Point looks like could
+what the drop-off Point looks like could
+what the drop-off Point looks like could
+be whatever you want
+be whatever you want
+be whatever you want
+so now we're going to define a function
+so now we're going to define a function
+so now we're going to define a function
+for state DOT delivery
+for state DOT delivery
+for state DOT delivery
+this is going to be another state where
+this is going to be another state where
+this is going to be another state where
+we you know pick up the package and
+we you know pick up the package and
+we you know pick up the package and
+we're going to the place
+we're going to the place
+we're going to the place
+while in this state we want to be
+while in this state we want to be
+while in this state we want to be
+constantly checking if the package is
+constantly checking if the package is
+constantly checking if the package is
+actually on our drone because if it's
+actually on our drone because if it's
+actually on our drone because if it's
+not there's no point to be delivering we
+not there's no point to be delivering we
+not there's no point to be delivering we
+might as well go back home
+might as well go back home
+might as well go back home
+do that I want to make a function called
+do that I want to make a function called
+do that I want to make a function called
+local function get package so this
+local function get package so this
+local function get package so this
+package is also gonna It's Gonna Knock
+package is also gonna It's Gonna Knock
+package is also gonna It's Gonna Knock
+Out two birds with one stone basically
+Out two birds with one stone basically
+Out two birds with one stone basically
+we're going to try to retrieve the
+we're going to try to retrieve the
+we're going to try to retrieve the
+package if the package doesn't exist
+package if the package doesn't exist
+package if the package doesn't exist
+we'll just return no
+we'll just return no
+we'll just return no
+and so it'll basically work as saying
+and so it'll basically work as saying
+and so it'll basically work as saying
+okay does the packages this anything
+okay does the packages this anything
+okay does the packages this anything
+exists it'll like give it back to you so
+exists it'll like give it back to you so
+exists it'll like give it back to you so
+we're going to
+we're going to
+we're going to
+start by saying
+start by saying
+start by saying
+local detected Parts equals workspace
+local detected Parts equals workspace
+local detected Parts equals workspace
+get heart
+get heart
+get heart
+bounds and radius
+bounds and radius
+bounds and radius
+I'm going to do that from the Drone get
+I'm going to do that from the Drone get
+I'm going to do that from the Drone get
+pivot so like the center of the Drone
+pivot so like the center of the Drone
+pivot so like the center of the Drone
+dot position
+dot position
+dot position
+and comma one so
+and comma one so
+and comma one so
+this
+this
+this
+basically makes like a sphere around our
+basically makes like a sphere around our
+basically makes like a sphere around our
+drone
+drone
+drone
+of radius one so sphere is going to be
+of radius one so sphere is going to be
+of radius one so sphere is going to be
+radius one stud and it'll detect all the
+radius one stud and it'll detect all the
+radius one stud and it'll detect all the
+parts around there and give you a list
+parts around there and give you a list
+parts around there and give you a list
+back so we want to check in that little
+back so we want to check in that little
+back so we want to check in that little
+sphere which of the parts or if any are
+sphere which of the parts or if any are
+sphere which of the parts or if any are
+the package if one of the parts looks
+the package if one of the parts looks
+the package if one of the parts looks
+like the package then we'll spit it back
+like the package then we'll spit it back
+like the package then we'll spit it back
+we'll return it if not just won't do
+we'll return it if not just won't do
+we'll return it if not just won't do
+anything the function will turn down
+anything the function will turn down
+anything the function will turn down
+so we say four
+so we say four
+so we say four
+I
+I
+I
+heart
+heart
+heart
+in detected parts do
+in detected parts do
+in detected parts do
+we're going to say
+we're going to say
+we're going to say
+if
+if
+if
+or get attribute
+Target
+Target
+Target
+then
+then
+then
+return the part
+return the part
+return the part
+so what this will do is it'll say okay
+so what this will do is it'll say okay
+so what this will do is it'll say okay
+so if we have a Target you know
+so if we have a Target you know
+so if we have a Target you know
+attribute that in our game right now
+attribute that in our game right now
+attribute that in our game right now
+only
+only
+only
+packages have we give it back otherwise
+packages have we give it back otherwise
+packages have we give it back otherwise
+nothing is returned so we can use that
+nothing is returned so we can use that
+nothing is returned so we can use that
+to like you know detect your packages
+to like you know detect your packages
+to like you know detect your packages
+actually exist
+actually exist
+actually exist
+let's go back down to the delivering
+let's go back down to the delivering
+let's go back down to the delivering
+function and we can just basically say
+function and we can just basically say
+function and we can just basically say
+local package equals hit package so the
+local package equals hit package so the
+local package equals hit package so the
+package may not exist so if the package
+package may not exist so if the package
+package may not exist so if the package
+does exist then
+does exist then
+does exist then
+we get the target pose Target position
+we get the target pose Target position
+we get the target pose Target position
+which is equal to package get attribute
+which is equal to package get attribute
+which is equal to package get attribute
+Target this is a vector three
+Target this is a vector three
+Target this is a vector three
+and we can set the mover.position which
+and we can set the mover.position which
+and we can set the mover.position which
+is also a vector of three to the Target
+is also a vector of three to the Target
+is also a vector of three to the Target
+position which is great
+but if
+but if
+but if
+this uh if the package doesn't exist so
+this uh if the package doesn't exist so
+this uh if the package doesn't exist so
+else
+else
+else
+we say
+we say
+we say
+current state
+current state
+current state
+equals State DOT return so basically if
+equals State DOT return so basically if
+equals State DOT return so basically if
+we have the package okay great go to the
+we have the package okay great go to the
+we have the package okay great go to the
+Target that the package wants you to go
+Target that the package wants you to go
+Target that the package wants you to go
+to otherwise we have to go back and get
+to otherwise we have to go back and get
+to otherwise we have to go back and get
+another package because it doesn't make
+another package because it doesn't make
+another package because it doesn't make
+sense for us to be traveling if we don't
+sense for us to be traveling if we don't
+sense for us to be traveling if we don't
+have a package so by that same logic we
+have a package so by that same logic we
+have a package so by that same logic we
+have to go up here to the returning
+have to go up here to the returning
+have to go up here to the returning
+function and also make sure that like
+function and also make sure that like
+function and also make sure that like
+once we get the package so if get
+once we get the package so if get
+once we get the package so if get
+packaged then we need to start the
+packaged then we need to start the
+packaged then we need to start the
+delivery process because this state
+delivery process because this state
+delivery process because this state
+of delivering will never really get
+of delivering will never really get
+of delivering will never really get
+triggered unless we do it in the
+triggered unless we do it in the
+triggered unless we do it in the
+returning phase so once we actually
+returning phase so once we actually
+returning phase so once we actually
+receive the package we go we lose the
+receive the package we go we lose the
+receive the package we go we lose the
+package we come back so we kind of like
+package we come back so we kind of like
+package we come back so we kind of like
+oscillate between these two states right
+oscillate between these two states right
+oscillate between these two states right
+now
+now
+now
+but little did I know
+but little did I know
+but little did I know
+drone get pivot which kind of gets like
+drone get pivot which kind of gets like
+drone get pivot which kind of gets like
+the central part of the Drone requires a
+the central part of the Drone requires a
+the central part of the Drone requires a
+primary part so make sure you go to your
+primary part so make sure you go to your
+primary part so make sure you go to your
+drone you go to the primary part and you
+drone you go to the primary part and you
+drone you go to the primary part and you
+set that to the base
+set that to the base
+set that to the base
+so now I'm also going to move the Drone
+so now I'm also going to move the Drone
+so now I'm also going to move the Drone
+a little bit away
+a little bit away
+a little bit away
+and I'm going to make the
+and I'm going to make the
+and I'm going to make the
+little pickup Point part just a Wii oh
+little pickup Point part just a Wii oh
+little pickup Point part just a Wii oh
+sorry a little bit smaller
+sorry a little bit smaller
+sorry a little bit smaller
+if I can freaking here we go
+if I can freaking here we go
+if I can freaking here we go
+yeah I need to pick up a point a little
+yeah I need to pick up a point a little
+yeah I need to pick up a point a little
+bit smaller
+bit smaller
+bit smaller
+a little bit smaller because
+a little bit smaller because
+a little bit smaller because
+um if this little sphere is bigger than
+um if this little sphere is bigger than
+um if this little sphere is bigger than
+the flat surface of the Drone
+the flat surface of the Drone
+the flat surface of the Drone
+the depot won't actually be able to drop
+the depot won't actually be able to drop
+the depot won't actually be able to drop
+parts so just make sure those two things
+parts so just make sure those two things
+parts so just make sure those two things
+are like that
+are like that
+are like that
+the little drone will fly up the part
+the little drone will fly up the part
+the little drone will fly up the part
+will get dropped and it'll go on its way
+will get dropped and it'll go on its way
+will get dropped and it'll go on its way
+which is great and now if I were to drag
+which is great and now if I were to drag
+which is great and now if I were to drag
+the part off it immediately or
+the part off it immediately or
+the part off it immediately or
+immediately as quick as the next tick
+immediately as quick as the next tick
+immediately as quick as the next tick
+goes returns picks up another part
+goes returns picks up another part
+goes returns picks up another part
+and flies away
+and flies away
+and flies away
+nice and once it reaches its Target
+nice and once it reaches its Target
+nice and once it reaches its Target
+doesn't really do anything
+doesn't really do anything
+doesn't really do anything
+it's like
+it's like
+it's like
+not not really a good look if you ask me
+not not really a good look if you ask me
+not not really a good look if you ask me
+so we actually need to get the parts to
+so we actually need to get the parts to
+so we actually need to get the parts to
+drop
+drop
+drop
+but dropping the part and avoiding walls
+but dropping the part and avoiding walls
+but dropping the part and avoiding walls
+will be for the next video this one has
+will be for the next video this one has
+will be for the next video this one has
+run quite long I don't want it to be too
+run quite long I don't want it to be too
+run quite long I don't want it to be too
+long so make sure to check that out like
+long so make sure to check that out like
+long so make sure to check that out like
+And subscribe if you enjoyed
+And subscribe if you enjoyed
+And subscribe if you enjoyed
+and I'll see you next time hope you have
+and I'll see you next time hope you have
+and I'll see you next time hope you have
+a nice day and bye
+a nice day and bye
+a nice day and bye
+[Music]

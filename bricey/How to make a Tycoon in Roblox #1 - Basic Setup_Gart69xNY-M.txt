@@ -1,0 +1,1081 @@
+due to popular demand the tycoon series
+due to popular demand the tycoon series
+due to popular demand the tycoon series
+is back this new tycoon was built from
+is back this new tycoon was built from
+is back this new tycoon was built from
+the ground up to be as simple
+the ground up to be as simple
+the ground up to be as simple
+expandable and secure as possible
+expandable and secure as possible
+expandable and secure as possible
+i tried to make this new and improved
+i tried to make this new and improved
+i tried to make this new and improved
+tycoon as good as i possibly can
+tycoon as good as i possibly can
+tycoon as good as i possibly can
+and for that reason it is rather complex
+and for that reason it is rather complex
+and for that reason it is rather complex
+and somewhat advanced but stay with me i
+and somewhat advanced but stay with me i
+and somewhat advanced but stay with me i
+have a ton of
+have a ton of
+have a ton of
+helpful videos on my channels to assist
+helpful videos on my channels to assist
+helpful videos on my channels to assist
+you with topics you may not know about
+you with topics you may not know about
+you with topics you may not know about
+or understand
+or understand
+or understand
+and i also explain the code as we go i
+and i also explain the code as we go i
+and i also explain the code as we go i
+don't spoon feed it i don't just give
+don't spoon feed it i don't just give
+don't spoon feed it i don't just give
+you lines of code to write
+you lines of code to write
+you lines of code to write
+i actually tell you what's going on and
+i actually tell you what's going on and
+i actually tell you what's going on and
+what each
+what each
+what each
+line does so make sure to check the
+line does so make sure to check the
+line does so make sure to check the
+cards in the top right of your screen
+cards in the top right of your screen
+cards in the top right of your screen
+and
+and
+and
+the links in the description for some
+the links in the description for some
+the links in the description for some
+helpful resources
+helpful resources
+helpful resources
+to help you understand topics you do may
+to help you understand topics you do may
+to help you understand topics you do may
+not know about
+not know about
+not know about
+in this series you'll learn how to make
+in this series you'll learn how to make
+in this series you'll learn how to make
+a real roblox game
+a real roblox game
+a real roblox game
+with object oriented programming and
+with object oriented programming and
+with object oriented programming and
+the component design pattern and you'll
+the component design pattern and you'll
+the component design pattern and you'll
+also get some
+also get some
+also get some
+sensible tips and tricks in regards to
+sensible tips and tricks in regards to
+sensible tips and tricks in regards to
+data saving
+data saving
+data saving
+and other aspects of your roblox games
+and other aspects of your roblox games
+and other aspects of your roblox games
+more specifically in this video we'll do
+more specifically in this video we'll do
+more specifically in this video we'll do
+some basic
+some basic
+some basic
+tycoon setup to make a stable testing
+tycoon setup to make a stable testing
+tycoon setup to make a stable testing
+platform
+platform
+platform
+for future videos where we'll implement
+for future videos where we'll implement
+for future videos where we'll implement
+buttons and droppers
+buttons and droppers
+buttons and droppers
+and all the tycoon things like that
+and all the tycoon things like that
+and all the tycoon things like that
+so if you enjoy this video and enjoy the
+so if you enjoy this video and enjoy the
+so if you enjoy this video and enjoy the
+series make sure to
+series make sure to
+series make sure to
+like the video and subscribe to my
+like the video and subscribe to my
+like the video and subscribe to my
+channel
+channel
+channel
+and join my discord server as well the
+and join my discord server as well the
+and join my discord server as well the
+link is in the description
+link is in the description
+link is in the description
+without further ado let's get started
+so i'm here in a new roblox studio
+so i'm here in a new roblox studio
+so i'm here in a new roblox studio
+baseplate
+baseplate
+baseplate
+with a part that will serve
+with a part that will serve
+with a part that will serve
+as the base for our tycoon model
+as the base for our tycoon model
+as the base for our tycoon model
+and let's make that model so i'm going
+and let's make that model so i'm going
+and let's make that model so i'm going
+to
+to
+to
+hover over my part and hit ctrl g to
+hover over my part and hit ctrl g to
+hover over my part and hit ctrl g to
+make a model
+make a model
+make a model
+which will have the part inside of it
+which will have the part inside of it
+which will have the part inside of it
+i'm going to name this
+i'm going to name this
+i'm going to name this
+model template
+model template
+model template
+as the tycoon template you can name it
+as the tycoon template you can name it
+as the tycoon template you can name it
+whatever you want just make sure to
+whatever you want just make sure to
+whatever you want just make sure to
+change the scripts that we make
+change the scripts that we make
+change the scripts that we make
+down the road to match that name and
+down the road to match that name and
+down the road to match that name and
+then this part
+then this part
+then this part
+i will name it base because it's going
+i will name it base because it's going
+i will name it base because it's going
+to be the base for our entire tycoon
+to be the base for our entire tycoon
+to be the base for our entire tycoon
+make sure to go to your model
+make sure to go to your model
+make sure to go to your model
+select the primary part little box and
+select the primary part little box and
+select the primary part little box and
+then click
+then click
+then click
+your base so that your model's primary
+your base so that your model's primary
+your base so that your model's primary
+part is the base
+part is the base
+part is the base
+that's very important because when we
+that's very important because when we
+that's very important because when we
+want to move it around spawn it in
+want to move it around spawn it in
+want to move it around spawn it in
+whatever we'll need that so now you can
+whatever we'll need that so now you can
+whatever we'll need that so now you can
+take your template model
+take your template model
+take your template model
+and put it into server storage
+and put it into server storage
+and put it into server storage
+so for the initial phase of our tycoon
+so for the initial phase of our tycoon
+so for the initial phase of our tycoon
+we want
+we want
+we want
+to have some quick and rapid testing so
+to have some quick and rapid testing so
+to have some quick and rapid testing so
+we can
+we can
+we can
+make sure everything is working properly
+make sure everything is working properly
+make sure everything is working properly
+and also just know what's happening so
+and also just know what's happening so
+and also just know what's happening so
+the way i want to structure our tycoon
+the way i want to structure our tycoon
+the way i want to structure our tycoon
+is by making a module script that will
+is by making a module script that will
+is by making a module script that will
+have an
+have an
+have an
+object-oriented class in it that will be
+object-oriented class in it that will be
+object-oriented class in it that will be
+required by
+required by
+required by
+a single server script which will for
+a single server script which will for
+a single server script which will for
+right now
+right now
+right now
+assign our tycoon to a player and just
+assign our tycoon to a player and just
+assign our tycoon to a player and just
+make it
+make it
+make it
+spawn in so let's get scripting i'm
+spawn in so let's get scripting i'm
+spawn in so let's get scripting i'm
+going to go into server script service
+going to go into server script service
+going to go into server script service
+and create a module script now this
+and create a module script now this
+and create a module script now this
+module script
+module script
+module script
+will house an object oriented class
+will house an object oriented class
+will house an object oriented class
+if you don't know about that i have a
+if you don't know about that i have a
+if you don't know about that i have a
+video series about it
+video series about it
+video series about it
+linked in the description and in the
+linked in the description and in the
+linked in the description and in the
+card in the top right of your screen
+card in the top right of your screen
+card in the top right of your screen
+so let's make this class first thing i'm
+so let's make this class first thing i'm
+so let's make this class first thing i'm
+going to do is rename this module
+going to do is rename this module
+going to do is rename this module
+to tycoon just to make it look a little
+to tycoon just to make it look a little
+to tycoon just to make it look a little
+better and i'm going to go down to the
+better and i'm going to go down to the
+better and i'm going to go down to the
+bottom
+bottom
+bottom
+rename this to tycoon and then
+rename this to tycoon and then
+rename this to tycoon and then
+underneath the tycoon definition i'm
+underneath the tycoon definition i'm
+underneath the tycoon definition i'm
+going to say tycoon
+going to say tycoon
+going to say tycoon
+dot underscore underscore index
+dot underscore underscore index
+dot underscore underscore index
+equals tycoon make sure the spelling is
+equals tycoon make sure the spelling is
+equals tycoon make sure the spelling is
+correct
+correct
+correct
+because this is very important this is a
+because this is very important this is a
+because this is very important this is a
+meta method
+meta method
+meta method
+for our tycoon that basically says
+for our tycoon that basically says
+for our tycoon that basically says
+whatever
+whatever
+whatever
+the classes like the tables created with
+the classes like the tables created with
+the classes like the tables created with
+this tycoon as a meta table it'll be
+this tycoon as a meta table it'll be
+this tycoon as a meta table it'll be
+able to index
+able to index
+able to index
+all of the functions and properties that
+all of the functions and properties that
+all of the functions and properties that
+it has
+it has
+it has
+for example this function right here
+for example this function right here
+for example this function right here
+tycoon
+tycoon
+tycoon
+dot new and this is responsible for
+dot new and this is responsible for
+dot new and this is responsible for
+creating our tycoon and inside here
+creating our tycoon and inside here
+creating our tycoon and inside here
+we'll say local self equals set meta
+we'll say local self equals set meta
+we'll say local self equals set meta
+table
+and then inside this will put a blank
+and then inside this will put a blank
+and then inside this will put a blank
+curly
+curly
+curly
+bracket which is a table if you don't
+bracket which is a table if you don't
+bracket which is a table if you don't
+know about tables i also have a video on
+know about tables i also have a video on
+know about tables i also have a video on
+that
+that
+that
+and then comma after the blank table
+and then comma after the blank table
+and then comma after the blank table
+we'll just say tycoon so this creates
+we'll just say tycoon so this creates
+we'll just say tycoon so this creates
+a new table with the meta table
+a new table with the meta table
+a new table with the meta table
+set to our tycoon so we can access all
+set to our tycoon so we can access all
+set to our tycoon so we can access all
+the methods
+the methods
+the methods
+inside of it and then at the very bottom
+inside of it and then at the very bottom
+inside of it and then at the very bottom
+of our new we want
+of our new we want
+of our new we want
+to return self and right now
+to return self and right now
+to return self and right now
+all this does is create a basic class
+all this does is create a basic class
+all this does is create a basic class
+but we want to add functionality and the
+but we want to add functionality and the
+but we want to add functionality and the
+functionality will start
+functionality will start
+functionality will start
+in two methods first one is
+in two methods first one is
+in two methods first one is
+function tycoon init
+function tycoon init
+function tycoon init
+and this function will be called at the
+and this function will be called at the
+and this function will be called at the
+same time
+same time
+same time
+as new like after new is called we'll
+as new like after new is called we'll
+as new like after new is called we'll
+call init
+call init
+call init
+but it's separated in a distinct way
+but it's separated in a distinct way
+but it's separated in a distinct way
+while new
+while new
+while new
+will only define properties for our
+will only define properties for our
+will only define properties for our
+tycoon so for example our tycoon will
+tycoon so for example our tycoon will
+tycoon so for example our tycoon will
+have a parameter of the player
+have a parameter of the player
+have a parameter of the player
+that owns a tycoon and in our new
+that owns a tycoon and in our new
+that owns a tycoon and in our new
+function we just say self
+function we just say self
+function we just say self
+dot owners like the player that wins a
+dot owners like the player that wins a
+dot owners like the player that wins a
+tycoon equals the player
+tycoon equals the player
+tycoon equals the player
+so you notice nothing's happening we're
+so you notice nothing's happening we're
+so you notice nothing's happening we're
+just setting self
+just setting self
+just setting self
+dot owner and this will just set the
+dot owner and this will just set the
+dot owner and this will just set the
+table key and when we return it it'll
+table key and when we return it it'll
+table key and when we return it it'll
+keep it there
+keep it there
+keep it there
+and this will just let all of our other
+and this will just let all of our other
+and this will just let all of our other
+functions access whatever is happening
+functions access whatever is happening
+functions access whatever is happening
+but it won't really do anything the
+but it won't really do anything the
+but it won't really do anything the
+indent function will be where we'll have
+indent function will be where we'll have
+indent function will be where we'll have
+all of our meet like where stuff gets
+all of our meet like where stuff gets
+all of our meet like where stuff gets
+called where stuff happens
+called where stuff happens
+called where stuff happens
+and realistically you could put
+and realistically you could put
+and realistically you could put
+everything in the indent function in
+everything in the indent function in
+everything in the indent function in
+the new function but i like separating
+the new function but i like separating
+the new function but i like separating
+it because
+it because
+it because
+it makes it a little more clear to the
+it makes it a little more clear to the
+it makes it a little more clear to the
+reader so if someone's looking at your
+reader so if someone's looking at your
+reader so if someone's looking at your
+code for the first time they'll know
+code for the first time they'll know
+code for the first time they'll know
+okay new is only for definitions
+okay new is only for definitions
+okay new is only for definitions
+init is for all of like the meat that's
+init is for all of like the meat that's
+init is for all of like the meat that's
+happening
+happening
+happening
+and also for later down the line when we
+and also for later down the line when we
+and also for later down the line when we
+create our component system
+create our component system
+create our component system
+all of the components will have new and
+all of the components will have new and
+all of the components will have new and
+init functions and it's good to start
+init functions and it's good to start
+init functions and it's good to start
+now so i'm just gonna leave our init
+now so i'm just gonna leave our init
+now so i'm just gonna leave our init
+function blank
+function blank
+function blank
+actually we can add a print statement
+actually we can add a print statement
+actually we can add a print statement
+here just say print
+here just say print
+here just say print
+tycoon was initiated
+tycoon was initiated
+tycoon was initiated
+then we also want to have another
+then we also want to have another
+then we also want to have another
+function that we won't
+function that we won't
+function that we won't
+use right now but down the line we will
+use right now but down the line we will
+use right now but down the line we will
+definitely need it and that's the
+definitely need it and that's the
+definitely need it and that's the
+destroy
+destroy
+destroy
+function so we're going to do tycoon
+function so we're going to do tycoon
+function so we're going to do tycoon
+destroy
+destroy
+destroy
+that will also do nothing but when a
+that will also do nothing but when a
+that will also do nothing but when a
+player leaves
+player leaves
+player leaves
+this function will get called and we'll
+this function will get called and we'll
+this function will get called and we'll
+define that
+define that
+define that
+in a couple of videos from now but we
+in a couple of videos from now but we
+in a couple of videos from now but we
+need to have this function here just to
+need to have this function here just to
+need to have this function here just to
+remember that it exists
+remember that it exists
+remember that it exists
+and whenever we need something that will
+and whenever we need something that will
+and whenever we need something that will
+get destroyed later we'll add it
+get destroyed later we'll add it
+get destroyed later we'll add it
+to this function just so our game is
+to this function just so our game is
+to this function just so our game is
+clean and neat because if you leave the
+clean and neat because if you leave the
+clean and neat because if you leave the
+tycoon after the player leaves
+tycoon after the player leaves
+tycoon after the player leaves
+it'll get polluted with bunch of like
+it'll get polluted with bunch of like
+it'll get polluted with bunch of like
+parts that aren't doing anything it'll
+parts that aren't doing anything it'll
+parts that aren't doing anything it'll
+make your game laggy and potentially
+make your game laggy and potentially
+make your game laggy and potentially
+buggy or exploitable and you obviously
+buggy or exploitable and you obviously
+buggy or exploitable and you obviously
+do not want that so now we can test
+do not want that so now we can test
+do not want that so now we can test
+our tycoon module script and speaking of
+our tycoon module script and speaking of
+our tycoon module script and speaking of
+that i'm going to rename the module
+that i'm going to rename the module
+that i'm going to rename the module
+script
+script
+script
+to tycoon so in service script service
+to tycoon so in service script service
+to tycoon so in service script service
+i'm going to hit the plus arrow
+i'm going to hit the plus arrow
+i'm going to hit the plus arrow
+and create a script i'm going to rename
+and create a script i'm going to rename
+and create a script i'm going to rename
+the script to
+the script to
+the script to
+server just because it'll be the only
+server just because it'll be the only
+server just because it'll be the only
+server script that we'll have in our
+server script that we'll have in our
+server script that we'll have in our
+game and it just makes the name a little
+game and it just makes the name a little
+game and it just makes the name a little
+more
+more
+more
+noticeable and so i want to get a
+noticeable and so i want to get a
+noticeable and so i want to get a
+reference to our tycoon module by saying
+reference to our tycoon module by saying
+reference to our tycoon module by saying
+local tycoon equals require
+local tycoon equals require
+local tycoon equals require
+script dot parent dot tycoon
+script dot parent dot tycoon
+script dot parent dot tycoon
+and so now we have our tycoon we can
+and so now we have our tycoon we can
+and so now we have our tycoon we can
+create a new one
+create a new one
+create a new one
+and we can do whatever we want and we
+and we can do whatever we want and we
+and we can do whatever we want and we
+want to create a new one when players
+want to create a new one when players
+want to create a new one when players
+join
+join
+join
+and we'll do that by saying game get
+and we'll do that by saying game get
+and we'll do that by saying game get
+service
+service
+service
+players dot player added
+players dot player added
+players dot player added
+connect and then we want to connect a
+connect and then we want to connect a
+connect and then we want to connect a
+function
+function
+function
+with the parameter of a player that
+with the parameter of a player that
+with the parameter of a player that
+joined and then press enter make sure to
+joined and then press enter make sure to
+joined and then press enter make sure to
+have the closing
+have the closing
+have the closing
+parenthesis at the end inside of here we
+parenthesis at the end inside of here we
+parenthesis at the end inside of here we
+want to
+want to
+want to
+say local tycoon lowercase tycoon just
+say local tycoon lowercase tycoon just
+say local tycoon lowercase tycoon just
+to
+to
+to
+add a nice local definition and it will
+add a nice local definition and it will
+add a nice local definition and it will
+be equal to tycoon
+be equal to tycoon
+be equal to tycoon
+dot new and inside the new we'll send in
+dot new and inside the new we'll send in
+dot new and inside the new we'll send in
+the player
+the player
+the player
+that we want the tycoon to be owned by
+that we want the tycoon to be owned by
+that we want the tycoon to be owned by
+and then after we create a new tycoon we
+and then after we create a new tycoon we
+and then after we create a new tycoon we
+want to initiate it by saying tycoon
+want to initiate it by saying tycoon
+want to initiate it by saying tycoon
+init so right now if we were to play
+init so right now if we were to play
+init so right now if we were to play
+this
+this
+this
+you see it says tycoon was initiated
+you see it says tycoon was initiated
+you see it says tycoon was initiated
+that's obviously what we want to happen
+that's obviously what we want to happen
+that's obviously what we want to happen
+but notice how we create a new tycoon it
+but notice how we create a new tycoon it
+but notice how we create a new tycoon it
+returns
+returns
+returns
+self which is a table but init isn't
+self which is a table but init isn't
+self which is a table but init isn't
+itself
+itself
+itself
+it's in the main tycoon and it's
+it's in the main tycoon and it's
+it's in the main tycoon and it's
+still called through the set meta table
+still called through the set meta table
+still called through the set meta table
+in the index relationship which is
+in the index relationship which is
+in the index relationship which is
+pretty cool
+pretty cool
+pretty cool
+it allows you to get really nice classes
+it allows you to get really nice classes
+it allows you to get really nice classes
+in your game
+in your game
+in your game
+so let's make our tycoon class actually
+so let's make our tycoon class actually
+so let's make our tycoon class actually
+spawn in our template
+spawn in our template
+spawn in our template
+from service script service or server
+from service script service or server
+from service script service or server
+storage i should say
+storage i should say
+storage i should say
+and put it in the workspace so at the
+and put it in the workspace so at the
+and put it in the workspace so at the
+very top of our tycoon module script i'm
+very top of our tycoon module script i'm
+very top of our tycoon module script i'm
+going to say local template
+going to say local template
+going to say local template
+equals game
+equals game
+equals game
+get service server
+get service server
+get service server
+storage dot template
+storage dot template
+storage dot template
+and then below that i'm gonna make a
+and then below that i'm gonna make a
+and then below that i'm gonna make a
+nice little convenience function
+nice little convenience function
+nice little convenience function
+and it's going to be a local function
+and it's going to be a local function
+and it's going to be a local function
+keep that in mind it'll say local
+keep that in mind it'll say local
+keep that in mind it'll say local
+function
+new model which will take in the model
+new model which will take in the model
+new model which will take in the model
+that we want to clone
+that we want to clone
+that we want to clone
+and a c frame in which we want to clone
+and a c frame in which we want to clone
+and a c frame in which we want to clone
+it to
+it to
+it to
+and then make sure you have the end at
+and then make sure you have the end at
+and then make sure you have the end at
+the end and then we'll say
+the end and then we'll say
+the end and then we'll say
+local new model
+local new model
+local new model
+equals model clone
+equals model clone
+equals model clone
+and then new model set primary part
+and then new model set primary part
+and then new model set primary part
+c frame to the c frame
+c frame to the c frame
+c frame to the c frame
+and then we'll just say
+new model dot parent equals workspace
+new model dot parent equals workspace
+new model dot parent equals workspace
+and then we'll return the new model and
+and then we'll return the new model and
+and then we'll return the new model and
+this is just a convenience function just
+this is just a convenience function just
+this is just a convenience function just
+to create the part put it wherever you
+to create the part put it wherever you
+to create the part put it wherever you
+want
+want
+want
+and then return it and we'll use that in
+and then return it and we'll use that in
+and then return it and we'll use that in
+our init function so let me delete the
+our init function so let me delete the
+our init function so let me delete the
+print
+print
+print
+and we'll say self adopt model and we're
+and we'll say self adopt model and we're
+and we'll say self adopt model and we're
+using self.model because we'll need to
+using self.model because we'll need to
+using self.model because we'll need to
+use this
+use this
+use this
+model later and let's just like name it
+model later and let's just like name it
+model later and let's just like name it
+a nice little name
+a nice little name
+a nice little name
+and we can access it later and so
+and we can access it later and so
+and we can access it later and so
+self.model will be equal to
+self.model will be equal to
+self.model will be equal to
+new model with the template of the
+new model with the template of the
+new model with the template of the
+template we defined above
+template we defined above
+template we defined above
+and i could just say template clone down
+and i could just say template clone down
+and i could just say template clone down
+here but
+here but
+here but
+this is such a generic function we want
+this is such a generic function we want
+this is such a generic function we want
+to leave it so in case we want to make
+to leave it so in case we want to make
+to leave it so in case we want to make
+another model that's not necessarily a
+another model that's not necessarily a
+another model that's not necessarily a
+template we can do that it's just
+template we can do that it's just
+template we can do that it's just
+easier to keep it this way and add one
+easier to keep it this way and add one
+easier to keep it this way and add one
+extra parameter
+extra parameter
+extra parameter
+then as the theme frame c frame
+then as the theme frame c frame
+then as the theme frame c frame
+parameter i'm just going to say c
+parameter i'm just going to say c
+parameter i'm just going to say c
+frame dot new because for right now it
+frame dot new because for right now it
+frame dot new because for right now it
+doesn't really matter
+doesn't really matter
+doesn't really matter
+where the tycoon spawns we just want it
+where the tycoon spawns we just want it
+where the tycoon spawns we just want it
+to spawn somewhere and by saying see if
+to spawn somewhere and by saying see if
+to spawn somewhere and by saying see if
+you're not new we'll just say c from
+you're not new we'll just say c from
+you're not new we'll just say c from
+that new zero
+that new zero
+that new zero
+one zero so it spawns one stud above the
+one zero so it spawns one stud above the
+one zero so it spawns one stud above the
+origin
+origin
+origin
+which should work fine because later
+which should work fine because later
+which should work fine because later
+we'll implement an actual spawn system
+we'll implement an actual spawn system
+we'll implement an actual spawn system
+but for right now that should work
+but for right now that should work
+but for right now that should work
+totally fine and then
+totally fine and then
+totally fine and then
+since we're creating a model which is
+since we're creating a model which is
+since we're creating a model which is
+you know it's in the workspace it takes
+you know it's in the workspace it takes
+you know it's in the workspace it takes
+up memory it takes up
+up memory it takes up
+up memory it takes up
+rendered distance whatever we need to
+rendered distance whatever we need to
+rendered distance whatever we need to
+destroy it when the tycoon gets
+destroy it when the tycoon gets
+destroy it when the tycoon gets
+destroyed
+destroyed
+destroyed
+so in our destroy function we'll say
+so in our destroy function we'll say
+so in our destroy function we'll say
+self.model destroy
+self.model destroy
+self.model destroy
+there's a lot of destroying going on but
+there's a lot of destroying going on but
+there's a lot of destroying going on but
+you know you need to have it
+you know you need to have it
+you know you need to have it
+so now everything should be good to go
+so now everything should be good to go
+so now everything should be good to go
+let's hit play
+and a tycoon spawns just wherever you
+and a tycoon spawns just wherever you
+and a tycoon spawns just wherever you
+want it
+want it
+want it
+a stud above the base plate which is
+a stud above the base plate which is
+a stud above the base plate which is
+pretty cool and you'll notice that the
+pretty cool and you'll notice that the
+pretty cool and you'll notice that the
+spawn location the default spawn
+spawn location the default spawn
+spawn location the default spawn
+location is underneath the flag here
+location is underneath the flag here
+location is underneath the flag here
+so i'm just going to move it out of the
+so i'm just going to move it out of the
+so i'm just going to move it out of the
+way i don't want it interfering with our
+way i don't want it interfering with our
+way i don't want it interfering with our
+nice
+nice
+nice
+tycoon experience so that's it for
+tycoon experience so that's it for
+tycoon experience so that's it for
+this video when you now have a nice base
+this video when you now have a nice base
+this video when you now have a nice base
+to build off of our next video we'll be
+to build off of our next video we'll be
+to build off of our next video we'll be
+making the component system to handle
+making the component system to handle
+making the component system to handle
+all the parts of our tycoons
+all the parts of our tycoons
+all the parts of our tycoons
+like the buttons the walls
+like the buttons the walls
+like the buttons the walls
+etc and by the way the code will be in
+etc and by the way the code will be in
+etc and by the way the code will be in
+the description
+the description
+the description
+if you want it but i encourage you to
+if you want it but i encourage you to
+if you want it but i encourage you to
+follow this video and write it yourself
+follow this video and write it yourself
+follow this video and write it yourself
+and if you enjoy the video make sure to
+and if you enjoy the video make sure to
+and if you enjoy the video make sure to
+like like the video and subscribe to my
+like like the video and subscribe to my
+like like the video and subscribe to my
+channel but other than that i have been
+channel but other than that i have been
+channel but other than that i have been
+a nice day
+a nice day
+a nice day
+and goodbye
+and goodbye
+and goodbye
+[Music]
+you

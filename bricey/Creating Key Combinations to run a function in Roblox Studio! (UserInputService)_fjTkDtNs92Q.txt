@@ -1,0 +1,905 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i will be showing you how
+in this video i will be showing you how
+in this video i will be showing you how
+to
+to
+to
+bind an action to multiple key presses
+bind an action to multiple key presses
+bind an action to multiple key presses
+so this would be things like ctrl c or
+so this would be things like ctrl c or
+so this would be things like ctrl c or
+ctrl v
+ctrl v
+ctrl v
+where you have to press two buttons at
+where you have to press two buttons at
+where you have to press two buttons at
+the same time in order to get a certain
+the same time in order to get a certain
+the same time in order to get a certain
+action
+action
+action
+like to copy or to paste and i will be
+like to copy or to paste and i will be
+like to copy or to paste and i will be
+making this
+making this
+making this
+inside of roblox studio using lua
+inside of roblox studio using lua
+inside of roblox studio using lua
+and this turns out to be a lot simpler
+and this turns out to be a lot simpler
+and this turns out to be a lot simpler
+than you first might expect
+than you first might expect
+than you first might expect
+so stay tuned to figure out how to do
+so stay tuned to figure out how to do
+so stay tuned to figure out how to do
+this
+this
+this
+and make sure to like and subscribe if
+and make sure to like and subscribe if
+and make sure to like and subscribe if
+you enjoy this video and without further
+you enjoy this video and without further
+you enjoy this video and without further
+ado
+ado
+ado
+let's get right into it
+so the first thing i'm going to do is
+so the first thing i'm going to do is
+so the first thing i'm going to do is
+going to starter player then starter
+going to starter player then starter
+going to starter player then starter
+player scripts
+player scripts
+player scripts
+and create a module script and i'm going
+and create a module script and i'm going
+and create a module script and i'm going
+to name this module script
+to name this module script
+to name this module script
+input so this module script is going to
+input so this module script is going to
+input so this module script is going to
+be responsible for
+be responsible for
+be responsible for
+collecting our player's input and
+collecting our player's input and
+collecting our player's input and
+firing a function for whatever local
+firing a function for whatever local
+firing a function for whatever local
+script requires it when
+script requires it when
+script requires it when
+a certain input requirement is met so
+a certain input requirement is met so
+a certain input requirement is met so
+this could be multiple inputs
+this could be multiple inputs
+this could be multiple inputs
+and that's basically what it's meant for
+and that's basically what it's meant for
+and that's basically what it's meant for
+so on a windows device i could do
+so on a windows device i could do
+so on a windows device i could do
+control c
+control c
+control c
+and control v you have to hold ctrl and
+and control v you have to hold ctrl and
+and control v you have to hold ctrl and
+then press those letters
+then press those letters
+then press those letters
+in order for the action to occur and you
+in order for the action to occur and you
+in order for the action to occur and you
+can also do
+can also do
+can also do
+multiple key presses like control shift
+multiple key presses like control shift
+multiple key presses like control shift
+s
+s
+s
+or something like you know it'll be very
+or something like you know it'll be very
+or something like you know it'll be very
+versatile so i'm going to define my
+versatile so i'm going to define my
+versatile so i'm going to define my
+first variable this is going to be
+first variable this is going to be
+first variable this is going to be
+local user input service and this is the
+local user input service and this is the
+local user input service and this is the
+roblox service
+roblox service
+roblox service
+that gets the input and this service is
+that gets the input and this service is
+that gets the input and this service is
+really convenient i spelled that wrong
+really convenient i spelled that wrong
+really convenient i spelled that wrong
+let's do user input service there we go
+let's do user input service there we go
+let's do user input service there we go
+because it allows you to detect player
+because it allows you to detect player
+because it allows you to detect player
+input and also check
+input and also check
+input and also check
+if a button is being pressed down and
+if a button is being pressed down and
+if a button is being pressed down and
+that's exactly what we want
+that's exactly what we want
+that's exactly what we want
+so i'm going to rename my module
+so i'm going to rename my module
+so i'm going to rename my module
+variable to input just for the sake of
+variable to input just for the sake of
+variable to input just for the sake of
+organization
+organization
+organization
+and i'm going to define a function local
+and i'm going to define a function local
+and i'm going to define a function local
+binds and this will be equal to a blank
+binds and this will be equal to a blank
+binds and this will be equal to a blank
+table so this is a table that's going to
+table so this is a table that's going to
+table so this is a table that's going to
+be storing
+be storing
+be storing
+all of our event connections for
+all of our event connections for
+all of our event connections for
+our input module so just like the
+our input module so just like the
+our input module so just like the
+contacts action service
+contacts action service
+contacts action service
+which can bind and unbind certain
+which can bind and unbind certain
+which can bind and unbind certain
+actions this service will be able to do
+actions this service will be able to do
+actions this service will be able to do
+the exact same
+the exact same
+the exact same
+i say service it's a module script but
+i say service it's a module script but
+i say service it's a module script but
+it could be the equivalent of a service
+it could be the equivalent of a service
+it could be the equivalent of a service
+because you can add whatever functions
+because you can add whatever functions
+because you can add whatever functions
+and whatever that you want
+and whatever that you want
+and whatever that you want
+so our first function that we're going
+so our first function that we're going
+so our first function that we're going
+to create is input
+to create is input
+to create is input
+dot bind key presses
+dot bind key presses
+dot bind key presses
+and this is the big function it's
+and this is the big function it's
+and this is the big function it's
+responsible for
+responsible for
+responsible for
+binding multiple key presses to a single
+binding multiple key presses to a single
+binding multiple key presses to a single
+action
+action
+action
+and we'll need a few parameters first
+and we'll need a few parameters first
+and we'll need a few parameters first
+one's the name this will be
+one's the name this will be
+one's the name this will be
+useful for binding and unbinding then
+useful for binding and unbinding then
+useful for binding and unbinding then
+the callback
+the callback
+the callback
+this is a function that will fire once
+this is a function that will fire once
+this is a function that will fire once
+all the keybinds have been pressed
+all the keybinds have been pressed
+all the keybinds have been pressed
+and then we're going to do three dots
+and then we're going to do three dots
+and then we're going to do three dots
+or ellipses so this parameter basically
+or ellipses so this parameter basically
+or ellipses so this parameter basically
+means
+means
+means
+there's a variable amount of parameters
+there's a variable amount of parameters
+there's a variable amount of parameters
+that will come after this
+ellipses so it's basically just a tuple
+ellipses so it's basically just a tuple
+ellipses so it's basically just a tuple
+which is just like
+which is just like
+which is just like
+a bunch of variables and in order to
+a bunch of variables and in order to
+a bunch of variables and in order to
+actually use it we'll have to
+actually use it we'll have to
+actually use it we'll have to
+pack it so local
+pack it so local
+pack it so local
+keys will be equal to table dot pack
+keys will be equal to table dot pack
+keys will be equal to table dot pack
+dot dot dot so it basically takes these
+dot dot dot so it basically takes these
+dot dot dot so it basically takes these
+ellipses which are which hold
+ellipses which are which hold
+ellipses which are which hold
+whatever amount of variables is after
+whatever amount of variables is after
+whatever amount of variables is after
+this because this will be for our key
+this because this will be for our key
+this because this will be for our key
+codes so
+codes so
+codes so
+we can have two kikos like ctrl c or we
+we can have two kikos like ctrl c or we
+we can have two kikos like ctrl c or we
+can have three key codes like control
+can have three key codes like control
+can have three key codes like control
+then shift then c so it just doesn't
+then shift then c so it just doesn't
+then shift then c so it just doesn't
+matter but we need to store it here
+matter but we need to store it here
+matter but we need to store it here
+and interesting thing is is there's also
+and interesting thing is is there's also
+and interesting thing is is there's also
+a variable
+a variable
+a variable
+in this table called n so keys dot n and
+in this table called n so keys dot n and
+in this table called n so keys dot n and
+we're just going to set this to nil
+we're just going to set this to nil
+we're just going to set this to nil
+because we're not going to need it
+because we're not going to need it
+because we're not going to need it
+it just gives you the amount of
+it just gives you the amount of
+it just gives you the amount of
+variables which it's kind of weird i
+variables which it's kind of weird i
+variables which it's kind of weird i
+don't know why it's there in the first
+don't know why it's there in the first
+don't know why it's there in the first
+place but let's just get rid of it
+place but let's just get rid of it
+place but let's just get rid of it
+so now we're going to set binds
+bracket's name so we're referencing a
+bracket's name so we're referencing a
+bracket's name so we're referencing a
+table
+table
+table
+and we're putting a new input in that
+and we're putting a new input in that
+and we're putting a new input in that
+input a new
+input a new
+input a new
+key and this is our name and it's going
+key and this is our name and it's going
+key and this is our name and it's going
+to be equal to a event connection
+to be equal to a event connection
+to be equal to a event connection
+user input service dot input begin
+user input service dot input begin
+user input service dot input begin
+connect function
+connect function
+connect function
+input there we go so here's our input
+input there we go so here's our input
+input there we go so here's our input
+and this input object has many things it
+and this input object has many things it
+and this input object has many things it
+has the key code
+has the key code
+has the key code
+it has the type
+it has the type
+it has the type
+you can find whatever you want off this
+you can find whatever you want off this
+you can find whatever you want off this
+but for right now we need a key code
+but for right now we need a key code
+but for right now we need a key code
+and because i think some
+and because i think some
+and because i think some
+input and roblox does not have a key
+input and roblox does not have a key
+input and roblox does not have a key
+code and this is just to be safe we're
+code and this is just to be safe we're
+code and this is just to be safe we're
+going to check
+going to check
+going to check
+if input dot key code and
+if input dot key code and
+if input dot key code and
+and then we're going to check if input
+and then we're going to check if input
+and then we're going to check if input
+dot key code is equal
+dot key code is equal
+dot key code is equal
+to keys number
+to keys number
+to keys number
+keys then
+keys then
+keys then
+and end so what this does is it will
+and end so what this does is it will
+and end so what this does is it will
+check
+check
+check
+if there's a key code first of all and
+if there's a key code first of all and
+if there's a key code first of all and
+it'll check if the key code is equal to
+it'll check if the key code is equal to
+it'll check if the key code is equal to
+the last key that we give it
+the last key that we give it
+the last key that we give it
+in this little ellipses up here and the
+in this little ellipses up here and the
+in this little ellipses up here and the
+reason we're doing that
+reason we're doing that
+reason we're doing that
+is you want to have it in chronological
+is you want to have it in chronological
+is you want to have it in chronological
+order on my pc for example i press ctrl
+order on my pc for example i press ctrl
+order on my pc for example i press ctrl
+c to copy something if i press c control
+c to copy something if i press c control
+c to copy something if i press c control
+it won't work
+it won't work
+it won't work
+so we have to do the same idea here and
+so we have to do the same idea here and
+so we have to do the same idea here and
+now what we're going to do
+now what we're going to do
+now what we're going to do
+is we're going to run through for i keys
+is we're going to run through for i keys
+is we're going to run through for i keys
+and pairs keys
+and pairs keys
+and pairs keys
+actually it'd be for i key and pair keys
+actually it'd be for i key and pair keys
+actually it'd be for i key and pair keys
+my bad we're going to check if
+my bad we're going to check if
+my bad we're going to check if
+not user input service
+not user input service
+not user input service
+is key down key
+is key down key
+is key down key
+then return so what this will do
+then return so what this will do
+then return so what this will do
+is it'll say is the key down
+is it'll say is the key down
+is it'll say is the key down
+if the key is not down we're going to
+if the key is not down we're going to
+if the key is not down we're going to
+return the function so the
+return the function so the
+return the function so the
+action will not execute and the reason
+action will not execute and the reason
+action will not execute and the reason
+we're doing this in such a weird fashion
+we're doing this in such a weird fashion
+we're doing this in such a weird fashion
+is because no matter how many keys we
+is because no matter how many keys we
+is because no matter how many keys we
+are if we like if only one key is right
+are if we like if only one key is right
+are if we like if only one key is right
+that's still not good enough we have to
+that's still not good enough we have to
+that's still not good enough we have to
+make sure all of them are right so the
+make sure all of them are right so the
+make sure all of them are right so the
+way i'm doing it here
+way i'm doing it here
+way i'm doing it here
+is if one of them is wrong it's going to
+is if one of them is wrong it's going to
+is if one of them is wrong it's going to
+stop it completely so if none of them is
+stop it completely so if none of them is
+stop it completely so if none of them is
+wrong it's just going to skip
+wrong it's just going to skip
+wrong it's just going to skip
+this for loop and so after we verify
+this for loop and so after we verify
+this for loop and so after we verify
+that all the keys
+that all the keys
+that all the keys
+are pressed we're going to call the
+are pressed we're going to call the
+are pressed we're going to call the
+callback
+callback
+callback
+function and so this will just be the
+function and so this will just be the
+function and so this will just be the
+function that will run
+function that will run
+function that will run
+once all the keys have been pressed
+once all the keys have been pressed
+once all the keys have been pressed
+so let's quickly test that out i'm going
+so let's quickly test that out i'm going
+so let's quickly test that out i'm going
+to create another script in starter
+to create another script in starter
+to create another script in starter
+player scripts
+player scripts
+player scripts
+just a basic local script and we're
+just a basic local script and we're
+just a basic local script and we're
+going to define our
+going to define our
+going to define our
+input module i'm going to say input and
+input module i'm going to say input and
+input module i'm going to say input and
+this will be equal to require
+this will be equal to require
+this will be equal to require
+script dot parent make sure to put your
+script dot parent make sure to put your
+script dot parent make sure to put your
+weight for
+weight for
+weight for
+child because we are in the client and
+child because we are in the client and
+child because we are in the client and
+things take a while to load and we're
+things take a while to load and we're
+things take a while to load and we're
+gonna do input
+gonna do input
+gonna do input
+and then we're gonna do input bind key
+presses
+presses
+presses
+and let's name it test
+and let's name it test
+and let's name it test
+the the callback function we're just
+the the callback function we're just
+the the callback function we're just
+going to define right here
+going to define right here
+going to define right here
+it'll be equal to just print
+it'll be equal to just print
+it'll be equal to just print
+keys or pressed and then let's put
+keys or pressed and then let's put
+keys or pressed and then let's put
+another comma
+another comma
+another comma
+this will be our key code so i'm going
+this will be our key code so i'm going
+this will be our key code so i'm going
+to do enum dot key code
+to do enum dot key code
+to do enum dot key code
+dot left control
+dot left control
+dot left control
+enum.keycode.c so when i press ctrl c
+enum.keycode.c so when i press ctrl c
+enum.keycode.c so when i press ctrl c
+this should say keys were pressed
+this should say keys were pressed
+this should say keys were pressed
+so let's test that out
+so if i press ctrl c you can see keys
+so if i press ctrl c you can see keys
+so if i press ctrl c you can see keys
+were pressed but if i only press c
+were pressed but if i only press c
+were pressed but if i only press c
+nothing happens if i only press control
+nothing happens if i only press control
+nothing happens if i only press control
+nothing happens
+nothing happens
+nothing happens
+so you have to hold both of them and
+so you have to hold both of them and
+so you have to hold both of them and
+also notice you can hold ctrl and then
+also notice you can hold ctrl and then
+also notice you can hold ctrl and then
+press c
+press c
+press c
+but you can't hold c and then press ctrl
+but you can't hold c and then press ctrl
+but you can't hold c and then press ctrl
+so this is exactly how windows machines
+so this is exactly how windows machines
+so this is exactly how windows machines
+work work
+work work
+work work
+i'm not sure if that's your desired
+i'm not sure if that's your desired
+i'm not sure if that's your desired
+behavior but that's the standard
+behavior but that's the standard
+behavior but that's the standard
+behavior for computers and just to show
+behavior for computers and just to show
+behavior for computers and just to show
+you that i can do
+you that i can do
+you that i can do
+multiple key presses i can say in
+multiple key presses i can say in
+multiple key presses i can say in
+between
+between
+between
+c i can just say enum.keycode.shift
+c i can just say enum.keycode.shift
+c i can just say enum.keycode.shift
+left shift there we go so now i should
+left shift there we go so now i should
+left shift there we go so now i should
+have to press ctrl
+have to press ctrl
+have to press ctrl
+shift c i know you can't see my keyboard
+shift c i know you can't see my keyboard
+shift c i know you can't see my keyboard
+but just trust me
+but just trust me
+but just trust me
+i'm pressing it you can hear it
+i'm pressing it you can hear it
+i'm pressing it you can hear it
+obviously but when i press ctrl c
+obviously but when i press ctrl c
+obviously but when i press ctrl c
+nothing happens ctrl shift c keys were
+nothing happens ctrl shift c keys were
+nothing happens ctrl shift c keys were
+pressed and the cool thing about this
+pressed and the cool thing about this
+pressed and the cool thing about this
+sort of system
+sort of system
+sort of system
+is you can press the keys before the
+is you can press the keys before the
+is you can press the keys before the
+last key in whatever order you want so i
+last key in whatever order you want so i
+last key in whatever order you want so i
+can press
+can press
+can press
+shift ctrl c and it'll work and i can
+shift ctrl c and it'll work and i can
+shift ctrl c and it'll work and i can
+press ctrl
+press ctrl
+press ctrl
+shift c and it'll work and that doesn't
+shift c and it'll work and that doesn't
+shift c and it'll work and that doesn't
+really matter and that's also
+really matter and that's also
+really matter and that's also
+the intended behavior of windows i'm
+the intended behavior of windows i'm
+the intended behavior of windows i'm
+pretty sure
+pretty sure
+pretty sure
+as well because all you need is just to
+as well because all you need is just to
+as well because all you need is just to
+wait till the very last input and then
+wait till the very last input and then
+wait till the very last input and then
+you just check if all other inputs were
+you just check if all other inputs were
+you just check if all other inputs were
+pressed at the time
+pressed at the time
+pressed at the time
+and this leads to very efficient code i
+and this leads to very efficient code i
+and this leads to very efficient code i
+mean look at this this is only like 20
+mean look at this this is only like 20
+mean look at this this is only like 20
+20 lines on right now and
+20 lines on right now and
+20 lines on right now and
+it works very very well now there's only
+it works very very well now there's only
+it works very very well now there's only
+one other function we need to define
+one other function we need to define
+one other function we need to define
+and this is input dot
+and this is input dot
+and this is input dot
+unbind key presses
+unbind key presses
+unbind key presses
+and then we're going to take in the name
+and then we're going to take in the name
+and then we're going to take in the name
+so we're going to check if binds
+so we're going to check if binds
+so we're going to check if binds
+name then binds name
+name then binds name
+name then binds name
+disconnect so this is a
+disconnect so this is a
+disconnect so this is a
+event connection right here you can this
+event connection right here you can this
+event connection right here you can this
+is just like a touched event
+is just like a touched event
+is just like a touched event
+or any other event in roblox and we're
+or any other event in roblox and we're
+or any other event in roblox and we're
+storing it
+storing it
+storing it
+in a key in our binds table so when we
+in a key in our binds table so when we
+in a key in our binds table so when we
+want to disconnect
+want to disconnect
+want to disconnect
+our event we just go to the same table
+our event we just go to the same table
+our event we just go to the same table
+go to the same name and disconnect it
+go to the same name and disconnect it
+go to the same name and disconnect it
+this is a super simple bind unbind
+this is a super simple bind unbind
+this is a super simple bind unbind
+system
+system
+system
+just like contact to action service and
+just like contact to action service and
+just like contact to action service and
+it took me like an extra like two lines
+it took me like an extra like two lines
+it took me like an extra like two lines
+to create so
+to create so
+to create so
+if you don't want that then you can keep
+if you don't want that then you can keep
+if you don't want that then you can keep
+it how it is right now but i
+it how it is right now but i
+it how it is right now but i
+personally prefer it this way because it
+personally prefer it this way because it
+personally prefer it this way because it
+gives you a lot more versatility
+gives you a lot more versatility
+gives you a lot more versatility
+so now we're going to do input unbind
+so now we're going to do input unbind
+so now we're going to do input unbind
+key presses
+key presses
+key presses
+and let's say test i capitalize it
+and let's say test i capitalize it
+and let's say test i capitalize it
+there we go lowercase input and we're
+there we go lowercase input and we're
+there we go lowercase input and we're
+gonna wait five seconds let's say
+gonna wait five seconds let's say
+gonna wait five seconds let's say
+so i'm just gonna be spamming my keys
+so i'm just gonna be spamming my keys
+so i'm just gonna be spamming my keys
+until that five second mark
+until that five second mark
+until that five second mark
+so you can see i keep on pressing and
+so you can see i keep on pressing and
+so you can see i keep on pressing and
+after five seconds
+after five seconds
+after five seconds
+it stops i can't press anymore because
+it stops i can't press anymore because
+it stops i can't press anymore because
+it has been unbinded
+it has been unbinded
+it has been unbinded
+which is exactly what we want and that
+which is exactly what we want and that
+which is exactly what we want and that
+is our
+is our
+is our
+module done so that's about it for this
+module done so that's about it for this
+module done so that's about it for this
+video
+video
+video
+so i hope you guys enjoyed i will have a
+so i hope you guys enjoyed i will have a
+so i hope you guys enjoyed i will have a
+paste bin in the description with the
+paste bin in the description with the
+paste bin in the description with the
+code
+code
+code
+if you want it and make sure to join my
+if you want it and make sure to join my
+if you want it and make sure to join my
+discord server link in the description
+discord server link in the description
+discord server link in the description
+because the suggestion for this video
+because the suggestion for this video
+because the suggestion for this video
+actually came from my discord server
+actually came from my discord server
+actually came from my discord server
+it was a really fun project to make it
+it was a really fun project to make it
+it was a really fun project to make it
+was really simple but it's actually
+was really simple but it's actually
+was really simple but it's actually
+very very powerful so if you guys want
+very very powerful so if you guys want
+very very powerful so if you guys want
+to give me some
+to give me some
+to give me some
+quality suggestions just hop into my
+quality suggestions just hop into my
+quality suggestions just hop into my
+discord server
+discord server
+discord server
+and we'll talk and we can do whatever
+and we'll talk and we can do whatever
+and we'll talk and we can do whatever
+but other than that make sure to like
+but other than that make sure to like
+but other than that make sure to like
+and subscribe if you enjoyed
+and subscribe if you enjoyed
+and subscribe if you enjoyed
+comment any questions or suggestions
+comment any questions or suggestions
+comment any questions or suggestions
+down below you can also do that
+down below you can also do that
+down below you can also do that
+and i hope you have a nice day and
+and i hope you have a nice day and
+and i hope you have a nice day and
+[Music]
+goodbye
+you

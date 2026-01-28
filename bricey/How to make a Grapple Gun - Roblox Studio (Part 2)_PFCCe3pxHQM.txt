@@ -1,0 +1,1597 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video we end up finishing
+in this video we end up finishing
+in this video we end up finishing
+our grapple gun and if you haven't seen
+our grapple gun and if you haven't seen
+our grapple gun and if you haven't seen
+the last grapple gun video make sure to
+the last grapple gun video make sure to
+the last grapple gun video make sure to
+check it out
+check it out
+check it out
+in that video we go over the setup and
+in that video we go over the setup and
+in that video we go over the setup and
+the starting
+the starting
+the starting
+things you need to do to make your gun
+things you need to do to make your gun
+things you need to do to make your gun
+work and in this video we finish it we
+work and in this video we finish it we
+work and in this video we finish it we
+do
+do
+do
+all the final scripting and we add some
+all the final scripting and we add some
+all the final scripting and we add some
+little aesthetic features
+little aesthetic features
+little aesthetic features
+like this rope you see here this little
+like this rope you see here this little
+like this rope you see here this little
+rope texture it's pretty cool
+rope texture it's pretty cool
+rope texture it's pretty cool
+so if you guys like this video and if
+so if you guys like this video and if
+so if you guys like this video and if
+you like this series make sure to
+you like this series make sure to
+you like this series make sure to
+like and subscribe and also
+like and subscribe and also
+like and subscribe and also
+comment down below any questions that
+comment down below any questions that
+comment down below any questions that
+you have i also have a discord server in
+you have i also have a discord server in
+you have i also have a discord server in
+the description
+the description
+the description
+where you can join the discussion you
+where you can join the discussion you
+where you can join the discussion you
+can
+can
+can
+ask questions you can suggest video
+ask questions you can suggest video
+ask questions you can suggest video
+ideas and you can just talk to my
+ideas and you can just talk to my
+ideas and you can just talk to my
+community
+community
+community
+so make sure to join that if you haven't
+so make sure to join that if you haven't
+so make sure to join that if you haven't
+but without further ado let's get into
+but without further ado let's get into
+but without further ado let's get into
+the video
+so in the last video we set up our tool
+so in the last video we set up our tool
+so in the last video we set up our tool
+and we did the basic setup for our
+and we did the basic setup for our
+and we did the basic setup for our
+script
+script
+script
+but right now if i run this
+you can see that nothing really happens
+you can see that nothing really happens
+you can see that nothing really happens
+except this print statement
+except this print statement
+except this print statement
+when i click and we actually want to add
+when i click and we actually want to add
+when i click and we actually want to add
+functionality in this video that's what
+functionality in this video that's what
+functionality in this video that's what
+we'll be doing so first off let's go
+we'll be doing so first off let's go
+we'll be doing so first off let's go
+to our tool which it should be located
+to our tool which it should be located
+to our tool which it should be located
+in starter pack
+in starter pack
+in starter pack
+and let's add a bull value to
+and let's add a bull value to
+and let's add a bull value to
+our module and i'm going to name this
+our module and i'm going to name this
+our module and i'm going to name this
+value activated
+value activated
+value activated
+so this is going to be a boolean telling
+so this is going to be a boolean telling
+so this is going to be a boolean telling
+whether or not the grapple gun is
+whether or not the grapple gun is
+whether or not the grapple gun is
+activated
+activated
+activated
+because when the gun is activated we
+because when the gun is activated we
+because when the gun is activated we
+don't want to activate it like while
+don't want to activate it like while
+don't want to activate it like while
+it's activated
+it's activated
+it's activated
+if that makes sense so now in my script
+if that makes sense so now in my script
+if that makes sense so now in my script
+i'm going to
+i'm going to
+i'm going to
+put it in a variable and we're going to
+put it in a variable and we're going to
+put it in a variable and we're going to
+say local activated
+say local activated
+say local activated
+equals script wait
+equals script wait
+equals script wait
+for child activated
+for child activated
+for child activated
+there we go
+there we go
+there we go
+and so now let's go to the very bottom
+and so now let's go to the very bottom
+and so now let's go to the very bottom
+of our script
+of our script
+of our script
+and let's define a function local
+and let's define a function local
+and let's define a function local
+actually won't be a local function it'll
+actually won't be a local function it'll
+actually won't be a local function it'll
+be grapple gun
+be grapple gun
+be grapple gun
+dot is activated and this will just
+dot is activated and this will just
+dot is activated and this will just
+return
+return
+return
+activated dot value so the reason we do
+activated dot value so the reason we do
+activated dot value so the reason we do
+this
+this
+this
+is so that we don't have to like ask for
+is so that we don't have to like ask for
+is so that we don't have to like ask for
+activated dot value
+activated dot value
+activated dot value
+and we don't have to risk changing
+and we don't have to risk changing
+and we don't have to risk changing
+the value when we're just trying to ask
+the value when we're just trying to ask
+the value when we're just trying to ask
+for it
+for it
+for it
+this is good for like bigger projects it
+this is good for like bigger projects it
+this is good for like bigger projects it
+won't really make a difference
+won't really make a difference
+won't really make a difference
+but it just encapsulates our value any
+but it just encapsulates our value any
+but it just encapsulates our value any
+function which is always
+function which is always
+function which is always
+good okay so now let's go set up our
+good okay so now let's go set up our
+good okay so now let's go set up our
+client index function to actually
+client index function to actually
+client index function to actually
+send useful information to the server
+send useful information to the server
+send useful information to the server
+so first before we do anything we want
+so first before we do anything we want
+so first before we do anything we want
+to set our mouse
+to set our mouse
+to set our mouse
+dot target filter equal to
+dot target filter equal to
+dot target filter equal to
+the player dot character the reason
+the player dot character the reason
+the player dot character the reason
+we're doing this is because this will
+we're doing this is because this will
+we're doing this is because this will
+prevent the player from
+prevent the player from
+prevent the player from
+getting hit by our own gun because you
+getting hit by our own gun because you
+getting hit by our own gun because you
+don't want to be able to hit yourself
+don't want to be able to hit yourself
+don't want to be able to hit yourself
+with your own grapple gun and that's
+with your own grapple gun and that's
+with your own grapple gun and that's
+not what we want so now we can check
+not what we want so now we can check
+not what we want so now we can check
+in our activated event we can check if
+grapple gun is activated so if it's not
+grapple gun is activated so if it's not
+grapple gun is activated so if it's not
+activated
+activated
+activated
+and mouse.target then
+and mouse.target then
+and mouse.target then
+and we can put our end down here and so
+and we can put our end down here and so
+and we can put our end down here and so
+what this does is we check if it's not
+what this does is we check if it's not
+what this does is we check if it's not
+activated and
+activated and
+activated and
+we have a target then we want to fire
+we have a target then we want to fire
+we have a target then we want to fire
+the server
+the server
+the server
+and the parameters we'll send are true
+and the parameters we'll send are true
+and the parameters we'll send are true
+and then we want to send
+and then we want to send
+and then we want to send
+the mouse dot hit dot position so this
+the mouse dot hit dot position so this
+the mouse dot hit dot position so this
+is the
+is the
+is the
+position 3d position of our mouse in
+position 3d position of our mouse in
+position 3d position of our mouse in
+space
+space
+space
+and so this will this will fire when our
+and so this will this will fire when our
+and so this will this will fire when our
+grapple gun turns on
+grapple gun turns on
+grapple gun turns on
+and now we want to make something for it
+and now we want to make something for it
+and now we want to make something for it
+turns off so let's just do tool dot
+turns off so let's just do tool dot
+turns off so let's just do tool dot
+deactivated
+connect function and then we can just
+connect function and then we can just
+connect function and then we can just
+say
+say
+say
+message event fire server false
+message event fire server false
+message event fire server false
+so basically we'll fire true when we
+so basically we'll fire true when we
+so basically we'll fire true when we
+want to activate and fire false when we
+want to activate and fire false when we
+want to activate and fire false when we
+want to
+want to
+want to
+deactivate
+and then in our server init function you
+and then in our server init function you
+and then in our server init function you
+can see i already have this parameter
+can see i already have this parameter
+can see i already have this parameter
+this is from some earlier testing
+this is from some earlier testing
+this is from some earlier testing
+so make sure to put this activated
+so make sure to put this activated
+so make sure to put this activated
+parameter let me change this for
+parameter let me change this for
+parameter let me change this for
+there you go we have activated and we
+there you go we have activated and we
+there you go we have activated and we
+have target position as our parameters
+have target position as our parameters
+have target position as our parameters
+sorry i forgot to eliminate this
+sorry i forgot to eliminate this
+sorry i forgot to eliminate this
+from my last test so it's already here
+from my last test so it's already here
+from my last test so it's already here
+but
+but
+but
+for you it should not be here so make
+for you it should not be here so make
+for you it should not be here so make
+sure to have player activated and target
+sure to have player activated and target
+sure to have player activated and target
+position
+position
+position
+so now we want to set activated
+so now we want to set activated
+so now we want to set activated
+dot value equal to underscore activated
+dot value equal to underscore activated
+dot value equal to underscore activated
+this is just a simple naming convention
+this is just a simple naming convention
+this is just a simple naming convention
+so when we send it we can get the
+so when we send it we can get the
+so when we send it we can get the
+activated
+activated
+activated
+value we can just set it there and the
+value we can just set it there and the
+value we can just set it there and the
+reason i'm using a bull value as opposed
+reason i'm using a bull value as opposed
+reason i'm using a bull value as opposed
+to just a boolean in the script is
+to just a boolean in the script is
+to just a boolean in the script is
+because the client and the server can
+because the client and the server can
+because the client and the server can
+see that
+see that
+see that
+the client and the server can't see a
+the client and the server can't see a
+the client and the server can't see a
+variable that's why i'm doing that
+variable that's why i'm doing that
+variable that's why i'm doing that
+so now we can just add a little if
+so now we can just add a little if
+so now we can just add a little if
+statement that says if
+statement that says if
+statement that says if
+grapple gun is activated
+grapple gun is activated
+grapple gun is activated
+then and then else
+then and then else
+then and then else
+we can do something else so basically
+we can do something else so basically
+we can do something else so basically
+what we want to do here is when the
+what we want to do here is when the
+what we want to do here is when the
+grapple gun is activated we want to fire
+grapple gun is activated we want to fire
+grapple gun is activated we want to fire
+it
+it
+it
+if it's deactivated then we want to stop
+if it's deactivated then we want to stop
+if it's deactivated then we want to stop
+it from
+it from
+it from
+firing and we'll put this functionality
+firing and we'll put this functionality
+firing and we'll put this functionality
+in by using two more functions that
+in by using two more functions that
+in by using two more functions that
+we'll define at the bottom
+we'll define at the bottom
+we'll define at the bottom
+first of which is grapple gun
+first of which is grapple gun
+first of which is grapple gun
+dot fire and next is
+dot fire and next is
+dot fire and next is
+grapple gun dot reset
+grapple gun dot reset
+grapple gun dot reset
+so let's just test to make sure
+so let's just test to make sure
+so let's just test to make sure
+everything's working we can do a print
+everything's working we can do a print
+everything's working we can do a print
+statement
+statement
+statement
+print fired when we call this function
+print fired when we call this function
+print fired when we call this function
+and then print reset when we call
+and then print reset when we call
+and then print reset when we call
+reset and then we can go to our server
+reset and then we can go to our server
+reset and then we can go to our server
+init
+init
+init
+up here let me just zoom in a little bit
+up here let me just zoom in a little bit
+up here let me just zoom in a little bit
+more and you can put in
+more and you can put in
+more and you can put in
+grapple gun dot fire up here and then
+grapple gun dot fire up here and then
+grapple gun dot fire up here and then
+grapple gun dot reset down below so when
+grapple gun dot reset down below so when
+grapple gun dot reset down below so when
+the grapple gun is activated we want to
+the grapple gun is activated we want to
+the grapple gun is activated we want to
+fire it when it's not activated we want
+fire it when it's not activated we want
+fire it when it's not activated we want
+to reset it
+to reset it
+to reset it
+so we run this
+we pull out our tool we click you can
+we pull out our tool we click you can
+we pull out our tool we click you can
+see it says fired and then once i
+see it says fired and then once i
+see it says fired and then once i
+release my mouse
+release my mouse
+release my mouse
+it says reset and there you go
+it says reset and there you go
+it says reset and there you go
+and you'll notice when i
+and you'll notice when i
+and you'll notice when i
+fire it and then i pull out my tool it
+fire it and then i pull out my tool it
+fire it and then i pull out my tool it
+does not say reset
+does not say reset
+does not say reset
+that's a problem so the way we fix that
+that's a problem so the way we fix that
+that's a problem so the way we fix that
+is by going up to
+is by going up to
+is by going up to
+tool.deactivated and below it we can
+tool.deactivated and below it we can
+tool.deactivated and below it we can
+just say tool dot unequipped
+just say tool dot unequipped
+just say tool dot unequipped
+connect function
+connect function
+connect function
+message event fire server false so
+message event fire server false so
+message event fire server false so
+we make these two statements identical
+we make these two statements identical
+we make these two statements identical
+so that whenever we unequip it it stops
+so that whenever we unequip it it stops
+so that whenever we unequip it it stops
+it from firing as well because you don't
+it from firing as well because you don't
+it from firing as well because you don't
+want to be
+want to be
+want to be
+able to fire your gun while the tool is
+able to fire your gun while the tool is
+able to fire your gun while the tool is
+not activated
+not activated
+not activated
+so our fire and reset functions are all
+so our fire and reset functions are all
+so our fire and reset functions are all
+set up
+set up
+set up
+now we can implement the functionality
+now we can implement the functionality
+now we can implement the functionality
+for them so in my fire
+for them so in my fire
+for them so in my fire
+function call i'm going to give it a
+function call i'm going to give it a
+function call i'm going to give it a
+parameter which is target position
+parameter which is target position
+parameter which is target position
+then i'm going to go down to the did i
+then i'm going to go down to the did i
+then i'm going to go down to the did i
+spell it wrong
+spell it wrong
+spell it wrong
+there you go it's just a lual thing so
+there you go it's just a lual thing so
+there you go it's just a lual thing so
+we have target position down here it
+we have target position down here it
+we have target position down here it
+should resolve that just making sure
+should resolve that just making sure
+should resolve that just making sure
+there we go
+there we go
+there we go
+that's a cool feature it's just kind of
+that's a cool feature it's just kind of
+that's a cool feature it's just kind of
+weird
+weird
+weird
+so now when we fire our gun we want to
+so now when we fire our gun we want to
+so now when we fire our gun we want to
+do
+do
+do
+a few things firstly let's get our
+a few things firstly let's get our
+a few things firstly let's get our
+initial position
+initial position
+initial position
+local initial pose equals
+local initial pose equals
+local initial pose equals
+hook reference dot position this is the
+hook reference dot position this is the
+hook reference dot position this is the
+position that we start at
+position that we start at
+position that we start at
+we're going to get local distance equals
+we're going to get local distance equals
+we're going to get local distance equals
+target position minus
+target position minus
+target position minus
+initial position dot magnitude
+initial position dot magnitude
+initial position dot magnitude
+this is the distance from our mouse
+this is the distance from our mouse
+this is the distance from our mouse
+target to
+target to
+target to
+our gun
+our gun
+our gun
+and then now we have to set hook weld
+and then now we have to set hook weld
+and then now we have to set hook weld
+dot enabled equal to false
+dot enabled equal to false
+dot enabled equal to false
+and then hook dot anchored
+and then hook dot anchored
+and then hook dot anchored
+equal to true so you'll notice we're
+equal to true so you'll notice we're
+equal to true so you'll notice we're
+going to disable the weld and we're
+going to disable the weld and we're
+going to disable the weld and we're
+going to anchor a hook
+going to anchor a hook
+going to anchor a hook
+and this hook anchored statement
+and this hook anchored statement
+and this hook anchored statement
+basically means that our grapple gun
+basically means that our grapple gun
+basically means that our grapple gun
+will only work against static objects so
+will only work against static objects so
+will only work against static objects so
+if you grapple another player
+if you grapple another player
+if you grapple another player
+it will not take you with them i could
+it will not take you with them i could
+it will not take you with them i could
+implement that if you added a weld
+implement that if you added a weld
+implement that if you added a weld
+system
+system
+system
+but that's a little too complex for this
+but that's a little too complex for this
+but that's a little too complex for this
+video i'm going to keep it simple
+video i'm going to keep it simple
+video i'm going to keep it simple
+and keep it with static objects and so
+and keep it with static objects and so
+and keep it with static objects and so
+now
+now
+now
+we're going to set the hook dot position
+we're going to set the hook dot position
+we're going to set the hook dot position
+equal to our target position
+equal to our target position
+equal to our target position
+and then set our spring dot
+and then set our spring dot
+and then set our spring dot
+free length equal to the
+free length equal to the
+free length equal to the
+distance so this is just primes our
+distance so this is just primes our
+distance so this is just primes our
+spring it's ready to
+spring it's ready to
+spring it's ready to
+reel us in and we'll do that by tweens
+reel us in and we'll do that by tweens
+reel us in and we'll do that by tweens
+in just a sec but let's just
+in just a sec but let's just
+in just a sec but let's just
+test this out but you'd think this would
+test this out but you'd think this would
+test this out but you'd think this would
+work as is
+work as is
+work as is
+for some reason unanchoring
+for some reason unanchoring
+for some reason unanchoring
+or anchoring and disabling the weld
+or anchoring and disabling the weld
+or anchoring and disabling the weld
+screws up with a position i don't really
+screws up with a position i don't really
+screws up with a position i don't really
+know
+know
+know
+how so the way you fix that is by adding
+how so the way you fix that is by adding
+how so the way you fix that is by adding
+just a weight statement here
+just a weight statement here
+just a weight statement here
+you can play around this yourself but i
+you can play around this yourself but i
+you can play around this yourself but i
+had a
+had a
+had a
+lot of struggles trying to fix this
+lot of struggles trying to fix this
+lot of struggles trying to fix this
+without the weight statement i don't
+without the weight statement i don't
+without the weight statement i don't
+know why you need it
+know why you need it
+know why you need it
+but you do apparently so now let's test
+but you do apparently so now let's test
+but you do apparently so now let's test
+it out so if we pull it out
+it out so if we pull it out
+it out so if we pull it out
+and we click you can see that wherever
+and we click you can see that wherever
+and we click you can see that wherever
+we click
+we click
+we click
+our hook goes to which is exactly what
+our hook goes to which is exactly what
+our hook goes to which is exactly what
+we want
+we want
+we want
+and you can see how the spring is
+and you can see how the spring is
+and you can see how the spring is
+following it so we're actually
+following it so we're actually
+following it so we're actually
+pretty close to being done all we need
+pretty close to being done all we need
+pretty close to being done all we need
+to do is reel in
+to do is reel in
+to do is reel in
+our spring so let me go back to
+our spring so let me go back to
+our spring so let me go back to
+the script and in order to do that we'll
+the script and in order to do that we'll
+the script and in order to do that we'll
+be using a tween so let's go to the very
+be using a tween so let's go to the very
+be using a tween so let's go to the very
+top of our script
+top of our script
+top of our script
+define local tween service
+define local tween service
+define local tween service
+or equal to game get service
+or equal to game get service
+or equal to game get service
+tween service there we go so now we have
+tween service there we go so now we have
+tween service there we go so now we have
+our tween service
+our tween service
+our tween service
+i'm going down here we go we're on fire
+i'm going down here we go we're on fire
+i'm going down here we go we're on fire
+we can define our info our tween info
+we can define our info our tween info
+we can define our info our tween info
+and this will be twin info dot new
+and this will be twin info dot new
+and this will be twin info dot new
+and we're going to use distance divided
+and we're going to use distance divided
+and we're going to use distance divided
+by 100 for our time
+by 100 for our time
+by 100 for our time
+so this basically means the farther away
+so this basically means the farther away
+so this basically means the farther away
+you click
+you click
+you click
+the longer the distance will be so our
+the longer the distance will be so our
+the longer the distance will be so our
+time will be scaled
+time will be scaled
+time will be scaled
+depending on how far away so like it'll
+depending on how far away so like it'll
+depending on how far away so like it'll
+take the same amount of time to get from
+take the same amount of time to get from
+take the same amount of time to get from
+a place that's one stud away as a
+a place that's one stud away as a
+a place that's one stud away as a
+hundred steps away and that's exactly
+hundred steps away and that's exactly
+hundred steps away and that's exactly
+what you actually it won't take the same
+what you actually it won't take the same
+what you actually it won't take the same
+amount of time it'll take a different
+amount of time it'll take a different
+amount of time it'll take a different
+amount of time because that's how it
+amount of time because that's how it
+amount of time because that's how it
+would work in real life
+would work in real life
+would work in real life
+and if i just lift it as a constant like
+and if i just lift it as a constant like
+and if i just lift it as a constant like
+one you'd go super fast if it's super
+one you'd go super fast if it's super
+one you'd go super fast if it's super
+far away and you go slow if it's close
+far away and you go slow if it's close
+far away and you go slow if it's close
+by
+by
+by
+so that's why i'm using distance and you
+so that's why i'm using distance and you
+so that's why i'm using distance and you
+can divide it by whatever value you want
+can divide it by whatever value you want
+can divide it by whatever value you want
+a 100 seems good
+a 100 seems good
+a 100 seems good
+for me so i'm just going to leave it
+for me so i'm just going to leave it
+for me so i'm just going to leave it
+like that and then for the easing style
+like that and then for the easing style
+like that and then for the easing style
+we're going to do
+we're going to do
+we're going to do
+m.easing style.linear and you don't
+m.easing style.linear and you don't
+m.easing style.linear and you don't
+really need to do anything else
+really need to do anything else
+really need to do anything else
+you could add other things if you want
+you could add other things if you want
+you could add other things if you want
+but this is all i really want
+but this is all i really want
+but this is all i really want
+now i can make my between so local
+now i can make my between so local
+now i can make my between so local
+tween equals tween service
+tween equals tween service
+tween equals tween service
+create and we're gonna send in our
+create and we're gonna send in our
+create and we're gonna send in our
+spring
+spring
+spring
+we're gonna send in our info and then
+we're gonna send in our info and then
+we're gonna send in our info and then
+we're going to make a table this is our
+we're going to make a table this is our
+we're going to make a table this is our
+properties table
+properties table
+properties table
+if you don't know how tweens work i have
+if you don't know how tweens work i have
+if you don't know how tweens work i have
+a video about that i will link it
+a video about that i will link it
+a video about that i will link it
+right now and we have our free length
+right now and we have our free length
+right now and we have our free length
+we'll set equal to one so we set our
+we'll set equal to one so we set our
+we'll set equal to one so we set our
+free length to distance then we want to
+free length to distance then we want to
+free length to distance then we want to
+tween our
+tween our
+tween our
+free length to one so it'll basically
+free length to one so it'll basically
+free length to one so it'll basically
+just reel us in like a grapple gun
+just reel us in like a grapple gun
+just reel us in like a grapple gun
+should do so i'm going to call tween
+should do so i'm going to call tween
+should do so i'm going to call tween
+play there we go in order to test this
+play there we go in order to test this
+play there we go in order to test this
+out a little bit better i'm going to
+out a little bit better i'm going to
+out a little bit better i'm going to
+create
+create
+create
+a part let me scale it up real quick
+a part let me scale it up real quick
+a part let me scale it up real quick
+here we go this is my part this will be
+here we go this is my part this will be
+here we go this is my part this will be
+our nice little test part that we can
+our nice little test part that we can
+our nice little test part that we can
+grapple to
+grapple to
+grapple to
+i'll make a few more i need to make sure
+i'll make a few more i need to make sure
+i'll make a few more i need to make sure
+these are anchored whoops
+these are anchored whoops
+these are anchored whoops
+here we go let me enter that and i'll
+here we go let me enter that and i'll
+here we go let me enter that and i'll
+make another one just for good measure
+make another one just for good measure
+make another one just for good measure
+there we go
+there we go
+there we go
+so these parts should help us test this
+so these parts should help us test this
+so these parts should help us test this
+so now you can see when i
+so now you can see when i
+so now you can see when i
+grapple it pushes me towards it the
+grapple it pushes me towards it the
+grapple it pushes me towards it the
+problem is
+problem is
+problem is
+is when we grapple like on the ground
+is when we grapple like on the ground
+is when we grapple like on the ground
+like this
+like this
+like this
+our character is giving us a lot of
+our character is giving us a lot of
+our character is giving us a lot of
+friction and that's because
+friction and that's because
+friction and that's because
+like the humanoids kind of weird like
+like the humanoids kind of weird like
+like the humanoids kind of weird like
+that and it's physics kind of counteract
+that and it's physics kind of counteract
+that and it's physics kind of counteract
+your physics
+your physics
+your physics
+sometimes so we can fix that in a few
+sometimes so we can fix that in a few
+sometimes so we can fix that in a few
+ways but we'll get to that in a just a
+ways but we'll get to that in a just a
+ways but we'll get to that in a just a
+little bit
+little bit
+little bit
+now we have to add a reset to our
+now we have to add a reset to our
+now we have to add a reset to our
+grapple gun and the way we're going to
+grapple gun and the way we're going to
+grapple gun and the way we're going to
+do that is we're going to first
+do that is we're going to first
+do that is we're going to first
+add a variable at the very top i'm going
+add a variable at the very top i'm going
+add a variable at the very top i'm going
+to name this variable
+to name this variable
+to name this variable
+local current tween and set it equal to
+local current tween and set it equal to
+local current tween and set it equal to
+nil
+nil
+nil
+and go to the bottom where we set tween
+and go to the bottom where we set tween
+and go to the bottom where we set tween
+play we want to set
+play we want to set
+play we want to set
+current twin equal to tween
+current twin equal to tween
+current twin equal to tween
+the reason we're doing this is so in our
+the reason we're doing this is so in our
+the reason we're doing this is so in our
+reset function we can cancel this tween
+reset function we can cancel this tween
+reset function we can cancel this tween
+if it's happening
+if it's happening
+if it's happening
+because we don't want it to be tweening
+because we don't want it to be tweening
+because we don't want it to be tweening
+while we're trying to reset everything
+while we're trying to reset everything
+while we're trying to reset everything
+about our
+about our
+about our
+gun so we're going to say if current
+gun so we're going to say if current
+gun so we're going to say if current
+tween
+tween
+tween
+then current tween
+then current tween
+then current tween
+cancel this will cancel the tween from
+cancel this will cancel the tween from
+cancel this will cancel the tween from
+playing which is
+playing which is
+playing which is
+really nice it's what we want to do now
+really nice it's what we want to do now
+really nice it's what we want to do now
+we can do hook dot
+we can do hook dot
+we can do hook dot
+c frame equals hook
+c frame equals hook
+c frame equals hook
+reference dot c
+reference dot c
+reference dot c
+frame so let's just set our hook back to
+frame so let's just set our hook back to
+frame so let's just set our hook back to
+its default position
+its default position
+its default position
+and then we can set hook weld dot
+and then we can set hook weld dot
+and then we can set hook weld dot
+enabled equal to true
+enabled equal to true
+enabled equal to true
+and then a hook dot anchored
+and then a hook dot anchored
+and then a hook dot anchored
+equal to false and then spring
+equal to false and then spring
+equal to false and then spring
+dot free length equal to one so this
+dot free length equal to one so this
+dot free length equal to one so this
+basically just resets everything back to
+basically just resets everything back to
+basically just resets everything back to
+their default values that we defined
+their default values that we defined
+their default values that we defined
+in our explorer so if you were to run
+in our explorer so if you were to run
+in our explorer so if you were to run
+this
+you can see that if i you know jump and
+you can see that if i you know jump and
+you can see that if i you know jump and
+i grapple to it
+i grapple to it
+i grapple to it
+there we go and i let go it resets
+there we go and i let go it resets
+there we go and i let go it resets
+which is pretty nice so right now our
+which is pretty nice so right now our
+which is pretty nice so right now our
+spring is kind of weak so you can edit
+spring is kind of weak so you can edit
+spring is kind of weak so you can edit
+the values if you want i'm going to go
+the values if you want i'm going to go
+the values if you want i'm going to go
+back and i'm going to increase
+back and i'm going to increase
+back and i'm going to increase
+my stiffness of my spring see if this is
+my stiffness of my spring see if this is
+my stiffness of my spring see if this is
+a thousand right now that's not really
+a thousand right now that's not really
+a thousand right now that's not really
+too much
+too much
+too much
+let's do like 2 000 let's just see how
+let's do like 2 000 let's just see how
+let's do like 2 000 let's just see how
+that works you can play around with
+that works you can play around with
+that works you can play around with
+these values
+these values
+these values
+to get the most optimal result with your
+to get the most optimal result with your
+to get the most optimal result with your
+spring
+spring
+spring
+you can see that's a lot better i kind
+you can see that's a lot better i kind
+you can see that's a lot better i kind
+of zoom towards the part
+of zoom towards the part
+of zoom towards the part
+but you're not getting the sort of like
+but you're not getting the sort of like
+but you're not getting the sort of like
+flips and stuff that i got
+flips and stuff that i got
+flips and stuff that i got
+in my first clips at the beginning of
+in my first clips at the beginning of
+in my first clips at the beginning of
+the video
+the video
+the video
+so the way you do that is by editing the
+so the way you do that is by editing the
+so the way you do that is by editing the
+humanoid state
+humanoid state
+humanoid state
+so i'm going to go to the very top and
+so i'm going to go to the very top and
+so i'm going to go to the very top and
+we're going to make a separate
+we're going to make a separate
+we're going to make a separate
+function and this function is going to
+function and this function is going to
+function and this function is going to
+be named
+be named
+be named
+local function toggle
+local function toggle
+local function toggle
+humanoid grapple
+humanoid grapple
+humanoid grapple
+state and then we're going to get a
+state and then we're going to get a
+state and then we're going to get a
+value which is active
+value which is active
+value which is active
+so we're going to say local humanoid
+so we're going to say local humanoid
+so we're going to say local humanoid
+equals
+equals
+equals
+player.character and player.character
+player.character and player.character
+player.character and player.character
+find first child
+find first child
+find first child
+humanoid there we go so this is
+humanoid there we go so this is
+humanoid there we go so this is
+basically checking if our
+basically checking if our
+basically checking if our
+player.character
+player.character
+player.character
+and so if we have our player.character
+and so if we have our player.character
+and so if we have our player.character
+then we get the humanoid now i have to
+then we get the humanoid now i have to
+then we get the humanoid now i have to
+check if the humanoid
+check if the humanoid
+check if the humanoid
+then we can
+do stuff and what we're going to do here
+do stuff and what we're going to do here
+do stuff and what we're going to do here
+is we're going to check if active
+is we're going to check if active
+is we're going to check if active
+then and then we're going to do an else
+then and then we're going to do an else
+then and then we're going to do an else
+here so
+here so
+here so
+if we want to toggle the grapple state
+if we want to toggle the grapple state
+if we want to toggle the grapple state
+so this can be our humanoid while it's
+so this can be our humanoid while it's
+so this can be our humanoid while it's
+grappling
+grappling
+grappling
+we're going to set humanoid change state
+we're going to set humanoid change state
+we're going to set humanoid change state
+to enum dot humanoid state type physics
+to enum dot humanoid state type physics
+to enum dot humanoid state type physics
+so this line right here is super super
+so this line right here is super super
+so this line right here is super super
+useful whenever you're dealing with like
+useful whenever you're dealing with like
+useful whenever you're dealing with like
+anything with the human life like right
+anything with the human life like right
+anything with the human life like right
+now i'm making
+now i'm making
+now i'm making
+like a jet pack and i needed to use this
+like a jet pack and i needed to use this
+like a jet pack and i needed to use this
+so my humanoid doesn't like
+so my humanoid doesn't like
+so my humanoid doesn't like
+automatically rotate it doesn't stay
+automatically rotate it doesn't stay
+automatically rotate it doesn't stay
+upright
+upright
+upright
+so you this line is really useful
+so you this line is really useful
+so you this line is really useful
+because it lets the humanoid get
+because it lets the humanoid get
+because it lets the humanoid get
+hit by physics physics just work on it
+hit by physics physics just work on it
+hit by physics physics just work on it
+and it won't automatically
+and it won't automatically
+and it won't automatically
+get out of physics like when you land on
+get out of physics like when you land on
+get out of physics like when you land on
+the ground it won't like make you come
+the ground it won't like make you come
+the ground it won't like make you come
+back up like
+back up like
+back up like
+ragdoll or whatever so that's really
+ragdoll or whatever so that's really
+ragdoll or whatever so that's really
+useful
+useful
+useful
+and we can also set humanoid set
+and we can also set humanoid set
+and we can also set humanoid set
+state enabled enum
+state enabled enum
+state enabled enum
+dot humanoid state type dot running
+dot humanoid state type dot running
+dot humanoid state type dot running
+we're gonna set this to full so
+we're gonna set this to full so
+we're gonna set this to full so
+because when you're running on the
+because when you're running on the
+because when you're running on the
+ground and you grapple sometimes it
+ground and you grapple sometimes it
+ground and you grapple sometimes it
+keeps you in the animation it looks
+keeps you in the animation it looks
+keeps you in the animation it looks
+really stupid
+really stupid
+really stupid
+and now we can basically copy these two
+and now we can basically copy these two
+and now we can basically copy these two
+lines
+lines
+lines
+then we can paste them down here and
+then we can paste them down here and
+then we can paste them down here and
+then but instead of running to false we
+then but instead of running to false we
+then but instead of running to false we
+set running to true
+set running to true
+set running to true
+and instead of physics we set this to
+and instead of physics we set this to
+and instead of physics we set this to
+getting
+getting
+getting
+up so this allows you to ragdoll when
+up so this allows you to ragdoll when
+up so this allows you to ragdoll when
+you're grappling and it allows you to
+you're grappling and it allows you to
+you're grappling and it allows you to
+instantly stand up when you're done so
+instantly stand up when you're done so
+instantly stand up when you're done so
+you can hit like sick tricks
+you can hit like sick tricks
+you can hit like sick tricks
+and you put these lines in
+and you put these lines in
+and you put these lines in
+our activated deactivated and unequipped
+our activated deactivated and unequipped
+our activated deactivated and unequipped
+code blocks
+code blocks
+code blocks
+so below the message event i'm going to
+so below the message event i'm going to
+so below the message event i'm going to
+do toggle humanoid grapple state
+do toggle humanoid grapple state
+do toggle humanoid grapple state
+with a value of true i'm just going to
+with a value of true i'm just going to
+with a value of true i'm just going to
+copy this using ctrl c
+copy this using ctrl c
+copy this using ctrl c
+go down here paste it here put in false
+paste it here put in false
+paste it here put in false
+paste it here put in false
+there we go so now if we were to run
+there we go so now if we were to run
+there we go so now if we were to run
+this
+you can see when we grapple
+you can see when we grapple
+you can see when we grapple
+i you actually get some reaction so if i
+i you actually get some reaction so if i
+i you actually get some reaction so if i
+grapple the edge of this
+grapple the edge of this
+grapple the edge of this
+you can see i flip over and i can land
+you can see i flip over and i can land
+you can see i flip over and i can land
+back up let me see if i can actually hit
+back up let me see if i can actually hit
+back up let me see if i can actually hit
+it
+it
+it
+just give me a sec you can hit some sick
+just give me a sec you can hit some sick
+just give me a sec you can hit some sick
+stuff using this
+stuff using this
+stuff using this
+if i can actually do it apparently today
+if i can actually do it apparently today
+if i can actually do it apparently today
+i can't
+but you can see the potential here one
+but you can see the potential here one
+but you can see the potential here one
+more thing
+more thing
+more thing
+you may notice that the spring is kind
+you may notice that the spring is kind
+you may notice that the spring is kind
+of ugly
+of ugly
+of ugly
+so what you can do in order to make it
+so what you can do in order to make it
+so what you can do in order to make it
+look nice like an actual rope
+look nice like an actual rope
+look nice like an actual rope
+since i'm not using a rope i have to use
+since i'm not using a rope i have to use
+since i'm not using a rope i have to use
+something else i'm going to set spring
+something else i'm going to set spring
+something else i'm going to set spring
+dot visible to false
+dot visible to false
+dot visible to false
+and the editor then go to my base and
+and the editor then go to my base and
+and the editor then go to my base and
+we're going to add a
+we're going to add a
+we're going to add a
+beam and this beam its attachment zero
+beam and this beam its attachment zero
+beam and this beam its attachment zero
+is going to be attachment zero its
+is going to be attachment zero its
+is going to be attachment zero its
+attachment one is going to be attachment
+attachment one is going to be attachment
+attachment one is going to be attachment
+one and you can make it face camera you
+one and you can make it face camera you
+one and you can make it face camera you
+can do whatever you want i'm gonna set
+can do whatever you want i'm gonna set
+can do whatever you want i'm gonna set
+the width to like
+the width to like
+the width to like
+point one we'll see how that looks with
+point one we'll see how that looks with
+point one we'll see how that looks with
+2.1
+and this should look sort of like a rope
+and this should look sort of like a rope
+and this should look sort of like a rope
+so let me just
+so let me just
+so let me just
+turn it to a nice
+brown color there we go
+brown color there we go
+brown color there we go
+that's a good looking brown you can set
+that's a good looking brown you can set
+that's a good looking brown you can set
+light influence to zero
+light influence to zero
+light influence to zero
+and transparency to zero
+so now if we run this it should be
+so now if we run this it should be
+so now if we run this it should be
+connected
+and you can see it actually looks like a
+and you can see it actually looks like a
+and you can see it actually looks like a
+rope which is kind of cool
+and yeah and there you go so that's
+and yeah and there you go so that's
+and yeah and there you go so that's
+about it
+about it
+about it
+for this video i hope you guys enjoyed
+for this video i hope you guys enjoyed
+for this video i hope you guys enjoyed
+this is a really sick project
+this is a really sick project
+this is a really sick project
+i'm pretty glad i created it and i
+i'm pretty glad i created it and i
+i'm pretty glad i created it and i
+really hope
+really hope
+really hope
+you guys enjoyed so make sure to like
+you guys enjoyed so make sure to like
+you guys enjoyed so make sure to like
+and subscribe
+and subscribe
+and subscribe
+if you learned something out of this
+if you learned something out of this
+if you learned something out of this
+video and if you want to see more
+video and if you want to see more
+video and if you want to see more
+content
+content
+content
+like this and i will have a
+like this and i will have a
+like this and i will have a
+model download in the description for
+model download in the description for
+model download in the description for
+anyone who wants it
+anyone who wants it
+anyone who wants it
+but you really should learn this stuff
+but you really should learn this stuff
+but you really should learn this stuff
+and go with it
+and go with it
+and go with it
+through it with me because you can learn
+through it with me because you can learn
+through it with me because you can learn
+a lot from making something like this
+a lot from making something like this
+a lot from making something like this
+it's
+it's
+it's
+it's really fun to play around with and
+it's really fun to play around with and
+it's really fun to play around with and
+you guys are free to implement this in
+you guys are free to implement this in
+you guys are free to implement this in
+your games wherever you would like
+your games wherever you would like
+your games wherever you would like
+so i hope you guys have a nice day and
+goodbye
+[Music]
+[Music]
+[Music]
+you

@@ -1,0 +1,2621 @@
+have you ever wanted to make sick
+have you ever wanted to make sick
+have you ever wanted to make sick
+camera cut scenes
+camera cut scenes
+camera cut scenes
+or maybe make like a road making plug-in
+or maybe make like a road making plug-in
+or maybe make like a road making plug-in
+or something you can do all of that with
+or something you can do all of that with
+or something you can do all of that with
+bezier curves also known as splines
+bezier curves also known as splines
+bezier curves also known as splines
+and in this video i'll show you how to
+and in this video i'll show you how to
+and in this video i'll show you how to
+make a reusable module to create these
+make a reusable module to create these
+make a reusable module to create these
+curves and how to use them in a real
+curves and how to use them in a real
+curves and how to use them in a real
+life scenario like with this cutscene
+life scenario like with this cutscene
+life scenario like with this cutscene
+so like the video if you enjoy it
+so like the video if you enjoy it
+so like the video if you enjoy it
+subscribe my channel for more content
+subscribe my channel for more content
+subscribe my channel for more content
+like this and potentially more bezier
+like this and potentially more bezier
+like this and potentially more bezier
+curve videos without further ado let's
+curve videos without further ado let's
+curve videos without further ado let's
+get started
+so in this video we'll be using a cubic
+so in this video we'll be using a cubic
+so in this video we'll be using a cubic
+bezier curve because that's the one of
+bezier curve because that's the one of
+bezier curve because that's the one of
+the most commonly used curves and it's
+the most commonly used curves and it's
+the most commonly used curves and it's
+one of the more useful
+one of the more useful
+one of the more useful
+bezier curves and as the animation on
+bezier curves and as the animation on
+bezier curves and as the animation on
+screen shows all it is is it's just a
+screen shows all it is is it's just a
+screen shows all it is is it's just a
+lerp between like three points and then
+lerp between like three points and then
+lerp between like three points and then
+alert between the lines created by those
+alert between the lines created by those
+alert between the lines created by those
+two points and then a lerp on that final
+two points and then a lerp on that final
+two points and then a lerp on that final
+line by some t value the t value is a
+line by some t value the t value is a
+line by some t value the t value is a
+value from zero to one that's basically
+value from zero to one that's basically
+value from zero to one that's basically
+like a percentage
+like a percentage
+like a percentage
+that indicates how far along the curve
+that indicates how far along the curve
+that indicates how far along the curve
+you want to be and a lerp is just a
+you want to be and a lerp is just a
+you want to be and a lerp is just a
+linear interpolation which means like
+linear interpolation which means like
+linear interpolation which means like
+a value from zero to one again that you
+a value from zero to one again that you
+a value from zero to one again that you
+go in between like two points now if
+go in between like two points now if
+go in between like two points now if
+you're interested in the more math based
+you're interested in the more math based
+you're interested in the more math based
+explanation of bezier curves there is a
+explanation of bezier curves there is a
+explanation of bezier curves there is a
+great video called the beauty of bezier
+great video called the beauty of bezier
+great video called the beauty of bezier
+curves that i will link both in the card
+curves that i will link both in the card
+curves that i will link both in the card
+right now
+right now
+right now
+and down in the description that
+and down in the description that
+and down in the description that
+explains bezier curves in and out and
+explains bezier curves in and out and
+explains bezier curves in and out and
+it's really nice video and a lot of the
+it's really nice video and a lot of the
+it's really nice video and a lot of the
+concepts that i'll be talking about this
+concepts that i'll be talking about this
+concepts that i'll be talking about this
+video
+video
+video
+will be based off of that but
+will be based off of that but
+will be based off of that but
+i'm more interested in the
+i'm more interested in the
+i'm more interested in the
+implementation and the application in
+implementation and the application in
+implementation and the application in
+this video not the math concepts people
+this video not the math concepts people
+this video not the math concepts people
+have already done that
+have already done that
+have already done that
+and they can do it better than me so
+and they can do it better than me so
+and they can do it better than me so
+let's get started with the actual
+let's get started with the actual
+let's get started with the actual
+implementation
+implementation
+implementation
+so i'm going to go into replicated
+so i'm going to go into replicated
+so i'm going to go into replicated
+storage and create a new module script
+storage and create a new module script
+storage and create a new module script
+i'm going to rename my module script to
+i'm going to rename my module script to
+i'm going to rename my module script to
+bezier
+bezier
+bezier
+and this will be a nice reusable bezier
+and this will be a nice reusable bezier
+and this will be a nice reusable bezier
+module that you can use for whatever you
+module that you can use for whatever you
+module that you can use for whatever you
+want in our video we're going to be
+want in our video we're going to be
+want in our video we're going to be
+making a camera cut scene eventually
+making a camera cut scene eventually
+making a camera cut scene eventually
+so i just renamed module to bezier
+so i just renamed module to bezier
+so i just renamed module to bezier
+and now i'm going to define the actual
+and now i'm going to define the actual
+and now i'm going to define the actual
+bezier function because it's just a
+bezier function because it's just a
+bezier function because it's just a
+simple like algebraic function it's a
+simple like algebraic function it's a
+simple like algebraic function it's a
+third degree polynomial so we can write
+third degree polynomial so we can write
+third degree polynomial so we can write
+that out pretty easily so i'm going to
+that out pretty easily so i'm going to
+that out pretty easily so i'm going to
+say local function cubic
+say local function cubic
+say local function cubic
+bezier
+bezier
+bezier
+and it'll take in four parameters the t
+and it'll take in four parameters the t
+and it'll take in four parameters the t
+value which again is a percentage from
+value which again is a percentage from
+value which again is a percentage from
+zero to one
+zero to one
+zero to one
+and then p0 which is just the first
+and then p0 which is just the first
+and then p0 which is just the first
+point p1 which is the second point p2
+point p1 which is the second point p2
+point p1 which is the second point p2
+and p3 you get the idea
+and so
+and so
+and so
+all it's going to do is return the
+all it's going to do is return the
+all it's going to do is return the
+formal like mathematical definition of a
+formal like mathematical definition of a
+formal like mathematical definition of a
+bezier function now you don't have to
+bezier function now you don't have to
+bezier function now you don't have to
+understand how this works but you can if
+understand how this works but you can if
+understand how this works but you can if
+you want to by just watching the video
+you want to by just watching the video
+you want to by just watching the video
+that i linked
+that i linked
+that i linked
+so we're going to say return parentheses
+so we're going to say return parentheses
+so we're going to say return parentheses
+1 minus t
+1 minus t
+1 minus t
+[Music]
+[Music]
+[Music]
+carrot and the carrot is like um
+carrot and the carrot is like um
+carrot and the carrot is like um
+the exponent sign
+the exponent sign
+the exponent sign
+so we're going to say carrot 3 times
+so we're going to say carrot 3 times
+so we're going to say carrot 3 times
+p0 plus 3
+p0 plus 3
+p0 plus 3
+times
+times
+times
+1 minus t
+1 minus t
+1 minus t
+in parentheses
+in parentheses
+in parentheses
+carrot
+carrot
+carrot
+times
+times
+times
+t
+t
+t
+times
+times
+times
+p one
+p one
+p one
+plus three
+plus three
+plus three
+times parentheses
+times parentheses
+times parentheses
+one minus t
+one minus t
+one minus t
+times
+times
+times
+t squared so t carat two
+t squared so t carat two
+t squared so t carat two
+times p2
+times p2
+times p2
+plus
+plus
+plus
+t
+t
+t
+cubed so t
+cubed so t
+cubed so t
+carat three
+carat three
+carat three
+times p3
+times p3
+times p3
+now i will have the code in the
+now i will have the code in the
+now i will have the code in the
+description if that was a little much
+description if that was a little much
+description if that was a little much
+because this is like a mathematical
+because this is like a mathematical
+because this is like a mathematical
+definition that we're putting in code so
+definition that we're putting in code so
+definition that we're putting in code so
+that's kind of crazy
+that's kind of crazy
+that's kind of crazy
+but we don't really have to understand
+but we don't really have to understand
+but we don't really have to understand
+this that's the beauty of abstraction
+this that's the beauty of abstraction
+this that's the beauty of abstraction
+all we got to do is know the cubic
+all we got to do is know the cubic
+all we got to do is know the cubic
+bezier function and the parameters to
+bezier function and the parameters to
+bezier function and the parameters to
+put in so now we're going to head on
+put in so now we're going to head on
+put in so now we're going to head on
+over to our
+over to our
+over to our
+module definition and underneath the
+module definition and underneath the
+module definition and underneath the
+brackets in local bezier we're going to
+brackets in local bezier we're going to
+brackets in local bezier we're going to
+say bezier dot underscore underscore
+say bezier dot underscore underscore
+say bezier dot underscore underscore
+index equals busy so we're going to be
+index equals busy so we're going to be
+index equals busy so we're going to be
+making a object oriented class for our
+making a object oriented class for our
+making a object oriented class for our
+bezier curves because that's the easiest
+bezier curves because that's the easiest
+bezier curves because that's the easiest
+way to handle all the stuff that we'll
+way to handle all the stuff that we'll
+way to handle all the stuff that we'll
+be doing down the line and it's just
+be doing down the line and it's just
+be doing down the line and it's just
+nice and convenient encapsulation
+nice and convenient encapsulation
+nice and convenient encapsulation
+so underneath that we're going to see
+so underneath that we're going to see
+so underneath that we're going to see
+function
+function
+function
+bezier.new
+bezier.new
+bezier.new
+and then this will take in
+the
+the
+the
+p1 p2
+p1 p2
+p1 p2
+p3 and p4 i guess let's make it more
+p3 and p4 i guess let's make it more
+p3 and p4 i guess let's make it more
+synonymous with what we did above we'll
+synonymous with what we did above we'll
+synonymous with what we did above we'll
+do a p0
+do a p0
+do a p0
+p1
+p1
+p1
+p2
+p2
+p2
+and p3
+and p3
+and p3
+there you go
+there you go
+there you go
+and it doesn't really matter
+and it doesn't really matter
+and it doesn't really matter
+i'm just trying to keep it consistent
+i'm just trying to keep it consistent
+i'm just trying to keep it consistent
+with the function above so in here we're
+with the function above so in here we're
+with the function above so in here we're
+going to say local self equals set meta
+going to say local self equals set meta
+going to say local self equals set meta
+table
+table
+table
+parent or brackets curly brackets and
+parent or brackets curly brackets and
+parent or brackets curly brackets and
+then we're going to say bezier
+then we're going to say bezier
+then we're going to say bezier
+and we're going to return itself now if
+and we're going to return itself now if
+and we're going to return itself now if
+you don't understand what this is i have
+you don't understand what this is i have
+you don't understand what this is i have
+a whole series on object oriented
+a whole series on object oriented
+a whole series on object oriented
+programming that i'll link right now
+programming that i'll link right now
+programming that i'll link right now
+and so in our little new function all we
+and so in our little new function all we
+and so in our little new function all we
+need to do right now is just save a
+need to do right now is just save a
+need to do right now is just save a
+reference to our points just in case we
+reference to our points just in case we
+reference to our points just in case we
+need them later so we'll say self dot
+need them later so we'll say self dot
+need them later so we'll say self dot
+underscore points equals a new table and
+underscore points equals a new table and
+underscore points equals a new table and
+we'll say p0 p1 p2 and p3
+we'll say p0 p1 p2 and p3
+we'll say p0 p1 p2 and p3
+so this underscore here doesn't actually
+so this underscore here doesn't actually
+so this underscore here doesn't actually
+mean anything to lua it's just a naming
+mean anything to lua it's just a naming
+mean anything to lua it's just a naming
+convention that means that
+convention that means that
+convention that means that
+the
+the
+the
+value is private doesn't really need to
+value is private doesn't really need to
+value is private doesn't really need to
+be accessed by anybody else
+and now we're going to make a function
+and now we're going to make a function
+and now we're going to make a function
+bezier
+bezier
+bezier
+calc
+calc
+calc
+which will calculate
+which will calculate
+which will calculate
+the
+the
+the
+point
+point
+point
+at any given t value so the calc will
+at any given t value so the calc will
+at any given t value so the calc will
+take in a parameter t
+take in a parameter t
+take in a parameter t
+which again has to be from zero to one
+which again has to be from zero to one
+which again has to be from zero to one
+and you can think of it like a
+and you can think of it like a
+and you can think of it like a
+percentage or a proportion
+percentage or a proportion
+percentage or a proportion
+so all we're going to do in this bezier
+so all we're going to do in this bezier
+so all we're going to do in this bezier
+calc function is return the result of
+calc function is return the result of
+calc function is return the result of
+cubic bezier
+cubic bezier
+cubic bezier
+and the number we'll send in t
+and the number we'll send in t
+and the number we'll send in t
+and then
+and then
+and then
+what we're going to do just to make it a
+what we're going to do just to make it a
+what we're going to do just to make it a
+little easier is we're just going to
+little easier is we're just going to
+little easier is we're just going to
+unpack
+unpack
+unpack
+self dot underscore points
+so all this will do
+so all this will do
+so all this will do
+is it'll turn this table of points
+is it'll turn this table of points
+is it'll turn this table of points
+into
+into
+into
+a bunch of different parameters by
+a bunch of different parameters by
+a bunch of different parameters by
+unpacking it into a bunch of different
+unpacking it into a bunch of different
+unpacking it into a bunch of different
+parameters that this function will
+parameters that this function will
+parameters that this function will
+receive and then return
+receive and then return
+receive and then return
+so let's test this i'm going to go and
+so let's test this i'm going to go and
+so let's test this i'm going to go and
+do server script service
+do server script service
+do server script service
+and create a new script
+and create a new script
+and create a new script
+and we're going to require the bezier
+and we're going to require the bezier
+and we're going to require the bezier
+saying local bezier equals require
+saying local bezier equals require
+saying local bezier equals require
+game get service
+game get service
+game get service
+replicated storage
+replicated storage
+replicated storage
+dot
+dot
+dot
+bezier
+bezier
+bezier
+then we're going to define our curve by
+then we're going to define our curve by
+then we're going to define our curve by
+saying local curve equals bezier.new
+saying local curve equals bezier.new
+saying local curve equals bezier.new
+and in here just to make it easier for
+and in here just to make it easier for
+and in here just to make it easier for
+testing i'm actually going to go to the
+testing i'm actually going to go to the
+testing i'm actually going to go to the
+workspace or the baseplate whatever and
+workspace or the baseplate whatever and
+workspace or the baseplate whatever and
+we're going to create a couple of
+we're going to create a couple of
+we're going to create a couple of
+different parts to represent each of the
+different parts to represent each of the
+different parts to represent each of the
+points so because we're dealing with
+points so because we're dealing with
+points so because we're dealing with
+points i'm going to make a sphere
+points i'm going to make a sphere
+points i'm going to make a sphere
+and just make it a little smaller
+and make it a little prettier
+and make it a little prettier
+and make it a little prettier
+by making it a nice bright neon
+by making it a nice bright neon
+by making it a nice bright neon
+neon green sphere
+neon green sphere
+neon green sphere
+and so i'm going to put the first point
+and so i'm going to put the first point
+and so i'm going to put the first point
+here duplicate it using ctrl d
+here duplicate it using ctrl d
+here duplicate it using ctrl d
+and move so this is going to be a start
+and move so this is going to be a start
+and move so this is going to be a start
+run finish so i'm going to name the
+run finish so i'm going to name the
+run finish so i'm going to name the
+first part
+first part
+first part
+p 0
+p 0
+p 0
+and the last part p 3
+and then in between that i'm going to
+and then in between that i'm going to
+and then in between that i'm going to
+duplicate this
+duplicate this
+duplicate this
+twice
+twice
+twice
+we're going to have these two parts in
+we're going to have these two parts in
+we're going to have these two parts in
+between which i'm gonna actually recolor
+between which i'm gonna actually recolor
+between which i'm gonna actually recolor
+these will be the parts that will affect
+these will be the parts that will affect
+these will be the parts that will affect
+the curvature
+the curvature
+the curvature
+of our bezier curve
+of our bezier curve
+of our bezier curve
+and i'm going to name the one closest to
+and i'm going to name the one closest to
+and i'm going to name the one closest to
+p0
+p1 and the one closest to p3
+p1 and the one closest to p3
+p1 and the one closest to p3
+p2
+p2
+p2
+so in order we get p0 here
+so in order we get p0 here
+so in order we get p0 here
+p1
+p1
+p1
+p2
+p2
+p2
+and p3
+and p3
+and p3
+and so you can imagine just imagine a
+and so you can imagine just imagine a
+and so you can imagine just imagine a
+curve drawn from here all the way up
+curve drawn from here all the way up
+curve drawn from here all the way up
+here and then all the way down there
+here and then all the way down there
+here and then all the way down there
+that's what we want to get at
+that's what we want to get at
+that's what we want to get at
+and then just for demonstration purposes
+and then just for demonstration purposes
+and then just for demonstration purposes
+i'm going to duplicate this little
+i'm going to duplicate this little
+i'm going to duplicate this little
+sphere again
+sphere again
+sphere again
+and i'm going to make a black part
+and i'm going to make a black part
+and i'm going to make a black part
+and this will be our little marker part
+and this will be our little marker part
+and this will be our little marker part
+and i'm going to name it point actually
+and i'm going to name it point actually
+and i'm going to name it point actually
+i'm going to name it marker
+i'm going to name it marker
+i'm going to name it marker
+and we're going to move this into server
+and we're going to move this into server
+and we're going to move this into server
+storage and before i forget first of all
+storage and before i forget first of all
+storage and before i forget first of all
+for marker i'm going to turn gank light
+for marker i'm going to turn gank light
+for marker i'm going to turn gank light
+off and make anger set to true so it
+off and make anger set to true so it
+off and make anger set to true so it
+doesn't roll around and for all of these
+doesn't roll around and for all of these
+doesn't roll around and for all of these
+parts i'm going to turn ken clyde off
+parts i'm going to turn ken clyde off
+parts i'm going to turn ken clyde off
+and say anchored equal to true
+and say anchored equal to true
+and say anchored equal to true
+so they just don't roll around
+so they just don't roll around
+so they just don't roll around
+now i'm going to go back to this script
+now i'm going to go back to this script
+now i'm going to go back to this script
+and we're going to get references to all
+and we're going to get references to all
+and we're going to get references to all
+of those parts so i'm going to say
+of those parts so i'm going to say
+of those parts so i'm going to say
+local
+local
+local
+p0 equals
+p0 equals
+p0 equals
+workspace
+workspace
+workspace
+dot p0 and this is important dot
+dot p0 and this is important dot
+dot p0 and this is important dot
+position because
+position because
+position because
+this busy this cubic bezier function if
+this busy this cubic bezier function if
+this busy this cubic bezier function if
+we go back this expects
+we go back this expects
+we go back this expects
+either like this expects a vector
+either like this expects a vector
+either like this expects a vector
+so either a 2d vector 3d vector in our
+so either a 2d vector 3d vector in our
+so either a 2d vector 3d vector in our
+case we'll deal with 3d vectors but the
+case we'll deal with 3d vectors but the
+case we'll deal with 3d vectors but the
+math is exactly the same so we're using
+math is exactly the same so we're using
+math is exactly the same so we're using
+these parts as representations of
+these parts as representations of
+these parts as representations of
+positions so we need to get their
+positions so we need to get their
+positions so we need to get their
+positions so that's why we're doing
+positions so that's why we're doing
+positions so that's why we're doing
+workspace.p0.position
+workspace.p0.position
+workspace.p0.position
+now this means that you won't be able to
+now this means that you won't be able to
+now this means that you won't be able to
+change the
+change the
+change the
+like curve during runtime but you could
+like curve during runtime but you could
+like curve during runtime but you could
+obviously implement that if you want but
+obviously implement that if you want but
+obviously implement that if you want but
+that's beyond the scope of this video
+that's beyond the scope of this video
+that's beyond the scope of this video
+so i'm just going to
+so i'm just going to
+so i'm just going to
+control c
+control c
+control c
+control v
+control v
+control v
+a couple of times to get all of the
+a couple of times to get all of the
+a couple of times to get all of the
+points
+points
+points
+now there's probably a better way to do
+now there's probably a better way to do
+now there's probably a better way to do
+this with this module
+this with this module
+this with this module
+but this is just for learning so we're
+but this is just for learning so we're
+but this is just for learning so we're
+going to leave it
+going to leave it
+going to leave it
+and we're going to send in p0 p1 p2 and
+and we're going to send in p0 p1 p2 and
+and we're going to send in p0 p1 p2 and
+p3 into our bezier.new function
+p3 into our bezier.new function
+p3 into our bezier.new function
+now i want to sort of visualize the
+now i want to sort of visualize the
+now i want to sort of visualize the
+curve and it's honestly really easy
+curve and it's honestly really easy
+curve and it's honestly really easy
+so
+so
+so
+i'm going to
+i'm going to
+i'm going to
+create a for loop and say 4
+create a for loop and say 4
+create a for loop and say 4
+i equals
+i equals
+i equals
+actually just let's just make it better
+actually just let's just make it better
+actually just let's just make it better
+by saying t equals
+by saying t equals
+by saying t equals
+0 1 and then a step of 0.01
+0 1 and then a step of 0.01
+0 1 and then a step of 0.01
+so this will run 100 times in between 0
+so this will run 100 times in between 0
+so this will run 100 times in between 0
+and 1 because each time it'll increment
+and 1 because each time it'll increment
+and 1 because each time it'll increment
+by only 0.01
+by only 0.01
+by only 0.01
+and then inside our for loop
+and then inside our for loop
+and then inside our for loop
+we're going to
+we're going to
+we're going to
+create like a new marker part but first
+create like a new marker part but first
+create like a new marker part but first
+we need to get a reference to our marker
+we need to get a reference to our marker
+we need to get a reference to our marker
+so underneath all the p's i'm going to
+so underneath all the p's i'm going to
+so underneath all the p's i'm going to
+say local marker
+say local marker
+say local marker
+template equals
+template equals
+template equals
+or marker temp equals
+or marker temp equals
+or marker temp equals
+game
+game
+game
+get service
+get service
+get service
+server storage
+server storage
+server storage
+dot
+dot
+dot
+marker
+marker
+marker
+and then inside our for loop i'm going
+and then inside our for loop i'm going
+and then inside our for loop i'm going
+to say local marker
+to say local marker
+to say local marker
+equals marker temp clone
+equals marker temp clone
+equals marker temp clone
+we're going to set marker dot position
+we're going to set marker dot position
+we're going to set marker dot position
+equal to curve
+equal to curve
+equal to curve
+calculate so we're going to calculate
+calculate so we're going to calculate
+calculate so we're going to calculate
+the point
+the point
+the point
+of our bezier curve at position t
+of our bezier curve at position t
+of our bezier curve at position t
+and then
+and then
+and then
+we're going to say marker.parent equals
+we're going to say marker.parent equals
+we're going to say marker.parent equals
+workspace so we run this loop a hundred
+workspace so we run this loop a hundred
+workspace so we run this loop a hundred
+times making a new point for
+times making a new point for
+times making a new point for
+each t value and we get the
+each t value and we get the
+each t value and we get the
+point position of the bezier curve at
+point position of the bezier curve at
+point position of the bezier curve at
+that given t value
+that given t value
+that given t value
+and just move the marker there
+and just move the marker there
+and just move the marker there
+one thing i forgot to do i don't know if
+one thing i forgot to do i don't know if
+one thing i forgot to do i don't know if
+you noticed but
+you noticed but
+you noticed but
+i forgot to change the
+i forgot to change the
+i forgot to change the
+actual references to the points
+actual references to the points
+actual references to the points
+in our definitions up here so you have
+in our definitions up here so you have
+in our definitions up here so you have
+p0 and then your workspace.p1
+p0 and then your workspace.p1
+p0 and then your workspace.p1
+workspace.p2 and workspace.p3
+workspace.p2 and workspace.p3
+workspace.p2 and workspace.p3
+that
+that
+that
+would mess up a lot of things if i
+would mess up a lot of things if i
+would mess up a lot of things if i
+didn't change those so just keep that in
+didn't change those so just keep that in
+didn't change those so just keep that in
+mind
+mind
+mind
+so now if we were to run it
+you can see our curve is drawn
+you can see our curve is drawn
+you can see our curve is drawn
+right now it looks kind of like a sad
+right now it looks kind of like a sad
+right now it looks kind of like a sad
+face but you can change it up to
+face but you can change it up to
+face but you can change it up to
+whatever you want so if i for example
+whatever you want so if i for example
+whatever you want so if i for example
+move the start down here and then move
+move the start down here and then move
+move the start down here and then move
+this point down here you'll get like
+this point down here you'll get like
+this point down here you'll get like
+another
+another
+another
+you get a cool like like little wavy
+you get a cool like like little wavy
+you get a cool like like little wavy
+curve here
+curve here
+curve here
+so that's pretty cool
+so that's pretty cool
+so that's pretty cool
+but one issue with
+but one issue with
+but one issue with
+bezier curves
+bezier curves
+bezier curves
+out of the box is that the points are
+out of the box is that the points are
+out of the box is that the points are
+not uniformly distributed so
+not uniformly distributed so
+not uniformly distributed so
+let me change the step value here the t
+let me change the step value here the t
+let me change the step value here the t
+value from 0.01 to just 0.1
+value from 0.01 to just 0.1
+value from 0.01 to just 0.1
+and then we're going to draw a new curve
+by making or actually we're gonna make
+by making or actually we're gonna make
+by making or actually we're gonna make
+like
+like
+like
+a little
+a little
+a little
+loop sort of thing
+loop sort of thing
+loop sort of thing
+or like an s
+or like an s
+or like an s
+so we're gonna move this like over here
+you might be able to see this
+you might be able to see this
+you might be able to see this
+so you see how they're bunched more
+so you see how they're bunched more
+so you see how they're bunched more
+closely down here
+closely down here
+closely down here
+and how
+like in the middle they're more spread
+like in the middle they're more spread
+like in the middle they're more spread
+out and you can make this even more
+out and you can make this even more
+out and you can make this even more
+extenuated if you want
+extenuated if you want
+extenuated if you want
+to by like moving it around or whatever
+to by like moving it around or whatever
+to by like moving it around or whatever
+so if i move this like even further
+so if i move this like even further
+so if i move this like even further
+move this like back here
+yeah
+yeah
+yeah
+this is where you can see it so like it
+this is where you can see it so like it
+this is where you can see it so like it
+curves up initially you see how close
+curves up initially you see how close
+curves up initially you see how close
+these two are
+these two are
+these two are
+and these are more spread out
+and these are more spread out
+and these are more spread out
+and so if you're dealing with animation
+and so if you're dealing with animation
+and so if you're dealing with animation
+or really when you're dealing with
+or really when you're dealing with
+or really when you're dealing with
+anything with these curves
+anything with these curves
+anything with these curves
+you don't really want that you want
+you don't really want that you want
+you don't really want that you want
+everything to be uniform
+everything to be uniform
+everything to be uniform
+that's why we're going to have to write
+that's why we're going to have to write
+that's why we're going to have to write
+some extra code to do that for us
+some extra code to do that for us
+some extra code to do that for us
+so the way we're going to do that is
+so the way we're going to do that is
+so the way we're going to do that is
+using a lookup table
+using a lookup table
+using a lookup table
+so a lookup table is basically just a
+so a lookup table is basically just a
+so a lookup table is basically just a
+array of values
+array of values
+array of values
+and whenever you need to find like
+and whenever you need to find like
+and whenever you need to find like
+a value at a given point you go to that
+a value at a given point you go to that
+a value at a given point you go to that
+table you find the two closest values
+table you find the two closest values
+table you find the two closest values
+and you just lerp in between them so you
+and you just lerp in between them so you
+and you just lerp in between them so you
+kind of guess where the point should be
+kind of guess where the point should be
+kind of guess where the point should be
+because there's no easy way to
+because there's no easy way to
+because there's no easy way to
+get a uniform point distribution on a
+get a uniform point distribution on a
+get a uniform point distribution on a
+bezier curve
+bezier curve
+bezier curve
+so let's implement that so the very top
+so let's implement that so the very top
+so let's implement that so the very top
+of our script i'm going to define a
+of our script i'm going to define a
+of our script i'm going to define a
+function say local function
+function say local function
+function say local function
+create lut lut stands for lookup table
+create lut lut stands for lookup table
+create lut lut stands for lookup table
+and i'm just going to use that for the
+and i'm just going to use that for the
+and i'm just going to use that for the
+rest of the video because it's common
+rest of the video because it's common
+rest of the video because it's common
+practice
+practice
+practice
+and this create a ut function will take
+and this create a ut function will take
+and this create a ut function will take
+the number of segments
+the number of segments
+the number of segments
+and then dot dot dot which was basically
+and then dot dot dot which was basically
+and then dot dot dot which was basically
+like the points but i don't really want
+like the points but i don't really want
+like the points but i don't really want
+to write p zero p one p two whatever
+to write p zero p one p two whatever
+to write p zero p one p two whatever
+we're gonna leave it like this
+we're gonna leave it like this
+we're gonna leave it like this
+now let's numb segments basically what
+now let's numb segments basically what
+now let's numb segments basically what
+we're gonna do is we're going to split
+we're gonna do is we're going to split
+we're gonna do is we're going to split
+our bezier curve into an approximation
+our bezier curve into an approximation
+our bezier curve into an approximation
+of a bunch of different segments
+of a bunch of different segments
+of a bunch of different segments
+and the higher num segments is
+and the higher num segments is
+and the higher num segments is
+the more accurate
+the more accurate
+the more accurate
+your lookup table will be
+your lookup table will be
+your lookup table will be
+but the more computational intensive it
+but the more computational intensive it
+but the more computational intensive it
+will also be so it'll take longer to
+will also be so it'll take longer to
+will also be so it'll take longer to
+calculate
+calculate
+calculate
+but we're only going to calculate this
+but we're only going to calculate this
+but we're only going to calculate this
+once
+once
+once
+when we create the curve so depending on
+when we create the curve so depending on
+when we create the curve so depending on
+your application that might be a good
+your application that might be a good
+your application that might be a good
+price to pay
+and again i would encourage you to watch
+and again i would encourage you to watch
+and again i would encourage you to watch
+the end of the video i think it's around
+the end of the video i think it's around
+the end of the video i think it's around
+like six to 16 minute mark
+like six to 16 minute mark
+like six to 16 minute mark
+where they talk
+where they talk
+where they talk
+where they talk about
+where they talk about
+where they talk about
+creating a uniform distribution for
+creating a uniform distribution for
+creating a uniform distribution for
+bezier curves because that
+bezier curves because that
+bezier curves because that
+they offer a good explanation
+they offer a good explanation
+they offer a good explanation
+so in this function we're going to say
+so in this function we're going to say
+so in this function we're going to say
+local dist sum equals zero
+local dist sum equals zero
+local dist sum equals zero
+and i'm going to say local sums equals a
+and i'm going to say local sums equals a
+and i'm going to say local sums equals a
+blank table this will be our lookup
+blank table this will be our lookup
+blank table this will be our lookup
+table basically
+table basically
+table basically
+and then local step
+and then local step
+and then local step
+which will be one divided by segments
+which will be one divided by segments
+which will be one divided by segments
+and then our num segments then we're
+and then our num segments then we're
+and then our num segments then we're
+going to make a for loop and say four i
+going to make a for loop and say four i
+going to make a for loop and say four i
+equals zero
+equals zero
+equals zero
+one step do
+one step do
+one step do
+so it's going to increment so if we have
+so it's going to increment so if we have
+so it's going to increment so if we have
+a hundred segments if we want a hundred
+a hundred segments if we want a hundred
+a hundred segments if we want a hundred
+hundred segments we will run this loop a
+hundred segments we will run this loop a
+hundred segments we will run this loop a
+hundred times because one divided by a
+hundred times because one divided by a
+hundred times because one divided by a
+hundred is point zero one zero and
+hundred is point zero one zero and
+hundred is point zero one zero and
+you're going from zero to one so that'd
+you're going from zero to one so that'd
+you're going from zero to one so that'd
+just be a hundred steps
+just be a hundred steps
+just be a hundred steps
+so in each step we're going to calculate
+so in each step we're going to calculate
+so in each step we're going to calculate
+the a point so we're gonna say i'm just
+the a point so we're gonna say i'm just
+the a point so we're gonna say i'm just
+gonna say local
+gonna say local
+gonna say local
+uh first point
+uh first point
+uh first point
+equals cubic bezier
+equals cubic bezier
+equals cubic bezier
+and for the t value we're going to send
+and for the t value we're going to send
+and for the t value we're going to send
+an i and then for the points we're just
+an i and then for the points we're just
+an i and then for the points we're just
+going to send in the ellipses the extra
+going to send in the ellipses the extra
+going to send in the ellipses the extra
+arguments
+arguments
+arguments
+and i'm going to say local second point
+and i'm going to say local second point
+and i'm going to say local second point
+equals cubic bezier
+equals cubic bezier
+equals cubic bezier
+and then percent i
+and then percent i
+and then percent i
+plus 1 actually
+plus 1 actually
+plus 1 actually
+or i plus step i should say
+or i plus step i should say
+or i plus step i should say
+and then dot dot
+and then dot dot
+and then dot dot
+so
+so
+so
+what we're doing is we're calculating
+what we're doing is we're calculating
+what we're doing is we're calculating
+the position
+the position
+the position
+at the given point
+at the given point
+at the given point
+and then we're calculating it one step
+and then we're calculating it one step
+and then we're calculating it one step
+ahead
+ahead
+ahead
+and so this will give us our segment
+and so this will give us our segment
+and so this will give us our segment
+which is like the difference between the
+which is like the difference between the
+which is like the difference between the
+two points
+two points
+two points
+and we can find the distance between the
+and we can find the distance between the
+and we can find the distance between the
+two points by just saying local dist
+two points by just saying local dist
+two points by just saying local dist
+equals
+equals
+equals
+first point
+first point
+first point
+actually second point
+actually second point
+actually second point
+minus first point
+minus first point
+minus first point
+dot magnitude since we're dealing with
+dot magnitude since we're dealing with
+dot magnitude since we're dealing with
+vectors we need the magnitude which is
+vectors we need the magnitude which is
+vectors we need the magnitude which is
+just the length of the vector so we get
+just the length of the vector so we get
+just the length of the vector so we get
+the difference between the two vectors
+the difference between the two vectors
+the difference between the two vectors
+which is like the
+which is like the
+which is like the
+line segment length between them
+line segment length between them
+line segment length between them
+and then all we do
+and then all we do
+and then all we do
+is we do table dot insert
+is we do table dot insert
+is we do table dot insert
+sums dist sum
+sums dist sum
+sums dist sum
+so this will insert
+so this will insert
+so this will insert
+the
+the
+the
+distance here and then all we do is we
+distance here and then all we do is we
+distance here and then all we do is we
+accumulate this sum so we say dis sum
+accumulate this sum so we say dis sum
+accumulate this sum so we say dis sum
+plus equals
+plus equals
+plus equals
+dist
+dist
+dist
+so
+so
+so
+in the first iteration we'll just add
+in the first iteration we'll just add
+in the first iteration we'll just add
+zero
+zero
+zero
+because like the distance between the
+because like the distance between the
+because like the distance between the
+first two is like pretty low whatever
+first two is like pretty low whatever
+first two is like pretty low whatever
+and then each consecutive iteration we
+and then each consecutive iteration we
+and then each consecutive iteration we
+add more to this sum which makes our
+add more to this sum which makes our
+add more to this sum which makes our
+lookup table bigger and bigger and just
+lookup table bigger and bigger and just
+lookup table bigger and bigger and just
+adds more distances
+adds more distances
+adds more distances
+and then the total like approximate
+and then the total like approximate
+and then the total like approximate
+length of our bezier curve will be the
+length of our bezier curve will be the
+length of our bezier curve will be the
+last value of our table in this sum
+last value of our table in this sum
+last value of our table in this sum
+since we just add it all up
+since we just add it all up
+since we just add it all up
+and all we're going to do is return sums
+so now i'm going to go down
+so now i'm going to go down
+so now i'm going to go down
+and
+and
+and
+we're going to rewrite our calc function
+we're going to rewrite our calc function
+we're going to rewrite our calc function
+to implement the uniform
+to implement the uniform
+to implement the uniform
+distribution of t values
+distribution of t values
+distribution of t values
+and if you want you can keep this calc
+and if you want you can keep this calc
+and if you want you can keep this calc
+function make another function for just
+function make another function for just
+function make another function for just
+like the
+like the
+like the
+thing we're about to implement but
+thing we're about to implement but
+thing we're about to implement but
+honestly
+honestly
+honestly
+you almost always want
+you almost always want
+you almost always want
+a t value that's uniform length across
+a t value that's uniform length across
+a t value that's uniform length across
+the curve and not just where the points
+the curve and not just where the points
+the curve and not just where the points
+are bunched up or where they're not
+are bunched up or where they're not
+are bunched up or where they're not
+bunched up
+bunched up
+bunched up
+so i'm just going to re-implement my
+so i'm just going to re-implement my
+so i'm just going to re-implement my
+entire calc function
+entire calc function
+entire calc function
+so inside here
+so inside here
+so inside here
+we first need to get a reference to our
+we first need to get a reference to our
+we first need to get a reference to our
+lookup table but we haven't created it
+lookup table but we haven't created it
+lookup table but we haven't created it
+yet so let's go to our new function
+yet so let's go to our new function
+yet so let's go to our new function
+and we're gonna say self
+and we're gonna say self
+and we're gonna say self
+dot
+dot
+dot
+distance
+distance
+distance
+led i'm going to say dist l ut lookup
+led i'm going to say dist l ut lookup
+led i'm going to say dist l ut lookup
+table
+table
+table
+equals
+equals
+equals
+create lookup table
+create lookup table
+create lookup table
+with the number of segments so what i'm
+with the number of segments so what i'm
+with the number of segments so what i'm
+going to do for a number of segments is
+going to do for a number of segments is
+going to do for a number of segments is
+i'm going to add another argument in our
+i'm going to add another argument in our
+i'm going to add another argument in our
+new and just say num segments
+new and just say num segments
+new and just say num segments
+before p0 and we're going to send in num
+before p0 and we're going to send in num
+before p0 and we're going to send in num
+segments here and then for the points
+segments here and then for the points
+segments here and then for the points
+we just send p0 p1 p2 and p3
+we just send p0 p1 p2 and p3
+we just send p0 p1 p2 and p3
+and so what this does is we create it at
+and so what this does is we create it at
+and so what this does is we create it at
+the very beginning because if we were to
+the very beginning because if we were to
+the very beginning because if we were to
+create the lookup table for each
+create the lookup table for each
+create the lookup table for each
+calculation that would be
+calculation that would be
+calculation that would be
+very very costly and it would probably
+very very costly and it would probably
+very very costly and it would probably
+slow down your game so we create it once
+slow down your game so we create it once
+slow down your game so we create it once
+and then the beauty of lookup tables is
+and then the beauty of lookup tables is
+and then the beauty of lookup tables is
+you can look up a value later
+you can look up a value later
+you can look up a value later
+so back in our calc function we can say
+so back in our calc function we can say
+so back in our calc function we can say
+local lut lookup table equals self
+dot underscore dist
+dot underscore dist
+dot underscore dist
+let look up table so i'm just doing this
+let look up table so i'm just doing this
+let look up table so i'm just doing this
+because we'll refer to the lookup table
+because we'll refer to the lookup table
+because we'll refer to the lookup table
+a bunch and
+a bunch and
+a bunch and
+i don't want to keep on saying
+i don't want to keep on saying
+i don't want to keep on saying
+self.underscore whatever
+self.underscore whatever
+self.underscore whatever
+so then underneath that we're going to
+so then underneath that we're going to
+so then underneath that we're going to
+say local
+say local
+say local
+arc length and this is the total length
+arc length and this is the total length
+arc length and this is the total length
+of the bezier curve equals
+of the bezier curve equals
+of the bezier curve equals
+up table
+up table
+up table
+brackets number which is like the
+brackets number which is like the
+brackets number which is like the
+hashtag symbol lookup table so
+hashtag symbol lookup table so
+hashtag symbol lookup table so
+and and lua
+and and lua
+and and lua
+the last indicy of our list is the
+the last indicy of our list is the
+the last indicy of our list is the
+length of the list
+length of the list
+length of the list
+so we access that last value this
+so we access that last value this
+so we access that last value this
+basically gets the last value of lookup
+basically gets the last value of lookup
+basically gets the last value of lookup
+table which is the total accumulated
+table which is the total accumulated
+table which is the total accumulated
+length
+length
+length
+of
+of
+of
+the
+the
+the
+arc which is useful because this allows
+arc which is useful because this allows
+arc which is useful because this allows
+us to get our target distance along the
+us to get our target distance along the
+us to get our target distance along the
+arc so we'll say local target dist
+arc so we'll say local target dist
+arc so we'll say local target dist
+equals
+equals
+equals
+arc length times t
+arc length times t
+arc length times t
+so since t is a percentage
+so since t is a percentage
+so since t is a percentage
+this will give us a like distance that
+this will give us a like distance that
+this will give us a like distance that
+is t percentage of the way to the end
+is t percentage of the way to the end
+is t percentage of the way to the end
+arc length
+arc length
+arc length
+and then we can use a lookup table to
+and then we can use a lookup table to
+and then we can use a lookup table to
+get the approximate like adjusted t
+get the approximate like adjusted t
+get the approximate like adjusted t
+value for that position so we can
+value for that position so we can
+value for that position so we can
+calculate it normally
+so now we have to go through the lookup
+so now we have to go through the lookup
+so now we have to go through the lookup
+table and find the two points in which
+table and find the two points in which
+table and find the two points in which
+our target distance lies between since
+our target distance lies between since
+our target distance lies between since
+the lookup table doesn't cover all
+the lookup table doesn't cover all
+the lookup table doesn't cover all
+points it only covers certain points
+points it only covers certain points
+points it only covers certain points
+we can find
+we can find
+we can find
+the
+the
+the
+two points and then just an interplay
+two points and then just an interplay
+two points and then just an interplay
+between them
+between them
+between them
+so we'll say
+so we'll say
+so we'll say
+four i dist
+four i dist
+four i dist
+and i pairs
+and i pairs
+and i pairs
+let do
+and then we can say local next dist
+and then we can say local next dist
+and then we can say local next dist
+equals lut i plus one so that's the next
+equals lut i plus one so that's the next
+equals lut i plus one so that's the next
+value in the lookup table and all we got
+value in the lookup table and all we got
+value in the lookup table and all we got
+to do is check if our target distance is
+to do is check if our target distance is
+to do is check if our target distance is
+between the two values of the lookup
+between the two values of the lookup
+between the two values of the lookup
+table so we say if target dist
+table so we say if target dist
+table so we say if target dist
+is greater than or equal to dist and
+is greater than or equal to dist and
+is greater than or equal to dist and
+target disk is less than
+target disk is less than
+target disk is less than
+nexus then
+nexus then
+nexus then
+all we have to do now
+all we have to do now
+all we have to do now
+is find a way to take our
+is find a way to take our
+is find a way to take our
+the difference like the percentage point
+the difference like the percentage point
+the difference like the percentage point
+of
+of
+of
+the target dist between the two points
+the target dist between the two points
+the target dist between the two points
+and remap that to a t value
+and remap that to a t value
+and remap that to a t value
+so i'm going to first define a helpful
+so i'm going to first define a helpful
+so i'm going to first define a helpful
+function up top called remap
+local function remap
+local function remap
+local function remap
+it'll take in
+a
+a
+a
+number n
+number n
+number n
+and then an old min an old max
+and then an old min an old max
+and then an old min an old max
+and then a min and a max and what we'll
+and then a min and a max and what we'll
+and then a min and a max and what we'll
+do here is all we'll do
+do here is all we'll do
+do here is all we'll do
+is return
+is return
+is return
+min plus
+min plus
+min plus
+parentheses
+parentheses
+parentheses
+and another set of parentheses
+and another set of parentheses
+and another set of parentheses
+max minus min so this is like the range
+max minus min so this is like the range
+max minus min so this is like the range
+offset by the min
+offset by the min
+offset by the min
+times
+times
+times
+and then another set of parentheses
+and then another set of parentheses
+and then another set of parentheses
+and another set of parentheses and we'll
+and another set of parentheses and we'll
+and another set of parentheses and we'll
+say
+say
+say
+n minus
+n minus
+n minus
+old min
+divided by
+divided by
+divided by
+old max
+old max
+old max
+minus oldman
+minus oldman
+minus oldman
+so you don't have to understand the
+so you don't have to understand the
+so you don't have to understand the
+underlying implementation of this remap
+underlying implementation of this remap
+underlying implementation of this remap
+function but all you need to know is it
+function but all you need to know is it
+function but all you need to know is it
+remaps a value from old man and old max
+remaps a value from old man and old max
+remaps a value from old man and old max
+so like n is like usually a percentage
+so like n is like usually a percentage
+so like n is like usually a percentage
+or it's usually between old man and all
+or it's usually between old man and all
+or it's usually between old man and all
+max and remaps it to a new min and a new
+max and remaps it to a new min and a new
+max and remaps it to a new min and a new
+max and that's useful here because we
+max and that's useful here because we
+max and that's useful here because we
+have
+have
+have
+the mid and the max it's the
+the mid and the max it's the
+the mid and the max it's the
+dist or it's the dist and the next disc
+dist or it's the dist and the next disc
+dist or it's the dist and the next disc
+and target dist is between that so think
+and target dist is between that so think
+and target dist is between that so think
+of it like so you have um you have your
+of it like so you have um you have your
+of it like so you have um you have your
+dist and you have your next disc and in
+dist and you have your next disc and in
+dist and you have your next disc and in
+between them there's the target disc
+between them there's the target disc
+between them there's the target disc
+and we can convert that like sort of in
+and we can convert that like sort of in
+and we can convert that like sort of in
+between since target disc is like a
+between since target disc is like a
+between since target disc is like a
+percentage of in between
+percentage of in between
+percentage of in between
+this nexus we can convert that into a t
+this nexus we can convert that into a t
+this nexus we can convert that into a t
+value
+value
+value
+so i can say local
+so i can say local
+so i can say local
+adjusted
+adjusted
+adjusted
+t
+t
+t
+is equal to remap
+is equal to remap
+is equal to remap
+of the target disk
+of the target disk
+of the target disk
+and we're remapping it from the old men
+and we're remapping it from the old men
+and we're remapping it from the old men
+of dist
+of dist
+of dist
+and the old max of next dist because
+and the old max of next dist because
+and the old max of next dist because
+nexus is always going to be greater so
+nexus is always going to be greater so
+nexus is always going to be greater so
+this is the next value of the lookup
+this is the next value of the lookup
+this is the next value of the lookup
+table
+table
+table
+and we're going to say
+and we're going to say
+and we're going to say
+i divided by
+i divided by
+i divided by
+l ut
+l ut
+l ut
+and then comma i plus 1 divided by
+and then comma i plus 1 divided by
+and then comma i plus 1 divided by
+number
+number
+number
+lut so what the i and the let it looks
+lut so what the i and the let it looks
+lut so what the i and the let it looks
+kind of confusing all it is is the
+kind of confusing all it is is the
+kind of confusing all it is is the
+relative t value so we
+relative t value so we
+relative t value so we
+have i which is
+have i which is
+have i which is
+which is just like a normal integer and
+which is just like a normal integer and
+which is just like a normal integer and
+we divide it by the number and the
+we divide it by the number and the
+we divide it by the number and the
+lookup table so this turns this i from
+lookup table so this turns this i from
+lookup table so this turns this i from
+an integer
+an integer
+an integer
+into a percentage because as a it's the
+into a percentage because as a it's the
+into a percentage because as a it's the
+percentage you are in the lookup table
+percentage you are in the lookup table
+percentage you are in the lookup table
+and then i plus 1 is the equivalent of
+and then i plus 1 is the equivalent of
+and then i plus 1 is the equivalent of
+like the next disk but instead of the
+like the next disk but instead of the
+like the next disk but instead of the
+actual value we're just turning it into
+actual value we're just turning it into
+actual value we're just turning it into
+another percentage so if lookup table is
+another percentage so if lookup table is
+another percentage so if lookup table is
+10 values long and i is equal to 1 we
+10 values long and i is equal to 1 we
+10 values long and i is equal to 1 we
+get 0.1 and then we get 0.2 so you're
+get 0.1 and then we get 0.2 so you're
+get 0.1 and then we get 0.2 so you're
+mapping it from
+mapping it from
+mapping it from
+the actual like distances concrete
+the actual like distances concrete
+the actual like distances concrete
+distances to just the percentage points
+distances to just the percentage points
+distances to just the percentage points
+and all we do
+and all we do
+and all we do
+underneath this is we return the cubic
+underneath this is we return the cubic
+underneath this is we return the cubic
+bezier
+bezier
+bezier
+of the adjusted t
+of the adjusted t
+of the adjusted t
+and then
+and then
+and then
+the unpack self dot underscore points
+the unpack self dot underscore points
+the unpack self dot underscore points
+so all we're doing here is just
+so all we're doing here is just
+so all we're doing here is just
+converting from a
+converting from a
+converting from a
+from points that may not be uniformly
+from points that may not be uniformly
+from points that may not be uniformly
+distributed
+distributed
+distributed
+to
+to
+to
+an adjusted t value that is calculated
+an adjusted t value that is calculated
+an adjusted t value that is calculated
+based off of a lookup table
+based off of a lookup table
+based off of a lookup table
+so all we did is change the underlying
+so all we did is change the underlying
+so all we did is change the underlying
+implementation so our other script
+implementation so our other script
+implementation so our other script
+should work perfectly fine let's try it
+should work perfectly fine let's try it
+should work perfectly fine let's try it
+out
+out
+out
+oh one thing i forgot to do
+oh one thing i forgot to do
+oh one thing i forgot to do
+is
+is
+is
+change the actual new function to give
+change the actual new function to give
+change the actual new function to give
+the number of segments so i'm going to
+the number of segments so i'm going to
+the number of segments so i'm going to
+give it
+give it
+give it
+10 segments for now since we're only
+10 segments for now since we're only
+10 segments for now since we're only
+looping through it like 10 times to get
+looping through it like 10 times to get
+looping through it like 10 times to get
+all those points
+all those points
+all those points
+and then just make sure you have this
+and then just make sure you have this
+and then just make sure you have this
+first number value in the busy.new
+first number value in the busy.new
+first number value in the busy.new
+function
+so you can see
+so you can see
+so you can see
+it loops a lot better
+it loops a lot better
+it loops a lot better
+all the points are uniform even if we do
+all the points are uniform even if we do
+all the points are uniform even if we do
+some funky
+curve
+curve
+curve
+all the points are still
+all the points are still
+all the points are still
+uniform
+so in the example i just showed you
+so in the example i just showed you
+so in the example i just showed you
+some of the points weren't exactly truly
+some of the points weren't exactly truly
+some of the points weren't exactly truly
+uniform that's because our number
+uniform that's because our number
+uniform that's because our number
+segments was probably set a little too
+segments was probably set a little too
+segments was probably set a little too
+low so that this value something like
+low so that this value something like
+low so that this value something like
+100 if i run this again
+100 if i run this again
+100 if i run this again
+you can see the segments are a lot more
+you can see the segments are a lot more
+you can see the segments are a lot more
+evenly distributed which is exactly
+evenly distributed which is exactly
+evenly distributed which is exactly
+what we want
+what we want
+what we want
+so let's put it all together and let's
+so let's put it all together and let's
+so let's put it all together and let's
+actually make
+actually make
+actually make
+a little camera animation for using
+a little camera animation for using
+a little camera animation for using
+these curves
+these curves
+these curves
+so first i'm going to
+so first i'm going to
+so first i'm going to
+disable the script up here because we
+disable the script up here because we
+disable the script up here because we
+don't want all these points in the way
+don't want all these points in the way
+don't want all these points in the way
+when we're playing with our
+when we're playing with our
+when we're playing with our
+curve
+curve
+curve
+and i'm going to draw a quick little
+and i'm going to draw a quick little
+and i'm going to draw a quick little
+curve
+curve
+curve
+and our focus and my little animation is
+and our focus and my little animation is
+and our focus and my little animation is
+going to be the spawn pad just because
+going to be the spawn pad just because
+going to be the spawn pad just because
+it's nice and convenient so i'm going to
+it's nice and convenient so i'm going to
+it's nice and convenient so i'm going to
+put the finish point in the air a little
+put the finish point in the air a little
+put the finish point in the air a little
+bit so we're going to start on the
+bit so we're going to start on the
+bit so we're going to start on the
+ground
+ground
+ground
+and then i'm going to put this little
+and then i'm going to put this little
+and then i'm going to put this little
+curve
+curve
+curve
+like up here
+like up here
+like up here
+like this
+like this
+like this
+and then i'm going to take the other
+and then i'm going to take the other
+and then i'm going to take the other
+point and just kind of move it around
+it's more like there looks about good
+it's more like there looks about good
+it's more like there looks about good
+maybe a little more this way and
+maybe a little more this way and
+maybe a little more this way and
+actually i changed my mind i'm gonna uh
+actually i changed my mind i'm gonna uh
+actually i changed my mind i'm gonna uh
+undisable the script and just see
+undisable the script and just see
+undisable the script and just see
+visualize the curve see what it looks
+visualize the curve see what it looks
+visualize the curve see what it looks
+like
+like
+like
+yep
+yep
+yep
+oh that seems to look pretty good so i'm
+oh that seems to look pretty good so i'm
+oh that seems to look pretty good so i'm
+gonna disable the script just so you
+gonna disable the script just so you
+gonna disable the script just so you
+can't see those little dots anymore
+can't see those little dots anymore
+can't see those little dots anymore
+i'm going to go into starter player
+i'm going to go into starter player
+i'm going to go into starter player
+starter player scripts and create a new
+starter player scripts and create a new
+starter player scripts and create a new
+local script
+local script
+local script
+inside this local script i'm going to
+inside this local script i'm going to
+inside this local script i'm going to
+say local camera
+say local camera
+say local camera
+equals workspace dot current camera
+equals workspace dot current camera
+equals workspace dot current camera
+and then i'm going to wait like three
+and then i'm going to wait like three
+and then i'm going to wait like three
+seconds just so the players all spawned
+seconds just so the players all spawned
+seconds just so the players all spawned
+in whatever because in a real game you
+in whatever because in a real game you
+in whatever because in a real game you
+trigger this cut scene like whenever
+trigger this cut scene like whenever
+trigger this cut scene like whenever
+something happens whatever but for now
+something happens whatever but for now
+something happens whatever but for now
+we're gonna do it immediately so after
+we're gonna do it immediately so after
+we're gonna do it immediately so after
+two seconds we're just going to make a
+two seconds we're just going to make a
+two seconds we're just going to make a
+symbol for loop
+symbol for loop
+symbol for loop
+and we're going to say 4
+and we're going to say 4
+and we're going to say 4
+i equals 0
+i equals 0
+i equals 0
+0.001 we're going to make it pretty fine
+0.001 we're going to make it pretty fine
+0.001 we're going to make it pretty fine
+and then all we've got to do is
+and then all we've got to do is
+and then all we've got to do is
+run the bezier curve
+run the bezier curve
+run the bezier curve
+so i'm actually going to go back to our
+so i'm actually going to go back to our
+so i'm actually going to go back to our
+other script
+other script
+other script
+and i'm just going to copy
+and i'm just going to copy
+and i'm just going to copy
+the points because we can just reuse
+the points because we can just reuse
+the points because we can just reuse
+those
+those
+those
+and i'm going to go and copy
+and i'm going to go and copy
+and i'm going to go and copy
+the curve portion because we can reuse
+the curve portion because we can reuse
+the curve portion because we can reuse
+that too
+and then we need the bezier module which
+and then we need the bezier module which
+and then we need the bezier module which
+is just replicated storage so i'm just
+is just replicated storage so i'm just
+is just replicated storage so i'm just
+going to go back copy that too
+going to go back copy that too
+going to go back copy that too
+you know we're gonna we're gonna copy
+you know we're gonna we're gonna copy
+you know we're gonna we're gonna copy
+and paste code but whatever
+and paste code but whatever
+and paste code but whatever
+so we have the we have everything we
+so we have the we have everything we
+so we have the we have everything we
+need we have our curve we have
+need we have our curve we have
+need we have our curve we have
+the points that we need
+the points that we need
+the points that we need
+and you can obviously change the number
+and you can obviously change the number
+and you can obviously change the number
+of segments to whatever you want i'm
+of segments to whatever you want i'm
+of segments to whatever you want i'm
+going to leave it at 100 that should be
+going to leave it at 100 that should be
+going to leave it at 100 that should be
+good
+good
+good
+then now we're going to
+then now we're going to
+then now we're going to
+inside of this for loop
+inside of this for loop
+inside of this for loop
+first of all do put a task dot weight
+first of all do put a task dot weight
+first of all do put a task dot weight
+so i i can use task.weight instead of
+so i i can use task.weight instead of
+so i i can use task.weight instead of
+normal weight
+normal weight
+normal weight
+here because task.weight weights one
+here because task.weight weights one
+here because task.weight weights one
+heartbeat when not given a value
+heartbeat when not given a value
+heartbeat when not given a value
+so
+so
+so
+this is the equivalent of saying run
+this is the equivalent of saying run
+this is the equivalent of saying run
+service heartbeat weight you could
+service heartbeat weight you could
+service heartbeat weight you could
+obviously put this inside of a run
+obviously put this inside of a run
+obviously put this inside of a run
+service like loop
+service like loop
+service like loop
+and accumulate at that there but for
+and accumulate at that there but for
+and accumulate at that there but for
+demonstration purposes using a for loop
+demonstration purposes using a for loop
+demonstration purposes using a for loop
+is sufficient
+is sufficient
+is sufficient
+so inside here all we're going to do
+so inside here all we're going to do
+so inside here all we're going to do
+is say camera dot c frame equals c frame
+is say camera dot c frame equals c frame
+is say camera dot c frame equals c frame
+dot look at so i'm going to make a c
+dot look at so i'm going to make a c
+dot look at so i'm going to make a c
+frame look at start at the position
+frame look at start at the position
+frame look at start at the position
+at curve calc
+at curve calc
+at curve calc
+i
+i
+i
+and then look at
+and then look at
+and then look at
+workspace.spawnlocation.position
+workspace.spawnlocation.position
+workspace.spawnlocation.position
+so we're going to
+put the camera wherever it is along the
+put the camera wherever it is along the
+put the camera wherever it is along the
+veggie a curve at that point in time and
+veggie a curve at that point in time and
+veggie a curve at that point in time and
+then look at the spawn location
+then look at the spawn location
+then look at the spawn location
+at its current state this really won't
+at its current state this really won't
+at its current state this really won't
+work because above the for loop we have
+work because above the for loop we have
+work because above the for loop we have
+to set the camera
+to set the camera
+to set the camera
+dot camera type equal to
+dot camera type equal to
+dot camera type equal to
+enum.cameratype.com
+enum.cameratype.com
+enum.cameratype.com
+and then i'm just gonna just be safe i'm
+and then i'm just gonna just be safe i'm
+and then i'm just gonna just be safe i'm
+gonna set the camera.camerasubject
+gonna set the camera.camerasubject
+gonna set the camera.camerasubject
+equal to nil so it stops looking at the
+equal to nil so it stops looking at the
+equal to nil so it stops looking at the
+player and we can set it to whatever we
+player and we can set it to whatever we
+player and we can set it to whatever we
+want
+want
+want
+so let's play this
+so i'm gonna wait a couple seconds
+so i'm gonna wait a couple seconds
+so i'm gonna wait a couple seconds
+and then boom we got ourselves a nice
+and then boom we got ourselves a nice
+and then boom we got ourselves a nice
+smooth cut scene moving at the same
+smooth cut scene moving at the same
+smooth cut scene moving at the same
+speed throughout the
+speed throughout the
+speed throughout the
+animation and it moves in a really
+animation and it moves in a really
+animation and it moves in a really
+really nice curving pattern
+really nice curving pattern
+really nice curving pattern
+and so you can do this wherever you want
+and so you can do this wherever you want
+and so you can do this wherever you want
+and i'm pretty sure there's already
+and i'm pretty sure there's already
+and i'm pretty sure there's already
+some modules and like some plugins that
+some modules and like some plugins that
+some modules and like some plugins that
+help you with this but it's good to
+help you with this but it's good to
+help you with this but it's good to
+understand the underlying principles
+understand the underlying principles
+understand the underlying principles
+behind
+behind
+behind
+bezier curves
+bezier curves
+bezier curves
+and
+and
+and
+how you can use them so some other ideas
+how you can use them so some other ideas
+how you can use them so some other ideas
+on how you can use these is
+on how you can use these is
+on how you can use these is
+you can make a
+you can make a
+you can make a
+paths
+paths
+paths
+system so like you can make a bunch of
+system so like you can make a bunch of
+system so like you can make a bunch of
+fences that follow along a curve on the
+fences that follow along a curve on the
+fences that follow along a curve on the
+ground or you can make like roads that
+ground or you can make like roads that
+ground or you can make like roads that
+are curvy
+are curvy
+are curvy
+and they just go around or whatever
+and they just go around or whatever
+and they just go around or whatever
+and busy a curves are also used in
+and busy a curves are also used in
+and busy a curves are also used in
+animation curves so like the
+animation curves so like the
+animation curves so like the
+easing in between animations i know
+easing in between animations i know
+easing in between animations i know
+other animation editors already have the
+other animation editors already have the
+other animation editors already have the
+implemented and you can also use it for
+implemented and you can also use it for
+implemented and you can also use it for
+ui animations that's probably a good use
+ui animations that's probably a good use
+ui animations that's probably a good use
+for them too
+for them too
+for them too
+but they're honestly just generally very
+but they're honestly just generally very
+but they're honestly just generally very
+useful in game development
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you enjoyed
+you enjoyed
+you enjoyed
+this little intro into bezier curves
+this little intro into bezier curves
+this little intro into bezier curves
+they're super useful in game development
+they're super useful in game development
+they're super useful in game development
+and i really enjoy using them if you
+and i really enjoy using them if you
+and i really enjoy using them if you
+want any more videos about this topic
+want any more videos about this topic
+want any more videos about this topic
+make sure to comment down below
+make sure to comment down below
+make sure to comment down below
+if you have any questions or suggestions
+if you have any questions or suggestions
+if you have any questions or suggestions
+also comment down below like the video
+also comment down below like the video
+also comment down below like the video
+if you enjoyed it subscribe for more
+if you enjoyed it subscribe for more
+if you enjoyed it subscribe for more
+content like this but other than that i
+content like this but other than that i
+content like this but other than that i
+hope you have a nice day and goodbye
+[Music]
+you

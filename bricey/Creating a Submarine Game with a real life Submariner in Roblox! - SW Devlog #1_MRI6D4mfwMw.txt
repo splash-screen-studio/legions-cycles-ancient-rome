@@ -1,0 +1,916 @@
+[Music]
+submarines are
+submarines are
+submarines are
+fascinating vehicles the silent killers
+fascinating vehicles the silent killers
+fascinating vehicles the silent killers
+the sea having the capability to
+the sea having the capability to
+the sea having the capability to
+decimate
+decimate
+decimate
+entire nations with the press of a
+entire nations with the press of a
+entire nations with the press of a
+button
+button
+button
+so i tried to recreate it in the
+so i tried to recreate it in the
+so i tried to recreate it in the
+formidable medium
+formidable medium
+formidable medium
+of roblox studio and it worked but it
+of roblox studio and it worked but it
+of roblox studio and it worked but it
+was definitely not
+was definitely not
+was definitely not
+realistic look it can do flips at a
+realistic look it can do flips at a
+realistic look it can do flips at a
+standstill
+standstill
+standstill
+in the water and so
+in the water and so
+in the water and so
+i was stumped until one day on my
+i was stumped until one day on my
+i was stumped until one day on my
+discord server
+discord server
+discord server
+i met a real life submariner
+i met a real life submariner
+i met a real life submariner
+named jason and so i dm'd him asking him
+named jason and so i dm'd him asking him
+named jason and so i dm'd him asking him
+if he wanted to create a game
+if he wanted to create a game
+if he wanted to create a game
+that submarine warfare he agreed
+that submarine warfare he agreed
+that submarine warfare he agreed
+and in this video i'll show you the
+and in this video i'll show you the
+and in this video i'll show you the
+progress of the game so far
+progress of the game so far
+progress of the game so far
+and my future plans welcome to submarine
+and my future plans welcome to submarine
+and my future plans welcome to submarine
+warfare so this is how the game will
+warfare so this is how the game will
+warfare so this is how the game will
+work
+work
+work
+you will have two teams the red team
+and then the blue team and since
+and then the blue team and since
+and then the blue team and since
+a lot of the submarines especially
+a lot of the submarines especially
+a lot of the submarines especially
+nuclear submarines were developed during
+nuclear submarines were developed during
+nuclear submarines were developed during
+the cold war
+the cold war
+the cold war
+their red team is going to be like the
+their red team is going to be like the
+their red team is going to be like the
+communists and the blue team will be
+communists and the blue team will be
+communists and the blue team will be
+like capitalists so to speak or the west
+and then each team will have a objective
+and then each team will have a objective
+and then each team will have a objective
+that they must defend
+so the red team will have some high
+so the red team will have some high
+so the red team will have some high
+value target like a cargo ship or maybe
+value target like a cargo ship or maybe
+value target like a cargo ship or maybe
+even a
+even a
+even a
+offshore city or something like that and
+offshore city or something like that and
+offshore city or something like that and
+so
+so
+so
+will the blue team it'll be an
+will the blue team it'll be an
+will the blue team it'll be an
+even-sided
+even-sided
+even-sided
+game or this will this is one game mode
+game or this will this is one game mode
+game or this will this is one game mode
+there could be multiple
+there could be multiple
+there could be multiple
+in the future and then they'll have a
+in the future and then they'll have a
+in the future and then they'll have a
+variety
+variety
+variety
+each team will have a variety of
+each team will have a variety of
+each team will have a variety of
+historical submarines
+historical submarines
+historical submarines
+at their disposal so you you have the
+at their disposal so you you have the
+at their disposal so you you have the
+standard
+standard
+standard
+diesel submarines these will be fast
+diesel submarines these will be fast
+diesel submarines these will be fast
+and a little more stealthy than the
+and a little more stealthy than the
+and a little more stealthy than the
+nuclear submarines
+nuclear submarines
+nuclear submarines
+but they'll be a little slower and won't
+but they'll be a little slower and won't
+but they'll be a little slower and won't
+be able to go as deep
+be able to go as deep
+be able to go as deep
+and they also won't have a great
+and they also won't have a great
+and they also won't have a great
+capability
+capability
+capability
+to inflict damage over to the high value
+to inflict damage over to the high value
+to inflict damage over to the high value
+target
+target
+target
+like in this example the cargo ship and
+like in this example the cargo ship and
+like in this example the cargo ship and
+that job will be delegated
+that job will be delegated
+that job will be delegated
+to our nuclear submarines so these are
+to our nuclear submarines so these are
+to our nuclear submarines so these are
+the quote unquote bombers of the sea in
+the quote unquote bombers of the sea in
+the quote unquote bombers of the sea in
+in our game
+in our game
+in our game
+they'll be responsible for inflicting a
+they'll be responsible for inflicting a
+they'll be responsible for inflicting a
+lot of the damage
+lot of the damage
+lot of the damage
+upon the enemy enemies high value
+upon the enemy enemies high value
+upon the enemy enemies high value
+targets
+targets
+targets
+but they won't be as fast or as nimble
+but they won't be as fast or as nimble
+but they won't be as fast or as nimble
+as the diesel
+as the diesel
+as the diesel
+submarines and that's for a good measure
+submarines and that's for a good measure
+submarines and that's for a good measure
+so you know they
+so you know they
+so you know they
+they'll shoot their nuclear cruise
+they'll shoot their nuclear cruise
+they'll shoot their nuclear cruise
+missiles
+missiles
+missiles
+across all the way over to the high
+across all the way over to the high
+across all the way over to the high
+value target to shoot him down but
+value target to shoot him down but
+value target to shoot him down but
+obviously the enemies can retaliate with
+obviously the enemies can retaliate with
+obviously the enemies can retaliate with
+their
+their
+their
+diesel subs as well or even their
+diesel subs as well or even their
+diesel subs as well or even their
+nuclear subs because
+nuclear subs because
+nuclear subs because
+all of the submarines in our game will
+all of the submarines in our game will
+all of the submarines in our game will
+have torpedoes
+have torpedoes
+have torpedoes
+but a lot of the nuclear submarines will
+but a lot of the nuclear submarines will
+but a lot of the nuclear submarines will
+have
+have
+have
+nuclear cruise missiles which you know
+nuclear cruise missiles which you know
+nuclear cruise missiles which you know
+will do a lot of damage and it'll be
+will do a lot of damage and it'll be
+will do a lot of damage and it'll be
+really cool to
+really cool to
+really cool to
+program that but a trade-off with that
+program that but a trade-off with that
+program that but a trade-off with that
+is they're very loud and you really have
+is they're very loud and you really have
+is they're very loud and you really have
+to surface to
+to surface to
+to surface to
+launcher missiles and
+launcher missiles and
+launcher missiles and
+that will leave you vulnerable to enemy
+that will leave you vulnerable to enemy
+that will leave you vulnerable to enemy
+fire so if that were to happen
+fire so if that were to happen
+fire so if that were to happen
+then this diesel sub over here is liable
+then this diesel sub over here is liable
+then this diesel sub over here is liable
+just to shoot back with a torpedo
+just to shoot back with a torpedo
+just to shoot back with a torpedo
+as seen you know over here
+and each submarine will be equipped with
+and each submarine will be equipped with
+and each submarine will be equipped with
+active
+active
+active
+and passive sonar what that means is
+and passive sonar what that means is
+and passive sonar what that means is
+active sonar is when our submarine
+active sonar is when our submarine
+active sonar is when our submarine
+sends out signals like sound sound waves
+sends out signals like sound sound waves
+sends out signals like sound sound waves
+basically
+basically
+basically
+to detect either terrain or
+to detect either terrain or
+to detect either terrain or
+other submarines in our case you'll
+other submarines in our case you'll
+other submarines in our case you'll
+you'll be able to see the terrain for a
+you'll be able to see the terrain for a
+you'll be able to see the terrain for a
+pretty long distance so that won't
+pretty long distance so that won't
+pretty long distance so that won't
+really
+really
+really
+affect you but you'll be able to detect
+affect you but you'll be able to detect
+affect you but you'll be able to detect
+other submarines but
+other submarines but
+other submarines but
+this sub could have passive solar and
+this sub could have passive solar and
+this sub could have passive solar and
+passive sonar is always on basically
+passive sonar is always on basically
+passive sonar is always on basically
+because all it is
+because all it is
+because all it is
+is you're just hearing sounds you're
+is you're just hearing sounds you're
+is you're just hearing sounds you're
+listening you're not
+listening you're not
+listening you're not
+shouting and waiting for the echo to
+shouting and waiting for the echo to
+shouting and waiting for the echo to
+come back you're just waiting
+come back you're just waiting
+come back you're just waiting
+to hear that shout so when you either
+to hear that shout so when you either
+to hear that shout so when you either
+hear
+hear
+hear
+a submarine make noise like shooting a
+a submarine make noise like shooting a
+a submarine make noise like shooting a
+torpedo or maybe descending or ascending
+torpedo or maybe descending or ascending
+torpedo or maybe descending or ascending
+too fast
+too fast
+too fast
+and maybe even launching a missile in
+and maybe even launching a missile in
+and maybe even launching a missile in
+the case of the nuclear subs
+the case of the nuclear subs
+the case of the nuclear subs
+you'll be able to pinpoint them on your
+you'll be able to pinpoint them on your
+you'll be able to pinpoint them on your
+hud
+hud
+hud
+and you'll be able to find them and
+and you'll be able to find them and
+and you'll be able to find them and
+target them with your torpedoes and
+target them with your torpedoes and
+target them with your torpedoes and
+ultimately
+ultimately
+ultimately
+kill them that'll add a really
+kill them that'll add a really
+kill them that'll add a really
+interesting
+interesting
+interesting
+dynamic to the game in order to make the
+dynamic to the game in order to make the
+dynamic to the game in order to make the
+game a little more interesting
+game a little more interesting
+game a little more interesting
+the maps are going to have to be pretty
+the maps are going to have to be pretty
+the maps are going to have to be pretty
+in depth because
+in depth because
+in depth because
+in a real life scenario a lot of
+in a real life scenario a lot of
+in a real life scenario a lot of
+submarine warfare is just like cat
+submarine warfare is just like cat
+submarine warfare is just like cat
+cat and mouse like you're not really
+cat and mouse like you're not really
+cat and mouse like you're not really
+shooting anything or blowing anything up
+shooting anything or blowing anything up
+shooting anything or blowing anything up
+actually you know the cold war
+actually you know the cold war
+actually you know the cold war
+no real shots were fired no because of
+no real shots were fired no because of
+no real shots were fired no because of
+that happened
+that happened
+that happened
+a war would start that'd be pretty bad
+a war would start that'd be pretty bad
+a war would start that'd be pretty bad
+but
+but
+but
+a lot of it was just detecting the other
+a lot of it was just detecting the other
+a lot of it was just detecting the other
+subs and just figuring out where they
+subs and just figuring out where they
+subs and just figuring out where they
+were
+were
+were
+and it wasn't much fighting but
+and it wasn't much fighting but
+and it wasn't much fighting but
+obviously in our game we want a lot of
+obviously in our game we want a lot of
+obviously in our game we want a lot of
+fighting because that's where you get
+fighting because that's where you get
+fighting because that's where you get
+the adrenaline rush that's where you get
+the adrenaline rush that's where you get
+the adrenaline rush that's where you get
+all the players
+all the players
+all the players
+and that's just a lot more fun and in
+and that's just a lot more fun and in
+and that's just a lot more fun and in
+order to facilitate that we're going to
+order to facilitate that we're going to
+order to facilitate that we're going to
+need some good maps so
+need some good maps so
+need some good maps so
+in normal submarine warfare you just
+in normal submarine warfare you just
+in normal submarine warfare you just
+have like you know a lot of open sea
+have like you know a lot of open sea
+have like you know a lot of open sea
+but maybe we could make our map like
+but maybe we could make our map like
+but maybe we could make our map like
+this is a water line right here
+this is a water line right here
+this is a water line right here
+you have it in the arctic so you have
+you have it in the arctic so you have
+you have it in the arctic so you have
+little icebergs
+little icebergs
+little icebergs
+that stick up below the surface and
+that stick up below the surface and
+that stick up below the surface and
+they'll provide a nice little
+they'll provide a nice little
+they'll provide a nice little
+obstacle when you're near the surface
+obstacle when you're near the surface
+obstacle when you're near the surface
+and on the ground you could have
+and on the ground you could have
+and on the ground you could have
+mountains and peaks for you to dodge
+mountains and peaks for you to dodge
+mountains and peaks for you to dodge
+maybe even some caves in there for you
+maybe even some caves in there for you
+maybe even some caves in there for you
+to hide in
+to hide in
+to hide in
+and maybe shoot some torpedoes out and
+and maybe shoot some torpedoes out and
+and maybe shoot some torpedoes out and
+find an enemy
+find an enemy
+find an enemy
+you could also make like an arctic or a
+you could also make like an arctic or a
+you could also make like an arctic or a
+island map
+island map
+island map
+with like peninsulas and islands and
+with like peninsulas and islands and
+with like peninsulas and islands and
+archipelagos
+archipelagos
+archipelagos
+just providing extra features in order
+just providing extra features in order
+just providing extra features in order
+to break up the monotony
+to break up the monotony
+to break up the monotony
+of just blank water and luckily roblox
+of just blank water and luckily roblox
+of just blank water and luckily roblox
+is releasing a nice new
+is releasing a nice new
+is releasing a nice new
+height map system that will make it
+height map system that will make it
+height map system that will make it
+really easy
+really easy
+really easy
+to make these maps and import them
+to make these maps and import them
+to make these maps and import them
+straight into studio
+straight into studio
+straight into studio
+so speaking of roblox studio i'll be
+so speaking of roblox studio i'll be
+so speaking of roblox studio i'll be
+using rojo and vs code to write my code
+using rojo and vs code to write my code
+using rojo and vs code to write my code
+and put it onto roblox studio
+and put it onto roblox studio
+and put it onto roblox studio
+i have a video on that if you're
+i have a video on that if you're
+i have a video on that if you're
+interested and i'll be using git
+interested and i'll be using git
+interested and i'll be using git
+in order to manage the code using source
+in order to manage the code using source
+in order to manage the code using source
+control
+control
+control
+and allows me to make a new feature on a
+and allows me to make a new feature on a
+and allows me to make a new feature on a
+separate branch and then merge it back
+separate branch and then merge it back
+separate branch and then merge it back
+into production
+into production
+into production
+when it's ready and allows my partner
+when it's ready and allows my partner
+when it's ready and allows my partner
+and i to work on concurrent
+and i to work on concurrent
+and i to work on concurrent
+things at the same time while not
+things at the same time while not
+things at the same time while not
+messing up each other's code
+messing up each other's code
+messing up each other's code
+and just make our collaboration process
+and just make our collaboration process
+and just make our collaboration process
+a lot
+a lot
+a lot
+simpler i recommend you do that as well
+simpler i recommend you do that as well
+simpler i recommend you do that as well
+if you're
+if you're
+if you're
+beginning advanced roblox development
+beginning advanced roblox development
+beginning advanced roblox development
+along with this we'll be using knit
+along with this we'll be using knit
+along with this we'll be using knit
+which is a game framework a really nice
+which is a game framework a really nice
+which is a game framework a really nice
+game framework to
+game framework to
+game framework to
+organize our code and make it more
+organize our code and make it more
+organize our code and make it more
+logical and easier to read and
+logical and easier to read and
+logical and easier to read and
+write and then proact a gooby library to
+write and then proact a gooby library to
+write and then proact a gooby library to
+facilitate the development of our
+facilitate the development of our
+facilitate the development of our
+goobies to make them simpler to script
+goobies to make them simpler to script
+goobies to make them simpler to script
+and also more expandable
+and also more expandable
+and also more expandable
+so this game has gone through a pretty
+so this game has gone through a pretty
+so this game has gone through a pretty
+lengthy
+lengthy
+lengthy
+prototype phase there's been two
+prototype phase there's been two
+prototype phase there's been two
+prototypes the first one
+prototypes the first one
+prototypes the first one
+is the one i created for my video
+is the one i created for my video
+is the one i created for my video
+a few months ago and i haven't been
+a few months ago and i haven't been
+a few months ago and i haven't been
+working on the game for that long i
+working on the game for that long i
+working on the game for that long i
+haven't had that much time so i've been
+haven't had that much time so i've been
+haven't had that much time so i've been
+you know fooling around with it off and
+you know fooling around with it off and
+you know fooling around with it off and
+on and if you want you can watch this
+on and if you want you can watch this
+on and if you want you can watch this
+video but just a quick little
+video but just a quick little
+video but just a quick little
+example you can get into the sub drive
+example you can get into the sub drive
+example you can get into the sub drive
+it around a little bit
+it around a little bit
+it around a little bit
+it wobbles a bit and you can just do
+it wobbles a bit and you can just do
+it wobbles a bit and you can just do
+normal sub things there's no
+normal sub things there's no
+normal sub things there's no
+missiles or raw or torpedoes
+missiles or raw or torpedoes
+missiles or raw or torpedoes
+or any sonar for that matter
+or any sonar for that matter
+or any sonar for that matter
+but it does the basic idea of a
+but it does the basic idea of a
+but it does the basic idea of a
+submarine this is more just to test
+submarine this is more just to test
+submarine this is more just to test
+a pid controller i made
+and then jason my partner expanded on my
+and then jason my partner expanded on my
+and then jason my partner expanded on my
+original project profoundly
+original project profoundly
+original project profoundly
+adding a couple different submarines
+adding a couple different submarines
+adding a couple different submarines
+with stunning model like these are all
+with stunning model like these are all
+with stunning model like these are all
+thumbnails of the models and they all
+thumbnails of the models and they all
+thumbnails of the models and they all
+look really really good
+look really really good
+look really really good
+so let me spawn this victoria class it's
+so let me spawn this victoria class it's
+so let me spawn this victoria class it's
+a nice diesel submarine
+a nice diesel submarine
+a nice diesel submarine
+nice little gangplank going down really
+nice little gangplank going down really
+nice little gangplank going down really
+nice bunker in general
+nice bunker in general
+nice bunker in general
+and this thing's pretty cool so i can
+and this thing's pretty cool so i can
+and this thing's pretty cool so i can
+get in it
+get in it
+get in it
+i have all these dials and a bunch of
+i have all these dials and a bunch of
+i have all these dials and a bunch of
+different
+different
+different
+things for controlling the submarine
+things for controlling the submarine
+things for controlling the submarine
+like i can increase like the revolutions
+like i can increase like the revolutions
+like i can increase like the revolutions
+rpm it also is heading you can see the
+rpm it also is heading you can see the
+rpm it also is heading you can see the
+right this is a primitive
+right this is a primitive
+right this is a primitive
+sonar system as indicated by these red
+sonar system as indicated by these red
+sonar system as indicated by these red
+debug lasers and these are just pointing
+debug lasers and these are just pointing
+debug lasers and these are just pointing
+to
+to
+to
+a contact on the sonar system
+a contact on the sonar system
+a contact on the sonar system
+and the sonar system is pretty cool
+but it honestly is kind of complex in
+but it honestly is kind of complex in
+but it honestly is kind of complex in
+the final game
+the final game
+the final game
+it's probably a better idea just to make
+it's probably a better idea just to make
+it's probably a better idea just to make
+the hud
+the hud
+the hud
+show where a contact is because
+show where a contact is because
+show where a contact is because
+i don't know what this means to be
+i don't know what this means to be
+i don't know what this means to be
+honest i bet he does
+honest i bet he does
+honest i bet he does
+since he deals with it like in his job
+since he deals with it like in his job
+since he deals with it like in his job
+but
+but
+but
+the average kid probably won't know
+the average kid probably won't know
+the average kid probably won't know
+either and this is a really in-depth
+either and this is a really in-depth
+either and this is a really in-depth
+system
+system
+system
+it has flooding and venting events
+it has flooding and venting events
+it has flooding and venting events
+it also has a little periscope this is
+it also has a little periscope this is
+it also has a little periscope this is
+pretty cool
+pretty cool
+pretty cool
+and a whole bunch of dials telling you
+and a whole bunch of dials telling you
+and a whole bunch of dials telling you
+the state of your submarine
+the state of your submarine
+the state of your submarine
+and that brings us to the current
+and that brings us to the current
+and that brings us to the current
+version
+version
+version
+of submarine warfare and this is in the
+of submarine warfare and this is in the
+of submarine warfare and this is in the
+actual
+actual
+actual
+game you can order your submarine right
+game you can order your submarine right
+game you can order your submarine right
+now it's only the victoria class
+now it's only the victoria class
+now it's only the victoria class
+and you can turn it on some nice
+and you can turn it on some nice
+and you can turn it on some nice
+propeller motion
+propeller motion
+propeller motion
+and you can pitch up and down with the
+and you can pitch up and down with the
+and you can pitch up and down with the
+planes reacting the rudder also has a
+planes reacting the rudder also has a
+planes reacting the rudder also has a
+nice animation
+nice animation
+nice animation
+and this is all accomplished using hinge
+and this is all accomplished using hinge
+and this is all accomplished using hinge
+constraints
+constraints
+constraints
+which is really nice i video on it
+which is really nice i video on it
+which is really nice i video on it
+if you want to check it out you can
+if you want to check it out you can
+if you want to check it out you can
+pitch up to the surface
+pitch up to the surface
+pitch up to the surface
+and you can ascend and descend using
+and you can ascend and descend using
+and you can ascend and descend using
+like the q a keys and there's some debug
+like the q a keys and there's some debug
+like the q a keys and there's some debug
+output here this is just for when i make
+output here this is just for when i make
+output here this is just for when i make
+a gooby
+a gooby
+a gooby
+a little bit later to represent all of
+a little bit later to represent all of
+a little bit later to represent all of
+this data
+this data
+this data
+right now the system works very well
+right now the system works very well
+right now the system works very well
+there is no sonar there is no weapons
+there is no sonar there is no weapons
+there is no sonar there is no weapons
+but that is all to be implemented in the
+but that is all to be implemented in the
+but that is all to be implemented in the
+future
+future
+future
+so that's about it for this devlog i
+so that's about it for this devlog i
+so that's about it for this devlog i
+hope you enjoyed if you did make sure to
+hope you enjoyed if you did make sure to
+hope you enjoyed if you did make sure to
+like and subscribe
+like and subscribe
+like and subscribe
+join my discord server link is in the
+join my discord server link is in the
+join my discord server link is in the
+description
+description
+description
+and make sure to comment any questions
+and make sure to comment any questions
+and make sure to comment any questions
+or suggestions you have
+or suggestions you have
+or suggestions you have
+for this game stay tuned for more
+for this game stay tuned for more
+for this game stay tuned for more
+devlogs
+devlogs
+devlogs
+in the future where i'll cover the
+in the future where i'll cover the
+in the future where i'll cover the
+actual code the project structure
+actual code the project structure
+actual code the project structure
+and progress as we go along so i hope
+and progress as we go along so i hope
+and progress as we go along so i hope
+you have a nice day
+you have a nice day
+you have a nice day
+and goodbye
+[Applause]
+[Applause]
+[Applause]
+[Music]
+you

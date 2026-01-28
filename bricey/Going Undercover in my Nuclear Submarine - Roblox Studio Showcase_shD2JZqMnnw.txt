@@ -1,0 +1,1324 @@
+submarines are the stealthiest
+submarines are the stealthiest
+submarines are the stealthiest
+vehicles in the world they can go
+vehicles in the world they can go
+vehicles in the world they can go
+underwater
+underwater
+underwater
+as silent as possible and can creep up
+as silent as possible and can creep up
+as silent as possible and can creep up
+onto unsuspecting enemies such as
+onto unsuspecting enemies such as
+onto unsuspecting enemies such as
+boats or even cities or countries and
+boats or even cities or countries and
+boats or even cities or countries and
+nuclear submarines cases and wreak
+nuclear submarines cases and wreak
+nuclear submarines cases and wreak
+havoc and they're created a lot during
+havoc and they're created a lot during
+havoc and they're created a lot during
+the cold war so a few months ago
+the cold war so a few months ago
+the cold war so a few months ago
+i modeled a typhoon
+i modeled a typhoon
+i modeled a typhoon
+soviet nuclear submarine the cool thing
+soviet nuclear submarine the cool thing
+soviet nuclear submarine the cool thing
+about nuclear
+about nuclear
+about nuclear
+submarines is they use a reactor
+submarines is they use a reactor
+submarines is they use a reactor
+to power their ship so they can stay
+to power their ship so they can stay
+to power their ship so they can stay
+under the water for months at a time and
+under the water for months at a time and
+under the water for months at a time and
+the only thing preventing them
+the only thing preventing them
+the only thing preventing them
+from staying there indefinitely is the
+from staying there indefinitely is the
+from staying there indefinitely is the
+food supply of the crew
+food supply of the crew
+food supply of the crew
+so i thought it'd be cool to take this
+so i thought it'd be cool to take this
+so i thought it'd be cool to take this
+idea and take this model
+idea and take this model
+idea and take this model
+and bring it into roblox and here it is
+and bring it into roblox and here it is
+and bring it into roblox and here it is
+so this is an incomplete version because
+so this is an incomplete version because
+so this is an incomplete version because
+right now the only thing i have
+right now the only thing i have
+right now the only thing i have
+implemented in this version
+implemented in this version
+implemented in this version
+is movement and the movement isn't
+is movement and the movement isn't
+is movement and the movement isn't
+amazing either
+amazing either
+amazing either
+but it's still a pretty cool
+view as to what actually driving a
+view as to what actually driving a
+view as to what actually driving a
+submarine like during the cold war
+submarine like during the cold war
+submarine like during the cold war
+would feel like and obviously
+would feel like and obviously
+would feel like and obviously
+they didn't use their eyes as we are
+they didn't use their eyes as we are
+they didn't use their eyes as we are
+right now to look around their sub they
+right now to look around their sub they
+right now to look around their sub they
+used
+used
+used
+sonar which i might implement in a
+sonar which i might implement in a
+sonar which i might implement in a
+future video
+future video
+future video
+and this project took me a lot longer
+and this project took me a lot longer
+and this project took me a lot longer
+than it should have
+than it should have
+than it should have
+i switched a bunch of versions i tried
+i switched a bunch of versions i tried
+i switched a bunch of versions i tried
+to make my project management good and
+to make my project management good and
+to make my project management good and
+just
+just
+just
+failed horribly so i would have added
+failed horribly so i would have added
+failed horribly so i would have added
+more features like the
+more features like the
+more features like the
+actual nuclear missiles that are meant
+actual nuclear missiles that are meant
+actual nuclear missiles that are meant
+to like
+to like
+to like
+blow up cities in case that happens
+blow up cities in case that happens
+blow up cities in case that happens
+luckily it never happened during the
+luckily it never happened during the
+luckily it never happened during the
+cold war
+cold war
+cold war
+but they always had it just in case
+but they always had it just in case
+but they always had it just in case
+and i don't have the torpedoes and i
+and i don't have the torpedoes and i
+and i don't have the torpedoes and i
+don't have the sonar but maybe in a
+don't have the sonar but maybe in a
+don't have the sonar but maybe in a
+future video
+future video
+future video
+i might do that and this honestly could
+i might do that and this honestly could
+i might do that and this honestly could
+be a pretty cool game to make
+be a pretty cool game to make
+be a pretty cool game to make
+if you guys want to see me do that then
+if you guys want to see me do that then
+if you guys want to see me do that then
+make sure to comment
+make sure to comment
+make sure to comment
+down below so
+down below so
+down below so
+the model for this or the place i should
+the model for this or the place i should
+the model for this or the place i should
+say is going to be in the description
+say is going to be in the description
+say is going to be in the description
+it is uncopy locked so you can take it
+it is uncopy locked so you can take it
+it is uncopy locked so you can take it
+and play with it the code is kind of
+and play with it the code is kind of
+and play with it the code is kind of
+crap but
+crap but
+crap but
+it works it's pretty fun so if you enjoy
+it works it's pretty fun so if you enjoy
+it works it's pretty fun so if you enjoy
+this video make sure to like and
+this video make sure to like and
+this video make sure to like and
+subscribe
+subscribe
+subscribe
+comment any questions or suggestions
+comment any questions or suggestions
+comment any questions or suggestions
+down below without further ado
+down below without further ado
+down below without further ado
+let's get started also discord server
+let's get started also discord server
+let's get started also discord server
+and description
+and description
+and description
+check it out so my first attempt
+check it out so my first attempt
+check it out so my first attempt
+at making the submarine and trust me
+at making the submarine and trust me
+at making the submarine and trust me
+there were many
+there were many
+there were many
+each with varying amounts of success was
+each with varying amounts of success was
+each with varying amounts of success was
+to use a vehicle seat
+to use a vehicle seat
+to use a vehicle seat
+and just slap it onto a submarine so you
+and just slap it onto a submarine so you
+and just slap it onto a submarine so you
+can see like there's the vehicle seat
+can see like there's the vehicle seat
+can see like there's the vehicle seat
+so to demonstrate vehicle seats are
+so to demonstrate vehicle seats are
+so to demonstrate vehicle seats are
+super super cool
+super super cool
+super super cool
+let me show you why if i go into the
+let me show you why if i go into the
+let me show you why if i go into the
+explorer find the seat
+explorer find the seat
+explorer find the seat
+you can see when i press wasd these
+you can see when i press wasd these
+you can see when i press wasd these
+values
+values
+values
+all change and they work for every
+all change and they work for every
+all change and they work for every
+single platform mobile
+single platform mobile
+single platform mobile
+and console and computer which is really
+and console and computer which is really
+and console and computer which is really
+really nice
+really nice
+really nice
+and you'll also notice in order to
+and you'll also notice in order to
+and you'll also notice in order to
+access these values you don't need to
+access these values you don't need to
+access these values you don't need to
+make a local script and this makes
+make a local script and this makes
+make a local script and this makes
+the whole system self-contained so that
+the whole system self-contained so that
+the whole system self-contained so that
+means i could have the vehicle seat
+means i could have the vehicle seat
+means i could have the vehicle seat
+and the submarine it could all be in the
+and the submarine it could all be in the
+and the submarine it could all be in the
+same exact spot
+same exact spot
+same exact spot
+without having to spread out things in
+without having to spread out things in
+without having to spread out things in
+the starter player
+the starter player
+the starter player
+or server script service or whatever and
+or server script service or whatever and
+or server script service or whatever and
+i really wanted to do that in this
+i really wanted to do that in this
+i really wanted to do that in this
+project i wanted to do it
+project i wanted to do it
+project i wanted to do it
+like a lot because i know you guys like
+like a lot because i know you guys like
+like a lot because i know you guys like
+to use my models and
+to use my models and
+to use my models and
+whatever you want and i really wanted to
+whatever you want and i really wanted to
+whatever you want and i really wanted to
+make it a self-contained model sadly i
+make it a self-contained model sadly i
+make it a self-contained model sadly i
+could not do that because you need to
+could not do that because you need to
+could not do that because you need to
+have stuff
+have stuff
+have stuff
+and starter player and starter player
+and starter player and starter player
+and starter player and starter player
+scripts
+scripts
+scripts
+that that's just a must just because
+that that's just a must just because
+that that's just a must just because
+you need a lot more inputs than the four
+you need a lot more inputs than the four
+you need a lot more inputs than the four
+that the vehicle seat provides
+that the vehicle seat provides
+that the vehicle seat provides
+but it really it'd be really cool if we
+but it really it'd be really cool if we
+but it really it'd be really cool if we
+could have more and we could have
+could have more and we could have
+could have more and we could have
+something
+something
+something
+like the vehicle seat in the future so
+like the vehicle seat in the future so
+like the vehicle seat in the future so
+if roblox if you're watching
+if roblox if you're watching
+if roblox if you're watching
+put that in but there's also another
+put that in but there's also another
+put that in but there's also another
+problem with vehicle seats
+problem with vehicle seats
+problem with vehicle seats
+that i did not know because this
+that i did not know because this
+that i did not know because this
+submarine is balanced in the water
+submarine is balanced in the water
+submarine is balanced in the water
+using a neutral buoyancy so it neither
+using a neutral buoyancy so it neither
+using a neutral buoyancy so it neither
+rises nor sinks
+rises nor sinks
+rises nor sinks
+but your character does not have a
+but your character does not have a
+but your character does not have a
+neutral buoyancy so when you get on the
+neutral buoyancy so when you get on the
+neutral buoyancy so when you get on the
+vehicle seat
+vehicle seat
+vehicle seat
+this happens because i think what
+this happens because i think what
+this happens because i think what
+happens
+happens
+happens
+is since you're like you're not
+is since you're like you're not
+is since you're like you're not
+you're like welded to the chair and the
+you're like welded to the chair and the
+you're like welded to the chair and the
+chair
+chair
+chair
+is part of the submarine that's like
+is part of the submarine that's like
+is part of the submarine that's like
+precariously floating
+precariously floating
+precariously floating
+you just you're getting set off of space
+you just you're getting set off of space
+you just you're getting set off of space
+and this is actually pretty cool you can
+and this is actually pretty cool you can
+and this is actually pretty cool you can
+see the the little floating point error
+see the the little floating point error
+see the the little floating point error
+my character is slowly
+my character is slowly
+my character is slowly
+disintegrating out of reality so i mean
+disintegrating out of reality so i mean
+disintegrating out of reality so i mean
+honestly this was successful because we
+honestly this was successful because we
+honestly this was successful because we
+got to see this happen
+got to see this happen
+got to see this happen
+so in the next attempt i tried
+so in the next attempt i tried
+so in the next attempt i tried
+to replace the starter character
+to replace the starter character
+to replace the starter character
+by going to start a player and creating
+by going to start a player and creating
+by going to start a player and creating
+model name starter character
+model name starter character
+model name starter character
+with a submarine so that model down
+with a submarine so that model down
+with a submarine so that model down
+there is just an example
+there is just an example
+there is just an example
+i had to use it to like copy into other
+i had to use it to like copy into other
+i had to use it to like copy into other
+places but this is our starter character
+places but this is our starter character
+places but this is our starter character
+you'll notice there is no humanoid so i
+you'll notice there is no humanoid so i
+you'll notice there is no humanoid so i
+had to do some pretty
+had to do some pretty
+had to do some pretty
+weird stuff to get the move direction
+weird stuff to get the move direction
+weird stuff to get the move direction
+but let me just show that back in
+but let me just show that back in
+but let me just show that back in
+starter player
+starter player
+starter player
+and this worked actually worked pretty
+and this worked actually worked pretty
+and this worked actually worked pretty
+well
+well
+well
+only problem is is it only worked half
+only problem is is it only worked half
+only problem is is it only worked half
+the time so you can see i'm here
+the time so you can see i'm here
+the time so you can see i'm here
+i can move around i can
+i can move around i can
+i can move around i can
+go forward i set speed
+go forward i set speed
+go forward i set speed
+and submarines in real life they have
+and submarines in real life they have
+and submarines in real life they have
+different throttle levels so you can
+different throttle levels so you can
+different throttle levels so you can
+basically
+basically
+basically
+like i i'm pressing f and g to change
+like i i'm pressing f and g to change
+like i i'm pressing f and g to change
+the throttle levels
+the throttle levels
+the throttle levels
+and they basically just
+set certain levels at which the speed
+set certain levels at which the speed
+set certain levels at which the speed
+should go and i'm using a vector force
+should go and i'm using a vector force
+should go and i'm using a vector force
+so all it does is set
+so all it does is set
+so all it does is set
+the speed oh well that happens sometimes
+the speed oh well that happens sometimes
+the speed oh well that happens sometimes
+because the map is very small
+but i'm using a vector force so whenever
+but i'm using a vector force so whenever
+but i'm using a vector force so whenever
+i press a key it sets like the speed to
+i press a key it sets like the speed to
+i press a key it sets like the speed to
+a certain amount
+a certain amount
+a certain amount
+but sometimes when you load in the
+but sometimes when you load in the
+but sometimes when you load in the
+submarine doesn't work
+submarine doesn't work
+submarine doesn't work
+of course while i'm recording it's not
+of course while i'm recording it's not
+of course while i'm recording it's not
+gonna go
+gonna go
+gonna go
+but occasionally the script just does
+but occasionally the script just does
+but occasionally the script just does
+not
+not
+not
+run which i'm not gonna give that to
+run which i'm not gonna give that to
+run which i'm not gonna give that to
+y'all it
+y'all it
+y'all it
+that's just a horrible problem
+that's just a horrible problem
+that's just a horrible problem
+and it makes playing around with this a
+and it makes playing around with this a
+and it makes playing around with this a
+lot harder than it needs to be
+lot harder than it needs to be
+lot harder than it needs to be
+obviously you can't see here but trust
+obviously you can't see here but trust
+obviously you can't see here but trust
+me while i was developing
+me while i was developing
+me while i was developing
+it happened way too much but since i was
+it happened way too much but since i was
+it happened way too much but since i was
+using the starter character without a
+using the starter character without a
+using the starter character without a
+humanoid
+humanoid
+humanoid
+and you'll know if you've ever played
+and you'll know if you've ever played
+and you'll know if you've ever played
+with the humanoid before there is a move
+with the humanoid before there is a move
+with the humanoid before there is a move
+direction
+direction
+direction
+variable which allows you to again
+variable which allows you to again
+variable which allows you to again
+detect the wasd
+detect the wasd
+detect the wasd
+movement from all platforms you
+movement from all platforms you
+movement from all platforms you
+can't really do that but you can
+can't really do that but you can
+can't really do that but you can
+actually do something like pretty hacky
+actually do something like pretty hacky
+actually do something like pretty hacky
+let me go find my code i haven't touched
+let me go find my code i haven't touched
+let me go find my code i haven't touched
+this in quite a while so
+this in quite a while so
+this in quite a while so
+we're just gonna see here we go
+so let me go down here
+here's what we want so we have
+here's what we want so we have
+here's what we want so we have
+controller get
+controller get
+controller get
+move vector and the controller
+move vector and the controller
+move vector and the controller
+is in player scripts so if we were to
+is in player scripts so if we were to
+is in player scripts so if we were to
+play this
+and if i go into my player scripts you
+and if i go into my player scripts you
+and if i go into my player scripts you
+can see
+can see
+can see
+in the player module there is a control
+in the player module there is a control
+in the player module there is a control
+module
+module
+module
+and this is to manage all the current
+and this is to manage all the current
+and this is to manage all the current
+character movements so you don't even
+character movements so you don't even
+character movements so you don't even
+need a character you even need a
+need a character you even need a
+need a character you even need a
+humanoid to get their move direction
+humanoid to get their move direction
+humanoid to get their move direction
+you can just call the active control
+you can just call the active control
+you can just call the active control
+module
+module
+module
+and you can call like get controls here
+and you can call like get controls here
+and you can call like get controls here
+and then go down to where you want the
+and then go down to where you want the
+and then go down to where you want the
+move vector and do control or get move
+move vector and do control or get move
+move vector and do control or get move
+vectors this
+vectors this
+vectors this
+will show you where the character is
+will show you where the character is
+will show you where the character is
+moving and if you want
+moving and if you want
+moving and if you want
+i also disabled it relative to the
+i also disabled it relative to the
+i also disabled it relative to the
+camera since
+camera since
+camera since
+you can turn but still be going forward
+you can turn but still be going forward
+you can turn but still be going forward
+in your submarine so
+in your submarine so
+in your submarine so
+we get the active controller we set the
+we get the active controller we set the
+we get the active controller we set the
+move is camera
+move is camera
+move is camera
+move vector is camera relative to false
+move vector is camera relative to false
+move vector is camera relative to false
+so you can do that
+so you can do that
+so you can do that
+if you want but overall this was
+if you want but overall this was
+if you want but overall this was
+mostly other than the fact
+mostly other than the fact
+mostly other than the fact
+that it didn't work
+that it didn't work
+that it didn't work
+half the time let me just try it one
+half the time let me just try it one
+half the time let me just try it one
+more time see if it does
+more time see if it does
+more time see if it does
+okay it's been working most of the time
+okay it's been working most of the time
+okay it's been working most of the time
+here but when i was developing
+here but when i was developing
+here but when i was developing
+it was not and that was for sure
+it was not and that was for sure
+it was not and that was for sure
+and so this leads me to another attempt
+and so this leads me to another attempt
+and so this leads me to another attempt
+where i tried to use like fully
+where i tried to use like fully
+where i tried to use like fully
+integrated robo
+integrated robo
+integrated robo
+with a bunch of sub modules to
+with a bunch of sub modules to
+with a bunch of sub modules to
+get the same result but i tried
+get the same result but i tried
+get the same result but i tried
+vehicle seats again so
+vehicle seats again so
+vehicle seats again so
+doing this with rojo was an absolute
+doing this with rojo was an absolute
+doing this with rojo was an absolute
+nightmare i don't know why i thought to
+nightmare i don't know why i thought to
+nightmare i don't know why i thought to
+myself to do this because you know
+myself to do this because you know
+myself to do this because you know
+there's continuous integration i can
+there's continuous integration i can
+there's continuous integration i can
+upload it to github
+upload it to github
+upload it to github
+but honestly doing a place was a lot
+but honestly doing a place was a lot
+but honestly doing a place was a lot
+easier
+easier
+easier
+and i ran into a bunch of issues
+and i ran into a bunch of issues
+and i ran into a bunch of issues
+and a bunch of them were related to the
+and a bunch of them were related to the
+and a bunch of them were related to the
+fact that i had to
+fact that i had to
+fact that i had to
+whenever i wanted to change the model in
+whenever i wanted to change the model in
+whenever i wanted to change the model in
+roblox studio i had to
+roblox studio i had to
+roblox studio i had to
+save it like right click save as our bx
+save it like right click save as our bx
+save it like right click save as our bx
+mx and then save it to the sub.rbx mx
+mx and then save it to the sub.rbx mx
+mx and then save it to the sub.rbx mx
+and it was such a long process i had to
+and it was such a long process i had to
+and it was such a long process i had to
+rebuild it every time
+rebuild it every time
+rebuild it every time
+which was horrible it took a long time
+which was horrible it took a long time
+which was horrible it took a long time
+and the actual project structure was
+and the actual project structure was
+and the actual project structure was
+just a mess
+just a mess
+just a mess
+because at this point in time i was
+because at this point in time i was
+because at this point in time i was
+convinced i was gonna
+convinced i was gonna
+convinced i was gonna
+get this entire thing into a single
+get this entire thing into a single
+get this entire thing into a single
+model so i could share it with everyone
+model so i could share it with everyone
+model so i could share it with everyone
+and i just realized that was not
+and i just realized that was not
+and i just realized that was not
+possible and but i still kept on trying
+possible and but i still kept on trying
+possible and but i still kept on trying
+i had a bunch of tests and i had a bunch
+i had a bunch of tests and i had a bunch
+i had a bunch of tests and i had a bunch
+of like weird injection
+of like weird injection
+of like weird injection
+things so i could update the model
+things so i could update the model
+things so i could update the model
+and it did not work and honestly this
+and it did not work and honestly this
+and it did not work and honestly this
+brings up another point
+brings up another point
+brings up another point
+see this row pid this is a module that
+see this row pid this is a module that
+see this row pid this is a module that
+i'm working on
+i'm working on
+i'm working on
+for roblox pid control just as like a
+for roblox pid control just as like a
+for roblox pid control just as like a
+little fun module that's pretty simple
+little fun module that's pretty simple
+little fun module that's pretty simple
+but it's pretty fun to build it was a
+but it's pretty fun to build it was a
+but it's pretty fun to build it was a
+nice test
+nice test
+nice test
+this also took a few days to get working
+this also took a few days to get working
+this also took a few days to get working
+because i tried using the automatic
+because i tried using the automatic
+because i tried using the automatic
+upload features
+upload features
+upload features
+that come with like rojo and it's
+that come with like rojo and it's
+that come with like rojo and it's
+like sister application remodel which
+like sister application remodel which
+like sister application remodel which
+allows you to like upload things to
+allows you to like upload things to
+allows you to like upload things to
+roblox
+roblox
+roblox
+and that just did not work took me a few
+and that just did not work took me a few
+and that just did not work took me a few
+hours
+hours
+hours
+i asked like in a discord server where
+i asked like in a discord server where
+i asked like in a discord server where
+all the people
+all the people
+all the people
+who created these modules are they said
+who created these modules are they said
+who created these modules are they said
+oh it's broken
+oh it's broken
+oh it's broken
+you have to wait for the next release to
+you have to wait for the next release to
+you have to wait for the next release to
+get it working
+get it working
+get it working
+and at that point i just gave up on all
+and at that point i just gave up on all
+and at that point i just gave up on all
+these features
+these features
+these features
+and tools are so new and i should have
+and tools are so new and i should have
+and tools are so new and i should have
+expected that none of them are like past
+expected that none of them are like past
+expected that none of them are like past
+alpha
+alpha
+alpha
+except maybe rojo itself that
+except maybe rojo itself that
+except maybe rojo itself that
+doing a fully integrated workflow like
+doing a fully integrated workflow like
+doing a fully integrated workflow like
+this just
+this just
+this just
+really is not ready
+really is not ready
+really is not ready
+but it doesn't save me that much time i
+but it doesn't save me that much time i
+but it doesn't save me that much time i
+can just upload this sort of thing
+can just upload this sort of thing
+can just upload this sort of thing
+manually
+manually
+manually
+so yeah overall this was a
+so yeah overall this was a
+so yeah overall this was a
+huge waste of time i thought to myself
+huge waste of time i thought to myself
+huge waste of time i thought to myself
+why am i using rojo why can't i just use
+why am i using rojo why can't i just use
+why am i using rojo why can't i just use
+roblox studio itself because rojo as it
+roblox studio itself because rojo as it
+roblox studio itself because rojo as it
+is good for
+is good for
+is good for
+a massive project and creating a
+a massive project and creating a
+a massive project and creating a
+organized massive project this is a
+organized massive project this is a
+organized massive project this is a
+simple prototype and prototypes should
+simple prototype and prototypes should
+simple prototype and prototypes should
+not
+not
+not
+take this much time and organization to
+take this much time and organization to
+take this much time and organization to
+make so that leads me
+make so that leads me
+make so that leads me
+into my final so this is my
+into my final so this is my
+into my final so this is my
+final attempt it's based on a little
+final attempt it's based on a little
+final attempt it's based on a little
+bigger map
+bigger map
+bigger map
+than the second attempt it has a nice
+than the second attempt it has a nice
+than the second attempt it has a nice
+little island
+little island
+little island
+it's pretty cute if you go over here
+it's pretty cute if you go over here
+it's pretty cute if you go over here
+off the coast there is your submarine
+off the coast there is your submarine
+off the coast there is your submarine
+and i made it a pretty interesting
+and i made it a pretty interesting
+and i made it a pretty interesting
+mechanism
+mechanism
+mechanism
+using proximity prompts so when i hold e
+using proximity prompts so when i hold e
+using proximity prompts so when i hold e
+i enter the submarine and i can exit
+i enter the submarine and i can exit
+i enter the submarine and i can exit
+again and it'll prompt me to get in so
+again and it'll prompt me to get in so
+again and it'll prompt me to get in so
+here we are i can use the same controls
+here we are i can use the same controls
+here we are i can use the same controls
+as for the
+as for the
+as for the
+second attempt for the submarine to
+second attempt for the submarine to
+second attempt for the submarine to
+drive around
+drive around
+drive around
+controls are quite janky especially when
+controls are quite janky especially when
+controls are quite janky especially when
+you
+you
+you
+flip because submarines are not supposed
+flip because submarines are not supposed
+flip because submarines are not supposed
+to flip
+to flip
+to flip
+like the top part supposed to stay up so
+like the top part supposed to stay up so
+like the top part supposed to stay up so
+when you try to flip
+when you try to flip
+when you try to flip
+it does some weird stuff but it does
+it does some weird stuff but it does
+it does some weird stuff but it does
+eventually level out
+eventually level out
+eventually level out
+and this whole like flipping thing uses
+and this whole like flipping thing uses
+and this whole like flipping thing uses
+my own
+my own
+my own
+custom pid module that i will make a
+custom pid module that i will make a
+custom pid module that i will make a
+video on in the future
+video on in the future
+video on in the future
+it's pretty cool it allows me to like
+it's pretty cool it allows me to like
+it's pretty cool it allows me to like
+realistically control
+realistically control
+realistically control
+the certain aspects of the sub you also
+the certain aspects of the sub you also
+the certain aspects of the sub you also
+notice there are propellers there are
+notice there are propellers there are
+notice there are propellers there are
+control surfaces here but
+control surfaces here but
+control surfaces here but
+i just was so burnt out with this
+i just was so burnt out with this
+i just was so burnt out with this
+project i just did not
+project i just did not
+project i just did not
+animate them probably could have if you
+animate them probably could have if you
+animate them probably could have if you
+want you can animate them
+want you can animate them
+want you can animate them
+because the systems in which they
+because the systems in which they
+because the systems in which they
+trigger are pretty
+trigger are pretty
+trigger are pretty
+self-explanatory and overall
+self-explanatory and overall
+self-explanatory and overall
+this does did work pretty well you can
+this does did work pretty well you can
+this does did work pretty well you can
+control buoyancy with q and e
+control buoyancy with q and e
+control buoyancy with q and e
+so if you hold e you go down if you hold
+so if you hold e you go down if you hold
+so if you hold e you go down if you hold
+q
+q
+q
+you go up and you can get out of the
+you go up and you can get out of the
+you go up and you can get out of the
+submarine
+submarine
+submarine
+it'll do its own thing and it's pretty
+it'll do its own thing and it's pretty
+it'll do its own thing and it's pretty
+cool
+cool
+cool
+and if we go into my code you have some
+and if we go into my code you have some
+and if we go into my code you have some
+code
+code
+code
+in the submarine itself and then some in
+in the submarine itself and then some in
+in the submarine itself and then some in
+starter player scripts and we have a ton
+starter player scripts and we have a ton
+starter player scripts and we have a ton
+of remote events
+of remote events
+of remote events
+to communicate between them
+to communicate between them
+to communicate between them
+our subscript has of course the row pid
+our subscript has of course the row pid
+our subscript has of course the row pid
+module
+module
+module
+that i was talking about earlier that's
+that i was talking about earlier that's
+that i was talking about earlier that's
+used to
+used to
+used to
+control the role when it flips up
+control the role when it flips up
+control the role when it flips up
+which is pretty nice it's cool module
+which is pretty nice it's cool module
+which is pretty nice it's cool module
+and then in the actual script itself
+and then in the actual script itself
+and then in the actual script itself
+it's not commented very well but it's
+it's not commented very well but it's
+it's not commented very well but it's
+pretty self-explanatory what's happening
+pretty self-explanatory what's happening
+pretty self-explanatory what's happening
+it's just a bunch of basic event
+it's just a bunch of basic event
+it's just a bunch of basic event
+connections
+connections
+connections
+and then onset throttle this is where
+and then onset throttle this is where
+and then onset throttle this is where
+you'd set the actual
+you'd set the actual
+you'd set the actual
+thing for the propellers in the back if
+thing for the propellers in the back if
+thing for the propellers in the back if
+you want that physical thing
+you want that physical thing
+you want that physical thing
+ballast actually uses it changes the
+ballast actually uses it changes the
+ballast actually uses it changes the
+density of the part
+density of the part
+density of the part
+which is pretty cool and then we have
+which is pretty cool and then we have
+which is pretty cool and then we have
+the enter and exit
+the enter and exit
+the enter and exit
+and we have to take
+and we have to take
+and we have to take
+the character and set every part to
+the character and set every part to
+the character and set every part to
+massless and that was the problem i was
+massless and that was the problem i was
+massless and that was the problem i was
+encountering earlier
+encountering earlier
+encountering earlier
+with the vehicle seat because in this
+with the vehicle seat because in this
+with the vehicle seat because in this
+example i do use a vehicle see
+example i do use a vehicle see
+example i do use a vehicle see
+it just makes it a lot easier i have to
+it just makes it a lot easier i have to
+it just makes it a lot easier i have to
+set the model massless
+set the model massless
+set the model massless
+so the character does not interfere with
+so the character does not interfere with
+so the character does not interfere with
+the actual
+the actual
+the actual
+submarine and its buoyancy and it
+submarine and its buoyancy and it
+submarine and its buoyancy and it
+actually works
+actually works
+actually works
+pretty well and this attempt turned out
+pretty well and this attempt turned out
+pretty well and this attempt turned out
+a lot better than i expected it to i was
+a lot better than i expected it to i was
+a lot better than i expected it to i was
+so burnt out at this point i just wanted
+so burnt out at this point i just wanted
+so burnt out at this point i just wanted
+to get something done
+to get something done
+to get something done
+and get a video out but turned out well
+and get a video out but turned out well
+and get a video out but turned out well
+you guys can play around with it if you
+you guys can play around with it if you
+you guys can play around with it if you
+want change some things
+want change some things
+want change some things
+fool around with the code whatever so
+fool around with the code whatever so
+fool around with the code whatever so
+that's about it
+that's about it
+that's about it
+for this video and the key takeaway
+for this video and the key takeaway
+for this video and the key takeaway
+is to find a balance between
+is to find a balance between
+is to find a balance between
+prototyping and project organization
+prototyping and project organization
+prototyping and project organization
+because i just did not do that and it
+because i just did not do that and it
+because i just did not do that and it
+took me
+took me
+took me
+so much longer than it should have to
+so much longer than it should have to
+so much longer than it should have to
+finish this project
+finish this project
+finish this project
+because i was too stuck up my ocd was
+because i was too stuck up my ocd was
+because i was too stuck up my ocd was
+like on fire
+like on fire
+like on fire
+with all of this and it's like because
+with all of this and it's like because
+with all of this and it's like because
+this project structure here is horrible
+this project structure here is horrible
+this project structure here is horrible
+like
+like
+like
+realistically i would have a script and
+realistically i would have a script and
+realistically i would have a script and
+service script service that
+service script service that
+service script service that
+creates new submarines depending on like
+creates new submarines depending on like
+creates new submarines depending on like
+where the spawn points are
+where the spawn points are
+where the spawn points are
+and i would use rojo like this is an
+and i would use rojo like this is an
+and i would use rojo like this is an
+actual game but this is a prototype
+actual game but this is a prototype
+actual game but this is a prototype
+i just want to get something working see
+i just want to get something working see
+i just want to get something working see
+if it's fun and you got to differentiate
+if it's fun and you got to differentiate
+if it's fun and you got to differentiate
+between prototypes and actual
+between prototypes and actual
+between prototypes and actual
+game development and i just did not do
+game development and i just did not do
+game development and i just did not do
+that in this project
+that in this project
+that in this project
+so keep that in mind and
+so keep that in mind and
+so keep that in mind and
+also submarines are pretty cool those
+also submarines are pretty cool those
+also submarines are pretty cool those
+are the cool
+are the cool
+are the cool
+these are the key takeaways from this
+these are the key takeaways from this
+these are the key takeaways from this
+video but
+video but
+video but
+if you enjoyed the video make sure to
+if you enjoyed the video make sure to
+if you enjoyed the video make sure to
+like and subscribe comment any questions
+like and subscribe comment any questions
+like and subscribe comment any questions
+or suggestions
+or suggestions
+or suggestions
+down below and join my discord server
+down below and join my discord server
+down below and join my discord server
+the link will be
+the link will be
+the link will be
+in the description but other than that i
+in the description but other than that i
+in the description but other than that i
+hope you have a nice day
+hope you have a nice day
+hope you have a nice day
+and goodbye
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+you

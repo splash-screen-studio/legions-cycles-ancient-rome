@@ -1,0 +1,1043 @@
+so in front of me i have a ballista
+so in front of me i have a ballista
+so in front of me i have a ballista
+that i made in a roblox studio
+that i made in a roblox studio
+that i made in a roblox studio
+and not only does this look like a
+and not only does this look like a
+and not only does this look like a
+ballista it also
+ballista it also
+ballista it also
+fires like a ballista
+and there is no artificial forces being
+and there is no artificial forces being
+and there is no artificial forces being
+applied to this bolt
+applied to this bolt
+applied to this bolt
+so all of the energy that it's
+so all of the energy that it's
+so all of the energy that it's
+generating is purely from
+generating is purely from
+generating is purely from
+the rope and the springs
+the rope and the springs
+the rope and the springs
+and my ballista and so the way i
+and my ballista and so the way i
+and my ballista and so the way i
+accomplish this
+accomplish this
+accomplish this
+is using a combination of many
+is using a combination of many
+is using a combination of many
+constraints such as springs
+constraints such as springs
+constraints such as springs
+ropes and a prismatic constraint and a
+ropes and a prismatic constraint and a
+ropes and a prismatic constraint and a
+few
+few
+few
+hinge constraints here and there
+hinge constraints here and there
+hinge constraints here and there
+and that led to this nice looking
+and that led to this nice looking
+and that led to this nice looking
+ballista
+ballista
+ballista
+that can shoot bolts pretty
+that can shoot bolts pretty
+that can shoot bolts pretty
+realistically
+realistically
+realistically
+so in this video i will show you the
+so in this video i will show you the
+so in this video i will show you the
+journey the struggles and the triumphs
+journey the struggles and the triumphs
+journey the struggles and the triumphs
+of making my very own ballista and
+of making my very own ballista and
+of making my very own ballista and
+roblox studio
+roblox studio
+roblox studio
+and if you enjoy make sure to like and
+and if you enjoy make sure to like and
+and if you enjoy make sure to like and
+subscribe
+subscribe
+subscribe
+but without further ado let's get into
+but without further ado let's get into
+but without further ado let's get into
+the video
+[Music]
+[Music]
+[Music]
+so a few weeks ago one of my subscribers
+so a few weeks ago one of my subscribers
+so a few weeks ago one of my subscribers
+dm
+dm
+dm
+me on discord asking how to make a
+me on discord asking how to make a
+me on discord asking how to make a
+realistic looking animation for a bow
+realistic looking animation for a bow
+realistic looking animation for a bow
+string
+string
+string
+for a bow that he was making so i helped
+for a bow that he was making so i helped
+for a bow that he was making so i helped
+him out by referring to
+him out by referring to
+him out by referring to
+him to a few constraints like a rope
+him to a few constraints like a rope
+him to a few constraints like a rope
+constraint or a prismatic constraint
+constraint or a prismatic constraint
+constraint or a prismatic constraint
+that could make the animation look
+that could make the animation look
+that could make the animation look
+realistic and have some physics
+realistic and have some physics
+realistic and have some physics
+but that got me thinking could i make a
+but that got me thinking could i make a
+but that got me thinking could i make a
+bow
+bow
+bow
+only using roblox constraints well
+only using roblox constraints well
+only using roblox constraints well
+there's one
+there's one
+there's one
+initial problem bows and crossbows in
+initial problem bows and crossbows in
+initial problem bows and crossbows in
+real life
+real life
+real life
+use something called a tension prod
+use something called a tension prod
+use something called a tension prod
+which is like the wooden part of a bow
+which is like the wooden part of a bow
+which is like the wooden part of a bow
+or a crossbow
+or a crossbow
+or a crossbow
+that bends like the material
+that bends like the material
+that bends like the material
+to generate the energy for the arrow to
+to generate the energy for the arrow to
+to generate the energy for the arrow to
+fly
+fly
+fly
+you can't do that in roblox because all
+you can't do that in roblox because all
+you can't do that in roblox because all
+parts are rigid
+parts are rigid
+parts are rigid
+there is no bending and you could not
+there is no bending and you could not
+there is no bending and you could not
+generate
+generate
+generate
+energy out of it but with a ballista
+energy out of it but with a ballista
+energy out of it but with a ballista
+there is not that problem so
+there is not that problem so
+there is not that problem so
+the ballista was developed by the
+the ballista was developed by the
+the ballista was developed by the
+ancient greeks
+ancient greeks
+ancient greeks
+and its use was to take out heavily
+and its use was to take out heavily
+and its use was to take out heavily
+armored personnel
+armored personnel
+armored personnel
+and it looked sort of like a crossbow
+and it looked sort of like a crossbow
+and it looked sort of like a crossbow
+but the biggest difference
+but the biggest difference
+but the biggest difference
+was the fact that let me just roll out
+was the fact that let me just roll out
+was the fact that let me just roll out
+its frame for a second
+its frame for a second
+its frame for a second
+this would be the barrel so to speak
+this would be the barrel so to speak
+this would be the barrel so to speak
+where the bolts would be loaded a
+where the bolts would be loaded a
+where the bolts would be loaded a
+ballista could launch either rocks
+ballista could launch either rocks
+ballista could launch either rocks
+or bolts with like iron tips so
+or bolts with like iron tips so
+or bolts with like iron tips so
+this is your little barrel unlike a
+this is your little barrel unlike a
+this is your little barrel unlike a
+crossbow crossbow would have like a
+crossbow crossbow would have like a
+crossbow crossbow would have like a
+little arch
+little arch
+little arch
+which is like your wood and it would get
+which is like your wood and it would get
+which is like your wood and it would get
+pulled back like by some strings like
+pulled back like by some strings like
+pulled back like by some strings like
+here and there
+here and there
+here and there
+a ballista uses two arms so let me just
+a ballista uses two arms so let me just
+a ballista uses two arms so let me just
+draw
+draw
+draw
+these arms this is from a top down view
+these arms this is from a top down view
+these arms this is from a top down view
+and there would be other structures
+and there would be other structures
+and there would be other structures
+connecting the arms to like a little
+connecting the arms to like a little
+connecting the arms to like a little
+base so let me just draw this base real
+base so let me just draw this base real
+base so let me just draw this base real
+quick
+quick
+quick
+there'd be a little base right here with
+there'd be a little base right here with
+there'd be a little base right here with
+some wheels underneath it
+some wheels underneath it
+some wheels underneath it
+so these arms maintained
+so these arms maintained
+so these arms maintained
+their energy or rather got their energy
+their energy or rather got their energy
+their energy or rather got their energy
+from some ropes that were tied in like a
+from some ropes that were tied in like a
+from some ropes that were tied in like a
+really weird way and they were called
+really weird way and they were called
+really weird way and they were called
+torsion springs and they consisted of
+torsion springs and they consisted of
+torsion springs and they consisted of
+several loops of twisted
+several loops of twisted
+several loops of twisted
+schemes so let me get a picture of a
+schemes so let me get a picture of a
+schemes so let me get a picture of a
+ballista real quick
+ballista real quick
+ballista real quick
+just to show you
+so here it is you can see that there is
+so here it is you can see that there is
+so here it is you can see that there is
+these little ropes either the skeins and
+these little ropes either the skeins and
+these little ropes either the skeins and
+when they go back
+when they go back
+when they go back
+it's really hard to pull it back but it
+it's really hard to pull it back but it
+it's really hard to pull it back but it
+creates
+creates
+creates
+potential energy that is then released
+potential energy that is then released
+potential energy that is then released
+when you release
+when you release
+when you release
+the string and the reason there's these
+the string and the reason there's these
+the string and the reason there's these
+little
+little
+little
+gears right here or crank so to speak
+gears right here or crank so to speak
+gears right here or crank so to speak
+is this is the winch for the ballista
+is this is the winch for the ballista
+is this is the winch for the ballista
+and it basically pulls back the rope
+and it basically pulls back the rope
+and it basically pulls back the rope
+because it's easier to pull back the
+because it's easier to pull back the
+because it's easier to pull back the
+rope with a winch
+rope with a winch
+rope with a winch
+than just like pulling it with your
+than just like pulling it with your
+than just like pulling it with your
+hands or something because this is
+hands or something because this is
+hands or something because this is
+pretty big
+pretty big
+pretty big
+and that allows you to bring the rope
+and that allows you to bring the rope
+and that allows you to bring the rope
+back you load the bolt and then you fire
+back you load the bolt and then you fire
+back you load the bolt and then you fire
+it
+it
+it
+so that's all fine but in roblox
+so that's all fine but in roblox
+so that's all fine but in roblox
+the rope physics aren't collidable so
+the rope physics aren't collidable so
+the rope physics aren't collidable so
+you i couldn't have any of those schemes
+you i couldn't have any of those schemes
+you i couldn't have any of those schemes
+or any of those things
+or any of those things
+or any of those things
+but what roblox does have that the
+but what roblox does have that the
+but what roblox does have that the
+ancient greeks did not
+ancient greeks did not
+ancient greeks did not
+are virtually indestructible springs
+are virtually indestructible springs
+are virtually indestructible springs
+so my idea was to make a
+so my idea was to make a
+so my idea was to make a
+somewhat invisible little part say going
+somewhat invisible little part say going
+somewhat invisible little part say going
+from here to here
+from here to here
+from here to here
+and this part would have springs
+and this part would have springs
+and this part would have springs
+let me get a different color real quick
+let me get a different color real quick
+let me get a different color real quick
+would have springs
+would have springs
+would have springs
+going from the arm to the invisible part
+going from the arm to the invisible part
+going from the arm to the invisible part
+on each side
+on each side
+on each side
+so when we were to take our ropes
+so when we were to take our ropes
+so when we were to take our ropes
+and draw them back so these are our
+and draw them back so these are our
+and draw them back so these are our
+ropes
+the springs would gain energy and once
+the springs would gain energy and once
+the springs would gain energy and once
+you reach
+you reach
+you reach
+the very back like right here you would
+the very back like right here you would
+the very back like right here you would
+release
+release
+release
+the springs and the ropes and you'd have
+the springs and the ropes and you'd have
+the springs and the ropes and you'd have
+your boat loaded and it would fly
+your boat loaded and it would fly
+your boat loaded and it would fly
+on the barrel and the bolt model
+on the barrel and the bolt model
+on the barrel and the bolt model
+would fly as well and the way we're
+would fly as well and the way we're
+would fly as well and the way we're
+keeping
+keeping
+keeping
+our model together is by using a
+our model together is by using a
+our model together is by using a
+prismatic constraint
+prismatic constraint
+prismatic constraint
+down the middle of our part and this
+down the middle of our part and this
+down the middle of our part and this
+keeps the ropes from messing up the part
+keeps the ropes from messing up the part
+keeps the ropes from messing up the part
+and keeps the springs from
+and keeps the springs from
+and keeps the springs from
+yanking the part in different ways so
+yanking the part in different ways so
+yanking the part in different ways so
+this was my idea
+this was my idea
+this was my idea
+and i went into roblox studio and got
+and i went into roblox studio and got
+and i went into roblox studio and got
+to work
+so i finished my first prototype of the
+so i finished my first prototype of the
+so i finished my first prototype of the
+ballista
+ballista
+ballista
+and i wrote a simple script to
+and i wrote a simple script to
+and i wrote a simple script to
+launch a brick at
+launch a brick at
+launch a brick at
+the wall and it's changed a little bit
+the wall and it's changed a little bit
+the wall and it's changed a little bit
+since the time lapse
+since the time lapse
+since the time lapse
+i added some wheels and i changed the
+i added some wheels and i changed the
+i added some wheels and i changed the
+bolt to just a simple part so i could
+bolt to just a simple part so i could
+bolt to just a simple part so i could
+test it
+test it
+test it
+and sometimes weird things happen
+and sometimes weird things happen
+and sometimes weird things happen
+because we are dealing with physics
+because we are dealing with physics
+because we are dealing with physics
+but basically what happens is the arms
+but basically what happens is the arms
+but basically what happens is the arms
+wind back you can see the springs
+wind back you can see the springs
+wind back you can see the springs
+attached to that part
+attached to that part
+attached to that part
+and the part does not have can collide
+and the part does not have can collide
+and the part does not have can collide
+on
+on
+on
+and then we load the bolt and then a
+and then we load the bolt and then a
+and then we load the bolt and then a
+little tiny part connected by the two
+little tiny part connected by the two
+little tiny part connected by the two
+ropes
+ropes
+ropes
+pushes the bolt as we release our
+pushes the bolt as we release our
+pushes the bolt as we release our
+prismatic constraint
+prismatic constraint
+prismatic constraint
+so our prismatic constraint rolls the
+so our prismatic constraint rolls the
+so our prismatic constraint rolls the
+little bolt pusher back and then we
+little bolt pusher back and then we
+little bolt pusher back and then we
+release it
+release it
+release it
+and this is all through setting the
+and this is all through setting the
+and this is all through setting the
+motor actuator type
+motor actuator type
+motor actuator type
+of our prismatic constraint it's pretty
+of our prismatic constraint it's pretty
+of our prismatic constraint it's pretty
+cool
+cool
+cool
+but now all that's left to do is to
+but now all that's left to do is to
+but now all that's left to do is to
+create a better model
+create a better model
+create a better model
+for my ballista and just do a little bit
+for my ballista and just do a little bit
+for my ballista and just do a little bit
+of polishing
+and here is the final product so we're
+and here is the final product so we're
+and here is the final product so we're
+just gonna go over
+just gonna go over
+just gonna go over
+how this works and what it's doing so
+how this works and what it's doing so
+how this works and what it's doing so
+as i showed in the little infographic at
+as i showed in the little infographic at
+as i showed in the little infographic at
+the beginning
+the beginning
+the beginning
+you have your two springs and they each
+you have your two springs and they each
+you have your two springs and they each
+have a lot of stiffness
+have a lot of stiffness
+have a lot of stiffness
+and you have your ropes and so i ran
+and you have your ropes and so i ran
+and you have your ropes and so i ran
+into a
+into a
+into a
+big problem when making this new
+big problem when making this new
+big problem when making this new
+ballista because
+ballista because
+ballista because
+the prismatic constraint down the middle
+the prismatic constraint down the middle
+the prismatic constraint down the middle
+this is what it's doing
+this is what it's doing
+this is what it's doing
+you can go back and forth was like
+you can go back and forth was like
+you can go back and forth was like
+glitching out and the ropes are like
+glitching out and the ropes are like
+glitching out and the ropes are like
+keeping it from going
+keeping it from going
+keeping it from going
+it like drawing all the way back but the
+it like drawing all the way back but the
+it like drawing all the way back but the
+real problem was
+real problem was
+real problem was
+is that the ropes were a little bit too
+is that the ropes were a little bit too
+is that the ropes were a little bit too
+short because i have to set a length
+short because i have to set a length
+short because i have to set a length
+like a certain value anson's ropes are a
+like a certain value anson's ropes are a
+like a certain value anson's ropes are a
+lot less flexible
+lot less flexible
+lot less flexible
+than springs even with their restitution
+than springs even with their restitution
+than springs even with their restitution
+turned to one
+turned to one
+turned to one
+i just had to make the ropes longer
+i just had to make the ropes longer
+i just had to make the ropes longer
+that's why they're sagging right here
+that's why they're sagging right here
+that's why they're sagging right here
+and just make the springs a lot stronger
+and just make the springs a lot stronger
+and just make the springs a lot stronger
+so it gives it more force and then we
+so it gives it more force and then we
+so it gives it more force and then we
+also have some wheels on hinges just so
+also have some wheels on hinges just so
+also have some wheels on hinges just so
+he can
+he can
+he can
+roll it's sort of can roll i'll show you
+roll it's sort of can roll i'll show you
+roll it's sort of can roll i'll show you
+in just a sec
+in just a sec
+in just a sec
+and you got in the back this is the part
+and you got in the back this is the part
+and you got in the back this is the part
+that you click
+that you click
+that you click
+to wind up the winch and shoot our
+to wind up the winch and shoot our
+to wind up the winch and shoot our
+ballista
+ballista
+ballista
+so here is a script for our ballista
+so here is a script for our ballista
+so here is a script for our ballista
+it's pretty simple let me just collapse
+it's pretty simple let me just collapse
+it's pretty simple let me just collapse
+everything to make it a little bit
+everything to make it a little bit
+everything to make it a little bit
+easier
+easier
+easier
+let's go down the very bottom this is
+let's go down the very bottom this is
+let's go down the very bottom this is
+where we start
+where we start
+where we start
+we basically have a debounce value when
+we basically have a debounce value when
+we basically have a debounce value when
+we click on this part
+we click on this part
+we click on this part
+and by the way this part is the part
+and by the way this part is the part
+and by the way this part is the part
+back here
+back here
+back here
+we check for d bounce if there's not d
+we check for d bounce if there's not d
+we check for d bounce if there's not d
+balance we fire our ballista
+balance we fire our ballista
+balance we fire our ballista
+and the fire function what it does is
+and the fire function what it does is
+and the fire function what it does is
+we change the prismatic constraint to a
+we change the prismatic constraint to a
+we change the prismatic constraint to a
+servo
+servo
+servo
+and the prismatic constraint is already
+and the prismatic constraint is already
+and the prismatic constraint is already
+preset to
+preset to
+preset to
+go to position zero
+go to position zero
+go to position zero
+and then what we do
+and then what we do
+and then what we do
+is we set the ad like the hinge
+is we set the ad like the hinge
+is we set the ad like the hinge
+actuator types of the winch things in
+actuator types of the winch things in
+actuator types of the winch things in
+the back
+the back
+the back
+just so it looks like we're like winding
+just so it looks like we're like winding
+just so it looks like we're like winding
+it back some cool animation
+it back some cool animation
+it back some cool animation
+and then we create the bolt
+and then we create the bolt
+and then we create the bolt
+we have to make sure to set the network
+we have to make sure to set the network
+we have to make sure to set the network
+owner of both the bolt and the ballista
+owner of both the bolt and the ballista
+owner of both the bolt and the ballista
+to the server and so this means that the
+to the server and so this means that the
+to the server and so this means that the
+ballista is fully simulated on the
+ballista is fully simulated on the
+ballista is fully simulated on the
+server so it doesn't lead to like
+server so it doesn't lead to like
+server so it doesn't lead to like
+glitches and
+glitches and
+glitches and
+whatnot with the physics and latency
+whatnot with the physics and latency
+whatnot with the physics and latency
+and then we put the bolt in the right
+and then we put the bolt in the right
+and then we put the bolt in the right
+position we wait a few seconds
+position we wait a few seconds
+position we wait a few seconds
+to get it into like this for it to
+to get it into like this for it to
+to get it into like this for it to
+settle down and then we
+settle down and then we
+settle down and then we
+fire our ballista and what happens
+fire our ballista and what happens
+fire our ballista and what happens
+when we fire our ballista is we
+when we fire our ballista is we
+when we fire our ballista is we
+every frame we check to see
+every frame we check to see
+every frame we check to see
+if a ray cast from the front of our
+if a ray cast from the front of our
+if a ray cast from the front of our
+ballista
+ballista
+ballista
+to like one stud ahead of it
+to like one stud ahead of it
+to like one stud ahead of it
+hit something if it does then
+hit something if it does then
+hit something if it does then
+we blow up our ballista you could also
+we blow up our ballista you could also
+we blow up our ballista you could also
+weld it to the part that it hits
+weld it to the part that it hits
+weld it to the part that it hits
+i think blowing it up looks cooler and
+i think blowing it up looks cooler and
+i think blowing it up looks cooler and
+even though that wouldn't happen in real
+even though that wouldn't happen in real
+even though that wouldn't happen in real
+life i still think it looks pretty cool
+life i still think it looks pretty cool
+life i still think it looks pretty cool
+and there's like if you like this
+and there's like if you like this
+and there's like if you like this
+function i tried to make it so you could
+function i tried to make it so you could
+function i tried to make it so you could
+move the ballista like with your
+move the ballista like with your
+move the ballista like with your
+character
+character
+character
+by like attaching to it but let me just
+by like attaching to it but let me just
+by like attaching to it but let me just
+show you real quick you can still move
+show you real quick you can still move
+show you real quick you can still move
+the ballista with your character to aim
+the ballista with your character to aim
+the ballista with your character to aim
+it but it's kind of hard since it's
+it but it's kind of hard since it's
+it but it's kind of hard since it's
+simulated by the server so like here's
+simulated by the server so like here's
+simulated by the server so like here's
+my ballista i can wind it back
+my ballista i can wind it back
+my ballista i can wind it back
+and there's a really weird problem where
+and there's a really weird problem where
+and there's a really weird problem where
+only on the first shot
+only on the first shot
+only on the first shot
+and only on the first shot will the
+and only on the first shot will the
+and only on the first shot will the
+rope bounce back but that's why i had to
+rope bounce back but that's why i had to
+rope bounce back but that's why i had to
+add
+add
+add
+like a 1.5 second delay instead of a one
+like a 1.5 second delay instead of a one
+like a 1.5 second delay instead of a one
+second delay but you can see i can sort
+second delay but you can see i can sort
+second delay but you can see i can sort
+of aim the ballista i can like move it
+of aim the ballista i can like move it
+of aim the ballista i can like move it
+around i can move it
+around i can move it
+around i can move it
+forward maybe sometimes i climb it by
+forward maybe sometimes i climb it by
+forward maybe sometimes i climb it by
+accident
+accident
+accident
+but you can still sort of move it and
+but you can still sort of move it and
+but you can still sort of move it and
+you can see when i click this
+you can see when i click this
+you can see when i click this
+it winds the ballista back and then
+it winds the ballista back and then
+it winds the ballista back and then
+fires the bolt
+fires the bolt
+fires the bolt
+forward and the bullet itself looks
+forward and the bullet itself looks
+forward and the bullet itself looks
+pretty simple
+pretty simple
+pretty simple
+all of those parts that you see there
+all of those parts that you see there
+all of those parts that you see there
+are just for show there is an invisible
+are just for show there is an invisible
+are just for show there is an invisible
+part
+part
+part
+just like the prototype the prototypes
+just like the prototype the prototypes
+just like the prototype the prototypes
+over there
+over there
+over there
+and we just fire our blistable
+and we just fire our blistable
+and we just fire our blistable
+at the wall and there's one more
+at the wall and there's one more
+at the wall and there's one more
+interesting to note
+interesting to note
+interesting to note
+is the fact that we have this little
+is the fact that we have this little
+is the fact that we have this little
+rope cylinder right here that
+rope cylinder right here that
+rope cylinder right here that
+also does nothing there's an invisible
+also does nothing there's an invisible
+also does nothing there's an invisible
+part here that pushes
+part here that pushes
+part here that pushes
+our bolt and you just don't see it
+our bolt and you just don't see it
+our bolt and you just don't see it
+because you just see the rope
+because you just see the rope
+because you just see the rope
+and that's just for show and then here's
+and that's just for show and then here's
+and that's just for show and then here's
+our wall that we're shooting at
+our wall that we're shooting at
+our wall that we're shooting at
+it's a massive wall every part is welded
+it's a massive wall every part is welded
+it's a massive wall every part is welded
+to each other and it just gives you a
+to each other and it just gives you a
+to each other and it just gives you a
+really cool playground
+really cool playground
+really cool playground
+to fire your ballista at
+to fire your ballista at
+to fire your ballista at
+and so that's basically it for our
+and so that's basically it for our
+and so that's basically it for our
+ballista and you can like fire at the
+ballista and you can like fire at the
+ballista and you can like fire at the
+wall
+wall
+wall
+and you can see the wall will slowly
+and you can see the wall will slowly
+and you can see the wall will slowly
+start breaking down
+start breaking down
+start breaking down
+and right now the ballista is isn't that
+and right now the ballista is isn't that
+and right now the ballista is isn't that
+powerful the bolts
+powerful the bolts
+powerful the bolts
+do not go that far but you can always
+do not go that far but you can always
+do not go that far but you can always
+edit that by changing the stiffness
+edit that by changing the stiffness
+edit that by changing the stiffness
+of your spring constraints
+of your spring constraints
+of your spring constraints
+so that is about it for this video i
+so that is about it for this video i
+so that is about it for this video i
+hope you guys
+hope you guys
+hope you guys
+enjoyed make sure to like and subscribe
+enjoyed make sure to like and subscribe
+enjoyed make sure to like and subscribe
+if you did and i will have a model
+if you did and i will have a model
+if you did and i will have a model
+download in the description
+download in the description
+download in the description
+if you want to play around with this
+if you want to play around with this
+if you want to play around with this
+ballista yourself
+ballista yourself
+ballista yourself
+but make sure to comment any questions
+but make sure to comment any questions
+but make sure to comment any questions
+or suggestions that you have
+or suggestions that you have
+or suggestions that you have
+and this video is a lot of fun to make
+and this video is a lot of fun to make
+and this video is a lot of fun to make
+so tell me if you like
+so tell me if you like
+so tell me if you like
+how i made this video like with all the
+how i made this video like with all the
+how i made this video like with all the
+parts and the time lapses and whatever
+parts and the time lapses and whatever
+parts and the time lapses and whatever
+but just a quick announcement i just
+but just a quick announcement i just
+but just a quick announcement i just
+started school again so my upload
+started school again so my upload
+started school again so my upload
+schedule is going to be
+schedule is going to be
+schedule is going to be
+a lot different than it has been for the
+a lot different than it has been for the
+a lot different than it has been for the
+past few months i'll
+past few months i'll
+past few months i'll
+hopefully get a video out once a week
+hopefully get a video out once a week
+hopefully get a video out once a week
+if not i'll try to get out like once
+if not i'll try to get out like once
+if not i'll try to get out like once
+every few weeks because i am
+every few weeks because i am
+every few weeks because i am
+a lot busier right now than i was in the
+a lot busier right now than i was in the
+a lot busier right now than i was in the
+summer
+summer
+summer
+but make sure to join my discord server
+but make sure to join my discord server
+but make sure to join my discord server
+if you want to keep in touch with me as
+if you want to keep in touch with me as
+if you want to keep in touch with me as
+well
+well
+well
+but other than that i hope you guys have
+but other than that i hope you guys have
+but other than that i hope you guys have
+a nice day and goodbye
+[Music]

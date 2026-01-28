@@ -1,0 +1,2528 @@
+skill trees are a part of a lot of games
+skill trees are a part of a lot of games
+skill trees are a part of a lot of games
+these days and they may seem
+these days and they may seem
+these days and they may seem
+intimidating to make in your own games
+intimidating to make in your own games
+intimidating to make in your own games
+but in this video I will show you how to
+but in this video I will show you how to
+but in this video I will show you how to
+make a skill tree where you can put
+make a skill tree where you can put
+make a skill tree where you can put
+different skills and like a chain of
+different skills and like a chain of
+different skills and like a chain of
+unlocks in which you can unlock them and
+unlocks in which you can unlock them and
+unlocks in which you can unlock them and
+eventually get those crazy skills at the
+eventually get those crazy skills at the
+eventually get those crazy skills at the
+end of the day so I'll be showing you a
+end of the day so I'll be showing you a
+end of the day so I'll be showing you a
+lot of server client interaction the
+lot of server client interaction the
+lot of server client interaction the
+basics of graph Theory because skill
+basics of graph Theory because skill
+basics of graph Theory because skill
+trees are little graphs and graphs are
+trees are little graphs and graphs are
+trees are little graphs and graphs are
+really important for computer science
+really important for computer science
+really important for computer science
+down the line if you want to get
+down the line if you want to get
+down the line if you want to get
+involved in it and just some like gooey
+involved in it and just some like gooey
+involved in it and just some like gooey
+interaction stuff as well this is a
+interaction stuff as well this is a
+interaction stuff as well this is a
+pretty Advanced video and it's a pretty
+pretty Advanced video and it's a pretty
+pretty Advanced video and it's a pretty
+long video but trust me you can get
+long video but trust me you can get
+long video but trust me you can get
+through it and it will be really cool at
+through it and it will be really cool at
+through it and it will be really cool at
+the end to see your finalize skill tree
+the end to see your finalize skill tree
+the end to see your finalize skill tree
+that you can put in your own game this
+that you can put in your own game this
+that you can put in your own game this
+is a really important video it covers a
+is a really important video it covers a
+is a really important video it covers a
+lot of a bunch of different concepts
+lot of a bunch of different concepts
+lot of a bunch of different concepts
+that I think are pretty important to
+that I think are pretty important to
+that I think are pretty important to
+your Development Career and career as a
+your Development Career and career as a
+your Development Career and career as a
+computer scientist so I would recommend
+computer scientist so I would recommend
+computer scientist so I would recommend
+that you watch the entire thing and
+that you watch the entire thing and
+that you watch the entire thing and
+maybe learn something from it and if you
+maybe learn something from it and if you
+maybe learn something from it and if you
+do make sure to like the video subscribe
+do make sure to like the video subscribe
+do make sure to like the video subscribe
+to my channel for more advanced Roblox
+to my channel for more advanced Roblox
+to my channel for more advanced Roblox
+scripting videos like this and without
+scripting videos like this and without
+scripting videos like this and without
+further Ado let's get
+started a skill tree in its most basic
+started a skill tree in its most basic
+started a skill tree in its most basic
+form is a graph and a graph is just a
+form is a graph and a graph is just a
+form is a graph and a graph is just a
+set of nodes or vertices they can be
+set of nodes or vertices they can be
+set of nodes or vertices they can be
+called a bunch of different things
+called a bunch of different things
+called a bunch of different things
+connected by some edges so in our case
+connected by some edges so in our case
+connected by some edges so in our case
+in our skill tree these edges are going
+in our skill tree these edges are going
+in our skill tree these edges are going
+to be directed and directed means that
+to be directed and directed means that
+to be directed and directed means that
+there's going to be like an arrow going
+there's going to be like an arrow going
+there's going to be like an arrow going
+from one node to
+from one node to
+from one node to
+another so this can be an example of a
+another so this can be an example of a
+another so this can be an example of a
+graph we can label it like
+graph we can label it like
+graph we can label it like
+a b and c and
+a b and c and
+a b and c and
+so thinking of a skill tree like a graph
+so thinking of a skill tree like a graph
+so thinking of a skill tree like a graph
+gives us a lot of different tools to
+gives us a lot of different tools to
+gives us a lot of different tools to
+help us reason about it because for one
+help us reason about it because for one
+help us reason about it because for one
+when you think about like normally like
+when you think about like normally like
+when you think about like normally like
+this is a pretty easy relationship to
+this is a pretty easy relationship to
+this is a pretty easy relationship to
+talk about this is like you know a leads
+talk about this is like you know a leads
+talk about this is like you know a leads
+to b b leads to C and like that makes
+to b b leads to C and like that makes
+to b b leads to C and like that makes
+sense but what happens when you have
+sense but what happens when you have
+sense but what happens when you have
+something like
+something like
+something like
+d and then maybe like e down
+d and then maybe like e down
+d and then maybe like e down
+here and let's say that a points to
+here and let's say that a points to
+here and let's say that a points to
+e and then E points to D but C also
+e and then E points to D but C also
+e and then E points to D but C also
+points to D now this relationship is a
+points to D now this relationship is a
+points to D now this relationship is a
+little hard hard to reason about but
+little hard hard to reason about but
+little hard hard to reason about but
+luckily by using graphs it makes
+luckily by using graphs it makes
+luckily by using graphs it makes
+everything pretty trivial so our plan
+everything pretty trivial so our plan
+everything pretty trivial so our plan
+for the skill tree is to create a graph
+for the skill tree is to create a graph
+for the skill tree is to create a graph
+where basically each of the skills is
+where basically each of the skills is
+where basically each of the skills is
+our nodes and each of the edges is like
+our nodes and each of the edges is like
+our nodes and each of the edges is like
+the prerequisites to unlock it so for
+the prerequisites to unlock it so for
+the prerequisites to unlock it so for
+example to unlock skill D you're going
+example to unlock skill D you're going
+example to unlock skill D you're going
+to need both e and c and these arrows
+to need both e and c and these arrows
+to need both e and c and these arrows
+kind of tell you what these are so now
+kind of tell you what these are so now
+kind of tell you what these are so now
+let's go into the code and kind of graph
+let's go into the code and kind of graph
+let's go into the code and kind of graph
+this whole idea out so now I'm in Roblox
+this whole idea out so now I'm in Roblox
+this whole idea out so now I'm in Roblox
+studio with a project setup now the only
+studio with a project setup now the only
+studio with a project setup now the only
+important thing you need to note is that
+important thing you need to note is that
+important thing you need to note is that
+I already have a skill tree goey in my
+I already have a skill tree goey in my
+I already have a skill tree goey in my
+project with a skill tree here let me
+project with a skill tree here let me
+project with a skill tree here let me
+make it visible this is a just a picture
+make it visible this is a just a picture
+make it visible this is a just a picture
+it's an image label um and there's a
+it's an image label um and there's a
+it's an image label um and there's a
+couple other aspects to it that I'll
+couple other aspects to it that I'll
+couple other aspects to it that I'll
+talk about a little bit later but
+talk about a little bit later but
+talk about a little bit later but
+basically this is like a Elemental skill
+basically this is like a Elemental skill
+basically this is like a Elemental skill
+tree so you have like the base this is
+tree so you have like the base this is
+tree so you have like the base this is
+like this is the base like root of the
+like this is the base like root of the
+like this is the base like root of the
+tree and you got water and fire
+tree and you got water and fire
+tree and you got water and fire
+and water points to ice and water also
+and water points to ice and water also
+and water points to ice and water also
+points to steam I know this is a
+points to steam I know this is a
+points to steam I know this is a
+horribly drawn steam icon I did it
+horribly drawn steam icon I did it
+horribly drawn steam icon I did it
+myself that's the issue but don't mind
+myself that's the issue but don't mind
+myself that's the issue but don't mind
+it and then steam leads to smoke now
+it and then steam leads to smoke now
+it and then steam leads to smoke now
+this relationship is kind of contrived
+this relationship is kind of contrived
+this relationship is kind of contrived
+like in an actual Skiller you'd probably
+like in an actual Skiller you'd probably
+like in an actual Skiller you'd probably
+want something a little bit smarter but
+want something a little bit smarter but
+want something a little bit smarter but
+for demonstration purposes this should
+for demonstration purposes this should
+for demonstration purposes this should
+work now I was thinking about uh making
+work now I was thinking about uh making
+work now I was thinking about uh making
+a script to procedurally generate this
+a script to procedurally generate this
+a script to procedurally generate this
+kind of image but upon my research most
+kind of image but upon my research most
+kind of image but upon my research most
+skill trees seem to be like handdrawn on
+skill trees seem to be like handdrawn on
+skill trees seem to be like handdrawn on
+and I think that's kind of like how most
+and I think that's kind of like how most
+and I think that's kind of like how most
+people would prefer it to happen so I'm
+people would prefer it to happen so I'm
+people would prefer it to happen so I'm
+going to leave it like that but if you
+going to leave it like that but if you
+going to leave it like that but if you
+guys would like to see a way to
+guys would like to see a way to
+guys would like to see a way to
+procedurally like generate this sort of
+procedurally like generate this sort of
+procedurally like generate this sort of
+skill tree then let me know but it
+skill tree then let me know but it
+skill tree then let me know but it
+definitely deserves its own video but
+definitely deserves its own video but
+definitely deserves its own video but
+for now make yourself some sort of like
+for now make yourself some sort of like
+for now make yourself some sort of like
+image or whatever to represent your
+image or whatever to represent your
+image or whatever to represent your
+skill tree and make the relationships
+skill tree and make the relationships
+skill tree and make the relationships
+then we can get going so going back
+then we can get going so going back
+then we can get going so going back
+to server script service we're going to
+to server script service we're going to
+to server script service we're going to
+make a module script and this is going
+make a module script and this is going
+make a module script and this is going
+to be our skill tree info so this module
+to be our skill tree info so this module
+to be our skill tree info so this module
+script I'm going to delete everything
+script I'm going to delete everything
+script I'm going to delete everything
+inside of it what it's basically going
+inside of it what it's basically going
+inside of it what it's basically going
+to be is just kind of like a reference
+to be is just kind of like a reference
+to be is just kind of like a reference
+to the information pertaining to our
+to the information pertaining to our
+to the information pertaining to our
+skill tree so all we're going to do is
+skill tree so all we're going to do is
+skill tree so all we're going to do is
+we're going to turn return a table and
+we're going to turn return a table and
+we're going to turn return a table and
+this table is going to contain all of
+this table is going to contain all of
+this table is going to contain all of
+like the stuff that we need for our
+like the stuff that we need for our
+like the stuff that we need for our
+treat so the first one I'm going to do
+treat so the first one I'm going to do
+treat so the first one I'm going to do
+is fire so fire I'm just going to say
+is fire so fire I'm just going to say
+is fire so fire I'm just going to say
+cost 3 point so points equals three and
+cost 3 point so points equals three and
+cost 3 point so points equals three and
+then the prerequisites so PRX meaning um
+then the prerequisites so PRX meaning um
+then the prerequisites so PRX meaning um
+like the things that you have to unlock
+like the things that you have to unlock
+like the things that you have to unlock
+before getting it so if you ever taken
+before getting it so if you ever taken
+before getting it so if you ever taken
+like classes that require prerequisites
+like classes that require prerequisites
+like classes that require prerequisites
+this is what what I'm referring to so
+this is what what I'm referring to so
+this is what what I'm referring to so
+this will have no PRX so each of our
+this will have no PRX so each of our
+this will have no PRX so each of our
+skills is going to have a points value
+skills is going to have a points value
+skills is going to have a points value
+which is how many skill points it'll
+which is how many skill points it'll
+which is how many skill points it'll
+take to unlock and we'll Implement that
+take to unlock and we'll Implement that
+take to unlock and we'll Implement that
+in just a second like skill points and
+in just a second like skill points and
+in just a second like skill points and
+then it'll also have a list of prxs so
+then it'll also have a list of prxs so
+then it'll also have a list of prxs so
+this is fire and then so you can see
+this is fire and then so you can see
+this is fire and then so you can see
+fire takes nothing because this is going
+fire takes nothing because this is going
+fire takes nothing because this is going
+to be unlocked by default we're just
+to be unlocked by default we're just
+to be unlocked by default we're just
+going to assume this is unlocked by
+going to assume this is unlocked by
+going to assume this is unlocked by
+default and then we need to graph out
+default and then we need to graph out
+default and then we need to graph out
+the rest of these now this is kind of
+the rest of these now this is kind of
+the rest of these now this is kind of
+like a verbose process so I'm going to
+like a verbose process so I'm going to
+like a verbose process so I'm going to
+go yoink my other my stuff from another
+go yoink my other my stuff from another
+go yoink my other my stuff from another
+screen and put it on here so this is all
+screen and put it on here so this is all
+screen and put it on here so this is all
+you
+you
+you
+need um and I will have all the code in
+need um and I will have all the code in
+need um and I will have all the code in
+the description so you guys can check it
+the description so you guys can check it
+the description so you guys can check it
+out if need be but when you make
+out if need be but when you make
+out if need be but when you make
+a uh skill with a prerequisite inside of
+a uh skill with a prerequisite inside of
+a uh skill with a prerequisite inside of
+the list you put a string with the name
+the list you put a string with the name
+the list you put a string with the name
+make sure this name matches the name of
+make sure this name matches the name of
+make sure this name matches the name of
+the actual like entry exactly so this
+the actual like entry exactly so this
+the actual like entry exactly so this
+water matches this water up here this
+water matches this water up here this
+water matches this water up here this
+steam matches this steam up here so this
+steam matches this steam up here so this
+steam matches this steam up here so this
+is how you will Define your skill tree
+is how you will Define your skill tree
+is how you will Define your skill tree
+and we're doing this in a separate file
+and we're doing this in a separate file
+and we're doing this in a separate file
+so that you know maybe like someone who
+so that you know maybe like someone who
+so that you know maybe like someone who
+doesn't actually code who's like a game
+doesn't actually code who's like a game
+doesn't actually code who's like a game
+balancer can tweak these values as they
+balancer can tweak these values as they
+balancer can tweak these values as they
+see fit but keep in mind that like if
+see fit but keep in mind that like if
+see fit but keep in mind that like if
+you change the pr Rex you're probably
+you change the pr Rex you're probably
+you change the pr Rex you're probably
+going to change the actual image for the
+going to change the actual image for the
+going to change the actual image for the
+skill tree but it's good to keep this in
+skill tree but it's good to keep this in
+skill tree but it's good to keep this in
+a separate file there almost acts like a
+a separate file there almost acts like a
+a separate file there almost acts like a
+Json file if You' done like web
+Json file if You' done like web
+Json file if You' done like web
+development before and it looks pretty
+development before and it looks pretty
+development before and it looks pretty
+similar too so this is all done also
+similar too so this is all done also
+similar too so this is all done also
+note that the trailing comma after the
+note that the trailing comma after the
+note that the trailing comma after the
+this doesn't actually matter you can
+this doesn't actually matter you can
+this doesn't actually matter you can
+have it you can not have it it's up to
+have it you can not have it it's up to
+have it you can not have it it's up to
+you really you should have it it's
+you really you should have it it's
+you really you should have it it's
+better practice but at the end of the
+better practice but at the end of the
+better practice but at the end of the
+day it don't really matter okay so let's
+day it don't really matter okay so let's
+day it don't really matter okay so let's
+go to our server script servers again
+go to our server script servers again
+go to our server script servers again
+and we can make a script and um I guess
+and we can make a script and um I guess
+and we can make a script and um I guess
+we can name the script this skill tree
+we can name the script this skill tree
+we can name the script this skill tree
+um what this will have is first we're
+um what this will have is first we're
+um what this will have is first we're
+going to start by setting up our player
+going to start by setting up our player
+going to start by setting up our player
+because every player when they join our
+because every player when they join our
+because every player when they join our
+game is going to have a set amount of
+game is going to have a set amount of
+game is going to have a set amount of
+skill points and you can obviously tweak
+skill points and you can obviously tweak
+skill points and you can obviously tweak
+this to your game as you see fit but for
+this to your game as you see fit but for
+this to your game as you see fit but for
+this example as I want a complete
+this example as I want a complete
+this example as I want a complete
+example that actually works out of the
+example that actually works out of the
+example that actually works out of the
+box we're going to set it up ourselves
+box we're going to set it up ourselves
+box we're going to set it up ourselves
+so first things first we're actually
+so first things first we're actually
+so first things first we're actually
+going to have to get our skill tree info
+going to have to get our skill tree info
+going to have to get our skill tree info
+module script by saying require script.
+module script by saying require script.
+module script by saying require script.
+parent. skill tree so and we also need
+parent. skill tree so and we also need
+parent. skill tree so and we also need
+to say local players equals game gets
+to say local players equals game gets
+to say local players equals game gets
+service players there we go because when
+service players there we go because when
+service players there we go because when
+each player joins we're going to set up
+each player joins we're going to set up
+each player joins we're going to set up
+their leader stats to make
+their leader stats to make
+their leader stats to make
+the skill points so this is a basic you
+the skill points so this is a basic you
+the skill points so this is a basic you
+know pattern in Roblox where
+know pattern in Roblox where
+know pattern in Roblox where
+we hook our player added to a new
+we hook our player added to a new
+we hook our player added to a new
+function and in this function we're
+function and in this function we're
+function and in this function we're
+going to say local leader
+going to say local leader
+going to say local leader
+stats
+stats
+stats
+equals instance. new folder and then
+equals instance. new folder and then
+equals instance. new folder and then
+leader stats. name is going to be equal
+leader stats. name is going to be equal
+leader stats. name is going to be equal
+to leader stats and then leader stats.
+to leader stats and then leader stats.
+to leader stats and then leader stats.
+parent is going to be equal to player so
+parent is going to be equal to player so
+parent is going to be equal to player so
+what this will do is this will make a
+what this will do is this will make a
+what this will do is this will make a
+leader stat folder in our player and
+leader stat folder in our player and
+leader stat folder in our player and
+that means any value that we add to this
+that means any value that we add to this
+that means any value that we add to this
+will appear in the leaderboard in the
+will appear in the leaderboard in the
+will appear in the leaderboard in the
+top right and I'll show you that in just
+top right and I'll show you that in just
+top right and I'll show you that in just
+a second but for now let's create our
+a second but for now let's create our
+a second but for now let's create our
+skill points by saying local skill
+skill points by saying local skill
+skill points by saying local skill
+points equals instance. new int value
+points equals instance. new int value
+points equals instance. new int value
+and then we'll say skill
+and then we'll say skill
+and then we'll say skill
+points. name equals skill points and
+points. name equals skill points and
+points. name equals skill points and
+just name it whatever we're going to do
+just name it whatever we're going to do
+just name it whatever we're going to do
+skill points.
+skill points.
+skill points.
+value and then for the value like in an
+value and then for the value like in an
+value and then for the value like in an
+actual game you set it zero and you get
+actual game you set it zero and you get
+actual game you set it zero and you get
+skill points through like killing
+skill points through like killing
+skill points through like killing
+enemies or whatnot but for us we're
+enemies or whatnot but for us we're
+enemies or whatnot but for us we're
+going to set it to 100 because I want
+going to set it to 100 because I want
+going to set it to 100 because I want
+skill points to start out so I can
+skill points to start out so I can
+skill points to start out so I can
+actually spend them but keep that in
+actually spend them but keep that in
+actually spend them but keep that in
+mind for your own game we're also going
+mind for your own game we're also going
+mind for your own game we're also going
+to set skill points. parent equal to
+to set skill points. parent equal to
+to set skill points. parent equal to
+leader stats and then there we go so we
+leader stats and then there we go so we
+leader stats and then there we go so we
+have the leader set set up let's just
+have the leader set set up let's just
+have the leader set set up let's just
+double check that they
+double check that they
+double check that they
+work no well they don't work because we
+work no well they don't work because we
+work no well they don't work because we
+required with invalid arguments um it's
+required with invalid arguments um it's
+required with invalid arguments um it's
+skill tree info here don't give me
+skill tree info here don't give me
+skill tree info here don't give me
+because the skill tree info is module
+because the skill tree info is module
+because the skill tree info is module
+script the skill tree is our actual
+script the skill tree is our actual
+script the skill tree is our actual
+script so let's run it
+script so let's run it
+script so let's run it
+again we have a 100 skill points in the
+again we have a 100 skill points in the
+again we have a 100 skill points in the
+top right that's why we put in leader
+top right that's why we put in leader
+top right that's why we put in leader
+stats okay we have that but also in
+stats okay we have that but also in
+stats okay we have that but also in
+addition to our skill points we're going
+addition to our skill points we're going
+addition to our skill points we're going
+to need something to actually store the
+to need something to actually store the
+to need something to actually store the
+skills so I'm going to be storing the
+skills so I'm going to be storing the
+skills so I'm going to be storing the
+skills in a so each player is going to
+skills in a so each player is going to
+skills in a so each player is going to
+be have their skills stored in a global
+be have their skills stored in a global
+be have their skills stored in a global
+uh table this going to be called player
+uh table this going to be called player
+uh table this going to be called player
+skills equals a blank table now in an
+skills equals a blank table now in an
+skills equals a blank table now in an
+actual game you would like this to be
+actual game you would like this to be
+actual game you would like this to be
+some sort of data data store or like
+some sort of data data store or like
+some sort of data data store or like
+connected to your data store somehow so
+connected to your data store somehow so
+connected to your data store somehow so
+it saves between sessions but for us
+it saves between sessions but for us
+it saves between sessions but for us
+that's outside the scope of this video
+that's outside the scope of this video
+that's outside the scope of this video
+if you want to see how to hook it up to
+if you want to see how to hook it up to
+if you want to see how to hook it up to
+a data store just let me know I also
+a data store just let me know I also
+a data store just let me know I also
+have a data store video that you can
+have a data store video that you can
+have a data store video that you can
+check out although it might be a little
+check out although it might be a little
+check out although it might be a little
+outdated at this point but there are
+outdated at this point but there are
+outdated at this point but there are
+good resources that on the Forum that
+good resources that on the Forum that
+good resources that on the Forum that
+I'll also put in the description for you
+I'll also put in the description for you
+I'll also put in the description for you
+to use but we can say player
+to use but we can say player
+to use but we can say player
+skills brackets player. user ID is equal
+skills brackets player. user ID is equal
+skills brackets player. user ID is equal
+to a blank list so what this does is
+to a blank list so what this does is
+to a blank list so what this does is
+every time a player joins a game it
+every time a player joins a game it
+every time a player joins a game it
+initializes their skills to a blank list
+initializes their skills to a blank list
+initializes their skills to a blank list
+and this means later down the line where
+and this means later down the line where
+and this means later down the line where
+we're trying to add skills to the player
+we're trying to add skills to the player
+we're trying to add skills to the player
+and the skills will be in form of just
+and the skills will be in form of just
+and the skills will be in form of just
+like a a list of strings we can just do
+like a a list of strings we can just do
+like a a list of strings we can just do
+that also if you if you plan to change
+that also if you if you plan to change
+that also if you if you plan to change
+the name of your skills I would
+the name of your skills I would
+the name of your skills I would
+recommend also having like an ID in here
+recommend also having like an ID in here
+recommend also having like an ID in here
+which is set to a number that you can
+which is set to a number that you can
+which is set to a number that you can
+change down the line but for us since
+change down the line but for us since
+change down the line but for us since
+this is small and like we know what our
+this is small and like we know what our
+this is small and like we know what our
+skills are we're just going to leave it
+skills are we're just going to leave it
+skills are we're just going to leave it
+as a name it just makes the code a
+as a name it just makes the code a
+as a name it just makes the code a
+little simpler but it should be
+little simpler but it should be
+little simpler but it should be
+relatively easy to adapt if you do that
+relatively easy to adapt if you do that
+relatively easy to adapt if you do that
+okay so now we have the setup done we
+okay so now we have the setup done we
+okay so now we have the setup done we
+now let's start making like the
+now let's start making like the
+now let's start making like the
+interaction between the server and
+interaction between the server and
+interaction between the server and
+client and the first thing we're going
+client and the first thing we're going
+client and the first thing we're going
+to do is create a remote function in
+to do is create a remote function in
+to do is create a remote function in
+replicated storage that's going to be
+replicated storage that's going to be
+replicated storage that's going to be
+called get skill tree info so will this
+called get skill tree info so will this
+called get skill tree info so will this
+is going to do is it's going to get each
+is going to do is it's going to get each
+is going to do is it's going to get each
+player's individual skill tree envelope
+player's individual skill tree envelope
+player's individual skill tree envelope
+because keep in mind if you have
+because keep in mind if you have
+because keep in mind if you have
+unlocked a skill like there's there's
+unlocked a skill like there's there's
+unlocked a skill like there's there's
+really nothing to do on the client like
+really nothing to do on the client like
+really nothing to do on the client like
+the client doesn't need that extra
+the client doesn't need that extra
+the client doesn't need that extra
+information so we're going to first
+information so we're going to first
+information so we're going to first
+start by making I guess first we need to
+start by making I guess first we need to
+start by making I guess first we need to
+get our skill tree info reference so
+get our skill tree info reference so
+get our skill tree info reference so
+we're going to say local get skill tree
+we're going to say local get skill tree
+we're going to say local get skill tree
+info equals game get service replicated
+info equals game get service replicated
+info equals game get service replicated
+storage do skill Tre info there we go so
+storage do skill Tre info there we go so
+storage do skill Tre info there we go so
+since this is a remote function we need
+since this is a remote function we need
+since this is a remote function we need
+the client's going to be like to
+the client's going to be like to
+the client's going to be like to
+retrieve a value that's why we use a
+retrieve a value that's why we use a
+retrieve a value that's why we use a
+remote function so we're going to say
+remote function so we're going to say
+remote function so we're going to say
+get skill tree info. on server inoke is
+get skill tree info. on server inoke is
+get skill tree info. on server inoke is
+going to equal a function with the
+going to equal a function with the
+going to equal a function with the
+player so notice how this is on server
+player so notice how this is on server
+player so notice how this is on server
+invoke equals because this is a remote
+invoke equals because this is a remote
+invoke equals because this is a remote
+function not a remote event because we
+function not a remote event because we
+function not a remote event because we
+want to a return return a value that's
+want to a return return a value that's
+want to a return return a value that's
+the reason we're using a remote function
+the reason we're using a remote function
+the reason we're using a remote function
+so inside of here we want to first get
+so inside of here we want to first get
+so inside of here we want to first get
+the player skills so the players
+the player skills so the players
+the player skills so the players
+currently like owned skills are going to
+currently like owned skills are going to
+currently like owned skills are going to
+be equal to player skills player. user
+be equal to player skills player. user
+be equal to player skills player. user
+ID because like this table is going to
+ID because like this table is going to
+ID because like this table is going to
+have a list of skills for each player
+have a list of skills for each player
+have a list of skills for each player
+keyed by their user ID and below that
+keyed by their user ID and below that
+keyed by their user ID and below that
+we're going to say local player skill
+we're going to say local player skill
+we're going to say local player skill
+info is going to be equal to nothing
+info is going to be equal to nothing
+info is going to be equal to nothing
+this is what we're going to populate to
+this is what we're going to populate to
+this is what we're going to populate to
+fill with all of the remaining skills
+fill with all of the remaining skills
+fill with all of the remaining skills
+that the player leads to unlock in their
+that the player leads to unlock in their
+that the player leads to unlock in their
+prerequisites so we're basically be
+prerequisites so we're basically be
+prerequisites so we're basically be
+copying like selectively copying the
+copying like selectively copying the
+copying like selectively copying the
+stuff from this list that they need
+stuff from this list that they need
+stuff from this list that they need
+because we don't need to send them extra
+because we don't need to send them extra
+because we don't need to send them extra
+information so we're going to say for
+information so we're going to say for
+information so we're going to say for
+name info in skill three info notice how
+name info in skill three info notice how
+name info in skill three info notice how
+we don't need to do pairs or I pairs
+we don't need to do pairs or I pairs
+we don't need to do pairs or I pairs
+that's old now Lu allows you to do this
+that's old now Lu allows you to do this
+that's old now Lu allows you to do this
+which is pretty cool we can say if not
+which is pretty cool we can say if not
+which is pretty cool we can say if not
+table. find skills name do or then then
+table. find skills name do or then then
+table. find skills name do or then then
+we can say player skill
+we can say player skill
+we can say player skill
+info brackets name equals info so what
+info brackets name equals info so what
+info brackets name equals info so what
+we're doing here is if we don't find the
+we're doing here is if we don't find the
+we're doing here is if we don't find the
+if we don't find like for example we
+if we don't find like for example we
+if we don't find like for example we
+don't find fire in the list of player
+don't find fire in the list of player
+don't find fire in the list of player
+skills then we can add it to their own
+skills then we can add it to their own
+skills then we can add it to their own
+skill info keyed by the name and the
+skill info keyed by the name and the
+skill info keyed by the name and the
+info is like just copying this stuff
+info is like just copying this stuff
+info is like just copying this stuff
+here because this is the name this is
+here because this is the name this is
+here because this is the name this is
+the info you copy that there to them in
+the info you copy that there to them in
+the info you copy that there to them in
+this new table and then we're just going
+this new table and then we're just going
+this new table and then we're just going
+to return this new
+to return this new
+to return this new
+table return
+table return
+table return
+player player skill
+player player skill
+player player skill
+info there we go
+info there we go
+info there we go
+so then on the client side we're going
+so then on the client side we're going
+so then on the client side we're going
+to want to create a new script or a new
+to want to create a new script or a new
+to want to create a new script or a new
+local
+local
+local
+script and we I call
+this
+this
+this
+local Scale
+local Scale
+local Scale
+tree and then in here we're going to get
+tree and then in here we're going to get
+tree and then in here we're going to get
+a couple of things so the way I have my
+a couple of things so the way I have my
+a couple of things so the way I have my
+setup is we have a skill tree toggle
+setup is we have a skill tree toggle
+setup is we have a skill tree toggle
+button which is parented directly to guy
+button which is parented directly to guy
+button which is parented directly to guy
+we have a skill tree image label which
+we have a skill tree image label which
+we have a skill tree image label which
+has the image in it then we have an
+has the image in it then we have an
+has the image in it then we have an
+unlock button parented to that and then
+unlock button parented to that and then
+unlock button parented to that and then
+inside of this we have
+inside of this we have
+inside of this we have
+the uh uh folder of node selectors these
+the uh uh folder of node selectors these
+the uh uh folder of node selectors these
+are buttons that are on top of the
+are buttons that are on top of the
+are buttons that are on top of the
+actual thing so when I make them visible
+actual thing so when I make them visible
+actual thing so when I make them visible
+see how they dim out the skills this
+see how they dim out the skills this
+see how they dim out the skills this
+will kind of be like the visual
+will kind of be like the visual
+will kind of be like the visual
+indicator to the player that like this
+indicator to the player that like this
+indicator to the player that like this
+skill is not unlocked you need to unlock
+skill is not unlocked you need to unlock
+skill is not unlocked you need to unlock
+it so my goal here is like when you
+it so my goal here is like when you
+it so my goal here is like when you
+click on the like dimmed out button it's
+click on the like dimmed out button it's
+click on the like dimmed out button it's
+going to change the text of this unlock
+going to change the text of this unlock
+going to change the text of this unlock
+button down here and when you unlock it
+button down here and when you unlock it
+button down here and when you unlock it
+it's just going to make it invisible so
+it's just going to make it invisible so
+it's just going to make it invisible so
+that should be what we want want to do
+that should be what we want want to do
+that should be what we want want to do
+and I also have this UI ratio aspect
+and I also have this UI ratio aspect
+and I also have this UI ratio aspect
+aspect ratio constra for the image label
+aspect ratio constra for the image label
+aspect ratio constra for the image label
+because you know so it scales um it's
+because you know so it scales um it's
+because you know so it scales um it's
+not perfect because uh this each of
+not perfect because uh this each of
+not perfect because uh this each of
+these buttons has a UI corner so if you
+these buttons has a UI corner so if you
+these buttons has a UI corner so if you
+see like it's not a true Circle but I'm
+see like it's not a true Circle but I'm
+see like it's not a true Circle but I'm
+going to be honest I don't really care
+going to be honest I don't really care
+going to be honest I don't really care
+that much having a almost circle is good
+that much having a almost circle is good
+that much having a almost circle is good
+enough I like the effect it's good
+enough I like the effect it's good
+enough I like the effect it's good
+enough so the goal here is depending on
+enough so the goal here is depending on
+enough so the goal here is depending on
+the information we get from the server
+the information we get from the server
+the information we get from the server
+we want to return or we want to like
+we want to return or we want to like
+we want to return or we want to like
+edit which ones are visible which ones
+edit which ones are visible which ones
+edit which ones are visible which ones
+are invisible based one based on which
+are invisible based one based on which
+are invisible based one based on which
+ones are unlocked and then also change
+ones are unlocked and then also change
+ones are unlocked and then also change
+the way or like what the buttons do
+the way or like what the buttons do
+the way or like what the buttons do
+because when this goes invisible we want
+because when this goes invisible we want
+because when this goes invisible we want
+to like make the button inert so it
+to like make the button inert so it
+to like make the button inert so it
+doesn't actually do anything so let's
+doesn't actually do anything so let's
+doesn't actually do anything so let's
+get this in code so you can stop hearing
+get this in code so you can stop hearing
+get this in code so you can stop hearing
+me yapping and start seeing actual code
+me yapping and start seeing actual code
+me yapping and start seeing actual code
+be put to use so we're also going to
+be put to use so we're also going to
+be put to use so we're also going to
+make this skill tree thing Invisible by
+make this skill tree thing Invisible by
+make this skill tree thing Invisible by
+default because we want to click on this
+default because we want to click on this
+default because we want to click on this
+button to unlock it so we're going to
+button to unlock it so we're going to
+button to unlock it so we're going to
+start by getting the frame so the skill
+start by getting the frame so the skill
+start by getting the frame so the skill
+tree frame which is equal to script.
+tree frame which is equal to script.
+tree frame which is equal to script.
+par. skill
+par. skill
+par. skill
+tree and then to say local node selector
+tree and then to say local node selector
+tree and then to say local node selector
+actually it's not really a frame it's
+actually it's not really a frame it's
+actually it's not really a frame it's
+probably an image label whatever it's
+probably an image label whatever it's
+probably an image label whatever it's
+same thing it's I can call it a frame
+same thing it's I can call it a frame
+same thing it's I can call it a frame
+we're going to say local node selector
+we're going to say local node selector
+we're going to say local node selector
+equals skill tree
+equals skill tree
+equals skill tree
+frame weight for
+frame weight for
+frame weight for
+child actually no um skill tree frame.
+child actually no um skill tree frame.
+child actually no um skill tree frame.
+node selectors and then local unlock
+node selectors and then local unlock
+node selectors and then local unlock
+button equals skill tree
+button equals skill tree
+button equals skill tree
+frame do unlock button and then the
+frame do unlock button and then the
+frame do unlock button and then the
+skill tree fugle will be equal
+skill tree fugle will be equal
+skill tree fugle will be equal
+to
+to
+to
+script. parent wait for
+script. parent wait for
+script. parent wait for
+child skill tree talk so just to be safe
+child skill tree talk so just to be safe
+child skill tree talk so just to be safe
+we're going to change the skill tree
+we're going to change the skill tree
+we're going to change the skill tree
+frame to be a wait for
+frame to be a wait for
+frame to be a wait for
+child not sure if it's needed but we're
+child not sure if it's needed but we're
+child not sure if it's needed but we're
+going to do it just in
+going to do it just in
+going to do it just in
+case and then we're also going to get
+case and then we're also going to get
+case and then we're also going to get
+the get skill tree info my God this is a
+the get skill tree info my God this is a
+the get skill tree info my God this is a
+mouthful uh function from replicated
+mouthful uh function from replicated
+mouthful uh function from replicated
+storage so game get service replicate
+storage so game get service replicate
+storage so game get service replicate
+storage. get skill Tre info there we go
+storage. get skill Tre info there we go
+storage. get skill Tre info there we go
+so we got all the stuff that we need for
+so we got all the stuff that we need for
+so we got all the stuff that we need for
+our client because we're going to need
+our client because we're going to need
+our client because we're going to need
+to unlock button later node selectors is
+to unlock button later node selectors is
+to unlock button later node selectors is
+just a folder of all of the buttons that
+just a folder of all of the buttons that
+just a folder of all of the buttons that
+are like the little gray pieces so I
+are like the little gray pieces so I
+are like the little gray pieces so I
+guess let me make it a little more clear
+guess let me make it a little more clear
+guess let me make it a little more clear
+you're not sure what I'm talking about
+you're not sure what I'm talking about
+you're not sure what I'm talking about
+the node selectors are just the gray
+the node selectors are just the gray
+the node selectors are just the gray
+portion like the semi visible portion on
+portion like the semi visible portion on
+portion like the semi visible portion on
+top of the gooey and again this stuff
+top of the gooey and again this stuff
+top of the gooey and again this stuff
+will be in the description so you can
+will be in the description so you can
+will be in the description so you can
+play around with it I know it's a lot
+play around with it I know it's a lot
+play around with it I know it's a lot
+but I want to get the actual coding
+but I want to get the actual coding
+but I want to get the actual coding
+content that's more important the gooey
+content that's more important the gooey
+content that's more important the gooey
+does take a while to make it's kind of
+does take a while to make it's kind of
+does take a while to make it's kind of
+annoying but like it's pretty simple so
+annoying but like it's pretty simple so
+annoying but like it's pretty simple so
+we're going to start by defining the
+we're going to start by defining the
+we're going to start by defining the
+local player skill tree inflow which is
+local player skill tree inflow which is
+local player skill tree inflow which is
+going to be the table that we're going
+going to be the table that we're going
+going to be the table that we're going
+to get from the
+to get from the
+to get from the
+server and then we're going to Define
+server and then we're going to Define
+server and then we're going to Define
+our current selection which is going to
+our current selection which is going to
+our current selection which is going to
+be equal to nil depending on like which
+be equal to nil depending on like which
+be equal to nil depending on like which
+skill we have selected so you're going
+skill we have selected so you're going
+skill we have selected so you're going
+to select a skill and the unlock button
+to select a skill and the unlock button
+to select a skill and the unlock button
+will reflect how much it costs and what
+will reflect how much it costs and what
+will reflect how much it costs and what
+skill it is and then now we're going to
+skill it is and then now we're going to
+skill it is and then now we're going to
+say skill tree toggle do
+say skill tree toggle do
+say skill tree toggle do
+activated connect a
+activated connect a
+activated connect a
+function and here where this is going to
+function and here where this is going to
+function and here where this is going to
+be where we flick on and off the gooey
+be where we flick on and off the gooey
+be where we flick on and off the gooey
+for the skill tree stuff we click this
+for the skill tree stuff we click this
+for the skill tree stuff we click this
+and the like menu appears and so we're
+and the like menu appears and so we're
+and the like menu appears and so we're
+going to say if not skill tree frame.
+going to say if not skill tree frame.
+going to say if not skill tree frame.
+visible then we're going to like set it
+visible then we're going to like set it
+visible then we're going to like set it
+up and then otherwise we're going to
+up and then otherwise we're going to
+up and then otherwise we're going to
+like clean it up but at the end of the
+like clean it up but at the end of the
+like clean it up but at the end of the
+day for both of these branches we're
+day for both of these branches we're
+day for both of these branches we're
+going to set skill tree frame. visible
+going to set skill tree frame. visible
+going to set skill tree frame. visible
+equal to not skill tree frame. visible
+equal to not skill tree frame. visible
+equal to not skill tree frame. visible
+so this will toggle the visibility of
+so this will toggle the visibility of
+so this will toggle the visibility of
+our frame so if it's not visible we want
+our frame so if it's not visible we want
+our frame so if it's not visible we want
+to do like the setup stuff for the skill
+to do like the setup stuff for the skill
+to do like the setup stuff for the skill
+tree so I'm going to make a local
+tree so I'm going to make a local
+tree so I'm going to make a local
+function say local function setup skill
+function say local function setup skill
+function say local function setup skill
+tree it's going to have no parameters
+tree it's going to have no parameters
+tree it's going to have no parameters
+and in here first of all we're going to
+and in here first of all we're going to
+and in here first of all we're going to
+retrieve the skill info from the server
+retrieve the skill info from the server
+retrieve the skill info from the server
+by saying get skill tree info invoke
+by saying get skill tree info invoke
+by saying get skill tree info invoke
+server that's all we need to do and this
+server that's all we need to do and this
+server that's all we need to do and this
+will retrieve our local players skill
+will retrieve our local players skill
+will retrieve our local players skill
+tree info which is great and then we're
+tree info which is great and then we're
+tree info which is great and then we're
+going to run through name info and
+going to run through name info and
+going to run through name info and
+player skill info just like we did on
+player skill info just like we did on
+player skill info just like we did on
+the server but here we're going to do is
+the server but here we're going to do is
+the server but here we're going to do is
+we're going to get the selector so
+we're going to get the selector so
+we're going to get the selector so
+notice how in the folder of node
+notice how in the folder of node
+notice how in the folder of node
+selectors I named each of these exactly
+selectors I named each of these exactly
+selectors I named each of these exactly
+the same as I did on the server with the
+the same as I did on the server with the
+the same as I did on the server with the
+like names up here and that's purposeful
+like names up here and that's purposeful
+like names up here and that's purposeful
+because they cover the thing that you're
+because they cover the thing that you're
+because they cover the thing that you're
+dealing with on the client like the just
+dealing with on the client like the just
+dealing with on the client like the just
+the local like image stuff so we're
+the local like image stuff so we're
+the local like image stuff so we're
+going to say node
+selectors um we're going to say local
+selectors um we're going to say local
+selectors um we're going to say local
+selector equals node selectors wait for
+selector equals node selectors wait for
+selector equals node selectors wait for
+child name so we're going to find the
+child name so we're going to find the
+child name so we're going to find the
+find the thing and then we're going to
+find the thing and then we're going to
+find the thing and then we're going to
+set selector do visible equal to true
+set selector do visible equal to true
+set selector do visible equal to true
+because if it's if it's in the player
+because if it's if it's in the player
+because if it's if it's in the player
+skill info like it's not unlocked so we
+skill info like it's not unlocked so we
+skill info like it's not unlocked so we
+need to cover it up with that selector
+need to cover it up with that selector
+need to cover it up with that selector
+button and also we need to do selector
+button and also we need to do selector
+button and also we need to do selector
+do
+do
+do
+activated connect a function where we're
+activated connect a function where we're
+activated connect a function where we're
+going to like once our selector is
+going to like once our selector is
+going to like once our selector is
+clicked we're going to set the current
+clicked we're going to set the current
+clicked we're going to set the current
+selection equal to the name so the
+selection equal to the name so the
+selection equal to the name so the
+current selection is a string it's just
+current selection is a string it's just
+current selection is a string it's just
+going to be the name of the current
+going to be the name of the current
+going to be the name of the current
+slate selected scale and we're also
+slate selected scale and we're also
+slate selected scale and we're also
+going to reflect that in the unlock
+going to reflect that in the unlock
+going to reflect that in the unlock
+button we're say unlock button. text
+button we're say unlock button. text
+button we're say unlock button. text
+equals string. format I'm just using
+equals string. format I'm just using
+equals string. format I'm just using
+string. format to make concatenation
+string. format to make concatenation
+string. format to make concatenation
+easier where say unlock or percent sign
+easier where say unlock or percent sign
+easier where say unlock or percent sign
+s I'm going to do percent sign i Points
+s I'm going to do percent sign i Points
+s I'm going to do percent sign i Points
+so and then we're going to just pass
+so and then we're going to just pass
+so and then we're going to just pass
+in name and then info. points so what
+in name and then info. points so what
+in name and then info. points so what
+we're doing here is string. format just
+we're doing here is string. format just
+we're doing here is string. format just
+takes in like we this little percent
+takes in like we this little percent
+takes in like we this little percent
+sign means like like a parameter is
+sign means like like a parameter is
+sign means like like a parameter is
+going to replace this so the name is
+going to replace this so the name is
+going to replace this so the name is
+going to replace our this thing right
+going to replace our this thing right
+going to replace our this thing right
+here and the I means like it's integer
+here and the I means like it's integer
+here and the I means like it's integer
+like for numbers and stuff so this is
+like for numbers and stuff so this is
+like for numbers and stuff so this is
+this little info. points is going to
+this little info. points is going to
+this little info. points is going to
+replace this uh percent I kind of thing
+replace this uh percent I kind of thing
+replace this uh percent I kind of thing
+here and then we're doing info. points
+here and then we're doing info. points
+here and then we're doing info. points
+that's going to be this value right here
+that's going to be this value right here
+that's going to be this value right here
+so it's going to be like you know all
+so it's going to be like you know all
+so it's going to be like you know all
+this stuff here
+this stuff here
+this stuff here
+and yeah so this should work out just
+and yeah so this should work out just
+and yeah so this should work out just
+fine but look at how we're creating a
+fine but look at how we're creating a
+fine but look at how we're creating a
+new um hook event connection every
+new um hook event connection every
+new um hook event connection every
+single time we open up our panel well we
+single time we open up our panel well we
+single time we open up our panel well we
+are when we run this so when we run this
+are when we run this so when we run this
+are when we run this so when we run this
+function in every single activation
+function in every single activation
+function in every single activation
+we're creating a new
+we're creating a new
+we're creating a new
+connection that's a memory leak we don't
+connection that's a memory leak we don't
+connection that's a memory leak we don't
+want that so we're going to have to do
+want that so we're going to have to do
+want that so we're going to have to do
+make a list of connections so we're
+make a list of connections so we're
+make a list of connections so we're
+going to say selector connections equals
+going to say selector connections equals
+going to say selector connections equals
+a blank table and then oh I spelled
+a blank table and then oh I spelled
+a blank table and then oh I spelled
+selector down here that's interesting
+selector down here that's interesting
+selector down here that's interesting
+there we go we fixed that but before
+there we go we fixed that but before
+there we go we fixed that but before
+this activated we want to say selector
+this activated we want to say selector
+this activated we want to say selector
+connections
+connections
+connections
+name equals
+name equals
+name equals
+this so it'll it'll add our connection
+this so it'll it'll add our connection
+this so it'll it'll add our connection
+to this list and then once we're done so
+to this list and then once we're done so
+to this list and then once we're done so
+if we don't if it is visible and we're
+if we don't if it is visible and we're
+if we don't if it is visible and we're
+like we're closing it we want to get rid
+like we're closing it we want to get rid
+like we're closing it we want to get rid
+of all of those connections so we're
+of all of those connections so we're
+of all of those connections so we're
+going to run through all of them we're
+going to run through all of them we're
+going to run through all of them we're
+going to say for underscore Con in
+going to say for underscore Con in
+going to say for underscore Con in
+selector connections do con
+selector connections do con
+selector connections do con
+disconnect and then we're going to call
+disconnect and then we're going to call
+disconnect and then we're going to call
+table.
+table.
+table.
+CLE on the selector connections so what
+CLE on the selector connections so what
+CLE on the selector connections so what
+we're doing here is basically just
+we're doing here is basically just
+we're doing here is basically just
+disconnecting all of our connections
+disconnecting all of our connections
+disconnecting all of our connections
+because we don't want a memory leak we
+because we don't want a memory leak we
+because we don't want a memory leak we
+don't want these running and being able
+don't want these running and being able
+don't want these running and being able
+to click in the background and it'll
+to click in the background and it'll
+to click in the background and it'll
+just it'll cause a whole bunch of issues
+just it'll cause a whole bunch of issues
+just it'll cause a whole bunch of issues
+we don't want that so we clean this up
+we don't want that so we clean this up
+we don't want that so we clean this up
+when we close it and realistically we
+when we close it and realistically we
+when we close it and realistically we
+don't have to do this at every single
+don't have to do this at every single
+don't have to do this at every single
+opening and closing of the gooey but
+opening and closing of the gooey but
+opening and closing of the gooey but
+just for like you know in case something
+just for like you know in case something
+just for like you know in case something
+goes wrong you want to just start fresh
+goes wrong you want to just start fresh
+goes wrong you want to just start fresh
+from the server you can just do this
+from the server you can just do this
+from the server you can just do this
+which I think is a good strategy just to
+which I think is a good strategy just to
+which I think is a good strategy just to
+make make sure every time you open and
+make make sure every time you open and
+make make sure every time you open and
+close it it'll be good to go so now we
+close it it'll be good to go so now we
+close it it'll be good to go so now we
+should be able to try it out let's see
+should be able to try it out let's see
+should be able to try it out let's see
+how it
+how it
+how it
+goes okay so we click this oh we didn't
+goes okay so we click this oh we didn't
+goes okay so we click this oh we didn't
+get it um I spelled activated wrong that
+get it um I spelled activated wrong that
+get it um I spelled activated wrong that
+is
+is
+is
+tough uh let's go back and fix it there
+tough uh let's go back and fix it there
+tough uh let's go back and fix it there
+we go remember to spell correctly kids
+we go remember to spell correctly kids
+we go remember to spell correctly kids
+and we click this we get it and we click
+and we click this we get it and we click
+and we click this we get it and we click
+on different things so we can see it has
+on different things so we can see it has
+on different things so we can see it has
+all the stuff so when we click on each
+all the stuff so when we click on each
+all the stuff so when we click on each
+button or each little roud on top of our
+button or each little roud on top of our
+button or each little roud on top of our
+skill it changes the text to the unlock
+skill it changes the text to the unlock
+skill it changes the text to the unlock
+thing and it all works out in the end
+thing and it all works out in the end
+thing and it all works out in the end
+cool now the next step is to actually
+cool now the next step is to actually
+cool now the next step is to actually
+make the unlock button do something so
+make the unlock button do something so
+make the unlock button do something so
+below our toggle we're going to say
+below our toggle we're going to say
+below our toggle we're going to say
+unlock button activated connect a
+unlock button activated connect a
+unlock button activated connect a
+function and then first of all we're
+function and then first of all we're
+function and then first of all we're
+going to say if not current selection
+going to say if not current selection
+going to say if not current selection
+then return because if we have nothing
+then return because if we have nothing
+then return because if we have nothing
+selected we obviously can't really
+selected we obviously can't really
+selected we obviously can't really
+unlock it so how are we going to do the
+unlock it so how are we going to do the
+unlock it so how are we going to do the
+unlock stuff so for that we're going to
+unlock stuff so for that we're going to
+unlock stuff so for that we're going to
+make a
+make a
+make a
+new um a new why am I trying to rename
+new um a new why am I trying to rename
+new um a new why am I trying to rename
+replicative storage a new remote
+replicative storage a new remote
+replicative storage a new remote
+function and this is going to be Nam try
+function and this is going to be Nam try
+function and this is going to be Nam try
+unlock skill so this is a remote
+unlock skill so this is a remote
+unlock skill so this is a remote
+function because we're going to return a
+function because we're going to return a
+function because we're going to return a
+bullan like success which is going to
+bullan like success which is going to
+bullan like success which is going to
+say whether or not the unlock was
+say whether or not the unlock was
+say whether or not the unlock was
+actually successful so the client's
+actually successful so the client's
+actually successful so the client's
+going to go petition the server say hey
+going to go petition the server say hey
+going to go petition the server say hey
+let's let's trying to unlock this and
+let's let's trying to unlock this and
+let's let's trying to unlock this and
+ser like okay we'll see and I'll say
+ser like okay we'll see and I'll say
+ser like okay we'll see and I'll say
+Okay return true it was good successful
+Okay return true it was good successful
+Okay return true it was good successful
+return false if it's not successful so
+return false if it's not successful so
+return false if it's not successful so
+we're going to first get it up top we're
+we're going to first get it up top we're
+we're going to first get it up top we're
+going to say local try unlock skill is
+going to say local try unlock skill is
+going to say local try unlock skill is
+going to be equal to game get service or
+going to be equal to game get service or
+going to be equal to game get service or
+replicate storage try unlock skill cool
+replicate storage try unlock skill cool
+replicate storage try unlock skill cool
+and
+and
+and
+then we're going to say local success
+then we're going to say local success
+then we're going to say local success
+equals unlock skill invoke server and
+equals unlock skill invoke server and
+equals unlock skill invoke server and
+we're going to send it the current
+we're going to send it the current
+we're going to send it the current
+selection so we're going to say hey
+selection so we're going to say hey
+selection so we're going to say hey
+we're going to try to unlock this
+we're going to try to unlock this
+we're going to try to unlock this
+current selection the string here and
+current selection the string here and
+current selection the string here and
+then it's going to give us a success
+then it's going to give us a success
+then it's going to give us a success
+Boolean I'm say if it's successful then
+Boolean I'm say if it's successful then
+Boolean I'm say if it's successful then
+we're going to say node
+we're going to say node
+we're going to say node
+selectors current
+selectors current
+selectors current
+selection visible equals false and then
+selection visible equals false and then
+selection visible equals false and then
+we're going to say selector
+we're going to say selector
+we're going to say selector
+connections current
+connections current
+connections current
+selection disconnect so what we're doing
+selection disconnect so what we're doing
+selection disconnect so what we're doing
+here here is if it's successful we take
+here here is if it's successful we take
+here here is if it's successful we take
+that specific no selector so let's just
+that specific no selector so let's just
+that specific no selector so let's just
+say we unlock fire let's make this
+say we unlock fire let's make this
+say we unlock fire let's make this
+visible we unlock fire and like okay we
+visible we unlock fire and like okay we
+visible we unlock fire and like okay we
+unlock fire but we don't need the Shroud
+unlock fire but we don't need the Shroud
+unlock fire but we don't need the Shroud
+over anymore so we just delete we delete
+over anymore so we just delete we delete
+over anymore so we just delete we delete
+that selector or we don't delete it we
+that selector or we don't delete it we
+that selector or we don't delete it we
+make it invisible and then we disconnect
+make it invisible and then we disconnect
+make it invisible and then we disconnect
+the the connection so that we can't
+the the connection so that we can't
+the the connection so that we can't
+click it and update the button any
+click it and update the button any
+click it and update the button any
+longer you could I guess delete it but I
+longer you could I guess delete it but I
+longer you could I guess delete it but I
+mean I don't know it's just like more
+mean I don't know it's just like more
+mean I don't know it's just like more
+destructive this is simpler it can lead
+destructive this is simpler it can lead
+destructive this is simpler it can lead
+if there's like an issue or something
+if there's like an issue or something
+if there's like an issue or something
+down the line like it'll the gooey will
+down the line like it'll the gooey will
+down the line like it'll the gooey will
+still work in the long run even though I
+still work in the long run even though I
+still work in the long run even though I
+don't think anx skill unlock should ever
+don't think anx skill unlock should ever
+don't think anx skill unlock should ever
+be revoked in a game but you know this
+be revoked in a game but you know this
+be revoked in a game but you know this
+is just a better a better Habit to get
+is just a better a better Habit to get
+is just a better a better Habit to get
+into I'd say so now we did this but now
+into I'd say so now we did this but now
+into I'd say so now we did this but now
+we need to implement this in the server
+we need to implement this in the server
+we need to implement this in the server
+so let's go to our server script and
+so let's go to our server script and
+so let's go to our server script and
+then up the top we obviously need to get
+then up the top we obviously need to get
+then up the top we obviously need to get
+it from replicated storage so try unlock
+it from replicated storage so try unlock
+it from replicated storage so try unlock
+skill we equal to game get service loate
+skill we equal to game get service loate
+skill we equal to game get service loate
+storage try unlock skill there we go now
+storage try unlock skill there we go now
+storage try unlock skill there we go now
+we need to say try unlock skill. on
+we need to say try unlock skill. on
+we need to say try unlock skill. on
+server invoke and equal to a function
+server invoke and equal to a function
+server invoke and equal to a function
+which takes in the player and now we
+which takes in the player and now we
+which takes in the player and now we
+also have another parameter the skill
+also have another parameter the skill
+also have another parameter the skill
+name which is going to be a string
+name which is going to be a string
+name which is going to be a string
+so first off we need to that we check if
+so first off we need to that we check if
+so first off we need to that we check if
+the skill name exists so if not skill
+the skill name exists so if not skill
+the skill name exists so if not skill
+name then return the this is just a good
+name then return the this is just a good
+name then return the this is just a good
+practice since we don't really know what
+practice since we don't really know what
+practice since we don't really know what
+the client will send to this because
+the client will send to this because
+the client will send to this because
+exploiters can like send some junk to it
+exploiters can like send some junk to it
+exploiters can like send some junk to it
+we want to make sure like if it doesn't
+we want to make sure like if it doesn't
+we want to make sure like if it doesn't
+exist if skill name like doesn't exist
+exist if skill name like doesn't exist
+exist if skill name like doesn't exist
+then we just kill it off the bat
+then we just kill it off the bat
+then we just kill it off the bat
+otherwise we're going to say local
+otherwise we're going to say local
+otherwise we're going to say local
+leader stats equals player and player
+leader stats equals player and player
+leader stats equals player and player
+find first
+find first
+find first
+child leader stats so this is another
+child leader stats so this is another
+child leader stats so this is another
+like defensive coding strategy we need
+like defensive coding strategy we need
+like defensive coding strategy we need
+to make
+to make
+to make
+sure the player exists and then we also
+sure the player exists and then we also
+sure the player exists and then we also
+need to check if it if leader stats
+need to check if it if leader stats
+need to check if it if leader stats
+exist using fine first J we don't know
+exist using fine first J we don't know
+exist using fine first J we don't know
+like something could have happened where
+like something could have happened where
+like something could have happened where
+it got deleted or like whatever we're
+it got deleted or like whatever we're
+it got deleted or like whatever we're
+going to say local skill
+going to say local skill
+going to say local skill
+points equals leader
+points equals leader
+points equals leader
+stats
+stats
+stats
+and leader stats find
+and leader stats find
+and leader stats find
+first child is not what I want to do
+first child is not what I want to do
+first child is not what I want to do
+find first
+find first
+find first
+child uh
+child uh
+child uh
+skill points and make sure this string
+skill points and make sure this string
+skill points and make sure this string
+in this fine for child is the same as
+in this fine for child is the same as
+in this fine for child is the same as
+this one up here be good to make a
+this one up here be good to make a
+this one up here be good to make a
+constant but you know whatever so why
+constant but you know whatever so why
+constant but you know whatever so why
+we're using and here is because this and
+we're using and here is because this and
+we're using and here is because this and
+Returns the first argument if it's false
+Returns the first argument if it's false
+Returns the first argument if it's false
+or the second one if it's true so and
+or the second one if it's true so and
+or the second one if it's true so and
+true and false in this case means exists
+true and false in this case means exists
+true and false in this case means exists
+so if the player exists if the player
+so if the player exists if the player
+so if the player exists if the player
+doesn't exist we return nothing and then
+doesn't exist we return nothing and then
+doesn't exist we return nothing and then
+if leader size doesn't exist we return
+if leader size doesn't exist we return
+if leader size doesn't exist we return
+like false or nil and then if it does
+like false or nil and then if it does
+like false or nil and then if it does
+exist we return this and we go here and
+exist we return this and we go here and
+exist we return this and we go here and
+then we go here so it's just like
+then we go here so it's just like
+then we go here so it's just like
+basically little tiny if statements if
+basically little tiny if statements if
+basically little tiny if statements if
+El statements with like nail and stuff
+El statements with like nail and stuff
+El statements with like nail and stuff
+but it's just simpler and like pleasing
+but it's just simpler and like pleasing
+but it's just simpler and like pleasing
+to the eye to put it this way and we're
+to the eye to put it this way and we're
+to the eye to put it this way and we're
+also going to do the same thing for cost
+also going to do the same thing for cost
+also going to do the same thing for cost
+like how many skill points will this
+like how many skill points will this
+like how many skill points will this
+cost is going to be equal to skill tree
+cost is going to be equal to skill tree
+cost is going to be equal to skill tree
+info skill name and skill tree info
+info skill name and skill tree info
+info skill name and skill tree info
+skill
+skill
+skill
+name dot points so theoretically
+name dot points so theoretically
+name dot points so theoretically
+actually with this line I think this is
+actually with this line I think this is
+actually with this line I think this is
+actually might be a little better since
+actually might be a little better since
+actually might be a little better since
+we're checking for a skill tree info
+we're checking for a skill tree info
+we're checking for a skill tree info
+skill name if skill name is nil this
+skill name if skill name is nil this
+skill name if skill name is nil this
+actually won't give us any anything and
+actually won't give us any anything and
+actually won't give us any anything and
+it'll short circuit
+so actually no it's good now
+so actually no it's good now
+so actually no it's good now
+um we can just delete this B Clause up
+um we can just delete this B Clause up
+um we can just delete this B Clause up
+here because you know we already handle
+here because you know we already handle
+here because you know we already handle
+it with this kind of like check here and
+it with this kind of like check here and
+it with this kind of like check here and
+you'll see why this is handled in a
+you'll see why this is handled in a
+you'll see why this is handled in a
+second when we make make the if
+second when we make make the if
+second when we make make the if
+statement but this is just the cost of
+statement but this is just the cost of
+statement but this is just the cost of
+number of skill points that our skill
+number of skill points that our skill
+number of skill points that our skill
+cost so we're going to say if skill
+cost so we're going to say if skill
+cost so we're going to say if skill
+points
+points
+points
+and cost
+and cost
+and cost
+so this cost also means that like skill
+so this cost also means that like skill
+so this cost also means that like skill
+tree info. name is or skill tree info
+tree info. name is or skill tree info
+tree info. name is or skill tree info
+skill name is actually exists so this
+skill name is actually exists so this
+skill name is actually exists so this
+this assumes this and you could
+this assumes this and you could
+this assumes this and you could
+obviously like replace that too but so
+obviously like replace that too but so
+obviously like replace that too but so
+we have the skill points and the cost
+we have the skill points and the cost
+we have the skill points and the cost
+then we can um like do something but we
+then we can um like do something but we
+then we can um like do something but we
+need to do some other checks before that
+need to do some other checks before that
+need to do some other checks before that
+so we need to make sure the and I'm
+so we need to make sure the and I'm
+so we need to make sure the and I'm
+making a Space here just because you'll
+making a Space here just because you'll
+making a Space here just because you'll
+see um we're going to say and skill
+see um we're going to say and skill
+see um we're going to say and skill
+points do value is greater than equal to
+points do value is greater than equal to
+points do value is greater than equal to
+cost um and this will make sure that our
+cost um and this will make sure that our
+cost um and this will make sure that our
+skill points our current skill points
+skill points our current skill points
+skill points our current skill points
+like the skill points of the player is
+like the skill points of the player is
+like the skill points of the player is
+greater than equal to cost and we also
+greater than equal to cost and we also
+greater than equal to cost and we also
+need to make sure that the skill that
+need to make sure that the skill that
+need to make sure that the skill that
+they're trying to unlock has the
+they're trying to unlock has the
+they're trying to unlock has the
+prerequisite satisfied so we need to do
+prerequisite satisfied so we need to do
+prerequisite satisfied so we need to do
+and satisfy pre Rex which will pass in
+and satisfy pre Rex which will pass in
+and satisfy pre Rex which will pass in
+the player and the skill tree
+the player and the skill tree
+the player and the skill tree
+info skill name do PRX
+info skill name do PRX
+info skill name do PRX
+PRX there you go so we need to make this
+PRX there you go so we need to make this
+PRX there you go so we need to make this
+function satisfy PRX is going to be a
+function satisfy PRX is going to be a
+function satisfy PRX is going to be a
+local
+local
+local
+function and all we're going to be be
+function and all we're going to be be
+function and all we're going to be be
+basically doing here
+is layer PRX is going
+is layer PRX is going
+is layer PRX is going
+through the skills of the or going
+through the skills of the or going
+through the skills of the or going
+through the pr Rex and making sure it's
+through the pr Rex and making sure it's
+through the pr Rex and making sure it's
+in the player skills so we're going to
+in the player skills so we're going to
+in the player skills so we're going to
+get our player skills first equal local
+get our player skills first equal local
+get our player skills first equal local
+skills is going to equal to player
+skills is going to equal to player
+skills is going to equal to player
+skills
+skills
+skills
+player
+player
+player
+. userid and then we're going to say
+. userid and then we're going to say
+. userid and then we're going to say
+foror name in PRX do we just use a
+foror name in PRX do we just use a
+foror name in PRX do we just use a
+underscore here by the way just because
+underscore here by the way just because
+underscore here by the way just because
+we don't care about the first value
+we don't care about the first value
+we don't care about the first value
+that's just the iteration number say if
+that's just the iteration number say if
+that's just the iteration number say if
+not table. find skill's name then return
+not table. find skill's name then return
+not table. find skill's name then return
+false and then if we get through it
+false and then if we get through it
+false and then if we get through it
+without returning false we return true
+without returning false we return true
+without returning false we return true
+so if we don't find the the actual skill
+so if we don't find the the actual skill
+so if we don't find the the actual skill
+in the prere in our player skill so if
+in the prere in our player skill so if
+in the prere in our player skill so if
+the player does not have this prere then
+the player does not have this prere then
+the player does not have this prere then
+we instantly abort we say hey you can't
+we instantly abort we say hey you can't
+we instantly abort we say hey you can't
+you can't get this return false and then
+you can't get this return false and then
+you can't get this return false and then
+otherwise if all these get through
+otherwise if all these get through
+otherwise if all these get through
+without triggering this return we just
+without triggering this return we just
+without triggering this return we just
+return True by default so now we say if
+return True by default so now we say if
+return True by default so now we say if
+skill points and cost if and and it
+skill points and cost if and and it
+skill points and cost if and and it
+satisfies the cost thing and we satisfy
+satisfies the cost thing and we satisfy
+satisfies the cost thing and we satisfy
+our three Rex we all satisfy all these
+our three Rex we all satisfy all these
+our three Rex we all satisfy all these
+things all these things exist everything
+things all these things exist everything
+things all these things exist everything
+is good and by the way this skillshare
+is good and by the way this skillshare
+is good and by the way this skillshare
+info skill name is guaranteed or prere
+info skill name is guaranteed or prere
+info skill name is guaranteed or prere
+are guaranteed to exist because costs
+are guaranteed to exist because costs
+are guaranteed to exist because costs
+exists you can make it more explicit by
+exists you can make it more explicit by
+exists you can make it more explicit by
+replacing this little block here down
+replacing this little block here down
+replacing this little block here down
+here but it's more characters I don't
+here but it's more characters I don't
+here but it's more characters I don't
+know do what you want but in this if
+know do what you want but in this if
+know do what you want but in this if
+statement we can say if not table.
+find
+layer actually we could add this to our
+layer actually we could add this to our
+layer actually we could add this to our
+big if statement we can say and not
+big if statement we can say and not
+big if statement we can say and not
+table. find player
+skills
+skills
+skills
+player. user
+ID skill name um so this accounts for
+ID skill name um so this accounts for
+ID skill name um so this accounts for
+the case where the player owns the skill
+the case where the player owns the skill
+the case where the player owns the skill
+if they own the skill we don't want to
+if they own the skill we don't want to
+if they own the skill we don't want to
+charge them twice so if and if the
+charge them twice so if and if the
+charge them twice so if and if the
+player doesn't already own the skill
+player doesn't already own the skill
+player doesn't already own the skill
+then we go down here and we say skill
+then we go down here and we say skill
+then we go down here and we say skill
+points.
+points.
+points.
+value minus equals cost so we deduct
+value minus equals cost so we deduct
+value minus equals cost so we deduct
+cost from the current player skill
+cost from the current player skill
+cost from the current player skill
+points we add that so we do table.
+points we add that so we do table.
+points we add that so we do table.
+insert player skills
+insert player skills
+insert player skills
+player. user
+player. user
+player. user
+ID skill name so we add the skill name
+ID skill name so we add the skill name
+ID skill name so we add the skill name
+to our list of skills that the player
+to our list of skills that the player
+to our list of skills that the player
+has and
+has and
+has and
+then we return true because it was
+then we return true because it was
+then we return true because it was
+successful and if all of this fails we
+successful and if all of this fails we
+successful and if all of this fails we
+return
+return
+return
+false so um sorry for the confusion up
+false so um sorry for the confusion up
+false so um sorry for the confusion up
+here I just realized I could simp my
+here I just realized I could simp my
+here I just realized I could simp my
+code further so we have to satisfy all
+code further so we have to satisfy all
+code further so we have to satisfy all
+of these requirements to get to the
+of these requirements to get to the
+of these requirements to get to the
+point where we can actually deduct our
+point where we can actually deduct our
+point where we can actually deduct our
+points and then like do the insertion so
+points and then like do the insertion so
+points and then like do the insertion so
+this adds the skill to this little table
+this adds the skill to this little table
+this adds the skill to this little table
+that we created earlier up here so now
+that we created earlier up here so now
+that we created earlier up here so now
+we have all this let's all that's left
+we have all this let's all that's left
+we have all this let's all that's left
+to do is try it out I guess let's do
+it okay Skill Tree open boom Fire cost
+it okay Skill Tree open boom Fire cost
+it okay Skill Tree open boom Fire cost
+three points unlock this boom three
+three points unlock this boom three
+three points unlock this boom three
+points is deducted that's great okay
+points is deducted that's great okay
+points is deducted that's great okay
+let's say let's we want to unlock smoke
+let's say let's we want to unlock smoke
+let's say let's we want to unlock smoke
+we can't do it it won't let us it keeps
+we can't do it it won't let us it keeps
+we can't do it it won't let us it keeps
+on returning false and because you know
+on returning false and because you know
+on returning false and because you know
+we don't have the satisfied prerequisite
+we don't have the satisfied prerequisite
+we don't have the satisfied prerequisite
+it and here we can try to unlock water
+it and here we can try to unlock water
+it and here we can try to unlock water
+that works unlock steam there we go
+that works unlock steam there we go
+that works unlock steam there we go
+unlock smoke boom and then if we open
+unlock smoke boom and then if we open
+unlock smoke boom and then if we open
+and close it again you see there is no
+and close it again you see there is no
+and close it again you see there is no
+shroud over it again we can unlock ice
+shroud over it again we can unlock ice
+shroud over it again we can unlock ice
+there we
+there we
+there we
+go that is absolutely wonderful and
+go that is absolutely wonderful and
+go that is absolutely wonderful and
+obviously like we still have this unlock
+obviously like we still have this unlock
+obviously like we still have this unlock
+ice like you can polish this up to as
+ice like you can polish this up to as
+ice like you can polish this up to as
+much as you wish but I hope I provided
+much as you wish but I hope I provided
+much as you wish but I hope I provided
+you the building blocks for your own
+you the building blocks for your own
+you the building blocks for your own
+skill tree system in your game and I
+skill tree system in your game and I
+skill tree system in your game and I
+know I was talking I felt I was talking
+know I was talking I felt I was talking
+know I was talking I felt I was talking
+pretty fast in this video but there's a
+pretty fast in this video but there's a
+pretty fast in this video but there's a
+lot of content to get through and this
+lot of content to get through and this
+lot of content to get through and this
+is still like 30 minutes long which is
+is still like 30 minutes long which is
+is still like 30 minutes long which is
+kind of crazy but there could be more
+kind of crazy but there could be more
+kind of crazy but there could be more
+like off sheet videos off this so if you
+like off sheet videos off this so if you
+like off sheet videos off this so if you
+want to see something else like maybe
+want to see something else like maybe
+want to see something else like maybe
+making a procedurally generated skill
+making a procedurally generated skill
+making a procedurally generated skill
+tree um like visualization instead of
+tree um like visualization instead of
+tree um like visualization instead of
+using like the image that I used today
+using like the image that I used today
+using like the image that I used today
+or something else along the lights of
+or something else along the lights of
+or something else along the lights of
+likes of that then just let me know but
+likes of that then just let me know but
+likes of that then just let me know but
+comment any questions the code will be
+comment any questions the code will be
+comment any questions the code will be
+in the description um and make sure to
+in the description um and make sure to
+in the description um and make sure to
+like And subscribe if you enjoy and that
+like And subscribe if you enjoy and that
+like And subscribe if you enjoy and that
+hope you have a nice day and
+hope you have a nice day and
+hope you have a nice day and
+[Music]
+[Music]
+[Music]
+goodbye

@@ -1,0 +1,889 @@
+you can't see anything
+you can't see anything
+you can't see anything
+underwater and for that matter you can't
+underwater and for that matter you can't
+underwater and for that matter you can't
+even use
+even use
+even use
+any other electromagnetic magnetic waves
+any other electromagnetic magnetic waves
+any other electromagnetic magnetic waves
+like
+like
+like
+radar or like x-ray if you really wanted
+radar or like x-ray if you really wanted
+radar or like x-ray if you really wanted
+to
+to
+to
+but you know what you can do you can
+but you know what you can do you can
+but you know what you can do you can
+hear you can hear very well
+hear you can hear very well
+hear you can hear very well
+underwater because of how dense and
+underwater because of how dense and
+underwater because of how dense and
+thick it is
+thick it is
+thick it is
+and submarines use this in a process
+and submarines use this in a process
+and submarines use this in a process
+called
+called
+called
+sonar to find enemy subs and
+sonar to find enemy subs and
+sonar to find enemy subs and
+torpedoes as we're making a submarine
+torpedoes as we're making a submarine
+torpedoes as we're making a submarine
+game
+game
+game
+i definitely needed to implement that in
+i definitely needed to implement that in
+i definitely needed to implement that in
+this video i'll show you my process of
+this video i'll show you my process of
+this video i'll show you my process of
+implementing sonar into my submarine
+implementing sonar into my submarine
+implementing sonar into my submarine
+game
+game
+game
+so make sure to like and subscribe if
+so make sure to like and subscribe if
+so make sure to like and subscribe if
+you enjoy the video and without further
+you enjoy the video and without further
+you enjoy the video and without further
+ado
+ado
+ado
+let's get started
+so the first order of business was to
+so the first order of business was to
+so the first order of business was to
+create
+create
+create
+a sound class that has an intensity
+a sound class that has an intensity
+a sound class that has an intensity
+and an instance that follows for
+and an instance that follows for
+and an instance that follows for
+other subs to listen in on and detect
+other subs to listen in on and detect
+other subs to listen in on and detect
+and the sonar that involves listening is
+and the sonar that involves listening is
+and the sonar that involves listening is
+called passive sonar
+called passive sonar
+called passive sonar
+so you can see on screen right now this
+so you can see on screen right now this
+so you can see on screen right now this
+little red bubble
+little red bubble
+little red bubble
+and that indicates the sound the sub is
+and that indicates the sound the sub is
+and that indicates the sound the sub is
+making
+making
+making
+when it's moving other actions that'll
+when it's moving other actions that'll
+when it's moving other actions that'll
+make sound
+make sound
+make sound
+include like firing a torpedo there's a
+include like firing a torpedo there's a
+include like firing a torpedo there's a
+pretty the torpedo itself will be very
+pretty the torpedo itself will be very
+pretty the torpedo itself will be very
+loud
+loud
+loud
+as the propeller cavitates a lot which
+as the propeller cavitates a lot which
+as the propeller cavitates a lot which
+is
+is
+is
+like it makes a lot of bubbles and just
+like it makes a lot of bubbles and just
+like it makes a lot of bubbles and just
+cause a lot of pressure changes which
+cause a lot of pressure changes which
+cause a lot of pressure changes which
+makes a lot of sounds
+makes a lot of sounds
+makes a lot of sounds
+and stuff like surfacing so like when
+and stuff like surfacing so like when
+and stuff like surfacing so like when
+you want to fire a missile that'll
+you want to fire a missile that'll
+you want to fire a missile that'll
+definitely create a lot of sound
+definitely create a lot of sound
+definitely create a lot of sound
+you can see the sub is detecting the
+you can see the sub is detecting the
+you can see the sub is detecting the
+other submarine it draws a line to it
+other submarine it draws a line to it
+other submarine it draws a line to it
+and also
+and also
+and also
+prints out some things to the console
+prints out some things to the console
+prints out some things to the console
+now in this implementation i did it
+now in this implementation i did it
+now in this implementation i did it
+incorrectly
+incorrectly
+incorrectly
+luckily my partner jason he corrected me
+luckily my partner jason he corrected me
+luckily my partner jason he corrected me
+and made the passive sonar work properly
+and made the passive sonar work properly
+and made the passive sonar work properly
+one other thing to note is that walls
+one other thing to note is that walls
+one other thing to note is that walls
+and other terrain obstructions do block
+and other terrain obstructions do block
+and other terrain obstructions do block
+sonar so i'm testing that right here
+sonar so i'm testing that right here
+sonar so i'm testing that right here
+along with passive sonar there's active
+along with passive sonar there's active
+along with passive sonar there's active
+sonar
+sonar
+sonar
+where the sub actively sends out a ping
+where the sub actively sends out a ping
+where the sub actively sends out a ping
+or a sound to receive
+or a sound to receive
+or a sound to receive
+a echo back to
+a echo back to
+a echo back to
+see where a target is this is similar to
+see where a target is this is similar to
+see where a target is this is similar to
+echolocation that like
+echolocation that like
+echolocation that like
+bats and dolphins use where you just
+bats and dolphins use where you just
+bats and dolphins use where you just
+kind of project a sound
+kind of project a sound
+kind of project a sound
+and wait for a response this allows you
+and wait for a response this allows you
+and wait for a response this allows you
+to get the exact
+to get the exact
+to get the exact
+distance of your target the one downside
+distance of your target the one downside
+distance of your target the one downside
+to using active sonar is the fact that
+to using active sonar is the fact that
+to using active sonar is the fact that
+other subs can hear it
+other subs can hear it
+other subs can hear it
+very vividly so you're very loud you can
+very vividly so you're very loud you can
+very vividly so you're very loud you can
+see
+see
+see
+the little yellow line in this example
+the little yellow line in this example
+the little yellow line in this example
+clip shows
+clip shows
+clip shows
+the active sonar in action when you
+the active sonar in action when you
+the active sonar in action when you
+press a button
+press a button
+press a button
+so a quick dive into the code reveals
+so a quick dive into the code reveals
+so a quick dive into the code reveals
+our
+our
+our
+sound class and our server all it does
+sound class and our server all it does
+sound class and our server all it does
+is basically create a sound attached to
+is basically create a sound attached to
+is basically create a sound attached to
+an instance
+an instance
+an instance
+and it gets that is positioned whenever
+and it gets that is positioned whenever
+and it gets that is positioned whenever
+we need it
+we need it
+we need it
+and also a duration and an intensity and
+and also a duration and an intensity and
+and also a duration and an intensity and
+those are pretty self-explanatory
+those are pretty self-explanatory
+those are pretty self-explanatory
+one other thing to note is that some
+one other thing to note is that some
+one other thing to note is that some
+sounds last
+sounds last
+sounds last
+for an infinite duration like when the
+for an infinite duration like when the
+for an infinite duration like when the
+sub starts driving around
+sub starts driving around
+sub starts driving around
+it doesn't just stop it doesn't stop
+it doesn't just stop it doesn't stop
+it doesn't just stop it doesn't stop
+after like five seconds it just starts
+after like five seconds it just starts
+after like five seconds it just starts
+and stops depending on how long
+and stops depending on how long
+and stops depending on how long
+the sub is driving so i have support
+the sub is driving so i have support
+the sub is driving so i have support
+for that as well and then sounds really
+for that as well and then sounds really
+for that as well and then sounds really
+aren't useful on their own where the
+aren't useful on their own where the
+aren't useful on their own where the
+real magic comes in is with the
+real magic comes in is with the
+real magic comes in is with the
+sonar service and this is created in
+sonar service and this is created in
+sonar service and this is created in
+conjunction with
+conjunction with
+conjunction with
+knit so it's a knit service
+knit so it's a knit service
+knit so it's a knit service
+and all we're doing here is basically
+and all we're doing here is basically
+and all we're doing here is basically
+registering our sounds when they
+registering our sounds when they
+registering our sounds when they
+are created and destroyed and
+are created and destroyed and
+are created and destroyed and
+we have this is detected function that's
+we have this is detected function that's
+we have this is detected function that's
+used by both
+used by both
+used by both
+the passive sonar and active sonar and
+the passive sonar and active sonar and
+the passive sonar and active sonar and
+all it does
+all it does
+all it does
+is a bunch of things
+is a bunch of things
+is a bunch of things
+checking the distance and then checking
+checking the distance and then checking
+checking the distance and then checking
+if it's obstructive
+if it's obstructive
+if it's obstructive
+and then also this very interesting
+and then also this very interesting
+and then also this very interesting
+thing is
+thing is
+thing is
+a sub cannot detect any sounds that are
+a sub cannot detect any sounds that are
+a sub cannot detect any sounds that are
+directly behind it because the point at
+directly behind it because the point at
+directly behind it because the point at
+which sonar
+which sonar
+which sonar
+is cast is at the very bow so in the
+is cast is at the very bow so in the
+is cast is at the very bow so in the
+back like where the propeller is
+back like where the propeller is
+back like where the propeller is
+you can't really see behind you so i'm
+you can't really see behind you so i'm
+you can't really see behind you so i'm
+using a quick dot product
+using a quick dot product
+using a quick dot product
+to just check if the sound is within the
+to just check if the sound is within the
+to just check if the sound is within the
+blind spot
+blind spot
+blind spot
+and that gives a lot of realism with a
+and that gives a lot of realism with a
+and that gives a lot of realism with a
+very small
+very small
+very small
+line of code that's also pretty cool
+line of code that's also pretty cool
+line of code that's also pretty cool
+and then they come actual components
+and then they come actual components
+and then they come actual components
+themselves
+themselves
+themselves
+are also quite simple the active sonar
+are also quite simple the active sonar
+are also quite simple the active sonar
+is just called
+is just called
+is just called
+by the client and this ping function all
+by the client and this ping function all
+by the client and this ping function all
+it does is just
+it does is just
+it does is just
+get all of the sounds and then
+get all of the sounds and then
+get all of the sounds and then
+we send it back to the client
+we send it back to the client
+we send it back to the client
+of all the subs that it detects and the
+of all the subs that it detects and the
+of all the subs that it detects and the
+passive sonar
+passive sonar
+passive sonar
+same kind of story it easily send our
+same kind of story it easily send our
+same kind of story it easily send our
+service and it gets all the playing
+service and it gets all the playing
+service and it gets all the playing
+sounds
+sounds
+sounds
+and it checks to see if it's actually
+and it checks to see if it's actually
+and it checks to see if it's actually
+valid using the is detected function
+valid using the is detected function
+valid using the is detected function
+and then brings it back to the client
+and then brings it back to the client
+and then brings it back to the client
+so that's all pretty simple a pretty
+so that's all pretty simple a pretty
+so that's all pretty simple a pretty
+elegant system as well
+elegant system as well
+elegant system as well
+all of the sonar systems are all good
+all of the sonar systems are all good
+all of the sonar systems are all good
+but when there's no ui interface to
+but when there's no ui interface to
+but when there's no ui interface to
+display them and just a bunch of
+display them and just a bunch of
+display them and just a bunch of
+random debug lines it doesn't really
+random debug lines it doesn't really
+random debug lines it doesn't really
+work that well
+work that well
+work that well
+so that's why i have this little ui
+so that's why i have this little ui
+so that's why i have this little ui
+system you can see everything that is
+system you can see everything that is
+system you can see everything that is
+green is passive sonar
+green is passive sonar
+green is passive sonar
+and the farther out it is the more the
+and the farther out it is the more the
+and the farther out it is the more the
+passive sonar like
+passive sonar like
+passive sonar like
+goofy fades and the active sonar is a
+goofy fades and the active sonar is a
+goofy fades and the active sonar is a
+nicer red and it tells you the exact
+nicer red and it tells you the exact
+nicer red and it tells you the exact
+distance in studs
+distance in studs
+distance in studs
+where the target is
+where the target is
+where the target is
+as well as that you can see torpedoes
+as well as that you can see torpedoes
+as well as that you can see torpedoes
+have a diamond around them to signify
+have a diamond around them to signify
+have a diamond around them to signify
+that they're not actual submarines
+that they're not actual submarines
+that they're not actual submarines
+because in real life it's pretty easy to
+because in real life it's pretty easy to
+because in real life it's pretty easy to
+tell the difference between a
+tell the difference between a
+tell the difference between a
+torpedo and a submarine on sonar so i
+torpedo and a submarine on sonar so i
+torpedo and a submarine on sonar so i
+implemented that as well
+implemented that as well
+implemented that as well
+overall i'm really happy with the system
+overall i'm really happy with the system
+overall i'm really happy with the system
+so now it's time to put it to the test i
+so now it's time to put it to the test i
+so now it's time to put it to the test i
+got my friends
+got my friends
+got my friends
+into a play test to completely and
+into a play test to completely and
+into a play test to completely and
+utterly break my game
+utterly break my game
+utterly break my game
+and test out the new features one thing
+and test out the new features one thing
+and test out the new features one thing
+to note i also added guided torpedoes
+to note i also added guided torpedoes
+to note i also added guided torpedoes
+i'm not sure if you noticed but that
+i'm not sure if you noticed but that
+i'm not sure if you noticed but that
+took me a little bit of time but
+took me a little bit of time but
+took me a little bit of time but
+it works very well with the sonar
+it works very well with the sonar
+it works very well with the sonar
+systems we have already
+systems we have already
+systems we have already
+and one issue we noticed is that
+and one issue we noticed is that
+and one issue we noticed is that
+whenever you were in the torpedo
+whenever you were in the torpedo
+whenever you were in the torpedo
+and then died your camera got really
+and then died your camera got really
+and then died your camera got really
+messed up but that should be an easy fix
+messed up but that should be an easy fix
+messed up but that should be an easy fix
+it is kind of a funny bug
+and the guided torpedoes are very fun to
+and the guided torpedoes are very fun to
+and the guided torpedoes are very fun to
+drive around
+drive around
+drive around
+and you can see right there an old name
+and you can see right there an old name
+and you can see right there an old name
+plate above the submarine that's because
+plate above the submarine that's because
+plate above the submarine that's because
+it's one of my teammates but since our
+it's one of my teammates but since our
+it's one of my teammates but since our
+play test was kind of small i left
+play test was kind of small i left
+play test was kind of small i left
+friendly fire on
+friendly fire on
+friendly fire on
+just for fun but the torpedoes
+just for fun but the torpedoes
+just for fun but the torpedoes
+themselves
+themselves
+themselves
+are quite slow so you have to either be
+are quite slow so you have to either be
+are quite slow so you have to either be
+like going
+like going
+like going
+opposite of them to get a good shot or
+opposite of them to get a good shot or
+opposite of them to get a good shot or
+just be really smart when you're driving
+just be really smart when you're driving
+just be really smart when you're driving
+to get a torpedo hit in the future we'll
+to get a torpedo hit in the future we'll
+to get a torpedo hit in the future we'll
+also have
+also have
+also have
+a homing mode for the torpedo so it
+a homing mode for the torpedo so it
+a homing mode for the torpedo so it
+doesn't require manual input all the
+doesn't require manual input all the
+doesn't require manual input all the
+time
+time
+time
+and you can see you can also see other
+and you can see you can also see other
+and you can see you can also see other
+torpedoes on sonar which is pretty
+torpedoes on sonar which is pretty
+torpedoes on sonar which is pretty
+cool and right now
+cool and right now
+cool and right now
+the whole scene of the fight turned into
+the whole scene of the fight turned into
+the whole scene of the fight turned into
+a chaotic mess one of my friends is
+a chaotic mess one of my friends is
+a chaotic mess one of my friends is
+still
+still
+still
+a dock and i send a torpedo up to them
+a dock and i send a torpedo up to them
+a dock and i send a torpedo up to them
+and my teammate is also sending a
+and my teammate is also sending a
+and my teammate is also sending a
+torpedo so i just kind of fly
+torpedo so i just kind of fly
+torpedo so i just kind of fly
+around and try to intercept his and one
+around and try to intercept his and one
+around and try to intercept his and one
+interesting thing
+interesting thing
+interesting thing
+that we figured out is you can actually
+that we figured out is you can actually
+that we figured out is you can actually
+pilot a torpedo after
+pilot a torpedo after
+pilot a torpedo after
+death which doesn't really make sense so
+death which doesn't really make sense so
+death which doesn't really make sense so
+i'll probably have to get rid of that
+i'll probably have to get rid of that
+i'll probably have to get rid of that
+too
+it's also very hard to dodge torpedoes
+it's also very hard to dodge torpedoes
+it's also very hard to dodge torpedoes
+but that's kind of intended
+but that's kind of intended
+but that's kind of intended
+you should really use your stealth and
+you should really use your stealth and
+you should really use your stealth and
+maybe a torpedo counter measure which
+maybe a torpedo counter measure which
+maybe a torpedo counter measure which
+i'll
+i'll
+i'll
+i'll be implementing in the future to
+i'll be implementing in the future to
+i'll be implementing in the future to
+avoid torpedoes you can see here
+avoid torpedoes you can see here
+avoid torpedoes you can see here
+it does work quite well as i get
+it does work quite well as i get
+it does work quite well as i get
+destroyed but
+destroyed but
+destroyed but
+i can use my passive an active sonar to
+i can use my passive an active sonar to
+i can use my passive an active sonar to
+see my death
+see my death
+see my death
+in full in the future we might also
+in full in the future we might also
+in full in the future we might also
+reduce
+reduce
+reduce
+the view like visibility for the
+the view like visibility for the
+the view like visibility for the
+submarines just to make sonar a little
+submarines just to make sonar a little
+submarines just to make sonar a little
+bit more important
+bit more important
+bit more important
+but i think it's a nice little balance
+but i think it's a nice little balance
+but i think it's a nice little balance
+right now
+right now
+right now
+as per usual with any play test we get
+as per usual with any play test we get
+as per usual with any play test we get
+an absolute
+an absolute
+an absolute
+ton of errors but luckily i can just
+ton of errors but luckily i can just
+ton of errors but luckily i can just
+copy them copy picture them put them in
+copy them copy picture them put them in
+copy them copy picture them put them in
+my handy trello board where
+my handy trello board where
+my handy trello board where
+we keep all of our tasks and
+we keep all of our tasks and
+we keep all of our tasks and
+try to fix it down the line as with the
+try to fix it down the line as with the
+try to fix it down the line as with the
+last play test and the last play test we
+last play test and the last play test we
+last play test and the last play test we
+had a ton of issues
+had a ton of issues
+had a ton of issues
+and i solved we solved basically all of
+and i solved we solved basically all of
+and i solved we solved basically all of
+them
+them
+them
+and it worked worked very very well
+and it worked worked very very well
+and it worked worked very very well
+and we also completely reworked the
+and we also completely reworked the
+and we also completely reworked the
+movement of the subs
+movement of the subs
+movement of the subs
+it's a lot more snappy and responsive
+it's a lot more snappy and responsive
+it's a lot more snappy and responsive
+now and less sluggish
+now and less sluggish
+now and less sluggish
+and it looks a lot better and plays a
+and it looks a lot better and plays a
+and it looks a lot better and plays a
+lot better my friends were
+lot better my friends were
+lot better my friends were
+very satisfied with the way you can move
+very satisfied with the way you can move
+very satisfied with the way you can move
+around and control where your sub is
+around and control where your sub is
+around and control where your sub is
+going
+and that's about it for this video so
+and that's about it for this video so
+and that's about it for this video so
+far
+far
+far
+this game has been an absolute joy to
+this game has been an absolute joy to
+this game has been an absolute joy to
+work on
+work on
+work on
+especially since i'm not doing the solo
+especially since i'm not doing the solo
+especially since i'm not doing the solo
+my partner is handling all the models
+my partner is handling all the models
+my partner is handling all the models
+and a lot of the scripting
+and a lot of the scripting
+and a lot of the scripting
+with me to make this game as good as it
+with me to make this game as good as it
+with me to make this game as good as it
+is
+is
+is
+so far he also has all the technical
+so far he also has all the technical
+so far he also has all the technical
+knowledge so i don't really have to do
+knowledge so i don't really have to do
+knowledge so i don't really have to do
+any research
+any research
+any research
+i just use him to give me all of the
+i just use him to give me all of the
+i just use him to give me all of the
+answers in terms of
+answers in terms of
+answers in terms of
+how some range should work but we're
+how some range should work but we're
+how some range should work but we're
+also giving it a kind of arcade feel
+also giving it a kind of arcade feel
+also giving it a kind of arcade feel
+so this play test was very successful
+so this play test was very successful
+so this play test was very successful
+there's a couple bugs that i have to fix
+there's a couple bugs that i have to fix
+there's a couple bugs that i have to fix
+but as per usual i can do that and
+but as per usual i can do that and
+but as per usual i can do that and
+up next i think we need to
+up next i think we need to
+up next i think we need to
+start implementing an actual game loop
+start implementing an actual game loop
+start implementing an actual game loop
+for the game to be played
+for the game to be played
+for the game to be played
+on so stay tuned for that but it will be
+on so stay tuned for that but it will be
+on so stay tuned for that but it will be
+hard to
+hard to
+hard to
+get devlogs out as regular as i have
+get devlogs out as regular as i have
+get devlogs out as regular as i have
+been
+been
+been
+because i'm starting school and i have a
+because i'm starting school and i have a
+because i'm starting school and i have a
+bunch of other things in my life going
+bunch of other things in my life going
+bunch of other things in my life going
+on
+on
+on
+so i won't have that much time to
+so i won't have that much time to
+so i won't have that much time to
+develop
+develop
+develop
+but my partner is not so hindered he
+but my partner is not so hindered he
+but my partner is not so hindered he
+is working all the time on really cool
+is working all the time on really cool
+is working all the time on really cool
+stuff
+stuff
+stuff
+he's been working on the cruise missiles
+he's been working on the cruise missiles
+he's been working on the cruise missiles
+and that is
+and that is
+and that is
+really cool you can see a clip of it
+really cool you can see a clip of it
+really cool you can see a clip of it
+right here
+right here
+right here
+and i'm really excited for that so like
+and i'm really excited for that so like
+and i'm really excited for that so like
+the video if you enjoyed subscribe to my
+the video if you enjoyed subscribe to my
+the video if you enjoyed subscribe to my
+channel
+channel
+channel
+for more submarine warfare content but
+for more submarine warfare content but
+for more submarine warfare content but
+other than that i hope you have a nice
+other than that i hope you have a nice
+other than that i hope you have a nice
+day
+day
+day
+and goodbye
+[Music]
+you

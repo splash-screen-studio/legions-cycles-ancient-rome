@@ -1,0 +1,1314 @@
+have y all ever heard what recursion is
+have y all ever heard what recursion is
+have y all ever heard what recursion is
+and some like Forum discussion or some
+and some like Forum discussion or some
+and some like Forum discussion or some
+programming thing because it's often
+programming thing because it's often
+programming thing because it's often
+perceived as hard or difficult to learn
+perceived as hard or difficult to learn
+perceived as hard or difficult to learn
+and like this like voodoo magic but in
+and like this like voodoo magic but in
+and like this like voodoo magic but in
+this video I'm going to teach you how to
+this video I'm going to teach you how to
+this video I'm going to teach you how to
+do some basic recursion and at the end
+do some basic recursion and at the end
+do some basic recursion and at the end
+we're going to make this pretty fractal
+we're going to make this pretty fractal
+we're going to make this pretty fractal
+tree that is only possible with the
+tree that is only possible with the
+tree that is only possible with the
+power of recursion it's a great
+power of recursion it's a great
+power of recursion it's a great
+programming technique basically just
+programming technique basically just
+programming technique basically just
+functions calling themselves and it's
+functions calling themselves and it's
+functions calling themselves and it's
+very cool very crucial for programming
+very cool very crucial for programming
+very cool very crucial for programming
+and just like game development and
+and just like game development and
+and just like game development and
+everything in general so if you enjoy
+everything in general so if you enjoy
+everything in general so if you enjoy
+the video make sure to like And
+the video make sure to like And
+the video make sure to like And
+subscribe and comment any suggestions
+subscribe and comment any suggestions
+subscribe and comment any suggestions
+and or questions down below so let's get
+and or questions down below so let's get
+and or questions down below so let's get
+right into it and get recursion
+going okay so let's make a script and
+going okay so let's make a script and
+going okay so let's make a script and
+get right into it so I'm going to go
+get right into it so I'm going to go
+get right into it so I'm going to go
+into server script storage and make a
+into server script storage and make a
+into server script storage and make a
+script
+script
+script
+okay so what is recursion so recursion
+okay so what is recursion so recursion
+okay so what is recursion so recursion
+in its most basic form is almost like an
+in its most basic form is almost like an
+in its most basic form is almost like an
+iteration like a for Loop so you know
+iteration like a for Loop so you know
+iteration like a for Loop so you know
+you have a loop that you know does
+you have a loop that you know does
+you have a loop that you know does
+something I can
+type there you go so you have this for
+type there you go so you have this for
+type there you go so you have this for
+Loop and you know if you run
+Loop and you know if you run
+Loop and you know if you run
+it it does exactly what you'd expect it
+it it does exactly what you'd expect it
+it it does exactly what you'd expect it
+to from 0 to five
+to from 0 to five
+to from 0 to five
+um and you can replicate this using only
+um and you can replicate this using only
+um and you can replicate this using only
+functions this uses a loop so by doing
+functions this uses a loop so by doing
+functions this uses a loop so by doing
+that you have a basic example of
+that you have a basic example of
+that you have a basic example of
+recursion so recursion is when a
+recursion so recursion is when a
+recursion so recursion is when a
+function calls
+function calls
+function calls
+itself so let's make a function say
+itself so let's make a function say
+itself so let's make a function say
+local function recurse and it's going to
+local function recurse and it's going to
+local function recurse and it's going to
+take in a I value and then what we're
+take in a I value and then what we're
+take in a I value and then what we're
+going to do is we're going to print I
+going to do is we're going to print I
+going to do is we're going to print I
+and then call
+and then call
+and then call
+recurse
+recurse
+recurse
+I + 1 so this does what this for Loop
+I + 1 so this does what this for Loop
+I + 1 so this does what this for Loop
+does
+does
+does
+except I I would run it but it would
+except I I would run it but it would
+except I I would run it but it would
+lead to an infinite infinite Loop and it
+lead to an infinite infinite Loop and it
+lead to an infinite infinite Loop and it
+would give you a stack Overflow because
+would give you a stack Overflow because
+would give you a stack Overflow because
+you run this function over and over and
+you run this function over and over and
+you run this function over and over and
+over and over again it would never stop
+over and over again it would never stop
+over and over again it would never stop
+so it prints it prints out I and then it
+so it prints it prints out I and then it
+so it prints it prints out I and then it
+calls itself again it starts from the
+calls itself again it starts from the
+calls itself again it starts from the
+top and just goes back and forth almost
+top and just goes back and forth almost
+top and just goes back and forth almost
+like a loop but like a for Loop you need
+like a loop but like a for Loop you need
+like a loop but like a for Loop you need
+a condition or you need like a stopping
+a condition or you need like a stopping
+a condition or you need like a stopping
+addition and in a cersion it's not like
+addition and in a cersion it's not like
+addition and in a cersion it's not like
+necessarily defined for you so you have
+necessarily defined for you so you have
+necessarily defined for you so you have
+to Define it for yourself and usually
+to Define it for yourself and usually
+to Define it for yourself and usually
+that comes in the form of like if
+that comes in the form of like if
+that comes in the form of like if
+statement at the beginning of the
+statement at the beginning of the
+statement at the beginning of the
+function and in this case we're going to
+function and in this case we're going to
+function and in this case we're going to
+say if I equals 5 we're going to
+say if I equals 5 we're going to
+say if I equals 5 we're going to
+just
+just
+just
+return and so if I equals 5 then we're
+return and so if I equals 5 then we're
+return and so if I equals 5 then we're
+just going to return so in that case we
+just going to return so in that case we
+just going to return so in that case we
+won't actually reach the next recurse so
+won't actually reach the next recurse so
+won't actually reach the next recurse so
+it'll call recurse and then we'll go
+it'll call recurse and then we'll go
+it'll call recurse and then we'll go
+through go through and then we will stop
+through go through and then we will stop
+through go through and then we will stop
+once I equal 5 because we won't be able
+once I equal 5 because we won't be able
+once I equal 5 because we won't be able
+to continue recursing it cuts it off
+to continue recursing it cuts it off
+to continue recursing it cuts it off
+early it returns and stops the flow
+early it returns and stops the flow
+early it returns and stops the flow
+almost like a break statement in a while
+almost like a break statement in a while
+almost like a break statement in a while
+loop or a for Loop so we obviously have
+loop or a for Loop so we obviously have
+loop or a for Loop so we obviously have
+to call this unlike a loop it doesn't
+to call this unlike a loop it doesn't
+to call this unlike a loop it doesn't
+just run on its own like this is a
+just run on its own like this is a
+just run on its own like this is a
+function so you have to call it like a
+function so you have to call it like a
+function so you have to call it like a
+function so we call recurse with a
+function so we call recurse with a
+function so we call recurse with a
+starting value of zero and we should get
+starting value of zero and we should get
+starting value of zero and we should get
+nearly the same Loop thing well
+nearly the same Loop thing well
+nearly the same Loop thing well
+obviously we have the old stuff that we
+obviously we have the old stuff that we
+obviously we have the old stuff that we
+did notice that this only goes to four
+did notice that this only goes to four
+did notice that this only goes to four
+that's just because I um you know botch
+that's just because I um you know botch
+that's just because I um you know botch
+the condition with the for Loop it goes
+the condition with the for Loop it goes
+the condition with the for Loop it goes
+from zero until I is less than or equal
+from zero until I is less than or equal
+from zero until I is less than or equal
+to 5 so this really should be if I is
+to 5 so this really should be if I is
+to 5 so this really should be if I is
+greater than five we return so we get to
+greater than five we return so we get to
+greater than five we return so we get to
+less than or equal to five but whatever
+less than or equal to five but whatever
+less than or equal to five but whatever
+you know it's good enough so this is the
+you know it's good enough so this is the
+you know it's good enough so this is the
+most basic example of recursion now
+most basic example of recursion now
+most basic example of recursion now
+let's go for a little more complex of an
+let's go for a little more complex of an
+let's go for a little more complex of an
+example so we're going to code a
+example so we're going to code a
+example so we're going to code a
+factorial so factorial is basically
+factorial so factorial is basically
+factorial so factorial is basically
+where you have a
+where you have a
+where you have a
+number let's say five and so the
+number let's say five and so the
+number let's say five and so the
+factorial five which is like five
+factorial five which is like five
+factorial five which is like five
+exclamation mark would be five *
+exclamation mark would be five *
+exclamation mark would be five *
+4 * 3 * 2 * 1 and that would give you
+4 * 3 * 2 * 1 and that would give you
+4 * 3 * 2 * 1 and that would give you
+the factorial which should be 120 and
+the factorial which should be 120 and
+the factorial which should be 120 and
+that's what it is that's a factorial of
+that's what it is that's a factorial of
+that's what it is that's a factorial of
+five and if you look at it the the
+five and if you look at it the the
+five and if you look at it the the
+factorial of 5 is 5 * 4 * 3 * 2 * 1 this
+factorial of 5 is 5 * 4 * 3 * 2 * 1 this
+factorial of 5 is 5 * 4 * 3 * 2 * 1 this
+is almost the same as saying is 5
+is almost the same as saying is 5
+is almost the same as saying is 5
+factorial
+factorial
+factorial
+equals
+equals
+equals
+5 * 4 factorial because it's 4 * 3 * 2
+5 * 4 factorial because it's 4 * 3 * 2
+5 * 4 factorial because it's 4 * 3 * 2
+one um and actually that's how it is
+one um and actually that's how it is
+one um and actually that's how it is
+factorial is a recursive like math
+factorial is a recursive like math
+factorial is a recursive like math
+operator that you'll see and a little
+operator that you'll see and a little
+operator that you'll see and a little
+bit of calculus if you do that like with
+bit of calculus if you do that like with
+bit of calculus if you do that like with
+tailor series and stuff like that and
+tailor series and stuff like that and
+tailor series and stuff like that and
+combinatorics and stuff like that and
+combinatorics and stuff like that and
+combinatorics and stuff like that and
+it's actually very easy to implement
+it's actually very easy to implement
+it's actually very easy to implement
+with a recursive function it would be
+with a recursive function it would be
+with a recursive function it would be
+you know somewhat decently usable if you
+you know somewhat decently usable if you
+you know somewhat decently usable if you
+do it iter iter iteratively with a while
+do it iter iter iteratively with a while
+do it iter iter iteratively with a while
+loop or for Loop you can speak but it's
+loop or for Loop you can speak but it's
+loop or for Loop you can speak but it's
+actually a lot easier to do it with
+actually a lot easier to do it with
+actually a lot easier to do it with
+recursion so we're going to say local
+recursion so we're going to say local
+recursion so we're going to say local
+function factorial we're just going to
+function factorial we're just going to
+function factorial we're just going to
+say fact we're going to take a number n
+say fact we're going to take a number n
+say fact we're going to take a number n
+um and this is going to have you know
+um and this is going to have you know
+um and this is going to have you know
+two cases so first we need the base case
+two cases so first we need the base case
+two cases so first we need the base case
+what is this function going to like stop
+what is this function going to like stop
+what is this function going to like stop
+on that's the case of zero factorial
+on that's the case of zero factorial
+on that's the case of zero factorial
+because in math zero factorial is just
+because in math zero factorial is just
+because in math zero factorial is just
+defined as one so if n equal 0 then
+defined as one so if n equal 0 then
+defined as one so if n equal 0 then
+we're going to return one this function
+we're going to return one this function
+we're going to return one this function
+is actually just going to be a recursive
+is actually just going to be a recursive
+is actually just going to be a recursive
+function that returns like recursive
+function that returns like recursive
+function that returns like recursive
+values so then what we need to do is
+values so then what we need to do is
+values so then what we need to do is
+implement the next part which is like
+implement the next part which is like
+implement the next part which is like
+returning like the actual recursive step
+returning like the actual recursive step
+returning like the actual recursive step
+so the base case is this part up here
+so the base case is this part up here
+so the base case is this part up here
+now we need to do the recursive step
+now we need to do the recursive step
+now we need to do the recursive step
+which is down here where we're going to
+which is down here where we're going to
+which is down here where we're going to
+turn n times factorial of
+turn n times factorial of
+turn n times factorial of
+nus1 so what this is going to do is like
+nus1 so what this is going to do is like
+nus1 so what this is going to do is like
+just like our example here 5 factorial
+just like our example here 5 factorial
+just like our example here 5 factorial
+we plug in and five okay it's not zero
+we plug in and five okay it's not zero
+we plug in and five okay it's not zero
+we we ski that it's going to be 5 * 4
+we we ski that it's going to be 5 * 4
+we we ski that it's going to be 5 * 4
+and it's going to go back up and it's
+and it's going to go back up and it's
+and it's going to go back up and it's
+not that it's not any equals z so it's
+not that it's not any equals z so it's
+not that it's not any equals z so it's
+going to be 4 * 3 and this goes 5 * 5 *
+going to be 4 * 3 and this goes 5 * 5 *
+going to be 4 * 3 and this goes 5 * 5 *
+4 then 5 * 4 * 3 then 5 * 4 * 2 * 2 and
+4 then 5 * 4 * 3 then 5 * 4 * 2 * 2 and
+4 then 5 * 4 * 3 then 5 * 4 * 2 * 2 and
+until you get zero which is going to
+until you get zero which is going to
+until you get zero which is going to
+give you one and then that propagates
+give you one and then that propagates
+give you one and then that propagates
+all the way back up so you're
+all the way back up so you're
+all the way back up so you're
+multiplying your current iteration
+multiplying your current iteration
+multiplying your current iteration
+number times the next iteration of the
+number times the next iteration of the
+number times the next iteration of the
+recursive step so if we print factorial
+recursive step so if we print factorial
+recursive step so if we print factorial
+of five we should I did my stuff
+of five we should I did my stuff
+of five we should I did my stuff
+correctly get 120 indeed we do we get
+correctly get 120 indeed we do we get
+correctly get 120 indeed we do we get
+120 so that is a simple factorial
+120 so that is a simple factorial
+120 so that is a simple factorial
+function for you a good example of
+function for you a good example of
+function for you a good example of
+recursion and action in a problem that
+recursion and action in a problem that
+recursion and action in a problem that
+would be a lot harder to implement
+would be a lot harder to implement
+would be a lot harder to implement
+iteratively so now let's bring our stuff
+iteratively so now let's bring our stuff
+iteratively so now let's bring our stuff
+that we've done doing on just like a
+that we've done doing on just like a
+that we've done doing on just like a
+normal script into the 3D I guess 2D
+normal script into the 3D I guess 2D
+normal script into the 3D I guess 2D
+with a fractal tree so fractals are just
+with a fractal tree so fractals are just
+with a fractal tree so fractals are just
+like you know a geometric shape that has
+like you know a geometric shape that has
+like you know a geometric shape that has
+like infinite like subdivisions so this
+like infinite like subdivisions so this
+like infinite like subdivisions so this
+one starts at one branch it branches at
+one starts at one branch it branches at
+one starts at one branch it branches at
+two that Branch goes into two branches
+two that Branch goes into two branches
+two that Branch goes into two branches
+then it goes like that and recursion is
+then it goes like that and recursion is
+then it goes like that and recursion is
+perfectly perfectly situated to solve a
+perfectly perfectly situated to solve a
+perfectly perfectly situated to solve a
+problem like this so we're going to try
+problem like this so we're going to try
+problem like this so we're going to try
+to replicate this so first we're going
+to replicate this so first we're going
+to replicate this so first we're going
+to need to create our part um I'm just
+to need to create our part um I'm just
+to need to create our part um I'm just
+going to make a normal basic part going
+going to make a normal basic part going
+going to make a normal basic part going
+to make it looking looking Square
+uh that's good okay that's one by one
+uh that's good okay that's one by one
+uh that's good okay that's one by one
+and then we actually well first we got
+and then we actually well first we got
+and then we actually well first we got
+to see where the front is the front
+to see where the front is the front
+to see where the front is the front
+doesn't matter we're going to set the
+doesn't matter we're going to set the
+doesn't matter we're going to set the
+orientation uh pivot and we're just
+orientation uh pivot and we're just
+orientation uh pivot and we're just
+going to set the pivot so go into model
+going to set the pivot so go into model
+going to set the pivot so go into model
+then edit pivot and we're going to move
+then edit pivot and we're going to move
+then edit pivot and we're going to move
+this back
+this back
+this back
+here actually let's double check one sec
+here actually let's double check one sec
+here actually let's double check one sec
+yeah so actually we're going to make the
+yeah so actually we're going to make the
+yeah so actually we're going to make the
+front so right click the block that you
+front so right click the block that you
+front so right click the block that you
+have go show orientation indicator see
+have go show orientation indicator see
+have go show orientation indicator see
+where this front faces we want to make
+where this front faces we want to make
+where this front faces we want to make
+that the long part just make things
+that the long part just make things
+that the long part just make things
+easier down the
+road there we go we can make this like
+road there we go we can make this like
+road there we go we can make this like
+I'm just to make this like
+I'm just to make this like
+I'm just to make this like
+length there we go then we're going to
+length there we go then we're going to
+length there we go then we're going to
+edit our
+edit our
+edit our
+pivot the pivot opposite of the front
+pivot the pivot opposite of the front
+pivot the pivot opposite of the front
+indicator at the back there you go so
+indicator at the back there you go so
+indicator at the back there you go so
+this is our little part and you also
+this is our little part and you also
+this is our little part and you also
+want to make sure it's
+want to make sure it's
+want to make sure it's
+anchored anchored there we go so our
+anchored anchored there we go so our
+anchored anchored there we go so our
+part is done let's get rid of this stuff
+part is done let's get rid of this stuff
+part is done let's get rid of this stuff
+so we're going to make a function call
+so we're going to make a function call
+so we're going to make a function call
+it Branch so function local branch
+it Branch so function local branch
+it Branch so function local branch
+because you know we're making a tree our
+because you know we're making a tree our
+because you know we're making a tree our
+recursive function it's going to be
+recursive function it's going to be
+recursive function it's going to be
+called Branch because that's cute um and
+called Branch because that's cute um and
+called Branch because that's cute um and
+then we're going to take in a part and a
+then we're going to take in a part and a
+then we're going to take in a part and a
+depth so the part is like the current
+depth so the part is like the current
+depth so the part is like the current
+part that like you know we're recursing
+part that like you know we're recursing
+part that like you know we're recursing
+on so if I go and look at this you'll
+on so if I go and look at this you'll
+on so if I go and look at this you'll
+see that like you know this is our first
+see that like you know this is our first
+see that like you know this is our first
+part and we'll have another part so we
+part and we'll have another part so we
+part and we'll have another part so we
+recurse on that because each one of
+recurse on that because each one of
+recurse on that because each one of
+these like little trees is like almost
+these like little trees is like almost
+these like little trees is like almost
+like a mini little sub tree they all go
+like a mini little sub tree they all go
+like a mini little sub tree they all go
+down to Infinity which is not good
+down to Infinity which is not good
+down to Infinity which is not good
+fractals are infinite we don't want
+fractals are infinite we don't want
+fractals are infinite we don't want
+Infinity that's why we got this depth
+Infinity that's why we got this depth
+Infinity that's why we got this depth
+variable it'll be incremented each like
+variable it'll be incremented each like
+variable it'll be incremented each like
+iteration we go down we have to have
+iteration we go down we have to have
+iteration we go down we have to have
+like a Max like depth so I'm going to
+like a Max like depth so I'm going to
+like a Max like depth so I'm going to
+have a depth of 10 so I'm going to say
+have a depth of 10 so I'm going to say
+have a depth of 10 so I'm going to say
+local max depth equals 10 and then we're
+local max depth equals 10 and then we're
+local max depth equals 10 and then we're
+going to check if so our base case is
+going to check if so our base case is
+going to check if so our base case is
+going to be if if depth equals max
+going to be if if depth equals max
+going to be if if depth equals max
+depth max
+depth max
+depth max
+depth then we're just going to return
+depth then we're just going to return
+depth then we're just going to return
+and then otherwise we need to do the
+and then otherwise we need to do the
+and then otherwise we need to do the
+actual interesting stuff which is the
+actual interesting stuff which is the
+actual interesting stuff which is the
+branching so this going to look a little
+branching so this going to look a little
+branching so this going to look a little
+weird that like the for Loop I'm going
+weird that like the for Loop I'm going
+weird that like the for Loop I'm going
+to use in here but because I'm lazy and
+to use in here but because I'm lazy and
+to use in here but because I'm lazy and
+I don't want to type out too massive
+I don't want to type out too massive
+I don't want to type out too massive
+chunks for the left part and the right
+chunks for the left part and the right
+chunks for the left part and the right
+part because they're ba they're
+part because they're ba they're
+part because they're ba they're
+basically handled the same way the only
+basically handled the same way the only
+basically handled the same way the only
+difference is the angle at which they're
+difference is the angle at which they're
+difference is the angle at which they're
+connected to their root like look at
+connected to their root like look at
+connected to their root like look at
+here you have like the root part here
+here you have like the root part here
+here you have like the root part here
+the right part is the same length as the
+the right part is the same length as the
+the right part is the same length as the
+left part it's like the same relative
+left part it's like the same relative
+left part it's like the same relative
+distance whatever the only difference is
+distance whatever the only difference is
+distance whatever the only difference is
+the angle so we're just going to make a
+the angle so we're just going to make a
+the angle so we're just going to make a
+for Loop the for Loop is going to look
+for Loop the for Loop is going to look
+for Loop the for Loop is going to look
+kind of odd because we need
+kind of odd because we need
+kind of odd because we need
+like um to go on like both sides so
+like um to go on like both sides so
+like um to go on like both sides so
+we're just say for I = -1 1 2 do so this
+we're just say for I = -1 1 2 do so this
+we're just say for I = -1 1 2 do so this
+starts at negative 1 and has a uh
+starts at negative 1 and has a uh
+starts at negative 1 and has a uh
+iteration step of two so it's going to
+iteration step of two so it's going to
+iteration step of two so it's going to
+start at negative 1 and then go to one
+start at negative 1 and then go to one
+start at negative 1 and then go to one
+and that's it it's just two iterations
+and that's it it's just two iterations
+and that's it it's just two iterations
+because that's all we need now we're
+because that's all we need now we're
+because that's all we need now we're
+going to say
+going to say
+going to say
+local um local branch part
+local um local branch part
+local um local branch part
+equals part clone so we take this part
+equals part clone so we take this part
+equals part clone so we take this part
+from up here and we clone it and then we
+from up here and we clone it and then we
+from up here and we clone it and then we
+need to actually like Orient it
+need to actually like Orient it
+need to actually like Orient it
+according to our world so we're going to
+according to our world so we're going to
+according to our world so we're going to
+say Branch part. size equals a new size
+say Branch part. size equals a new size
+say Branch part. size equals a new size
+so Vector 3 dot new and we're going to
+so Vector 3 dot new and we're going to
+so Vector 3 dot new and we're going to
+keep the part. size. X and the part.
+keep the part. size. X and the part.
+keep the part. size. X and the part.
+size do
+Z and then actually in the middle we're
+Z and then actually in the middle we're
+Z and then actually in the middle we're
+going to put one so basically what this
+going to put one so basically what this
+going to put one so basically what this
+is going to do going to keep the height
+is going to do going to keep the height
+is going to do going to keep the height
+the same but we actually want to edit
+the same but we actually want to edit
+the same but we actually want to edit
+these depths or the width and the length
+these depths or the width and the length
+these depths or the width and the length
+I guess it would be by a specific scale
+I guess it would be by a specific scale
+I guess it would be by a specific scale
+factor so I'm going to make a new
+factor so I'm going to make a new
+factor so I'm going to make a new
+constant at the top call this local
+constant at the top call this local
+constant at the top call this local
+scale factor and spell scale factor and
+scale factor and spell scale factor and
+scale factor and spell scale factor and
+that is going to be equal to
+that is going to be equal to
+that is going to be equal to
+0.7 so each iteration we want the X size
+0.7 so each iteration we want the X size
+0.7 so each iteration we want the X size
+which is
+which is
+which is
+the uh width that will decrease by that
+the uh width that will decrease by that
+the uh width that will decrease by that
+will like be scale down by 30% because
+will like be scale down by 30% because
+will like be scale down by 30% because
+we're only taking 70% of it and the Z
+we're only taking 70% of it and the Z
+we're only taking 70% of it and the Z
+will be given the same treatment so
+will be given the same treatment so
+will be given the same treatment so
+we're going to say so the x is part size
+we're going to say so the x is part size
+we're going to say so the x is part size
+X time scale factor then part size Z the
+X time scale factor then part size Z the
+X time scale factor then part size Z the
+time scale factor we're keeping one as a
+time scale factor we're keeping one as a
+time scale factor we're keeping one as a
+constant here because our size. Y is
+constant here because our size. Y is
+constant here because our size. Y is
+always one we're going to leave it you
+always one we're going to leave it you
+always one we're going to leave it you
+can always change that if you want it to
+can always change that if you want it to
+can always change that if you want it to
+be more adaptive to your situation but
+be more adaptive to your situation but
+be more adaptive to your situation but
+this works out for me the reason we have
+this works out for me the reason we have
+this works out for me the reason we have
+to make these actual like part things is
+to make these actual like part things is
+to make these actual like part things is
+because this part is not guaranteed to
+because this part is not guaranteed to
+because this part is not guaranteed to
+have a like width of one and a length of
+have a like width of one and a length of
+have a like width of one and a length of
+four it'll get smaller and smaller as it
+four it'll get smaller and smaller as it
+four it'll get smaller and smaller as it
+goes on so we have to iterate on that
+goes on so we have to iterate on that
+goes on so we have to iterate on that
+recursive
+recursive
+recursive
+and then so we have the size done now
+and then so we have the size done now
+and then so we have the size done now
+let's change our pivot offset so
+let's change our pivot offset so
+let's change our pivot offset so
+whenever you resize a part the pivot
+whenever you resize a part the pivot
+whenever you resize a part the pivot
+offset actually does not adjust we
+offset actually does not adjust we
+offset actually does not adjust we
+adjusted our pivot to be at the back of
+adjusted our pivot to be at the back of
+adjusted our pivot to be at the back of
+the part right but like when we resize
+the part right but like when we resize
+the part right but like when we resize
+it it won't automatically change and the
+it it won't automatically change and the
+it it won't automatically change and the
+editor does which is kind of odd um but
+editor does which is kind of odd um but
+editor does which is kind of odd um but
+like for example if I set it like two or
+like for example if I set it like two or
+like for example if I set it like two or
+like 23 I guess the pivot stays in the
+like 23 I guess the pivot stays in the
+like 23 I guess the pivot stays in the
+same spot but the part still grows we
+same spot but the part still grows we
+same spot but the part still grows we
+don't want that we want the pivot to
+don't want that we want the pivot to
+don't want that we want the pivot to
+move but we have to to code that in
+move but we have to to code that in
+move but we have to to code that in
+we're going to say Branch
+we're going to say Branch
+we're going to say Branch
+part do pivot all set is equal to
+part do pivot all set is equal to
+part do pivot all set is equal to
+cframe new Vector 3. Za
+axis
+axis
+axis
+times part. size.
+times part. size.
+times part. size.
+Z
+Z
+Z
+times the scale
+times the scale
+times the scale
+factor time
+0.5
+0.5
+0.5
+so what this does is we basically say
+so what this does is we basically say
+so what this does is we basically say
+okay we're going to the z-axis just
+okay we're going to the z-axis just
+okay we're going to the z-axis just
+gives us a vector that is uh 001 then we
+gives us a vector that is uh 001 then we
+gives us a vector that is uh 001 then we
+multiply it by the part. size. Z might
+multiply it by the part. size. Z might
+multiply it by the part. size. Z might
+be easier to group the 0. five and the
+be easier to group the 0. five and the
+be easier to group the 0. five and the
+part. size. Z because we're just doing
+part. size. Z because we're just doing
+part. size. Z because we're just doing
+half of the Z length times a scale
+half of the Z length times a scale
+half of the Z length times a scale
+factor so basically we're taking we're
+factor so basically we're taking we're
+factor so basically we're taking we're
+reusing uh this value up here like the
+reusing uh this value up here like the
+reusing uh this value up here like the
+part that has that Z times scale factor
+part that has that Z times scale factor
+part that has that Z times scale factor
+down here we're getting half of it
+down here we're getting half of it
+down here we're getting half of it
+because normally like the center of a
+because normally like the center of a
+because normally like the center of a
+part is like split down the midle middle
+part is like split down the midle middle
+part is like split down the midle middle
+it's halfway so when we scale it down
+it's halfway so when we scale it down
+it's halfway so when we scale it down
+we're going to Crunch this side a little
+we're going to Crunch this side a little
+we're going to Crunch this side a little
+bit and we want to go halfway there but
+bit and we want to go halfway there but
+bit and we want to go halfway there but
+we don't want to go halfway to the
+we don't want to go halfway to the
+we don't want to go halfway to the
+original distance we're going to go
+original distance we're going to go
+original distance we're going to go
+halfway like the 70 or the 30% that we
+halfway like the 70 or the 30% that we
+halfway like the 70 or the 30% that we
+cut off so it's going to be like there
+cut off so it's going to be like there
+cut off so it's going to be like there
+so we go we we make the size we scale it
+so we go we we make the size we scale it
+so we go we we make the size we scale it
+down and then we go half of it and
+down and then we go half of it and
+down and then we go half of it and
+that's how you get the new pivot because
+that's how you get the new pivot because
+that's how you get the new pivot because
+you know ke frame um I have more videos
+you know ke frame um I have more videos
+you know ke frame um I have more videos
+on C frames and stuff on my channel just
+on C frames and stuff on my channel just
+on C frames and stuff on my channel just
+go check them out they're pretty helpful
+go check them out they're pretty helpful
+go check them out they're pretty helpful
+now we are ready to do the pivot magic
+now we are ready to do the pivot magic
+now we are ready to do the pivot magic
+do Branch part pivot
+do Branch part pivot
+do Branch part pivot
+to part. cframe to World
+to part. cframe to World
+to part. cframe to World
+space and we're actually going to give
+space and we're actually going to give
+space and we're actually going to give
+us some room here we're going to say to
+us some room here we're going to say to
+us some room here we're going to say to
+World
+World
+World
+space see frame.
+space see frame.
+space see frame.
+new Vector
+new Vector
+new Vector
+3.
+3.
+3.
+z-axis time negative part. size. Z / two
+z-axis time negative part. size. Z / two
+z-axis time negative part. size. Z / two
+I guess times5 let's be consistent we're
+I guess times5 let's be consistent we're
+I guess times5 let's be consistent we're
+going to do times5 and then we're going
+going to do times5 and then we're going
+going to do times5 and then we're going
+to do times e frame.
+angles 0 math. rad 30 * I and then zero
+angles 0 math. rad 30 * I and then zero
+angles 0 math. rad 30 * I and then zero
+so what we're doing here is we're going
+so what we're doing here is we're going
+so what we're doing here is we're going
+from local space to World space because
+from local space to World space because
+from local space to World space because
+every time it's like a rotation so we
+every time it's like a rotation so we
+every time it's like a rotation so we
+got to keep it relative so by going to
+got to keep it relative so by going to
+got to keep it relative so by going to
+from local space to World space we're
+from local space to World space we're
+from local space to World space we're
+kind of like shifting everything I have
+kind of like shifting everything I have
+kind of like shifting everything I have
+a video on Old space and object space
+a video on Old space and object space
+a video on Old space and object space
+that you can check out as well and what
+that you can check out as well and what
+that you can check out as well and what
+we're doing is we're just moving it to
+we're doing is we're just moving it to
+we're doing is we're just moving it to
+the edge of the part
+the edge of the part
+the edge of the part
+so it'll move it like you know halfway
+so it'll move it like you know halfway
+so it'll move it like you know halfway
+like we're doing
+like we're doing
+like we're doing
+before um uh and then we're going to
+before um uh and then we're going to
+before um uh and then we're going to
+like back it up like
+like back it up like
+like back it up like
+forward like the same kind of style that
+forward like the same kind of style that
+forward like the same kind of style that
+we're changing the pivot
+we're changing the pivot
+we're changing the pivot
+offset and that's
+offset and that's
+offset and that's
+because oh wait I need to change my
+because oh wait I need to change my
+because oh wait I need to change my
+Pivot
+Pivot
+Pivot
+too there you go yeah so we're just
+too there you go yeah so we're just
+too there you go yeah so we're just
+moving it up to the front of the part
+moving it up to the front of the part
+moving it up to the front of the part
+and rotating it by 30 degrees times I so
+and rotating it by 30 degrees times I so
+and rotating it by 30 degrees times I so
+when I is equal to netive 1 it'll be
+when I is equal to netive 1 it'll be
+when I is equal to netive 1 it'll be
+negative 30 and it'll be positive 30 and
+negative 30 and it'll be positive 30 and
+negative 30 and it'll be positive 30 and
+that'll work out just fine now all we
+that'll work out just fine now all we
+that'll work out just fine now all we
+need to do is set Branch
+need to do is set Branch
+need to do is set Branch
+part parent equal to workspace and then
+part parent equal to workspace and then
+part parent equal to workspace and then
+call branch on our new Branch part and
+call branch on our new Branch part and
+call branch on our new Branch part and
+depth plus one and this is with all
+depth plus one and this is with all
+depth plus one and this is with all
+within the for Loop so we'll parent of
+within the for Loop so we'll parent of
+within the for Loop so we'll parent of
+the workspace and then call branch on
+the workspace and then call branch on
+the workspace and then call branch on
+the on the new part that we created so
+the on the new part that we created so
+the on the new part that we created so
+it subdivides further and we keep on
+it subdivides further and we keep on
+it subdivides further and we keep on
+going until we hit a max depth of 10 so
+going until we hit a max depth of 10 so
+going until we hit a max depth of 10 so
+let's run
+let's run
+let's run
+this we don't get
+this we don't get
+this we don't get
+anything oh that's because we never
+anything oh that's because we never
+anything oh that's because we never
+actually call Branch we have to start it
+actually call Branch we have to start it
+actually call Branch we have to start it
+off so we call Branch stupid we call
+off so we call Branch stupid we call
+off so we call Branch stupid we call
+branch on workspace do part because
+branch on workspace do part because
+branch on workspace do part because
+again this is a function you have to
+again this is a function you have to
+again this is a function you have to
+call it we call it on workspace doart
+call it we call it on workspace doart
+call it we call it on workspace doart
+with a depth of One to begin with and we
+with a depth of One to begin with and we
+with a depth of One to begin with and we
+run
+run
+run
+it and
+it and
+it and
+voila we get our pretty little
+voila we get our pretty little
+voila we get our pretty little
+tree and that is a very good use of
+tree and that is a very good use of
+tree and that is a very good use of
+recursion so I'm sorry if I brushed over
+recursion so I'm sorry if I brushed over
+recursion so I'm sorry if I brushed over
+the cframe stuff because that's not
+the cframe stuff because that's not
+the cframe stuff because that's not
+really the point of the of this tutorial
+really the point of the of this tutorial
+really the point of the of this tutorial
+the point is to give you an introduction
+the point is to give you an introduction
+the point is to give you an introduction
+to recursion and talk about how it works
+to recursion and talk about how it works
+to recursion and talk about how it works
+because this this um fractal is honestly
+because this this um fractal is honestly
+because this this um fractal is honestly
+like it would be kind of hard to
+like it would be kind of hard to
+like it would be kind of hard to
+implement this with loops I mean it's
+implement this with loops I mean it's
+implement this with loops I mean it's
+just way way way easier Actually I don't
+just way way way easier Actually I don't
+just way way way easier Actually I don't
+even know if it be possible to do it
+even know if it be possible to do it
+even know if it be possible to do it
+with loops and probably but like still
+with loops and probably but like still
+with loops and probably but like still
+it's way easier to use Rec because you
+it's way easier to use Rec because you
+it's way easier to use Rec because you
+know you start at a branch then you
+know you start at a branch then you
+know you start at a branch then you
+Branch again then you Branch again keeps
+Branch again then you Branch again keeps
+Branch again then you Branch again keeps
+on branching because like each new
+on branching because like each new
+on branching because like each new
+branch is like a new mini sub tree that
+branch is like a new mini sub tree that
+branch is like a new mini sub tree that
+you keep on going actually this concept
+you keep on going actually this concept
+you keep on going actually this concept
+is very crucial in other like data
+is very crucial in other like data
+is very crucial in other like data
+structures like binary trees or whatever
+structures like binary trees or whatever
+structures like binary trees or whatever
+because they actually are trees and you
+because they actually are trees and you
+because they actually are trees and you
+have to daverse them and it's very easy
+have to daverse them and it's very easy
+have to daverse them and it's very easy
+to use recursion so yeah hope you
+to use recursion so yeah hope you
+to use recursion so yeah hope you
+enjoyed this quick little primer on
+enjoyed this quick little primer on
+enjoyed this quick little primer on
+recursion if you want to see more like
+recursion if you want to see more like
+recursion if you want to see more like
+specific programming videos like these
+specific programming videos like these
+specific programming videos like these
+let me know I've been doing this in a
+let me know I've been doing this in a
+let me know I've been doing this in a
+lot of my classes recently so I thought
+lot of my classes recently so I thought
+lot of my classes recently so I thought
+it would be cool to make a video on it
+it would be cool to make a video on it
+it would be cool to make a video on it
+and actually apply it in a Roblox using
+and actually apply it in a Roblox using
+and actually apply it in a Roblox using
+a beautiful little fractal these are
+a beautiful little fractal these are
+a beautiful little fractal these are
+very useful for other game algorithms
+very useful for other game algorithms
+very useful for other game algorithms
+too like the maze I made the randomly
+too like the maze I made the randomly
+too like the maze I made the randomly
+generated maze that uses a recursive
+generated maze that uses a recursive
+generated maze that uses a recursive
+algorithm and then other things as well
+algorithm and then other things as well
+algorithm and then other things as well
+so I know some people want quad trees
+so I know some people want quad trees
+so I know some people want quad trees
+I'll probably be doing that soon enough
+I'll probably be doing that soon enough
+I'll probably be doing that soon enough
+as well that should be fun but yeah I'm
+as well that should be fun but yeah I'm
+as well that should be fun but yeah I'm
+glad to be back making videos for once
+glad to be back making videos for once
+glad to be back making videos for once
+don't know how consistent I'll be in the
+don't know how consistent I'll be in the
+don't know how consistent I'll be in the
+future but I hope you enjoyed make sure
+future but I hope you enjoyed make sure
+future but I hope you enjoyed make sure
+to like And subscribe if you did because
+to like And subscribe if you did because
+to like And subscribe if you did because
+you know your boy is going to keep on
+you know your boy is going to keep on
+you know your boy is going to keep on
+making videos I'm busy but it it'll come
+making videos I'm busy but it it'll come
+making videos I'm busy but it it'll come
+like don't worry I'll make more videos
+like don't worry I'll make more videos
+like don't worry I'll make more videos
+but other than that I hope you have a
+but other than that I hope you have a
+but other than that I hope you have a
+nice day and
+nice day and
+nice day and
+[Music]
+[Music]
+[Music]
+goodbye

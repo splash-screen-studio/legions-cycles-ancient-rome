@@ -1,0 +1,1996 @@
+so in this video i'll show you how to
+so in this video i'll show you how to
+so in this video i'll show you how to
+make a gun with realistic bullet physics
+make a gun with realistic bullet physics
+make a gun with realistic bullet physics
+using the fast cast module in roblox
+using the fast cast module in roblox
+using the fast cast module in roblox
+studio
+studio
+studio
+so this is the first video in a series
+so this is the first video in a series
+so this is the first video in a series
+where i'll be continually adding on to
+where i'll be continually adding on to
+where i'll be continually adding on to
+this base gun that you see here
+this base gun that you see here
+this base gun that you see here
+i'll be adding things like reload and
+i'll be adding things like reload and
+i'll be adding things like reload and
+bullet holes and just cool gun features
+bullet holes and just cool gun features
+bullet holes and just cool gun features
+but it's too complex to put in one video
+but it's too complex to put in one video
+but it's too complex to put in one video
+so this just gives you the basics
+so this just gives you the basics
+so this just gives you the basics
+i can shoot things i can kill things i
+i can shoot things i can kill things i
+i can shoot things i can kill things i
+have a bullet
+have a bullet
+have a bullet
+part and of course i will put the link
+part and of course i will put the link
+part and of course i will put the link
+to this model in the description
+to this model in the description
+to this model in the description
+if you just want to take it use it as a
+if you just want to take it use it as a
+if you just want to take it use it as a
+reference use it for one of your games
+reference use it for one of your games
+reference use it for one of your games
+i don't really care use it for whatever
+i don't really care use it for whatever
+i don't really care use it for whatever
+you would like
+you would like
+you would like
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+enjoy this video without further ado
+enjoy this video without further ado
+enjoy this video without further ado
+let's get into it
+[Music]
+[Music]
+[Music]
+so i have in front of me a basic model
+so i have in front of me a basic model
+so i have in front of me a basic model
+with two parts a barrel and a grip and
+with two parts a barrel and a grip and
+with two parts a barrel and a grip and
+they're both welded together
+they're both welded together
+they're both welded together
+they both have anchor to false and can
+they both have anchor to false and can
+they both have anchor to false and can
+collide off as well
+collide off as well
+collide off as well
+just so we can make our tool work nice
+just so we can make our tool work nice
+just so we can make our tool work nice
+and well so
+and well so
+and well so
+first thing i'm going to do is create a
+first thing i'm going to do is create a
+first thing i'm going to do is create a
+part
+part
+part
+i'm going to name this part my handle
+i'm going to name this part my handle
+i'm going to name this part my handle
+and this is going to be for basic tools
+and this is going to be for basic tools
+and this is going to be for basic tools
+so we can just get our part working
+so we can just get our part working
+so we can just get our part working
+and we can start like programming it so
+and we can start like programming it so
+and we can start like programming it so
+i'm going to go to my grip
+i'm going to go to my grip
+i'm going to go to my grip
+copy the position and you can obviously
+copy the position and you can obviously
+copy the position and you can obviously
+do this however you want i'm just doing
+do this however you want i'm just doing
+do this however you want i'm just doing
+a little basic intro to it
+a little basic intro to it
+a little basic intro to it
+so for the people who don't know how to
+so for the people who don't know how to
+so for the people who don't know how to
+work with tools they can just follow
+work with tools they can just follow
+work with tools they can just follow
+along
+along
+along
+so i have my handle there trying to make
+so i have my handle there trying to make
+so i have my handle there trying to make
+it transparent just make it easier
+it transparent just make it easier
+it transparent just make it easier
+can collide off and i'm gonna highlight
+can collide off and i'm gonna highlight
+can collide off and i'm gonna highlight
+this
+this
+this
+and my grip there we go and go to model
+and my grip there we go and go to model
+and my grip there we go and go to model
+create weld
+so the grip yep there you go it's welded
+so the grip yep there you go it's welded
+so the grip yep there you go it's welded
+that's
+that's
+that's
+good now i'm going to go create a tool
+good now i'm going to go create a tool
+good now i'm going to go create a tool
+put the model and the handle and my tool
+put the model and the handle and my tool
+put the model and the handle and my tool
+and we're gonna name this tool
+and we're gonna name this tool
+and we're gonna name this tool
+gun make sure your handle is named
+gun make sure your handle is named
+gun make sure your handle is named
+handle with a capital h cannot be named
+handle with a capital h cannot be named
+handle with a capital h cannot be named
+anything else
+anything else
+anything else
+or your tool will not recognize it let's
+or your tool will not recognize it let's
+or your tool will not recognize it let's
+drop that in a starter storage
+drop that in a starter storage
+drop that in a starter storage
+or starter pack we can see how it looks
+or starter pack we can see how it looks
+or starter pack we can see how it looks
+so it looks perfectly fine if yours is
+so it looks perfectly fine if yours is
+so it looks perfectly fine if yours is
+messed up you might have to rotate the
+messed up you might have to rotate the
+messed up you might have to rotate the
+handle a little bit
+handle a little bit
+handle a little bit
+but in my situation it looks perfectly
+but in my situation it looks perfectly
+but in my situation it looks perfectly
+fine
+fine
+fine
+so one one other thing i'm going to do
+so one one other thing i'm going to do
+so one one other thing i'm going to do
+is i'm going to drag my gun back into
+is i'm going to drag my gun back into
+is i'm going to drag my gun back into
+the workspace
+the workspace
+the workspace
+and i want to define a position at which
+and i want to define a position at which
+and i want to define a position at which
+i want the bullets to fire so i'm going
+i want the bullets to fire so i'm going
+i want the bullets to fire so i'm going
+to go into my handle
+to go into my handle
+to go into my handle
+click the plus create an attachment
+click the plus create an attachment
+click the plus create an attachment
+here's our attachment
+here's our attachment
+here's our attachment
+and we can just use we can just move
+and we can just use we can just move
+and we can just use we can just move
+this attachment let me just move it
+this attachment let me just move it
+this attachment let me just move it
+to the very front of the gun to where
+to the very front of the gun to where
+to the very front of the gun to where
+you would assume
+you would assume
+you would assume
+the gun would fire out a bullet so let
+the gun would fire out a bullet so let
+the gun would fire out a bullet so let
+me just
+me just
+me just
+put it right there that looks about good
+put it right there that looks about good
+put it right there that looks about good
+and i'm going to name this the fire
+and i'm going to name this the fire
+and i'm going to name this the fire
+point my attachment is going to be named
+point my attachment is going to be named
+point my attachment is going to be named
+firepoint
+firepoint
+firepoint
+so i'm going to drag this gun back into
+so i'm going to drag this gun back into
+so i'm going to drag this gun back into
+starter pack and we are good to go
+starter pack and we are good to go
+starter pack and we are good to go
+so now we can start scripting i'm going
+so now we can start scripting i'm going
+so now we can start scripting i'm going
+to go into my toolbox
+to go into my toolbox
+to go into my toolbox
+and grab the fastcast redux
+and grab the fastcast redux
+and grab the fastcast redux
+module by eddie spirit
+module by eddie spirit
+module by eddie spirit
+if you don't have this the link will be
+if you don't have this the link will be
+if you don't have this the link will be
+in the description but this module will
+in the description but this module will
+in the description but this module will
+allow us to
+allow us to
+allow us to
+simulate realistic bullet physics
+simulate realistic bullet physics
+simulate realistic bullet physics
+without having to write our own like
+without having to write our own like
+without having to write our own like
+raycast engine because
+raycast engine because
+raycast engine because
+this module uses raycasting as opposed
+this module uses raycasting as opposed
+this module uses raycasting as opposed
+to velocity because velocity gets really
+to velocity because velocity gets really
+to velocity because velocity gets really
+clunky
+clunky
+clunky
+it's laggy and it's very inaccurate
+it's laggy and it's very inaccurate
+it's laggy and it's very inaccurate
+with like touched or whatever so we're
+with like touched or whatever so we're
+with like touched or whatever so we're
+going to be using raycasting
+going to be using raycasting
+going to be using raycasting
+specifically the fastcast redux module
+specifically the fastcast redux module
+specifically the fastcast redux module
+so i'm going to take this module drag it
+so i'm going to take this module drag it
+so i'm going to take this module drag it
+into my gun
+into my gun
+into my gun
+and here we go so we can first start by
+and here we go so we can first start by
+and here we go so we can first start by
+creating
+creating
+creating
+a local script in our gun
+a local script in our gun
+a local script in our gun
+and then create a normal script because
+and then create a normal script because
+and then create a normal script because
+we need both
+we need both
+we need both
+client input and server input
+client input and server input
+client input and server input
+and we also need to add a way to
+and we also need to add a way to
+and we also need to add a way to
+communicate between them
+communicate between them
+communicate between them
+for that we're going to use a remote
+for that we're going to use a remote
+for that we're going to use a remote
+event
+event
+event
+and i'm going to name this event fire
+and i'm going to name this event fire
+and i'm going to name this event fire
+event name my local script
+event name my local script
+event name my local script
+client and name my server script server
+client and name my server script server
+client and name my server script server
+just so it makes a little more sense so
+just so it makes a little more sense so
+just so it makes a little more sense so
+we're going to start
+we're going to start
+we're going to start
+in the client script let me zoom in
+in the client script let me zoom in
+in the client script let me zoom in
+there we go
+there we go
+there we go
+first variable we're going to define is
+first variable we're going to define is
+first variable we're going to define is
+our tool
+our tool
+our tool
+which is going to be equal to script dot
+which is going to be equal to script dot
+which is going to be equal to script dot
+parent
+parent
+parent
+then i'm going to get my player which
+then i'm going to get my player which
+then i'm going to get my player which
+will be equal to game
+will be equal to game
+will be equal to game
+get service players
+get service players
+get service players
+dot local player and the reason we need
+dot local player and the reason we need
+dot local player and the reason we need
+our player is because we need
+our player is because we need
+our player is because we need
+our mouse so local mouse equals player
+our mouse so local mouse equals player
+our mouse so local mouse equals player
+get mouse so i know i made a custom
+get mouse so i know i made a custom
+get mouse so i know i made a custom
+mouse module a few videos ago but for
+mouse module a few videos ago but for
+mouse module a few videos ago but for
+the simplicity of this
+the simplicity of this
+the simplicity of this
+video i'm going to use the built-in
+video i'm going to use the built-in
+video i'm going to use the built-in
+roblox mouse it's just
+roblox mouse it's just
+roblox mouse it's just
+less dependencies but feel free to use
+less dependencies but feel free to use
+less dependencies but feel free to use
+your own mouse module
+your own mouse module
+your own mouse module
+if you have it or if you wanted to use
+if you have it or if you wanted to use
+if you have it or if you wanted to use
+mine i'll put a link in the description
+mine i'll put a link in the description
+mine i'll put a link in the description
+for that as well
+for that as well
+for that as well
+so now that we have our mouse and our
+so now that we have our mouse and our
+so now that we have our mouse and our
+tool we also need to get our
+tool we also need to get our
+tool we also need to get our
+fire event which will be equal to tool
+fire event which will be equal to tool
+fire event which will be equal to tool
+wait
+wait
+wait
+for child fire
+for child fire
+for child fire
+event and make sure to use wait for
+event and make sure to use wait for
+event and make sure to use wait for
+trial on the client
+trial on the client
+trial on the client
+because with tools it is does take a lot
+because with tools it is does take a lot
+because with tools it is does take a lot
+of time to load so you're not guaranteed
+of time to load so you're not guaranteed
+of time to load so you're not guaranteed
+to have it so you might have to wait for
+to have it so you might have to wait for
+to have it so you might have to wait for
+it
+it
+it
+so now we're going to call tool dot
+so now we're going to call tool dot
+so now we're going to call tool dot
+activated
+activated
+activated
+we're going to connect a function so
+we're going to connect a function so
+we're going to connect a function so
+this
+this
+this
+function will be fired every time the
+function will be fired every time the
+function will be fired every time the
+tool
+tool
+tool
+is clicked like you click with the tool
+is clicked like you click with the tool
+is clicked like you click with the tool
+in your hand so when this happens we
+in your hand so when this happens we
+in your hand so when this happens we
+want to first
+want to first
+want to first
+get the mouse position which will be
+get the mouse position which will be
+get the mouse position which will be
+equal to mouse.hit.position
+equal to mouse.hit.position
+equal to mouse.hit.position
+and this is a position in 3d space where
+and this is a position in 3d space where
+and this is a position in 3d space where
+you click your mouse
+you click your mouse
+you click your mouse
+and we want to send our mouse position
+and we want to send our mouse position
+and we want to send our mouse position
+through our firebase so we're going to
+through our firebase so we're going to
+through our firebase so we're going to
+take fire event
+take fire event
+take fire event
+fire server mouse position
+fire server mouse position
+fire server mouse position
+there we go so now we can go to the
+there we go so now we can go to the
+there we go so now we can go to the
+server
+server
+server
+let's also get our tool which will be
+let's also get our tool which will be
+let's also get our tool which will be
+equal to script.parent
+equal to script.parent
+equal to script.parent
+we can get our fire event which is tool
+we can get our fire event which is tool
+we can get our fire event which is tool
+dot fire event you don't really have to
+dot fire event you don't really have to
+dot fire event you don't really have to
+use weight for trial on this one
+use weight for trial on this one
+use weight for trial on this one
+and just because we need it later well
+and just because we need it later well
+and just because we need it later well
+we can define
+we can define
+we can define
+fast cast equal to require
+fast cast equal to require
+fast cast equal to require
+tool dot fast cast redux
+tool dot fast cast redux
+tool dot fast cast redux
+so now we can make a function called
+so now we can make a function called
+so now we can make a function called
+fire and this will be called whenever we
+fire and this will be called whenever we
+fire and this will be called whenever we
+want to fire the gun
+want to fire the gun
+want to fire the gun
+in this function we'll get the player
+in this function we'll get the player
+in this function we'll get the player
+who wants to fire
+who wants to fire
+who wants to fire
+and also the mouse position in which
+and also the mouse position in which
+and also the mouse position in which
+they are clicking
+they are clicking
+they are clicking
+we can hook up this event to our fire
+we can hook up this event to our fire
+we can hook up this event to our fire
+event by saying fire event
+event by saying fire event
+event by saying fire event
+on server event connect
+on server event connect
+on server event connect
+fire make sure no parentheses just fire
+fire make sure no parentheses just fire
+fire make sure no parentheses just fire
+there we go
+there we go
+there we go
+so now just a test we can print
+so now just a test we can print
+so now just a test we can print
+player.name
+player.name
+player.name
+fired at mouse
+fired at mouse
+fired at mouse
+position just a little print statement i
+position just a little print statement i
+position just a little print statement i
+would recommend doing this just to make
+would recommend doing this just to make
+would recommend doing this just to make
+sure
+sure
+sure
+everything works so we have our gun
+everything works so we have our gun
+everything works so we have our gun
+we click yeah there's an error but
+we click yeah there's an error but
+we click yeah there's an error but
+that's more of a concatenation error let
+that's more of a concatenation error let
+that's more of a concatenation error let
+me fix that real quick
+me fix that real quick
+me fix that real quick
+instead of concatenating we'll just
+instead of concatenating we'll just
+instead of concatenating we'll just
+use commas
+this should work a little better as you
+this should work a little better as you
+this should work a little better as you
+can see it says b ricey 763 which is my
+can see it says b ricey 763 which is my
+can see it says b ricey 763 which is my
+name fired at a
+name fired at a
+name fired at a
+arbitrary position and you can see as i
+arbitrary position and you can see as i
+arbitrary position and you can see as i
+move my mouse
+move my mouse
+move my mouse
+it's changing that's exactly what we
+it's changing that's exactly what we
+it's changing that's exactly what we
+want so now we have client
+want so now we have client
+want so now we have client
+server communication established so our
+server communication established so our
+server communication established so our
+gun can successfully print things
+gun can successfully print things
+gun can successfully print things
+we want it to fire bullets and damage
+we want it to fire bullets and damage
+we want it to fire bullets and damage
+players
+players
+players
+not just print things so we're going to
+not just print things so we're going to
+not just print things so we're going to
+start by creating a
+start by creating a
+start by creating a
+caster and we're going to create it by
+caster and we're going to create it by
+caster and we're going to create it by
+saying fastcast
+saying fastcast
+saying fastcast
+dot new so caster is basically fast cast
+dot new so caster is basically fast cast
+dot new so caster is basically fast cast
+equivalent
+equivalent
+equivalent
+of creating a new gun basically you
+of creating a new gun basically you
+of creating a new gun basically you
+don't create this every time you fire
+don't create this every time you fire
+don't create this every time you fire
+you only create this once for your gun
+you only create this once for your gun
+you only create this once for your gun
+and this allows you to
+and this allows you to
+and this allows you to
+fire bullets and connect events to
+fire bullets and connect events to
+fire bullets and connect events to
+certain
+certain
+certain
+bullet actions so we have our caster
+bullet actions so we have our caster
+bullet actions so we have our caster
+and we can just fire it by calling
+and we can just fire it by calling
+and we can just fire it by calling
+caster
+caster
+caster
+fire there we go and it takes in a few
+fire there we go and it takes in a few
+fire there we go and it takes in a few
+parameters so let's define those
+parameters so let's define those
+parameters so let's define those
+up here just to make it a little more
+up here just to make it a little more
+up here just to make it a little more
+transparent so we're going to find the
+transparent so we're going to find the
+transparent so we're going to find the
+origin
+origin
+origin
+this is where the bullet starts and
+this is where the bullet starts and
+this is where the bullet starts and
+we're going to set that equal to
+we're going to set that equal to
+we're going to set that equal to
+our fire point which is our attachment
+our fire point which is our attachment
+our fire point which is our attachment
+that we have in our handle so let's just
+that we have in our handle so let's just
+that we have in our handle so let's just
+define that up there
+define that up there
+define that up there
+local fire point equals tool dot handle
+local fire point equals tool dot handle
+local fire point equals tool dot handle
+dot
+dot
+dot
+fire point there we go so we can set it
+fire point there we go so we can set it
+fire point there we go so we can set it
+to
+to
+to
+fire point dot world position do not do
+fire point dot world position do not do
+fire point dot world position do not do
+position position
+position position
+position position
+and attachments is relative we want the
+and attachments is relative we want the
+and attachments is relative we want the
+world position
+world position
+world position
+of our attachment and we can get our
+of our attachment and we can get our
+of our attachment and we can get our
+direction
+direction
+direction
+which will be equal to
+mouse position minus the origin
+mouse position minus the origin
+mouse position minus the origin
+dot unit is basically saying we get the
+dot unit is basically saying we get the
+dot unit is basically saying we get the
+the vector between our fire point and
+the vector between our fire point and
+the vector between our fire point and
+our mouse position so it's accurate but
+our mouse position so it's accurate but
+our mouse position so it's accurate but
+it also starts at the right spot
+it also starts at the right spot
+it also starts at the right spot
+and we get the unit vector which
+and we get the unit vector which
+and we get the unit vector which
+basically turns into a
+basically turns into a
+basically turns into a
+magnitude less than one which is good
+magnitude less than one which is good
+magnitude less than one which is good
+for directions
+for directions
+for directions
+so now we can fire our caster with the
+so now we can fire our caster with the
+so now we can fire our caster with the
+origin
+origin
+origin
+the direction and then
+the direction and then
+the direction and then
+a velocity value so for our velocity you
+a velocity value so for our velocity you
+a velocity value so for our velocity you
+can set this to a number
+can set this to a number
+can set this to a number
+or a vector three i'm just going to set
+or a vector three i'm just going to set
+or a vector three i'm just going to set
+it to a number and we're going to say
+it to a number and we're going to say
+it to a number and we're going to say
+10 for example so if we were to run this
+10 for example so if we were to run this
+10 for example so if we were to run this
+right now nothing would happen when we
+right now nothing would happen when we
+right now nothing would happen when we
+fire it because there's no way to
+fire it because there's no way to
+fire it because there's no way to
+visualize our firing
+visualize our firing
+visualize our firing
+so fastcast has a handy feature where we
+so fastcast has a handy feature where we
+so fastcast has a handy feature where we
+can
+can
+can
+say fastcast dot visualize cast
+say fastcast dot visualize cast
+say fastcast dot visualize cast
+equal to true this is just good for
+equal to true this is just good for
+equal to true this is just good for
+debugging when you don't have a bullet
+debugging when you don't have a bullet
+debugging when you don't have a bullet
+we will make a bullet and a bullet part
+we will make a bullet and a bullet part
+we will make a bullet and a bullet part
+a little bit later but for now
+a little bit later but for now
+a little bit later but for now
+this will do the trick so we're firing a
+this will do the trick so we're firing a
+this will do the trick so we're firing a
+imaginary like ray with origin here
+imaginary like ray with origin here
+imaginary like ray with origin here
+direction here with a velocity of 10.
+direction here with a velocity of 10.
+direction here with a velocity of 10.
+so let's just play this and we can see
+so let's just play this and we can see
+so let's just play this and we can see
+what happens
+what happens
+what happens
+so we click and you can see the bullet
+so we click and you can see the bullet
+so we click and you can see the bullet
+is represented by this little
+trail of black lines
+trail of black lines
+trail of black lines
+and when it hits it has a little green
+and when it hits it has a little green
+and when it hits it has a little green
+sphere
+that's really good for testing your guns
+that's really good for testing your guns
+that's really good for testing your guns
+you can see it starts at
+you can see it starts at
+you can see it starts at
+our tip and it goes directly to our
+our tip and it goes directly to our
+our tip and it goes directly to our
+mouse position so if i don't move my
+mouse position so if i don't move my
+mouse position so if i don't move my
+mouse
+mouse
+mouse
+you can see it goes spot on which is
+you can see it goes spot on which is
+you can see it goes spot on which is
+exactly what we want and that's great
+exactly what we want and that's great
+exactly what we want and that's great
+so right now we can fire our gun with a
+so right now we can fire our gun with a
+so right now we can fire our gun with a
+little bit of velocity but you can do a
+little bit of velocity but you can do a
+little bit of velocity but you can do a
+lot more and fast cast
+lot more and fast cast
+lot more and fast cast
+and the easiest way to do that is by
+and the easiest way to do that is by
+and the easiest way to do that is by
+using a cast behavior
+using a cast behavior
+using a cast behavior
+object and we can call make that by
+object and we can call make that by
+object and we can call make that by
+creating by calling i should say
+creating by calling i should say
+creating by calling i should say
+fastcast
+fastcast
+fastcast
+dot new behavior
+dot new behavior
+dot new behavior
+and there's a few parameters or
+and there's a few parameters or
+and there's a few parameters or
+properties in our cast behavior that we
+properties in our cast behavior that we
+properties in our cast behavior that we
+can change
+can change
+can change
+a notable one is cast behavior
+a notable one is cast behavior
+a notable one is cast behavior
+dot acceleration and we can set this to
+dot acceleration and we can set this to
+dot acceleration and we can set this to
+a vector three dot new so for example
+a vector three dot new so for example
+a vector three dot new so for example
+vector three dot new so for example if
+vector three dot new so for example if
+vector three dot new so for example if
+we wanted to
+we wanted to
+we wanted to
+add gravity we can say negative
+add gravity we can say negative
+add gravity we can say negative
+workspace dot gravity
+workspace dot gravity
+workspace dot gravity
+for the y so it's basically pulling our
+for the y so it's basically pulling our
+for the y so it's basically pulling our
+part down it's accelerating our part
+part down it's accelerating our part
+part down it's accelerating our part
+towards the ground just like how normal
+towards the ground just like how normal
+towards the ground just like how normal
+gravity
+gravity
+gravity
+does we can also define a
+does we can also define a
+does we can also define a
+cast params object which will be a
+cast params object which will be a
+cast params object which will be a
+raycast raycastparams.new
+raycast raycastparams.new
+raycast raycastparams.new
+if you don't know about raycast params i
+if you don't know about raycast params i
+if you don't know about raycast params i
+touched on it in my re
+touched on it in my re
+touched on it in my re
+my new raycasting video so you can check
+my new raycasting video so you can check
+my new raycasting video so you can check
+that out
+that out
+that out
+for it and we can say castparams.filter
+for it and we can say castparams.filter
+for it and we can say castparams.filter
+type equals enum dot
+type equals enum dot
+type equals enum dot
+raycast filter type dot blacklist
+raycast filter type dot blacklist
+raycast filter type dot blacklist
+this is basically saying we for all of
+this is basically saying we for all of
+this is basically saying we for all of
+our
+our
+our
+filter descended instances we don't want
+filter descended instances we don't want
+filter descended instances we don't want
+we want to ignore them
+we want to ignore them
+we want to ignore them
+we don't want to hit them so we're also
+we don't want to hit them so we're also
+we don't want to hit them so we're also
+going to set
+going to set
+going to set
+our ignore water to true because it's a
+our ignore water to true because it's a
+our ignore water to true because it's a
+gun it should be able to go through
+gun it should be able to go through
+gun it should be able to go through
+water
+water
+water
+so now we need to set our filter
+so now we need to set our filter
+so now we need to set our filter
+descendants
+descendants
+descendants
+instances the way we're going to do that
+instances the way we're going to do that
+instances the way we're going to do that
+is going to be quite interesting
+is going to be quite interesting
+is going to be quite interesting
+we're going to define a function local
+we're going to define a function local
+we're going to define a function local
+function
+function
+function
+on equipped this is for our tool
+on equipped this is for our tool
+on equipped this is for our tool
+so every time the tool is equipped we
+so every time the tool is equipped we
+so every time the tool is equipped we
+want to set the cast params
+want to set the cast params
+want to set the cast params
+dot filter descendants instances
+dot filter descendants instances
+dot filter descendants instances
+equal to a new list with the
+equal to a new list with the
+equal to a new list with the
+curly brackets we want to set this to
+curly brackets we want to set this to
+curly brackets we want to set this to
+tool
+tool
+tool
+dot parent and then
+dot parent and then
+dot parent and then
+our bullets folder which we'll define a
+our bullets folder which we'll define a
+our bullets folder which we'll define a
+little bit later
+little bit later
+little bit later
+so let's leave this for now set it to
+so let's leave this for now set it to
+so let's leave this for now set it to
+tool dot parent so every time
+tool dot parent so every time
+tool dot parent so every time
+we equip our tool we want to
+we equip our tool we want to
+we equip our tool we want to
+set our ignore list to our characters
+set our ignore list to our characters
+set our ignore list to our characters
+because you shouldn't be able to hit
+because you shouldn't be able to hit
+because you shouldn't be able to hit
+your own character that'd be stupid you
+your own character that'd be stupid you
+your own character that'd be stupid you
+want to ignore it
+want to ignore it
+want to ignore it
+that won't do anything until we go down
+that won't do anything until we go down
+that won't do anything until we go down
+here and we hook it up to a tool dot
+here and we hook it up to a tool dot
+here and we hook it up to a tool dot
+equipped
+equipped
+equipped
+connect on equipped
+connect on equipped
+connect on equipped
+there we go we since we're doing that we
+there we go we since we're doing that we
+there we go we since we're doing that we
+want to set cast behavior
+want to set cast behavior
+want to set cast behavior
+dot auto ignore container
+dot auto ignore container
+dot auto ignore container
+to false because that's redundant we're
+to false because that's redundant we're
+to false because that's redundant we're
+already doing that down here we're auto
+already doing that down here we're auto
+already doing that down here we're auto
+ignoring our tool parent
+ignoring our tool parent
+ignoring our tool parent
+the tool is a container so the parent
+the tool is a container so the parent
+the tool is a container so the parent
+descendants is a tool
+descendants is a tool
+descendants is a tool
+so we're automatically ignoring it we
+so we're automatically ignoring it we
+so we're automatically ignoring it we
+don't really need that
+don't really need that
+don't really need that
+and now to bring it all together we can
+and now to bring it all together we can
+and now to bring it all together we can
+set our cast behavior
+set our cast behavior
+set our cast behavior
+dot raycast params
+dot raycast params
+dot raycast params
+equal to the cast params
+that won't do anything until we send it
+that won't do anything until we send it
+that won't do anything until we send it
+into our fourth argument for the caster
+into our fourth argument for the caster
+into our fourth argument for the caster
+fire
+fire
+fire
+so we can say cast behavior
+so we can say cast behavior
+so we can say cast behavior
+there you go so right now
+there you go so right now
+there you go so right now
+we can play this
+and you can see the bullet just falls
+and you can see the bullet just falls
+and you can see the bullet just falls
+because that's how it's accelerating and
+because that's how it's accelerating and
+because that's how it's accelerating and
+if we shoot into our self
+if we shoot into our self
+if we shoot into our self
+it also falls through our body
+it also falls through our body
+it also falls through our body
+which is exactly what we want so that's
+which is exactly what we want so that's
+which is exactly what we want so that's
+perfect
+perfect
+perfect
+so now let's visualize our bullet in a
+so now let's visualize our bullet in a
+so now let's visualize our bullet in a
+prettier way
+prettier way
+prettier way
+using actual bullets so the first thing
+using actual bullets so the first thing
+using actual bullets so the first thing
+i want to do
+i want to do
+i want to do
+i'm going to go to the very top to find
+i'm going to go to the very top to find
+i'm going to go to the very top to find
+a bullets folder and we're just gonna
+a bullets folder and we're just gonna
+a bullets folder and we're just gonna
+make a new
+make a new
+make a new
+folder i could using instance.new folder
+folder i could using instance.new folder
+folder i could using instance.new folder
+i could create this folder in the
+i could create this folder in the
+i could create this folder in the
+workspace and then reference it but i
+workspace and then reference it but i
+workspace and then reference it but i
+want this gun to be
+want this gun to be
+want this gun to be
+standalone meaning it has no external
+standalone meaning it has no external
+standalone meaning it has no external
+dependencies in your project
+dependencies in your project
+dependencies in your project
+so i can upload this to the toolbox and
+so i can upload this to the toolbox and
+so i can upload this to the toolbox and
+then you can paste it into your own game
+then you can paste it into your own game
+then you can paste it into your own game
+and you can use it
+and you can use it
+and you can use it
+out of the box so we're going to create
+out of the box so we're going to create
+out of the box so we're going to create
+a new folder
+a new folder
+a new folder
+or we can also check for
+or we can also check for
+or we can also check for
+workspace first
+workspace first
+workspace first
+child bullet folder
+child bullet folder
+child bullet folder
+so this basically is saying that we ch
+so this basically is saying that we ch
+so this basically is saying that we ch
+we create a new folder
+we create a new folder
+we create a new folder
+actually we should reorder this my bad
+actually we should reorder this my bad
+actually we should reorder this my bad
+so this should be first so we check
+so this should be first so we check
+so this should be first so we check
+and then if there's no folder we create
+and then if there's no folder we create
+and then if there's no folder we create
+a new folder
+a new folder
+a new folder
+and then we can do comma workspace which
+and then we can do comma workspace which
+and then we can do comma workspace which
+basically says
+basically says
+basically says
+we if there's no folder already in the
+we if there's no folder already in the
+we if there's no folder already in the
+workspace you can you could create a
+workspace you can you could create a
+workspace you can you could create a
+bullet folder
+bullet folder
+bullet folder
+actually i'll do that i'll create a
+actually i'll do that i'll create a
+actually i'll do that i'll create a
+bullet folder
+bullet folder
+bullet folder
+and call this bullet folder and the
+and call this bullet folder and the
+and call this bullet folder and the
+workspace
+workspace
+workspace
+if it's not there then we create a new
+if it's not there then we create a new
+if it's not there then we create a new
+bullet folder and for the new folder we
+bullet folder and for the new folder we
+bullet folder and for the new folder we
+can just call bullet folder dot name
+can just call bullet folder dot name
+can just call bullet folder dot name
+equals bullet folder there we go so now
+equals bullet folder there we go so now
+equals bullet folder there we go so now
+we have
+we have
+we have
+a bullets folder my bad so now we have
+a bullets folder my bad so now we have
+a bullets folder my bad so now we have
+our bullets folder created
+our bullets folder created
+our bullets folder created
+and we want to do a few things with this
+and we want to do a few things with this
+and we want to do a few things with this
+firstly we want to go to our
+firstly we want to go to our
+firstly we want to go to our
+unequipped function and add our
+unequipped function and add our
+unequipped function and add our
+bullets folder here so it ignores
+bullets folder here so it ignores
+bullets folder here so it ignores
+other bullets as well which is what we
+other bullets as well which is what we
+other bullets as well which is what we
+want and then into our cast behavior
+want and then into our cast behavior
+want and then into our cast behavior
+we want to say cast behavior
+we want to say cast behavior
+we want to say cast behavior
+dot cosmetic bullet container
+dot cosmetic bullet container
+dot cosmetic bullet container
+equals bullets folder
+equals bullets folder
+equals bullets folder
+so now we can actually create our bullet
+so now we can actually create our bullet
+so now we can actually create our bullet
+i'll do this right before below our
+i'll do this right before below our
+i'll do this right before below our
+bullet folder
+bullet folder
+bullet folder
+local bullet template
+local bullet template
+local bullet template
+bullet template equals instance dot new
+bullet template equals instance dot new
+bullet template equals instance dot new
+part bullet template
+part bullet template
+part bullet template
+dot anchor equals true
+dot anchor equals true
+dot anchor equals true
+bullet template dot can collide equals
+bullet template dot can collide equals
+bullet template dot can collide equals
+false
+false
+false
+and let me just shut the shape to a ball
+and let me just shut the shape to a ball
+and let me just shut the shape to a ball
+you could set this to whatever you want
+you could set this to whatever you want
+you could set this to whatever you want
+and no right now with this version of
+and no right now with this version of
+and no right now with this version of
+the gun you can't really use models
+the gun you can't really use models
+the gun you can't really use models
+these models would just be too laggy and
+these models would just be too laggy and
+these models would just be too laggy and
+it just wouldn't work well so you could
+it just wouldn't work well so you could
+it just wouldn't work well so you could
+use a union if you wanted to and like
+use a union if you wanted to and like
+use a union if you wanted to and like
+define it in server storage and then
+define it in server storage and then
+define it in server storage and then
+reference it
+reference it
+reference it
+but again i want this to be standalone
+but again i want this to be standalone
+but again i want this to be standalone
+so i'm just going to make my
+so i'm just going to make my
+so i'm just going to make my
+bullet inside the code i said the bullet
+bullet inside the code i said the bullet
+bullet inside the code i said the bullet
+template dot
+template dot
+template dot
+size we're going to make this pretty big
+size we're going to make this pretty big
+size we're going to make this pretty big
+initially just so you can see it we're
+initially just so you can see it we're
+initially just so you can see it we're
+going to set this to 1 1
+going to set this to 1 1
+going to set this to 1 1
+1 and we can set our bullet template
+dot material equal to enum dot material
+dot material equal to enum dot material
+dot material equal to enum dot material
+dot not neon let's do some metal since
+dot not neon let's do some metal since
+dot not neon let's do some metal since
+it's a metal
+it's a metal
+it's a metal
+bullet so that bullet should work quite
+bullet so that bullet should work quite
+bullet so that bullet should work quite
+well
+well
+well
+in our cast behavior we can say cast
+in our cast behavior we can say cast
+in our cast behavior we can say cast
+behavior
+behavior
+behavior
+dot cosmetic bullet template
+dot cosmetic bullet template
+dot cosmetic bullet template
+equals our bullet template
+equals our bullet template
+equals our bullet template
+there we go so
+there we go so
+there we go so
+that creates a new bullet when we fire
+that creates a new bullet when we fire
+that creates a new bullet when we fire
+our gun
+our gun
+our gun
+but it does nothing so in order to
+but it does nothing so in order to
+but it does nothing so in order to
+actually register a bullet and put it
+actually register a bullet and put it
+actually register a bullet and put it
+where we want to
+where we want to
+where we want to
+we need to make a new function
+local function on length change
+local function on length change
+local function on length change
+and this function will take in a few
+and this function will take in a few
+and this function will take in a few
+parameters
+parameters
+parameters
+so the first parameter is the activecast
+so the first parameter is the activecast
+so the first parameter is the activecast
+we don't have to worry about that we
+we don't have to worry about that we
+we don't have to worry about that we
+won't deal with that it's just like a
+won't deal with that it's just like a
+won't deal with that it's just like a
+table
+table
+table
+with some info pertaining to our
+with some info pertaining to our
+with some info pertaining to our
+active raycast and next is our last
+active raycast and next is our last
+active raycast and next is our last
+point which is a vector
+point which is a vector
+point which is a vector
+we have our direction then we have
+we have our direction then we have
+we have our direction then we have
+our like length of our segment
+our like length of our segment
+our like length of our segment
+our velocity and finally the bullet
+our velocity and finally the bullet
+our velocity and finally the bullet
+i spelled velocity wrong let me fix that
+i spelled velocity wrong let me fix that
+i spelled velocity wrong let me fix that
+velocity so first we want to make sure
+velocity so first we want to make sure
+velocity so first we want to make sure
+our bullet exists because
+our bullet exists because
+our bullet exists because
+roblox is a chaotic world and we don't
+roblox is a chaotic world and we don't
+roblox is a chaotic world and we don't
+want to be changing our bullet if it's
+want to be changing our bullet if it's
+want to be changing our bullet if it's
+not there
+not there
+not there
+then we can set we can define our bullet
+then we can set we can define our bullet
+then we can set we can define our bullet
+length which will be equal to
+bullet dot size dot z divided by two
+bullet dot size dot z divided by two
+bullet dot size dot z divided by two
+and we can set our offset
+and we can set our offset
+and we can set our offset
+which will be equal to c frame dot new
+which will be equal to c frame dot new
+which will be equal to c frame dot new
+zero zero and then
+zero zero and then
+zero zero and then
+negative parenthesis length
+negative parenthesis length
+negative parenthesis length
+minus bullet length so this length
+minus bullet length so this length
+minus bullet length so this length
+variable
+variable
+variable
+is the length of the segment of our
+is the length of the segment of our
+is the length of the segment of our
+raycast because
+raycast because
+raycast because
+fastcast you see those little cones when
+fastcast you see those little cones when
+fastcast you see those little cones when
+we're visualizing our cast
+we're visualizing our cast
+we're visualizing our cast
+that's each segment of our like ray cast
+that's each segment of our like ray cast
+that's each segment of our like ray cast
+our fast cast
+our fast cast
+our fast cast
+so we want to offset our bullet
+so we want to offset our bullet
+so we want to offset our bullet
+so it doesn't go past each segment so
+so it doesn't go past each segment so
+so it doesn't go past each segment so
+when it hits a wall for example it
+when it hits a wall for example it
+when it hits a wall for example it
+doesn't phase through the wall we want
+doesn't phase through the wall we want
+doesn't phase through the wall we want
+to keep it behind the wall
+to keep it behind the wall
+to keep it behind the wall
+it looks better and it just functions
+it looks better and it just functions
+it looks better and it just functions
+better so that's what we're going to do
+better so that's what we're going to do
+better so that's what we're going to do
+and we can define we can now set our
+and we can define we can now set our
+and we can define we can now set our
+bullet dot c
+bullet dot c
+bullet dot c
+frame equal to c frame dot
+frame equal to c frame dot
+frame equal to c frame dot
+look at last point
+look at last point
+look at last point
+then last point plus
+then last point plus
+then last point plus
+[Music]
+[Music]
+[Music]
+direction
+direction
+direction
+and then we're going to say 2 world
+and then we're going to say 2 world
+and then we're going to say 2 world
+space
+space
+space
+offset so what this does let me just
+offset so what this does let me just
+offset so what this does let me just
+i spelled direction wrong as well so
+i spelled direction wrong as well so
+i spelled direction wrong as well so
+what this does
+what this does
+what this does
+is we take our last point
+is we take our last point
+is we take our last point
+then we look
+then we look
+then we look
+towards the direction that we're going
+towards the direction that we're going
+towards the direction that we're going
+by adding it to our last point
+by adding it to our last point
+by adding it to our last point
+and then we're converting we're adding a
+and then we're converting we're adding a
+and then we're converting we're adding a
+offset c frame offset relative to this
+offset c frame offset relative to this
+offset c frame offset relative to this
+c frame by using two world space so it
+c frame by using two world space so it
+c frame by using two world space so it
+is on the right place in regards to the
+is on the right place in regards to the
+is on the right place in regards to the
+local z-axis so this online
+local z-axis so this online
+local z-axis so this online
+change will run every single time the
+change will run every single time the
+change will run every single time the
+ray is
+ray is
+ray is
+updated so i'm going to go to the bottom
+updated so i'm going to go to the bottom
+updated so i'm going to go to the bottom
+of our script
+of our script
+of our script
+and i'm going to say caster dot length
+and i'm going to say caster dot length
+and i'm going to say caster dot length
+changed connect on
+changed connect on
+changed connect on
+length change so this connects
+length change so this connects
+length change so this connects
+our length change function to the actual
+our length change function to the actual
+our length change function to the actual
+event
+event
+event
+part of our caster object
+part of our caster object
+part of our caster object
+so let's test it out and i'm going to
+so let's test it out and i'm going to
+so let's test it out and i'm going to
+turn off visualize cast by just
+turn off visualize cast by just
+turn off visualize cast by just
+commenting it out
+because it's off by default
+because it's off by default
+because it's off by default
+and you can see that our ball
+shoots and it falls and it stops and it
+shoots and it falls and it stops and it
+shoots and it falls and it stops and it
+looks nice
+looks nice
+looks nice
+and you can see it does not collide with
+and you can see it does not collide with
+and you can see it does not collide with
+the floor you could obviously make it do
+the floor you could obviously make it do
+the floor you could obviously make it do
+that if you wanted to but
+that if you wanted to but
+that if you wanted to but
+this just looks a little cleaner and i
+this just looks a little cleaner and i
+this just looks a little cleaner and i
+think it's time
+think it's time
+think it's time
+we go and we ramp up our velocity so i'm
+we go and we ramp up our velocity so i'm
+we go and we ramp up our velocity so i'm
+going to go
+going to go
+going to go
+find our starting velocity which is all
+find our starting velocity which is all
+find our starting velocity which is all
+the way down here so this like
+the way down here so this like
+the way down here so this like
+a thousand and this will get you more of
+a thousand and this will get you more of
+a thousand and this will get you more of
+a gun
+a gun
+a gun
+realistic physics so my gun
+realistic physics so my gun
+realistic physics so my gun
+you can see it's pretty quick but you
+you can see it's pretty quick but you
+you can see it's pretty quick but you
+can also see there's travel time and if
+can also see there's travel time and if
+can also see there's travel time and if
+i were to go into first person
+i were to go into first person
+i were to go into first person
+and i shoot the bullet goes a little bit
+and i shoot the bullet goes a little bit
+and i shoot the bullet goes a little bit
+below my mouse
+below my mouse
+below my mouse
+so now we're getting into a gun that
+so now we're getting into a gun that
+so now we're getting into a gun that
+actually works as intended and has
+actually works as intended and has
+actually works as intended and has
+bullet drop and bullet travel time
+bullet drop and bullet travel time
+bullet drop and bullet travel time
+so there's one last thing to do right
+so there's one last thing to do right
+so there's one last thing to do right
+now our
+now our
+now our
+gun doesn't do anything when it hits
+gun doesn't do anything when it hits
+gun doesn't do anything when it hits
+another player we need to change that we
+another player we need to change that we
+another player we need to change that we
+want to do
+want to do
+want to do
+damage so i'm going to find another
+damage so i'm going to find another
+damage so i'm going to find another
+function below length change i'm going
+function below length change i'm going
+function below length change i'm going
+to call this
+to call this
+to call this
+local function on ray hit this will be
+local function on ray hit this will be
+local function on ray hit this will be
+called whenever
+called whenever
+called whenever
+our ray collides with the ground and it
+our ray collides with the ground and it
+our ray collides with the ground and it
+stops updating
+stops updating
+stops updating
+so we get the cast object once again
+so we get the cast object once again
+so we get the cast object once again
+this is the raycast result
+this is the raycast result
+this is the raycast result
+and we have the velocity and the bullet
+and we have the velocity and the bullet
+and we have the velocity and the bullet
+there we go
+there we go
+there we go
+so i can define my hit equal to
+so i can define my hit equal to
+so i can define my hit equal to
+result dot instance
+result dot instance
+result dot instance
+so the hit and the resultant instance is
+so the hit and the resultant instance is
+so the hit and the resultant instance is
+never
+never
+never
+nil i don't know how i don't really
+nil i don't know how i don't really
+nil i don't know how i don't really
+under i don't
+under i don't
+under i don't
+look at the back end of fast cast but
+look at the back end of fast cast but
+look at the back end of fast cast but
+it's never nails so
+it's never nails so
+it's never nails so
+it's safe to finding it here it won't
+it's safe to finding it here it won't
+it's safe to finding it here it won't
+air
+air
+air
+but we want to make sure the hit
+but we want to make sure the hit
+but we want to make sure the hit
+actually exists
+actually exists
+actually exists
+as a character like part of character so
+as a character like part of character so
+as a character like part of character so
+we say local character
+we say local character
+we say local character
+equals hit find first
+equals hit find first
+equals hit find first
+ancestor which is a
+ancestor which is a
+ancestor which is a
+model so this will find the
+model so this will find the
+model so this will find the
+model that's part of your character and
+model that's part of your character and
+model that's part of your character and
+we need to check
+we need to check
+we need to check
+if the character exists if there's if
+if the character exists if there's if
+if the character exists if there's if
+it's parented to a model
+it's parented to a model
+it's parented to a model
+and the character has a humanoid which
+and the character has a humanoid which
+and the character has a humanoid which
+we can do by saying character find first
+we can do by saying character find first
+we can do by saying character find first
+child
+child
+child
+humanoid
+then we can say character dot humanoid
+then we can say character dot humanoid
+then we can say character dot humanoid
+take damage 50. so when we hit a player
+take damage 50. so when we hit a player
+take damage 50. so when we hit a player
+we'll give them 50 damage and
+we'll give them 50 damage and
+we'll give them 50 damage and
+since we're dealing with guns we're
+since we're dealing with guns we're
+since we're dealing with guns we're
+dealing with bullets we want to make
+dealing with bullets we want to make
+dealing with bullets we want to make
+sure to recycle our bullets we don't
+sure to recycle our bullets we don't
+sure to recycle our bullets we don't
+want them staying
+want them staying
+want them staying
+on the ground forever so we're going to
+on the ground forever so we're going to
+on the ground forever so we're going to
+use the debris service
+use the debris service
+use the debris service
+game get service debris
+game get service debris
+game get service debris
+and we're going to add item bullet
+and we're going to add item bullet
+and we're going to add item bullet
+let's just do two seconds so after two
+let's just do two seconds so after two
+let's just do two seconds so after two
+seconds our bullet will get destroyed
+seconds our bullet will get destroyed
+seconds our bullet will get destroyed
+that's what this ad item of the debris
+that's what this ad item of the debris
+that's what this ad item of the debris
+service does
+service does
+service does
+so now we can go to the very bottom set
+so now we can go to the very bottom set
+so now we can go to the very bottom set
+caster dot on or not
+caster dot on or not
+caster dot on or not
+on we would just say caster dot ray hit
+on we would just say caster dot ray hit
+on we would just say caster dot ray hit
+connect on ray
+connect on ray
+connect on ray
+hit there we go this will update
+hit there we go this will update
+hit there we go this will update
+whenever we hit
+whenever we hit
+whenever we hit
+something you can see
+something you can see
+something you can see
+i put down a few zombies to test this
+i put down a few zombies to test this
+i put down a few zombies to test this
+out
+out
+out
+off camera you can see when i shoot them
+off camera you can see when i shoot them
+off camera you can see when i shoot them
+the bullets that you can change how long
+the bullets that you can change how long
+the bullets that you can change how long
+the bullets stay
+the bullets stay
+the bullets stay
+it's just for demonstration but you can
+it's just for demonstration but you can
+it's just for demonstration but you can
+see the bullets hit them
+see the bullets hit them
+see the bullets hit them
+and they
+do damage which is exactly what we want
+do damage which is exactly what we want
+do damage which is exactly what we want
+and that's about it for this video so
+and that's about it for this video so
+and that's about it for this video so
+thanks for watching
+thanks for watching
+thanks for watching
+this just scratched the surface of what
+this just scratched the surface of what
+this just scratched the surface of what
+you can do with fastcast
+you can do with fastcast
+you can do with fastcast
+and just making a gun in general and
+and just making a gun in general and
+and just making a gun in general and
+roblox so in
+roblox so in
+roblox so in
+future videos i'll be covering part cash
+future videos i'll be covering part cash
+future videos i'll be covering part cash
+which allows you to
+which allows you to
+which allows you to
+make more efficient bullets bullet holes
+make more efficient bullets bullet holes
+make more efficient bullets bullet holes
+ammo and reloads maybe a d balance in
+ammo and reloads maybe a d balance in
+ammo and reloads maybe a d balance in
+there like for the reload like a
+there like for the reload like a
+there like for the reload like a
+cooldown
+cooldown
+cooldown
+maybe a fully automatic gun or even
+maybe a fully automatic gun or even
+maybe a fully automatic gun or even
+different types of guns like a shotgun
+different types of guns like a shotgun
+different types of guns like a shotgun
+a bow and arrow or a rocket launcher so
+a bow and arrow or a rocket launcher so
+a bow and arrow or a rocket launcher so
+if you're interested in any of that make
+if you're interested in any of that make
+if you're interested in any of that make
+sure to comment down below
+sure to comment down below
+sure to comment down below
+other than that i hope you have a nice
+other than that i hope you have a nice
+other than that i hope you have a nice
+day and goodbye
+day and goodbye
+day and goodbye
+[Music]
+[Music]
+[Music]
+you

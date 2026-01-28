@@ -1,0 +1,838 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i'll be showing you how to
+in this video i'll be showing you how to
+in this video i'll be showing you how to
+script a
+script a
+script a
+camera shake effect as you see here
+camera shake effect as you see here
+camera shake effect as you see here
+so this sort of effect would be good for
+so this sort of effect would be good for
+so this sort of effect would be good for
+certain events in your game such as
+certain events in your game such as
+certain events in your game such as
+a rocket launch or an earthquake where
+a rocket launch or an earthquake where
+a rocket launch or an earthquake where
+the player
+the player
+the player
+really needs to feel immersed and we do
+really needs to feel immersed and we do
+really needs to feel immersed and we do
+that by shaking the camera
+that by shaking the camera
+that by shaking the camera
+uncontrollably and leads to this effect
+uncontrollably and leads to this effect
+uncontrollably and leads to this effect
+it feels like the ground is moving or
+it feels like the ground is moving or
+it feels like the ground is moving or
+something something shaking
+something something shaking
+something something shaking
+something big is blowing up or
+something big is blowing up or
+something big is blowing up or
+something's happening so if you're
+something's happening so if you're
+something's happening so if you're
+interested in that
+interested in that
+interested in that
+make sure to watch till the end and if
+make sure to watch till the end and if
+make sure to watch till the end and if
+you enjoy it make sure to like and
+you enjoy it make sure to like and
+you enjoy it make sure to like and
+subscribe
+subscribe
+subscribe
+and without further ado let's get into
+and without further ado let's get into
+and without further ado let's get into
+the video
+[Music]
+[Music]
+[Music]
+so let's get started i'm going to start
+so let's get started i'm going to start
+so let's get started i'm going to start
+by going into replicated storage
+by going into replicated storage
+by going into replicated storage
+and creating a remote event
+and creating a remote event
+and creating a remote event
+and this event i'm going to name set
+and this event i'm going to name set
+and this event i'm going to name set
+camera
+camera
+camera
+shake and the reason we need this remote
+shake and the reason we need this remote
+shake and the reason we need this remote
+event because i'm making this camera
+event because i'm making this camera
+event because i'm making this camera
+shake in the context of an event so
+shake in the context of an event so
+shake in the context of an event so
+let's say
+let's say
+let's say
+an earthquake happens the server causes
+an earthquake happens the server causes
+an earthquake happens the server causes
+the earthquake it sends
+the earthquake it sends
+the earthquake it sends
+all the clients to set the camera sheet
+all the clients to set the camera sheet
+all the clients to set the camera sheet
+to true and then all the
+to true and then all the
+to true and then all the
+clients cameras start shaking or if you
+clients cameras start shaking or if you
+clients cameras start shaking or if you
+want to be like even more advanced you
+want to be like even more advanced you
+want to be like even more advanced you
+could add like a certain proximity so if
+could add like a certain proximity so if
+could add like a certain proximity so if
+they're close enough
+they're close enough
+they're close enough
+to the object then they can fire the
+to the object then they can fire the
+to the object then they can fire the
+camera shake
+camera shake
+camera shake
+and we'll add a local script that
+and we'll add a local script that
+and we'll add a local script that
+receives this event
+receives this event
+receives this event
+and shakes the camera accordingly so
+and shakes the camera accordingly so
+and shakes the camera accordingly so
+let's do that right now
+let's do that right now
+let's do that right now
+so in starter player i'm going to go
+so in starter player i'm going to go
+so in starter player i'm going to go
+into starter character scripts
+into starter character scripts
+into starter character scripts
+and create a local script and i'm going
+and create a local script and i'm going
+and create a local script and i'm going
+to name this logo script
+to name this logo script
+to name this logo script
+camera shake
+camera shake
+camera shake
+let's zoom in a little bit we're going
+let's zoom in a little bit we're going
+let's zoom in a little bit we're going
+to find replicated storage because
+to find replicated storage because
+to find replicated storage because
+that's where our event is
+that's where our event is
+that's where our event is
+stored so local replicate storage equals
+stored so local replicate storage equals
+stored so local replicate storage equals
+game get
+game get
+game get
+service replicated
+service replicated
+service replicated
+storage there we go and then
+storage there we go and then
+storage there we go and then
+local run service
+local run service
+local run service
+and this is just going to be the run
+and this is just going to be the run
+and this is just going to be the run
+service game gets service run service
+service game gets service run service
+service game gets service run service
+and we're going to use this to bind our
+and we're going to use this to bind our
+and we're going to use this to bind our
+camera
+camera
+camera
+motions to a render step so next we're
+motions to a render step so next we're
+motions to a render step so next we're
+going to find
+going to find
+going to find
+our set camera shake
+our set camera shake
+our set camera shake
+local set camera shake equals replicated
+local set camera shake equals replicated
+local set camera shake equals replicated
+storage wait for child
+storage wait for child
+storage wait for child
+set camera shake there we go
+set camera shake there we go
+set camera shake there we go
+and now we need to get our player model
+and now we need to get our player model
+and now we need to get our player model
+which i guess is our character so we can
+which i guess is our character so we can
+which i guess is our character so we can
+do local character
+do local character
+do local character
+equals script.parent and then local
+equals script.parent and then local
+equals script.parent and then local
+humanoid equals character
+humanoid equals character
+humanoid equals character
+wait for child human no way there we go
+wait for child human no way there we go
+wait for child human no way there we go
+so we have our character and we have our
+so we have our character and we have our
+so we have our character and we have our
+humanoid
+so now let's just set up our basic like
+so now let's just set up our basic like
+so now let's just set up our basic like
+infrastructure
+infrastructure
+infrastructure
+and we're going to do a set camera shake
+and we're going to do a set camera shake
+and we're going to do a set camera shake
+dot
+dot
+dot
+on client event connect
+on client event connect
+on client event connect
+a function and we're going to put in a
+a function and we're going to put in a
+a function and we're going to put in a
+boolean variable right here which is is
+boolean variable right here which is is
+boolean variable right here which is is
+shaking
+shaking
+shaking
+so this will just tell us whether we
+so this will just tell us whether we
+so this will just tell us whether we
+should shake or not
+should shake or not
+should shake or not
+and we can add an if statement so if is
+and we can add an if statement so if is
+and we can add an if statement so if is
+shaking
+shaking
+shaking
+then we can also add an else
+so if it's shaking we want to start
+so if it's shaking we want to start
+so if it's shaking we want to start
+checking the camera and the way we're
+checking the camera and the way we're
+checking the camera and the way we're
+going to do that
+going to do that
+going to do that
+is by a function that i'm going to
+is by a function that i'm going to
+is by a function that i'm going to
+define up here
+define up here
+define up here
+local function shake camera
+local function shake camera
+local function shake camera
+so using the run service we can make
+so using the run service we can make
+so using the run service we can make
+this function
+this function
+this function
+run every single frame and shake the
+run every single frame and shake the
+run every single frame and shake the
+camera depending on a few other
+camera depending on a few other
+camera depending on a few other
+math functions so let's just test this
+math functions so let's just test this
+math functions so let's just test this
+out right now by going
+out right now by going
+out right now by going
+run service bind to
+run service bind to
+run service bind to
+render step and then for the parameters
+render step and then for the parameters
+render step and then for the parameters
+we're going to set our like render name
+we're going to set our like render name
+we're going to set our like render name
+so this could just be named camera shake
+so this could just be named camera shake
+so this could just be named camera shake
+so we can unbind it
+so we can unbind it
+so we can unbind it
+and then we have to set the random
+and then we have to set the random
+and then we have to set the random
+priority
+priority
+priority
+which can be enum.render priority
+do not forget the dot value that will
+do not forget the dot value that will
+do not forget the dot value that will
+break your script if you forget
+break your script if you forget
+break your script if you forget
+this dot value because this is just the
+this dot value because this is just the
+this dot value because this is just the
+render priority value but you have to
+render priority value but you have to
+render priority value but you have to
+say dot value to actually get the
+say dot value to actually get the
+say dot value to actually get the
+integer value
+integer value
+integer value
+and we're just going to do plus one so
+and we're just going to do plus one so
+and we're just going to do plus one so
+it runs
+it runs
+it runs
+after the camera renders i believe or
+after the camera renders i believe or
+after the camera renders i believe or
+before i'm not really sure
+before i'm not really sure
+before i'm not really sure
+honestly it doesn't really matter we get
+honestly it doesn't really matter we get
+honestly it doesn't really matter we get
+the same effect and then our last
+the same effect and then our last
+the same effect and then our last
+parameter is a function that we want to
+parameter is a function that we want to
+parameter is a function that we want to
+run
+run
+run
+which is going to be shake camera so
+which is going to be shake camera so
+which is going to be shake camera so
+this is what it looks like right here
+this is what it looks like right here
+this is what it looks like right here
+so just for a test we can just do print
+shaking
+shaking
+shaking
+and when this event gets fired it should
+and when this event gets fired it should
+and when this event gets fired it should
+say
+say
+say
+shaking so let's make a server script
+shaking so let's make a server script
+shaking so let's make a server script
+to test that let's go into server script
+to test that let's go into server script
+to test that let's go into server script
+service and
+service and
+service and
+create a script and we don't really have
+create a script and we don't really have
+create a script and we don't really have
+to name the script it's just for a test
+to name the script it's just for a test
+to name the script it's just for a test
+so let's get replicated storage so we
+so let's get replicated storage so we
+so let's get replicated storage so we
+can get our remote event
+can get our remote event
+can get our remote event
+which will be game whoops game get
+which will be game whoops game get
+which will be game whoops game get
+service
+service
+service
+replicated storage and we can do
+replicated storage and we can do
+replicated storage and we can do
+local set
+local set
+local set
+camera shake will be equal to replicated
+camera shake will be equal to replicated
+camera shake will be equal to replicated
+storage
+storage
+storage
+wait for child set
+wait for child set
+wait for child set
+camera shake there we go
+camera shake there we go
+camera shake there we go
+so then right off spawn we can say set
+so then right off spawn we can say set
+so then right off spawn we can say set
+camera shake
+camera shake
+camera shake
+fire all clients true
+fire all clients true
+fire all clients true
+and let's just wait a second for the
+and let's just wait a second for the
+and let's just wait a second for the
+character to load in
+character to load in
+character to load in
+so if you were to play this
+so if you were to play this
+so if you were to play this
+you can see in the bottom right it's
+you can see in the bottom right it's
+you can see in the bottom right it's
+kind of small
+kind of small
+kind of small
+but it's printing shaking every single
+but it's printing shaking every single
+but it's printing shaking every single
+frame and i can tell that because of
+frame and i can tell that because of
+frame and i can tell that because of
+this number right here it's like going
+this number right here it's like going
+this number right here it's like going
+up
+up
+up
+every single frame which is exactly what
+every single frame which is exactly what
+every single frame which is exactly what
+we want so that's great
+we want so that's great
+we want so that's great
+and we also need to make sure in our
+and we also need to make sure in our
+and we also need to make sure in our
+local script to say
+local script to say
+local script to say
+if it's not shaking we want to do run
+if it's not shaking we want to do run
+if it's not shaking we want to do run
+service unbind from render step
+service unbind from render step
+service unbind from render step
+and we want to unbind any camera shake
+and we want to unbind any camera shake
+and we want to unbind any camera shake
+name that we defined above so that's
+name that we defined above so that's
+name that we defined above so that's
+great
+great
+great
+so now we can actually write our
+so now we can actually write our
+so now we can actually write our
+function to
+function to
+function to
+apply camera shake and we're going to do
+apply camera shake and we're going to do
+apply camera shake and we're going to do
+this is by first defining
+this is by first defining
+this is by first defining
+now which is going to be equal to take
+now which is going to be equal to take
+now which is going to be equal to take
+so tick is a function
+so tick is a function
+so tick is a function
+that returns the seconds since
+that returns the seconds since
+that returns the seconds since
+the epoch which was at
+the epoch which was at
+the epoch which was at
+january 1st 1970 i believe
+january 1st 1970 i believe
+january 1st 1970 i believe
+doesn't really matter it just changes
+doesn't really matter it just changes
+doesn't really matter it just changes
+every single second so it gives us a
+every single second so it gives us a
+every single second so it gives us a
+different value
+different value
+different value
+and the reason we need a different value
+and the reason we need a different value
+and the reason we need a different value
+is because we're going to use
+is because we're going to use
+is because we're going to use
+a few math functions to
+a few math functions to
+a few math functions to
+determine what we're going to do so
+determine what we're going to do so
+determine what we're going to do so
+we're going to find
+we're going to find
+we're going to find
+local bubble x
+local bubble x
+local bubble x
+will be equal to bubble x there we go
+will be equal to bubble x there we go
+will be equal to bubble x there we go
+will be equal to math.cosine
+will be equal to math.cosine
+will be equal to math.cosine
+or math.cos now
+or math.cos now
+or math.cos now
+times 9 divided by
+times 9 divided by
+times 9 divided by
+six so this may just look like a bunch
+six so this may just look like a bunch
+six so this may just look like a bunch
+of numbers but we can visualize this
+of numbers but we can visualize this
+of numbers but we can visualize this
+in a cool little website i found called
+in a cool little website i found called
+in a cool little website i found called
+graph toy
+graph toy
+graph toy
+so here i am in graph toy and you can
+so here i am in graph toy and you can
+so here i am in graph toy and you can
+see
+see
+see
+i have unchecked all of these boxes to
+i have unchecked all of these boxes to
+i have unchecked all of these boxes to
+make all the functions invisible
+make all the functions invisible
+make all the functions invisible
+now we're going to check the first one
+now we're going to check the first one
+now we're going to check the first one
+and we're going to get rid of everything
+and we're going to get rid of everything
+and we're going to get rid of everything
+and put in our special function
+and put in our special function
+and put in our special function
+so let me get back to our local script
+so let me get back to our local script
+so let me get back to our local script
+real quick
+you see this function math.cosine now
+you see this function math.cosine now
+you see this function math.cosine now
+times nine divided by six
+times nine divided by six
+times nine divided by six
+we can bring that straight into graph
+we can bring that straight into graph
+we can bring that straight into graph
+toy
+toy
+toy
+but it uses like more conventional math
+but it uses like more conventional math
+but it uses like more conventional math
+values so math.cosine tends to cos
+values so math.cosine tends to cos
+values so math.cosine tends to cos
+and then now would be x because this is
+and then now would be x because this is
+and then now would be x because this is
+our variable
+our variable
+our variable
+and that's basically what now is it's
+and that's basically what now is it's
+and that's basically what now is it's
+just a random like integer
+just a random like integer
+just a random like integer
+variable so now if we were to press
+variable so now if we were to press
+variable so now if we were to press
+enter you can see this is what it looks
+enter you can see this is what it looks
+enter you can see this is what it looks
+like
+like
+like
+and the reason we're using this for a
+and the reason we're using this for a
+and the reason we're using this for a
+camera streak is look at how
+camera streak is look at how
+camera streak is look at how
+like bumpy it is but it's consistent so
+like bumpy it is but it's consistent so
+like bumpy it is but it's consistent so
+like normal like linear graphs like if i
+like normal like linear graphs like if i
+like normal like linear graphs like if i
+were to do
+were to do
+were to do
+x right here you can see it goes up
+x right here you can see it goes up
+x right here you can see it goes up
+and goes down and there's no like
+and goes down and there's no like
+and goes down and there's no like
+bumpiness to it the reason
+bumpiness to it the reason
+bumpiness to it the reason
+that's the reason why we're using this
+that's the reason why we're using this
+that's the reason why we're using this
+function right here
+function right here
+function right here
+so now we can go back to
+so now we can go back to
+so now we can go back to
+our demo and we can
+our demo and we can
+our demo and we can
+define bobble y
+define bobble y
+define bobble y
+as we equal to math.abs math.sine
+as we equal to math.abs math.sine
+as we equal to math.abs math.sine
+now times 12
+now times 12
+now times 12
+divided by 3. and you could also put
+divided by 3. and you could also put
+divided by 3. and you could also put
+this in the graph toy and the reason
+this in the graph toy and the reason
+this in the graph toy and the reason
+you'd want to do that is if you want to
+you'd want to do that is if you want to
+you'd want to do that is if you want to
+change any of these values it's good to
+change any of these values it's good to
+change any of these values it's good to
+visualize what they'll be
+visualize what they'll be
+visualize what they'll be
+before you put them in and now we can
+before you put them in and now we can
+before you put them in and now we can
+make
+make
+make
+our bauble which will be equal to a
+our bauble which will be equal to a
+our bauble which will be equal to a
+vector3
+vector3
+vector3
+dot new bobble x
+dot new bobble x
+dot new bobble x
+then whoops and bobble y
+then whoops and bobble y
+then whoops and bobble y
+and then for a z we'll do zero and we'll
+and then for a z we'll do zero and we'll
+and then for a z we'll do zero and we'll
+just multiply everything
+just multiply everything
+just multiply everything
+by five so now we can set our
+by five so now we can set our
+by five so now we can set our
+humanoid.camera offset
+humanoid.camera offset
+humanoid.camera offset
+equal to humanoid.camera
+equal to humanoid.camera
+equal to humanoid.camera
+offset
+colon lerp which we're going to be
+colon lerp which we're going to be
+colon lerp which we're going to be
+calling the alert function on our camera
+calling the alert function on our camera
+calling the alert function on our camera
+offset which is a vector3 value and
+offset which is a vector3 value and
+offset which is a vector3 value and
+we're just sending our
+we're just sending our
+we're just sending our
+bubble and then for our interval we'll
+bubble and then for our interval we'll
+bubble and then for our interval we'll
+do 0.25
+do 0.25
+do 0.25
+so this is basically like lurp the
+so this is basically like lurp the
+so this is basically like lurp the
+camera in a nice and like
+camera in a nice and like
+camera in a nice and like
+animated way so
+animated way so
+animated way so
+if we were to run this
+you can see as we walk around our camera
+you can see as we walk around our camera
+you can see as we walk around our camera
+is very
+is very
+is very
+very shaky works in first person as well
+very shaky works in first person as well
+very shaky works in first person as well
+even put a little shift lock in there
+even put a little shift lock in there
+even put a little shift lock in there
+and it just looks kind of nice
+and so if you would want to stop this
+and so if you would want to stop this
+and so if you would want to stop this
+then you could go to our script and we
+then you could go to our script and we
+then you could go to our script and we
+could
+could
+could
+wait like three seconds and we could do
+wait like three seconds and we could do
+wait like three seconds and we could do
+set camera shake
+set camera shake
+set camera shake
+fire all clients false
+fire all clients false
+fire all clients false
+there we go so it should only shake for
+there we go so it should only shake for
+there we go so it should only shake for
+a few seconds and then look at that it
+a few seconds and then look at that it
+a few seconds and then look at that it
+stops
+stops
+stops
+which is exactly what we want
+which is exactly what we want
+which is exactly what we want
+so that's about it for this video
+so that's about it for this video
+so that's about it for this video
+i hope you enjoyed make sure to like and
+i hope you enjoyed make sure to like and
+i hope you enjoyed make sure to like and
+subscribe
+subscribe
+subscribe
+if you did and comment down below
+if you did and comment down below
+if you did and comment down below
+any questions or video suggestions
+any questions or video suggestions
+any questions or video suggestions
+this is a user requested video by the
+this is a user requested video by the
+this is a user requested video by the
+way
+way
+way
+and he just hit me up on my comment
+and he just hit me up on my comment
+and he just hit me up on my comment
+section but if you want to get in more
+section but if you want to get in more
+section but if you want to get in more
+direct contact with me
+direct contact with me
+direct contact with me
+make sure to join my discord server link
+make sure to join my discord server link
+make sure to join my discord server link
+will be in the description
+will be in the description
+will be in the description
+but with that out of the way i hope you
+but with that out of the way i hope you
+but with that out of the way i hope you
+guys have a nice day and goodbye
+guys have a nice day and goodbye
+guys have a nice day and goodbye
+[Music]

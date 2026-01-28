@@ -1,0 +1,542 @@
+have you ever wanted to slice a bread
+have you ever wanted to slice a bread
+have you ever wanted to slice a bread
+model and roblox yeah I know I did so I
+model and roblox yeah I know I did so I
+model and roblox yeah I know I did so I
+wrote a script that can do just that
+so if I go in to my roblox game and I
+so if I go in to my roblox game and I
+so if I go in to my roblox game and I
+start clicking around on the bread you
+start clicking around on the bread you
+start clicking around on the bread you
+can see there's a bunch of little slices
+can see there's a bunch of little slices
+can see there's a bunch of little slices
+of bread that we've created from our
+of bread that we've created from our
+of bread that we've created from our
+loaf and we can do whatever we want with
+loaf and we can do whatever we want with
+loaf and we can do whatever we want with
+these slices of bread and this is not
+these slices of bread and this is not
+these slices of bread and this is not
+only for the bread so if I were to click
+only for the bread so if I were to click
+only for the bread so if I were to click
+on my table my table has been sliced in
+on my table my table has been sliced in
+on my table my table has been sliced in
+half and let's say I want to slice this
+half and let's say I want to slice this
+half and let's say I want to slice this
+block in half I can slice it once I said
+block in half I can slice it once I said
+block in half I can slice it once I said
+a few more times I can get these little
+a few more times I can get these little
+a few more times I can get these little
+parts smaller and smaller and I can even
+parts smaller and smaller and I can even
+parts smaller and smaller and I can even
+do this to a massive glass wall so let
+do this to a massive glass wall so let
+do this to a massive glass wall so let
+me you know get part there slice a
+me you know get part there slice a
+me you know get part there slice a
+little edge off there and here's our
+little edge off there and here's our
+little edge off there and here's our
+little glass piece we can walk on it
+little glass piece we can walk on it
+little glass piece we can walk on it
+collisions work fine so in this video
+collisions work fine so in this video
+collisions work fine so in this video
+we'll go over the scripts the story and
+we'll go over the scripts the story and
+we'll go over the scripts the story and
+the struggle that led to the creation of
+the struggle that led to the creation of
+the struggle that led to the creation of
+my fully functioning part slicing script
+my fully functioning part slicing script
+my fully functioning part slicing script
+that can slice bread it can slice ice it
+that can slice bread it can slice ice it
+that can slice bread it can slice ice it
+can slice glass it can slice whatever
+can slice glass it can slice whatever
+can slice glass it can slice whatever
+part you want other than mesh bars but
+part you want other than mesh bars but
+part you want other than mesh bars but
+let's get started
+so it started out by my friend
+so it started out by my friend
+so it started out by my friend
+challenging me to make a script that can
+challenging me to make a script that can
+challenging me to make a script that can
+split apart at wherever your mouse
+split apart at wherever your mouse
+split apart at wherever your mouse
+clicks so I did this and this script
+clicks so I did this and this script
+clicks so I did this and this script
+right here and this is that works let's
+right here and this is that works let's
+right here and this is that works let's
+go in
+and if I click wherever you can see one
+and if I click wherever you can see one
+and if I click wherever you can see one
+color is where like one part and the
+color is where like one part and the
+color is where like one part and the
+other color is another part it's random
+other color is another part it's random
+other color is another part it's random
+so they could be the same color it just
+so they could be the same color it just
+so they could be the same color it just
+depends and there's no collisions this
+depends and there's no collisions this
+depends and there's no collisions this
+is just a representation and also it
+is just a representation and also it
+is just a representation and also it
+does not work it does not work for any
+does not work it does not work for any
+does not work it does not work for any
+side of the part and this is on my
+side of the part and this is on my
+side of the part and this is on my
+script amazingly works it's primarily AC
+script amazingly works it's primarily AC
+script amazingly works it's primarily AC
+free exercise where I take a point and
+free exercise where I take a point and
+free exercise where I take a point and
+convert it to object space from the
+convert it to object space from the
+convert it to object space from the
+mouse hit and I get a chunk and then I
+mouse hit and I get a chunk and then I
+mouse hit and I get a chunk and then I
+just split it with this function right
+just split it with this function right
+just split it with this function right
+here that only works for one side and
+here that only works for one side and
+here that only works for one side and
+that's about it but I thought to myself
+that's about it but I thought to myself
+that's about it but I thought to myself
+well roblox already has a built in a
+well roblox already has a built in a
+well roblox already has a built in a
+union function with negating and
+union function with negating and
+union function with negating and
+whatever so let me just demonstrate if I
+whatever so let me just demonstrate if I
+whatever so let me just demonstrate if I
+make a part and I you know make it like
+make a part and I you know make it like
+make a part and I you know make it like
+this size and then I go to model and
+this size and then I go to model and
+this size and then I go to model and
+then the gate and I can select those
+then the gate and I can select those
+then the gate and I can select those
+three parts and Union them there is a
+three parts and Union them there is a
+three parts and Union them there is a
+little hole where the parts were Union
+little hole where the parts were Union
+little hole where the parts were Union
+so can I apply the same concept to
+so can I apply the same concept to
+so can I apply the same concept to
+slicing a part and this is my first
+slicing a part and this is my first
+slicing a part and this is my first
+attempt at it let me run this
+if I were to go up to this small part
+if I were to go up to this small part
+if I were to go up to this small part
+over here and click it you can see a
+over here and click it you can see a
+over here and click it you can see a
+slice it has gone through the park
+slice it has gone through the park
+slice it has gone through the park
+problem is is this part is still only a
+problem is is this part is still only a
+problem is is this part is still only a
+single union so that means each of the
+single union so that means each of the
+single union so that means each of the
+sliced parts will go together so if I go
+sliced parts will go together so if I go
+sliced parts will go together so if I go
+to the server real quick here we go and
+to the server real quick here we go and
+to the server real quick here we go and
+if I were to throw this part around it
+if I were to throw this part around it
+if I were to throw this part around it
+doesn't it stays together and I wasn't
+doesn't it stays together and I wasn't
+doesn't it stays together and I wasn't
+really satisfied with this but the
+really satisfied with this but the
+really satisfied with this but the
+script was pretty simple all I basically
+script was pretty simple all I basically
+script was pretty simple all I basically
+did was create a part where my mouse is
+did was create a part where my mouse is
+did was create a part where my mouse is
+pointing and then I negate it so if I
+pointing and then I negate it so if I
+pointing and then I negate it so if I
+were to you know wait a second just to
+were to you know wait a second just to
+were to you know wait a second just to
+show you the whole process and I go up
+show you the whole process and I go up
+show you the whole process and I go up
+to this part I can click it and you can
+to this part I can click it and you can
+to this part I can click it and you can
+see the little slice spawns in and then
+see the little slice spawns in and then
+see the little slice spawns in and then
+disappears where the part should be cut
+disappears where the part should be cut
+disappears where the part should be cut
+this can work on any size part if you do
+this can work on any size part if you do
+this can work on any size part if you do
+it for Reta we can even do it for the
+it for Reta we can even do it for the
+it for Reta we can even do it for the
+base plate it looks kind of weird since
+base plate it looks kind of weird since
+base plate it looks kind of weird since
+the since it gets rid of the studs but
+the since it gets rid of the studs but
+the since it gets rid of the studs but
+you know you can do that
+you know you can do that
+you know you can do that
+so then after a few long hours of
+so then after a few long hours of
+so then after a few long hours of
+scripting I managed to get my final
+scripting I managed to get my final
+scripting I managed to get my final
+product and this is what the script
+product and this is what the script
+product and this is what the script
+looks like it's pretty sure it took a
+looks like it's pretty sure it took a
+looks like it's pretty sure it took a
+long time to create because I had to use
+long time to create because I had to use
+long time to create because I had to use
+a lot of C frame functions and some
+a lot of C frame functions and some
+a lot of C frame functions and some
+weird Union stuff with a subtracting and
+weird Union stuff with a subtracting and
+weird Union stuff with a subtracting and
+creating some template parts or whatever
+creating some template parts or whatever
+creating some template parts or whatever
+so I have a weight statement in there
+so I have a weight statement in there
+so I have a weight statement in there
+just to show you sort of how it works
+just to show you sort of how it works
+just to show you sort of how it works
+so where I click a part spawns to the
+so where I click a part spawns to the
+so where I click a part spawns to the
+left and a part spawns to the right so
+left and a part spawns to the right so
+left and a part spawns to the right so
+basically what happens is when I click
+basically what happens is when I click
+basically what happens is when I click
+it spawns a part to the left and then it
+it spawns a part to the left and then it
+it spawns a part to the left and then it
+creates a new Union from that part
+creates a new Union from that part
+creates a new Union from that part
+negated from the piece of bread and then
+negated from the piece of bread and then
+negated from the piece of bread and then
+it does the same thing for the opposite
+it does the same thing for the opposite
+it does the same thing for the opposite
+side so this makes two separate unions
+side so this makes two separate unions
+side so this makes two separate unions
+that are still like the same size put
+that are still like the same size put
+that are still like the same size put
+together but they have their own
+together but they have their own
+together but they have their own
+physical properties so if I wait for
+physical properties so if I wait for
+physical properties so if I wait for
+that to finish and I kind of run over
+that to finish and I kind of run over
+that to finish and I kind of run over
+the bread actually let's do at the table
+the bread actually let's do at the table
+the bread actually let's do at the table
+that could be easy so you can see the
+that could be easy so you can see the
+that could be easy so you can see the
+table split and each part of the table
+table split and each part of the table
+table split and each part of the table
+can move independently and their
+can move independently and their
+can move independently and their
+collisions work fine and in reality
+collisions work fine and in reality
+collisions work fine and in reality
+those parts are very small for the sake
+those parts are very small for the sake
+those parts are very small for the sake
+of demonstration the template bars that
+of demonstration the template bars that
+of demonstration the template bars that
+I use to chop off the ends of each union
+I use to chop off the ends of each union
+I use to chop off the ends of each union
+are massive I have them at the size of
+are massive I have them at the size of
+are massive I have them at the size of
+the default base plate just so for the
+the default base plate just so for the
+the default base plate just so for the
+big parts like the glass
+big parts like the glass
+big parts like the glass
+I can subtract it properly and you can
+I can subtract it properly and you can
+I can subtract it properly and you can
+see a blink in when I click and I can
+see a blink in when I click and I can
+see a blink in when I click and I can
+you know slide these around and whatever
+you know slide these around and whatever
+you know slide these around and whatever
+but other than all the unions and this
+but other than all the unions and this
+but other than all the unions and this
+mess over here the script is pretty
+mess over here the script is pretty
+mess over here the script is pretty
+simple I just get the position of the
+simple I just get the position of the
+simple I just get the position of the
+mouse I check if it actually clicked
+mouse I check if it actually clicked
+mouse I check if it actually clicked
+something and I just do some see frames
+something and I just do some see frames
+something and I just do some see frames
+and get some sizes and then I have to
+and get some sizes and then I have to
+and get some sizes and then I have to
+destroy all of my template parts and the
+destroy all of my template parts and the
+destroy all of my template parts and the
+actual part because what's happening
+actual part because what's happening
+actual part because what's happening
+behind the scenes is this bread is
+behind the scenes is this bread is
+behind the scenes is this bread is
+getting destroyed and replaced by two
+getting destroyed and replaced by two
+getting destroyed and replaced by two
+other unions that have the same size as
+other unions that have the same size as
+other unions that have the same size as
+the bread just at different positions
+the bread just at different positions
+the bread just at different positions
+totally they're the same thing but
+totally they're the same thing but
+totally they're the same thing but
+they're each individual so they can have
+they're each individual so they can have
+they're each individual so they can have
+their own physical properties and that's
+their own physical properties and that's
+their own physical properties and that's
+basically how it works so another thing
+basically how it works so another thing
+basically how it works so another thing
+to know in this project is my custom
+to know in this project is my custom
+to know in this project is my custom
+Mouse script this is a module script as
+Mouse script this is a module script as
+Mouse script this is a module script as
+located in my starter Player scripts and
+located in my starter Player scripts and
+located in my starter Player scripts and
+it basically replaces the deprecated
+it basically replaces the deprecated
+it basically replaces the deprecated
+Mouse thing like we're used to be able
+Mouse thing like we're used to be able
+Mouse thing like we're used to be able
+to to local Mouse equals player get
+to to local Mouse equals player get
+to to local Mouse equals player get
+Mouse because the user input service and
+Mouse because the user input service and
+Mouse because the user input service and
+the camera have their own specific
+the camera have their own specific
+the camera have their own specific
+functions for so you can see down here
+functions for so you can see down here
+functions for so you can see down here
+this is the only function I really use
+this is the only function I really use
+this is the only function I really use
+the get unit ray
+the get unit ray
+the get unit ray
+it just gets the location of the mouse
+it just gets the location of the mouse
+it just gets the location of the mouse
+and cast that onto the viewport and it
+and cast that onto the viewport and it
+and cast that onto the viewport and it
+changes it to a ray and this is a unit
+changes it to a ray and this is a unit
+changes it to a ray and this is a unit
+ray and I do all the ray casting on the
+ray and I do all the ray casting on the
+ray and I do all the ray casting on the
+server just because that's how you're
+server just because that's how you're
+server just because that's how you're
+supposed to do it and that's about it I
+supposed to do it and that's about it I
+supposed to do it and that's about it I
+just have the local script that requires
+just have the local script that requires
+just have the local script that requires
+it and we send a remote event so this
+it and we send a remote event so this
+it and we send a remote event so this
+script is very unstable to be honest I
+script is very unstable to be honest I
+script is very unstable to be honest I
+did not spend that much time on it it
+did not spend that much time on it it
+did not spend that much time on it it
+works sort of well but for example if I
+works sort of well but for example if I
+works sort of well but for example if I
+were to click on my character it breaks
+were to click on my character it breaks
+were to click on my character it breaks
+because mesh parts aren't supported so
+because mesh parts aren't supported so
+because mesh parts aren't supported so
+that is one little issue with it but
+that is one little issue with it but
+that is one little issue with it but
+other than that issue work fine on any
+other than that issue work fine on any
+other than that issue work fine on any
+part and this is basically a demo
+part and this is basically a demo
+part and this is basically a demo
+because with the sort of idea making
+because with the sort of idea making
+because with the sort of idea making
+glass shatter would be pretty easy and
+glass shatter would be pretty easy and
+glass shatter would be pretty easy and
+like you could make it random like
+like you could make it random like
+like you could make it random like
+random glass shattering I feel like
+random glass shattering I feel like
+random glass shattering I feel like
+that'd be pretty cool to probably be a
+that'd be pretty cool to probably be a
+that'd be pretty cool to probably be a
+project
+project
+project
+I would do in the future and yeah so if
+I would do in the future and yeah so if
+I would do in the future and yeah so if
+you are wondering there will be a
+you are wondering there will be a
+you are wondering there will be a
+project download in the description for
+project download in the description for
+project download in the description for
+this if you want to check it out for
+this if you want to check it out for
+this if you want to check it out for
+yourself feel free to use it wherever
+yourself feel free to use it wherever
+yourself feel free to use it wherever
+you want and that's about it for this
+you want and that's about it for this
+you want and that's about it for this
+video so I hope you enjoyed this is a
+video so I hope you enjoyed this is a
+video so I hope you enjoyed this is a
+little bit different style of video than
+little bit different style of video than
+little bit different style of video than
+what I usually do with my scripting
+what I usually do with my scripting
+what I usually do with my scripting
+showcases so make sure to comment your
+showcases so make sure to comment your
+showcases so make sure to comment your
+feedback down below and if you have any
+feedback down below and if you have any
+feedback down below and if you have any
+other suggestions and questions then
+other suggestions and questions then
+other suggestions and questions then
+comment them down below as well and if
+comment them down below as well and if
+comment them down below as well and if
+you enjoyed this video make sure to LIKE
+you enjoyed this video make sure to LIKE
+you enjoyed this video make sure to LIKE
+and subscribe but other than that I hope
+and subscribe but other than that I hope
+and subscribe but other than that I hope
+you guys have a nice day and goodbye
+you guys have a nice day and goodbye
+you guys have a nice day and goodbye
+[Music]

@@ -1,0 +1,271 @@
+we are all unique and thus we like to
+we are all unique and thus we like to
+we are all unique and thus we like to
+name our variables in unique ways using
+name our variables in unique ways using
+name our variables in unique ways using
+unique Styles some people like the good
+unique Styles some people like the good
+unique Styles some people like the good
+old cam case for everything you know
+old cam case for everything you know
+old cam case for everything you know
+some people like Pascal case if they're
+some people like Pascal case if they're
+some people like Pascal case if they're
+feeling a little a little bit more
+feeling a little a little bit more
+feeling a little a little bit more
+capital or if they come from C because C
+capital or if they come from C because C
+capital or if they come from C because C
+loves that some people like snake case
+loves that some people like snake case
+loves that some people like snake case
+you know if you're from python or rust
+you know if you're from python or rust
+you know if you're from python or rust
+or something like that because rust
+or something like that because rust
+or something like that because rust
+actually makes you you people like snake
+actually makes you you people like snake
+actually makes you you people like snake
+case and some people like the really
+case and some people like the really
+case and some people like the really
+cursed case I don't know why you would
+cursed case I don't know why you would
+cursed case I don't know why you would
+ever use this this should never be used
+ever use this this should never be used
+ever use this this should never be used
+and the age-old question is what is the
+and the age-old question is what is the
+and the age-old question is what is the
+right way to name your variables how
+right way to name your variables how
+right way to name your variables how
+should you make your style and today
+should you make your style and today
+should you make your style and today
+ladies and gentlemen I have an answer
+ladies and gentlemen I have an answer
+ladies and gentlemen I have an answer
+because I was browsing the Roblox um
+because I was browsing the Roblox um
+because I was browsing the Roblox um
+documentation
+documentation
+documentation
+and this is what it
+and this is what it
+and this is what it
+says it says you know spell out your
+says it says you know spell out your
+says it says you know spell out your
+words fully yeah and it also
+words fully yeah and it also
+words fully yeah and it also
+says use Pascal case for class and enum
+says use Pascal case for class and enum
+says use Pascal case for class and enum
+like objects use Pascal case names for
+like objects use Pascal case names for
+like objects use Pascal case names for
+Roblox apis that that's all like
+Roblox apis that that's all like
+Roblox apis that that's all like
+guaranteed basically cam case for local
+guaranteed basically cam case for local
+guaranteed basically cam case for local
+variables member values and functions
+variables member values and functions
+variables member values and functions
+and L snake case for
+and L snake case for
+and L snake case for
+constants so what we see here is a guide
+constants so what we see here is a guide
+constants so what we see here is a guide
+on the official Roblox website tell you
+on the official Roblox website tell you
+on the official Roblox website tell you
+how to name your vbl you might be saying
+how to name your vbl you might be saying
+how to name your vbl you might be saying
+well we are individual programmers we
+well we are individual programmers we
+well we are individual programmers we
+should be able to choose what we want
+should be able to choose what we want
+should be able to choose what we want
+and I tell you no if you don't like this
+and I tell you no if you don't like this
+and I tell you no if you don't like this
+and make your own thing it's going to
+and make your own thing it's going to
+and make your own thing it's going to
+make it less readable for someone who
+make it less readable for someone who
+make it less readable for someone who
+does so I say we need to start a
+does so I say we need to start a
+does so I say we need to start a
+movement to make sure everyone
+movement to make sure everyone
+movement to make sure everyone
+standardized their variable naming
+standardized their variable naming
+standardized their variable naming
+because no matter if you like the way
+because no matter if you like the way
+because no matter if you like the way
+this looks no matter what your personal
+this looks no matter what your personal
+this looks no matter what your personal
+preferences are if you follow the
+preferences are if you follow the
+preferences are if you follow the
+conventions established by
+conventions established by
+conventions established by
+the the uh platform that you're using it
+the the uh platform that you're using it
+the the uh platform that you're using it
+will make everyone's lives easier for
+will make everyone's lives easier for
+will make everyone's lives easier for
+example in Rust rust uses snake case and
+example in Rust rust uses snake case and
+example in Rust rust uses snake case and
+the linter the thing that like checks to
+the linter the thing that like checks to
+the linter the thing that like checks to
+make sure your code looks good will yell
+make sure your code looks good will yell
+make sure your code looks good will yell
+at you if you're not in snake case so
+at you if you're not in snake case so
+at you if you're not in snake case so
+you see this red underline here and rust
+you see this red underline here and rust
+you see this red underline here and rust
+even if you have like a a c case
+even if you have like a a c case
+even if you have like a a c case
+variable it'll it'll underline your
+variable it'll it'll underline your
+variable it'll it'll underline your
+variable and be like hey change it to
+variable and be like hey change it to
+variable and be like hey change it to
+snake case but in Roblox
+snake case but in Roblox
+snake case but in Roblox
+snake case isn't even a thing unless
+snake case isn't even a thing unless
+snake case isn't even a thing unless
+you're dealing with cont uh constants
+you're dealing with cont uh constants
+you're dealing with cont uh constants
+with loud snake
+with loud snake
+with loud snake
+case so you got to you got to decide and
+case so you got to you got to decide and
+case so you got to you got to decide and
+by decide I mean choose the right path
+by decide I mean choose the right path
+by decide I mean choose the right path
+of using these guides to actually name
+of using these guides to actually name
+of using these guides to actually name
+your variables because that will lead to
+your variables because that will lead to
+your variables because that will lead to
+the best coding experience for everyone
+the best coding experience for everyone
+the best coding experience for everyone
+overall for me personally I adapt to my
+overall for me personally I adapt to my
+overall for me personally I adapt to my
+environment and I think this is the best
+environment and I think this is the best
+environment and I think this is the best
+way to do it whatever the best practi to
+way to do it whatever the best practi to
+way to do it whatever the best practi to
+say and your company and your ecosystem
+say and your company and your ecosystem
+say and your company and your ecosystem
+and your personal project with friends
+and your personal project with friends
+and your personal project with friends
+that's what you should follow in Roblox
+that's what you should follow in Roblox
+that's what you should follow in Roblox
+I tend to stick to this or in the past
+I tend to stick to this or in the past
+I tend to stick to this or in the past
+I've used pasal case for functions but
+I've used pasal case for functions but
+I've used pasal case for functions but
+now we're going to change that and for
+now we're going to change that and for
+now we're going to change that and for
+rust I use snake case for python I use
+rust I use snake case for python I use
+rust I use snake case for python I use
+snit case because that's what everyone
+snit case because that's what everyone
+snit case because that's what everyone
+uses for C I use Pascal case for
+uses for C I use Pascal case for
+uses for C I use Pascal case for
+everything because that's how Microsoft
+everything because that's how Microsoft
+everything because that's how Microsoft
+wants it for Java you use cam case for
+wants it for Java you use cam case for
+wants it for Java you use cam case for
+mostly everything except for classes and
+mostly everything except for classes and
+mostly everything except for classes and
+that's just what I do so before you make
+that's just what I do so before you make
+that's just what I do so before you make
+your next project your next script your
+your next project your next script your
+your next project your next script your
+next little thing remember to look at
+next little thing remember to look at
+next little thing remember to look at
+your requirements look at your best
+your requirements look at your best
+your requirements look at your best
+practices and I encourage you to follow
+practices and I encourage you to follow
+practices and I encourage you to follow
+them that way your code will be readable
+them that way your code will be readable
+them that way your code will be readable
+to all and trust me if you're not used
+to all and trust me if you're not used
+to all and trust me if you're not used
+to it you don't like it you'll get used
+to it you don't like it you'll get used
+to it you don't like it you'll get used
+to it over time and you'll have the
+to it over time and you'll have the
+to it over time and you'll have the
+comfort in the back of your mind knowing
+comfort in the back of your mind knowing
+comfort in the back of your mind knowing
+that you made the right
+that you made the right
+that you made the right
+decision and that's it thanks for
+decision and that's it thanks for
+decision and that's it thanks for
+watching

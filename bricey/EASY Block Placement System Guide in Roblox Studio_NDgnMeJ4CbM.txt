@@ -1,0 +1,1641 @@
+block building is a really cool mechanic
+block building is a really cool mechanic
+block building is a really cool mechanic
+in a lot of games even the most famous
+in a lot of games even the most famous
+in a lot of games even the most famous
+game of all time Kaa Minecraft and in
+game of all time Kaa Minecraft and in
+game of all time Kaa Minecraft and in
+this video I'm going to show you how to
+this video I'm going to show you how to
+this video I'm going to show you how to
+replicate at least a little bit of this
+replicate at least a little bit of this
+replicate at least a little bit of this
+mechanic in Roblox this is the first
+mechanic in Roblox this is the first
+mechanic in Roblox this is the first
+part of a series where I'll be trying to
+part of a series where I'll be trying to
+part of a series where I'll be trying to
+like replicate the Minecraft style
+like replicate the Minecraft style
+like replicate the Minecraft style
+placement where blocks are like placed
+placement where blocks are like placed
+placement where blocks are like placed
+next to each other and everything looks
+next to each other and everything looks
+next to each other and everything looks
+nice in this video we're going to be
+nice in this video we're going to be
+nice in this video we're going to be
+covering just the rendering the preview
+covering just the rendering the preview
+covering just the rendering the preview
+and placing the block on the server side
+and placing the block on the server side
+and placing the block on the server side
+and some validation as well to prevent X
+and some validation as well to prevent X
+and some validation as well to prevent X
+plates so if you're interested in that
+plates so if you're interested in that
+plates so if you're interested in that
+make sure to like And subscribe if you
+make sure to like And subscribe if you
+make sure to like And subscribe if you
+enjoy the video and without further Ado
+enjoy the video and without further Ado
+enjoy the video and without further Ado
+let's get
+started to start I have this block here
+started to start I have this block here
+started to start I have this block here
+which is just a 3X3 Cube nothing special
+which is just a 3X3 Cube nothing special
+which is just a 3X3 Cube nothing special
+I'm going to rename it to block and then
+I'm going to rename it to block and then
+I'm going to rename it to block and then
+I'm going to make sure anchor it is set
+I'm going to make sure anchor it is set
+I'm going to make sure anchor it is set
+to true and then I'm going to leave
+to true and then I'm going to leave
+to true and then I'm going to leave
+everything else just as it is and this
+everything else just as it is and this
+everything else just as it is and this
+block on its own really can't stay in
+block on its own really can't stay in
+block on its own really can't stay in
+the workspace we need to put it into
+the workspace we need to put it into
+the workspace we need to put it into
+replicated storage because both the
+replicated storage because both the
+replicated storage because both the
+client and the server need to access it
+client and the server need to access it
+client and the server need to access it
+and the client needs to access it
+and the client needs to access it
+and the client needs to access it
+because I want to make this little
+because I want to make this little
+because I want to make this little
+preview that's kind of like a
+preview that's kind of like a
+preview that's kind of like a
+translucent like instance of the block
+translucent like instance of the block
+translucent like instance of the block
+that kind of shows you where it's going
+that kind of shows you where it's going
+that kind of shows you where it's going
+to be in the real world so do that I'm
+to be in the real world so do that I'm
+to be in the real world so do that I'm
+going to start by going into to start
+going to start by going into to start
+going to start by going into to start
+our player then start our character
+our player then start our character
+our player then start our character
+scripts and you'll see why we're doing
+scripts and you'll see why we're doing
+scripts and you'll see why we're doing
+character scripts and not player scripts
+character scripts and not player scripts
+character scripts and not player scripts
+later I'm going to create a local script
+later I'm going to create a local script
+later I'm going to create a local script
+and I'm going to call this client Placer
+and I'm going to call this client Placer
+and I'm going to call this client Placer
+that's just going to be the name you can
+that's just going to be the name you can
+that's just going to be the name you can
+name it whatever you want and then to
+name it whatever you want and then to
+name it whatever you want and then to
+start we're going to get a couple
+start we're going to get a couple
+start we're going to get a couple
+different services that we're going to
+different services that we're going to
+different services that we're going to
+need we're going to say local run
+need we're going to say local run
+need we're going to say local run
+service equals game get service run
+service equals game get service run
+service equals game get service run
+service then we're going to say local
+service then we're going to say local
+service then we're going to say local
+replicated
+replicated
+replicated
+storage equals game get service
+storage equals game get service
+storage equals game get service
+replicated storage and
+replicated storage and
+replicated storage and
+then we're also going to need our block
+then we're also going to need our block
+then we're also going to need our block
+so we're going to say local block
+so we're going to say local block
+so we're going to say local block
+template equals replicated storage wait
+template equals replicated storage wait
+template equals replicated storage wait
+for child we're going to use wait for
+for child we're going to use wait for
+for child we're going to use wait for
+child just because we're on the client
+child just because we're on the client
+child just because we're on the client
+side we're going to wait for child block
+side we're going to wait for child block
+side we're going to wait for child block
+there we go so we have all of that and
+there we go so we have all of that and
+there we go so we have all of that and
+then the first thing we want to do is to
+then the first thing we want to do is to
+then the first thing we want to do is to
+like have a function to make our block
+like have a function to make our block
+like have a function to make our block
+like you know how it's like pretty like
+like you know how it's like pretty like
+like you know how it's like pretty like
+hard there we want to make a like
+hard there we want to make a like
+hard there we want to make a like
+preview version of it and I guess you
+preview version of it and I guess you
+preview version of it and I guess you
+could like always duplicate the block
+could like always duplicate the block
+could like always duplicate the block
+and like you know make it transparent as
+and like you know make it transparent as
+and like you know make it transparent as
+you want and do stuff like that that
+you want and do stuff like that that
+you want and do stuff like that that
+means you have to change it every time
+means you have to change it every time
+means you have to change it every time
+you change the block I think it might be
+you change the block I think it might be
+you change the block I think it might be
+easier for a simple part Single part
+easier for a simple part Single part
+easier for a simple part Single part
+situation like this to do just a
+situation like this to do just a
+situation like this to do just a
+function I'm going to call this function
+function I'm going to call this function
+function I'm going to call this function
+prepare preview part and it's going to
+prepare preview part and it's going to
+prepare preview part and it's going to
+take in a part now what we're going to
+take in a part now what we're going to
+take in a part now what we're going to
+do here is we're going to first of all
+do here is we're going to first of all
+do here is we're going to first of all
+Above This create a preview variable
+Above This create a preview variable
+Above This create a preview variable
+local preview equals nil this will be
+local preview equals nil this will be
+local preview equals nil this will be
+used when we actually want to place the
+used when we actually want to place the
+used when we actually want to place the
+part and like need to send it to the
+part and like need to send it to the
+part and like need to send it to the
+server so we're going to set the preview
+server so we're going to set the preview
+server so we're going to set the preview
+equal to the block template clone we're
+equal to the block template clone we're
+equal to the block template clone we're
+going to make a new clone of it then
+going to make a new clone of it then
+going to make a new clone of it then
+we're going to set the transparency
+we're going to set the transparency
+we're going to set the transparency
+preview. transparency to 0.5 so it's
+preview. transparency to 0.5 so it's
+preview. transparency to 0.5 so it's
+translucent we're going set the can
+translucent we're going set the can
+translucent we're going set the can
+Collide to false then we're going to set
+Collide to false then we're going to set
+Collide to false then we're going to set
+the can query also to false because
+the can query also to false because
+the can query also to false because
+we're going to be using raycast and can
+we're going to be using raycast and can
+we're going to be using raycast and can
+query just prevents it from Ray casting
+query just prevents it from Ray casting
+query just prevents it from Ray casting
+through it and then finally we're going
+through it and then finally we're going
+through it and then finally we're going
+to say preview. parent equals workspace
+to say preview. parent equals workspace
+to say preview. parent equals workspace
+so that'll create the preview part and
+so that'll create the preview part and
+so that'll create the preview part and
+all we got to do down here is just call
+all we got to do down here is just call
+all we got to do down here is just call
+prepare preview part with the block
+prepare preview part with the block
+prepare preview part with the block
+template as our part that we want to
+template as our part that we want to
+template as our part that we want to
+preview cool
+preview cool
+preview cool
+next thing we want to do is to actually
+next thing we want to do is to actually
+next thing we want to do is to actually
+make the render preview function local
+make the render preview function local
+make the render preview function local
+function render preview there we go and
+function render preview there we go and
+function render preview there we go and
+this function will be called every
+this function will be called every
+this function will be called every
+rendered step so to do that we're going
+rendered step so to do that we're going
+rendered step so to do that we're going
+to go to run service at the very bottom
+to go to run service at the very bottom
+to go to run service at the very bottom
+and say bind to render step and this
+and say bind to render step and this
+and say bind to render step and this
+will take a name we can say like
+will take a name we can say like
+will take a name we can say like
+preview and then a render priority which
+preview and then a render priority which
+preview and then a render priority which
+honestly for this doesn't really matter
+honestly for this doesn't really matter
+honestly for this doesn't really matter
+there any render priority. camera. value
+there any render priority. camera. value
+there any render priority. camera. value
+I don't really know doesn't really
+I don't really know doesn't really
+I don't really know doesn't really
+matter and then for the function we're
+matter and then for the function we're
+matter and then for the function we're
+going to send in the render preview
+going to send in the render preview
+going to send in the render preview
+function and then that's it so this will
+function and then that's it so this will
+function and then that's it so this will
+be called every render step so every
+be called every render step so every
+be called every render step so every
+time the screen is rendered for the
+time the screen is rendered for the
+time the screen is rendered for the
+player and every time that happens we
+player and every time that happens we
+player and every time that happens we
+need to figure out where the player
+need to figure out where the player
+need to figure out where the player
+where where the player player's Mouse is
+where where the player player's Mouse is
+where where the player player's Mouse is
+and then put the block there so we're
+and then put the block there so we're
+and then put the block there so we're
+going to start by getting the mouse
+going to start by getting the mouse
+going to start by getting the mouse
+location on the 2D space so we're going
+location on the 2D space so we're going
+location on the 2D space so we're going
+to say local Mouse location equals the
+to say local Mouse location equals the
+to say local Mouse location equals the
+user input service which we actually
+user input service which we actually
+user input service which we actually
+don't have we need to add the user input
+don't have we need to add the user input
+don't have we need to add the user input
+service user
+service user
+service user
+input service equals game get service
+input service equals game get service
+input service equals game get service
+user input service there we go and then
+user input service there we go and then
+user input service there we go and then
+the mouse location is a user input
+the mouse location is a user input
+the mouse location is a user input
+service function so we're going say user
+service function so we're going say user
+service function so we're going say user
+input service get mouse location but
+input service get mouse location but
+input service get mouse location but
+this is the mouse location in 2D we need
+this is the mouse location in 2D we need
+this is the mouse location in 2D we need
+the mouse location in 3D for that we're
+the mouse location in 3D for that we're
+the mouse location in 3D for that we're
+going to need to use the camera we're
+going to need to use the camera we're
+going to need to use the camera we're
+going to say local camera equals
+going to say local camera equals
+going to say local camera equals
+workspace do current camera up at the
+workspace do current camera up at the
+workspace do current camera up at the
+top and then down here we're going to
+top and then down here we're going to
+top and then down here we're going to
+say local unit Ray equals camera
+say local unit Ray equals camera
+say local unit Ray equals camera
+viewport point toay and then we're going
+viewport point toay and then we're going
+viewport point toay and then we're going
+to send in the mouse location dox and
+to send in the mouse location dox and
+to send in the mouse location dox and
+then Mouse location. y so this function
+then Mouse location. y so this function
+then Mouse location. y so this function
+here for the camera basically takes the
+here for the camera basically takes the
+here for the camera basically takes the
+2D coordinates of the mouse and like
+2D coordinates of the mouse and like
+2D coordinates of the mouse and like
+projects them into 3D space giving us a
+projects them into 3D space giving us a
+projects them into 3D space giving us a
+unit Ray which has a length of one with
+unit Ray which has a length of one with
+unit Ray which has a length of one with
+an origin and a direction kind of
+an origin and a direction kind of
+an origin and a direction kind of
+pointing in that location now in the
+pointing in that location now in the
+pointing in that location now in the
+past you may have seen me or other
+past you may have seen me or other
+past you may have seen me or other
+creators or other tutorials use the
+creators or other tutorials use the
+creators or other tutorials use the
+mouse object but that's deprecated this
+mouse object but that's deprecated this
+mouse object but that's deprecated this
+is the canonical way to get the mouse
+is the canonical way to get the mouse
+is the canonical way to get the mouse
+unit Ray these days but it's pretty
+unit Ray these days but it's pretty
+unit Ray these days but it's pretty
+pretty trivial to actually get the 3D
+pretty trivial to actually get the 3D
+pretty trivial to actually get the 3D
+position because all we got to do is
+position because all we got to do is
+position because all we got to do is
+take this Ray and just Ray cast it and I
+take this Ray and just Ray cast it and I
+take this Ray and just Ray cast it and I
+have a video about Ray casting if you
+have a video about Ray casting if you
+have a video about Ray casting if you
+want to check it out so we're going to
+want to check it out so we're going to
+want to check it out so we're going to
+say local cast and this is like the cast
+say local cast and this is like the cast
+say local cast and this is like the cast
+result is going to be equal to workspace
+result is going to be equal to workspace
+result is going to be equal to workspace
+Ray cast and then we're going to use the
+Ray cast and then we're going to use the
+Ray cast and then we're going to use the
+unit ray. Orin as our origin position
+unit ray. Orin as our origin position
+unit ray. Orin as our origin position
+then we're going to do unit ray.
+then we're going to do unit ray.
+then we're going to do unit ray.
+Direction times some constant I'm just
+Direction times some constant I'm just
+Direction times some constant I'm just
+going to say a th000
+going to say a th000
+going to say a th000
+and then we're going to use and then
+and then we're going to use and then
+and then we're going to use and then
+that's it and then we're going to say if
+that's it and then we're going to say if
+that's it and then we're going to say if
+cast and preview just in the off chance
+cast and preview just in the off chance
+cast and preview just in the off chance
+that the preview gets destroyed then
+that the preview gets destroyed then
+that the preview gets destroyed then
+we're going to say preview. position
+we're going to say preview. position
+we're going to say preview. position
+equals cast. position so I also need to
+equals cast. position so I also need to
+equals cast. position so I also need to
+change this to unit rate so we cast
+change this to unit rate so we cast
+change this to unit rate so we cast
+The Players like 2D Mouse position into
+The Players like 2D Mouse position into
+The Players like 2D Mouse position into
+3D space then we take that 3D space
+3D space then we take that 3D space
+3D space then we take that 3D space
+thing and we cast it to wherever it hits
+thing and we cast it to wherever it hits
+thing and we cast it to wherever it hits
+let's say it hits the ground it hits the
+let's say it hits the ground it hits the
+let's say it hits the ground it hits the
+ground and then we set the preview
+ground and then we set the preview
+ground and then we set the preview
+position to the cast position boom there
+position to the cast position boom there
+position to the cast position boom there
+we
+we
+we
+go so if we run
+this you see
+this you see
+this you see
+that it's kind of like half in the
+that it's kind of like half in the
+that it's kind of like half in the
+ground which is not really what we want
+ground which is not really what we want
+ground which is not really what we want
+and it also hits the player so it really
+and it also hits the player so it really
+and it also hits the player so it really
+should go through the player just
+should go through the player just
+should go through the player just
+because like when you're in first person
+because like when you're in first person
+because like when you're in first person
+like you don't want the part to kind of
+like you don't want the part to kind of
+like you don't want the part to kind of
+like like mash on your yourself so we
+like like mash on your yourself so we
+like like mash on your yourself so we
+can fix the cler part pretty easily
+can fix the cler part pretty easily
+can fix the cler part pretty easily
+let's just create a cast params object
+let's just create a cast params object
+let's just create a cast params object
+local cast Rams
+local cast Rams
+local cast Rams
+equals raycast ps. new and we're going
+equals raycast ps. new and we're going
+equals raycast ps. new and we're going
+to do cast params add to
+to do cast params add to
+to do cast params add to
+filter script. parent so this is why
+filter script. parent so this is why
+filter script. parent so this is why
+we're using
+we're using
+we're using
+a a client like character script um
+a a client like character script um
+a a client like character script um
+because when we do
+because when we do
+because when we do
+this we are able to just use the script.
+this we are able to just use the script.
+this we are able to just use the script.
+parent every time we die this reloads so
+parent every time we die this reloads so
+parent every time we die this reloads so
+we're not we don't have to keep track of
+we're not we don't have to keep track of
+we're not we don't have to keep track of
+dynamically updating this Casp Rams
+dynamically updating this Casp Rams
+dynamically updating this Casp Rams
+object and we're using add filter this
+object and we're using add filter this
+object and we're using add filter this
+is like a new function previously we set
+is like a new function previously we set
+is like a new function previously we set
+like the filter to send it instances but
+like the filter to send it instances but
+like the filter to send it instances but
+this is just this is honestly better I
+this is just this is honestly better I
+this is just this is honestly better I
+can't complain so you got to add this to
+can't complain so you got to add this to
+can't complain so you got to add this to
+the workspace raycast call that we do
+the workspace raycast call that we do
+the workspace raycast call that we do
+down here and we do
+that and then boom boom we're here so to
+that and then boom boom we're here so to
+that and then boom boom we're here so to
+fix like the the glitching of the ground
+fix like the the glitching of the ground
+fix like the the glitching of the ground
+the like simple solution would be just
+the like simple solution would be just
+the like simple solution would be just
+to add like a offset in the y- AIS but
+to add like a offset in the y- AIS but
+to add like a offset in the y- AIS but
+when you're like trying to place stuff
+when you're like trying to place stuff
+when you're like trying to place stuff
+on other walls that doesn't really work
+on other walls that doesn't really work
+on other walls that doesn't really work
+right but what we can use is we can use
+right but what we can use is we can use
+right but what we can use is we can use
+the cast. normal value and just kind of
+the cast. normal value and just kind of
+the cast. normal value and just kind of
+offset the part from there so the cast.
+offset the part from there so the cast.
+offset the part from there so the cast.
+normal is kind of the
+normal is kind of the
+normal is kind of the
+direction in which the uh like your cast
+direction in which the uh like your cast
+direction in which the uh like your cast
+is at so for for example uh let me just
+is at so for for example uh let me just
+is at so for for example uh let me just
+make a de demo part over here for
+make a de demo part over here for
+make a de demo part over here for
+example if we make this part here the
+example if we make this part here the
+example if we make this part here the
+normal on this this kind of part is
+normal on this this kind of part is
+normal on this this kind of part is
+different than the normal on the ground
+different than the normal on the ground
+different than the normal on the ground
+so the normal is just kind of the part
+so the normal is just kind of the part
+so the normal is just kind of the part
+the vector that's perpendicular to the
+the vector that's perpendicular to the
+the vector that's perpendicular to the
+surface so if I were to make a really
+surface so if I were to make a really
+surface so if I were to make a really
+small part and kind of make it act like
+small part and kind of make it act like
+small part and kind of make it act like
+a vector like this would be a vector
+a vector like this would be a vector
+a vector like this would be a vector
+this is a normal this is a normal to the
+this is a normal this is a normal to the
+this is a normal this is a normal to the
+ground whereas if I duplicate this and
+ground whereas if I duplicate this and
+ground whereas if I duplicate this and
+then tilt it a little bit
+then tilt it a little bit
+then tilt it a little bit
+uh there we go and whereas this is the
+uh there we go and whereas this is the
+uh there we go and whereas this is the
+normal for the wall you see how this one
+normal for the wall you see how this one
+normal for the wall you see how this one
+the wall the wall surface is like you
+the wall the wall surface is like you
+the wall the wall surface is like you
+know up and down so the normal goes out
+know up and down so the normal goes out
+know up and down so the normal goes out
+to the right and then the normal for
+to the right and then the normal for
+to the right and then the normal for
+this goes up and down because the
+this goes up and down because the
+this goes up and down because the
+surface goes like out to the sides so
+surface goes like out to the sides so
+surface goes like out to the sides so
+the normal is just that one vector that
+the normal is just that one vector that
+the normal is just that one vector that
+just goes in the perpendicular Direction
+just goes in the perpendicular Direction
+just goes in the perpendicular Direction
+so we're going to use that because
+so we're going to use that because
+so we're going to use that because
+notice how the part is sunken on the
+notice how the part is sunken on the
+notice how the part is sunken on the
+ground we need to make it go up and here
+ground we need to make it go up and here
+ground we need to make it go up and here
+the part would be sunken under the wall
+the part would be sunken under the wall
+the part would be sunken under the wall
+we need to make it go out so we use this
+we need to make it go out so we use this
+we need to make it go out so we use this
+Vector to push it out and how much do we
+Vector to push it out and how much do we
+Vector to push it out and how much do we
+push it out we push it out by half of
+push it out we push it out by half of
+push it out we push it out by half of
+the size because the part uses a pivot
+the size because the part uses a pivot
+the size because the part uses a pivot
+that's in the middle so we can do cast
+that's in the middle so we can do cast
+that's in the middle so we can do cast
+opposition plus cast. normal times block
+opposition plus cast. normal times block
+opposition plus cast. normal times block
+template. size pick any axis it is a
+template. size pick any axis it is a
+template. size pick any axis it is a
+uniform size on each axis so size the
+uniform size on each axis so size the
+uniform size on each axis so size the
+xid
+xid
+xid
+two so this should kind of offset our
+two so this should kind of offset our
+two so this should kind of offset our
+part so it doesn't lead any issues so
+part so it doesn't lead any issues so
+part so it doesn't lead any issues so
+you see how it offsets it from the
+you see how it offsets it from the
+you see how it offsets it from the
+ground here and it also offsets it on
+ground here and it also offsets it on
+ground here and it also offsets it on
+the wall here and this would work on
+the wall here and this would work on
+the wall here and this would work on
+ceilings and stuff so that's the benefit
+ceilings and stuff so that's the benefit
+ceilings and stuff so that's the benefit
+of using normal in this situation this
+of using normal in this situation this
+of using normal in this situation this
+is great and all but we need to actually
+is great and all but we need to actually
+is great and all but we need to actually
+place our part so to do that we're going
+place our part so to do that we're going
+place our part so to do that we're going
+to need to employ the help of the server
+to need to employ the help of the server
+to need to employ the help of the server
+and the easiest way to ask the server
+and the easiest way to ask the server
+and the easiest way to ask the server
+for something is to use a remote event
+for something is to use a remote event
+for something is to use a remote event
+so we're going to make a remote event in
+so we're going to make a remote event in
+so we're going to make a remote event in
+replicated storage and I'm going to name
+replicated storage and I'm going to name
+replicated storage and I'm going to name
+this place it's going to be called place
+this place it's going to be called place
+this place it's going to be called place
+I guess you can make it more descriptive
+I guess you can make it more descriptive
+I guess you can make it more descriptive
+Place block that would be better there
+Place block that would be better there
+Place block that would be better there
+we go um and then we're going to get
+we go um and then we're going to get
+we go um and then we're going to get
+that up here going to say local
+that up here going to say local
+that up here going to say local
+place block vent equals replicated
+place block vent equals replicated
+place block vent equals replicated
+storage wait for child Place block and
+storage wait for child Place block and
+storage wait for child Place block and
+then we're also going to need to get
+then we're also going to need to get
+then we're also going to need to get
+another service context Action Service
+another service context Action Service
+another service context Action Service
+to actually get the clicks so when the
+to actually get the clicks so when the
+to actually get the clicks so when the
+player clicks we can get it we going to
+player clicks we can get it we going to
+player clicks we can get it we going to
+say contact Action Service equals game
+say contact Action Service equals game
+say contact Action Service equals game
+get service contact Action Service there
+get service contact Action Service there
+get service contact Action Service there
+we go and then we're we going to below
+we go and then we're we going to below
+we go and then we're we going to below
+our run service we're going to say
+our run service we're going to say
+our run service we're going to say
+context Action Service B action so we're
+context Action Service B action so we're
+context Action Service B action so we're
+going to name the action stream well
+going to name the action stream well
+going to name the action stream well
+we're going to name the action Place
+we're going to name the action Place
+we're going to name the action Place
+block or just Place whatever you want
+block or just Place whatever you want
+block or just Place whatever you want
+and then the function to bind we're
+and then the function to bind we're
+and then the function to bind we're
+going to actually make that up here say
+going to actually make that up here say
+going to actually make that up here say
+local
+local
+local
+function Place
+function Place
+function Place
+block and then this will take in a name
+block and then this will take in a name
+block and then this will take in a name
+which we don't need that's why I'm
+which we don't need that's why I'm
+which we don't need that's why I'm
+prepending it with an underscore it'll
+prepending it with an underscore it'll
+prepending it with an underscore it'll
+take a input state which we do need and
+take a input state which we do need and
+take a input state which we do need and
+it'll also take an input object which
+it'll also take an input object which
+it'll also take an input object which
+you don't need so I'm putting these
+you don't need so I'm putting these
+you don't need so I'm putting these
+underscores here just to kind of let let
+underscores here just to kind of let let
+underscores here just to kind of let let
+you know like if you're reading this in
+you know like if you're reading this in
+you know like if you're reading this in
+the future or let like other people on
+the future or let like other people on
+the future or let like other people on
+your team know like this exists like we
+your team know like this exists like we
+your team know like this exists like we
+acknowledge the variable's existence and
+acknowledge the variable's existence and
+acknowledge the variable's existence and
+but it's not there um I guess you might
+but it's not there um I guess you might
+but it's not there um I guess you might
+also note that render preview actually
+also note that render preview actually
+also note that render preview actually
+has some arguments but like I literally
+has some arguments but like I literally
+has some arguments but like I literally
+do not care about that like it doesn't
+do not care about that like it doesn't
+do not care about that like it doesn't
+matter and like I'm not going to use
+matter and like I'm not going to use
+matter and like I'm not going to use
+them it's irrelevant so you could also
+them it's irrelevant so you could also
+them it's irrelevant so you could also
+do that for this one but I didn't feel
+do that for this one but I didn't feel
+do that for this one but I didn't feel
+like hooking up rers for that whatever
+like hooking up rers for that whatever
+like hooking up rers for that whatever
+um and then for this function behind
+um and then for this function behind
+um and then for this function behind
+we're going to put our place block here
+we're going to put our place block here
+we're going to put our place block here
+and then create Touch button I'm just
+and then create Touch button I'm just
+and then create Touch button I'm just
+going to say false you can do that if
+going to say false you can do that if
+going to say false you can do that if
+you want to and then here is a list of
+you want to and then here is a list of
+you want to and then here is a list of
+the key codes or user input states that
+the key codes or user input states that
+the key codes or user input states that
+actually trigger this event so you can
+actually trigger this event so you can
+actually trigger this event so you can
+make it whatever you want for me I'm
+make it whatever you want for me I'm
+make it whatever you want for me I'm
+going to use the en. userinput type.
+going to use the en. userinput type.
+going to use the en. userinput type.
+mouse button one so this is a left click
+mouse button one so this is a left click
+mouse button one so this is a left click
+on a standard Mouse you could also add
+on a standard Mouse you could also add
+on a standard Mouse you could also add
+other keyboard input or gamep pad input
+other keyboard input or gamep pad input
+other keyboard input or gamep pad input
+or probably VR input like like whatever
+or probably VR input like like whatever
+or probably VR input like like whatever
+you want down here but this is what I'm
+you want down here but this is what I'm
+you want down here but this is what I'm
+going to do for this tutorial because
+going to do for this tutorial because
+going to do for this tutorial because
+I'm on a computer
+I'm on a computer
+I'm on a computer
+obviously and so in here so this should
+obviously and so in here so this should
+obviously and so in here so this should
+like trigger everything just fine and
+like trigger everything just fine and
+like trigger everything just fine and
+then all we got to do in our place block
+then all we got to do in our place block
+then all we got to do in our place block
+is we first have to check if the input
+is we first have to check if the input
+is we first have to check if the input
+State equals enum do userinput state.
+State equals enum do userinput state.
+State equals enum do userinput state.
+begin because when they click it'll fire
+begin because when they click it'll fire
+begin because when they click it'll fire
+our function for when you click and then
+our function for when you click and then
+our function for when you click and then
+when you unclick but we need to make
+when you unclick but we need to make
+when you unclick but we need to make
+sure it's just like when you click down
+sure it's just like when you click down
+sure it's just like when you click down
+first initially and then all we need to
+first initially and then all we need to
+first initially and then all we need to
+do is call Our Place block event we need
+do is call Our Place block event we need
+do is call Our Place block event we need
+to fire the server with the preview.
+to fire the server with the preview.
+to fire the server with the preview.
+position so the benefit of using a
+position so the benefit of using a
+position so the benefit of using a
+preview part is that we do the
+preview part is that we do the
+preview part is that we do the
+calculation up here and then all we got
+calculation up here and then all we got
+calculation up here and then all we got
+to do down here is kind of just like
+to do down here is kind of just like
+to do down here is kind of just like
+send it like we don't we don't have to
+send it like we don't we don't have to
+send it like we don't we don't have to
+do don't got to do much we just got to
+do don't got to do much we just got to
+do don't got to do much we just got to
+send it and then in the server we can
+send it and then in the server we can
+send it and then in the server we can
+just create a new script and server
+just create a new script and server
+just create a new script and server
+script
+script
+script
+service and this will be our server
+service and this will be our server
+service and this will be our server
+Placer I guess you could call it so
+Placer I guess you could call it so
+Placer I guess you could call it so
+remember name
+remember name
+remember name
+keep parody with the other thing and we
+keep parody with the other thing and we
+keep parody with the other thing and we
+need to get replicated
+need to get replicated
+need to get replicated
+Storage
+Storage
+Storage
+storage this game get
+storage this game get
+storage this game get
+service why is everything in Roblox so
+service why is everything in Roblox so
+service why is everything in Roblox so
+verbose so annoying but whatever let say
+verbose so annoying but whatever let say
+verbose so annoying but whatever let say
+local place block event
+local place block event
+local place block event
+equals replicated storage. place place
+equals replicated storage. place place
+equals replicated storage. place place
+block and then we also need the block
+block and then we also need the block
+block and then we also need the block
+template because we need to actually
+template because we need to actually
+template because we need to actually
+clone this into the world replicate
+clone this into the world replicate
+clone this into the world replicate
+storage. block there we go so we have
+storage. block there we go so we have
+storage. block there we go so we have
+the the event we have the template and
+the the event we have the template and
+the the event we have the template and
+now we are able to just go and say Place
+now we are able to just go and say Place
+now we are able to just go and say Place
+block event do on server event connect a
+block event do on server event connect a
+block event do on server event connect a
+function and to remain with parody with
+function and to remain with parody with
+function and to remain with parody with
+everything else we're going to make the
+everything else we're going to make the
+everything else we're going to make the
+function above local function BL
+function above local function BL
+function above local function BL
+block and then this will take in a
+block and then this will take in a
+block and then this will take in a
+player and
+player and
+player and
+a position and then we're going to
+a position and then we're going to
+a position and then we're going to
+connect it to the place block here so
+connect it to the place block here so
+connect it to the place block here so
+don't leave the
+don't leave the
+don't leave the
+parenthesis and then up
+parenthesis and then up
+parenthesis and then up
+here this is the player who wants to
+here this is the player who wants to
+here this is the player who wants to
+place the block and initially all we
+place the block and initially all we
+place the block and initially all we
+really need to do is say local block
+really need to do is say local block
+really need to do is say local block
+equals block template dot clone or and
+equals block template dot clone or and
+equals block template dot clone or and
+clone and then we need to say block
+clone and then we need to say block
+clone and then we need to say block
+dot position
+dot position
+dot position
+equals position and then block. par
+equals position and then block. par
+equals position and then block. par
+equals
+equals
+equals
+workspace so this should work let's test
+workspace so this should work let's test
+workspace so this should work let's test
+it out make sure it actually does
+it out make sure it actually does
+it out make sure it actually does
+work yeah so it works but it trusts the
+work yeah so it works but it trusts the
+work yeah so it works but it trusts the
+client a lot in my opinion it trusts the
+client a lot in my opinion it trusts the
+client a lot in my opinion it trusts the
+client a little too much because look
+client a little too much because look
+client a little too much because look
+you can place blocks anywhere you want
+you can place blocks anywhere you want
+you can place blocks anywhere you want
+in the world that you can see kind of
+in the world that you can see kind of
+in the world that you can see kind of
+overpowered in my opinion you can even
+overpowered in my opinion you can even
+overpowered in my opinion you can even
+like I don't know like do some crazy
+like I don't know like do some crazy
+like I don't know like do some crazy
+stuff so at least for now like we I know
+stuff so at least for now like we I know
+stuff so at least for now like we I know
+we don't have a grid system set up yet
+we don't have a grid system set up yet
+we don't have a grid system set up yet
+that's for the next video and like stuff
+that's for the next video and like stuff
+that's for the next video and like stuff
+like that but we are going to want to at
+like that but we are going to want to at
+like that but we are going to want to at
+least limit the distance that our player
+least limit the distance that our player
+least limit the distance that our player
+can place so for that we're going to be
+can place so for that we're going to be
+can place so for that we're going to be
+using a module script and replicated
+using a module script and replicated
+using a module script and replicated
+storage so both the client and the
+storage so both the client and the
+storage so both the client and the
+server can access it because for example
+server can access it because for example
+server can access it because for example
+on the client if you for example down
+on the client if you for example down
+on the client if you for example down
+the line want to add a little green
+the line want to add a little green
+the line want to add a little green
+indicator block that says okay yeah
+indicator block that says okay yeah
+indicator block that says okay yeah
+you're allowed to place the part here
+you're allowed to place the part here
+you're allowed to place the part here
+and it turns red when you're not allowed
+and it turns red when you're not allowed
+and it turns red when you're not allowed
+to you want the client to be able to
+to you want the client to be able to
+to you want the client to be able to
+access that too so the so the player has
+access that too so the so the player has
+access that too so the so the player has
+feedback
+feedback
+feedback
+and these functions that we're going to
+and these functions that we're going to
+and these functions that we're going to
+make are going to be pure they're going
+make are going to be pure they're going
+make are going to be pure they're going
+to take some input return some output
+to take some input return some output
+to take some input return some output
+not really have any side effects which
+not really have any side effects which
+not really have any side effects which
+is a great uh candidate for putting a
+is a great uh candidate for putting a
+is a great uh candidate for putting a
+little shared module script in
+little shared module script in
+little shared module script in
+replicated storage so in replicated
+replicated storage so in replicated
+replicated storage so in replicated
+storage I'm going to create a module
+storage I'm going to create a module
+storage I'm going to create a module
+script and I'm going to name this uh
+script and I'm going to name this uh
+script and I'm going to name this uh
+placement validator it's a really long
+placement validator it's a really long
+placement validator it's a really long
+name I guess you can name it a place
+name I guess you can name it a place
+name I guess you can name it a place
+validator I don't know it's up to
+validator I don't know it's up to
+validator I don't know it's up to
+you but I think this is a good name so
+you but I think this is a good name so
+you but I think this is a good name so
+we're going to say placement
+we're going to say placement
+we're going to say placement
+validator and then we're we're going to
+validator and then we're we're going to
+validator and then we're we're going to
+make it return placement validator and
+make it return placement validator and
+make it return placement validator and
+we're create a function placement
+we're create a function placement
+we're create a function placement
+validator
+validator
+validator
+dot is within max distance and this will
+dot is within max distance and this will
+dot is within max distance and this will
+take in the player and then the position
+take in the player and then the position
+take in the player and then the position
+in which they want to place the block
+in which they want to place the block
+in which they want to place the block
+and we're also going to Define at the
+and we're also going to Define at the
+and we're also going to Define at the
+very top a max distance constant using
+very top a max distance constant using
+very top a max distance constant using
+upper snake case I'm going to make this
+upper snake case I'm going to make this
+upper snake case I'm going to make this
+like 25 studs this is as far away as
+like 25 studs this is as far away as
+like 25 studs this is as far away as
+they can place the ball
+so if we go down here we first need to
+so if we go down here we first need to
+so if we go down here we first need to
+get the position of the player now the
+get the position of the player now the
+get the position of the player now the
+player does have a function called like
+player does have a function called like
+player does have a function called like
+distance from character the issue with
+distance from character the issue with
+distance from character the issue with
+that is it returns zero
+that is it returns zero
+that is it returns zero
+when the part or like when the part is
+when the part or like when the part is
+when the part or like when the part is
+like too far away or like when it
+like too far away or like when it
+like too far away or like when it
+doesn't exist which is kind of a hack
+doesn't exist which is kind of a hack
+doesn't exist which is kind of a hack
+because like if you like cheat the
+because like if you like cheat the
+because like if you like cheat the
+system and send a position that's like
+system and send a position that's like
+system and send a position that's like
+not really like weird or like doesn't
+not really like weird or like doesn't
+not really like weird or like doesn't
+work right it'll give you Z and Z is
+work right it'll give you Z and Z is
+work right it'll give you Z and Z is
+obviously less than 25 so that's that's
+obviously less than 25 so that's that's
+obviously less than 25 so that's that's
+not a good thing so we're going to
+not a good thing so we're going to
+not a good thing so we're going to
+manually get the position of our player
+manually get the position of our player
+manually get the position of our player
+itself so we're going to say local
+itself so we're going to say local
+itself so we're going to say local
+player POS equals player. character and
+player POS equals player. character and
+player POS equals player. character and
+player.
+player.
+player.
+character
+character
+character
+character get pivot do position and then
+character get pivot do position and then
+character get pivot do position and then
+if this doesn't exist if not player pose
+if this doesn't exist if not player pose
+if this doesn't exist if not player pose
+then we're just going to return return
+then we're just going to return return
+then we're just going to return return
+to false be like hey like the player is
+to false be like hey like the player is
+to false be like hey like the player is
+not actually on the field so like we
+not actually on the field so like we
+not actually on the field so like we
+cannot verify if they're within the
+cannot verify if they're within the
+cannot verify if they're within the
+distance and what I meant to say earlier
+distance and what I meant to say earlier
+distance and what I meant to say earlier
+is like when when distance from
+is like when when distance from
+is like when when distance from
+character when the character doesn't
+character when the character doesn't
+character when the character doesn't
+exist it just returns zero and that's
+exist it just returns zero and that's
+exist it just returns zero and that's
+like bad because if they die they could
+like bad because if they die they could
+like bad because if they die they could
+like TR exploit where they like you know
+like TR exploit where they like you know
+like TR exploit where they like you know
+place a block across the map not good so
+place a block across the map not good so
+place a block across the map not good so
+we're going to do this and then we're
+we're going to do this and then we're
+we're going to do this and then we're
+going to
+going to
+going to
+return player pose or parenthesis
+return player pose or parenthesis
+return player pose or parenthesis
+position minus player pose
+position minus player pose
+position minus player pose
+do
+do
+do
+magnitude is less than or less than
+magnitude is less than or less than
+magnitude is less than or less than
+equal to max distance so this is
+equal to max distance so this is
+equal to max distance so this is
+basically saying the size of this Vector
+basically saying the size of this Vector
+basically saying the size of this Vector
+like the the line that connects the
+like the the line that connects the
+like the the line that connects the
+player and the position they're clicking
+player and the position they're clicking
+player and the position they're clicking
+should be less than or equal this
+should be less than or equal this
+should be less than or equal this
+distance that we set so they can't place
+distance that we set so they can't place
+distance that we set so they can't place
+blocks anywhere on the map at any time
+blocks anywhere on the map at any time
+blocks anywhere on the map at any time
+just depending on where their Zoom is or
+just depending on where their Zoom is or
+just depending on where their Zoom is or
+if they exploit they can just send a
+if they exploit they can just send a
+if they exploit they can just send a
+random value and it'll just like mess
+random value and it'll just like mess
+random value and it'll just like mess
+everything up so this protects against
+everything up so this protects against
+everything up so this protects against
+that but we need to actually put it on
+that but we need to actually put it on
+that but we need to actually put it on
+the server so let's get our placement
+validator and we're going to set this
+validator and we're going to set this
+validator and we're going to set this
+equal to require replicated storage.
+equal to require replicated storage.
+equal to require replicated storage.
+placement validator and then in our
+placement validator and then in our
+placement validator and then in our
+place block we're going to say
+place block we're going to say
+place block we're going to say
+if if not placement validator is within
+if if not placement validator is within
+if if not placement validator is within
+max distance layer and then position
+max distance layer and then position
+max distance layer and then position
+then
+then
+then
+return so this is a little guard Clause
+return so this is a little guard Clause
+return so this is a little guard Clause
+protecting our
+protecting our
+protecting our
+you know block placement saying like if
+you know block placement saying like if
+you know block placement saying like if
+it's not within max distance then we
+it's not within max distance then we
+it's not within max distance then we
+just return it's kind of a double
+just return it's kind of a double
+just return it's kind of a double
+negative here because like we checked
+negative here because like we checked
+negative here because like we checked
+the other side but I think this just
+the other side but I think this just
+the other side but I think this just
+makes more sense because like you're
+makes more sense because like you're
+makes more sense because like you're
+reading it's okay if not is within max
+reading it's okay if not is within max
+reading it's okay if not is within max
+distance so if it's not within max
+distance so if it's not within max
+distance so if it's not within max
+distance then we just we get out so
+distance then we just we get out so
+distance then we just we get out so
+let's play this see how it works should
+let's play this see how it works should
+let's play this see how it works should
+work should work fine so we place it
+work should work fine so we place it
+work should work fine so we place it
+close it's fine we place it far away we
+close it's fine we place it far away we
+close it's fine we place it far away we
+just can't and then we kind of like
+just can't and then we kind of like
+just can't and then we kind of like
+figure out how close we can place it to
+figure out how close we can place it to
+figure out how close we can place it to
+us like make make a little circle just
+us like make make a little circle just
+us like make make a little circle just
+about so if you place anywhere farther
+about so if you place anywhere farther
+about so if you place anywhere farther
+then you're kind of
+then you're kind of
+then you're kind of
+screwed so yeah it's kind of like the
+screwed so yeah it's kind of like the
+screwed so yeah it's kind of like the
+max Essence we can place and that's
+max Essence we can place and that's
+max Essence we can place and that's
+about it for now so you'll notice we
+about it for now so you'll notice we
+about it for now so you'll notice we
+have no grid there's no grid there's no
+have no grid there's no grid there's no
+have no grid there's no grid there's no
+um like grid validation on the server
+um like grid validation on the server
+um like grid validation on the server
+and the placements like you can kind of
+and the placements like you can kind of
+and the placements like you can kind of
+like phase blocks into the ground like
+like phase blocks into the ground like
+like phase blocks into the ground like
+depending on how accurate you are and
+depending on how accurate you are and
+depending on how accurate you are and
+stuff like that so this system is very
+stuff like that so this system is very
+stuff like that so this system is very
+very good like initially if you just
+very good like initially if you just
+very good like initially if you just
+want like a little basic placement
+want like a little basic placement
+want like a little basic placement
+system use this but next video we're
+system use this but next video we're
+system use this but next video we're
+going to be making an actual grid so it
+going to be making an actual grid so it
+going to be making an actual grid so it
+actually places like like real Minecraft
+actually places like like real Minecraft
+actually places like like real Minecraft
+and that involves some really really
+and that involves some really really
+and that involves some really really
+gnarly Vector math and C frame stuff so
+gnarly Vector math and C frame stuff so
+gnarly Vector math and C frame stuff so
+if you're into that stay tuned for that
+if you're into that stay tuned for that
+if you're into that stay tuned for that
+and I'll also be making another Series
+and I'll also be making another Series
+and I'll also be making another Series
+so if you're confused as to why like I
+so if you're confused as to why like I
+so if you're confused as to why like I
+made a poll recently saying like what
+made a poll recently saying like what
+made a poll recently saying like what
+people want and I'm I did this when this
+people want and I'm I did this when this
+people want and I'm I did this when this
+was like not the winner of the poll the
+was like not the winner of the poll the
+was like not the winner of the poll the
+other like placement system like with
+other like placement system like with
+other like placement system like with
+data saving and stuff I'm planning on
+data saving and stuff I'm planning on
+data saving and stuff I'm planning on
+turning that into a full like game
+turning that into a full like game
+turning that into a full like game
+series like a building game like where
+series like a building game like where
+series like a building game like where
+every player gets a plot they play stuff
+every player gets a plot they play stuff
+every player gets a plot they play stuff
+and then they save plots so that's going
+and then they save plots so that's going
+and then they save plots so that's going
+to be like a long a longer Series so
+to be like a long a longer Series so
+to be like a long a longer Series so
+you'll see that a little bit later
+you'll see that a little bit later
+you'll see that a little bit later
+because the scope has grown and I'm
+because the scope has grown and I'm
+because the scope has grown and I'm
+actually really excited to make another
+actually really excited to make another
+actually really excited to make another
+game series it's been a while it's been
+game series it's been a while it's been
+game series it's been a while it's been
+a long time but that should be fun so I
+a long time but that should be fun so I
+a long time but that should be fun so I
+hope you enjoyed this video make sure to
+hope you enjoyed this video make sure to
+hope you enjoyed this video make sure to
+like And subscribe if you did comment
+like And subscribe if you did comment
+like And subscribe if you did comment
+any questions or suggestions down below
+any questions or suggestions down below
+any questions or suggestions down below
+and stay excited for these next couple
+and stay excited for these next couple
+and stay excited for these next couple
+videos this is a project I've been
+videos this is a project I've been
+videos this is a project I've been
+putting off for years because I didn't
+putting off for years because I didn't
+putting off for years because I didn't
+have the expertise I didn't feel
+have the expertise I didn't feel
+have the expertise I didn't feel
+comfortable with my Solutions and now I
+comfortable with my Solutions and now I
+comfortable with my Solutions and now I
+finally do so let's do it so see you
+finally do so let's do it so see you
+finally do so let's do it so see you
+next time hope you have a nice day and
+next time hope you have a nice day and
+next time hope you have a nice day and
+[Music]
+[Music]
+[Music]
+goodbye

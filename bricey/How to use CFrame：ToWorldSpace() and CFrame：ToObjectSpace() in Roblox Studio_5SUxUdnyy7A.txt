@@ -1,0 +1,901 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i will be teaching you
+in this video i will be teaching you
+in this video i will be teaching you
+about the c
+about the c
+about the c
+frame functions to world space and to
+frame functions to world space and to
+frame functions to world space and to
+object space and at first glance these
+object space and at first glance these
+object space and at first glance these
+may sound
+may sound
+may sound
+very intimidating and complex but in
+very intimidating and complex but in
+very intimidating and complex but in
+reality
+reality
+reality
+they're pretty simple i will go over
+they're pretty simple i will go over
+they're pretty simple i will go over
+what object space and world space is
+what object space and world space is
+what object space and world space is
+in roblox and i'll give you some real
+in roblox and i'll give you some real
+in roblox and i'll give you some real
+world examples of what you can do
+world examples of what you can do
+world examples of what you can do
+and one of the key things that you can
+and one of the key things that you can
+and one of the key things that you can
+do with it are like rotate parts you can
+do with it are like rotate parts you can
+do with it are like rotate parts you can
+position
+position
+position
+other parts and front like in the front
+other parts and front like in the front
+other parts and front like in the front
+of a part no matter where you're looking
+of a part no matter where you're looking
+of a part no matter where you're looking
+or where you are
+or where you are
+or where you are
+some really cool stuff like that that
+some really cool stuff like that that
+some really cool stuff like that that
+may seem
+may seem
+may seem
+complex and intimidating but in the end
+complex and intimidating but in the end
+complex and intimidating but in the end
+it's actually
+it's actually
+it's actually
+pretty easy but very very useful
+pretty easy but very very useful
+pretty easy but very very useful
+so if you enjoy this video make sure to
+so if you enjoy this video make sure to
+so if you enjoy this video make sure to
+like and subscribe and without further
+like and subscribe and without further
+like and subscribe and without further
+ado
+ado
+ado
+let's get started
+let's get started
+let's get started
+[Music]
+[Music]
+[Music]
+so before we can talk about these two
+so before we can talk about these two
+so before we can talk about these two
+functions
+functions
+functions
+to object space and to world space we
+to object space and to world space we
+to object space and to world space we
+first have to go over what world space
+first have to go over what world space
+first have to go over what world space
+and
+and
+and
+object space is so world space is pretty
+object space is so world space is pretty
+object space is so world space is pretty
+self-explanatory let me draw it out
+self-explanatory let me draw it out
+self-explanatory let me draw it out
+and i'm going to be doing this in 2d so
+and i'm going to be doing this in 2d so
+and i'm going to be doing this in 2d so
+this is a little bit simpler
+this is a little bit simpler
+this is a little bit simpler
+and roblox this will obviously be 3d
+and roblox this will obviously be 3d
+and roblox this will obviously be 3d
+so world space is just like this
+so world space is just like this
+so world space is just like this
+coordinate plane
+coordinate plane
+coordinate plane
+and the origin is zero zero zero let me
+and the origin is zero zero zero let me
+and the origin is zero zero zero let me
+just write this out
+just write this out
+just write this out
+origin is zero zero
+origin is zero zero
+origin is zero zero
+this is in 2d so this is what world
+this is in 2d so this is what world
+this is in 2d so this is what world
+space
+space
+space
+is there we go origin is zero zero
+is there we go origin is zero zero
+is there we go origin is zero zero
+and so if you have like a point let's
+and so if you have like a point let's
+and so if you have like a point let's
+say we have this point like right here
+say we have this point like right here
+say we have this point like right here
+let me just select this layer point
+let me just select this layer point
+let me just select this layer point
+right here this would be i don't know
+right here this would be i don't know
+right here this would be i don't know
+like negative 3 on the x
+like negative 3 on the x
+like negative 3 on the x
+and 0 on the y because this is the y
+and 0 on the y because this is the y
+and 0 on the y because this is the y
+axis
+axis
+axis
+and this is the x axis this is some
+and this is the x axis this is some
+and this is the x axis this is some
+basic math stuff
+basic math stuff
+basic math stuff
+but let's say i have a point
+but let's say i have a point
+but let's say i have a point
+like over here and let's say this point
+like over here and let's say this point
+like over here and let's say this point
+is
+is
+is
+three on the x and negative three on the
+three on the x and negative three on the
+three on the x and negative three on the
+y
+y
+y
+and we want to have a point one
+and we want to have a point one
+and we want to have a point one
+like unit to the right of this
+like unit to the right of this
+like unit to the right of this
+no matter where the point is in this
+no matter where the point is in this
+no matter where the point is in this
+situation we would have to use object
+situation we would have to use object
+situation we would have to use object
+space
+space
+space
+so object space just basically takes
+so object space just basically takes
+so object space just basically takes
+whatever point you have
+whatever point you have
+whatever point you have
+or whatever orientation you have because
+or whatever orientation you have because
+or whatever orientation you have because
+in roblox you use this with c
+in roblox you use this with c
+in roblox you use this with c
+frames and it makes that the origin so
+frames and it makes that the origin so
+frames and it makes that the origin so
+this
+this
+this
+theoretically would be the origin if
+theoretically would be the origin if
+theoretically would be the origin if
+you're like working in an object space
+you're like working in an object space
+you're like working in an object space
+it'd be
+it'd be
+it'd be
+zero zero so if you want to position a
+zero zero so if you want to position a
+zero zero so if you want to position a
+point relative
+point relative
+point relative
+to this point in object space
+to this point in object space
+to this point in object space
+you can do that quite easily no matter
+you can do that quite easily no matter
+you can do that quite easily no matter
+where the point is so let's say i want
+where the point is so let's say i want
+where the point is so let's say i want
+to convert
+to convert
+to convert
+a point one zero into object space
+a point one zero into object space
+a point one zero into object space
+like relative to this point so one zero
+like relative to this point so one zero
+like relative to this point so one zero
+is one on the x zero on the y so i go
+is one on the x zero on the y so i go
+is one on the x zero on the y so i go
+one on the x
+one on the x
+one on the x
+0 on the y and this would be my new
+0 on the y and this would be my new
+0 on the y and this would be my new
+point and if 1 0 in world space would
+point and if 1 0 in world space would
+point and if 1 0 in world space would
+just be
+just be
+just be
+like right here and so let's say i have
+like right here and so let's say i have
+like right here and so let's say i have
+a point right here
+a point right here
+a point right here
+it doesn't really matter where it is
+it doesn't really matter where it is
+it doesn't really matter where it is
+let's say i want to go 1 0
+let's say i want to go 1 0
+let's say i want to go 1 0
+to object space right here
+to object space right here
+to object space right here
+it'd be like over here so object space
+it'd be like over here so object space
+it'd be like over here so object space
+is basically just positioning
+is basically just positioning
+is basically just positioning
+points and row block c frames relative
+points and row block c frames relative
+points and row block c frames relative
+to another point so now that we have
+to another point so now that we have
+to another point so now that we have
+this
+this
+this
+out of the way let's go into roblox
+out of the way let's go into roblox
+out of the way let's go into roblox
+studio and
+studio and
+studio and
+actually use the functions so i'm here
+actually use the functions so i'm here
+actually use the functions so i'm here
+in roblox studio
+in roblox studio
+in roblox studio
+and now we can actually use two world
+and now we can actually use two world
+and now we can actually use two world
+space and two object space
+space and two object space
+space and two object space
+and some real life applications
+and some real life applications
+and some real life applications
+and so this function is always run on a
+and so this function is always run on a
+and so this function is always run on a
+c frame but for the sake of this video
+c frame but for the sake of this video
+c frame but for the sake of this video
+and for the sake of visual
+and for the sake of visual
+and for the sake of visual
+representation we're going to use this
+representation we're going to use this
+representation we're going to use this
+part to represent our c frame
+part to represent our c frame
+part to represent our c frame
+since all parts in roblox have a c frame
+since all parts in roblox have a c frame
+since all parts in roblox have a c frame
+which is their position
+which is their position
+which is their position
+and their orientation so i'm going to go
+and their orientation so i'm going to go
+and their orientation so i'm going to go
+create a part
+create a part
+create a part
+a script i should say inside of my part
+a script i should say inside of my part
+a script i should say inside of my part
+and we're going to define our part which
+and we're going to define our part which
+and we're going to define our part which
+will be
+will be
+will be
+script whoops script.parent
+script whoops script.parent
+script whoops script.parent
+and we're going to make a quick little
+and we're going to make a quick little
+and we're going to make a quick little
+function and this is going to create a
+function and this is going to create a
+function and this is going to create a
+part
+part
+part
+just for visual representation of our c
+just for visual representation of our c
+just for visual representation of our c
+frames
+frames
+frames
+so we're going to define local new parts
+so we're going to define local new parts
+so we're going to define local new parts
+equals instance dot new parts
+equals instance dot new parts
+equals instance dot new parts
+and then new part dot parent will equal
+and then new part dot parent will equal
+and then new part dot parent will equal
+workspace
+workspace
+workspace
+new part.anchored equals true
+new part.anchored equals true
+new part.anchored equals true
+new part dot size equals vector 3.0 1 1
+new part dot size equals vector 3.0 1 1
+new part dot size equals vector 3.0 1 1
+1 just make it a little small cube and
+1 just make it a little small cube and
+1 just make it a little small cube and
+we can return
+we can return
+we can return
+new part there we go it's vector three
+new part there we go it's vector three
+new part there we go it's vector three
+not vector three two whoops okay so here
+not vector three two whoops okay so here
+not vector three two whoops okay so here
+we go
+we go
+we go
+now let's make a new c frame
+now let's make a new c frame
+now let's make a new c frame
+and convert it from world space
+object space to world space so we're
+object space to world space so we're
+object space to world space so we're
+going to start with
+going to start with
+going to start with
+two world space as our first function
+two world space as our first function
+two world space as our first function
+and this function
+and this function
+and this function
+takes into c frame and it turns it into
+takes into c frame and it turns it into
+takes into c frame and it turns it into
+world space from object space so we're
+world space from object space so we're
+world space from object space so we're
+going to define a c frame and this c
+going to define a c frame and this c
+going to define a c frame and this c
+frame is going to be equal to
+frame is going to be equal to
+frame is going to be equal to
+c frame dot new zero zero
+c frame dot new zero zero
+c frame dot new zero zero
+one so in world space this would just be
+one so in world space this would just be
+one so in world space this would just be
+like one on the z axis but if we use
+like one on the z axis but if we use
+like one on the z axis but if we use
+our part c frame like so so local
+our part c frame like so so local
+our part c frame like so so local
+new c frame this will be equal to part
+new c frame this will be equal to part
+new c frame this will be equal to part
+dot c frame colon to
+dot c frame colon to
+dot c frame colon to
+world space and then
+world space and then
+world space and then
+we give it the cf so this basically says
+we give it the cf so this basically says
+we give it the cf so this basically says
+we take this c frame we convert it from
+we take this c frame we convert it from
+we take this c frame we convert it from
+this basic default world space and we
+this basic default world space and we
+this basic default world space and we
+move it relative to our part c frame
+move it relative to our part c frame
+move it relative to our part c frame
+so if we were to create a part local
+so if we were to create a part local
+so if we were to create a part local
+part equals create
+part equals create
+part equals create
+part part dot c frame
+part part dot c frame
+part part dot c frame
+equals new c frame if you were to run
+equals new c frame if you were to run
+equals new c frame if you were to run
+this
+this
+this
+you can see that this part is right here
+you can see that this part is right here
+you can see that this part is right here
+which is the very front of the part
+which is the very front of the part
+which is the very front of the part
+and just to show you the difference if
+and just to show you the difference if
+and just to show you the difference if
+we were to put this
+we were to put this
+we were to put this
+into objects or world space i should say
+into objects or world space i should say
+into objects or world space i should say
+and we change it to cf
+and we change it to cf
+and we change it to cf
+you can see that's all the way down here
+you can see that's all the way down here
+you can see that's all the way down here
+it's not relative to this part
+it's not relative to this part
+it's not relative to this part
+and so this allows you to get some
+and so this allows you to get some
+and so this allows you to get some
+really cool behavior like let me change
+really cool behavior like let me change
+really cool behavior like let me change
+it to new c frame
+it to new c frame
+it to new c frame
+like for example no matter where i move
+like for example no matter where i move
+like for example no matter where i move
+this part no matter how i rotate it
+this part no matter how i rotate it
+this part no matter how i rotate it
+so let me just like rotate it like here
+so let me just like rotate it like here
+so let me just like rotate it like here
+and here and whatever
+and here and whatever
+and here and whatever
+the part will always
+be facing the front of this part and
+be facing the front of this part and
+be facing the front of this part and
+it'll like always be in this orientation
+it'll like always be in this orientation
+it'll like always be in this orientation
+which is
+which is
+which is
+really really cool so no matter where i
+really really cool so no matter where i
+really really cool so no matter where i
+move it in the map
+move it in the map
+move it in the map
+like if i move it this way move it up
+like if i move it this way move it up
+like if i move it this way move it up
+it'll always be
+it'll always be
+it'll always be
+at the front face of our part and this
+at the front face of our part and this
+at the front face of our part and this
+is only one coordinate you can change
+is only one coordinate you can change
+is only one coordinate you can change
+this c frame to whatever you and so
+this c frame to whatever you and so
+this c frame to whatever you and so
+another useful thing with two world
+another useful thing with two world
+another useful thing with two world
+space
+space
+space
+is if we give it an angle so let's just
+is if we give it an angle so let's just
+is if we give it an angle so let's just
+change our cf to c frame dot angles
+change our cf to c frame dot angles
+change our cf to c frame dot angles
+0 math.rad whoops
+0 math.rad whoops
+0 math.rad whoops
+90 and then 0. let me move this so
+90 and then 0. let me move this so
+90 and then 0. let me move this so
+this is a c frame with the y
+this is a c frame with the y
+this is a c frame with the y
+axis rotated by 90 degrees so since the
+axis rotated by 90 degrees so since the
+axis rotated by 90 degrees so since the
+frame dot angles takes in
+frame dot angles takes in
+frame dot angles takes in
+a radian evaluate to do math.radians to
+a radian evaluate to do math.radians to
+a radian evaluate to do math.radians to
+convert our degree value to radian
+convert our degree value to radian
+convert our degree value to radian
+values just ignore that if you don't
+values just ignore that if you don't
+values just ignore that if you don't
+understand it
+understand it
+understand it
+but if we were to run this
+but if we were to run this
+but if we were to run this
+this would rotate our part
+this would rotate our part
+this would rotate our part
+by like 90 degrees you can't really see
+by like 90 degrees you can't really see
+by like 90 degrees you can't really see
+that so a better example of this
+that so a better example of this
+that so a better example of this
+if we set our part.c frame so let's just
+if we set our part.c frame so let's just
+if we set our part.c frame so let's just
+say
+say
+say
+part.c frame equals new c
+part.c frame equals new c
+part.c frame equals new c
+frame so this will rotate our part by 90
+frame so this will rotate our part by 90
+frame so this will rotate our part by 90
+degrees
+let's see what happened i spelled c
+let's see what happened i spelled c
+let's see what happened i spelled c
+frame wrong
+frame wrong
+frame wrong
+whoops let's actually comment this out
+whoops let's actually comment this out
+whoops let's actually comment this out
+real quick because we don't want to
+real quick because we don't want to
+real quick because we don't want to
+create this new part we're going to set
+create this new part we're going to set
+create this new part we're going to set
+part.c frame to new c frame
+part.c frame to new c frame
+part.c frame to new c frame
+and you can see it rotated by 90 degrees
+and you can see it rotated by 90 degrees
+and you can see it rotated by 90 degrees
+the cool thing about this is since it's
+the cool thing about this is since it's
+the cool thing about this is since it's
+in object space
+in object space
+in object space
+we can do this as many times as we want
+we can do this as many times as we want
+we can do this as many times as we want
+and we won't have to like
+and we won't have to like
+and we won't have to like
+reset the orientation like once it
+reset the orientation like once it
+reset the orientation like once it
+reaches 180 it'll always rotate 90
+reaches 180 it'll always rotate 90
+reaches 180 it'll always rotate 90
+degrees
+degrees
+degrees
+each time which is really really cool
+each time which is really really cool
+each time which is really really cool
+and another thing to note about two
+and another thing to note about two
+and another thing to note about two
+world space
+world space
+world space
+is this thing right here is the exact
+is this thing right here is the exact
+is this thing right here is the exact
+same
+same
+same
+as saying new c frame equals part.c
+as saying new c frame equals part.c
+as saying new c frame equals part.c
+frame times cf so these two statements
+frame times cf so these two statements
+frame times cf so these two statements
+are
+are
+are
+exactly the same so i like using two
+exactly the same so i like using two
+exactly the same so i like using two
+world space
+world space
+world space
+personally because it's more apparent
+personally because it's more apparent
+personally because it's more apparent
+what it's doing
+what it's doing
+what it's doing
+multiplying it is what a lot of people
+multiplying it is what a lot of people
+multiplying it is what a lot of people
+do because
+do because
+do because
+that's how it like was before they added
+that's how it like was before they added
+that's how it like was before they added
+these functions
+these functions
+these functions
+but if you ever see a c frame multiplied
+but if you ever see a c frame multiplied
+but if you ever see a c frame multiplied
+by another c frame
+by another c frame
+by another c frame
+it's the equivalent of calling this
+it's the equivalent of calling this
+it's the equivalent of calling this
+function just keep that in mind
+function just keep that in mind
+function just keep that in mind
+and so to object space is
+and so to object space is
+and so to object space is
+the exact opposite of two world space so
+the exact opposite of two world space so
+the exact opposite of two world space so
+let me just comment
+let me just comment
+let me just comment
+these out personally i rarely use
+these out personally i rarely use
+these out personally i rarely use
+two object space just for the sole fact
+two object space just for the sole fact
+two object space just for the sole fact
+that like
+that like
+that like
+most of the time you don't really need
+most of the time you don't really need
+most of the time you don't really need
+to use it but what you can do is let's
+to use it but what you can do is let's
+to use it but what you can do is let's
+say i define
+say i define
+say i define
+a c frame local cf equals c frame dot
+a c frame local cf equals c frame dot
+a c frame local cf equals c frame dot
+new
+0 10 0
+0 10 0
+0 10 0
+whatever and this is in world space if i
+whatever and this is in world space if i
+whatever and this is in world space if i
+want to get this an
+want to get this an
+want to get this an
+object space relative to let's say this
+object space relative to let's say this
+object space relative to let's say this
+part i can do
+part i can do
+part i can do
+print part dot c frame
+print part dot c frame
+print part dot c frame
+to object space and send in my cf and
+to object space and send in my cf and
+to object space and send in my cf and
+you can see instead of printing the 0
+you can see instead of printing the 0
+you can see instead of printing the 0
+10 0 it'll print another number
+10 0 it'll print another number
+10 0 it'll print another number
+in this case it's just 3 5 negative 10.
+in this case it's just 3 5 negative 10.
+in this case it's just 3 5 negative 10.
+don't worry about the rest of these
+don't worry about the rest of these
+don't worry about the rest of these
+values that's just all the matrix data
+values that's just all the matrix data
+values that's just all the matrix data
+for
+for
+for
+our c frame but
+our c frame but
+our c frame but
+the main use of this is when you're
+the main use of this is when you're
+the main use of this is when you're
+converting your mouse coordinates
+converting your mouse coordinates
+converting your mouse coordinates
+because mouse coordinates and roblox are
+because mouse coordinates and roblox are
+because mouse coordinates and roblox are
+always in world space
+always in world space
+always in world space
+when you convert those into object space
+when you convert those into object space
+when you convert those into object space
+like according to a part in case you are
+like according to a part in case you are
+like according to a part in case you are
+like split the part in half for example
+like split the part in half for example
+like split the part in half for example
+i use that in my bread slicing video or
+i use that in my bread slicing video or
+i use that in my bread slicing video or
+if you want to place a part on top of
+if you want to place a part on top of
+if you want to place a part on top of
+another part relatively
+another part relatively
+another part relatively
+i might have a video about that coming
+i might have a video about that coming
+i might have a video about that coming
+soon but yeah that's basically it
+soon but yeah that's basically it
+soon but yeah that's basically it
+for to object space
+and that's about it for this video so i
+and that's about it for this video so i
+and that's about it for this video so i
+hope you guys enjoyed it was kind of
+hope you guys enjoyed it was kind of
+hope you guys enjoyed it was kind of
+short
+short
+short
+but these are really nice functions i
+but these are really nice functions i
+but these are really nice functions i
+was actually recommended by one of my
+was actually recommended by one of my
+was actually recommended by one of my
+subscribers to create this video
+subscribers to create this video
+subscribers to create this video
+so i hope you learned a little bit about
+so i hope you learned a little bit about
+so i hope you learned a little bit about
+c frames
+c frames
+c frames
+i should have more c frames video videos
+i should have more c frames video videos
+i should have more c frames video videos
+coming soon because c frames are pretty
+coming soon because c frames are pretty
+coming soon because c frames are pretty
+complex
+complex
+complex
+and a lot of people don't know about
+and a lot of people don't know about
+and a lot of people don't know about
+them but they're very
+them but they're very
+them but they're very
+very powerful once you get to know them
+very powerful once you get to know them
+very powerful once you get to know them
+i use them so much i use them all the
+i use them so much i use them all the
+i use them so much i use them all the
+time
+time
+time
+they're very very nice and they are so
+they're very very nice and they are so
+they're very very nice and they are so
+much better than using orientation and
+much better than using orientation and
+much better than using orientation and
+position
+position
+position
+for my parts but other than that make
+for my parts but other than that make
+for my parts but other than that make
+sure to like and subscribe if you
+sure to like and subscribe if you
+sure to like and subscribe if you
+enjoyed this video
+enjoyed this video
+enjoyed this video
+i hope you have a nice day and goodbye
+[Music]
+[Music]
+[Music]
+you

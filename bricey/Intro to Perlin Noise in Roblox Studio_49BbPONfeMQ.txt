@@ -1,0 +1,793 @@
+so random numbers are cool
+so random numbers are cool
+so random numbers are cool
+but one of the biggest problems with
+but one of the biggest problems with
+but one of the biggest problems with
+random numbers
+random numbers
+random numbers
+and random number generators is that
+and random number generators is that
+and random number generators is that
+they are
+they are
+they are
+too random they can lead to jagged
+too random they can lead to jagged
+too random they can lead to jagged
+shapes
+shapes
+shapes
+or repeating numbers or
+or repeating numbers or
+or repeating numbers or
+just really weird shapes and when you're
+just really weird shapes and when you're
+just really weird shapes and when you're
+dealing with something like for say
+dealing with something like for say
+dealing with something like for say
+terrain you don't want that but you
+terrain you don't want that but you
+terrain you don't want that but you
+still want to keep
+still want to keep
+still want to keep
+a random aspect and you don't want to
+a random aspect and you don't want to
+a random aspect and you don't want to
+hand craft
+hand craft
+hand craft
+every single element and purlin noise
+every single element and purlin noise
+every single element and purlin noise
+can solve this problem so purlin noise
+can solve this problem so purlin noise
+can solve this problem so purlin noise
+is basically
+is basically
+is basically
+something like this where you have this
+something like this where you have this
+something like this where you have this
+little texture
+little texture
+little texture
+that smooths between random numbers
+that smooths between random numbers
+that smooths between random numbers
+giving you a nice
+giving you a nice
+giving you a nice
+organic gradient like effect
+organic gradient like effect
+organic gradient like effect
+and in this video i'll be showing you
+and in this video i'll be showing you
+and in this video i'll be showing you
+how to take this theory
+how to take this theory
+how to take this theory
+and bring it into roblox studio
+and bring it into roblox studio
+and bring it into roblox studio
+to get something looking like
+to get something looking like
+to get something looking like
+this so if you're interested in that or
+this so if you're interested in that or
+this so if you're interested in that or
+just want to learn
+just want to learn
+just want to learn
+some new roblox api or just play around
+some new roblox api or just play around
+some new roblox api or just play around
+with this really cool feature then
+with this really cool feature then
+with this really cool feature then
+watch this video and if you like it make
+watch this video and if you like it make
+watch this video and if you like it make
+sure to like and subscribe
+sure to like and subscribe
+sure to like and subscribe
+but without further ado let's get into
+but without further ado let's get into
+but without further ado let's get into
+the video
+[Music]
+[Music]
+[Music]
+so what is purlin noise purlin noise
+so what is purlin noise purlin noise
+so what is purlin noise purlin noise
+is a type of noise generation that
+is a type of noise generation that
+is a type of noise generation that
+generates random numbers
+generates random numbers
+generates random numbers
+that are close to each other when
+that are close to each other when
+that are close to each other when
+they're close
+they're close
+they're close
+by distance so let me do a quick little
+by distance so let me do a quick little
+by distance so let me do a quick little
+visual demonstration let me create this
+visual demonstration let me create this
+visual demonstration let me create this
+part
+part
+part
+we're going to change the size to 444
+we're going to change the size to 444
+we're going to change the size to 444
+there we go so here we have our part
+there we go so here we have our part
+there we go so here we have our part
+usually if i were to randomly resize
+usually if i were to randomly resize
+usually if i were to randomly resize
+this part you would get something
+this part you would get something
+this part you would get something
+where part size like this and then if
+where part size like this and then if
+where part size like this and then if
+you do another random iteration
+you do another random iteration
+you do another random iteration
+it would size like this
+it would size like this
+it would size like this
+and so on and so forth it just look
+and so on and so forth it just look
+and so on and so forth it just look
+really really stupid
+really really stupid
+really really stupid
+but with purlin noise you can generate
+but with purlin noise you can generate
+but with purlin noise you can generate
+random values that are closer so instead
+random values that are closer so instead
+random values that are closer so instead
+of something like this it'd be more like
+of something like this it'd be more like
+of something like this it'd be more like
+a gradient so if i duplicate this again
+it would be something like this and then
+it would be something like this and then
+it would be something like this and then
+maybe
+maybe
+maybe
+it would do another one of those
+and then go back up again so you get the
+and then go back up again so you get the
+and then go back up again so you get the
+idea
+idea
+idea
+just something that allows you to make a
+just something that allows you to make a
+just something that allows you to make a
+nice little slope instead of
+nice little slope instead of
+nice little slope instead of
+jagged it changes and this is really
+jagged it changes and this is really
+jagged it changes and this is really
+good for stuff like terrain generation
+good for stuff like terrain generation
+good for stuff like terrain generation
+so in my base plate i'm going to delete
+so in my base plate i'm going to delete
+so in my base plate i'm going to delete
+the base plate because it's looking kind
+the base plate because it's looking kind
+the base plate because it's looking kind
+of bland
+of bland
+of bland
+i'm going to make our own randomly
+i'm going to make our own randomly
+i'm going to make our own randomly
+generated baseplate looking thing
+generated baseplate looking thing
+generated baseplate looking thing
+so first things first make a script in
+so first things first make a script in
+so first things first make a script in
+server script
+server script
+server script
+service here i am i'm gonna zoom in
+service here i am i'm gonna zoom in
+service here i am i'm gonna zoom in
+first variable we're gonna define is our
+first variable we're gonna define is our
+first variable we're gonna define is our
+range so this is going to be a constant
+range so this is going to be a constant
+range so this is going to be a constant
+that's why it's in all caps and this is
+that's why it's in all caps and this is
+that's why it's in all caps and this is
+going to be
+going to be
+going to be
+your values for the
+your values for the
+your values for the
+range and studs where our parts will be
+range and studs where our parts will be
+range and studs where our parts will be
+spawning
+spawning
+spawning
+so i'm just going to say 10 studs
+so i'm just going to say 10 studs
+so i'm just going to say 10 studs
+and then i'm going to have another value
+and then i'm going to have another value
+and then i'm going to have another value
+rows
+rows
+rows
+which is going to be like the amount of
+which is going to be like the amount of
+which is going to be like the amount of
+rows that we need
+rows that we need
+rows that we need
+and then calls which is the amount of
+and then calls which is the amount of
+and then calls which is the amount of
+columns and these are all just constants
+columns and these are all just constants
+columns and these are all just constants
+you can change them if you want they're
+you can change them if you want they're
+you can change them if you want they're
+just to make my script look a little bit
+just to make my script look a little bit
+just to make my script look a little bit
+better
+better
+better
+and easier to change and so the rows and
+and easier to change and so the rows and
+and easier to change and so the rows and
+columns is basically just
+columns is basically just
+columns is basically just
+you have x for rows y for columns and
+you have x for rows y for columns and
+you have x for rows y for columns and
+it'll be
+it'll be
+it'll be
+the range in which we're generating our
+the range in which we're generating our
+the range in which we're generating our
+purlin noise parts
+purlin noise parts
+purlin noise parts
+so now we need to define a function
+so now we need to define a function
+so now we need to define a function
+called create part
+called create part
+called create part
+we'll take take an x value a y value
+we'll take take an x value a y value
+we'll take take an x value a y value
+and an alpha value
+and an alpha value
+and an alpha value
+and this function will be responsible
+and this function will be responsible
+and this function will be responsible
+for displaying our parts that we will
+for displaying our parts that we will
+for displaying our parts that we will
+generate
+generate
+generate
+and we'll give it purl and noise
+and we'll give it purl and noise
+and we'll give it purl and noise
+parameters so we're going to say local
+parameters so we're going to say local
+parameters so we're going to say local
+part equals
+part equals
+part equals
+instance dot new part
+instance dot new part
+instance dot new part
+we're going to set our part dot
+we're going to set our part dot
+we're going to set our part dot
+size to vector three dot new one
+size to vector three dot new one
+size to vector three dot new one
+one one this just makes it easy so it's
+one one this just makes it easy so it's
+one one this just makes it easy so it's
+nice in the small part
+nice in the small part
+nice in the small part
+and we'll set the part.position
+and we'll set the part.position
+and we'll set the part.position
+equal to a vector three dot nu so we
+equal to a vector three dot nu so we
+equal to a vector three dot nu so we
+want to set our part position
+want to set our part position
+want to set our part position
+now it may be a little misleading
+now it may be a little misleading
+now it may be a little misleading
+because of these function parameters
+because of these function parameters
+because of these function parameters
+but when we want to set our part
+but when we want to set our part
+but when we want to set our part
+position we're going to deal with 3d
+position we're going to deal with 3d
+position we're going to deal with 3d
+space
+space
+space
+not 2d space so this y
+not 2d space so this y
+not 2d space so this y
+will actually be your z value so let's
+will actually be your z value so let's
+will actually be your z value so let's
+just put that in for now so
+just put that in for now so
+just put that in for now so
+x 0 y so we have our
+x 0 y so we have our
+x 0 y so we have our
+x and our z values because you'll notice
+x and our z values because you'll notice
+x and our z values because you'll notice
+in roblox
+in roblox
+in roblox
+if you look on the top right you can see
+if you look on the top right you can see
+if you look on the top right you can see
+the z goes across the x goes across and
+the z goes across the x goes across and
+the z goes across the x goes across and
+the y's up and down so we want to
+the y's up and down so we want to
+the y's up and down so we want to
+change the up and down and this alpha
+change the up and down and this alpha
+change the up and down and this alpha
+value will be
+value will be
+value will be
+the purlin noise return value that we
+the purlin noise return value that we
+the purlin noise return value that we
+get
+get
+get
+from our function so
+from our function so
+from our function so
+we can set our y value to our part to
+we can set our y value to our part to
+we can set our y value to our part to
+the alpha
+the alpha
+the alpha
+times the range
+times the range
+times the range
+so the alpha will be a value from
+so the alpha will be a value from
+so the alpha will be a value from
+negative one to one and we'll multiply
+negative one to one and we'll multiply
+negative one to one and we'll multiply
+by our range
+by our range
+by our range
+to get a more like a scaled up value
+to get a more like a scaled up value
+to get a more like a scaled up value
+so now we can go and create a loop let's
+so now we can go and create a loop let's
+so now we can go and create a loop let's
+say
+say
+say
+for x and we're going to start with four
+for x and we're going to start with four
+for x and we're going to start with four
+y
+y
+y
+equals one comma calls
+equals one comma calls
+equals one comma calls
+do we say for x equals one
+do we say for x equals one
+do we say for x equals one
+comma rows do and this may look a little
+comma rows do and this may look a little
+comma rows do and this may look a little
+counterintuitive
+counterintuitive
+counterintuitive
+since we're starting with y and then
+since we're starting with y and then
+since we're starting with y and then
+we're going to x but this is basically
+we're going to x but this is basically
+we're going to x but this is basically
+just how you do it
+just how you do it
+just how you do it
+it's the way you iterate through a 2d
+it's the way you iterate through a 2d
+it's the way you iterate through a 2d
+space and i guess you could switch it
+space and i guess you could switch it
+space and i guess you could switch it
+but this is just the way
+but this is just the way
+but this is just the way
+i've always seen it done and there's a
+i've always seen it done and there's a
+i've always seen it done and there's a
+way that works best for the future
+way that works best for the future
+way that works best for the future
+so now we can define our noise
+so now we can define our noise
+so now we can define our noise
+so in roblox parallel noise is built in
+so in roblox parallel noise is built in
+so in roblox parallel noise is built in
+using a function
+using a function
+using a function
+math.noise and this function takes in
+math.noise and this function takes in
+math.noise and this function takes in
+three parameters
+three parameters
+three parameters
+x y and z since we're dealing with the
+x y and z since we're dealing with the
+x y and z since we're dealing with the
+basics we're going only going to use
+basics we're going only going to use
+basics we're going only going to use
+x and y because z
+x and y because z
+x and y because z
+is used for other like
+is used for other like
+is used for other like
+like cave generation for example we're
+like cave generation for example we're
+like cave generation for example we're
+not going to need that
+not going to need that
+not going to need that
+so you may be we may want to just say
+so you may be we may want to just say
+so you may be we may want to just say
+x y zero but
+x y zero but
+x y zero but
+that would not work because if all of
+that would not work because if all of
+that would not work because if all of
+these values are integers
+these values are integers
+these values are integers
+math.noise will return zero so you have
+math.noise will return zero so you have
+math.noise will return zero so you have
+to return a fractional value
+to return a fractional value
+to return a fractional value
+and the easiest way to do that is by
+and the easiest way to do that is by
+and the easiest way to do that is by
+saying x
+saying x
+saying x
+divided by rows and then y
+divided by rows and then y
+divided by rows and then y
+divided by calls so we get a fractional
+divided by calls so we get a fractional
+divided by calls so we get a fractional
+value so
+value so
+value so
+if we're at our middle of our iteration
+if we're at our middle of our iteration
+if we're at our middle of our iteration
+so let's say x is 50 we'll get
+so let's say x is 50 we'll get
+so let's say x is 50 we'll get
+0.5 because 50 divided by 100 would be
+0.5 because 50 divided by 100 would be
+0.5 because 50 divided by 100 would be
+0.5
+0.5
+0.5
+and our math.noise will return a random
+and our math.noise will return a random
+and our math.noise will return a random
+alpha
+alpha
+alpha
+value that's why our parameter up here
+value that's why our parameter up here
+value that's why our parameter up here
+is named alpha
+is named alpha
+is named alpha
+so then we can say create part
+so then we can say create part
+so then we can say create part
+with our x our y and our noise value
+with our x our y and our noise value
+with our x our y and our noise value
+so this should work fine let's try it
+oh well i actually forgot to set
+oh well i actually forgot to set
+oh well i actually forgot to set
+the part dot parent to the workspace
+the part dot parent to the workspace
+the part dot parent to the workspace
+that's my bad here we go again we also
+that's my bad here we go again we also
+that's my bad here we go again we also
+need to set
+need to set
+need to set
+part dot anchored equal to true
+part dot anchored equal to true
+part dot anchored equal to true
+so here you go here is your purlin noise
+so here you go here is your purlin noise
+so here you go here is your purlin noise
+so you'll notice
+so you'll notice
+so you'll notice
+that it's very very smooth
+that it's very very smooth
+that it's very very smooth
+and each part is very close to each
+and each part is very close to each
+and each part is very close to each
+other in terms of their
+other in terms of their
+other in terms of their
+y values which leads to this really nice
+y values which leads to this really nice
+y values which leads to this really nice
+terrain
+terrain
+terrain
+and one interesting characteristic about
+and one interesting characteristic about
+and one interesting characteristic about
+purlin noise is if i were to run this
+purlin noise is if i were to run this
+purlin noise is if i were to run this
+again
+again
+again
+i get the same exact
+i get the same exact
+i get the same exact
+values for all of
+values for all of
+values for all of
+the parts so they're in the same exact
+the parts so they're in the same exact
+the parts so they're in the same exact
+format
+format
+format
+so the way we'd go about adding
+so the way we'd go about adding
+so the way we'd go about adding
+some randomness to our noise instead of
+some randomness to our noise instead of
+some randomness to our noise instead of
+it being a constant same thing every
+it being a constant same thing every
+it being a constant same thing every
+single time
+single time
+single time
+is by adding an offset so i'm going to
+is by adding an offset so i'm going to
+is by adding an offset so i'm going to
+go to top my script to find
+go to top my script to find
+go to top my script to find
+offset x which will be equal to let's
+offset x which will be equal to let's
+offset x which will be equal to let's
+say 10
+say 10
+say 10
+and an offset y which will be equal to
+and an offset y which will be equal to
+and an offset y which will be equal to
+10 as well so these values will be
+10 as well so these values will be
+10 as well so these values will be
+responsible for offsetting
+responsible for offsetting
+responsible for offsetting
+our noise values so if we go down to
+our noise values so if we go down to
+our noise values so if we go down to
+math.noise
+math.noise
+math.noise
+we can use the same expression here
+we can use the same expression here
+we can use the same expression here
+x divided by rows but we can add our
+x divided by rows but we can add our
+x divided by rows but we can add our
+offset
+offset
+offset
+so what this will do is basically just
+so what this will do is basically just
+so what this will do is basically just
+shift the like sample values that we're
+shift the like sample values that we're
+shift the like sample values that we're
+getting from
+getting from
+getting from
+math.noise to our offset values and we
+math.noise to our offset values and we
+math.noise to our offset values and we
+can do the same
+can do the same
+can do the same
+for the columns with the offset y
+for the columns with the offset y
+for the columns with the offset y
+and you'll notice if i run this it's
+and you'll notice if i run this it's
+and you'll notice if i run this it's
+kind of hard to tell
+kind of hard to tell
+kind of hard to tell
+but we get a slightly different noise
+but we get a slightly different noise
+but we get a slightly different noise
+generation
+generation
+generation
+and this isn't completely random yet but
+and this isn't completely random yet but
+and this isn't completely random yet but
+the there's a very easy way to do that
+the there's a very easy way to do that
+the there's a very easy way to do that
+and that's by randomizing the offset
+and that's by randomizing the offset
+and that's by randomizing the offset
+so i can just say offset x equals
+so i can just say offset x equals
+so i can just say offset x equals
+math.random
+math.random
+math.random
+from negative 100 to 100 and
+from negative 100 to 100 and
+from negative 100 to 100 and
+i can copy this to offset y
+i can copy this to offset y
+i can copy this to offset y
+so if i were to run this you can see we
+so if i were to run this you can see we
+so if i were to run this you can see we
+have a completely
+have a completely
+have a completely
+random generation i know these are
+random generation i know these are
+random generation i know these are
+looking very similar
+looking very similar
+looking very similar
+but they are a little different and
+but they are a little different and
+but they are a little different and
+that's exactly what we want now there's
+that's exactly what we want now there's
+that's exactly what we want now there's
+a chance that they'll be exactly the
+a chance that they'll be exactly the
+a chance that they'll be exactly the
+same but
+same but
+same but
+it just depends on your math of random
+it just depends on your math of random
+it just depends on your math of random
+values you can change these to
+values you can change these to
+values you can change these to
+whatever you want
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you guys enjoyed
+you guys enjoyed
+you guys enjoyed
+this is a really nice and simple video
+this is a really nice and simple video
+this is a really nice and simple video
+on a
+on a
+on a
+arguably pretty complex topic noise
+arguably pretty complex topic noise
+arguably pretty complex topic noise
+generation but
+generation but
+generation but
+this is a really cool thing that's used
+this is a really cool thing that's used
+this is a really cool thing that's used
+for terrain generation
+for terrain generation
+for terrain generation
+and for many other things regardless of
+and for many other things regardless of
+and for many other things regardless of
+roblox it's used everywhere
+roblox it's used everywhere
+roblox it's used everywhere
+in game development and it's really
+in game development and it's really
+in game development and it's really
+really cool so if you enjoyed the video
+really cool so if you enjoyed the video
+really cool so if you enjoyed the video
+make sure to like and subscribe
+make sure to like and subscribe
+make sure to like and subscribe
+and i hope you have a nice day and
+and i hope you have a nice day and
+and i hope you have a nice day and
+[Music]
+[Music]
+[Music]
+goodbye
+you

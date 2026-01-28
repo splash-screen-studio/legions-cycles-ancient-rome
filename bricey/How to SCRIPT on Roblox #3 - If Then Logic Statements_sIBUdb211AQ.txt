@@ -1,0 +1,636 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+so in this video we're going to be
+so in this video we're going to be
+so in this video we're going to be
+talking about if statements
+talking about if statements
+talking about if statements
+and logic so basically what an if
+and logic so basically what an if
+and logic so basically what an if
+statement is is it's a crucial code
+statement is is it's a crucial code
+statement is is it's a crucial code
+structure that uses logic to determine
+structure that uses logic to determine
+structure that uses logic to determine
+outcomes so in this video we'll be going
+outcomes so in this video we'll be going
+outcomes so in this video we'll be going
+in depth
+in depth
+in depth
+all about if statements how you can use
+all about if statements how you can use
+all about if statements how you can use
+them where you can use them
+them where you can use them
+them where you can use them
+and just how they work so if you guys
+and just how they work so if you guys
+and just how they work so if you guys
+enjoy make sure to like and subscribe if
+enjoy make sure to like and subscribe if
+enjoy make sure to like and subscribe if
+you do
+you do
+you do
+and let's get right into it
+[Music]
+[Music]
+[Music]
+so i'm going to go into server skip
+so i'm going to go into server skip
+so i'm going to go into server skip
+service and create a script
+service and create a script
+service and create a script
+and i'm just going to define a simple if
+and i'm just going to define a simple if
+and i'm just going to define a simple if
+statement
+so an if statement basically consists of
+so an if statement basically consists of
+so an if statement basically consists of
+the word if
+the word if
+the word if
+and then condition then
+and then condition then
+and then condition then
+and then you press enter and it will
+and then you press enter and it will
+and then you press enter and it will
+automatically do end so
+automatically do end so
+automatically do end so
+basically how it if statement works is
+basically how it if statement works is
+basically how it if statement works is
+it's like a crossroads or like a
+it's like a crossroads or like a
+it's like a crossroads or like a
+junction
+junction
+junction
+there's multiple ways where it can go
+there's multiple ways where it can go
+there's multiple ways where it can go
+and the way it determines what thing to
+and the way it determines what thing to
+and the way it determines what thing to
+do is by the condition so let me define
+do is by the condition so let me define
+do is by the condition so let me define
+a variable
+a variable
+a variable
+and call this condition so condition
+and call this condition so condition
+and call this condition so condition
+if the condition is true so condition
+if the condition is true so condition
+if the condition is true so condition
+equals true
+equals true
+equals true
+then the code inside of the if statement
+then the code inside of the if statement
+then the code inside of the if statement
+will run so
+will run so
+will run so
+i'm going to print ran so it checks
+i'm going to print ran so it checks
+i'm going to print ran so it checks
+if condition it evaluates condition so
+if condition it evaluates condition so
+if condition it evaluates condition so
+condition
+condition
+condition
+we define is true then we print ran
+we define is true then we print ran
+we define is true then we print ran
+so where to run this you can see
+so where to run this you can see
+so where to run this you can see
+it print ran now if condition
+it print ran now if condition
+it print ran now if condition
+were false it wouldn't run
+so this is all good for explaining but
+so this is all good for explaining but
+so this is all good for explaining but
+in reality you almost never just use a
+in reality you almost never just use a
+in reality you almost never just use a
+boolean value and then
+boolean value and then
+boolean value and then
+have a condition variable
+have a condition variable
+have a condition variable
+what it usually goes is using logic
+what it usually goes is using logic
+what it usually goes is using logic
+statements
+statements
+statements
+so let me give you a quick example
+so let me give you a quick example
+so let me give you a quick example
+so 1 is less than 5.
+so 1 is less than 5.
+so 1 is less than 5.
+this is a simple logic statement that
+this is a simple logic statement that
+this is a simple logic statement that
+uses this operator right here with the
+uses this operator right here with the
+uses this operator right here with the
+less than operator
+less than operator
+less than operator
+and basically says if one is less than
+and basically says if one is less than
+and basically says if one is less than
+five
+five
+five
+then you print ran and that's obviously
+then you print ran and that's obviously
+then you print ran and that's obviously
+true
+true
+true
+so it prints ran
+and you can also put variables here so
+and you can also put variables here so
+and you can also put variables here so
+let's say
+let's say
+let's say
+i have local var one equals one and then
+i have local var one equals one and then
+i have local var one equals one and then
+local
+local
+local
+var2 equals five if i
+var2 equals five if i
+var2 equals five if i
+put var1 here is less than var2
+put var1 here is less than var2
+put var1 here is less than var2
+same numbers again so it should be rand
+and this works for all types of like
+and this works for all types of like
+and this works for all types of like
+basic math operators so
+basic math operators so
+basic math operators so
+greater than works greater than or equal
+greater than works greater than or equal
+greater than works greater than or equal
+to okay this is less than or equal to
+to okay this is less than or equal to
+to okay this is less than or equal to
+works
+works
+works
+and then greater than or equal to so
+and then greater than or equal to so
+and then greater than or equal to so
+these are all the ways to do it
+these are all the ways to do it
+these are all the ways to do it
+and then there's one other thing that
+and then there's one other thing that
+and then there's one other thing that
+you can do
+you can do
+you can do
+is it's checking if one value is equal
+is it's checking if one value is equal
+is it's checking if one value is equal
+to another value
+to another value
+to another value
+and you may think that you just put a
+and you may think that you just put a
+and you may think that you just put a
+normal equal sign here
+normal equal sign here
+normal equal sign here
+but you can see it has an error
+but you can see it has an error
+but you can see it has an error
+and this error is it like
+and this error is it like
+and this error is it like
+you it thinks that you're defining a new
+you it thinks that you're defining a new
+you it thinks that you're defining a new
+variable
+variable
+variable
+so the way that if statements work is
+so the way that if statements work is
+so the way that if statements work is
+you have to use a double equal sign
+you have to use a double equal sign
+you have to use a double equal sign
+to compare two values so if r1 is equal
+to compare two values so if r1 is equal
+to compare two values so if r1 is equal
+to var2
+to var2
+to var2
+and that's obviously false but if i were
+and that's obviously false but if i were
+and that's obviously false but if i were
+to say set var one to five
+to say set var one to five
+to say set var one to five
+it'll be true
+and so this functionality for if
+and so this functionality for if
+and so this functionality for if
+statements also carries on to the
+statements also carries on to the
+statements also carries on to the
+roblox world so if i were to go back
+roblox world so if i were to go back
+roblox world so if i were to go back
+into my script
+into my script
+into my script
+and create a baseplate variable so local
+and create a baseplate variable so local
+and create a baseplate variable so local
+baseplate equals
+baseplate equals
+baseplate equals
+game dot workspace dot base plate
+game dot workspace dot base plate
+game dot workspace dot base plate
+whoops built the wrong base plate and i
+whoops built the wrong base plate and i
+whoops built the wrong base plate and i
+could
+could
+could
+compare base plate dot
+compare base plate dot
+compare base plate dot
+transparency to var2
+transparency to var2
+transparency to var2
+if we were to run this you see it
+if we were to run this you see it
+if we were to run this you see it
+wouldn't run
+wouldn't run
+wouldn't run
+but if i were to compare place plate dot
+but if i were to compare place plate dot
+but if i were to compare place plate dot
+transparency to
+transparency to
+transparency to
+zero so it's completely opaque it will
+zero so it's completely opaque it will
+zero so it's completely opaque it will
+run
+run
+run
+so that's just something to keep in mind
+so that's just something to keep in mind
+so that's just something to keep in mind
+it works for all
+it works for all
+it works for all
+data types whatever so if you remember
+data types whatever so if you remember
+data types whatever so if you remember
+from earlier i told you that an if
+from earlier i told you that an if
+from earlier i told you that an if
+statement
+statement
+statement
+is like a junction so
+is like a junction so
+is like a junction so
+this if statement that we have right
+this if statement that we have right
+this if statement that we have right
+here only has one
+here only has one
+here only has one
+condition and one outcome if this
+condition and one outcome if this
+condition and one outcome if this
+condition
+condition
+condition
+is true now there are certain
+is true now there are certain
+is true now there are certain
+keywords in lua that allow you to change
+keywords in lua that allow you to change
+keywords in lua that allow you to change
+this functionality
+this functionality
+this functionality
+first one is else so basically what this
+first one is else so basically what this
+first one is else so basically what this
+means is it checks if
+means is it checks if
+means is it checks if
+condition so if this condition is equal
+condition so if this condition is equal
+condition so if this condition is equal
+to true this line right here
+to true this line right here
+to true this line right here
+then we run this l so if this condition
+then we run this l so if this condition
+then we run this l so if this condition
+is not equal to true
+is not equal to true
+is not equal to true
+then we run this and we'll just print
+then we run this and we'll just print
+then we run this and we'll just print
+not true
+not true
+not true
+so basically one of these code blocks
+so basically one of these code blocks
+so basically one of these code blocks
+right here
+right here
+right here
+will run both of them will never run
+will run both of them will never run
+will run both of them will never run
+that's one thing to keep in mind when
+that's one thing to keep in mind when
+that's one thing to keep in mind when
+using an if statement so if i were to
+using an if statement so if i were to
+using an if statement so if i were to
+run this
+run this
+run this
+it prints ran and if i were to change
+it prints ran and if i were to change
+it prints ran and if i were to change
+this
+this
+this
+to let's say 1.5 there we go
+to let's say 1.5 there we go
+to let's say 1.5 there we go
+it would print not true because the
+it would print not true because the
+it would print not true because the
+logic statement
+logic statement
+logic statement
+returns false
+but then let's say you have multiple
+but then let's say you have multiple
+but then let's say you have multiple
+conditions that you want to check for
+conditions that you want to check for
+conditions that you want to check for
+and you still want to keep an if
+and you still want to keep an if
+and you still want to keep an if
+statement you'll use a
+statement you'll use a
+statement you'll use a
+keyword else if one word so this is
+keyword else if one word so this is
+keyword else if one word so this is
+the same thing as if just in the same
+the same thing as if just in the same
+the same thing as if just in the same
+code block so
+code block so
+code block so
+if i say else if base plate
+if i say else if base plate
+if i say else if base plate
+dot transparency equals
+zero then so basically what will happen
+zero then so basically what will happen
+zero then so basically what will happen
+here
+here
+here
+is i can print
+is i can print
+is i can print
+else if whatever what will happen
+else if whatever what will happen
+else if whatever what will happen
+is it'll say only one of these will run
+is it'll say only one of these will run
+is it'll say only one of these will run
+and if it meets this value then this
+and if it meets this value then this
+and if it meets this value then this
+will run first
+will run first
+will run first
+if it meets this value then this will
+if it meets this value then this will
+if it meets this value then this will
+run
+run
+run
+but if they're like the same value
+then it'll ignore both of these and just
+then it'll ignore both of these and just
+then it'll ignore both of these and just
+go to this one obviously
+go to this one obviously
+go to this one obviously
+so let's set this to zero just to show
+so let's set this to zero just to show
+so let's set this to zero just to show
+you that it works
+you that it works
+you that it works
+let's play this you can see it says else
+let's play this you can see it says else
+let's play this you can see it says else
+ift and you can chain these for as long
+ift and you can chain these for as long
+ift and you can chain these for as long
+as you want so i can put as many
+as you want so i can put as many
+as you want so i can put as many
+else ifs as i want and my if statement
+else ifs as i want and my if statement
+else ifs as i want and my if statement
+will still
+will still
+will still
+work perfectly fine so let's say you
+work perfectly fine so let's say you
+work perfectly fine so let's say you
+want to
+want to
+want to
+check if a value is not equal to another
+check if a value is not equal to another
+check if a value is not equal to another
+value the way you do this in lua is by
+value the way you do this in lua is by
+value the way you do this in lua is by
+using the tilde
+using the tilde
+using the tilde
+and the equals key so this checks if
+and the equals key so this checks if
+and the equals key so this checks if
+baseplate.transparency is not equal to
+baseplate.transparency is not equal to
+baseplate.transparency is not equal to
+0.5 and this is true so it runs it
+which is great now the only other
+which is great now the only other
+which is great now the only other
+real big thing you need to know about in
+real big thing you need to know about in
+real big thing you need to know about in
+regards to your if statements
+regards to your if statements
+regards to your if statements
+is the key word not so what this
+is the key word not so what this
+is the key word not so what this
+basically does
+basically does
+basically does
+is let me just demonstrate up here is if
+is let me just demonstrate up here is if
+is let me just demonstrate up here is if
+i print not true
+it'll print false
+and if i print not false
+and if i print not false
+and if i print not false
+it'll print true
+it'll print true
+it'll print true
+so this basically inverts the value of a
+so this basically inverts the value of a
+so this basically inverts the value of a
+boolean
+boolean
+boolean
+so if your variable is false it'll make
+so if your variable is false it'll make
+so if your variable is false it'll make
+it true
+it true
+it true
+if it's true then it'll make it false
+if it's true then it'll make it false
+if it's true then it'll make it false
+and this is very very useful
+and this is very very useful
+and this is very very useful
+in regards to logic so i can check if
+in regards to logic so i can check if
+in regards to logic so i can check if
+not baseplate.transparency is not equal
+not baseplate.transparency is not equal
+not baseplate.transparency is not equal
+i should make this easier we're going to
+i should make this easier we're going to
+i should make this easier we're going to
+change this to equal so it'll check if
+change this to equal so it'll check if
+change this to equal so it'll check if
+baseplate.transparency is equal to 0.5
+baseplate.transparency is equal to 0.5
+baseplate.transparency is equal to 0.5
+if this is true then it'll make it false
+if this is true then it'll make it false
+if this is true then it'll make it false
+but if it's false it'll make it true so
+but if it's false it'll make it true so
+but if it's false it'll make it true so
+right now it should be false so if you
+right now it should be false so if you
+right now it should be false so if you
+run this
+run this
+run this
+you can see it prints our first block
+you can see it prints our first block
+you can see it prints our first block
+in here and the reason i have
+in here and the reason i have
+in here and the reason i have
+parentheses here
+parentheses here
+parentheses here
+is because whenever you're using not you
+is because whenever you're using not you
+is because whenever you're using not you
+really want to put parentheses around
+really want to put parentheses around
+really want to put parentheses around
+your condition
+your condition
+your condition
+before you negate it
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you guys enjoyed it was pretty short but
+you guys enjoyed it was pretty short but
+you guys enjoyed it was pretty short but
+if statements are very useful and you
+if statements are very useful and you
+if statements are very useful and you
+will use them
+will use them
+will use them
+all the time so make sure to comment
+all the time so make sure to comment
+all the time so make sure to comment
+down below
+down below
+down below
+any questions that you have about this
+any questions that you have about this
+any questions that you have about this
+or any suggestions
+or any suggestions
+or any suggestions
+and like and subscribe if you enjoyed
+and like and subscribe if you enjoyed
+and like and subscribe if you enjoyed
+and i hope you guys have a nice day
+and i hope you guys have a nice day
+and i hope you guys have a nice day
+and goodbye
+[Music]
+[Music]
+[Music]
+you

@@ -1,0 +1,1052 @@
+so in the last video we made game passes
+so in the last video we made game passes
+so in the last video we made game passes
+for our tycoon and game passes are a
+for our tycoon and game passes are a
+for our tycoon and game passes are a
+good way to monetize your games and make
+good way to monetize your games and make
+good way to monetize your games and make
+money in roblox but there's another way
+money in roblox but there's another way
+money in roblox but there's another way
+known as
+known as
+known as
+dev products
+dev products
+dev products
+which you can see here they look like
+which you can see here they look like
+which you can see here they look like
+this
+this
+this
+and they're products that you can buy
+and they're products that you can buy
+and they're products that you can buy
+repeatedly unlike a game pass where you
+repeatedly unlike a game pass where you
+repeatedly unlike a game pass where you
+can only buy it once
+can only buy it once
+can only buy it once
+so in this video i'll show you how to
+so in this video i'll show you how to
+so in this video i'll show you how to
+make that make sure to watch the last
+make that make sure to watch the last
+make that make sure to watch the last
+video if you haven't because that's
+video if you haven't because that's
+video if you haven't because that's
+closely related to this one
+closely related to this one
+closely related to this one
+and without further ado let's get into
+and without further ado let's get into
+and without further ado let's get into
+the video
+so our nice money multiplier game pass
+so our nice money multiplier game pass
+so our nice money multiplier game pass
+is done let's go make a dev product so
+is done let's go make a dev product so
+is done let's go make a dev product so
+the difference between game pass and dev
+the difference between game pass and dev
+the difference between game pass and dev
+product is that dev products cannot
+product is that dev products cannot
+product is that dev products cannot
+or can be bought again and again game
+or can be bought again and again game
+or can be bought again and again game
+basis can only be bought once
+basis can only be bought once
+basis can only be bought once
+so let's first create our
+so let's first create our
+so let's first create our
+debt product so you can actually do this
+debt product so you can actually do this
+debt product so you can actually do this
+in roblox studio by going to game
+in roblox studio by going to game
+in roblox studio by going to game
+settings
+settings
+settings
+monetization and scrolling down to
+monetization and scrolling down to
+monetization and scrolling down to
+developer products down here create
+developer products down here create
+developer products down here create
+and i'm going to
+oh that was a weird visual glitch
+oh that was a weird visual glitch
+oh that was a weird visual glitch
+so i'm going to
+so i'm going to
+so i'm going to
+rename this product to
+rename this product to
+rename this product to
+more money
+more money
+more money
+and i'll make the cost like
+and i'll make the cost like
+and i'll make the cost like
+five
+five
+five
+and so what this will do
+and so what this will do
+and so what this will do
+is it will
+give the player more money
+give the player more money
+give the player more money
+like probably like a thousand coins or
+like probably like a thousand coins or
+like probably like a thousand coins or
+something i don't know why i created
+something i don't know why i created
+something i don't know why i created
+another developer product it doesn't
+another developer product it doesn't
+another developer product it doesn't
+really matter i can just leave it there
+really matter i can just leave it there
+really matter i can just leave it there
+it won't do anything
+it won't do anything
+it won't do anything
+so now i need to copy
+so now i need to copy
+so now i need to copy
+the id to clipboard and you can just go
+the id to clipboard and you can just go
+the id to clipboard and you can just go
+to three dots and do copy id to
+to three dots and do copy id to
+to three dots and do copy id to
+clipboard which is really nice
+clipboard which is really nice
+clipboard which is really nice
+and since i have this ui list layout set
+and since i have this ui list layout set
+and since i have this ui list layout set
+up in my
+up in my
+up in my
+frame and my starter gui all i have to
+frame and my starter gui all i have to
+frame and my starter gui all i have to
+do is duplicate this button using ctrl d
+do is duplicate this button using ctrl d
+do is duplicate this button using ctrl d
+and you can see it pops down and they
+and you can see it pops down and they
+and you can see it pops down and they
+have nice spacing with respect to one
+have nice spacing with respect to one
+have nice spacing with respect to one
+another is a really nice system to make
+another is a really nice system to make
+another is a really nice system to make
+reusable ui
+reusable ui
+reusable ui
+i'm going to rename this duplicated
+i'm going to rename this duplicated
+i'm going to rename this duplicated
+button
+button
+button
+to the money button
+to the money button
+to the money button
+scroll down to the game pass id
+scroll down to the game pass id
+scroll down to the game pass id
+i'm going to first of all replace the
+i'm going to first of all replace the
+i'm going to first of all replace the
+value with our copied value
+value with our copied value
+value with our copied value
+so that's the product id i'm going to go
+so that's the product id i'm going to go
+so that's the product id i'm going to go
+to the cog click rename
+to the cog click rename
+to the cog click rename
+and rename this to dev product
+and rename this to dev product
+and rename this to dev product
+id
+id
+id
+and then i'm going to also change the
+and then i'm going to also change the
+and then i'm going to also change the
+text while i'm at it i'll say more money
+text while i'm at it i'll say more money
+text while i'm at it i'll say more money
+and then along
+and then along
+and then along
+in parallel with our game pass button
+in parallel with our game pass button
+in parallel with our game pass button
+we can add a new tag and call it dev
+we can add a new tag and call it dev
+we can add a new tag and call it dev
+product
+product
+product
+button big surprise and then we're gonna
+button big surprise and then we're gonna
+button big surprise and then we're gonna
+check it make sure it's checked and then
+check it make sure it's checked and then
+check it make sure it's checked and then
+also make sure it's unchecked for game
+also make sure it's unchecked for game
+also make sure it's unchecked for game
+pass button because we don't want our
+pass button because we don't want our
+pass button because we don't want our
+dev product more money button to be both
+dev product more money button to be both
+dev product more money button to be both
+a game pass and a dev product button
+a game pass and a dev product button
+a game pass and a dev product button
+that would be kind of bad
+that would be kind of bad
+that would be kind of bad
+and so implementing the code and the
+and so implementing the code and the
+and so implementing the code and the
+client monetization script is
+client monetization script is
+client monetization script is
+very very similar so actually i can
+very very similar so actually i can
+very very similar so actually i can
+literally just copy this function
+and then change it to config
+and then change it to config
+and then change it to config
+dev product
+dev product
+dev product
+and then change the game pass id to dev
+and then change the game pass id to dev
+and then change the game pass id to dev
+product
+product
+product
+id
+id
+id
+and then change prompt game pass person
+and then change prompt game pass person
+and then change prompt game pass person
+purchase to prompt product purchase
+purchase to prompt product purchase
+purchase to prompt product purchase
+there we go so i mean really it's kind
+there we go so i mean really it's kind
+there we go so i mean really it's kind
+of bad to copy and paste code but in
+of bad to copy and paste code but in
+of bad to copy and paste code but in
+this case since the function's different
+this case since the function's different
+this case since the function's different
+it's good to differentiate between them
+it's good to differentiate between them
+it's good to differentiate between them
+even though a lot of the functionality
+even though a lot of the functionality
+even though a lot of the functionality
+is basically the same
+is basically the same
+is basically the same
+so again i can just copy this block
+so again i can just copy this block
+so again i can just copy this block
+right here
+right here
+right here
+paste it down here but instead of going
+paste it down here but instead of going
+paste it down here but instead of going
+through all the game pass buttons we can
+through all the game pass buttons we can
+through all the game pass buttons we can
+go through the dev product button
+go through the dev product button
+go through the dev product button
+and then we need to instead of
+and then we need to instead of
+and then we need to instead of
+configuring the game pass config.product
+configuring the game pass config.product
+configuring the game pass config.product
+we can copy the instance added signal as
+we can copy the instance added signal as
+we can copy the instance added signal as
+well
+well
+well
+change game pass button to dev product
+change game pass button to dev product
+change game pass button to dev product
+button change config game pass to config
+button change config game pass to config
+button change config game pass to config
+dev product making sure there's no
+dev product making sure there's no
+dev product making sure there's no
+parentheses to call the function at the
+parentheses to call the function at the
+parentheses to call the function at the
+end
+end
+end
+okay so let's try it out let's make sure
+okay so let's try it out let's make sure
+okay so let's try it out let's make sure
+it prompts us for a purchase
+so i'm going to click more money
+so i'm going to click more money
+so i'm going to click more money
+and it says would you like to buy more
+and it says would you like to buy more
+and it says would you like to buy more
+money cool
+money cool
+money cool
+and keep in mind when you're doing test
+and keep in mind when you're doing test
+and keep in mind when you're doing test
+purchases in studio it won't actually
+purchases in studio it won't actually
+purchases in studio it won't actually
+charge your account it won't take away
+charge your account it won't take away
+charge your account it won't take away
+robux which is really good kind of bad
+robux which is really good kind of bad
+robux which is really good kind of bad
+if you had to pay to test your thing
+if you had to pay to test your thing
+if you had to pay to test your thing
+but yeah
+but yeah
+but yeah
+and the server side implementation of
+and the server side implementation of
+and the server side implementation of
+our dev products are actually a little
+our dev products are actually a little
+our dev products are actually a little
+more straightforward than the game pass
+more straightforward than the game pass
+more straightforward than the game pass
+so in server script service i'm going to
+so in server script service i'm going to
+so in server script service i'm going to
+create a new normal script not a module
+create a new normal script not a module
+create a new normal script not a module
+script
+script
+script
+and i'm going to call this
+and i'm going to call this
+and i'm going to call this
+product
+product
+product
+handler now usually i would say it's
+handler now usually i would say it's
+handler now usually i would say it's
+kind of a bad idea to
+kind of a bad idea to
+kind of a bad idea to
+create another normal script running in
+create another normal script running in
+create another normal script running in
+parallel with your server like your main
+parallel with your server like your main
+parallel with your server like your main
+server script but
+server script but
+server script but
+this
+this
+this
+dev product system is so isolated from
+dev product system is so isolated from
+dev product system is so isolated from
+the rest of my code that it doesn't
+the rest of my code that it doesn't
+the rest of my code that it doesn't
+really matter and honestly making it a
+really matter and honestly making it a
+really matter and honestly making it a
+modular script is just over complicating
+modular script is just over complicating
+modular script is just over complicating
+things like it's always good to have
+things like it's always good to have
+things like it's always good to have
+nice patterns in your code
+nice patterns in your code
+nice patterns in your code
+but
+but
+but
+not the price of over complication make
+not the price of over complication make
+not the price of over complication make
+it as simple as possible and then when
+it as simple as possible and then when
+it as simple as possible and then when
+you need to change it you just have to
+you need to change it you just have to
+you need to change it you just have to
+upgrade it to a module if you need it
+upgrade it to a module if you need it
+upgrade it to a module if you need it
+down the long run but i don't need it so
+down the long run but i don't need it so
+down the long run but i don't need it so
+i'm going to leave it like this
+i'm going to leave it like this
+i'm going to leave it like this
+so i'm going to
+so i'm going to
+so i'm going to
+first define a list and i'm going to say
+first define a list and i'm going to say
+first define a list and i'm going to say
+local products equals a blank a blank
+local products equals a blank a blank
+local products equals a blank a blank
+table
+table
+table
+and in the same fashion as we did game
+and in the same fashion as we did game
+and in the same fashion as we did game
+passes i'm going to
+passes i'm going to
+passes i'm going to
+oh
+oh
+oh
+i need to get the game pass id again i'm
+i need to get the game pass id again i'm
+i need to get the game pass id again i'm
+going to copy it from the money button
+going to copy it from the money button
+going to copy it from the money button
+actually or the dev product id i should
+actually or the dev product id i should
+actually or the dev product id i should
+say put it in the brackets copy your
+say put it in the brackets copy your
+say put it in the brackets copy your
+debt product id put in the brackets
+debt product id put in the brackets
+debt product id put in the brackets
+and we want to make another function
+and this function is going to take a
+and this function is going to take a
+and this function is going to take a
+player once again
+player once again
+player once again
+and in this function all we want to do
+and in this function all we want to do
+and in this function all we want to do
+is just increase players money now we
+is just increase players money now we
+is just increase players money now we
+could go into the leader stats and
+could go into the leader stats and
+could go into the leader stats and
+change it that way but
+change it that way but
+change it that way but
+notice in past videos we've actually
+notice in past videos we've actually
+notice in past videos we've actually
+made a function
+made a function
+made a function
+to set the player money literally called
+to set the player money literally called
+to set the player money literally called
+player manager set money
+player manager set money
+player manager set money
+so
+so
+so
+i'm going to go require
+i'm going to go require
+i'm going to go require
+the player manager by saying local
+the player manager by saying local
+the player manager by saying local
+player manager equals require
+player manager equals require
+player manager equals require
+script
+script
+script
+dot parent dot player manager
+dot parent dot player manager
+dot parent dot player manager
+so now all i can all i can do is do
+so now all i can all i can do is do
+so now all i can all i can do is do
+player manager
+player manager
+player manager
+set money to whatever the player to the
+set money to whatever the player to the
+set money to whatever the player to the
+player and then we're gonna do
+player and then we're gonna do
+player and then we're gonna do
+player manager
+player manager
+player manager
+dot get money
+dot get money
+dot get money
+plus a thousand so you can change this a
+plus a thousand so you can change this a
+plus a thousand so you can change this a
+thousand to whatever you want
+thousand to whatever you want
+thousand to whatever you want
+so right now what this will do is it'll
+so right now what this will do is it'll
+so right now what this will do is it'll
+set the player's money to their current
+set the player's money to their current
+set the player's money to their current
+money but plus another thousand money so
+money but plus another thousand money so
+money but plus another thousand money so
+the player can buy this as many times as
+the player can buy this as many times as
+the player can buy this as many times as
+i want and each time they'll get a
+i want and each time they'll get a
+i want and each time they'll get a
+thousand
+thousand
+thousand
+and then
+and then
+and then
+this is for later down the line when we
+this is for later down the line when we
+this is for later down the line when we
+actually implement the system we need to
+actually implement the system we need to
+actually implement the system we need to
+return true to
+return true to
+return true to
+let the server know to let our other
+let the server know to let our other
+let the server know to let our other
+functions know that this purchase was
+functions know that this purchase was
+functions know that this purchase was
+actually successful because you
+actually successful because you
+actually successful because you
+definitely don't want to use like scam
+definitely don't want to use like scam
+definitely don't want to use like scam
+your players when they buy a debt
+your players when they buy a debt
+your players when they buy a debt
+product and something errors and it
+product and something errors and it
+product and something errors and it
+doesn't work you just want to make sure
+doesn't work you just want to make sure
+doesn't work you just want to make sure
+it doesn't like charge then
+it doesn't like charge then
+it doesn't like charge then
+and you could do that in a way that i'll
+and you could do that in a way that i'll
+and you could do that in a way that i'll
+show you in just a second
+show you in just a second
+show you in just a second
+so now i'm going to go define the
+so now i'm going to go define the
+so now i'm going to go define the
+marketplace service because we'll need
+marketplace service because we'll need
+marketplace service because we'll need
+that
+that
+that
+and we'll do we'll set this equal to
+and we'll do we'll set this equal to
+and we'll do we'll set this equal to
+game service marketplace service there
+game service marketplace service there
+game service marketplace service there
+we go
+we go
+we go
+and i'll also need
+and i'll also need
+and i'll also need
+the
+the
+the
+player service i'm going to do local
+player service i'm going to do local
+player service i'm going to do local
+players equals game get service
+players equals game get service
+players equals game get service
+players
+players
+players
+so now at the very bottom below our
+so now at the very bottom below our
+so now at the very bottom below our
+products
+products
+products
+i'm going to
+i'm going to
+i'm going to
+say marketplace service dot process
+say marketplace service dot process
+say marketplace service dot process
+receipt equals function
+receipt equals function
+receipt equals function
+and then this will take in
+and then this will take in
+and then this will take in
+a receipt info which i'm just going to
+a receipt info which i'm just going to
+a receipt info which i'm just going to
+call info and there we go so what
+call info and there we go so what
+call info and there we go so what
+process receipt is is it's a value in
+process receipt is is it's a value in
+process receipt is is it's a value in
+the marketplace service that expects a
+the marketplace service that expects a
+the marketplace service that expects a
+callback a callback being this function
+callback a callback being this function
+callback a callback being this function
+that's called whenever the player buys
+that's called whenever the player buys
+that's called whenever the player buys
+something and when the player buys
+something and when the player buys
+something and when the player buys
+something it'll give us a little packet
+something it'll give us a little packet
+something it'll give us a little packet
+of info that has some information like
+of info that has some information like
+of info that has some information like
+the product id the player id
+the product id the player id
+the product id the player id
+and like other useful stuff like that
+and like other useful stuff like that
+and like other useful stuff like that
+you can look more about this on the dev
+you can look more about this on the dev
+you can look more about this on the dev
+hub i think it's just called receipt
+hub i think it's just called receipt
+hub i think it's just called receipt
+info
+info
+info
+and so now we first need to do a bunch
+and so now we first need to do a bunch
+and so now we first need to do a bunch
+of checks to make sure the purchase can
+of checks to make sure the purchase can
+of checks to make sure the purchase can
+actually be validated and it'll actually
+actually be validated and it'll actually
+actually be validated and it'll actually
+work properly
+work properly
+work properly
+so i'm going to say local player equals
+so i'm going to say local player equals
+so i'm going to say local player equals
+players
+players
+players
+get player by user id
+get player by user id
+get player by user id
+i'm going to do info dot player id
+i'm going to do info dot player id
+i'm going to do info dot player id
+because our receipt info gives us the
+because our receipt info gives us the
+because our receipt info gives us the
+player who bought whatever
+player who bought whatever
+player who bought whatever
+and then i'm going to say if not player
+and then i'm going to say if not player
+and then i'm going to say if not player
+so if the player like left the game or
+so if the player like left the game or
+so if the player like left the game or
+they disconnected their game crash
+they disconnected their game crash
+they disconnected their game crash
+we're not really sure if the
+we're not really sure if the
+we're not really sure if the
+purchase will go through because we
+purchase will go through because we
+purchase will go through because we
+can't really set the money when the
+can't really set the money when the
+can't really set the money when the
+player is not there so we want to return
+player is not there so we want to return
+player is not there so we want to return
+an enum
+an enum
+an enum
+dot
+dot
+dot
+product purchase decision
+product purchase decision
+product purchase decision
+dot not processed yet
+dot not processed yet
+dot not processed yet
+so what this does is it like notifies
+so what this does is it like notifies
+so what this does is it like notifies
+the
+the
+the
+buyer of the dev product or i guess
+buyer of the dev product or i guess
+buyer of the dev product or i guess
+roblox that
+roblox that
+roblox that
+the transaction has not actually
+the transaction has not actually
+the transaction has not actually
+completed and
+completed and
+completed and
+therefore they shouldn't really be
+therefore they shouldn't really be
+therefore they shouldn't really be
+charged i'm not really sure how it works
+charged i'm not really sure how it works
+charged i'm not really sure how it works
+under the hood but that's a general idea
+under the hood but that's a general idea
+under the hood but that's a general idea
+and then
+and then
+and then
+or it'll like come back later and call
+or it'll like come back later and call
+or it'll like come back later and call
+this process receipt function again
+this process receipt function again
+this process receipt function again
+until it actually grants the purchase
+until it actually grants the purchase
+until it actually grants the purchase
+and so that even if it has like a game
+and so that even if it has like a game
+and so that even if it has like a game
+breaking bug
+breaking bug
+breaking bug
+it'll eventually fix itself
+it'll eventually fix itself
+it'll eventually fix itself
+when
+when
+when
+you fix it and i'll just call the
+you fix it and i'll just call the
+you fix it and i'll just call the
+process receipt again and again
+process receipt again and again
+process receipt again and again
+so now
+so now
+so now
+below that i'm going to say local
+below that i'm going to say local
+below that i'm going to say local
+success result equals pcall
+products
+products
+products
+bracket
+bracket
+bracket
+then
+then
+then
+info.product id
+and then up player so p call calls a
+and then up player so p call calls a
+and then up player so p call calls a
+function and catches the error if an
+function and catches the error if an
+function and catches the error if an
+error occurs because we don't want our
+error occurs because we don't want our
+error occurs because we don't want our
+functions up here to error and then the
+functions up here to error and then the
+functions up here to error and then the
+entire thing break and the
+entire thing break and the
+entire thing break and the
+roblox doesn't really know like what
+roblox doesn't really know like what
+roblox doesn't really know like what
+happened with the purchase we don't want
+happened with the purchase we don't want
+happened with the purchase we don't want
+to scam our players
+to scam our players
+to scam our players
+and then we're just sending in a
+and then we're just sending in a
+and then we're just sending in a
+function and our function in this case
+function and our function in this case
+function and our function in this case
+is the one that corresponds to the
+is the one that corresponds to the
+is the one that corresponds to the
+product id
+product id
+product id
+that we have set in our
+that we have set in our
+that we have set in our
+and and our product id that like the
+and and our product id that like the
+and and our product id that like the
+player bought up here in our product
+player bought up here in our product
+player bought up here in our product
+table
+table
+table
+and then this other like comma player is
+and then this other like comma player is
+and then this other like comma player is
+just sending in a parameter of the
+just sending in a parameter of the
+just sending in a parameter of the
+player
+player
+player
+so if
+so if
+so if
+there's if there's
+there's if there's
+there's if there's
+not a success if we return false up here
+not a success if we return false up here
+not a success if we return false up here
+so if not success or
+so if not success or
+so if not success or
+not results so if there's not a
+good result like if
+good result like if
+good result like if
+nothing gets
+nothing gets
+nothing gets
+returned or if something like breaks
+returned or if something like breaks
+returned or if something like breaks
+then
+then
+then
+we want to
+we want to
+we want to
+we can just warn
+error for product
+error for product
+error for product
+and we can just do
+and we can just do
+and we can just do
+the result
+the result
+the result
+which in in the case of an error is just
+which in in the case of an error is just
+which in in the case of an error is just
+a
+a
+a
+error message
+and then we also want to return enum dot
+and then we also want to return enum dot
+and then we also want to return enum dot
+product purchase decision done not
+product purchase decision done not
+product purchase decision done not
+processed yet because something went
+processed yet because something went
+processed yet because something went
+wrong we don't want the purchase to be
+wrong we don't want the purchase to be
+wrong we don't want the purchase to be
+granted because it wasn't actually
+granted because it wasn't actually
+granted because it wasn't actually
+granted the player didn't get their
+granted the player didn't get their
+granted the player didn't get their
+money
+money
+money
+but
+but
+but
+at the very end of our function if
+at the very end of our function if
+at the very end of our function if
+everything goes through and nothing
+everything goes through and nothing
+everything goes through and nothing
+returns all we want to do is return
+returns all we want to do is return
+returns all we want to do is return
+enum.product purchase decision dot
+enum.product purchase decision dot
+enum.product purchase decision dot
+purchase granted so this means
+purchase granted so this means
+purchase granted so this means
+everything got through the player got
+everything got through the player got
+everything got through the player got
+their money everybody's happy
+their money everybody's happy
+their money everybody's happy
+so let's hit play
+so let's hit play
+so let's hit play
+and try it out
+and try it out
+and try it out
+it's gonna hit more money
+it's gonna hit more money
+it's gonna hit more money
+wait for this to go and click it
+wait for this to go and click it
+wait for this to go and click it
+and then you can see in the top right it
+and then you can see in the top right it
+and then you can see in the top right it
+says your purchase has succeeded
+says your purchase has succeeded
+says your purchase has succeeded
+and we have a thousand money
+and we have a thousand money
+and we have a thousand money
+so there you have it
+and that's about it for this video so i
+and that's about it for this video so i
+and that's about it for this video so i
+hope you enjoyed learning about dev
+hope you enjoyed learning about dev
+hope you enjoyed learning about dev
+products and game passes as in the last
+products and game passes as in the last
+products and game passes as in the last
+video
+video
+video
+make sure to put any more suggestions
+make sure to put any more suggestions
+make sure to put any more suggestions
+for tycoon videos in the comments but
+for tycoon videos in the comments but
+for tycoon videos in the comments but
+any questions down below too
+any questions down below too
+any questions down below too
+but this series is fun to keep on
+but this series is fun to keep on
+but this series is fun to keep on
+improving over time so i'll be glad to
+improving over time so i'll be glad to
+improving over time so i'll be glad to
+make more videos in the future so like
+make more videos in the future so like
+make more videos in the future so like
+the video if you enjoyed it subscribe to
+the video if you enjoyed it subscribe to
+the video if you enjoyed it subscribe to
+my channel for more roblox scripting
+my channel for more roblox scripting
+my channel for more roblox scripting
+content in the form of tycoon series and
+content in the form of tycoon series and
+content in the form of tycoon series and
+other series and with that i hope you
+other series and with that i hope you
+other series and with that i hope you
+have a nice day
+have a nice day
+have a nice day
+and goodbye
+and goodbye
+and goodbye
+[Music]
+you

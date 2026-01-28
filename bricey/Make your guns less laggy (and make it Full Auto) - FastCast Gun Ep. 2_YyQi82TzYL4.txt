@@ -1,0 +1,607 @@
+so in the last video we made a
+so in the last video we made a
+so in the last video we made a
+gun and the gun worked well
+gun and the gun worked well
+gun and the gun worked well
+but there's one fundamental problem with
+but there's one fundamental problem with
+but there's one fundamental problem with
+it and that's the fact that it's
+it and that's the fact that it's
+it and that's the fact that it's
+horribly inefficient because in a big
+horribly inefficient because in a big
+horribly inefficient because in a big
+game with
+game with
+game with
+many guns all firing bullets at the same
+many guns all firing bullets at the same
+many guns all firing bullets at the same
+time
+time
+time
+we're going to be using a bunch of new
+we're going to be using a bunch of new
+we're going to be using a bunch of new
+part creations using
+part creations using
+part creations using
+instance.new now i didn't write it
+instance.new now i didn't write it
+instance.new now i didn't write it
+specifically in my code but the fastcast
+specifically in my code but the fastcast
+specifically in my code but the fastcast
+module
+module
+module
+utilizes instance.new to create new
+utilizes instance.new to create new
+utilizes instance.new to create new
+bullets
+bullets
+bullets
+based off of your cosmetic bullet
+based off of your cosmetic bullet
+based off of your cosmetic bullet
+template and that's a problem because
+template and that's a problem because
+template and that's a problem because
+instance.new
+instance.new
+instance.new
+is a pretty costly function in terms of
+is a pretty costly function in terms of
+is a pretty costly function in terms of
+performance
+performance
+performance
+but the creator of fastcast knew about
+but the creator of fastcast knew about
+but the creator of fastcast knew about
+this and he created a module called
+this and he created a module called
+this and he created a module called
+part cache i have it my toolbox right
+part cache i have it my toolbox right
+part cache i have it my toolbox right
+here
+here
+here
+and you can get it in the description it
+and you can get it in the description it
+and you can get it in the description it
+is a module that can basically
+is a module that can basically
+is a module that can basically
+create a bunch of parts teleport some
+create a bunch of parts teleport some
+create a bunch of parts teleport some
+very high in our workspace and then when
+very high in our workspace and then when
+very high in our workspace and then when
+we want them we can request them and
+we want them we can request them and
+we want them we can request them and
+it'll set the c
+it'll set the c
+it'll set the c
+frame to like whatever we want and then
+frame to like whatever we want and then
+frame to like whatever we want and then
+when we're done with the parts we can
+when we're done with the parts we can
+when we're done with the parts we can
+return them back
+return them back
+return them back
+so it's basically like a like local
+so it's basically like a like local
+so it's basically like a like local
+stasis
+stasis
+stasis
+chamber of the workspace and it cuts
+chamber of the workspace and it cuts
+chamber of the workspace and it cuts
+down on your performance overhead
+down on your performance overhead
+down on your performance overhead
+quite a bit and it allows you to get a
+quite a bit and it allows you to get a
+quite a bit and it allows you to get a
+lot more guns and a lot more bullets
+lot more guns and a lot more bullets
+lot more guns and a lot more bullets
+firing
+firing
+firing
+with less lag in your game and that's
+with less lag in your game and that's
+with less lag in your game and that's
+great so i'm going to take this park
+great so i'm going to take this park
+great so i'm going to take this park
+hash module
+hash module
+hash module
+drag it into my gun then navigate to gun
+drag it into my gun then navigate to gun
+drag it into my gun then navigate to gun
+server script right here there's a few
+server script right here there's a few
+server script right here there's a few
+things we have to do
+things we have to do
+things we have to do
+so first i'm going to start by defining
+so first i'm going to start by defining
+so first i'm going to start by defining
+part
+part
+part
+cache it's going to be equal to
+cache it's going to be equal to
+cache it's going to be equal to
+require tool dot part
+require tool dot part
+require tool dot part
+cache there we go
+cache there we go
+cache there we go
+and then i can go and below
+and then i can go and below
+and then i can go and below
+my cast params i can say local bullet
+my cast params i can say local bullet
+my cast params i can say local bullet
+cache equals part cash
+cache equals part cash
+cache equals part cash
+dot new bullet template
+dot new bullet template
+dot new bullet template
+100 bullets folder
+100 bullets folder
+100 bullets folder
+so what this does is we create a new
+so what this does is we create a new
+so what this does is we create a new
+part cache
+part cache
+part cache
+with our bullet template remember this
+with our bullet template remember this
+with our bullet template remember this
+is the part that we use for
+is the part that we use for
+is the part that we use for
+our bullets feel free to customize that
+our bullets feel free to customize that
+our bullets feel free to customize that
+to what you want
+to what you want
+to what you want
+and then 100 is the number of parts we
+and then 100 is the number of parts we
+and then 100 is the number of parts we
+want to spawn in our cache
+want to spawn in our cache
+want to spawn in our cache
+and this module can dynamically change
+and this module can dynamically change
+and this module can dynamically change
+the amount of parts but it's recommended
+the amount of parts but it's recommended
+the amount of parts but it's recommended
+to get it at a good value that's not too
+to get it at a good value that's not too
+to get it at a good value that's not too
+high and not too low and for my purposes
+high and not too low and for my purposes
+high and not too low and for my purposes
+100 is good
+100 is good
+100 is good
+and then for our bullets folder that's
+and then for our bullets folder that's
+and then for our bullets folder that's
+just where we want to store it just
+just where we want to store it just
+just where we want to store it just
+parentage just some logistical stuff
+parentage just some logistical stuff
+parentage just some logistical stuff
+so then down in our cast behavior we
+so then down in our cast behavior we
+so then down in our cast behavior we
+want to get rid of cosmetic bullet
+want to get rid of cosmetic bullet
+want to get rid of cosmetic bullet
+template
+template
+template
+because we don't really need we need to
+because we don't really need we need to
+because we don't really need we need to
+be using that anymore
+be using that anymore
+be using that anymore
+and instead we're going to set the cast
+and instead we're going to set the cast
+and instead we're going to set the cast
+behavior dot cosmetic bullet
+behavior dot cosmetic bullet
+behavior dot cosmetic bullet
+provider and set that equal to our
+provider and set that equal to our
+provider and set that equal to our
+bullet
+bullet
+bullet
+cache there we go so that'll
+cache there we go so that'll
+cache there we go so that'll
+give this to fastcast and it'll be able
+give this to fastcast and it'll be able
+give this to fastcast and it'll be able
+to
+to
+to
+handle it all so
+handle it all so
+handle it all so
+part cache and fastcast will be able to
+part cache and fastcast will be able to
+part cache and fastcast will be able to
+handle the creation of the bullet
+handle the creation of the bullet
+handle the creation of the bullet
+but as for the deletion we will have to
+but as for the deletion we will have to
+but as for the deletion we will have to
+implement that ourself
+implement that ourself
+implement that ourself
+so i'm going to go down to the on ray
+so i'm going to go down to the on ray
+so i'm going to go down to the on ray
+hip function
+hip function
+hip function
+and instead of deleting the part by use
+and instead of deleting the part by use
+and instead of deleting the part by use
+of the debris
+of the debris
+of the debris
+service i'm going to instead use a
+service i'm going to instead use a
+service i'm going to instead use a
+delay statement the let's delay for
+delay statement the let's delay for
+delay statement the let's delay for
+two seconds let's say and we'll give it
+two seconds let's say and we'll give it
+two seconds let's say and we'll give it
+a function so if you don't know what
+a function so if you don't know what
+a function so if you don't know what
+delay is
+delay is
+delay is
+it basically waits a few seconds and
+it basically waits a few seconds and
+it basically waits a few seconds and
+then spawns this function in a separate
+then spawns this function in a separate
+then spawns this function in a separate
+thread so it doesn't
+thread so it doesn't
+thread so it doesn't
+yield anything i'm not sure if this is
+yield anything i'm not sure if this is
+yield anything i'm not sure if this is
+necessary
+necessary
+necessary
+in this function but we can leave it
+in this function but we can leave it
+in this function but we can leave it
+there just to be safe
+there just to be safe
+there just to be safe
+and i know delays spawn they're kind of
+and i know delays spawn they're kind of
+and i know delays spawn they're kind of
+crap but for the sake of this video
+crap but for the sake of this video
+crap but for the sake of this video
+we're going to use that just because
+we're going to use that just because
+we're going to use that just because
+they're
+they're
+they're
+pretty easy to understand and all we
+pretty easy to understand and all we
+pretty easy to understand and all we
+have to do here is say
+have to do here is say
+have to do here is say
+bullet cache return
+bullet cache return
+bullet cache return
+part bullet so this will
+part bullet so this will
+part bullet so this will
+return the bar back to our little space
+return the bar back to our little space
+return the bar back to our little space
+stasis chamber
+stasis chamber
+stasis chamber
+in our workspace which is exactly what
+in our workspace which is exactly what
+in our workspace which is exactly what
+we want to do
+we want to do
+we want to do
+and that's really all the changes you
+and that's really all the changes you
+and that's really all the changes you
+need
+need
+need
+so if i were to play this
+so if i were to play this
+so if i were to play this
+you can see after a few seconds all the
+you can see after a few seconds all the
+you can see after a few seconds all the
+parts disappear
+and you can't really tell the difference
+and you can't really tell the difference
+and you can't really tell the difference
+because we only have one
+gun and one person but i've already go
+gun and one person but i've already go
+gun and one person but i've already go
+into the
+into the
+into the
+server you can go to the bullets folder
+server you can go to the bullets folder
+server you can go to the bullets folder
+and you can see there's a ton of parts
+and you can see there's a ton of parts
+and you can see there's a ton of parts
+and if we select this part you can see
+and if we select this part you can see
+and if we select this part you can see
+it's
+it's
+it's
+way off in space the y is set to a very
+way off in space the y is set to a very
+way off in space the y is set to a very
+large number
+large number
+large number
+that's basically how the module works
+that's basically how the module works
+that's basically how the module works
+it's actually pretty cool i think a cool
+it's actually pretty cool i think a cool
+it's actually pretty cool i think a cool
+challenge would be to implement that
+challenge would be to implement that
+challenge would be to implement that
+yourself
+yourself
+yourself
+so go and try it out and as a quick
+so go and try it out and as a quick
+so go and try it out and as a quick
+little bonus
+little bonus
+little bonus
+i'm gonna go and make my gun fully
+i'm gonna go and make my gun fully
+i'm gonna go and make my gun fully
+automatic you don't have to do this
+automatic you don't have to do this
+automatic you don't have to do this
+i just thought this video is a little
+i just thought this video is a little
+i just thought this video is a little
+short so i'll give you some extra
+short so i'll give you some extra
+short so i'll give you some extra
+cool things that you can do so i'm going
+cool things that you can do so i'm going
+cool things that you can do so i'm going
+to go into my client script
+to go into my client script
+to go into my client script
+firstly define user input service local
+firstly define user input service local
+firstly define user input service local
+user input service equals game
+user input service equals game
+user input service equals game
+get service user input service
+get service user input service
+get service user input service
+then we're going to get run service and
+then we're going to get run service and
+then we're going to get run service and
+this will be equal to
+this will be equal to
+this will be equal to
+game get service whoops
+game get service whoops
+game get service whoops
+run the service there we go so now we
+run the service there we go so now we
+run the service there we go so now we
+have user input service run service
+have user input service run service
+have user input service run service
+instead of connecting tool to activated
+instead of connecting tool to activated
+instead of connecting tool to activated
+c
+c
+c
+to this function we're going to connect
+to this function we're going to connect
+to this function we're going to connect
+run service dot
+run service dot
+run service dot
+stepped so this will run every single
+stepped so this will run every single
+stepped so this will run every single
+frame and then in order to prevent argon
+frame and then in order to prevent argon
+frame and then in order to prevent argon
+from firing every single frame
+from firing every single frame
+from firing every single frame
+we're just going to check if user input
+we're just going to check if user input
+we're just going to check if user input
+service
+service
+service
+is mouse button pressed
+is mouse button pressed
+is mouse button pressed
+enum dot user input
+enum dot user input
+enum dot user input
+type dot mouse button one now we're
+type dot mouse button one now we're
+type dot mouse button one now we're
+going to do
+going to do
+going to do
+then and then we're going to go all the
+then and then we're going to go all the
+then and then we're going to go all the
+way down here and put end and i'm going
+way down here and put end and i'm going
+way down here and put end and i'm going
+to indent
+to indent
+to indent
+just to make my code a little more
+just to make my code a little more
+just to make my code a little more
+readable so this will this
+readable so this will this
+readable so this will this
+run service dot stamped will run every
+run service dot stamped will run every
+run service dot stamped will run every
+single frame
+single frame
+single frame
+and then user input service is not
+and then user input service is not
+and then user input service is not
+running press checks if our
+running press checks if our
+running press checks if our
+mouse button one which is our left mouse
+mouse button one which is our left mouse
+mouse button one which is our left mouse
+click is
+click is
+click is
+down and then we just fire the server so
+down and then we just fire the server so
+down and then we just fire the server so
+if we run this
+we will have an automatic gun and it
+we will have an automatic gun and it
+we will have an automatic gun and it
+looks pretty cool
+looks pretty cool
+looks pretty cool
+i can blast away these zombies
+i can blast away these zombies
+i can blast away these zombies
+little tiny zombies as well and you'll
+little tiny zombies as well and you'll
+little tiny zombies as well and you'll
+notice
+notice
+notice
+if i overload the system part cash
+if i overload the system part cash
+if i overload the system part cash
+will start yelling at me and i'll start
+will start yelling at me and i'll start
+will start yelling at me and i'll start
+creating new parts
+creating new parts
+creating new parts
+so keep in mind when you are making
+so keep in mind when you are making
+so keep in mind when you are making
+these automatic weapons it might be in
+these automatic weapons it might be in
+these automatic weapons it might be in
+your best interest
+your best interest
+your best interest
+to put a cap on the amount or like maybe
+to put a cap on the amount or like maybe
+to put a cap on the amount or like maybe
+some ammo or something like that
+some ammo or something like that
+some ammo or something like that
+just to prevent the module from lagging
+just to prevent the module from lagging
+just to prevent the module from lagging
+your game
+your game
+your game
+but that's about it for this video so i
+but that's about it for this video so i
+but that's about it for this video so i
+hope you enjoyed
+hope you enjoyed
+hope you enjoyed
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+did
+did
+did
+and in the next video i'll be covering
+and in the next video i'll be covering
+and in the next video i'll be covering
+more gun things such as animations or
+more gun things such as animations or
+more gun things such as animations or
+sounds or just making the gun
+sounds or just making the gun
+sounds or just making the gun
+better so other than that i hope you
+better so other than that i hope you
+better so other than that i hope you
+have a nice day
+have a nice day
+have a nice day
+and goodbye
+and goodbye
+and goodbye
+[Music]
+[Music]
+[Music]
+you

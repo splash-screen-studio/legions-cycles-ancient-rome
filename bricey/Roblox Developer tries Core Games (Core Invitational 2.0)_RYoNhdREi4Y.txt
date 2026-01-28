@@ -1,0 +1,1560 @@
+i recently participated in the core
+i recently participated in the core
+i recently participated in the core
+invitational 2.0 which was a month-long
+invitational 2.0 which was a month-long
+invitational 2.0 which was a month-long
+game jam in which you had to make a game
+game jam in which you had to make a game
+game jam in which you had to make a game
+in the core
+in the core
+in the core
+game engine or core editor
+game engine or core editor
+game engine or core editor
+and my game was called ant colony made
+and my game was called ant colony made
+and my game was called ant colony made
+in collaboration with another very
+in collaboration with another very
+in collaboration with another very
+talented core creator named madlios he
+talented core creator named madlios he
+talented core creator named madlios he
+handled all of the art and a bit of the
+handled all of the art and a bit of the
+handled all of the art and a bit of the
+scripting and i handled all most of the
+scripting and i handled all most of the
+scripting and i handled all most of the
+scripting
+scripting
+scripting
+so in this video i will
+so in this video i will
+so in this video i will
+go over
+go over
+go over
+the core editor its pros its cons and
+the core editor its pros its cons and
+the core editor its pros its cons and
+talk about it in light of
+talk about it in light of
+talk about it in light of
+my roblox developer experience so stay
+my roblox developer experience so stay
+my roblox developer experience so stay
+tuned to hear my opinions about that if
+tuned to hear my opinions about that if
+tuned to hear my opinions about that if
+you're interested in playing the game
+you're interested in playing the game
+you're interested in playing the game
+the link will be in the description
+the link will be in the description
+the link will be in the description
+and like the video if you enjoy
+and like the video if you enjoy
+and like the video if you enjoy
+subscribe to my channel for more roblox
+subscribe to my channel for more roblox
+subscribe to my channel for more roblox
+content and potentially core content
+content and potentially core content
+content and potentially core content
+without further ado let's get into the
+without further ado let's get into the
+without further ado let's get into the
+video
+so core is a user generated content
+so core is a user generated content
+so core is a user generated content
+platform
+platform
+platform
+just like roblox is so
+just like roblox is so
+just like roblox is so
+they provide a free editor they provide
+they provide a free editor they provide
+they provide a free editor they provide
+a one-click publishing system
+a one-click publishing system
+a one-click publishing system
+and all you have to do is make a game it
+and all you have to do is make a game it
+and all you have to do is make a game it
+uses the lewis scripting language just
+uses the lewis scripting language just
+uses the lewis scripting language just
+like roblox and a lot of the key
+like roblox and a lot of the key
+like roblox and a lot of the key
+features are similar to roblox one
+features are similar to roblox one
+features are similar to roblox one
+really nice thing is the core editor is
+really nice thing is the core editor is
+really nice thing is the core editor is
+built on top of unreal engine actually
+built on top of unreal engine actually
+built on top of unreal engine actually
+the entire engine is built on top of
+the entire engine is built on top of
+the entire engine is built on top of
+unreal engine unreal engine 4.
+unreal engine unreal engine 4.
+unreal engine unreal engine 4.
+so that means that
+so that means that
+so that means that
+we as like indie game developers have
+we as like indie game developers have
+we as like indie game developers have
+all the professional established tooling
+all the professional established tooling
+all the professional established tooling
+that all the triple a games have access
+that all the triple a games have access
+that all the triple a games have access
+to via unreal engine and it's all
+to via unreal engine and it's all
+to via unreal engine and it's all
+completely free which is really really
+completely free which is really really
+completely free which is really really
+nice overall the core editor
+nice overall the core editor
+nice overall the core editor
+was a pleasure to use i've used unreal
+was a pleasure to use i've used unreal
+was a pleasure to use i've used unreal
+engine 4
+engine 4
+engine 4
+and i somewhat enjoyed their
+and i somewhat enjoyed their
+and i somewhat enjoyed their
+editor and just the engine in general
+editor and just the engine in general
+editor and just the engine in general
+but the core editor
+but the core editor
+but the core editor
+was so nice so one of the key benefits
+was so nice so one of the key benefits
+was so nice so one of the key benefits
+was their template system so anything in
+was their template system so anything in
+was their template system so anything in
+core
+core
+core
+you can like create and then save it as
+you can like create and then save it as
+you can like create and then save it as
+a template templates are similar to
+a template templates are similar to
+a template templates are similar to
+models
+models
+models
+and like packages and roblox
+and like packages and roblox
+and like packages and roblox
+except they're
+except they're
+except they're
+basically just unity prefabs so if you
+basically just unity prefabs so if you
+basically just unity prefabs so if you
+ever use unity it's basically a unity
+ever use unity it's basically a unity
+ever use unity it's basically a unity
+prefab and what that means is like for
+prefab and what that means is like for
+prefab and what that means is like for
+example i have my ant template i can
+example i have my ant template i can
+example i have my ant template i can
+just like drag it in it'll place it on
+just like drag it in it'll place it on
+just like drag it in it'll place it on
+the
+the
+the
+map and it has everything
+map and it has everything
+map and it has everything
+that i need it's like a folder basically
+that i need it's like a folder basically
+that i need it's like a folder basically
+and just has everything
+and just has everything
+and just has everything
+that encompasses the ant
+that encompasses the ant
+that encompasses the ant
+and the cool thing about these templates
+and the cool thing about these templates
+and the cool thing about these templates
+is that
+is that
+is that
+i can sync them between scenes and i can
+i can sync them between scenes and i can
+i can sync them between scenes and i can
+spawn them dynamically
+spawn them dynamically
+spawn them dynamically
+and
+and
+and
+they're just big packages of
+they're just big packages of
+they're just big packages of
+instances that you can just move around
+instances that you can just move around
+instances that you can just move around
+so i have all my templates in another
+so i have all my templates in another
+so i have all my templates in another
+scene
+scene
+scene
+so let me just load this scene
+and i can go to like my ant template
+and i can go to like my ant template
+and i can go to like my ant template
+real quick so here are all my templates
+real quick so here are all my templates
+real quick so here are all my templates
+and i can edit them and then the changes
+and i can edit them and then the changes
+and i can edit them and then the changes
+will be reflected into the game without
+will be reflected into the game without
+will be reflected into the game without
+any further notice the that's one weird
+any further notice the that's one weird
+any further notice the that's one weird
+thing about roblox is you have to bring
+thing about roblox is you have to bring
+thing about roblox is you have to bring
+things in and out of server storage
+things in and out of server storage
+things in and out of server storage
+if you really want to edit them in the
+if you really want to edit them in the
+if you really want to edit them in the
+in the studio
+in the studio
+in the studio
+you could use packages but packages are
+you could use packages but packages are
+you could use packages but packages are
+very clunky and not very good to use
+very clunky and not very good to use
+very clunky and not very good to use
+they just don't feel nice
+they just don't feel nice
+they just don't feel nice
+so the template system is a lot better
+so the template system is a lot better
+so the template system is a lot better
+and i have all my templates down here
+and i have all my templates down here
+and i have all my templates down here
+and you can also get chin templates from
+and you can also get chin templates from
+and you can also get chin templates from
+a
+a
+a
+community content area which
+community content area which
+community content area which
+is considerably better than roblox's
+is considerably better than roblox's
+is considerably better than roblox's
+toolbox that's for sure this stuff here
+toolbox that's for sure this stuff here
+toolbox that's for sure this stuff here
+is
+is
+is
+very very helpful a lot of like
+very very helpful a lot of like
+very very helpful a lot of like
+the big things in core use
+the big things in core use
+the big things in core use
+a lot of community content like this mpc
+a lot of community content like this mpc
+a lot of community content like this mpc
+ai kit
+ai kit
+ai kit
+a lot of big games use it and
+a lot of big games use it and
+a lot of big games use it and
+you can look into the code and the code
+you can look into the code and the code
+you can look into the code and the code
+is actually helpful
+is actually helpful
+is actually helpful
+if you want to learn how to script and
+if you want to learn how to script and
+if you want to learn how to script and
+chords take a couple of the
+chords take a couple of the
+chords take a couple of the
+community content scripts or whatever
+community content scripts or whatever
+community content scripts or whatever
+and just read them and you can learn
+and just read them and you can learn
+and just read them and you can learn
+about them
+about them
+about them
+and up to this point i haven't seen any
+and up to this point i haven't seen any
+and up to this point i haven't seen any
+viruses or any talk about viruses to be
+viruses or any talk about viruses to be
+viruses or any talk about viruses to be
+honest i think the community is just a
+honest i think the community is just a
+honest i think the community is just a
+little more mature and people
+little more mature and people
+little more mature and people
+aren't going to do stuff like that
+aren't going to do stuff like that
+aren't going to do stuff like that
+the properties and like the core editor
+the properties and like the core editor
+the properties and like the core editor
+are also quite nice it gives you the
+are also quite nice it gives you the
+are also quite nice it gives you the
+ability to add custom properties out of
+ability to add custom properties out of
+ability to add custom properties out of
+the box and they can be all sorts of
+the box and they can be all sorts of
+the box and they can be all sorts of
+data types like you can reference other
+data types like you can reference other
+data types like you can reference other
+core objects or you can do like a whole
+core objects or you can do like a whole
+core objects or you can do like a whole
+number of things with numbers strings
+number of things with numbers strings
+number of things with numbers strings
+colors
+colors
+colors
+just a ton of stuff
+just a ton of stuff
+just a ton of stuff
+and i really enjoy it and it's honestly
+and i really enjoy it and it's honestly
+and i really enjoy it and it's honestly
+a lot better than roblox's attribute
+a lot better than roblox's attribute
+a lot better than roblox's attribute
+system
+system
+system
+because it has more data types and it
+because it has more data types and it
+because it has more data types and it
+came like with the editor attributes we
+came like with the editor attributes we
+came like with the editor attributes we
+had to wait forever to get them and
+had to wait forever to get them and
+had to wait forever to get them and
+these
+these
+these
+custom properties are just a lot simpler
+custom properties are just a lot simpler
+custom properties are just a lot simpler
+and a lot more integrated and just
+and a lot more integrated and just
+and a lot more integrated and just
+honestly a lot better in my opinion
+one issue
+one issue
+one issue
+with core that i have
+with core that i have
+with core that i have
+is the preview play test system so let
+is the preview play test system so let
+is the preview play test system so let
+me load back the main scene
+me load back the main scene
+me load back the main scene
+because when i like press play in the
+because when i like press play in the
+because when i like press play in the
+editor
+i get a different experience
+i get a different experience
+i get a different experience
+than if i were to
+than if i were to
+than if i were to
+boot it up in the game so here there's
+boot it up in the game so here there's
+boot it up in the game so here there's
+like zero delay from like server to
+like zero delay from like server to
+like zero delay from like server to
+client
+client
+client
+and so everything is like simulated on
+and so everything is like simulated on
+and so everything is like simulated on
+my computer
+my computer
+my computer
+and i don't think there's even like a
+and i don't think there's even like a
+and i don't think there's even like a
+virtual server or client i think
+virtual server or client i think
+virtual server or client i think
+everything's all together which is kind
+everything's all together which is kind
+everything's all together which is kind
+of annoying because it means that the
+of annoying because it means that the
+of annoying because it means that the
+game running in this little window will
+game running in this little window will
+game running in this little window will
+run quicker than it will
+run quicker than it will
+run quicker than it will
+in an actual game
+in an actual game
+in an actual game
+which is fine because they also have a
+which is fine because they also have a
+which is fine because they also have a
+multiplayer preview mode where you can
+multiplayer preview mode where you can
+multiplayer preview mode where you can
+just play with like one or more players
+just play with like one or more players
+just play with like one or more players
+and that's nice it's just
+and that's nice it's just
+and that's nice it's just
+there was no mention ever or there
+there was no mention ever or there
+there was no mention ever or there
+probably was but i didn't see it and it
+probably was but i didn't see it and it
+probably was but i didn't see it and it
+wasn't made very clear to me
+wasn't made very clear to me
+wasn't made very clear to me
+that
+that
+that
+this play test this native play test was
+this play test this native play test was
+this play test this native play test was
+different than the actual gameplay
+different than the actual gameplay
+different than the actual gameplay
+because in roblox when i press play in
+because in roblox when i press play in
+because in roblox when i press play in
+the game
+the game
+the game
+it's more or less simulating
+it's more or less simulating
+it's more or less simulating
+a multiplayer game with one player
+a multiplayer game with one player
+a multiplayer game with one player
+playing
+playing
+playing
+or at least it's what i think is going
+or at least it's what i think is going
+or at least it's what i think is going
+on with this it's
+on with this it's
+on with this it's
+kind of fooling you it's kind of just
+kind of fooling you it's kind of just
+kind of fooling you it's kind of just
+more for like basic tiny tests so you
+more for like basic tiny tests so you
+more for like basic tiny tests so you
+have to use the multiplayer preview mode
+have to use the multiplayer preview mode
+have to use the multiplayer preview mode
+that's one thing that i was just
+that's one thing that i was just
+that's one thing that i was just
+confused about
+one thing i really liked was the idea of
+one thing i really liked was the idea of
+one thing i really liked was the idea of
+network context so let me just make a
+network context so let me just make a
+network context so let me just make a
+new scene to demonstrate what i'm
+new scene to demonstrate what i'm
+new scene to demonstrate what i'm
+talking about
+so you can
+so you can
+so you can
+add these things in core called network
+add these things in core called network
+add these things in core called network
+context so i can create
+context so i can create
+context so i can create
+a network context there's client server
+a network context there's client server
+a network context there's client server
+and static
+and static
+and static
+so
+so
+so
+these are basically like saying like
+these are basically like saying like
+these are basically like saying like
+starter player and roblox for new client
+starter player and roblox for new client
+starter player and roblox for new client
+context
+context
+context
+server storage and server script service
+server storage and server script service
+server storage and server script service
+for a new server context and static
+for a new server context and static
+for a new server context and static
+context
+context
+context
+is similar to replicated storage and the
+is similar to replicated storage and the
+is similar to replicated storage and the
+workspace if i were to say that the cool
+workspace if i were to say that the cool
+workspace if i were to say that the cool
+really cool thing about these is that
+really cool thing about these is that
+really cool thing about these is that
+you can like nest them within each other
+you can like nest them within each other
+you can like nest them within each other
+so for example i can create a new folder
+so for example i can create a new folder
+so for example i can create a new folder
+and then inside of this folder i can put
+and then inside of this folder i can put
+and then inside of this folder i can put
+a client context
+a client context
+a client context
+and a server context and what this
+and a server context and what this
+and a server context and what this
+allows me to do
+allows me to do
+allows me to do
+is put all my server code logic into the
+is put all my server code logic into the
+is put all my server code logic into the
+server context and the client context i
+server context and the client context i
+server context and the client context i
+can put all of the visuals like for
+can put all of the visuals like for
+can put all of the visuals like for
+example in my ant
+example in my ant
+example in my ant
+the and visuals and animations are
+the and visuals and animations are
+the and visuals and animations are
+stored in the client context while the
+stored in the client context while the
+stored in the client context while the
+scripts the ai scripts are stored in the
+scripts the ai scripts are stored in the
+scripts the ai scripts are stored in the
+server
+server
+server
+and that leads to your projects you're
+and that leads to your projects you're
+and that leads to your projects you're
+being a lot more organized and a lot
+being a lot more organized and a lot
+being a lot more organized and a lot
+more flexible to organize you notice how
+more flexible to organize you notice how
+more flexible to organize you notice how
+there's no top level services in
+there's no top level services in
+there's no top level services in
+the editor i could literally delete
+the editor i could literally delete
+the editor i could literally delete
+everything
+everything
+everything
+and it'll let me do that
+and it'll let me do that
+and it'll let me do that
+so there's nothing here now
+so there's nothing here now
+so there's nothing here now
+and you can
+and you can
+and you can
+configure your project to your liking
+configure your project to your liking
+configure your project to your liking
+which is quite nice on the other hand
+which is quite nice on the other hand
+which is quite nice on the other hand
+scripting in core was kind of a pain so
+scripting in core was kind of a pain so
+scripting in core was kind of a pain so
+first of all their naming scheme is a
+first of all their naming scheme is a
+first of all their naming scheme is a
+little bit different than roblox so i
+little bit different than roblox so i
+little bit different than roblox so i
+came into a lot of instances where i was
+came into a lot of instances where i was
+came into a lot of instances where i was
+typing
+typing
+typing
+like vector
+like vector
+like vector
+3 dot new with a lowercase n and it just
+3 dot new with a lowercase n and it just
+3 dot new with a lowercase n and it just
+was not working it's because you have to
+was not working it's because you have to
+was not working it's because you have to
+use
+use
+use
+uppercase for like dots but then
+uppercase for like dots but then
+uppercase for like dots but then
+sometimes you have to use lowercase they
+sometimes you have to use lowercase they
+sometimes you have to use lowercase they
+have a very well established naming
+have a very well established naming
+have a very well established naming
+convention so that's not really a
+convention so that's not really a
+convention so that's not really a
+downside it's just it took me as a
+downside it's just it took me as a
+downside it's just it took me as a
+roblox developer time to get used to
+roblox developer time to get used to
+roblox developer time to get used to
+i also had to implement a lot of like
+i also had to implement a lot of like
+i also had to implement a lot of like
+weird unedited counter-intuitive
+weird unedited counter-intuitive
+weird unedited counter-intuitive
+solutions like for example
+solutions like for example
+solutions like for example
+i had to make a like busy pulling method
+i had to make a like busy pulling method
+i had to make a like busy pulling method
+to
+to
+to
+wait for a mouse update
+wait for a mouse update
+wait for a mouse update
+because there's no such thing as a
+because there's no such thing as a
+because there's no such thing as a
+remote function or like
+remote function or like
+remote function or like
+a
+a
+a
+client request or server request so like
+client request or server request so like
+client request or server request so like
+there's only events you can only
+there's only events you can only
+there's only events you can only
+broadcast events from player from server
+broadcast events from player from server
+broadcast events from player from server
+to player or player server so i just had
+to player or player server so i just had
+to player or player server so i just had
+to wait
+to wait
+to wait
+until the mouse update happened
+until the mouse update happened
+until the mouse update happened
+which was kind of annoying
+which was kind of annoying
+which was kind of annoying
+but i mean
+but i mean
+but i mean
+you can
+you can
+you can
+get past that
+get past that
+get past that
+one thing i did really enjoy was first
+one thing i did really enjoy was first
+one thing i did really enjoy was first
+of all the ability to get my code into
+of all the ability to get my code into
+of all the ability to get my code into
+vs code in the first place core provides
+vs code in the first place core provides
+vs code in the first place core provides
+a couple extensions including the corelu
+a couple extensions including the corelu
+a couple extensions including the corelu
+api and also like
+api and also like
+api and also like
+links with the lua language server
+links with the lua language server
+links with the lua language server
+which makes the vs code editing
+which makes the vs code editing
+which makes the vs code editing
+experience honestly quite nice and the
+experience honestly quite nice and the
+experience honestly quite nice and the
+fact that i can go into the editor and
+fact that i can go into the editor and
+fact that i can go into the editor and
+tell it that i want my default editor to
+tell it that i want my default editor to
+tell it that i want my default editor to
+be visual studio code
+be visual studio code
+be visual studio code
+is just amazing speaking of that all of
+is just amazing speaking of that all of
+is just amazing speaking of that all of
+the
+the
+the
+objects in core
+objects in core
+objects in core
+are synced to the file system so me and
+are synced to the file system so me and
+are synced to the file system so me and
+my partner had a github repository where
+my partner had a github repository where
+my partner had a github repository where
+we could
+we could
+we could
+push everything to github
+push everything to github
+push everything to github
+and stay
+and stay
+and stay
+synced with each other and core did not
+synced with each other and core did not
+synced with each other and core did not
+have to build any special tool to do so
+have to build any special tool to do so
+have to build any special tool to do so
+like roblox has team create which is a
+like roblox has team create which is a
+like roblox has team create which is a
+mess
+mess
+mess
+all the professional game studios all
+all the professional game studios all
+all the professional game studios all
+use rojo and
+use rojo and
+use rojo and
+github yet roblox still finds the need
+github yet roblox still finds the need
+github yet roblox still finds the need
+to
+to
+to
+keep on expanding their editor and keep
+keep on expanding their editor and keep
+keep on expanding their editor and keep
+on expanding
+on expanding
+on expanding
+their own built-in tools when they're
+their own built-in tools when they're
+their own built-in tools when they're
+already better third-party tools that do
+already better third-party tools that do
+already better third-party tools that do
+the same thing i think the core default
+the same thing i think the core default
+the same thing i think the core default
+editor is decent but it's not anything
+editor is decent but it's not anything
+editor is decent but it's not anything
+to be like proud of
+to be like proud of
+to be like proud of
+but the fact that they just let you use
+but the fact that they just let you use
+but the fact that they just let you use
+ps code off the bat is just so freaking
+ps code off the bat is just so freaking
+ps code off the bat is just so freaking
+nice i absolutely love it
+nice i absolutely love it
+nice i absolutely love it
+one thing they do have going for them is
+one thing they do have going for them is
+one thing they do have going for them is
+the documentation is very very good i
+the documentation is very very good i
+the documentation is very very good i
+enjoy it
+enjoy it
+enjoy it
+it's simple
+it's simple
+it's simple
+it has everything i need for all the
+it has everything i need for all the
+it has everything i need for all the
+functions all the properties and it's
+functions all the properties and it's
+functions all the properties and it's
+easy to navigate
+easy to navigate
+easy to navigate
+on par with roblox which is a crazy
+on par with roblox which is a crazy
+on par with roblox which is a crazy
+compliment because they have the best
+compliment because they have the best
+compliment because they have the best
+documentation that i've ever seen
+documentation that i've ever seen
+documentation that i've ever seen
+in my opinion
+in my opinion
+in my opinion
+another issue with the scripting and one
+another issue with the scripting and one
+another issue with the scripting and one
+thing i'm worried about for the platform
+thing i'm worried about for the platform
+thing i'm worried about for the platform
+just as it goes forward
+just as it goes forward
+just as it goes forward
+is
+is
+is
+the existence of many very very very
+the existence of many very very very
+the existence of many very very very
+specific
+specific
+specific
+classes
+classes
+classes
+and functions and properties
+and functions and properties
+and functions and properties
+that
+that
+that
+bloat the api and make
+bloat the api and make
+bloat the api and make
+um doing a lot of simple things in issue
+um doing a lot of simple things in issue
+um doing a lot of simple things in issue
+so for example this weapon
+so for example this weapon
+so for example this weapon
+class here this is what i used to sort
+class here this is what i used to sort
+class here this is what i used to sort
+of creatively to try to get my
+of creatively to try to get my
+of creatively to try to get my
+pheromone place or thing like pheromones
+pheromone place or thing like pheromones
+pheromone place or thing like pheromones
+are little markers that you see
+are little markers that you see
+are little markers that you see
+when like you want to guide the ant
+when like you want to guide the ant
+when like you want to guide the ant
+somewhere
+somewhere
+somewhere
+i used a weapon it's really meant for
+i used a weapon it's really meant for
+i used a weapon it's really meant for
+guns and stuff which really annoyed me
+guns and stuff which really annoyed me
+guns and stuff which really annoyed me
+they have a weapon class and they have
+they have a weapon class and they have
+they have a weapon class and they have
+like an ability class but there's no
+like an ability class but there's no
+like an ability class but there's no
+just basic tool so i have to
+just basic tool so i have to
+just basic tool so i have to
+take a very specific instance that
+take a very specific instance that
+take a very specific instance that
+covers a very small scope of use cases
+covers a very small scope of use cases
+covers a very small scope of use cases
+and try to broaden it which is
+and try to broaden it which is
+and try to broaden it which is
+significantly harder than doing the
+significantly harder than doing the
+significantly harder than doing the
+other way around taking a broad concept
+other way around taking a broad concept
+other way around taking a broad concept
+and narrowing it down to what i'm doing
+and narrowing it down to what i'm doing
+and narrowing it down to what i'm doing
+so like i had to
+so like i had to
+so like i had to
+make the weapon hit scan turn off burst
+make the weapon hit scan turn off burst
+make the weapon hit scan turn off burst
+down transfer second and turn off all
+down transfer second and turn off all
+down transfer second and turn off all
+the recoil which wasn't that hard but
+the recoil which wasn't that hard but
+the recoil which wasn't that hard but
+the fact that i had to use
+the fact that i had to use
+the fact that i had to use
+something this complex for something so
+something this complex for something so
+something this complex for something so
+simple
+simple
+simple
+just really annoyed me and back to the
+just really annoyed me and back to the
+just really annoyed me and back to the
+other like busy pulling example i was
+other like busy pulling example i was
+other like busy pulling example i was
+talking about
+talking about
+talking about
+i used a
+i used a
+i used a
+ability for this an ability is something
+ability for this an ability is something
+ability for this an ability is something
+it's basically like a tool right
+it's basically like a tool right
+it's basically like a tool right
+except one thing is i wanted to get
+except one thing is i wanted to get
+except one thing is i wanted to get
+mouse input
+mouse input
+mouse input
+but it was giving me mouse input as if
+but it was giving me mouse input as if
+but it was giving me mouse input as if
+the camera was in
+the camera was in
+the camera was in
+a like third
+a like third
+a like third
+person view
+person view
+person view
+so
+when i wanted to
+when i wanted to
+when i wanted to
+get
+get
+get
+the actual mouse position in 3d space
+the actual mouse position in 3d space
+the actual mouse position in 3d space
+i'd use
+i'd use
+i'd use
+actually a ui
+function
+function
+function
+uight cursor
+uight cursor
+uight cursor
+hit result
+hit result
+hit result
+to
+to
+to
+send that to the server which is really
+send that to the server which is really
+send that to the server which is really
+annoying i don't know why
+annoying i don't know why
+annoying i don't know why
+they don't have more broad classes and
+they don't have more broad classes and
+they don't have more broad classes and
+it honestly just sets a bad precedent
+it honestly just sets a bad precedent
+it honestly just sets a bad precedent
+because
+because
+because
+the api will get bloated it'll take them
+the api will get bloated it'll take them
+the api will get bloated it'll take them
+longer to develop because when they make
+longer to develop because when they make
+longer to develop because when they make
+these very specific things
+these very specific things
+these very specific things
+they can't really
+they can't really
+they can't really
+iterate on the platform as quickly
+iterate on the platform as quickly
+iterate on the platform as quickly
+and
+and
+and
+my question is is since the
+my question is is since the
+my question is is since the
+community content is so strong and core
+community content is so strong and core
+community content is so strong and core
+why can't they just let the community
+why can't they just let the community
+why can't they just let the community
+make specific weapon classes like this
+make specific weapon classes like this
+make specific weapon classes like this
+just implement them in lua
+just implement them in lua
+just implement them in lua
+he's i don't think it'd be that bad one
+he's i don't think it'd be that bad one
+he's i don't think it'd be that bad one
+benefit from the system for example like
+benefit from the system for example like
+benefit from the system for example like
+being built in is the ai system it's in
+being built in is the ai system it's in
+being built in is the ai system it's in
+its fledgling stage right now but i used
+its fledgling stage right now but i used
+its fledgling stage right now but i used
+it
+it
+it
+and honestly i thought it was pretty
+and honestly i thought it was pretty
+and honestly i thought it was pretty
+good it was pretty simple
+good it was pretty simple
+good it was pretty simple
+but the fact that i could
+but the fact that i could
+but the fact that i could
+like edit the activities in this handler
+like edit the activities in this handler
+like edit the activities in this handler
+while the game was running
+while the game was running
+while the game was running
+was so nice because since it was built
+was so nice because since it was built
+was so nice because since it was built
+like baked into the native editor i did
+like baked into the native editor i did
+like baked into the native editor i did
+not have to touch like make my own debug
+not have to touch like make my own debug
+not have to touch like make my own debug
+system they already had it ready for me
+system they already had it ready for me
+system they already had it ready for me
+out of the box
+out of the box
+out of the box
+which was quite nice especially since
+which was quite nice especially since
+which was quite nice especially since
+the ants had a lot of ai
+the ants had a lot of ai
+the ants had a lot of ai
+but the ants themselves there's no
+but the ants themselves there's no
+but the ants themselves there's no
+kinetic body or just basic movement
+kinetic body or just basic movement
+kinetic body or just basic movement
+like
+like
+like
+body and core
+body and core
+body and core
+you have to make your own so i had to
+you have to make your own so i had to
+you have to make your own so i had to
+make an ant give it gravity i had to
+make an ant give it gravity i had to
+make an ant give it gravity i had to
+re-implement gravity on my own
+re-implement gravity on my own
+re-implement gravity on my own
+so if i go back to the script and we
+so if i go back to the script and we
+so if i go back to the script and we
+find
+find
+find
+like let's just go to clyde activity
+like let's just go to clyde activity
+like let's just go to clyde activity
+this this is what happened like i didn't
+this this is what happened like i didn't
+this this is what happened like i didn't
+implement my own collision so the ant
+implement my own collision so the ant
+implement my own collision so the ant
+wouldn't phase through walls it was just
+wouldn't phase through walls it was just
+wouldn't phase through walls it was just
+kind of annoying that i had to do all of
+kind of annoying that i had to do all of
+kind of annoying that i had to do all of
+this when unreal engine literally has a
+this when unreal engine literally has a
+this when unreal engine literally has a
+kinematic quality i've used it it's a
+kinematic quality i've used it it's a
+kinematic quality i've used it it's a
+great thing and they have a decent
+great thing and they have a decent
+great thing and they have a decent
+physics engine but no i can't get to it
+physics engine but no i can't get to it
+physics engine but no i can't get to it
+because
+because
+because
+we have a player that probably uses a
+we have a player that probably uses a
+we have a player that probably uses a
+chemical body for some reason i can't
+chemical body for some reason i can't
+chemical body for some reason i can't
+get to it
+get to it
+get to it
+but tell me why
+but tell me why
+but tell me why
+we don't have a basic class like a
+we don't have a basic class like a
+we don't have a basic class like a
+kinetic body just like make basic stuff
+kinetic body just like make basic stuff
+kinetic body just like make basic stuff
+yet we have
+yet we have
+yet we have
+a
+four-wheeled vehicle there is a class
+four-wheeled vehicle there is a class
+four-wheeled vehicle there is a class
+and core
+and core
+and core
+called a four-wheel vehicle
+called a four-wheel vehicle
+called a four-wheel vehicle
+that's just crazy to me
+that's just crazy to me
+that's just crazy to me
+the fact that they make it so inflexible
+the fact that they make it so inflexible
+the fact that they make it so inflexible
+to make straight-up vehicles and stuff
+to make straight-up vehicles and stuff
+to make straight-up vehicles and stuff
+like that if they don't have very broad
+like that if they don't have very broad
+like that if they don't have very broad
+classes or like broad joints or anything
+classes or like broad joints or anything
+classes or like broad joints or anything
+just really annoys me because
+just really annoys me because
+just really annoys me because
+what this does
+what this does
+what this does
+in the end is it just narrows down on
+in the end is it just narrows down on
+in the end is it just narrows down on
+creativity
+creativity
+creativity
+you won't be able to make a
+you won't be able to make a
+you won't be able to make a
+special game in a special genre with
+special game in a special genre with
+special game in a special genre with
+core if it does not provide the exact
+core if it does not provide the exact
+core if it does not provide the exact
+specific
+specific
+specific
+things that you need to do it or if you
+things that you need to do it or if you
+things that you need to do it or if you
+do it'll be a lot harder like this game
+do it'll be a lot harder like this game
+do it'll be a lot harder like this game
+this game was not within core's
+this game was not within core's
+this game was not within core's
+sub genres that it supports basically
+sub genres that it supports basically
+sub genres that it supports basically
+like fps battle royale
+like fps battle royale
+like fps battle royale
+uh third person shooter racing game
+uh third person shooter racing game
+uh third person shooter racing game
+stuff like that and i understand that
+stuff like that and i understand that
+stuff like that and i understand that
+they'll add it add more stuff in the
+they'll add it add more stuff in the
+they'll add it add more stuff in the
+future
+future
+future
+but
+but
+but
+game making and especially user
+game making and especially user
+game making and especially user
+generated content game making is
+generated content game making is
+generated content game making is
+supposed to be a very creative
+supposed to be a very creative
+supposed to be a very creative
+and innovative process
+and innovative process
+and innovative process
+when you can't
+when you can't
+when you can't
+innovate on your own and have to rely on
+innovate on your own and have to rely on
+innovate on your own and have to rely on
+the engine itself to release updates for
+the engine itself to release updates for
+the engine itself to release updates for
+you to innovate with
+you to innovate with
+you to innovate with
+it just makes it very hard for people to
+it just makes it very hard for people to
+it just makes it very hard for people to
+a develop games that are crazy and cool
+a develop games that are crazy and cool
+a develop games that are crazy and cool
+and b for people to get into the
+and b for people to get into the
+and b for people to get into the
+platform of all the games are exact
+platform of all the games are exact
+platform of all the games are exact
+carbon copies of each other with
+carbon copies of each other with
+carbon copies of each other with
+different art
+one massive benefit of core is the
+one massive benefit of core is the
+one massive benefit of core is the
+monetization model developers and core
+monetization model developers and core
+monetization model developers and core
+receive like 50 of the profits where in
+receive like 50 of the profits where in
+receive like 50 of the profits where in
+roblox you only get about
+roblox you only get about
+roblox you only get about
+which is a significant difference
+which is a significant difference
+which is a significant difference
+but the weird thing is is that core is
+but the weird thing is is that core is
+but the weird thing is is that core is
+built on unreal so it targets high specs
+built on unreal so it targets high specs
+built on unreal so it targets high specs
+but its audience
+but its audience
+but its audience
+wants to be like 13 year olds and above
+wants to be like 13 year olds and above
+wants to be like 13 year olds and above
+but really
+but really
+but really
+most of the people who play core seem
+most of the people who play core seem
+most of the people who play core seem
+like they're younger because they play
+like they're younger because they play
+like they're younger because they play
+all the simple
+all the simple
+all the simple
+games so
+games so
+games so
+korg is in a weird place where right now
+korg is in a weird place where right now
+korg is in a weird place where right now
+because you can't develop a lot of
+because you can't develop a lot of
+because you can't develop a lot of
+unique game genres
+unique game genres
+unique game genres
+you have mobile games basically on pc
+you have mobile games basically on pc
+you have mobile games basically on pc
+for high-end pcs which is what i see it
+for high-end pcs which is what i see it
+for high-end pcs which is what i see it
+as right now there are good games on
+as right now there are good games on
+as right now there are good games on
+core but just not many people play them
+core but just not many people play them
+core but just not many people play them
+because the kids who play the games on
+because the kids who play the games on
+because the kids who play the games on
+good pcs just are not interested in them
+good pcs just are not interested in them
+good pcs just are not interested in them
+so the demographic that they're
+so the demographic that they're
+so the demographic that they're
+targeting is in a really odd place
+targeting is in a really odd place
+targeting is in a really odd place
+and
+and
+and
+the people there just
+the people there just
+the people there just
+aren't really
+aren't really
+aren't really
+meshing well with what they're doing but
+meshing well with what they're doing but
+meshing well with what they're doing but
+eventually they'll release core console
+eventually they'll release core console
+eventually they'll release core console
+and console players are huge that'd be a
+and console players are huge that'd be a
+and console players are huge that'd be a
+big boost to the platform
+big boost to the platform
+big boost to the platform
+so right now i would not recommend using
+so right now i would not recommend using
+so right now i would not recommend using
+core
+core
+core
+because it forces your creativity down
+because it forces your creativity down
+because it forces your creativity down
+to a select couple genres like i said
+to a select couple genres like i said
+to a select couple genres like i said
+earlier battle royale
+earlier battle royale
+earlier battle royale
+shooters racing games and like maybe an
+shooters racing games and like maybe an
+shooters racing games and like maybe an
+rpg or two
+rpg or two
+rpg or two
+however core is updating very rapidly
+however core is updating very rapidly
+however core is updating very rapidly
+every couple of weeks or so
+every couple of weeks or so
+every couple of weeks or so
+so
+so
+so
+all this information may not be relevant
+all this information may not be relevant
+all this information may not be relevant
+in a couple of months and i kind of hope
+in a couple of months and i kind of hope
+in a couple of months and i kind of hope
+it isn't because i enjoy the platform
+it isn't because i enjoy the platform
+it isn't because i enjoy the platform
+and i think at the very least it'll make
+and i think at the very least it'll make
+and i think at the very least it'll make
+a roblox scared and provide a little
+a roblox scared and provide a little
+a roblox scared and provide a little
+competition since they've had a monopoly
+competition since they've had a monopoly
+competition since they've had a monopoly
+on the user generated content industry
+on the user generated content industry
+on the user generated content industry
+for a very long time it doesn't mean
+for a very long time it doesn't mean
+for a very long time it doesn't mean
+i'll be going away from roblox anytime
+i'll be going away from roblox anytime
+i'll be going away from roblox anytime
+soon it's just i hope they'll give their
+soon it's just i hope they'll give their
+soon it's just i hope they'll give their
+developers
+developers
+developers
+a little more money and a little more
+a little more money and a little more
+a little more money and a little more
+tools and just make studio a little bit
+tools and just make studio a little bit
+tools and just make studio a little bit
+better
+better
+better
+so that would be great if that could
+so that would be great if that could
+so that would be great if that could
+happen
+happen
+happen
+but if you enjoyed this video make sure
+but if you enjoyed this video make sure
+but if you enjoyed this video make sure
+to like it subscribe to my channel
+to like it subscribe to my channel
+to like it subscribe to my channel
+and put any questions or flame me in the
+and put any questions or flame me in the
+and put any questions or flame me in the
+comments below because this is my
+comments below because this is my
+comments below because this is my
+opinion you can still deny me or you can
+opinion you can still deny me or you can
+opinion you can still deny me or you can
+disagree with me i don't really care
+disagree with me i don't really care
+disagree with me i don't really care
+but thank you for listening to my rant
+but thank you for listening to my rant
+but thank you for listening to my rant
+and that's all i have
+and that's all i have
+and that's all i have
+bye
+bye
+bye
+[Music]
+you

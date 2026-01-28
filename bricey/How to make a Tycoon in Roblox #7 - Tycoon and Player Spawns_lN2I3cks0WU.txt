@@ -1,0 +1,1834 @@
+so up to this point our tycoon is in a
+so up to this point our tycoon is in a
+so up to this point our tycoon is in a
+working state
+working state
+working state
+you can get drops and you can turn them
+you can get drops and you can turn them
+you can get drops and you can turn them
+into money but
+into money but
+into money but
+it doesn't work like an actual game when
+it doesn't work like an actual game when
+it doesn't work like an actual game when
+you join in you're not teleported to
+you join in you're not teleported to
+you join in you're not teleported to
+your tycoon and would you leave your
+your tycoon and would you leave your
+your tycoon and would you leave your
+tycoon stays there
+tycoon stays there
+tycoon stays there
+so in this video we're gonna work to fix
+so in this video we're gonna work to fix
+so in this video we're gonna work to fix
+that we're going to add
+that we're going to add
+that we're going to add
+the ability for multiple players to join
+the ability for multiple players to join
+the ability for multiple players to join
+and their tycoons to spawn in the right
+and their tycoons to spawn in the right
+and their tycoons to spawn in the right
+location
+location
+location
+and then if one player leaves their
+and then if one player leaves their
+and then if one player leaves their
+tycoon
+tycoon
+tycoon
+is destroyed so if you enjoyed this
+is destroyed so if you enjoyed this
+is destroyed so if you enjoyed this
+video make sure to like it subscribe to
+video make sure to like it subscribe to
+video make sure to like it subscribe to
+stay up to date with
+stay up to date with
+stay up to date with
+the tycoon series join my discord server
+the tycoon series join my discord server
+the tycoon series join my discord server
+the link is in the description
+the link is in the description
+the link is in the description
+but without further ado let's get
+but without further ado let's get
+but without further ado let's get
+started
+so before we can get to the meat of the
+so before we can get to the meat of the
+so before we can get to the meat of the
+video where we create our spawn system
+video where we create our spawn system
+video where we create our spawn system
+we first have to do some cleanup and
+we first have to do some cleanup and
+we first have to do some cleanup and
+housekeeping
+housekeeping
+housekeeping
+in our player manager to make it a
+in our player manager to make it a
+in our player manager to make it a
+little bit better and a little
+little bit better and a little
+little bit better and a little
+more secure for all situations so let's
+more secure for all situations so let's
+more secure for all situations so let's
+go to our player manager in service
+go to our player manager in service
+go to our player manager in service
+script service player manager
+script service player manager
+script service player manager
+and firstly i want to add
+and firstly i want to add
+and firstly i want to add
+a for loop that will basically
+a for loop that will basically
+a for loop that will basically
+be called whenever start is called to
+be called whenever start is called to
+be called whenever start is called to
+allow all the players who have joined
+allow all the players who have joined
+allow all the players who have joined
+before start has been called
+before start has been called
+before start has been called
+to actually be added to the game because
+to actually be added to the game because
+to actually be added to the game because
+sometimes
+sometimes
+sometimes
+this event connection will connect after
+this event connection will connect after
+this event connection will connect after
+someone has joined it's pretty rare
+someone has joined it's pretty rare
+someone has joined it's pretty rare
+hasn't really happened to me but
+hasn't really happened to me but
+hasn't really happened to me but
+it's possible so we have to contend with
+it's possible so we have to contend with
+it's possible so we have to contend with
+that
+that
+that
+so i'm going to add a for loop above our
+so i'm going to add a for loop above our
+so i'm going to add a for loop above our
+player added event and say 4 underscore
+player added event and say 4 underscore
+player added event and say 4 underscore
+player and i pairs
+player and i pairs
+player and i pairs
+players get players
+players get players
+players get players
+do and then all we want to do is call
+do and then all we want to do is call
+do and then all we want to do is call
+our on player added function but one
+our on player added function but one
+our on player added function but one
+thing you want to keep in mind
+thing you want to keep in mind
+thing you want to keep in mind
+is sometimes our on player added will
+is sometimes our on player added will
+is sometimes our on player added will
+yield and in fact ours will yield in the
+yield and in fact ours will yield in the
+yield and in fact ours will yield in the
+future
+future
+future
+when we add data data storage and data
+when we add data data storage and data
+when we add data data storage and data
+saving
+saving
+saving
+so we want to make sure each of our
+so we want to make sure each of our
+so we want to make sure each of our
+on player added functions runs in a
+on player added functions runs in a
+on player added functions runs in a
+different thread and we've already used
+different thread and we've already used
+different thread and we've already used
+quarantine
+quarantine
+quarantine
+code routines in our tycoon so i won't
+code routines in our tycoon so i won't
+code routines in our tycoon so i won't
+really go over that but i have a video
+really go over that but i have a video
+really go over that but i have a video
+on it if you're interested
+on it if you're interested
+on it if you're interested
+so you can use a code routine dot oh i
+so you can use a code routine dot oh i
+so you can use a code routine dot oh i
+suppose they're wrong co
+suppose they're wrong co
+suppose they're wrong co
+routine dot wrap and we can wrap
+routine dot wrap and we can wrap
+routine dot wrap and we can wrap
+player manager dot on player added
+player manager dot on player added
+player manager dot on player added
+and then after we wrap that function put
+and then after we wrap that function put
+and then after we wrap that function put
+another set of parentheses and send in
+another set of parentheses and send in
+another set of parentheses and send in
+the player so this will wrap
+the player so this will wrap
+the player so this will wrap
+a r player added function into another
+a r player added function into another
+a r player added function into another
+code routine which can be called with
+code routine which can be called with
+code routine which can be called with
+these parentheses
+these parentheses
+these parentheses
+sending in the value of our player so
+sending in the value of our player so
+sending in the value of our player so
+this will make sure all of our players
+this will make sure all of our players
+this will make sure all of our players
+are
+are
+are
+loaded in properly and now let's go to
+loaded in properly and now let's go to
+loaded in properly and now let's go to
+the top of our script
+the top of our script
+the top of our script
+and we can define a
+and we can define a
+and we can define a
+local variable called local player added
+local variable called local player added
+local variable called local player added
+and this will be equal to instance dot
+and this will be equal to instance dot
+and this will be equal to instance dot
+new bindable
+new bindable
+new bindable
+event so we have this
+event so we have this
+event so we have this
+player added block right here just as a
+player added block right here just as a
+player added block right here just as a
+bindable event
+bindable event
+bindable event
+because we'll call this once we're done
+because we'll call this once we're done
+because we'll call this once we're done
+managing our player in our on player
+managing our player in our on player
+managing our player in our on player
+added down here so
+added down here so
+added down here so
+in order for people or for modules
+in order for people or for modules
+in order for people or for modules
+outside
+outside
+outside
+of our player manager to get access to
+of our player manager to get access to
+of our player manager to get access to
+this bindable event
+this bindable event
+this bindable event
+we can add another
+we can add another
+we can add another
+variable but this one will be under our
+variable but this one will be under our
+variable but this one will be under our
+player manager by saying player manager
+player manager by saying player manager
+player manager by saying player manager
+dot player added
+equals player added
+equals player added
+equals player added
+dot event so you may be wondering why
+dot event so you may be wondering why
+dot event so you may be wondering why
+can't i just put the instance on new
+can't i just put the instance on new
+can't i just put the instance on new
+binable event down here
+binable event down here
+binable event down here
+and that's because it makes a little
+and that's because it makes a little
+and that's because it makes a little
+more sense for
+more sense for
+more sense for
+other modules to just directly connect
+other modules to just directly connect
+other modules to just directly connect
+to player added they don't have to say
+to player added they don't have to say
+to player added they don't have to say
+dot event
+dot event
+dot event
+and this also prevents them from firing
+and this also prevents them from firing
+and this also prevents them from firing
+our player added event
+our player added event
+our player added event
+because we do not want any other modules
+because we do not want any other modules
+because we do not want any other modules
+to be able to fire this so that's why
+to be able to fire this so that's why
+to be able to fire this so that's why
+we're gonna
+we're gonna
+we're gonna
+shove it inside here so only our player
+shove it inside here so only our player
+shove it inside here so only our player
+manager will be able to access it
+manager will be able to access it
+manager will be able to access it
+and so for right now in our on player
+and so for right now in our on player
+and so for right now in our on player
+added function we can just say
+added function we can just say
+added function we can just say
+like make a few lines and just say
+like make a few lines and just say
+like make a few lines and just say
+player added
+player added
+player added
+fire with the value of player so after
+fire with the value of player so after
+fire with the value of player so after
+we add
+we add
+we add
+data loading and data saving once the
+data loading and data saving once the
+data loading and data saving once the
+data is loaded
+data is loaded
+data is loaded
+we'll be able to fire this just so
+we'll be able to fire this just so
+we'll be able to fire this just so
+modules who
+modules who
+modules who
+depend on players loading in don't get
+depend on players loading in don't get
+depend on players loading in don't get
+their money before they've like fully
+their money before they've like fully
+their money before they've like fully
+loaded in so that's why we'll have that
+loaded in so that's why we'll have that
+loaded in so that's why we'll have that
+right here so now we can go
+right here so now we can go
+right here so now we can go
+to our server script and make one change
+to our server script and make one change
+to our server script and make one change
+you see we have game get service players
+you see we have game get service players
+you see we have game get service players
+uh player added
+uh player added
+uh player added
+we can get rid of this and just say
+we can get rid of this and just say
+we can get rid of this and just say
+player
+player
+player
+manager dot player added that really
+manager dot player added that really
+manager dot player added that really
+shouldn't change anything it should just
+shouldn't change anything it should just
+shouldn't change anything it should just
+make
+make
+make
+our game a little bit more robust
+our game a little bit more robust
+our game a little bit more robust
+and let's just play this make sure
+and let's just play this make sure
+and let's just play this make sure
+everything works it does
+everything works it does
+everything works it does
+that's great so now we can move on to
+that's great so now we can move on to
+that's great so now we can move on to
+the actual spawn system
+the actual spawn system
+the actual spawn system
+for our tycoons in our game and when i
+for our tycoons in our game and when i
+for our tycoons in our game and when i
+was
+was
+was
+making the system i've ran into a few
+making the system i've ran into a few
+making the system i've ran into a few
+problems first of all
+problems first of all
+problems first of all
+whenever a tycoon spawns the player
+whenever a tycoon spawns the player
+whenever a tycoon spawns the player
+loads in too quickly
+loads in too quickly
+loads in too quickly
+and it's kind of janky to let the player
+and it's kind of janky to let the player
+and it's kind of janky to let the player
+load in and then teleport them to where
+load in and then teleport them to where
+load in and then teleport them to where
+their tycoon has spawned
+their tycoon has spawned
+their tycoon has spawned
+so i found a unique workaround to this
+so i found a unique workaround to this
+so i found a unique workaround to this
+where i
+where i
+where i
+make it so the player doesn't load in
+make it so the player doesn't load in
+make it so the player doesn't load in
+when they spawn in
+when they spawn in
+when they spawn in
+and then you manually load them in once
+and then you manually load them in once
+and then you manually load them in once
+you've assigned them a spawn
+you've assigned them a spawn
+you've assigned them a spawn
+so that's going to take a little bit to
+so that's going to take a little bit to
+so that's going to take a little bit to
+work to get done so let's do it
+work to get done so let's do it
+work to get done so let's do it
+now go to players in your explorer and
+now go to players in your explorer and
+now go to players in your explorer and
+deselect or uncheck character auto loads
+deselect or uncheck character auto loads
+deselect or uncheck character auto loads
+and what that does
+and what that does
+and what that does
+is when i press play my character
+is when i press play my character
+is when i press play my character
+won't load you can see my camera is just
+won't load you can see my camera is just
+won't load you can see my camera is just
+at zero zero zero pointing down and
+at zero zero zero pointing down and
+at zero zero zero pointing down and
+nothing happens so in order to load our
+nothing happens so in order to load our
+nothing happens so in order to load our
+player we have to say
+player we have to say
+player we have to say
+player load character and that's how
+player load character and that's how
+player load character and that's how
+we'll do that but we only want to do
+we'll do that but we only want to do
+we'll do that but we only want to do
+that on our terms
+that on our terms
+that on our terms
+so let's go into our tycoon
+so let's go into our tycoon
+so let's go into our tycoon
+and add that functionality so i'm going
+and add that functionality so i'm going
+and add that functionality so i'm going
+to go down to
+to go down to
+to go down to
+tycoon init and i'm going to say
+self dot owner
+self dot owner
+self dot owner
+dot respawn location equals
+dot respawn location equals
+dot respawn location equals
+our respawn location so let's add our
+our respawn location so let's add our
+our respawn location so let's add our
+respawn location
+respawn location
+respawn location
+i'm going to go to server storage
+i'm going to go to server storage
+i'm going to go to server storage
+drag our tycoon template into the
+drag our tycoon template into the
+drag our tycoon template into the
+workspace
+workspace
+workspace
+select it here and then i want to add a
+select it here and then i want to add a
+select it here and then i want to add a
+spawn location to our tycoon
+spawn location to our tycoon
+spawn location to our tycoon
+so that whenever the player dies and
+so that whenever the player dies and
+so that whenever the player dies and
+responds they'll spawn here just to make
+responds they'll spawn here just to make
+responds they'll spawn here just to make
+it
+it
+it
+a little bit easier to get back to their
+a little bit easier to get back to their
+a little bit easier to get back to their
+spawn or the tycoon so i'm going to go
+spawn or the tycoon so i'm going to go
+spawn or the tycoon so i'm going to go
+to
+to
+to
+model and then spawn click spawn you
+model and then spawn click spawn you
+model and then spawn click spawn you
+have the spawn
+have the spawn
+have the spawn
+i'm going to move it and wrap about here
+i'm going to move it and wrap about here
+i'm going to move it and wrap about here
+and make it a lot smaller it's kind of
+and make it a lot smaller it's kind of
+and make it a lot smaller it's kind of
+big
+big
+big
+kind of chunky let me actually just
+kind of chunky let me actually just
+kind of chunky let me actually just
+change the size i'll change it to like
+change the size i'll change it to like
+change the size i'll change it to like
+to i'm going to change it to
+to i'm going to change it to
+to i'm going to change it to
+2 by 0.5 by 2.
+2 by 0.5 by 2.
+2 by 0.5 by 2.
+there you go so that's about good i'm
+there you go so that's about good i'm
+there you go so that's about good i'm
+just going to leave it about there
+just going to leave it about there
+just going to leave it about there
+shove it into our template and i'm going
+shove it into our template and i'm going
+shove it into our template and i'm going
+to name it
+to name it
+to name it
+spawn and i'm going to go back into our
+spawn and i'm going to go back into our
+spawn and i'm going to go back into our
+tycoon and where we say
+tycoon and where we say
+tycoon and where we say
+self.owner.respawnlocation i can set it
+self.owner.respawnlocation i can set it
+self.owner.respawnlocation i can set it
+to self.model.spawn
+to self.model.spawn
+to self.model.spawn
+or whatever you named it inside your
+or whatever you named it inside your
+or whatever you named it inside your
+template and then make sure to take your
+template and then make sure to take your
+template and then make sure to take your
+template and drag it back into server
+template and drag it back into server
+template and drag it back into server
+storage
+storage
+storage
+once you're done so now our players
+once you're done so now our players
+once you're done so now our players
+restawn location
+restawn location
+restawn location
+and by the way each player has a value
+and by the way each player has a value
+and by the way each player has a value
+called respawn location that can be
+called respawn location that can be
+called respawn location that can be
+assigned to a spawn location that's what
+assigned to a spawn location that's what
+assigned to a spawn location that's what
+we're using here
+we're using here
+we're using here
+and that'll just ensure that they always
+and that'll just ensure that they always
+and that'll just ensure that they always
+respawn there but
+respawn there but
+respawn there but
+it's not guaranteed they'll spawn there
+it's not guaranteed they'll spawn there
+it's not guaranteed they'll spawn there
+initially so that's why we had to
+initially so that's why we had to
+initially so that's why we had to
+disable character auto loading
+disable character auto loading
+disable character auto loading
+so now once we set our respawn location
+so now once we set our respawn location
+so now once we set our respawn location
+we can say self
+we can say self
+we can say self
+dot owner load character
+dot owner load character
+dot owner load character
+to put the character into the game so
+to put the character into the game so
+to put the character into the game so
+let's try that out
+you can see we spawn right on this pad
+you can see we spawn right on this pad
+you can see we spawn right on this pad
+right where we want to and everything
+right where we want to and everything
+right where we want to and everything
+works perfectly
+works perfectly
+works perfectly
+but let's say we want to reset the
+but let's say we want to reset the
+but let's say we want to reset the
+character
+nothing happens our character does not
+nothing happens our character does not
+nothing happens our character does not
+respond
+respond
+respond
+so we're going to have to add some extra
+so we're going to have to add some extra
+so we're going to have to add some extra
+code to fix this
+code to fix this
+code to fix this
+it's very simple all we have to do is go
+it's very simple all we have to do is go
+it's very simple all we have to do is go
+into the player manager
+into the player manager
+into the player manager
+and in our on player added we want to
+and in our on player added we want to
+and in our on player added we want to
+add
+add
+add
+another block and say player.on
+another block and say player.on
+another block and say player.on
+character added will connect
+character added will connect
+character added will connect
+a function with the new character i'm
+a function with the new character i'm
+a function with the new character i'm
+just gonna say
+just gonna say
+just gonna say
+character there we go and then all we
+character there we go and then all we
+character there we go and then all we
+have to do
+have to do
+have to do
+is i'm gonna call another function
+is i'm gonna call another function
+is i'm gonna call another function
+but i'm gonna make it down here first
+but i'm gonna make it down here first
+but i'm gonna make it down here first
+and this function is gonna become
+and this function is gonna become
+and this function is gonna become
+player manager dot on
+player manager dot on
+player manager dot on
+character added and this
+character added and this
+character added and this
+function will take in the player and the
+function will take in the player and the
+function will take in the player and the
+character and i'll show you why we need
+character and i'll show you why we need
+character and i'll show you why we need
+a player in just a second but
+a player in just a second but
+a player in just a second but
+it's kind of annoying that we have to
+it's kind of annoying that we have to
+it's kind of annoying that we have to
+make this new function block but you
+make this new function block but you
+make this new function block but you
+kind of have to
+kind of have to
+kind of have to
+so we have this new function on
+so we have this new function on
+so we have this new function on
+character added it's never been called
+character added it's never been called
+character added it's never been called
+so let's add it to our own character
+so let's add it to our own character
+so let's add it to our own character
+added
+added
+added
+connection up here by saying player
+connection up here by saying player
+connection up here by saying player
+manager
+manager
+manager
+dot on character added and pass in the
+dot on character added and pass in the
+dot on character added and pass in the
+player and then the character so we're
+player and then the character so we're
+player and then the character so we're
+getting the player from the on player
+getting the player from the on player
+getting the player from the on player
+added and the character from on
+added and the character from on
+added and the character from on
+character added
+character added
+character added
+and we send them both in and then inside
+and we send them both in and then inside
+and we send them both in and then inside
+the on character added
+the on character added
+the on character added
+block we can first get the characters
+block we can first get the characters
+block we can first get the characters
+humanoid and this will be done by saying
+humanoid and this will be done by saying
+humanoid and this will be done by saying
+local humanoid
+local humanoid
+local humanoid
+equals character find the first
+equals character find the first
+equals character find the first
+child humanoid so we have to make sure
+child humanoid so we have to make sure
+child humanoid so we have to make sure
+it exists by saying if humanoid
+it exists by saying if humanoid
+it exists by saying if humanoid
+then and then we want to
+then and then we want to
+then and then we want to
+detect when the humanoid the character
+detect when the humanoid the character
+detect when the humanoid the character
+the player's humanoids character
+the player's humanoids character
+the player's humanoids character
+dies and we want to respawn them that's
+dies and we want to respawn them that's
+dies and we want to respawn them that's
+pretty simple all we have to do is say
+pretty simple all we have to do is say
+pretty simple all we have to do is say
+humanoid
+humanoid
+humanoid
+dot died so when the humanoid dies when
+dot died so when the humanoid dies when
+dot died so when the humanoid dies when
+the player dies we connect
+the player dies we connect
+the player dies we connect
+another function and this function won't
+another function and this function won't
+another function and this function won't
+have any arguments
+have any arguments
+have any arguments
+and then we'll wait for three seconds
+and then we'll wait for three seconds
+and then we'll wait for three seconds
+and then we'll say
+and then we'll say
+and then we'll say
+player load character
+player load character
+player load character
+so this weight can be set to whatever
+so this weight can be set to whatever
+so this weight can be set to whatever
+you want whatever your respawn time you
+you want whatever your respawn time you
+you want whatever your respawn time you
+want to be
+want to be
+want to be
+but three seconds is pretty good for me
+but three seconds is pretty good for me
+but three seconds is pretty good for me
+so after they die
+so after they die
+so after they die
+it'll wait three seconds and then reload
+it'll wait three seconds and then reload
+it'll wait three seconds and then reload
+the player character
+the player character
+the player character
+and then once that happens the on
+and then once that happens the on
+and then once that happens the on
+character edit will fire again and this
+character edit will fire again and this
+character edit will fire again and this
+whole
+whole
+whole
+cycle will repeat so let's play this
+okay so i think this is a misspell yeah
+okay so i think this is a misspell yeah
+okay so i think this is a misspell yeah
+so right here
+so right here
+so right here
+it's not supposed to be on character as
+it's not supposed to be on character as
+it's not supposed to be on character as
+it's supposed to be character ad so
+it's supposed to be character ad so
+it's supposed to be character ad so
+player dot character added
+player dot character added
+player dot character added
+the function we have is named on
+the function we have is named on
+the function we have is named on
+character added
+character added
+character added
+but we want to have player on character
+but we want to have player on character
+but we want to have player on character
+added not on character added
+added not on character added
+added not on character added
+let's try that again you can see you
+let's try that again you can see you
+let's try that again you can see you
+spawn in everything works fine
+spawn in everything works fine
+spawn in everything works fine
+and then when you go to reset your
+and then when you go to reset your
+and then when you go to reset your
+character
+character
+character
+you die and then after three seconds you
+you die and then after three seconds you
+you die and then after three seconds you
+will respond
+will respond
+will respond
+and you respawn right where you're
+and you respawn right where you're
+and you respawn right where you're
+supposed to without any further input
+supposed to without any further input
+supposed to without any further input
+which is exactly
+which is exactly
+which is exactly
+what we want so this is the first step
+what we want so this is the first step
+what we want so this is the first step
+into getting
+into getting
+into getting
+our little tycoon spawn system so now
+our little tycoon spawn system so now
+our little tycoon spawn system so now
+the player spawns
+the player spawns
+the player spawns
+at their tycoon but we want the tycoon
+at their tycoon but we want the tycoon
+at their tycoon but we want the tycoon
+to spawn at a spawn point that we
+to spawn at a spawn point that we
+to spawn at a spawn point that we
+designate before the game
+designate before the game
+designate before the game
+so i'm going to create a new folder in
+so i'm going to create a new folder in
+so i'm going to create a new folder in
+the workspace
+the workspace
+the workspace
+folder and i'm going to name this folder
+folder and i'm going to name this folder
+folder and i'm going to name this folder
+spawns
+spawns
+spawns
+and so this will be where all of our
+and so this will be where all of our
+and so this will be where all of our
+spawn points for our tycoon will be
+spawn points for our tycoon will be
+spawn points for our tycoon will be
+these spawn points do not have to be
+these spawn points do not have to be
+these spawn points do not have to be
+spawn locations spawn locations are
+spawn locations spawn locations are
+spawn locations spawn locations are
+meant for
+meant for
+meant for
+player characters we're not using player
+player characters we're not using player
+player characters we're not using player
+characters we're using
+characters we're using
+characters we're using
+tycoon models so it doesn't matter so
+tycoon models so it doesn't matter so
+tycoon models so it doesn't matter so
+i'm just going to create a sphere
+i'm just going to create a sphere
+i'm just going to create a sphere
+and put the sphere inside of spawns
+and put the sphere inside of spawns
+and put the sphere inside of spawns
+i'm going to make this here a one by one
+i'm going to make this here a one by one
+i'm going to make this here a one by one
+by one sphere just so it looks a little
+by one sphere just so it looks a little
+by one sphere just so it looks a little
+better
+there you go i'm gonna make it like
+there you go i'm gonna make it like
+there you go i'm gonna make it like
+semi-transparent
+and then change the color to a nice like
+and then change the color to a nice like
+and then change the color to a nice like
+red or something
+red or something
+red or something
+so you can see it a little bit better
+so you can see it a little bit better
+so you can see it a little bit better
+you know obviously once you're done
+you know obviously once you're done
+you know obviously once you're done
+placing them around
+placing them around
+placing them around
+make them invisible so you can't see
+make them invisible so you can't see
+make them invisible so you can't see
+them but i just like to have them
+them but i just like to have them
+them but i just like to have them
+visible for
+visible for
+visible for
+testing which we're doing right now so
+testing which we're doing right now so
+testing which we're doing right now so
+i'm going to leave this
+i'm going to leave this
+i'm going to leave this
+part here maybe make another one like
+part here maybe make another one like
+part here maybe make another one like
+over here
+over here
+over here
+and this can be the two spawns that
+and this can be the two spawns that
+and this can be the two spawns that
+we'll have for right now just to make
+we'll have for right now just to make
+we'll have for right now just to make
+sure the system works
+sure the system works
+sure the system works
+and you don't have to name these spawns
+and you don't have to name these spawns
+and you don't have to name these spawns
+anything special you can just leave them
+anything special you can just leave them
+anything special you can just leave them
+as part
+as part
+as part
+so now let's go back to our server and
+so now let's go back to our server and
+so now let's go back to our server and
+we're going to make a
+we're going to make a
+we're going to make a
+function called find spawn so i'm going
+function called find spawn so i'm going
+function called find spawn so i'm going
+to say local
+to say local
+to say local
+function find spawn won't have any
+function find spawn won't have any
+function find spawn won't have any
+arguments and then what we want to do
+arguments and then what we want to do
+arguments and then what we want to do
+is loop through each part in our spawns
+is loop through each part in our spawns
+is loop through each part in our spawns
+and check for an attribute so how our
+and check for an attribute so how our
+and check for an attribute so how our
+response is going to work
+response is going to work
+response is going to work
+is whenever a spawn is occupied whenever
+is whenever a spawn is occupied whenever
+is whenever a spawn is occupied whenever
+a tycoon is at a spawn
+a tycoon is at a spawn
+a tycoon is at a spawn
+which we definitely do not want multiple
+which we definitely do not want multiple
+which we definitely do not want multiple
+tycoons spawning in the same exact
+tycoons spawning in the same exact
+tycoons spawning in the same exact
+location
+location
+location
+that would just be stupid we set an
+that would just be stupid we set an
+that would just be stupid we set an
+attribute
+attribute
+attribute
+on the part called like occupied you can
+on the part called like occupied you can
+on the part called like occupied you can
+name it whatever you want i'm just gonna
+name it whatever you want i'm just gonna
+name it whatever you want i'm just gonna
+use occupied because
+use occupied because
+use occupied because
+occupied is a nice word that makes sense
+occupied is a nice word that makes sense
+occupied is a nice word that makes sense
+there and you set that to true
+there and you set that to true
+there and you set that to true
+when there's this tycoon there and you
+when there's this tycoon there and you
+when there's this tycoon there and you
+set it to false when it's not there
+set it to false when it's not there
+set it to false when it's not there
+so i can do that here by saying for
+so i can do that here by saying for
+so i can do that here by saying for
+underscore spawn point
+underscore spawn point
+underscore spawn point
+in i pairs and then we want to get our
+in i pairs and then we want to get our
+in i pairs and then we want to get our
+spawn so i'm just going to say
+spawn so i'm just going to say
+spawn so i'm just going to say
+workspace dot spawns get children
+workspace dot spawns get children
+workspace dot spawns get children
+do and then we want to check if the
+do and then we want to check if the
+do and then we want to check if the
+spawn point is occupied by saying if
+spawn point is occupied by saying if
+spawn point is occupied by saying if
+spawn point
+get attribute occupied
+get attribute occupied
+get attribute occupied
+so we want to make sure they're not
+so we want to make sure they're not
+so we want to make sure they're not
+occupied so we can say if
+occupied so we can say if
+occupied so we can say if
+not spawn point get attribute occupied
+not spawn point get attribute occupied
+not spawn point get attribute occupied
+then
+then
+then
+we return the spawn point
+we return the spawn point
+we return the spawn point
+so what this will do is it'll find all
+so what this will do is it'll find all
+so what this will do is it'll find all
+of our
+of our
+of our
+look through all responding points find
+look through all responding points find
+look through all responding points find
+the one that's not occupied and then
+the one that's not occupied and then
+the one that's not occupied and then
+return this
+return this
+return this
+notice how this function does not have
+notice how this function does not have
+notice how this function does not have
+any fail saves if your game does not
+any fail saves if your game does not
+any fail saves if your game does not
+have a stuff spawn points to
+have a stuff spawn points to
+have a stuff spawn points to
+for the amount of players in like the
+for the amount of players in like the
+for the amount of players in like the
+max players that you have
+max players that you have
+max players that you have
+this will air eventually so make sure
+this will air eventually so make sure
+this will air eventually so make sure
+you have well over enough spawn points
+you have well over enough spawn points
+you have well over enough spawn points
+so like
+so like
+so like
+if your tycoon game has 10 players
+if your tycoon game has 10 players
+if your tycoon game has 10 players
+allowed
+allowed
+allowed
+make like 12 spawn points just in case
+make like 12 spawn points just in case
+make like 12 spawn points just in case
+something happens and there's extra
+something happens and there's extra
+something happens and there's extra
+players
+players
+players
+whatever you want to have more spawn
+whatever you want to have more spawn
+whatever you want to have more spawn
+points than there is players allowed in
+points than there is players allowed in
+points than there is players allowed in
+your game
+your game
+your game
+i think most roblox games default at
+i think most roblox games default at
+i think most roblox games default at
+like 50 people per game
+like 50 people per game
+like 50 people per game
+so that's kind of stupid you don't you
+so that's kind of stupid you don't you
+so that's kind of stupid you don't you
+don't want that you want to lower that
+don't want that you want to lower that
+don't want that you want to lower that
+and then when we're going to call this
+and then when we're going to call this
+and then when we're going to call this
+function we're going to call it down
+function we're going to call it down
+function we're going to call it down
+here so when we say tycoon.new we've
+here so when we say tycoon.new we've
+here so when we say tycoon.new we've
+only been passing the player
+only been passing the player
+only been passing the player
+but now we're going to pass in a spawn
+but now we're going to pass in a spawn
+but now we're going to pass in a spawn
+point and that spawn pipe will just be
+point and that spawn pipe will just be
+point and that spawn pipe will just be
+passed in by saying
+passed in by saying
+passed in by saying
+find spawn so find spawn we'll get a
+find spawn so find spawn we'll get a
+find spawn so find spawn we'll get a
+spawn it'll return it and it'll pass it
+spawn it'll return it and it'll pass it
+spawn it'll return it and it'll pass it
+to our tycoon.new
+to our tycoon.new
+to our tycoon.new
+so let's go to our tycoon.new and then
+so let's go to our tycoon.new and then
+so let's go to our tycoon.new and then
+right next to our player we can add
+right next to our player we can add
+right next to our player we can add
+another
+another
+another
+argument called spawnpoint and we don't
+argument called spawnpoint and we don't
+argument called spawnpoint and we don't
+really need the spawn point for that
+really need the spawn point for that
+really need the spawn point for that
+much
+much
+much
+all we're gonna do is say self
+all we're gonna do is say self
+all we're gonna do is say self
+dot underscore spawn equals spawn point
+dot underscore spawn equals spawn point
+dot underscore spawn equals spawn point
+and this will just be used for later
+and this will just be used for later
+and this will just be used for later
+reference
+reference
+reference
+and we'll use it down here in our init
+and we'll use it down here in our init
+and we'll use it down here in our init
+by saying
+by saying
+by saying
+self underscore spawn
+self underscore spawn
+self underscore spawn
+set attribute occupied
+set attribute occupied
+set attribute occupied
+and then we want to set it to the string
+and then we want to set it to the string
+and then we want to set it to the string
+occupied and then the value of
+occupied and then the value of
+occupied and then the value of
+true so this will set our spawn
+true so this will set our spawn
+true so this will set our spawn
+to occupied and then
+to occupied and then
+to occupied and then
+down here in our
+down here in our
+down here in our
+destroy function we can say
+destroy function we can say
+destroy function we can say
+self underscore spawn set attribute
+self underscore spawn set attribute
+self underscore spawn set attribute
+occupied to false so when our tycoon is
+occupied to false so when our tycoon is
+occupied to false so when our tycoon is
+destroyed
+destroyed
+destroyed
+we will make it ready to be occupied
+we will make it ready to be occupied
+we will make it ready to be occupied
+again so let's try this out
+so the tycoon spawns at one of the spawn
+so the tycoon spawns at one of the spawn
+so the tycoon spawns at one of the spawn
+points
+points
+points
+and occupied is that true let's verify
+and occupied is that true let's verify
+and occupied is that true let's verify
+that let's go to workspace
+that let's go to workspace
+that let's go to workspace
+spawns and then let me just scroll down
+spawns and then let me just scroll down
+spawns and then let me just scroll down
+okay this one occupied is set to true
+okay this one occupied is set to true
+okay this one occupied is set to true
+one thing i forgot to do
+one thing i forgot to do
+one thing i forgot to do
+is actually set the c frame of our
+is actually set the c frame of our
+is actually set the c frame of our
+tycoon
+tycoon
+tycoon
+so we should probably do that in our
+so we should probably do that in our
+so we should probably do that in our
+new model function you can see we set
+new model function you can see we set
+new model function you can see we set
+cframe.new010
+cframe.new010
+cframe.new010
+let's change this to self underscore
+let's change this to self underscore
+let's change this to self underscore
+spawn
+spawn
+spawn
+dot c frame so let's try that again
+dot c frame so let's try that again
+dot c frame so let's try that again
+i was wondering why the spawn was across
+i was wondering why the spawn was across
+i was wondering why the spawn was across
+the map that was it
+the map that was it
+the map that was it
+so now we actually spawn at a spawn and
+so now we actually spawn at a spawn and
+so now we actually spawn at a spawn and
+we can verify that we're going to
+we can verify that we're going to
+we can verify that we're going to
+workspace spawns yeah you can see it's
+workspace spawns yeah you can see it's
+workspace spawns yeah you can see it's
+highlighted in blue right here
+one last thing we want to do is
+one last thing we want to do is
+one last thing we want to do is
+clean up our tycoon once the player
+clean up our tycoon once the player
+clean up our tycoon once the player
+leaves so with our previously set up
+leaves so with our previously set up
+leaves so with our previously set up
+infrastructure that should be pretty
+infrastructure that should be pretty
+infrastructure that should be pretty
+easy
+easy
+easy
+so let's go to our player manager repeat
+so let's go to our player manager repeat
+so let's go to our player manager repeat
+the same process we did for the player
+the same process we did for the player
+the same process we did for the player
+added
+added
+added
+bindable event by saying local player
+bindable event by saying local player
+bindable event by saying local player
+removing
+removing
+removing
+equal instance dot new bindable event
+equal instance dot new bindable event
+equal instance dot new bindable event
+and then below our player manager player
+and then below our player manager player
+and then below our player manager player
+added we can say
+added we can say
+added we can say
+playermanager.player removing
+playermanager.player removing
+playermanager.player removing
+equals playerremoving.event
+equals playerremoving.event
+equals playerremoving.event
+and now we can hook that up and our
+and now we can hook that up and our
+and now we can hook that up and our
+start
+start
+start
+let's go down below our anchors are
+let's go down below our anchors are
+let's go down below our anchors are
+added
+added
+added
+actually let's go to the almost very
+actually let's go to the almost very
+actually let's go to the almost very
+bottom and we can create a function
+bottom and we can create a function
+bottom and we can create a function
+player manager dot on player removing
+it'll take in the player that is being
+it'll take in the player that is being
+it'll take in the player that is being
+removed and all we're gonna do here is
+removed and all we're gonna do here is
+removed and all we're gonna do here is
+say player removing
+fire with the player eventually we'll
+fire with the player eventually we'll
+fire with the player eventually we'll
+add
+add
+add
+logic to save our players data but for
+logic to save our players data but for
+logic to save our players data but for
+right now this is all we're going to do
+right now this is all we're going to do
+right now this is all we're going to do
+in our player
+in our player
+in our player
+removing just to notify all the tycoons
+removing just to notify all the tycoons
+removing just to notify all the tycoons
+when a player leaves
+when a player leaves
+when a player leaves
+and right now this will never get cold
+and right now this will never get cold
+and right now this will never get cold
+so let's go back to the player
+so let's go back to the player
+so let's go back to the player
+manager start function and all we have
+manager start function and all we have
+manager start function and all we have
+to do is say
+to do is say
+to do is say
+players dot player removing
+players dot player removing
+players dot player removing
+connect player manager
+connect player manager
+connect player manager
+dot on player removing
+dot on player removing
+dot on player removing
+there we go and so now when our player
+there we go and so now when our player
+there we go and so now when our player
+leaves a player moving will be fired
+leaves a player moving will be fired
+leaves a player moving will be fired
+and we can use that in our tycoon
+and we can use that in our tycoon
+and we can use that in our tycoon
+by waiting for a player to leave and
+by waiting for a player to leave and
+by waiting for a player to leave and
+then comparing it with our owner and if
+then comparing it with our owner and if
+then comparing it with our owner and if
+our owner
+our owner
+our owner
+is equal to player that's leaving we
+is equal to player that's leaving we
+is equal to player that's leaving we
+destroy the tycoon
+destroy the tycoon
+destroy the tycoon
+and call our destroy function which for
+and call our destroy function which for
+and call our destroy function which for
+up to this point has done absolutely
+up to this point has done absolutely
+up to this point has done absolutely
+nothing
+nothing
+nothing
+so let's try that let's go to the very
+so let's try that let's go to the very
+so let's try that let's go to the very
+top of our script
+top of our script
+top of our script
+and say local player manager
+and say local player manager
+and say local player manager
+equals require
+equals require
+equals require
+script dot parent dot player manager
+script dot parent dot player manager
+script dot parent dot player manager
+so now we have our player manager and
+so now we have our player manager and
+so now we have our player manager and
+then in
+then in
+then in
+our tycoon let's go under the very
+our tycoon let's go under the very
+our tycoon let's go under the very
+bottom and add a function
+bottom and add a function
+bottom and add a function
+right before destroy and this will be a
+right before destroy and this will be a
+right before destroy and this will be a
+function tycoon
+function tycoon
+function tycoon
+wait for exit and also do is
+wait for exit and also do is
+wait for exit and also do is
+wait for our owner to leave so let's
+wait for our owner to leave so let's
+wait for our owner to leave so let's
+add the functionality so in here all
+add the functionality so in here all
+add the functionality so in here all
+we're going to do is say
+we're going to do is say
+we're going to do is say
+player manager dot player removing
+player manager dot player removing
+player manager dot player removing
+connect so we're going to connect to the
+connect so we're going to connect to the
+connect so we're going to connect to the
+bindable event when the player leaves
+bindable event when the player leaves
+bindable event when the player leaves
+and we're going to connect a function
+and we're going to connect a function
+and we're going to connect a function
+i'm going to make sure the player
+i'm going to make sure the player
+i'm going to make sure the player
+manager is expelled correctly
+manager is expelled correctly
+manager is expelled correctly
+and then we'll connect to the player and
+and then we'll connect to the player and
+and then we'll connect to the player and
+then we'll make sure we'll say if
+then we'll make sure we'll say if
+then we'll make sure we'll say if
+self.owner equals or double equals
+self.owner equals or double equals
+self.owner equals or double equals
+player then we want to say self destroy
+player then we want to say self destroy
+player then we want to say self destroy
+so if our if the player that's leaving
+so if our if the player that's leaving
+so if our if the player that's leaving
+is our owner so if our owner left the
+is our owner so if our owner left the
+is our owner so if our owner left the
+game we want to get rid of tycoon
+game we want to get rid of tycoon
+game we want to get rid of tycoon
+when we get rid of the tycoon the model
+when we get rid of the tycoon the model
+when we get rid of the tycoon the model
+will get destroyed our
+will get destroyed our
+will get destroyed our
+topic event will get destroyed and then
+topic event will get destroyed and then
+topic event will get destroyed and then
+our spawn
+our spawn
+our spawn
+will be unoccupied again so that's great
+will be unoccupied again so that's great
+will be unoccupied again so that's great
+so let's go to the top to our net
+so let's go to the top to our net
+so let's go to the top to our net
+function and call
+function and call
+function and call
+self wait for exit
+so now let's test everything we've
+so now let's test everything we've
+so now let's test everything we've
+created in this video
+created in this video
+created in this video
+in order to do that go to test in the
+in order to do that go to test in the
+in order to do that go to test in the
+top of your screen
+top of your screen
+top of your screen
+so here's test and i'm going to select
+so here's test and i'm going to select
+so here's test and i'm going to select
+local server
+local server
+local server
+and then i like to have my tests have
+and then i like to have my tests have
+and then i like to have my tests have
+two players you can add four whatever
+two players you can add four whatever
+two players you can add four whatever
+i'm just gonna add two since we only
+i'm just gonna add two since we only
+i'm just gonna add two since we only
+have two spawns right now
+have two spawns right now
+have two spawns right now
+and i'm going to click start
+and i'm going to click start
+and i'm going to click start
+so this will bring up three different
+so this will bring up three different
+so this will bring up three different
+windows the first
+windows the first
+windows the first
+is a server window which i have on my
+is a server window which i have on my
+is a server window which i have on my
+second monitor you can see it by the
+second monitor you can see it by the
+second monitor you can see it by the
+little
+little
+little
+green outline and this is what the
+green outline and this is what the
+green outline and this is what the
+server sees
+server sees
+server sees
+and then the next two windows are the
+and then the next two windows are the
+and then the next two windows are the
+players which are
+players which are
+players which are
+have this blue outline here as you can
+have this blue outline here as you can
+have this blue outline here as you can
+see both players spawn in
+see both players spawn in
+see both players spawn in
+they can do whatever they want you know
+they can do whatever they want you know
+they can do whatever they want you know
+you can spawn a copper dropper
+you can spawn a copper dropper
+you can spawn a copper dropper
+and you can see they can interact and
+and you can see they can interact and
+and you can see they can interact and
+whatever
+whatever
+whatever
+so let's say one of the players leave so
+so let's say one of the players leave so
+so let's say one of the players leave so
+in order to simulate leaving all you can
+in order to simulate leaving all you can
+in order to simulate leaving all you can
+do is just
+do is just
+do is just
+click the x this player here
+click the x this player here
+click the x this player here
+you can see the tycoon is gone and if we
+you can see the tycoon is gone and if we
+you can see the tycoon is gone and if we
+go to the server
+go to the server
+go to the server
+let me bring back the server and we go
+let me bring back the server and we go
+let me bring back the server and we go
+to workspace
+to workspace
+to workspace
+spawns you can see one of the spawns is
+spawns you can see one of the spawns is
+spawns you can see one of the spawns is
+occupied and the other one
+occupied and the other one
+occupied and the other one
+is not occupied and then now
+is not occupied and then now
+is not occupied and then now
+if you want to if you're done with your
+if you want to if you're done with your
+if you want to if you're done with your
+test just press the clean up button it
+test just press the clean up button it
+test just press the clean up button it
+will delete all the other windows
+will delete all the other windows
+will delete all the other windows
+so that's a our test done
+so that's a our test done
+so that's a our test done
+and that's it for this video so i hope
+and that's it for this video so i hope
+and that's it for this video so i hope
+you enjoyed we got a lot done today
+you enjoyed we got a lot done today
+you enjoyed we got a lot done today
+this turns our tycoon which is
+this turns our tycoon which is
+this turns our tycoon which is
+functional the last video
+functional the last video
+functional the last video
+into a fully functioning game almost
+into a fully functioning game almost
+into a fully functioning game almost
+because players can leave and join
+because players can leave and join
+because players can leave and join
+and their mess is cleaned up after they
+and their mess is cleaned up after they
+and their mess is cleaned up after they
+leave
+leave
+leave
+and they spawn in appropriately wherever
+and they spawn in appropriately wherever
+and they spawn in appropriately wherever
+you put your tycoon spawns
+you put your tycoon spawns
+you put your tycoon spawns
+so i hope you enjoyed that make sure to
+so i hope you enjoyed that make sure to
+so i hope you enjoyed that make sure to
+like the video if you did
+like the video if you did
+like the video if you did
+subscribe to stay up to date with the
+subscribe to stay up to date with the
+subscribe to stay up to date with the
+tycoon series
+tycoon series
+tycoon series
+and comment any questions or suggestions
+and comment any questions or suggestions
+and comment any questions or suggestions
+down below
+down below
+down below
+so other than that i hope you have a
+so other than that i hope you have a
+so other than that i hope you have a
+nice day and goodbye
+nice day and goodbye
+nice day and goodbye
+[Music]
+you

@@ -1,0 +1,584 @@
+so what exactly is self so first of all
+so what exactly is self so first of all
+so what exactly is self so first of all
+self is a keyword that
+self is a keyword that
+self is a keyword that
+isn't strongly enforced so for example i
+isn't strongly enforced so for example i
+isn't strongly enforced so for example i
+can say local self
+can say local self
+can say local self
+equals hello world
+equals hello world
+equals hello world
+and it works perfectly fine but like if
+and it works perfectly fine but like if
+and it works perfectly fine but like if
+i were to try
+i were to try
+i were to try
+local 4 equals high or something
+local 4 equals high or something
+local 4 equals high or something
+it yells at me because 4 is a
+it yells at me because 4 is a
+it yells at me because 4 is a
+like really high level keyword whereas
+like really high level keyword whereas
+like really high level keyword whereas
+self
+self
+self
+self is more syntactical sugar so
+self is more syntactical sugar so
+self is more syntactical sugar so
+you can treat a self variable saying
+you can treat a self variable saying
+you can treat a self variable saying
+local self
+local self
+local self
+as any other variable so i can print
+as any other variable so i can print
+as any other variable so i can print
+self whatever
+and it works but that's not when you see
+and it works but that's not when you see
+and it works but that's not when you see
+self usually
+self usually
+self usually
+usually it's in a function body and
+usually it's in a function body and
+usually it's in a function body and
+that's what its main
+that's what its main
+that's what its main
+purpose is for so let me give you an
+purpose is for so let me give you an
+purpose is for so let me give you an
+example
+example
+example
+so we have a let's just have a module i
+so we have a let's just have a module i
+so we have a let's just have a module i
+know this is not a module script
+know this is not a module script
+know this is not a module script
+but you can pretend with me and we can
+but you can pretend with me and we can
+but you can pretend with me and we can
+make a function
+make a function
+make a function
+module dot
+module dot
+module dot
+do something
+and this will take in a number and it'll
+and this will take in a number and it'll
+and this will take in a number and it'll
+just print
+just print
+just print
+number plus one and we can just
+number plus one and we can just
+number plus one and we can just
+try module
+try module
+try module
+do something with a number of
+do something with a number of
+do something with a number of
+like two or something if we run this
+like two or something if we run this
+like two or something if we run this
+you see we get three that's exactly what
+you see we get three that's exactly what
+you see we get three that's exactly what
+we want
+we want
+we want
+but what if we were to change the module
+but what if we were to change the module
+but what if we were to change the module
+do something into module
+do something into module
+do something into module
+colon do something now
+colon do something now
+colon do something now
+if we were to run this
+what would happen is this would err
+because we tried to add on nil and
+because we tried to add on nil and
+because we tried to add on nil and
+number you may be asking well there's a
+number you may be asking well there's a
+number you may be asking well there's a
+number here
+number here
+number here
+and we're sending a number but the colon
+and we're sending a number but the colon
+and we're sending a number but the colon
+means everything so what happens
+means everything so what happens
+means everything so what happens
+is the number that we send in
+is the number that we send in
+is the number that we send in
+is shifted to the variable self so if we
+is shifted to the variable self so if we
+is shifted to the variable self so if we
+were to print
+were to print
+were to print
+self right above our num plus one i'm
+self right above our num plus one i'm
+self right above our num plus one i'm
+actually gonna comment this out so it
+actually gonna comment this out so it
+actually gonna comment this out so it
+doesn't err
+doesn't err
+doesn't err
+if we just print self you can see it
+if we just print self you can see it
+if we just print self you can see it
+prints two
+prints two
+prints two
+so what happens is we say module dot
+so what happens is we say module dot
+so what happens is we say module dot
+do something with the value of two
+do something with the value of two
+do something with the value of two
+it goes in and it changes itself to self
+it goes in and it changes itself to self
+it goes in and it changes itself to self
+because of this
+because of this
+because of this
+colon right here now if we were to do
+colon right here now if we were to do
+colon right here now if we were to do
+what normally people do is we say module
+what normally people do is we say module
+what normally people do is we say module
+two something
+two something
+two something
+with both colons which is always best
+with both colons which is always best
+with both colons which is always best
+practice
+practice
+practice
+a different thing will happen so the
+a different thing will happen so the
+a different thing will happen so the
+module colon do something will pass in
+module colon do something will pass in
+module colon do something will pass in
+the module so if it prints self
+the module so if it prints self
+the module so if it prints self
+it'll print a table and this table has
+it'll print a table and this table has
+it'll print a table and this table has
+do something which is a function so
+do something which is a function so
+do something which is a function so
+it passes itself in
+it passes itself in
+it passes itself in
+and really most of the time self is used
+and really most of the time self is used
+and really most of the time self is used
+for
+for
+for
+prototype classes in lua but you don't
+prototype classes in lua but you don't
+prototype classes in lua but you don't
+have to
+have to
+have to
+it can be used in whatever situation you
+it can be used in whatever situation you
+it can be used in whatever situation you
+want in regards to functions
+want in regards to functions
+want in regards to functions
+but let's just go through a prototype
+but let's just go through a prototype
+but let's just go through a prototype
+class example just for
+class example just for
+class example just for
+completeness sake so i'm going to delete
+completeness sake so i'm going to delete
+completeness sake so i'm going to delete
+everything
+everything
+everything
+create a class and say local class
+create a class and say local class
+create a class and say local class
+equals a blank table
+equals a blank table
+equals a blank table
+and then class underscore index
+and then class underscore index
+and then class underscore index
+equals class make sure to have double
+equals class make sure to have double
+equals class make sure to have double
+underscores that's important it's a med
+underscores that's important it's a med
+underscores that's important it's a med
+method
+method
+method
+you can do function class dot new
+you can do function class dot new
+you can do function class dot new
+and by the way this is just normal
+and by the way this is just normal
+and by the way this is just normal
+object oriented practices if you don't
+object oriented practices if you don't
+object oriented practices if you don't
+know about that
+know about that
+know about that
+i have a series on that i'll link it
+i have a series on that i'll link it
+i have a series on that i'll link it
+right now
+right now
+right now
+and inside of here we can just say local
+and inside of here we can just say local
+and inside of here we can just say local
+self
+self
+self
+equals set meta table
+a blank table and then class and you may
+a blank table and then class and you may
+a blank table and then class and you may
+be asking
+be asking
+be asking
+why am i using self here it's just
+why am i using self here it's just
+why am i using self here it's just
+because usually in a class itself is
+because usually in a class itself is
+because usually in a class itself is
+already defined but since we're creating
+already defined but since we're creating
+already defined but since we're creating
+a new one
+a new one
+a new one
+it just makes sense to name the variable
+it just makes sense to name the variable
+it just makes sense to name the variable
+cell now
+cell now
+cell now
+this is just a variable name it has no
+this is just a variable name it has no
+this is just a variable name it has no
+special importance because there's no
+special importance because there's no
+special importance because there's no
+colon up here now we can do down here is
+colon up here now we can do down here is
+colon up here now we can do down here is
+just return
+just return
+just return
+self so you could change this to a
+self so you could change this to a
+self so you could change this to a
+letter and it would work
+letter and it would work
+letter and it would work
+i just like self because it looks better
+i just like self because it looks better
+i just like self because it looks better
+and it makes a little more sense
+and it makes a little more sense
+and it makes a little more sense
+in my head the program doesn't really
+in my head the program doesn't really
+in my head the program doesn't really
+care
+care
+care
+so we can create a function class
+so we can create a function class
+so we can create a function class
+do something once again
+do something once again
+do something once again
+and then we can just print self just to
+and then we can just print self just to
+and then we can just print self just to
+get the point across
+get the point across
+get the point across
+so let's run that we can create a class
+so let's run that we can create a class
+so let's run that we can create a class
+by saying google
+by saying google
+by saying google
+c equals class dot new and then we can
+c equals class dot new and then we can
+c equals class dot new and then we can
+do c
+do c
+do c
+do something
+and when we print self it'll just print
+and when we print self it'll just print
+and when we print self it'll just print
+a blank table
+a blank table
+a blank table
+because we're setting or maybe we made a
+because we're setting or maybe we made a
+because we're setting or maybe we made a
+new table set meta table
+new table set meta table
+new table set meta table
+and if we were to add something like
+and if we were to add something like
+and if we were to add something like
+a number like three and add a variable
+a number like three and add a variable
+a number like three and add a variable
+here
+here
+here
+for number print self command num
+for number print self command num
+for number print self command num
+it'll just print our table and the
+it'll just print our table and the
+it'll just print our table and the
+number we sent
+number we sent
+number we sent
+and so this brings up another good point
+and so this brings up another good point
+and so this brings up another good point
+if you happen to have a typo
+if you happen to have a typo
+if you happen to have a typo
+it'll lead to very interesting errors so
+it'll lead to very interesting errors so
+it'll lead to very interesting errors so
+for example down here i change it to
+for example down here i change it to
+for example down here i change it to
+self
+self
+self
+or c dot do something it'll lead to some
+or c dot do something it'll lead to some
+or c dot do something it'll lead to some
+interesting
+interesting
+interesting
+because self will bump back to three
+because self will bump back to three
+because self will bump back to three
+and then our actual like variable won't
+and then our actual like variable won't
+and then our actual like variable won't
+have anything so
+have anything so
+have anything so
+if i try to kind of try to call another
+if i try to kind of try to call another
+if i try to kind of try to call another
+function on itself it'll give me a
+function on itself it'll give me a
+function on itself it'll give me a
+very misleading error so if i say self
+very misleading error so if i say self
+very misleading error so if i say self
+dot new or something if i wanted to make
+dot new or something if i wanted to make
+dot new or something if i wanted to make
+a new class this you wouldn't really use
+a new class this you wouldn't really use
+a new class this you wouldn't really use
+this but just an example
+it says attempt to index number with new
+it says attempt to index number with new
+it says attempt to index number with new
+and you're like
+and you're like
+and you're like
+but i created a class you have to look
+but i created a class you have to look
+but i created a class you have to look
+for these stupid errors
+for these stupid errors
+for these stupid errors
+with colons and that's one thing just to
+with colons and that's one thing just to
+with colons and that's one thing just to
+watch out for
+watch out for
+watch out for
+and one more thing the reason you'd use
+and one more thing the reason you'd use
+and one more thing the reason you'd use
+self which i know this takes me a while
+self which i know this takes me a while
+self which i know this takes me a while
+to get to
+to get to
+to get to
+is to access variables in your class
+is to access variables in your class
+is to access variables in your class
+that were set earlier so at the
+that were set earlier so at the
+that were set earlier so at the
+beginning of my script i can just say
+beginning of my script i can just say
+beginning of my script i can just say
+self dot my num
+self dot my num
+self dot my num
+equals three and then if i print down
+equals three and then if i print down
+equals three and then if i print down
+here
+here
+here
+in the do something classified or
+in the do something classified or
+in the do something classified or
+function if i print self
+function if i print self
+function if i print self
+dot my num it'll print three
+well obviously without this error let me
+well obviously without this error let me
+well obviously without this error let me
+fix that area real quick
+and you can see it prints three
+and you can see it prints three
+and you can see it prints three
+originally that's just because
+originally that's just because
+originally that's just because
+this self dot mynum is putting something
+this self dot mynum is putting something
+this self dot mynum is putting something
+in our table and you can see also in the
+in our table and you can see also in the
+in our table and you can see also in the
+print statement
+print statement
+print statement
+the in between the brackets there is
+the in between the brackets there is
+the in between the brackets there is
+mynum
+mynum
+mynum
+equals three which is exactly what we
+equals three which is exactly what we
+equals three which is exactly what we
+want
+want
+want
+and you can do the same thing for other
+and you can do the same thing for other
+and you can do the same thing for other
+functions
+functions
+functions
+and just anything you want but i mean
+and just anything you want but i mean
+and just anything you want but i mean
+that's about it
+that's about it
+that's about it
+self is a very simple keyword you can
+self is a very simple keyword you can
+self is a very simple keyword you can
+do a lot of stuff with it and
+do a lot of stuff with it and
+do a lot of stuff with it and
+it just makes everything a bit easier
+it just makes everything a bit easier
+it just makes everything a bit easier
+it's syntactical sugar
+it's syntactical sugar
+it's syntactical sugar
+meaning it doesn't actually change the
+meaning it doesn't actually change the
+meaning it doesn't actually change the
+functionality of any of your programs
+functionality of any of your programs
+functionality of any of your programs
+you could indeed just write class dot do
+you could indeed just write class dot do
+you could indeed just write class dot do
+something
+something
+something
+and then the first parameter will be
+and then the first parameter will be
+and then the first parameter will be
+self and the second will be number
+self and the second will be number
+self and the second will be number
+and it'll work the exact same
+and it'll work the exact same
+and it'll work the exact same
+but a lot of luo programmers like to use
+but a lot of luo programmers like to use
+but a lot of luo programmers like to use
+it just because
+it just because
+it just because
+the features there and you might as well
+the features there and you might as well
+the features there and you might as well
+so
+so
+so
+like the video if you enjoyed it
+like the video if you enjoyed it
+like the video if you enjoyed it
+subscribe to my channel for more
+subscribe to my channel for more
+subscribe to my channel for more
+scripting content
+scripting content
+scripting content
+and other than that i hope you have a
+and other than that i hope you have a
+and other than that i hope you have a
+nice day and goodbye
+[Music]
+[Music]
+[Music]
+foreign

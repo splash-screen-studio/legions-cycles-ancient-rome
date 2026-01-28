@@ -1,0 +1,1550 @@
+i want to teach roblox npcs how to do
+i want to teach roblox npcs how to do
+i want to teach roblox npcs how to do
+parkour and in order to do that we're
+parkour and in order to do that we're
+parkour and in order to do that we're
+going to get a bunch of them put them to
+going to get a bunch of them put them to
+going to get a bunch of them put them to
+the test and only the best will survive
+the test and only the best will survive
+the test and only the best will survive
+like that guy this guy
+like that guy this guy
+like that guy this guy
+he's doing a really good job and the
+he's doing a really good job and the
+he's doing a really good job and the
+coolest thing about this whole system
+coolest thing about this whole system
+coolest thing about this whole system
+is that i actually didn't program any of
+is that i actually didn't program any of
+is that i actually didn't program any of
+them to do this i
+them to do this i
+them to do this i
+put up the mechanics i made this system
+put up the mechanics i made this system
+put up the mechanics i made this system
+but these roblox npcs are evolving on
+but these roblox npcs are evolving on
+but these roblox npcs are evolving on
+their own
+their own
+their own
+i'm taking the ones who are the best who
+i'm taking the ones who are the best who
+i'm taking the ones who are the best who
+are able to do the most jumps and then
+are able to do the most jumps and then
+are able to do the most jumps and then
+they are surviving and reproducing and
+they are surviving and reproducing and
+they are surviving and reproducing and
+moving on to the next generation so i'm
+moving on to the next generation so i'm
+moving on to the next generation so i'm
+basically simulating like natural
+basically simulating like natural
+basically simulating like natural
+selection and evolution within
+selection and evolution within
+selection and evolution within
+roblox studio
+roblox studio
+roblox studio
+which is pretty cool
+which is pretty cool
+which is pretty cool
+and this system is not just specific to
+and this system is not just specific to
+and this system is not just specific to
+roblox this is called a genetic
+roblox this is called a genetic
+roblox this is called a genetic
+algorithm and it's a way of
+algorithm and it's a way of
+algorithm and it's a way of
+machine learning just like how
+machine learning just like how
+machine learning just like how
+artificial neural networks and like
+artificial neural networks and like
+artificial neural networks and like
+reinforcement learning this is another
+reinforcement learning this is another
+reinforcement learning this is another
+way to teach machines how to find
+way to teach machines how to find
+way to teach machines how to find
+solutions to problems that you set up
+solutions to problems that you set up
+solutions to problems that you set up
+so in this video i'm going to show you
+so in this video i'm going to show you
+so in this video i'm going to show you
+the specifics on how this thing works
+the specifics on how this thing works
+the specifics on how this thing works
+why it works the way it does and some
+why it works the way it does and some
+why it works the way it does and some
+insights we can gather from it and then
+insights we can gather from it and then
+insights we can gather from it and then
+also i will have the code in the
+also i will have the code in the
+also i will have the code in the
+description for you to play around with
+description for you to play around with
+description for you to play around with
+and to maybe expand this to
+and to maybe expand this to
+and to maybe expand this to
+a more complex system and you can maybe
+a more complex system and you can maybe
+a more complex system and you can maybe
+even turn this into a game if you really
+even turn this into a game if you really
+even turn this into a game if you really
+wanted to so let's jump right in and
+wanted to so let's jump right in and
+wanted to so let's jump right in and
+let's look at the specifics of
+let's look at the specifics of
+let's look at the specifics of
+this genetic evolution simulation in
+this genetic evolution simulation in
+this genetic evolution simulation in
+roblox
+in order to simplify this problem we
+in order to simplify this problem we
+in order to simplify this problem we
+first start by transitioning our 3d view
+first start by transitioning our 3d view
+first start by transitioning our 3d view
+of the roblox world into a 2d one
+of the roblox world into a 2d one
+of the roblox world into a 2d one
+for our roblox npc just to make the
+for our roblox npc just to make the
+for our roblox npc just to make the
+problem a little bit more easy to
+problem a little bit more easy to
+problem a little bit more easy to
+approach
+approach
+approach
+and then from there we start at the
+and then from there we start at the
+and then from there we start at the
+character's midsection and then we
+character's midsection and then we
+character's midsection and then we
+project rays downward and then up
+project rays downward and then up
+project rays downward and then up
+rotating every couple of degrees to give
+rotating every couple of degrees to give
+rotating every couple of degrees to give
+them a couple of rays to detect their
+them a couple of rays to detect their
+them a couple of rays to detect their
+environment
+environment
+environment
+so we take each of these rays and then
+so we take each of these rays and then
+so we take each of these rays and then
+we
+we
+we
+take the
+take the
+take the
+distance until it hits something and
+distance until it hits something and
+distance until it hits something and
+divide that by the overall distance the
+divide that by the overall distance the
+divide that by the overall distance the
+ray can travel so like right here this
+ray can travel so like right here this
+ray can travel so like right here this
+is how far the wheel travel and all
+is how far the wheel travel and all
+is how far the wheel travel and all
+three of these rays like here
+three of these rays like here
+three of these rays like here
+will give you a value of one since they
+will give you a value of one since they
+will give you a value of one since they
+reach their complete path without
+reach their complete path without
+reach their complete path without
+hitting anything this one over here
+hitting anything this one over here
+hitting anything this one over here
+might give you a value like 0.7 or
+might give you a value like 0.7 or
+might give you a value like 0.7 or
+something like that
+something like that
+something like that
+because it is 0.7 of the way to
+because it is 0.7 of the way to
+because it is 0.7 of the way to
+completely traversing the entire path
+completely traversing the entire path
+completely traversing the entire path
+so if all the
+so if all the
+so if all the
+npcs are receiving the same input from
+npcs are receiving the same input from
+npcs are receiving the same input from
+their rays then what leads to the
+their rays then what leads to the
+their rays then what leads to the
+variation
+variation
+variation
+well this is where their genes come in
+well this is where their genes come in
+well this is where their genes come in
+so what exactly are genes so as humans
+so what exactly are genes so as humans
+so what exactly are genes so as humans
+we all have genes it's what tells us the
+we all have genes it's what tells us the
+we all have genes it's what tells us the
+color of our eyes it what describes like
+color of our eyes it what describes like
+color of our eyes it what describes like
+some of the our mannerisms and things
+some of the our mannerisms and things
+some of the our mannerisms and things
+like that and the way we store our genes
+like that and the way we store our genes
+like that and the way we store our genes
+is through dna so this is like a very
+is through dna so this is like a very
+is through dna so this is like a very
+crappy drawing of what dna could look
+crappy drawing of what dna could look
+crappy drawing of what dna could look
+like it has like a double helix and each
+like it has like a double helix and each
+like it has like a double helix and each
+one of these lines in the double helix
+one of these lines in the double helix
+one of these lines in the double helix
+is a specific
+is a specific
+is a specific
+molecule or protein that sort of defines
+molecule or protein that sort of defines
+molecule or protein that sort of defines
+encodes what
+encodes what
+encodes what
+your body should look like how it should
+your body should look like how it should
+your body should look like how it should
+work et cetera and it's just a bunch
+work et cetera and it's just a bunch
+work et cetera and it's just a bunch
+it's like a bunch of little letters so
+it's like a bunch of little letters so
+it's like a bunch of little letters so
+it's like tg ca or something like that
+it's like tg ca or something like that
+it's like tg ca or something like that
+and then they're ordered in a different
+and then they're ordered in a different
+and then they're ordered in a different
+order
+order
+order
+and that is what describes
+and that is what describes
+and that is what describes
+your specific genome
+your specific genome
+your specific genome
+so we want to replicate this sort of
+so we want to replicate this sort of
+so we want to replicate this sort of
+system since we are trying to replicate
+system since we are trying to replicate
+system since we are trying to replicate
+biology but in our case we're going to
+biology but in our case we're going to
+biology but in our case we're going to
+be using
+be using
+be using
+an array of numbers
+an array of numbers
+an array of numbers
+so this is a basic array
+so this is a basic array
+so this is a basic array
+with numbers from negative 1 to one
+with numbers from negative 1 to one
+with numbers from negative 1 to one
+and so what basically happens is each
+and so what basically happens is each
+and so what basically happens is each
+one of the rays that we just saw so
+one of the rays that we just saw so
+one of the rays that we just saw so
+let me get a ray
+let me get a ray
+let me get a ray
+so each one of these arrays like this is
+so each one of these arrays like this is
+so each one of these arrays like this is
+an example of array
+an example of array
+an example of array
+it would have a
+it would have a
+it would have a
+two values corresponding to it in the
+two values corresponding to it in the
+two values corresponding to it in the
+genome it would have
+genome it would have
+genome it would have
+like one of these for example and then
+like one of these for example and then
+like one of these for example and then
+one of these
+one of these
+one of these
+so each one of these controls a
+so each one of these controls a
+so each one of these controls a
+different thing so we take this value
+different thing so we take this value
+different thing so we take this value
+that the ray produces so let's say let's
+that the ray produces so let's say let's
+that the ray produces so let's say let's
+go back to our other
+go back to our other
+go back to our other
+example and this ray produces a value of
+example and this ray produces a value of
+example and this ray produces a value of
+like 0.7 we take this we multiply it by
+like 0.7 we take this we multiply it by
+like 0.7 we take this we multiply it by
+the
+the
+the
+value in the genome so in this case it'd
+value in the genome so in this case it'd
+value in the genome so in this case it'd
+just be 0.7
+just be 0.7
+just be 0.7
+in this case it would be a negative
+in this case it would be a negative
+in this case it would be a negative
+0.35
+and then these each correspond to
+and then these each correspond to
+and then these each correspond to
+the like finalized weight and the reason
+the like finalized weight and the reason
+the like finalized weight and the reason
+we're using two is one's for move
+we're using two is one's for move
+we're using two is one's for move
+and this is whether or not it moves
+and this is whether or not it moves
+and this is whether or not it moves
+forward and one's for jump whether or
+forward and one's for jump whether or
+forward and one's for jump whether or
+not it jumps now the move one honestly
+not it jumps now the move one honestly
+not it jumps now the move one honestly
+like in hindsight isn't really
+like in hindsight isn't really
+like in hindsight isn't really
+consequential at all because
+consequential at all because
+consequential at all because
+they almost always move forward like
+they almost always move forward like
+they almost always move forward like
+regardless of the situation but if we
+regardless of the situation but if we
+regardless of the situation but if we
+were to change this to three dimensions
+were to change this to three dimensions
+were to change this to three dimensions
+moving in the vector that describes
+moving in the vector that describes
+moving in the vector that describes
+moving would be very consequential since
+moving would be very consequential since
+moving would be very consequential since
+that kind of determine where you're
+that kind of determine where you're
+that kind of determine where you're
+going the jump the jumping is a more
+going the jump the jumping is a more
+going the jump the jumping is a more
+important one
+important one
+important one
+so since we have a bunch of rays each of
+so since we have a bunch of rays each of
+so since we have a bunch of rays each of
+these rays has reserved two values in
+these rays has reserved two values in
+these rays has reserved two values in
+our little array now we could have made
+our little array now we could have made
+our little array now we could have made
+this an array of arrays with each ray
+this an array of arrays with each ray
+this an array of arrays with each ray
+having its own array and rays that's
+having its own array and rays that's
+having its own array and rays that's
+getting kind of complicated but each
+getting kind of complicated but each
+getting kind of complicated but each
+array has its own like set of values but
+array has its own like set of values but
+array has its own like set of values but
+this is just easier to work with within
+this is just easier to work with within
+this is just easier to work with within
+the code even though it may be less
+the code even though it may be less
+the code even though it may be less
+intuitive to learn
+intuitive to learn
+intuitive to learn
+so from here we can take all these
+so from here we can take all these
+so from here we can take all these
+values
+values
+values
+and like we take all of them from here
+and like we take all of them from here
+and like we take all of them from here
+on out too
+on out too
+on out too
+and then we can just sum them all up we
+and then we can just sum them all up we
+and then we can just sum them all up we
+can sum up all the move ones so this
+can sum up all the move ones so this
+can sum up all the move ones so this
+will be like a move sum
+and then we can sum up all the jump ones
+and then we can sum up all the jump ones
+and then we can sum up all the jump ones
+and we get a jump sum
+and this of course is taking all of the
+and this of course is taking all of the
+and this of course is taking all of the
+values
+values
+values
+from the rest of them as well and
+from the rest of them as well and
+from the rest of them as well and
+putting them all together and what we do
+putting them all together and what we do
+putting them all together and what we do
+with these is we check if the move sum
+with these is we check if the move sum
+with these is we check if the move sum
+is greater than zero or if the jump and
+is greater than zero or if the jump and
+is greater than zero or if the jump and
+f4 the jump sum is greater than zero we
+f4 the jump sum is greater than zero we
+f4 the jump sum is greater than zero we
+we move and or jump so these are
+we move and or jump so these are
+we move and or jump so these are
+independent of each other if the move
+independent of each other if the move
+independent of each other if the move
+sum is greater than zero we move if the
+sum is greater than zero we move if the
+sum is greater than zero we move if the
+jump sum is greater than zero we jump
+jump sum is greater than zero we jump
+jump sum is greater than zero we jump
+and that's really all we need for this
+and that's really all we need for this
+and that's really all we need for this
+situation because the
+situation because the
+situation because the
+npc's can only move basically
+npc's can only move basically
+npc's can only move basically
+in like one and a half dimensions they
+in like one and a half dimensions they
+in like one and a half dimensions they
+can move forward and then it can jump
+can move forward and then it can jump
+can move forward and then it can jump
+which is kind of like binary like on or
+which is kind of like binary like on or
+which is kind of like binary like on or
+off and same with the move
+off and same with the move
+off and same with the move
+and the most important part of this
+and the most important part of this
+and the most important part of this
+system is that the genes are randomized
+system is that the genes are randomized
+system is that the genes are randomized
+they're randomized to begin with and
+they're randomized to begin with and
+they're randomized to begin with and
+they're randomized as the simulation
+they're randomized as the simulation
+they're randomized as the simulation
+goes on this way we get variation
+goes on this way we get variation
+goes on this way we get variation
+and the variation leads to different
+and the variation leads to different
+and the variation leads to different
+weights that allow the npc to jump at
+weights that allow the npc to jump at
+weights that allow the npc to jump at
+different times depending on what
+different times depending on what
+different times depending on what
+happens but then what exactly do we do
+happens but then what exactly do we do
+happens but then what exactly do we do
+with the npcs in the end so we give them
+with the npcs in the end so we give them
+with the npcs in the end so we give them
+a fitness score of course we give them a
+a fitness score of course we give them a
+a fitness score of course we give them a
+score because who doesn't love grades
+score because who doesn't love grades
+score because who doesn't love grades
+but
+but
+but
+the way this works
+the way this works
+the way this works
+is here you can see we have a bunch of
+is here you can see we have a bunch of
+is here you can see we have a bunch of
+little platforms representing platforms
+little platforms representing platforms
+little platforms representing platforms
+and the goal would probably be like
+and the goal would probably be like
+and the goal would probably be like
+somewhere like over here probably this
+somewhere like over here probably this
+somewhere like over here probably this
+is where they want to get to
+is where they want to get to
+is where they want to get to
+we give them a score based on their
+we give them a score based on their
+we give them a score based on their
+distance from the goal position so we're
+distance from the goal position so we're
+distance from the goal position so we're
+basically like have an imaginary ruler
+basically like have an imaginary ruler
+basically like have an imaginary ruler
+from zero to however far it's possible
+from zero to however far it's possible
+from zero to however far it's possible
+to be away
+to be away
+to be away
+from the goal and we score them so for
+from the goal and we score them so for
+from the goal and we score them so for
+example an npc here
+example an npc here
+example an npc here
+would have a higher score than one over
+would have a higher score than one over
+would have a higher score than one over
+here
+here
+here
+so lower scores are better in our case
+so lower scores are better in our case
+so lower scores are better in our case
+here
+here
+here
+and then that allows us to sort
+and then that allows us to sort
+and then that allows us to sort
+who did good and who did bad
+who did good and who did bad
+who did good and who did bad
+which allows us to continue on the
+which allows us to continue on the
+which allows us to continue on the
+simulation
+simulation
+simulation
+so
+so
+so
+once we have found their scores we can
+once we have found their scores we can
+once we have found their scores we can
+now sort
+now sort
+now sort
+the scores
+the scores
+the scores
+and then what we're going to do with
+and then what we're going to do with
+and then what we're going to do with
+them is split them in half we take the
+them is split them in half we take the
+them is split them in half we take the
+best scores
+and we get rid of the bad scores because
+and we get rid of the bad scores because
+and we get rid of the bad scores because
+these scores are bad enough where
+these scores are bad enough where
+these scores are bad enough where
+there's no point to keep them so we keep
+there's no point to keep them so we keep
+there's no point to keep them so we keep
+these parents within the gene pool but
+these parents within the gene pool but
+these parents within the gene pool but
+then we also
+then we also
+then we also
+perform some crossover to get children
+perform some crossover to get children
+perform some crossover to get children
+from these parents that may or may not
+from these parents that may or may not
+from these parents that may or may not
+be a little better than the parents so
+be a little better than the parents so
+be a little better than the parents so
+we pair up the parents
+we pair up the parents
+we pair up the parents
+and these fitness scores have their
+and these fitness scores have their
+and these fitness scores have their
+genes like you know encapsulated within
+genes like you know encapsulated within
+genes like you know encapsulated within
+them respectively so for example this
+them respectively so for example this
+them respectively so for example this
+one and this one would make
+one and this one would make
+one and this one would make
+like two children
+like two children
+like two children
+and same with these two they would mate
+and same with these two they would mate
+and same with these two they would mate
+and then make two children so how
+and then make two children so how
+and then make two children so how
+exactly does that process work
+exactly does that process work
+exactly does that process work
+so we get on here we have two separate
+so we get on here we have two separate
+so we get on here we have two separate
+genes that was kind of random we pick a
+genes that was kind of random we pick a
+genes that was kind of random we pick a
+point along their gene or an index and
+point along their gene or an index and
+point along their gene or an index and
+then we cut it in half so for example
+then we cut it in half so for example
+then we cut it in half so for example
+here this this is called the crossover
+here this this is called the crossover
+here this this is called the crossover
+point because this whole point of the
+point because this whole point of the
+point because this whole point of the
+genetic algorithm process is called the
+genetic algorithm process is called the
+genetic algorithm process is called the
+crossover step because we're going to
+crossover step because we're going to
+crossover step because we're going to
+cross over this part of the gene here
+cross over this part of the gene here
+cross over this part of the gene here
+with this part of the gene here
+so we take this part and move it down to
+so we take this part and move it down to
+so we take this part and move it down to
+where this part is
+where this part is
+where this part is
+and then move this part
+and then move this part
+and then move this part
+up here
+up here
+up here
+like that so we would effectively swap
+like that so we would effectively swap
+like that so we would effectively swap
+the
+the
+the
+gene the first half of the genes with
+gene the first half of the genes with
+gene the first half of the genes with
+each other creating two new children
+each other creating two new children
+each other creating two new children
+who
+who
+who
+may or may not have a better attributes
+may or may not have a better attributes
+may or may not have a better attributes
+than their parents so the goal with this
+than their parents so the goal with this
+than their parents so the goal with this
+is to
+is to
+is to
+take the best of both worlds you take
+take the best of both worlds you take
+take the best of both worlds you take
+the best of one parent and the best of
+the best of one parent and the best of
+the best of one parent and the best of
+other parents i mean you know the thing
+other parents i mean you know the thing
+other parents i mean you know the thing
+is is it's all random so hopefully we'll
+is is it's all random so hopefully we'll
+is is it's all random so hopefully we'll
+get the best sometimes we won't but
+get the best sometimes we won't but
+get the best sometimes we won't but
+sometimes we'll get lucky and we will
+sometimes we'll get lucky and we will
+sometimes we'll get lucky and we will
+and that's the whole point of this
+and that's the whole point of this
+and that's the whole point of this
+entire process we're throwing a bunch of
+entire process we're throwing a bunch of
+entire process we're throwing a bunch of
+npcs
+npcs
+npcs
+a bunch of times over and over again and
+a bunch of times over and over again and
+a bunch of times over and over again and
+our goal is to get it so that these
+our goal is to get it so that these
+our goal is to get it so that these
+children
+children
+children
+can outperform their parents in terms of
+can outperform their parents in terms of
+can outperform their parents in terms of
+their fitness score to eventually get to
+their fitness score to eventually get to
+their fitness score to eventually get to
+our solution which is reaching the goal
+our solution which is reaching the goal
+our solution which is reaching the goal
+the all-encompassing solution so that's
+the all-encompassing solution so that's
+the all-encompassing solution so that's
+all we want to get
+all we want to get
+all we want to get
+and then
+and then
+and then
+additionally along with reproduction
+additionally along with reproduction
+additionally along with reproduction
+there's also a chance that one of these
+there's also a chance that one of these
+there's also a chance that one of these
+genes will have a mutation so a mutation
+genes will have a mutation so a mutation
+genes will have a mutation so a mutation
+would be for example we took this .9 and
+would be for example we took this .9 and
+would be for example we took this .9 and
+then we took it it was mutated into a
+then we took it it was mutated into a
+then we took it it was mutated into a
+0.7 or something like that so mutation
+0.7 or something like that so mutation
+0.7 or something like that so mutation
+is basically where we change a single
+is basically where we change a single
+is basically where we change a single
+index
+index
+index
+to a different value and this is for
+to a different value and this is for
+to a different value and this is for
+genes gene pools that are stagnating are
+genes gene pools that are stagnating are
+genes gene pools that are stagnating are
+gene pools that need to adapt to the
+gene pools that need to adapt to the
+gene pools that need to adapt to the
+population so for example if
+population so for example if
+population so for example if
+in our evolution simulation the mpc is
+in our evolution simulation the mpc is
+in our evolution simulation the mpc is
+not able to reach the end in like a very
+not able to reach the end in like a very
+not able to reach the end in like a very
+long time hopefully mutation which has
+long time hopefully mutation which has
+long time hopefully mutation which has
+like a
+like a
+like a
+0.5 chance so it has a 0.05 probability
+0.5 chance so it has a 0.05 probability
+0.5 chance so it has a 0.05 probability
+of occurring
+of occurring
+of occurring
+it will
+it will
+it will
+by chance change a gene in order for an
+by chance change a gene in order for an
+by chance change a gene in order for an
+organism to survive a lot better
+organism to survive a lot better
+organism to survive a lot better
+which is the goal so it's pretty rare
+which is the goal so it's pretty rare
+which is the goal so it's pretty rare
+but when it does happen
+but when it does happen
+but when it does happen
+it most of the time leads to bad results
+it most of the time leads to bad results
+it most of the time leads to bad results
+but it can sometimes lead to
+but it can sometimes lead to
+but it can sometimes lead to
+good results which is that that's all we
+good results which is that that's all we
+good results which is that that's all we
+need we need that little guarantee that
+need we need that little guarantee that
+need we need that little guarantee that
+the gene pool will adapt regardless of
+the gene pool will adapt regardless of
+the gene pool will adapt regardless of
+the situation so this entire process i
+the situation so this entire process i
+the situation so this entire process i
+have described here
+have described here
+have described here
+is one
+is one
+is one
+generation
+generation
+generation
+so
+so
+so
+we
+we
+we
+take this process we spawn them in with
+take this process we spawn them in with
+take this process we spawn them in with
+their genes and we and then we find take
+their genes and we and then we find take
+their genes and we and then we find take
+their fitness scores we find the best we
+their fitness scores we find the best we
+their fitness scores we find the best we
+reproduce them and then we may or may
+reproduce them and then we may or may
+reproduce them and then we may or may
+not mutate we repeat this
+not mutate we repeat this
+not mutate we repeat this
+many
+many
+many
+many
+many
+many
+many times so we keep on repeating this
+many times so we keep on repeating this
+many times so we keep on repeating this
+generation process for as many
+generation process for as many
+generation process for as many
+generations as you want my specific
+generations as you want my specific
+generations as you want my specific
+simulation it was set to something like
+simulation it was set to something like
+simulation it was set to something like
+25 generations which seemed to converge
+25 generations which seemed to converge
+25 generations which seemed to converge
+on a solution pretty nicely but
+on a solution pretty nicely but
+on a solution pretty nicely but
+depending on your situation you may need
+depending on your situation you may need
+depending on your situation you may need
+more you may need less and the reason we
+more you may need less and the reason we
+more you may need less and the reason we
+have this generational process is so
+have this generational process is so
+have this generational process is so
+over time the weights the better weights
+over time the weights the better weights
+over time the weights the better weights
+survive they're able to reproduce they
+survive they're able to reproduce they
+survive they're able to reproduce they
+produce children that may or may not win
+produce children that may or may not win
+produce children that may or may not win
+out the parents and if they do beat the
+out the parents and if they do beat the
+out the parents and if they do beat the
+parents in terms of their fitness score
+parents in terms of their fitness score
+parents in terms of their fitness score
+they'll reproduce and it'll keep on
+they'll reproduce and it'll keep on
+they'll reproduce and it'll keep on
+going over and over the cycle will
+going over and over the cycle will
+going over and over the cycle will
+continue to start with a bunch of like
+continue to start with a bunch of like
+continue to start with a bunch of like
+the initial population they'll move on
+the initial population they'll move on
+the initial population they'll move on
+some of them will get killed and then
+some of them will get killed and then
+some of them will get killed and then
+more will come in
+more will come in
+more will come in
+and it just keeps on going like that
+and it just keeps on going like that
+and it just keeps on going like that
+until we have
+until we have
+until we have
+reached 25 generations which at that
+reached 25 generations which at that
+reached 25 generations which at that
+point we should have almost all of the
+point we should have almost all of the
+point we should have almost all of the
+organisms surviving and getting a very
+organisms surviving and getting a very
+organisms surviving and getting a very
+low score so most of the time like the
+low score so most of the time like the
+low score so most of the time like the
+lowest score they can get is like .07 or
+lowest score they can get is like .07 or
+lowest score they can get is like .07 or
+something as their fitness score which
+something as their fitness score which
+something as their fitness score which
+is pretty optimal like that's their goal
+is pretty optimal like that's their goal
+is pretty optimal like that's their goal
+they need to get to that point and they
+they need to get to that point and they
+they need to get to that point and they
+did it and they did it quite well and
+did it and they did it quite well and
+did it and they did it quite well and
+that's all we can ask of them really
+that's all we can ask of them really
+that's all we can ask of them really
+because
+because
+because
+they're not really smart i just probably
+they're not really smart i just probably
+they're not really smart i just probably
+shouldn't be asking them anything but
+shouldn't be asking them anything but
+shouldn't be asking them anything but
+since the ones who by chance happen to
+since the ones who by chance happen to
+since the ones who by chance happen to
+have the right genes and the right
+have the right genes and the right
+have the right genes and the right
+weights in order to survive they're the
+weights in order to survive they're the
+weights in order to survive they're the
+ones that live on and reproduce
+ones that live on and reproduce
+ones that live on and reproduce
+and so this describes how natural
+and so this describes how natural
+and so this describes how natural
+selection works in nature like you know
+selection works in nature like you know
+selection works in nature like you know
+you see the see the diagram of evolution
+you see the see the diagram of evolution
+you see the see the diagram of evolution
+with like the apes and then
+with like the apes and then
+with like the apes and then
+the human
+the human
+the human
+slowly standing on two feet
+slowly standing on two feet
+slowly standing on two feet
+this is that situation so we start out
+this is that situation so we start out
+this is that situation so we start out
+with some very primitive
+with some very primitive
+with some very primitive
+little organisms you can call them
+little organisms you can call them
+little organisms you can call them
+that don't really know what to do but
+that don't really know what to do but
+that don't really know what to do but
+then over time
+then over time
+then over time
+because of their environment their
+because of their environment their
+because of their environment their
+environment in this case is the
+environment in this case is the
+environment in this case is the
+platforms that the npcs have to jump on
+platforms that the npcs have to jump on
+platforms that the npcs have to jump on
+because of our environment they're able
+because of our environment they're able
+because of our environment they're able
+to adapt to the situation
+to adapt to the situation
+to adapt to the situation
+and evolve weights that allow them to
+and evolve weights that allow them to
+and evolve weights that allow them to
+survive and nature survival is a
+survive and nature survival is a
+survive and nature survival is a
+multiple like multi-parameter it has a
+multiple like multi-parameter it has a
+multiple like multi-parameter it has a
+bunch of different things you need you
+bunch of different things you need you
+bunch of different things you need you
+need your food
+need your food
+need your food
+you need your food you need like your
+you need your food you need like your
+you need your food you need like your
+water and you need
+water and you need
+water and you need
+a bunch of other things like like
+a bunch of other things like like
+a bunch of other things like like
+shelter too right you need a bunch of
+shelter too right you need a bunch of
+shelter too right you need a bunch of
+other things in order to survive
+other things in order to survive
+other things in order to survive
+and this process that i described in
+and this process that i described in
+and this process that i described in
+roblox can
+roblox can
+roblox can
+sort of give you an insight on how that
+sort of give you an insight on how that
+sort of give you an insight on how that
+might all work over a long scale and
+might all work over a long scale and
+might all work over a long scale and
+you'll notice that
+you'll notice that
+you'll notice that
+evolution in real life happens over
+evolution in real life happens over
+evolution in real life happens over
+thousands if not millions of years
+thousands if not millions of years
+thousands if not millions of years
+that's one of the biggest downsides to a
+that's one of the biggest downsides to a
+that's one of the biggest downsides to a
+genetic algorithm like this it takes a
+genetic algorithm like this it takes a
+genetic algorithm like this it takes a
+long time
+long time
+long time
+because you have to go through
+because you have to go through
+because you have to go through
+generation after generation but
+generation after generation but
+generation after generation but
+these algorithms give you very creative
+these algorithms give you very creative
+these algorithms give you very creative
+solutions
+solutions
+solutions
+that
+that
+that
+humans may may not have otherwise have
+humans may may not have otherwise have
+humans may may not have otherwise have
+thought of
+thought of
+thought of
+now for this specific example that's not
+now for this specific example that's not
+now for this specific example that's not
+the case the jumping is quite simple but
+the case the jumping is quite simple but
+the case the jumping is quite simple but
+this is just a stepping stone to more
+this is just a stepping stone to more
+this is just a stepping stone to more
+complex examples so let's now watch the
+complex examples so let's now watch the
+complex examples so let's now watch the
+simulation again
+simulation again
+simulation again
+with the insight i've given you
+with the insight i've given you
+with the insight i've given you
+a little bit earlier so we start off
+a little bit earlier so we start off
+a little bit earlier so we start off
+with the initial generation they're all
+with the initial generation they're all
+with the initial generation they're all
+random this guy just happened to have
+random this guy just happened to have
+random this guy just happened to have
+good jeans which is kind of rare and
+good jeans which is kind of rare and
+good jeans which is kind of rare and
+this right here is the goal
+this right here is the goal
+this right here is the goal
+and this other block over here is a
+and this other block over here is a
+and this other block over here is a
+start you can see a lot of them are
+start you can see a lot of them are
+start you can see a lot of them are
+being kind of stupid and they're not
+being kind of stupid and they're not
+being kind of stupid and they're not
+jumping properly some of them are just
+jumping properly some of them are just
+jumping properly some of them are just
+standing there so these guys get
+standing there so these guys get
+standing there so these guys get
+like basically no fitness score and you
+like basically no fitness score and you
+like basically no fitness score and you
+can see in the bottom
+can see in the bottom
+can see in the bottom
+i have all the generations listed and
+i have all the generations listed and
+i have all the generations listed and
+it's printing out the best fitness score
+it's printing out the best fitness score
+it's printing out the best fitness score
+so it starts off with an infinite
+so it starts off with an infinite
+so it starts off with an infinite
+fitness score because generation one
+fitness score because generation one
+fitness score because generation one
+like any like anything can do better
+like any like anything can do better
+like any like anything can do better
+than
+than
+than
+like anything before generation one
+like anything before generation one
+like anything before generation one
+because there's nothing before that but
+because there's nothing before that but
+because there's nothing before that but
+then over time it goes from nine to
+then over time it goes from nine to
+then over time it goes from nine to
+point two to point one to point o four
+point two to point one to point o four
+point two to point one to point o four
+so they continually get better you can
+so they continually get better you can
+so they continually get better you can
+see more and more of them are jumping
+see more and more of them are jumping
+see more and more of them are jumping
+they're all different colors but
+they're all different colors but
+they're all different colors but
+they're like kind of inside of each
+they're like kind of inside of each
+they're like kind of inside of each
+other
+other
+other
+and there's still a couple guys here
+and there's still a couple guys here
+and there's still a couple guys here
+there's a couple stragglers but then
+there's a couple stragglers but then
+there's a couple stragglers but then
+over time they all they all go away so
+over time they all they all go away so
+over time they all they all go away so
+all of the dummies have learned how to
+all of the dummies have learned how to
+all of the dummies have learned how to
+run and jump and occasionally there's a
+run and jump and occasionally there's a
+run and jump and occasionally there's a
+mutation which in this case the mutation
+mutation which in this case the mutation
+mutation which in this case the mutation
+wasn't very good because you know it
+wasn't very good because you know it
+wasn't very good because you know it
+kind of caused them to like jump down
+kind of caused them to like jump down
+kind of caused them to like jump down
+early and die but sometimes when they
+early and die but sometimes when they
+early and die but sometimes when they
+get stuck here they get stuck down there
+get stuck here they get stuck down there
+get stuck here they get stuck down there
+a mutation allows the entire population
+a mutation allows the entire population
+a mutation allows the entire population
+to start
+to start
+to start
+like learning how to jump properly
+like learning how to jump properly
+like learning how to jump properly
+it's all just dependent and the thing
+it's all just dependent and the thing
+it's all just dependent and the thing
+about this is it's very dependent on
+about this is it's very dependent on
+about this is it's very dependent on
+random chance but since we repeat stuff
+random chance but since we repeat stuff
+random chance but since we repeat stuff
+like this so often
+like this so often
+like this so often
+like with many generations and i think
+like with many generations and i think
+like with many generations and i think
+i'm running actually let me check i'm
+i'm running actually let me check i'm
+i'm running actually let me check i'm
+running a good amount of organisms so
+running a good amount of organisms so
+running a good amount of organisms so
+i have 25 generations with 32 dummies
+i have 25 generations with 32 dummies
+i have 25 generations with 32 dummies
+per generation
+per generation
+per generation
+32 npcs per generation so that's enough
+32 npcs per generation so that's enough
+32 npcs per generation so that's enough
+to kind of use random chance to
+to kind of use random chance to
+to kind of use random chance to
+advantage and get the best solutions out
+advantage and get the best solutions out
+advantage and get the best solutions out
+of
+of
+of
+this problem right here
+this problem right here
+this problem right here
+and as far as machine learning goes
+and as far as machine learning goes
+and as far as machine learning goes
+genetic algorithms are pretty
+genetic algorithms are pretty
+genetic algorithms are pretty
+approachable so i have here the script
+approachable so i have here the script
+approachable so i have here the script
+that i used to write this which is like
+that i used to write this which is like
+that i used to write this which is like
+230 lines heavily commented and it will
+230 lines heavily commented and it will
+230 lines heavily commented and it will
+be in the description in case you want
+be in the description in case you want
+be in the description in case you want
+to check it out
+to check it out
+to check it out
+and the cool thing is is i've liked this
+and the cool thing is is i've liked this
+and the cool thing is is i've liked this
+enough that this was wasn't actually my
+enough that this was wasn't actually my
+enough that this was wasn't actually my
+first attempt at making a genetic
+first attempt at making a genetic
+first attempt at making a genetic
+algorithm i actually made one using a
+algorithm i actually made one using a
+algorithm i actually made one using a
+pretty contrived example once again and
+pretty contrived example once again and
+pretty contrived example once again and
+that python
+that python
+that python
+so in this example
+so in this example
+so in this example
+the little squares have to move to a the
+the little squares have to move to a the
+the little squares have to move to a the
+zone over here and they're a little more
+zone over here and they're a little more
+zone over here and they're a little more
+complex than our roblox npcs they
+complex than our roblox npcs they
+complex than our roblox npcs they
+actually have brains so this is an
+actually have brains so this is an
+actually have brains so this is an
+example of their brain evolving over
+example of their brain evolving over
+example of their brain evolving over
+time you see they all go to the side
+time you see they all go to the side
+time you see they all go to the side
+and genetic algorithms can be actually
+and genetic algorithms can be actually
+and genetic algorithms can be actually
+used for useful stuff too they've been
+used for useful stuff too they've been
+used for useful stuff too they've been
+used in engineering to find optimal
+used in engineering to find optimal
+used in engineering to find optimal
+solutions to like aerodynamic problems
+solutions to like aerodynamic problems
+solutions to like aerodynamic problems
+they've been used in scheduling apps of
+they've been used in scheduling apps of
+they've been used in scheduling apps of
+all things to like figure out like the
+all things to like figure out like the
+all things to like figure out like the
+best schedules
+best schedules
+best schedules
+and
+and
+and
+they're just very good for a situation
+they're just very good for a situation
+they're just very good for a situation
+that involved a lot of
+that involved a lot of
+that involved a lot of
+like interesting and ingenious solutions
+like interesting and ingenious solutions
+like interesting and ingenious solutions
+that other algorithms may not come up on
+that other algorithms may not come up on
+that other algorithms may not come up on
+and yeah that's about it for this video
+and yeah that's about it for this video
+and yeah that's about it for this video
+so i hope you enjoyed learning about
+so i hope you enjoyed learning about
+so i hope you enjoyed learning about
+genetic algorithms and how i implemented
+genetic algorithms and how i implemented
+genetic algorithms and how i implemented
+one roblox and i encourage you to look
+one roblox and i encourage you to look
+one roblox and i encourage you to look
+at my code expand it try to make it like
+at my code expand it try to make it like
+at my code expand it try to make it like
+3d or try to make it you know something
+3d or try to make it you know something
+3d or try to make it you know something
+cool like that because this is cool it
+cool like that because this is cool it
+cool like that because this is cool it
+can be a lot cooler though
+can be a lot cooler though
+can be a lot cooler though
+and as a side note i know i did make a
+and as a side note i know i did make a
+and as a side note i know i did make a
+poll asking if
+poll asking if
+poll asking if
+if i should do like vector animations or
+if i should do like vector animations or
+if i should do like vector animations or
+just like drawing and i ended up doing
+just like drawing and i ended up doing
+just like drawing and i ended up doing
+drawing even though the and the poll
+drawing even though the and the poll
+drawing even though the and the poll
+vector animations kind of won out
+vector animations kind of won out
+vector animations kind of won out
+because
+because
+because
+i
+i
+i
+feel like i could do a better job
+feel like i could do a better job
+feel like i could do a better job
+explaining and it would be a lot less
+explaining and it would be a lot less
+explaining and it would be a lot less
+time consuming because vector animations
+time consuming because vector animations
+time consuming because vector animations
+are cool and flashy but they're a lot
+are cool and flashy but they're a lot
+are cool and flashy but they're a lot
+they're very impersonal and they're they
+they're very impersonal and they're they
+they're very impersonal and they're they
+take a long time to set up as opposed to
+take a long time to set up as opposed to
+take a long time to set up as opposed to
+just crawling because that's a little
+just crawling because that's a little
+just crawling because that's a little
+more interactive a little more fun to me
+more interactive a little more fun to me
+more interactive a little more fun to me
+and hopefully more fun to you but make
+and hopefully more fun to you but make
+and hopefully more fun to you but make
+sure to put your feedback on that in the
+sure to put your feedback on that in the
+sure to put your feedback on that in the
+description and like the video if you
+description and like the video if you
+description and like the video if you
+enjoyed it subscribe to my channel for
+enjoyed it subscribe to my channel for
+enjoyed it subscribe to my channel for
+more roblox scripting content and cool
+more roblox scripting content and cool
+more roblox scripting content and cool
+stuff like this
+stuff like this
+stuff like this
+and ask any questions down in the
+and ask any questions down in the
+and ask any questions down in the
+comments but other than that i have a
+comments but other than that i have a
+comments but other than that i have a
+nice day and goodbye
+nice day and goodbye
+nice day and goodbye
+[Music]
+you

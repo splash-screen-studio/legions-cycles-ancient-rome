@@ -1,0 +1,1342 @@
+actors are those three number little
+actors are those three number little
+actors are those three number little
+constructs in Roblox that are very
+constructs in Roblox that are very
+constructs in Roblox that are very
+useful for a number of things but why
+useful for a number of things but why
+useful for a number of things but why
+would you ever want to find the angle
+would you ever want to find the angle
+would you ever want to find the angle
+between two vectors well for one you can
+between two vectors well for one you can
+between two vectors well for one you can
+use that to assign a value to a hinge
+use that to assign a value to a hinge
+use that to assign a value to a hinge
+constraint which I made a video on to
+constraint which I made a video on to
+constraint which I made a video on to
+make some nice smooth animations that
+make some nice smooth animations that
+make some nice smooth animations that
+also interact with physics and you could
+also interact with physics and you could
+also interact with physics and you could
+also do something
+also do something
+also do something
+like make a fov range for an enemy NPC
+like make a fov range for an enemy NPC
+like make a fov range for an enemy NPC
+that they can detect you like that there
+that they can detect you like that there
+that they can detect you like that there
+are many uses for finding an angle
+are many uses for finding an angle
+are many uses for finding an angle
+between two vectors but historically
+between two vectors but historically
+between two vectors but historically
+it's been quite difficult to do that
+it's been quite difficult to do that
+it's been quite difficult to do that
+because the math is complex and it was
+because the math is complex and it was
+because the math is complex and it was
+just annoying but now Roblox released a
+just annoying but now Roblox released a
+just annoying but now Roblox released a
+vector 3 angle method I will talk about
+vector 3 angle method I will talk about
+vector 3 angle method I will talk about
+today and tell you how to use so let's
+today and tell you how to use so let's
+today and tell you how to use so let's
+get right into it
+get right into it
+get right into it
+foreign
+although the math is already done for
+although the math is already done for
+although the math is already done for
+you it is good to know how the angles
+you it is good to know how the angles
+you it is good to know how the angles
+within vectors actually work under the
+within vectors actually work under the
+within vectors actually work under the
+hood
+hood
+hood
+so you can best know how to use them so
+so you can best know how to use them so
+so you can best know how to use them so
+we're going to start with a simple 2D
+we're going to start with a simple 2D
+we're going to start with a simple 2D
+examples let's say we've got a vector
+examples let's say we've got a vector
+examples let's say we've got a vector
+starting at the origin
+starting at the origin
+starting at the origin
+going to
+going to
+going to
+and we have one right the origin
+angle between them would obviously
+angle between them would obviously
+angle between them would obviously
+yes
+yes
+yes
+angle or like Theta Bond and that's that
+angle or like Theta Bond and that's that
+angle or like Theta Bond and that's that
+but one thing you got to keep in mind is
+but one thing you got to keep in mind is
+but one thing you got to keep in mind is
+we're just asking for the angle we're
+we're just asking for the angle we're
+we're just asking for the angle we're
+not asking for a signed angle so if
+not asking for a signed angle so if
+not asking for a signed angle so if
+there were to be a vector
+there were to be a vector
+there were to be a vector
+drawn here
+drawn here
+drawn here
+the angle you would think and on first
+the angle you would think and on first
+the angle you would think and on first
+thought it would be like all the way
+thought it would be like all the way
+thought it would be like all the way
+around down here that's actually not the
+around down here that's actually not the
+around down here that's actually not the
+case it would find the shortest angle
+case it would find the shortest angle
+case it would find the shortest angle
+between them
+between them
+between them
+which would be like right here so when
+which would be like right here so when
+which would be like right here so when
+you're finding the angle between two
+you're finding the angle between two
+you're finding the angle between two
+vectors it'll always find like the most
+vectors it'll always find like the most
+vectors it'll always find like the most
+acute angle
+acute angle
+acute angle
+and there are there is functionality in
+and there are there is functionality in
+and there are there is functionality in
+the code to allow you to determine like
+the code to allow you to determine like
+the code to allow you to determine like
+whether or not it's like signed but you
+whether or not it's like signed but you
+whether or not it's like signed but you
+still won't be able to get the full 360
+still won't be able to get the full 360
+still won't be able to get the full 360
+degrees out of the box it only goes up
+degrees out of the box it only goes up
+degrees out of the box it only goes up
+to 180 and then you have to specify the
+to 180 and then you have to specify the
+to 180 and then you have to specify the
+axis on which is on you go to 360. Let's
+axis on which is on you go to 360. Let's
+axis on which is on you go to 360. Let's
+actually go to 3D talk about that so
+actually go to 3D talk about that so
+actually go to 3D talk about that so
+here we have our 3D grid we added a new
+here we have our 3D grid we added a new
+here we have our 3D grid we added a new
+z-axis let's say you got a vector
+z-axis let's say you got a vector
+z-axis let's say you got a vector
+you know just chilling down here
+you know just chilling down here
+you know just chilling down here
+and you get another one chilling up here
+and you get another one chilling up here
+and you get another one chilling up here
+you want to find the angle to the
+you want to find the angle to the
+you want to find the angle to the
+injectors and for that you can't just
+injectors and for that you can't just
+injectors and for that you can't just
+like
+like
+like
+you know choose and like choose wherever
+you know choose and like choose wherever
+you know choose and like choose wherever
+and draw
+and draw
+and draw
+like a line to them because that's just
+like a line to them because that's just
+like a line to them because that's just
+very clear in 3D you need to specify
+very clear in 3D you need to specify
+very clear in 3D you need to specify
+something more so what happens is
+something more so what happens is
+something more so what happens is
+there's like an imaginary plane where
+there's like an imaginary plane where
+there's like an imaginary plane where
+the two vectors sit on
+the two vectors sit on
+the two vectors sit on
+so I'm just getting a different color
+so I'm just getting a different color
+so I'm just getting a different color
+so I'm going to draw this plane real
+so I'm going to draw this plane real
+so I'm going to draw this plane real
+quick you got like this imaginary plane
+obviously it's not drawn to scale but
+obviously it's not drawn to scale but
+obviously it's not drawn to scale but
+like you get the idea it's kind of
+like you get the idea it's kind of
+like you get the idea it's kind of
+skewed and then this would be the angle
+skewed and then this would be the angle
+skewed and then this would be the angle
+between them Sitting on This Plane
+between them Sitting on This Plane
+between them Sitting on This Plane
+notice how this plane is not aligned
+notice how this plane is not aligned
+notice how this plane is not aligned
+with any one
+with any one
+with any one
+axis now with the Y not with the X out
+axis now with the Y not with the X out
+axis now with the Y not with the X out
+with the Z if you want to you can
+with the Z if you want to you can
+with the Z if you want to you can
+obviously flatten any one of these
+obviously flatten any one of these
+obviously flatten any one of these
+vectors to a specific axis
+vectors to a specific axis
+vectors to a specific axis
+and figure out the angle that way but
+and figure out the angle that way but
+and figure out the angle that way but
+just out of the box when you have two
+just out of the box when you have two
+just out of the box when you have two
+random angles or vectors in Space the
+random angles or vectors in Space the
+random angles or vectors in Space the
+angle between them is just the closest
+angle between them is just the closest
+angle between them is just the closest
+thing you can get to them by a plane and
+thing you can get to them by a plane and
+thing you can get to them by a plane and
+there's this thing called like the axis
+there's this thing called like the axis
+there's this thing called like the axis
+that is perpendicular to this plane
+that is perpendicular to this plane
+that is perpendicular to this plane
+and you can specify this axis in order
+and you can specify this axis in order
+and you can specify this axis in order
+to determine the sign of the angle so
+to determine the sign of the angle so
+to determine the sign of the angle so
+see this um orange line
+see this um orange line
+see this um orange line
+a little more clear if the
+a little more clear if the
+a little more clear if the
+angle is on like this side whatever it
+angle is on like this side whatever it
+angle is on like this side whatever it
+can be positive and then you have
+can be positive and then you have
+can be positive and then you have
+another Vector pointing this way or
+another Vector pointing this way or
+another Vector pointing this way or
+whatever the angle between them might be
+whatever the angle between them might be
+whatever the angle between them might be
+negative because you determine this axis
+negative because you determine this axis
+negative because you determine this axis
+and the best honestly I'm not gonna lie
+and the best honestly I'm not gonna lie
+and the best honestly I'm not gonna lie
+you could figure out all this stuff
+you could figure out all this stuff
+you could figure out all this stuff
+mathematically on paper before you
+mathematically on paper before you
+mathematically on paper before you
+actually commit it to code but
+actually commit it to code but
+actually commit it to code but
+the best bet that I've found is to just
+the best bet that I've found is to just
+the best bet that I've found is to just
+go in and start experimenting figuring
+go in and start experimenting figuring
+go in and start experimenting figuring
+out what works for your setup this kind
+out what works for your setup this kind
+out what works for your setup this kind
+of idea of how the angle between two
+of idea of how the angle between two
+of idea of how the angle between two
+vectors is just the closest angle you
+vectors is just the closest angle you
+vectors is just the closest angle you
+can get on imaginary plane that is just
+can get on imaginary plane that is just
+can get on imaginary plane that is just
+a good concept to find when you're
+a good concept to find when you're
+a good concept to find when you're
+demoing stuff because oftentimes you
+demoing stuff because oftentimes you
+demoing stuff because oftentimes you
+want the angle to be kind of flattened
+want the angle to be kind of flattened
+want the angle to be kind of flattened
+towards a specific axis which you can do
+towards a specific axis which you can do
+towards a specific axis which you can do
+that easily by taking like a random
+that easily by taking like a random
+that easily by taking like a random
+vector and multiplying it by another
+vector and multiplying it by another
+vector and multiplying it by another
+Vector like that zeros in it to get rid
+Vector like that zeros in it to get rid
+Vector like that zeros in it to get rid
+of components I will demo a little later
+of components I will demo a little later
+of components I will demo a little later
+so let's move on to actual Roblox so I'm
+so let's move on to actual Roblox so I'm
+so let's move on to actual Roblox so I'm
+here in a Roblox base plate and I have
+here in a Roblox base plate and I have
+here in a Roblox base plate and I have
+two parts created I have one part called
+two parts created I have one part called
+two parts created I have one part called
+The Ref ref and this is just a basic
+The Ref ref and this is just a basic
+The Ref ref and this is just a basic
+block doesn't really matter the
+block doesn't really matter the
+block doesn't really matter the
+properties make sure it's just anchored
+properties make sure it's just anchored
+properties make sure it's just anchored
+and then I have the target I'm also
+and then I have the target I'm also
+and then I have the target I'm also
+there's anchored
+there's anchored
+there's anchored
+and this one is just a little
+and this one is just a little
+and this one is just a little
+differentiated because this is what
+differentiated because this is what
+differentiated because this is what
+we're going to be finding the
+we're going to be finding the
+we're going to be finding the
+we just have a ref the like base our
+we just have a ref the like base our
+we just have a ref the like base our
+starting Vector all
+starting Vector all
+starting Vector all
+this is where you'll find the angles
+this is where you'll find the angles
+this is where you'll find the angles
+vectors
+vectors
+vectors
+relation to
+relation to
+relation to
+each other because vectors start from
+each other because vectors start from
+each other because vectors start from
+the origin but oftentimes you want to
+the origin but oftentimes you want to
+the origin but oftentimes you want to
+base it off another object that's what
+base it off another object that's what
+base it off another object that's what
+we're doing here now in the workspace
+we're doing here now in the workspace
+we're doing here now in the workspace
+I'm just going to create a script
+zoom in a little bit and we're gonna get
+zoom in a little bit and we're gonna get
+zoom in a little bit and we're gonna get
+our ref
+and then our Target
+and then our Target
+and then our Target
+workspace Dot
+workspace Dot
+workspace Dot
+and then for demonstration purposes I'm
+and then for demonstration purposes I'm
+and then for demonstration purposes I'm
+going to create a render step Loop by
+going to create a render step Loop by
+going to create a render step Loop by
+using gaming get service run service dot
+using gaming get service run service dot
+using gaming get service run service dot
+step I guess stepped I should say not
+step I guess stepped I should say not
+step I guess stepped I should say not
+render stepped and we're going to
+render stepped and we're going to
+render stepped and we're going to
+connect a function
+it's time and Delta time don't really
+it's time and Delta time don't really
+it's time and Delta time don't really
+need to worry about that and then in
+need to worry about that and then in
+need to worry about that and then in
+here we want to first get the target
+here we want to first get the target
+here we want to first get the target
+vectors position in relation
+vectors position in relation
+vectors position in relation
+to this object you could obviously use
+to this object you could obviously use
+to this object you could obviously use
+two World space or two object space on
+two World space or two object space on
+two World space or two object space on
+this part I have a video talking about
+this part I have a video talking about
+this part I have a video talking about
+that just like converting the world to
+that just like converting the world to
+that just like converting the world to
+object spaces and also the most
+object spaces and also the most
+object spaces and also the most
+intuitive method is to subtract the
+intuitive method is to subtract the
+intuitive method is to subtract the
+Target or the position of the target
+Target or the position of the target
+Target or the position of the target
+part with the ref's position
+part with the ref's position
+part with the ref's position
+we're gonna say local
+we're gonna say local
+we're gonna say local
+der for direction direction equals
+der for direction direction equals
+der for direction direction equals
+Target dot position minus ref top
+Target dot position minus ref top
+Target dot position minus ref top
+position
+position
+position
+uh unit this is a unit Vector meaning
+uh unit this is a unit Vector meaning
+uh unit this is a unit Vector meaning
+its magnitude is one and it's going to
+its magnitude is one and it's going to
+its magnitude is one and it's going to
+be pointing from The Ref to the Target
+be pointing from The Ref to the Target
+be pointing from The Ref to the Target
+so the like the ref to the Target that's
+so the like the ref to the Target that's
+so the like the ref to the Target that's
+what this minus is for you start with
+what this minus is for you start with
+what this minus is for you start with
+the target position you offset it by the
+the target position you offset it by the
+the target position you offset it by the
+ref position that gives you a relative
+ref position that gives you a relative
+ref position that gives you a relative
+Vector to the Target
+Vector to the Target
+Vector to the Target
+and so now let's just say we want to
+and so now let's just say we want to
+and so now let's just say we want to
+find the angle between
+find the angle between
+find the angle between
+this target position or this target part
+this target position or this target part
+this target position or this target part
+and
+and
+and
+the x-axis
+the x-axis
+the x-axis
+relative so you see up here my little
+relative so you see up here my little
+relative so you see up here my little
+Widget the x is like from left to right
+Widget the x is like from left to right
+Widget the x is like from left to right
+so right now it's like perfectly aligned
+so right now it's like perfectly aligned
+so right now it's like perfectly aligned
+with the x-axis so we can just say
+with the x-axis so we can just say
+with the x-axis so we can just say
+vehicle angle equals
+actually Vector three dot x axis angle
+actually Vector three dot x axis angle
+actually Vector three dot x axis angle
+Direction
+Direction
+Direction
+for now we'll need to leave one
+for now we'll need to leave one
+for now we'll need to leave one
+parameter which is the other Vector you
+parameter which is the other Vector you
+parameter which is the other Vector you
+want to find an angle with this is
+want to find an angle with this is
+want to find an angle with this is
+Vector 3.x axis is basically shorthand
+Vector 3.x axis is basically shorthand
+Vector 3.x axis is basically shorthand
+for a vector 3. new
+for a vector 3. new
+for a vector 3. new
+one zero zero
+one zero zero
+one zero zero
+but this angle actually isn't in what
+but this angle actually isn't in what
+but this angle actually isn't in what
+we're used to this angle is in radians
+we're used to this angle is in radians
+we're used to this angle is in radians
+not degrees so if we were to print it
+not degrees so if we were to print it
+not degrees so if we were to print it
+out
+out
+out
+and this is the whole reason I'm using
+and this is the whole reason I'm using
+and this is the whole reason I'm using
+this run service loop is because when
+this run service loop is because when
+this run service loop is because when
+you print it out it'll enter every frame
+you print it out it'll enter every frame
+you print it out it'll enter every frame
+which is pretty useful
+which is pretty useful
+which is pretty useful
+so we're going to run this
+you can see it's printing three whatever
+you can see it's printing three whatever
+you can see it's printing three whatever
+and the numbers aren't
+and the numbers aren't
+and the numbers aren't
+really that
+really that
+really that
+intuitive that's because they're in
+intuitive that's because they're in
+intuitive that's because they're in
+radians they're from zero to two pi
+radians they're from zero to two pi
+radians they're from zero to two pi
+so if we want them in a nice numbering
+so if we want them in a nice numbering
+so if we want them in a nice numbering
+system we can just do Wrap This in a
+system we can just do Wrap This in a
+system we can just do Wrap This in a
+math dot degree
+inverts a radiant degrees or radians
+inverts a radiant degrees or radians
+inverts a radiant degrees or radians
+into degrees degrees are what we usually
+into degrees degrees are what we usually
+into degrees degrees are what we usually
+use it's what hinge constraints use it's
+use it's what hinge constraints use it's
+use it's what hinge constraints use it's
+just more intuitive to use and a whole
+just more intuitive to use and a whole
+just more intuitive to use and a whole
+host of bugs result from people
+host of bugs result from people
+host of bugs result from people
+forgetting to do this math dot degree so
+forgetting to do this math dot degree so
+forgetting to do this math dot degree so
+make sure you do that so now we were to
+make sure you do that so now we were to
+make sure you do that so now we were to
+run it once again
+run it once again
+run it once again
+we get some nice angles we get
+we get some nice angles we get
+we get some nice angles we get
+zero all the way
+zero all the way
+zero all the way
+to 180.
+to 180.
+to 180.
+but you'll notice as I go back around
+but you'll notice as I go back around
+but you'll notice as I go back around
+it goes all the way back around to 180
+it goes all the way back around to 180
+it goes all the way back around to 180
+without changing signs so you don't know
+without changing signs so you don't know
+without changing signs so you don't know
+if a part is here
+if a part is here
+if a part is here
+it's like an identical angle to down
+it's like an identical angle to down
+it's like an identical angle to down
+here
+here
+here
+it's around like 130s 20s so you have to
+it's around like 130s 20s so you have to
+it's around like 130s 20s so you have to
+find a way to differentiate that and
+find a way to differentiate that and
+find a way to differentiate that and
+also
+also
+also
+if you move up and down you can see the
+if you move up and down you can see the
+if you move up and down you can see the
+angle changes and a lot of times that's
+angle changes and a lot of times that's
+angle changes and a lot of times that's
+not desirable either
+not desirable either
+not desirable either
+so for now my goal for this little raft
+so for now my goal for this little raft
+so for now my goal for this little raft
+part is going to be to make a little
+part is going to be to make a little
+part is going to be to make a little
+system to work with a hinge demonstrate
+system to work with a hinge demonstrate
+system to work with a hinge demonstrate
+and Orient the hinge constraint to point
+and Orient the hinge constraint to point
+and Orient the hinge constraint to point
+a little pointer at the Target so I'm
+a little pointer at the Target so I'm
+a little pointer at the Target so I'm
+going to get that set up real quick and
+going to get that set up real quick and
+going to get that set up real quick and
+show you how it works
+show you how it works
+show you how it works
+so I have this new part which we're
+so I have this new part which we're
+so I have this new part which we're
+going to attach to the ref and make a
+going to attach to the ref and make a
+going to attach to the ref and make a
+hinge video to model create
+hinge video to model create
+hinge video to model create
+inch constraint
+inch constraint
+inch constraint
+and we're gonna
+and we're gonna
+and we're gonna
+slap that right on
+uh there
+uh there
+uh there
+you do the trick actually we want this
+you do the trick actually we want this
+you do the trick actually we want this
+centered so we're going to set
+centered so we're going to set
+centered so we're going to set
+the position and not the world is just
+the position and not the world is just
+the position and not the world is just
+normal position zero zero zero and then
+normal position zero zero zero and then
+normal position zero zero zero and then
+just move it up
+and then move this
+and then move this
+and then move this
+roughly over top and I've covered in
+roughly over top and I've covered in
+roughly over top and I've covered in
+more details in a separate video if you
+more details in a separate video if you
+more details in a separate video if you
+want to check that out
+want to check that out
+want to check that out
+but here we go the hinge is slapped on
+but here we go the hinge is slapped on
+but here we go the hinge is slapped on
+if we play it
+oh I don't want to play with my
+oh I don't want to play with my
+oh I don't want to play with my
+character if we just run it
+works out fine
+works out fine
+works out fine
+it rotates just fine which is great
+it rotates just fine which is great
+it rotates just fine which is great
+so now we want to turn this hinge into a
+so now we want to turn this hinge into a
+so now we want to turn this hinge into a
+servo
+it can go to a desired angle
+it can go to a desired angle
+it can go to a desired angle
+and the target angle right now is going
+and the target angle right now is going
+and the target angle right now is going
+to be
+to be
+to be
+zero
+zero
+zero
+and we want this angular speed to be
+and we want this angular speed to be
+and we want this angular speed to be
+like two whatever it doesn't matter Max
+like two whatever it doesn't matter Max
+like two whatever it doesn't matter Max
+torque Crank That Thing Up The Big Value
+torque Crank That Thing Up The Big Value
+torque Crank That Thing Up The Big Value
+so it moves a lot
+so it moves a lot
+so it moves a lot
+and you'll notice that these blue arrows
+and you'll notice that these blue arrows
+and you'll notice that these blue arrows
+point to where the target angle is
+point to where the target angle is
+point to where the target angle is
+supposed to be so right now the target
+supposed to be so right now the target
+supposed to be so right now the target
+angle is zero it's pointing that way if
+angle is zero it's pointing that way if
+angle is zero it's pointing that way if
+we play it don't move actually it won't
+we play it don't move actually it won't
+we play it don't move actually it won't
+move at all because it's already at the
+move at all because it's already at the
+move at all because it's already at the
+Target angle it's because the secondary
+Target angle it's because the secondary
+Target angle it's because the secondary
+axes of the
+axes of the
+axes of the
+attachments are actually aligned in this
+attachments are actually aligned in this
+attachments are actually aligned in this
+position just because they're at an
+position just because they're at an
+position just because they're at an
+alternate angle doesn't mean they're not
+alternate angle doesn't mean they're not
+alternate angle doesn't mean they're not
+a lot I don't know hinges are really
+a lot I don't know hinges are really
+a lot I don't know hinges are really
+wacky that's why we use trial and error
+wacky that's why we use trial and error
+wacky that's why we use trial and error
+so let's do that so let's go back into
+so let's do that so let's go back into
+so let's do that so let's go back into
+the Iran service let's get our good old
+the Iran service let's get our good old
+the Iran service let's get our good old
+inch which is actually within the part
+inch which is actually within the part
+inch which is actually within the part
+so I'm going to rename this part to the
+so I'm going to rename this part to the
+so I'm going to rename this part to the
+pointer
+pointer
+pointer
+is a why not
+is a why not
+is a why not
+let's say local pointer is equal to
+let's say local pointer is equal to
+let's say local pointer is equal to
+workspace.pointer
+workspace.pointer
+workspace.pointer
+and local hinge equals
+and local hinge equals
+and local hinge equals
+pointer dot hinge constraint
+pointer dot hinge constraint
+pointer dot hinge constraint
+so we want to set the hinge constraint
+so we want to set the hinge constraint
+so we want to set the hinge constraint
+the hinge dot Target angle two
+the hinge dot Target angle two
+the hinge dot Target angle two
+e angle that we had before
+e angle that we had before
+e angle that we had before
+Let's test this out
+Let's test this out
+Let's test this out
+I severely doubt this will work for his
+I severely doubt this will work for his
+I severely doubt this will work for his
+time and as it did not
+time and as it did not
+time and as it did not
+but you can see it does have relation
+but you can see it does have relation
+but you can see it does have relation
+notice how it's also wiggling
+notice how it's also wiggling
+notice how it's also wiggling
+and we move it up and down it also
+and we move it up and down it also
+and we move it up and down it also
+Wiggles we gotta fix that too
+Wiggles we gotta fix that too
+Wiggles we gotta fix that too
+so let's start with the little wiggling
+so let's start with the little wiggling
+so let's start with the little wiggling
+issue because that's the easiest to
+issue because that's the easiest to
+issue because that's the easiest to
+address that's because this direction
+address that's because this direction
+address that's because this direction
+has a y component as well so as we move
+has a y component as well so as we move
+has a y component as well so as we move
+it up the angle changes we don't want
+it up the angle changes we don't want
+it up the angle changes we don't want
+that
+that
+that
+so all we have to do to fix that is just
+so all we have to do to fix that is just
+so all we have to do to fix that is just
+say like local flat Direction This is a
+say like local flat Direction This is a
+say like local flat Direction This is a
+flattened Direction equals Direction
+flattened Direction equals Direction
+flattened Direction equals Direction
+times vector3. new one zero one so what
+times vector3. new one zero one so what
+times vector3. new one zero one so what
+this does is we multiply each component
+this does is we multiply each component
+this does is we multiply each component
+the X Y and Z of our vector
+the X Y and Z of our vector
+the X Y and Z of our vector
+by one keeping it it doesn't change it
+by one keeping it it doesn't change it
+by one keeping it it doesn't change it
+zero we get rid of the Y component and
+zero we get rid of the Y component and
+zero we get rid of the Y component and
+then one we keep the Z component that
+then one we keep the Z component that
+then one we keep the Z component that
+keeps it like on the flat plane so if we
+keeps it like on the flat plane so if we
+keeps it like on the flat plane so if we
+were like
+were like
+were like
+it keeps all of this data but it gets
+it keeps all of this data but it gets
+it keeps all of this data but it gets
+rid of the up down is we don't want that
+rid of the up down is we don't want that
+rid of the up down is we don't want that
+since our hinge cannot move more than
+since our hinge cannot move more than
+since our hinge cannot move more than
+one axis
+one axis
+one axis
+so now instead of finding an angle
+so now instead of finding an angle
+so now instead of finding an angle
+between the x-axis and the flat dur or
+between the x-axis and the flat dur or
+between the x-axis and the flat dur or
+in the dur I'm going to find it to the
+in the dur I'm going to find it to the
+in the dur I'm going to find it to the
+flat Direction
+flat Direction
+flat Direction
+now let's try that
+now let's try that
+now let's try that
+see if that eliminates our pesky or
+see if that eliminates our pesky or
+see if that eliminates our pesky or
+wiggle
+wiggle
+wiggle
+you see it does let me move it
+you see it does let me move it
+you see it does let me move it
+up and down zero change on the angle
+up and down zero change on the angle
+up and down zero change on the angle
+because we only care about the flatness
+because we only care about the flatness
+because we only care about the flatness
+now moving forward let's try to fix our
+now moving forward let's try to fix our
+now moving forward let's try to fix our
+little mix up when the little pointer is
+little mix up when the little pointer is
+little mix up when the little pointer is
+pointing the wrong way I don't want it
+pointing the wrong way I don't want it
+pointing the wrong way I don't want it
+to point the opposite way I want to
+to point the opposite way I want to
+to point the opposite way I want to
+point this way you could obviously edit
+point this way you could obviously edit
+point this way you could obviously edit
+the hinge and most of the time that's
+the hinge and most of the time that's
+the hinge and most of the time that's
+probably like the best solution but
+probably like the best solution but
+probably like the best solution but
+honestly it's a pain and a lot of times
+honestly it's a pain and a lot of times
+honestly it's a pain and a lot of times
+it's much easier just to for example
+it's much easier just to for example
+it's much easier just to for example
+negate the angle
+negate the angle
+negate the angle
+we say negative I have to agree
+we say negative I have to agree
+we say negative I have to agree
+whatever
+and that didn't work
+and that didn't work
+and that didn't work
+but
+but
+but
+I was only one best
+I was only one best
+I was only one best
+let's try something
+because you also got to keep in mind let
+because you also got to keep in mind let
+because you also got to keep in mind let
+me just actually go back
+me just actually go back
+me just actually go back
+I'm gonna debug this with with me
+I'm gonna debug this with with me
+I'm gonna debug this with with me
+because I gotta keep in line This angle
+because I gotta keep in line This angle
+because I gotta keep in line This angle
+see how it goes back
+see how it goes back
+see how it goes back
+that's because
+that's because
+that's because
+back here
+back here
+back here
+it reaches the limit of the angle
+it reaches the limit of the angle
+it reaches the limit of the angle
+and since there's no sign indicating
+and since there's no sign indicating
+and since there's no sign indicating
+whether it's positive or negative you
+whether it's positive or negative you
+whether it's positive or negative you
+can't get the full
+can't get the full
+can't get the full
+degree of rotation
+degree of rotation
+degree of rotation
+which is obviously not good luckily the
+which is obviously not good luckily the
+which is obviously not good luckily the
+angle method in
+angle method in
+angle method in
+Roblox has an extra parameter which is
+Roblox has an extra parameter which is
+Roblox has an extra parameter which is
+the axis
+the axis
+the axis
+which determines the sine of angle so
+which determines the sine of angle so
+which determines the sine of angle so
+you just want to set this axis to
+you just want to set this axis to
+you just want to set this axis to
+something perpendicular to the plane in
+something perpendicular to the plane in
+something perpendicular to the plane in
+which you're measuring your angle on our
+which you're measuring your angle on our
+which you're measuring your angle on our
+case the plane that we which will
+case the plane that we which will
+case the plane that we which will
+measure angle is the X Z plane get the X
+measure angle is the X Z plane get the X
+measure angle is the X Z plane get the X
+and you got the Z
+and you got the Z
+and you got the Z
+so the axis we want is just the y-axis
+so the axis we want is just the y-axis
+so the axis we want is just the y-axis
+it's like the full Chromo which is
+it's like the full Chromo which is
+it's like the full Chromo which is
+rotating it's like the up and down
+rotating it's like the up and down
+rotating it's like the up and down
+because you see this little yellow thing
+because you see this little yellow thing
+because you see this little yellow thing
+this is the y-axis of our of the world
+this is the y-axis of our of the world
+this is the y-axis of our of the world
+and it's like the primary axis of our
+and it's like the primary axis of our
+and it's like the primary axis of our
+rotation or our hinge so we're just
+rotation or our hinge so we're just
+rotation or our hinge so we're just
+going to set our access to vector3. Y
+going to set our access to vector3. Y
+going to set our access to vector3. Y
+axis which is the same thing as saying
+axis which is the same thing as saying
+axis which is the same thing as saying
+vector 3.010
+vector 3.010
+vector 3.010
+so let's try this again this should
+so let's try this again this should
+so let's try this again this should
+provide a full like rotation but we
+provide a full like rotation but we
+provide a full like rotation but we
+still have it going backwards it's kind
+still have it going backwards it's kind
+still have it going backwards it's kind
+of annoying
+of annoying
+of annoying
+so now we have full continuous rotation
+so now we have full continuous rotation
+so now we have full continuous rotation
+it always points the right direction
+it always points the right direction
+it always points the right direction
+which is great
+which is great
+which is great
+so now if we want to
+so now if we want to
+so now if we want to
+you know flip it the right direction
+you know flip it the right direction
+you know flip it the right direction
+I think the easiest way would just be to
+I think the easiest way would just be to
+I think the easiest way would just be to
+flip the actual Vector let's try that
+flip the actual Vector let's try that
+flip the actual Vector let's try that
+out
+out
+out
+there you go now it's pointing that way
+there you go now it's pointing that way
+there you go now it's pointing that way
+and out points properly forward
+and out points properly forward
+and out points properly forward
+which is absolutely wonderful this is
+which is absolutely wonderful this is
+which is absolutely wonderful this is
+what I want then you got a little
+what I want then you got a little
+what I want then you got a little
+pointer
+pointer
+pointer
+now you could there's a lot of
+now you could there's a lot of
+now you could there's a lot of
+possibilities with this this looks sort
+possibilities with this this looks sort
+possibilities with this this looks sort
+of like a tank like a 2d tank you could
+of like a tank like a 2d tank you could
+of like a tank like a 2d tank you could
+obviously do that there's a bunch of
+obviously do that there's a bunch of
+obviously do that there's a bunch of
+other things you can do I've actually
+other things you can do I've actually
+other things you can do I've actually
+made a full AI turret with this so let
+made a full AI turret with this so let
+made a full AI turret with this so let
+me show you that now so this is the AI
+me show you that now so this is the AI
+me show you that now so this is the AI
+turret that I designed that is based off
+turret that I designed that is based off
+turret that I designed that is based off
+the same concept I just told you you can
+the same concept I just told you you can
+the same concept I just told you you can
+see the residual Target block just lying
+see the residual Target block just lying
+see the residual Target block just lying
+around
+around
+around
+but let me show you what it does
+it can aim in two two dimension
+it can aim in two two dimension
+it can aim in two two dimension
+and when it sees me it's shoot
+and when it sees me it's shoot
+and when it sees me it's shoot
+it's pretty cool and regardless of its
+it's pretty cool and regardless of its
+it's pretty cool and regardless of its
+orientation
+orientation
+orientation
+it will always
+it will always
+it will always
+aim at me
+aim at me
+aim at me
+even if I rotate it wildly
+even if I rotate it wildly
+even if I rotate it wildly
+it'll still aim at me
+which is really cool so this is what you
+which is really cool so this is what you
+which is really cool so this is what you
+can get to when you
+can get to when you
+can get to when you
+master
+master
+master
+using the vector3 angle method and just
+using the vector3 angle method and just
+using the vector3 angle method and just
+other C frame transforms what we just
+other C frame transforms what we just
+other C frame transforms what we just
+made and not doesn't have this
+made and not doesn't have this
+made and not doesn't have this
+functionality just yet but if you want
+functionality just yet but if you want
+functionality just yet but if you want
+to see a tutorial on this I'm always
+to see a tutorial on this I'm always
+to see a tutorial on this I'm always
+free to make one so just put your
+free to make one so just put your
+free to make one so just put your
+comments down below
+comments down below
+comments down below
+but that about wraps up this video it
+but that about wraps up this video it
+but that about wraps up this video it
+was kind of all over the place and it
+was kind of all over the place and it
+was kind of all over the place and it
+was kind of messy but that's just how
+was kind of messy but that's just how
+was kind of messy but that's just how
+dealing with vectors and see frames are
+dealing with vectors and see frames are
+dealing with vectors and see frames are
+you can never just like theorize about
+you can never just like theorize about
+you can never just like theorize about
+what's gonna happen when you write
+what's gonna happen when you write
+what's gonna happen when you write
+certain things you just gotta shove it
+certain things you just gotta shove it
+certain things you just gotta shove it
+in there and get some intuition like
+in there and get some intuition like
+in there and get some intuition like
+I've dealt with these problems so often
+I've dealt with these problems so often
+I've dealt with these problems so often
+that I can like visualize what happens
+that I can like visualize what happens
+that I can like visualize what happens
+what's supposed to happen
+what's supposed to happen
+what's supposed to happen
+and how things are like out and it would
+and how things are like out and it would
+and how things are like out and it would
+also help if you had like a vector three
+also help if you had like a vector three
+also help if you had like a vector three
+visualizer which I think they exist I
+visualizer which I think they exist I
+visualizer which I think they exist I
+made one pretty quickly online you can
+made one pretty quickly online you can
+made one pretty quickly online you can
+make one pretty quick pretty simple you
+make one pretty quick pretty simple you
+make one pretty quick pretty simple you
+can also use like my rate visualizing
+can also use like my rate visualizing
+can also use like my rate visualizing
+video too that could help but overall
+video too that could help but overall
+video too that could help but overall
+just jump into it get your hands dirty
+just jump into it get your hands dirty
+just jump into it get your hands dirty
+and make some pretty cool things so if
+and make some pretty cool things so if
+and make some pretty cool things so if
+you know the video make sure to like it
+you know the video make sure to like it
+you know the video make sure to like it
+and subscribe to my channel for more
+and subscribe to my channel for more
+and subscribe to my channel for more
+content make sure to comment especially
+content make sure to comment especially
+content make sure to comment especially
+if you want this tutorial because I've
+if you want this tutorial because I've
+if you want this tutorial because I've
+been thinking about doing it it is kind
+been thinking about doing it it is kind
+been thinking about doing it it is kind
+of in depth
+of in depth
+of in depth
+food short but there's a lot going on
+food short but there's a lot going on
+food short but there's a lot going on
+but if you want that just comment down
+but if you want that just comment down
+but if you want that just comment down
+below but with that hope you have a nice
+below but with that hope you have a nice
+below but with that hope you have a nice
+day and goodbye
+day and goodbye
+day and goodbye
+[Music]

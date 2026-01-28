@@ -1,0 +1,1283 @@
+so let's say i want to add a custom
+so let's say i want to add a custom
+so let's say i want to add a custom
+property
+property
+property
+to my gun here usually what i have to do
+to my gun here usually what i have to do
+to my gun here usually what i have to do
+is i have to go to the explorer
+is i have to go to the explorer
+is i have to go to the explorer
+go to my gun create a end value let's
+go to my gun create a end value let's
+go to my gun create a end value let's
+say and this will be the reload
+say and this will be the reload
+say and this will be the reload
+time and this would be a value i could
+time and this would be a value i could
+time and this would be a value i could
+change it to like
+change it to like
+change it to like
+10 or something or like one whatever
+10 or something or like one whatever
+10 or something or like one whatever
+that's it and in a script it'd be really
+that's it and in a script it'd be really
+that's it and in a script it'd be really
+clunky i have to access it by saying
+clunky i have to access it by saying
+clunky i have to access it by saying
+gun dot reload time dot value
+gun dot reload time dot value
+gun dot reload time dot value
+it just doesn't feel good and if i want
+it just doesn't feel good and if i want
+it just doesn't feel good and if i want
+to create a value on the fly i have to
+to create a value on the fly i have to
+to create a value on the fly i have to
+do instance.new
+do instance.new
+do instance.new
+it'd be a mess but roblox recently added
+it'd be a mess but roblox recently added
+it'd be a mess but roblox recently added
+a new feature called
+a new feature called
+a new feature called
+attributes and attributes allow you to
+attributes and attributes allow you to
+attributes and attributes allow you to
+add custom properties
+add custom properties
+add custom properties
+to your instances and roblox with the
+to your instances and roblox with the
+to your instances and roblox with the
+click
+click
+click
+of a button so if you're interested in
+of a button so if you're interested in
+of a button so if you're interested in
+learning how to use these
+learning how to use these
+learning how to use these
+the best way to use them and at the end
+the best way to use them and at the end
+the best way to use them and at the end
+i'll show you how to
+i'll show you how to
+i'll show you how to
+implement table values with attributes
+implement table values with attributes
+implement table values with attributes
+even though they aren't natively
+even though they aren't natively
+even though they aren't natively
+supported make sure to watch this video
+supported make sure to watch this video
+supported make sure to watch this video
+and if you enjoy it make sure to like
+and if you enjoy it make sure to like
+and if you enjoy it make sure to like
+and subscribe
+and subscribe
+and subscribe
+without further ado let's get into the
+video
+video
+video
+[Music]
+[Music]
+[Music]
+so attributes and roblox got released
+so attributes and roblox got released
+so attributes and roblox got released
+very recently so for that reason they're
+very recently so for that reason they're
+very recently so for that reason they're
+currently
+currently
+currently
+in beta so you can't access them out of
+in beta so you can't access them out of
+in beta so you can't access them out of
+the box if you want to access attributes
+the box if you want to access attributes
+the box if you want to access attributes
+go to file beta features
+go to file beta features
+go to file beta features
+and then find it somewhere i'm scroll
+and then find it somewhere i'm scroll
+and then find it somewhere i'm scroll
+down a little bit so at the top you have
+down a little bit so at the top you have
+down a little bit so at the top you have
+to go down
+to go down
+to go down
+a fair bit here we go enable attributes
+a fair bit here we go enable attributes
+a fair bit here we go enable attributes
+beta
+beta
+beta
+i already have it enabled make sure it
+i already have it enabled make sure it
+i already have it enabled make sure it
+checks there
+checks there
+checks there
+and click save so now we have access
+and click save so now we have access
+and click save so now we have access
+to attributes so let's use them
+to attributes so let's use them
+to attributes so let's use them
+i'm going to create a quick little part
+i'm going to create a quick little part
+i'm going to create a quick little part
+here
+here
+here
+and you'll see in the properties window
+and you'll see in the properties window
+and you'll see in the properties window
+there is a new drop down
+there is a new drop down
+there is a new drop down
+called attributes and this big beautiful
+called attributes and this big beautiful
+called attributes and this big beautiful
+button
+button
+button
+called add attribute so i can click on
+called add attribute so i can click on
+called add attribute so i can click on
+this button
+this button
+this button
+and you can see we have a few options
+and you can see we have a few options
+and you can see we have a few options
+first is the name so i'm going to
+first is the name so i'm going to
+first is the name so i'm going to
+make a quick attribute and this will be
+make a quick attribute and this will be
+make a quick attribute and this will be
+a rarity attribute
+a rarity attribute
+a rarity attribute
+so rarity would usually be a number so i
+so rarity would usually be a number so i
+so rarity would usually be a number so i
+can go to type drop down
+can go to type drop down
+can go to type drop down
+and choose a number so you'll notice
+and choose a number so you'll notice
+and choose a number so you'll notice
+only a few types are supported a few
+only a few types are supported a few
+only a few types are supported a few
+notable exceptions
+notable exceptions
+notable exceptions
+are c frames and tables but there is a
+are c frames and tables but there is a
+are c frames and tables but there is a
+workaround for tables i'll get to that a
+workaround for tables i'll get to that a
+workaround for tables i'll get to that a
+little bit later
+little bit later
+little bit later
+but some of the key ones are strings
+but some of the key ones are strings
+but some of the key ones are strings
+booleans numbers so a lot of the same
+booleans numbers so a lot of the same
+booleans numbers so a lot of the same
+ones that we can access using
+ones that we can access using
+ones that we can access using
+values such as like n values or
+values such as like n values or
+values such as like n values or
+number values or string values whatever
+number values or string values whatever
+number values or string values whatever
+we can also access in attributes
+we can also access in attributes
+we can also access in attributes
+so i can save that and you can see my
+so i can save that and you can see my
+so i can save that and you can see my
+rarity attribute
+rarity attribute
+rarity attribute
+appears in the properties panel and that
+appears in the properties panel and that
+appears in the properties panel and that
+is really useful
+is really useful
+is really useful
+you'll notice that my part does not have
+you'll notice that my part does not have
+you'll notice that my part does not have
+anything new
+anything new
+anything new
+in its hierarchy it's still just a part
+in its hierarchy it's still just a part
+in its hierarchy it's still just a part
+but now we have this rarity
+but now we have this rarity
+but now we have this rarity
+number so i can set this to like 10
+number so i can set this to like 10
+number so i can set this to like 10
+maybe or maybe like 0.1 you can set it
+maybe or maybe like 0.1 you can set it
+maybe or maybe like 0.1 you can set it
+to whatever you want
+to whatever you want
+to whatever you want
+since it's a number let's just make
+since it's a number let's just make
+since it's a number let's just make
+another we can make a string and we can
+another we can make a string and we can
+another we can make a string and we can
+call this
+call this
+call this
+my message and let's just set this to
+my message and let's just set this to
+my message and let's just set this to
+hello world there we go so that's a few
+hello world there we go so that's a few
+hello world there we go so that's a few
+little
+little
+little
+attributes so this is cool
+attributes so this is cool
+attributes so this is cool
+on its own but it's really useless
+on its own but it's really useless
+on its own but it's really useless
+without
+without
+without
+scripting because that's how you're
+scripting because that's how you're
+scripting because that's how you're
+gonna make these attributes come to life
+gonna make these attributes come to life
+gonna make these attributes come to life
+so i'm going to go into server secret
+so i'm going to go into server secret
+so i'm going to go into server secret
+service and create a script
+service and create a script
+service and create a script
+here we go so in this script i'm going
+here we go so in this script i'm going
+here we go so in this script i'm going
+to first define
+to first define
+to first define
+a part which will be equal to
+a part which will be equal to
+a part which will be equal to
+workspace.part
+workspace.part
+workspace.part
+there we go so there are a few specific
+there we go so there are a few specific
+there we go so there are a few specific
+functions that you can use to access
+functions that you can use to access
+functions that you can use to access
+attributes
+attributes
+attributes
+keep in mind you cannot use part dot
+keep in mind you cannot use part dot
+keep in mind you cannot use part dot
+my message this will not work
+my message this will not work
+my message this will not work
+this is bad code
+this is bad code
+this is bad code
+the attribute is not a property it's
+the attribute is not a property it's
+the attribute is not a property it's
+just a special attribute so the way you
+just a special attribute so the way you
+just a special attribute so the way you
+access
+access
+access
+part attributes is via a special
+part attributes is via a special
+part attributes is via a special
+function so
+function so
+function so
+i can say local my message equals part
+i can say local my message equals part
+i can say local my message equals part
+colon get attribute and then we send in
+colon get attribute and then we send in
+colon get attribute and then we send in
+the string
+the string
+the string
+of the attribute name so i go back to my
+of the attribute name so i go back to my
+of the attribute name so i go back to my
+part you can see the attribute name
+part you can see the attribute name
+part you can see the attribute name
+is my message
+and with your attribute names they can't
+and with your attribute names they can't
+and with your attribute names they can't
+contain spaces they can only be a
+contain spaces they can only be a
+contain spaces they can only be a
+hundred characters i think there may be
+hundred characters i think there may be
+hundred characters i think there may be
+a few other limitations
+a few other limitations
+a few other limitations
+but just keep the names simple keep them
+but just keep the names simple keep them
+but just keep the names simple keep them
+nice and legible
+nice and legible
+nice and legible
+and just make them easy to remember as
+and just make them easy to remember as
+and just make them easy to remember as
+well so you can access them from
+well so you can access them from
+well so you can access them from
+different scripts
+different scripts
+different scripts
+so we can get attribute message and we
+so we can get attribute message and we
+so we can get attribute message and we
+can just say print
+can just say print
+can just say print
+my message so if i were to run this
+my message so if i were to run this
+my message so if i were to run this
+you can see it prints hello world which
+you can see it prints hello world which
+you can see it prints hello world which
+indeed is my message
+indeed is my message
+indeed is my message
+you can also create a little for loop
+you can also create a little for loop
+you can also create a little for loop
+for i attribute
+for i attribute
+for i attribute
+and pairs part get
+and pairs part get
+and pairs part get
+attributes we can get all of our
+attributes we can get all of our
+attributes we can get all of our
+attributes
+attributes
+attributes
+and we can print the attribute
+and we can print the attribute
+and we can print the attribute
+so it prints the values of the
+so it prints the values of the
+so it prints the values of the
+attributes and the keys in the for loop
+attributes and the keys in the for loop
+attributes and the keys in the for loop
+that would be the name
+that would be the name
+that would be the name
+so you could do that as well in case you
+so you could do that as well in case you
+so you could do that as well in case you
+wanted to access all the attributes
+wanted to access all the attributes
+wanted to access all the attributes
+of your part and if you want to access
+of your part and if you want to access
+of your part and if you want to access
+an attribute or set an attribute you
+an attribute or set an attribute you
+an attribute or set an attribute you
+just simply call part
+just simply call part
+just simply call part
+set attribute this is very very simple
+set attribute this is very very simple
+set attribute this is very very simple
+very intuitive so
+very intuitive so
+very intuitive so
+so let's say i want to set my message
+so let's say i want to set my message
+so let's say i want to set my message
+to a value of
+to a value of
+to a value of
+goodbye world instead of hello world
+goodbye world instead of hello world
+goodbye world instead of hello world
+and we can print part
+and we can print part
+and we can print part
+get attribute
+my message and let's just copy this so
+my message and let's just copy this so
+my message and let's just copy this so
+you can see the difference
+so it says hello world then goodbye
+so it says hello world then goodbye
+so it says hello world then goodbye
+world
+world
+world
+one thing you want to keep in mind
+one thing you want to keep in mind
+one thing you want to keep in mind
+though is if i were to
+though is if i were to
+though is if i were to
+say put a typo here and my message
+say put a typo here and my message
+say put a typo here and my message
+it would create a new property
+it would create a new property
+it would create a new property
+or new attribute i should say so you can
+or new attribute i should say so you can
+or new attribute i should say so you can
+see it doesn't change and that's because
+see it doesn't change and that's because
+see it doesn't change and that's because
+if i were to go
+if i were to go
+if i were to go
+to my part it created a new typo
+to my part it created a new typo
+to my part it created a new typo
+attribute with my new value so
+attribute with my new value so
+attribute with my new value so
+if you have an error under code where
+if you have an error under code where
+if you have an error under code where
+it's like the attribute isn't changing
+it's like the attribute isn't changing
+it's like the attribute isn't changing
+you have to check for these little typos
+you have to check for these little typos
+you have to check for these little typos
+and the way i like to prevent these
+and the way i like to prevent these
+and the way i like to prevent these
+typos is by saying
+typos is by saying
+typos is by saying
+defining a constant
+defining a constant
+defining a constant
+at the very top of your script like my
+at the very top of your script like my
+at the very top of your script like my
+message
+message
+message
+attribute name here you it might be a
+attribute name here you it might be a
+attribute name here you it might be a
+little too long
+little too long
+little too long
+i'll leave it for now so and i can set
+i'll leave it for now so and i can set
+i'll leave it for now so and i can set
+this to my message so i can copy this
+this to my message so i can copy this
+this to my message so i can copy this
+variable instead of using string letter
+variable instead of using string letter
+variable instead of using string letter
+rules i can just use this
+rules i can just use this
+rules i can just use this
+and this will prevent me from getting a
+and this will prevent me from getting a
+and this will prevent me from getting a
+really nasty bug that doesn't error
+really nasty bug that doesn't error
+really nasty bug that doesn't error
+so run this again you can see that it
+so run this again you can see that it
+so run this again you can see that it
+works perfectly fine
+works perfectly fine
+works perfectly fine
+and the same way as you can set an
+and the same way as you can set an
+and the same way as you can set an
+attribute to a specific value
+attribute to a specific value
+attribute to a specific value
+if you were to say part
+if you were to say part
+if you were to say part
+set attribute to my message attribute
+set attribute to my message attribute
+set attribute to my message attribute
+name
+name
+name
+if you were to set it to nil it would
+if you were to set it to nil it would
+if you were to set it to nil it would
+delete the attribute
+delete the attribute
+delete the attribute
+so if i play this and i go to my part
+so if i play this and i go to my part
+so if i play this and i go to my part
+you can see the my message attribute is
+you can see the my message attribute is
+you can see the my message attribute is
+no longer there
+no longer there
+no longer there
+so you have a lot of control of when you
+so you have a lot of control of when you
+so you have a lot of control of when you
+can use your attributes
+can use your attributes
+can use your attributes
+one really cool thing and this is this
+one really cool thing and this is this
+one really cool thing and this is this
+is what makes it equatable to
+is what makes it equatable to
+is what makes it equatable to
+a value like an n value is you can
+a value like an n value is you can
+a value like an n value is you can
+detect when an attribute changes so
+detect when an attribute changes so
+detect when an attribute changes so
+i'm going to go to my part create a new
+i'm going to go to my part create a new
+i'm going to go to my part create a new
+attribute and it's going to be a
+attribute and it's going to be a
+attribute and it's going to be a
+number and we're going to call this num
+number and we're going to call this num
+number and we're going to call this num
+touches
+touches
+touches
+and then in this script i'm just going
+and then in this script i'm just going
+and then in this script i'm just going
+to comment this out
+to comment this out
+to comment this out
+by using control slash
+by using control slash
+by using control slash
+in the script i can say part dot touched
+in the script i can say part dot touched
+in the script i can say part dot touched
+connect function
+connect function
+connect function
+so whenever the parts touched i want to
+so whenever the parts touched i want to
+so whenever the parts touched i want to
+say part
+say part
+say part
+set attribute
+num touches to part
+num touches to part
+num touches to part
+get attribute num touches
+get attribute num touches
+get attribute num touches
+plus one so this should set num touches
+plus one so this should set num touches
+plus one so this should set num touches
+to plus one every single time
+to plus one every single time
+to plus one every single time
+the part gets touched and then i can go
+the part gets touched and then i can go
+the part gets touched and then i can go
+and make a new script
+and make a new script
+and make a new script
+for example and in this script we can
+for example and in this script we can
+for example and in this script we can
+name this script
+name this script
+name this script
+touch detector and the script we can say
+touch detector and the script we can say
+touch detector and the script we can say
+local part
+equals workspace dot
+equals workspace dot
+equals workspace dot
+part and we can say part
+part and we can say part
+part and we can say part
+git attribute change signal
+git attribute change signal
+git attribute change signal
+and this would be an attribute let's
+and this would be an attribute let's
+and this would be an attribute let's
+just say num
+just say num
+just say num
+touches because that's what we named our
+touches because that's what we named our
+touches because that's what we named our
+attribute and we can say
+attribute and we can say
+attribute and we can say
+connect function i'm honestly not sure
+connect function i'm honestly not sure
+connect function i'm honestly not sure
+if it passes in the value
+if it passes in the value
+if it passes in the value
+but just to be safe i'll say local num
+but just to be safe i'll say local num
+but just to be safe i'll say local num
+touches
+touches
+touches
+equals part get attribute
+equals part get attribute
+equals part get attribute
+num touches and then we can print
+num touches and then we can print
+num touches and then we can print
+num touches
+there we go so what this should do is it
+there we go so what this should do is it
+there we go so what this should do is it
+should basically
+should basically
+should basically
+whenever the attribute changes and
+whenever the attribute changes and
+whenever the attribute changes and
+you'll notice in our script here we
+you'll notice in our script here we
+you'll notice in our script here we
+change it every time the part gets
+change it every time the part gets
+change it every time the part gets
+touched we will detect that and we will
+touched we will detect that and we will
+touched we will detect that and we will
+print out the number so
+print out the number so
+print out the number so
+this script is not detecting when the
+this script is not detecting when the
+this script is not detecting when the
+parts touched it's thinking when the
+parts touched it's thinking when the
+parts touched it's thinking when the
+attribute of the part is touched
+so let's play this it says it prints one
+so let's play this it says it prints one
+so let's play this it says it prints one
+and as i step on it with my player
+and as i step on it with my player
+and as i step on it with my player
+character this value
+character this value
+character this value
+continually goes up so this allows you
+continually goes up so this allows you
+continually goes up so this allows you
+to
+to
+to
+get a lot of functionality out of your
+get a lot of functionality out of your
+get a lot of functionality out of your
+attributes
+attributes
+attributes
+without having extra clutter in your
+without having extra clutter in your
+without having extra clutter in your
+workspace or whatever
+workspace or whatever
+workspace or whatever
+and one of the most powerful uses of
+and one of the most powerful uses of
+and one of the most powerful uses of
+attributes
+attributes
+attributes
+is probably in my opinion script
+is probably in my opinion script
+is probably in my opinion script
+attributes so
+attributes so
+attributes so
+i can go to my script and i can add a
+i can go to my script and i can add a
+i can go to my script and i can add a
+variable
+variable
+variable
+let's say debug and this is going to be
+let's say debug and this is going to be
+let's say debug and this is going to be
+a boolean and this will be whether
+a boolean and this will be whether
+a boolean and this will be whether
+debug is on or off so it's just like a
+debug is on or off so it's just like a
+debug is on or off so it's just like a
+normal boolean and i can also add
+normal boolean and i can also add
+normal boolean and i can also add
+a number this will be
+game time and then another number
+game time and then another number
+game time and then another number
+which will be debug game time
+which will be debug game time
+which will be debug game time
+there you go so for our normal game time
+there you go so for our normal game time
+there you go so for our normal game time
+we want it to be a good
+we want it to be a good
+we want it to be a good
+five seconds let's say but debug we want
+five seconds let's say but debug we want
+five seconds let's say but debug we want
+fast iteration right
+fast iteration right
+fast iteration right
+so we're gonna set our diva game time to
+so we're gonna set our diva game time to
+so we're gonna set our diva game time to
+one second
+one second
+one second
+and just for the sake of demonstration
+and just for the sake of demonstration
+and just for the sake of demonstration
+i'm gonna go back to my main script here
+i'm gonna go back to my main script here
+i'm gonna go back to my main script here
+we go
+we go
+we go
+and i'm gonna make a little loop at the
+and i'm gonna make a little loop at the
+and i'm gonna make a little loop at the
+very bottom and we're gonna say
+very bottom and we're gonna say
+very bottom and we're gonna say
+wall true do
+wall true do
+wall true do
+i'm gonna say if script
+i'm gonna say if script
+i'm gonna say if script
+actually instead of saying script get
+actually instead of saying script get
+actually instead of saying script get
+attribute we're gonna define
+attribute we're gonna define
+attribute we're gonna define
+our attribute values at the very top as
+our attribute values at the very top as
+our attribute values at the very top as
+constants because they should not
+constants because they should not
+constants because they should not
+change i think they could change but
+change i think they could change but
+change i think they could change but
+i feel like i would use this more as
+i feel like i would use this more as
+i feel like i would use this more as
+just some static variables that you edit
+just some static variables that you edit
+just some static variables that you edit
+like in the properties window before
+like in the properties window before
+like in the properties window before
+runtime not during runtime
+runtime not during runtime
+runtime not during runtime
+so i can say local debug
+so i can say local debug
+so i can say local debug
+attribute equal script get attribute
+attribute equal script get attribute
+attribute equal script get attribute
+debug is a local debug
+debug is a local debug
+debug is a local debug
+game time equal script get
+game time equal script get
+game time equal script get
+attribute
+debug game time and then we can say
+debug game time and then we can say
+debug game time and then we can say
+local game time
+local game time
+local game time
+equals script get attribute
+equals script get attribute
+equals script get attribute
+game time here we go so then we can say
+game time here we go so then we can say
+game time here we go so then we can say
+well to do
+well to do
+well to do
+if debug attribute
+if debug attribute
+if debug attribute
+then wait
+then wait
+then wait
+debug cuba game time and we can say else
+debug cuba game time and we can say else
+debug cuba game time and we can say else
+wait game time we can print
+wait game time we can print
+wait game time we can print
+iterated because we're iterating we're
+iterated because we're iterating we're
+iterated because we're iterating we're
+in a loop so we run this right now
+in a loop so we run this right now
+in a loop so we run this right now
+you can see if you wait a little bit it
+you can see if you wait a little bit it
+you can see if you wait a little bit it
+says iterated once
+says iterated once
+says iterated once
+and it's pretty slow but if we enable
+and it's pretty slow but if we enable
+and it's pretty slow but if we enable
+debug don't even have to go into script
+debug don't even have to go into script
+debug don't even have to go into script
+don't even have to look at the script
+don't even have to look at the script
+don't even have to look at the script
+editor
+it iterates much quickly so this is very
+it iterates much quickly so this is very
+it iterates much quickly so this is very
+powerful for
+powerful for
+powerful for
+for example a team project where you
+for example a team project where you
+for example a team project where you
+have level designers you have
+have level designers you have
+have level designers you have
+character creators you have modelers
+character creators you have modelers
+character creators you have modelers
+builders whatever
+builders whatever
+builders whatever
+they can access certain script
+they can access certain script
+they can access certain script
+properties without actually going in
+properties without actually going in
+properties without actually going in
+script because for some people
+script because for some people
+script because for some people
+especially in roblox the script editor
+especially in roblox the script editor
+especially in roblox the script editor
+is a scary place with a bunch of
+is a scary place with a bunch of
+is a scary place with a bunch of
+numbers and colors and
+numbers and colors and
+numbers and colors and
+people just don't like that so you can
+people just don't like that so you can
+people just don't like that so you can
+expose these variables
+expose these variables
+expose these variables
+to the public and it's just like the
+to the public and it's just like the
+to the public and it's just like the
+properties window
+properties window
+properties window
+but with your own custom properties so
+but with your own custom properties so
+but with your own custom properties so
+one of the drawbacks of attributes right
+one of the drawbacks of attributes right
+one of the drawbacks of attributes right
+now is the fact that you cannot
+now is the fact that you cannot
+now is the fact that you cannot
+save table values but there is a
+save table values but there is a
+save table values but there is a
+workaround and that involves using
+workaround and that involves using
+workaround and that involves using
+json encoding and decoding so i'm going
+json encoding and decoding so i'm going
+json encoding and decoding so i'm going
+to go to my part again
+to go to my part again
+to go to my part again
+we're going to create a new attribute
+we're going to create a new attribute
+we're going to create a new attribute
+and name this loot
+and name this loot
+and name this loot
+table and make sure it's a string
+table and make sure it's a string
+table and make sure it's a string
+and i'm going to just create a new
+and i'm going to just create a new
+and i'm going to just create a new
+script
+script
+script
+and we will name this script
+loot script or something like that
+loot script or something like that
+loot script or something like that
+and then we can define our part which is
+and then we can define our part which is
+and then we can define our part which is
+workspace
+workspace
+workspace
+dot part and now we can create
+dot part and now we can create
+dot part and now we can create
+our table so what i'm going to do is i'm
+our table so what i'm going to do is i'm
+our table so what i'm going to do is i'm
+going to say local
+going to say local
+going to say local
+loot table equals
+loot table equals
+loot table equals
+a table and make sure in this js this is
+a table and make sure in this js this is
+a table and make sure in this js this is
+going to be converted to json so you
+going to be converted to json so you
+going to be converted to json so you
+want this table
+want this table
+want this table
+to only have numbers strings
+to only have numbers strings
+to only have numbers strings
+booleans and other tables it cannot have
+booleans and other tables it cannot have
+booleans and other tables it cannot have
+functions can't have anything else
+functions can't have anything else
+functions can't have anything else
+because
+because
+because
+json in the end is a string so you can't
+json in the end is a string so you can't
+json in the end is a string so you can't
+really convert it to anything else
+really convert it to anything else
+really convert it to anything else
+so we have a loot table and i can define
+so we have a loot table and i can define
+so we have a loot table and i can define
+like
+like
+like
+gems and this will have a weight of
+gems and this will have a weight of
+gems and this will have a weight of
+0.1 and a name of
+shiny gem and then i can define
+shiny gem and then i can define
+shiny gem and then i can define
+gold for example this will have a
+weight of 0.5
+weight of 0.5
+weight of 0.5
+and a name of gold
+and a name of gold
+and a name of gold
+ingot so we have two little items in our
+ingot so we have two little items in our
+ingot so we have two little items in our
+loot table
+loot table
+loot table
+and now all we have to do is set this
+and now all we have to do is set this
+and now all we have to do is set this
+in our in our little property
+in our in our little property
+in our in our little property
+attribute so what i want to do is i want
+attribute so what i want to do is i want
+attribute so what i want to do is i want
+to define local
+to define local
+to define local
+http service equals game get
+http service equals game get
+http service equals game get
+service http service http service i
+service http service http service i
+service http service http service i
+should say
+should say
+should say
+and it doesn't matter if you have http
+and it doesn't matter if you have http
+and it doesn't matter if you have http
+http
+http
+http
+request enabled this function is just
+request enabled this function is just
+request enabled this function is just
+like a local like string function you
+like a local like string function you
+like a local like string function you
+don't really need it
+don't really need it
+don't really need it
+so now i'm going to just say
+so now i'm going to just say
+so now i'm going to just say
+part set attribute we want to set the
+part set attribute we want to set the
+part set attribute we want to set the
+attribute of
+attribute of
+attribute of
+our loot table just to double check
+our loot table just to double check
+our loot table just to double check
+let's make sure it is indeed named loot
+let's make sure it is indeed named loot
+let's make sure it is indeed named loot
+table
+table
+table
+and we can set this value to http
+and we can set this value to http
+and we can set this value to http
+service
+service
+service
+json and code we want to encode a json
+json and code we want to encode a json
+json and code we want to encode a json
+value and we're going to send in our
+value and we're going to send in our
+value and we're going to send in our
+loop table so you could obviously do
+loop table so you could obviously do
+loop table so you could obviously do
+this at run runtime
+this at run runtime
+this at run runtime
+but a better way to do this in my
+but a better way to do this in my
+but a better way to do this in my
+opinion
+opinion
+opinion
+would just be to copy this code straight
+would just be to copy this code straight
+would just be to copy this code straight
+into the command bar
+into the command bar
+into the command bar
+and it'll set it inside the window
+and it'll set it inside the window
+and it'll set it inside the window
+before runtime so i'm just going to do
+before runtime so i'm just going to do
+before runtime so i'm just going to do
+that
+that
+that
+we're going to hit enter and you can see
+we're going to hit enter and you can see
+we're going to hit enter and you can see
+that it converted it to json which is a
+that it converted it to json which is a
+that it converted it to json which is a
+string and allows you to decode it as
+string and allows you to decode it as
+string and allows you to decode it as
+well
+so in order to access it from a script
+so in order to access it from a script
+so in order to access it from a script
+so let's just go to our main script
+so let's just go to our main script
+so let's just go to our main script
+again
+again
+again
+this script is getting very saturated
+this script is getting very saturated
+this script is getting very saturated
+that's okay and we can
+that's okay and we can
+that's okay and we can
+access our loot table by saying
+access our loot table by saying
+access our loot table by saying
+game get service
+game get service
+game get service
+http http service
+http http service
+http http service
+jason d code
+part get attribute
+part get attribute
+part get attribute
+loot table there we go so here we have a
+loot table there we go so here we have a
+loot table there we go so here we have a
+loot table and we can print
+loot table and we can print
+loot table and we can print
+loot table dot gems dot name or
+loot table dot gems dot name or
+loot table dot gems dot name or
+something like that
+something like that
+something like that
+so we were to run this you can see it
+so we were to run this you can see it
+so we were to run this you can see it
+prints shiny gem
+prints shiny gem
+prints shiny gem
+you could also iterate through the table
+you could also iterate through the table
+you could also iterate through the table
+you could access it whatever this just
+you could access it whatever this just
+you could access it whatever this just
+allows you to store a lot of data
+allows you to store a lot of data
+allows you to store a lot of data
+because you don't want to have like
+because you don't want to have like
+because you don't want to have like
+hundreds of attributes that
+hundreds of attributes that
+hundreds of attributes that
+just wouldn't be good so i would
+just wouldn't be good so i would
+just wouldn't be good so i would
+recommend using this someone at some
+recommend using this someone at some
+recommend using this someone at some
+point
+point
+point
+i might even do this might make a
+i might even do this might make a
+i might even do this might make a
+plug-in to make this process easier
+plug-in to make this process easier
+plug-in to make this process easier
+if they don't add native table support
+if they don't add native table support
+if they don't add native table support
+so yeah
+so yeah
+so yeah
+so that's about it for this video if you
+so that's about it for this video if you
+so that's about it for this video if you
+enjoyed this video make sure to like and
+enjoyed this video make sure to like and
+enjoyed this video make sure to like and
+subscribe this is a super
+subscribe this is a super
+subscribe this is a super
+super cool feature i'm so glad roblox
+super cool feature i'm so glad roblox
+super cool feature i'm so glad roblox
+added it
+added it
+added it
+but other than that i hope you guys have
+but other than that i hope you guys have
+but other than that i hope you guys have
+a nice day and goodbye
+a nice day and goodbye
+a nice day and goodbye
+you

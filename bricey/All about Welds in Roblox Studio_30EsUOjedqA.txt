@@ -1,0 +1,729 @@
+hello and welcome to another roblox
+hello and welcome to another roblox
+hello and welcome to another roblox
+tutorial
+tutorial
+tutorial
+in this video i will be showing you the
+in this video i will be showing you the
+in this video i will be showing you the
+different types of
+different types of
+different types of
+welds and roblox and
+welds and roblox and
+welds and roblox and
+this stuff can get very confusing to a
+this stuff can get very confusing to a
+this stuff can get very confusing to a
+new user or even experienced user in
+new user or even experienced user in
+new user or even experienced user in
+roblox just because there's a lot of
+roblox just because there's a lot of
+roblox just because there's a lot of
+different types and they're all made at
+different types and they're all made at
+different types and they're all made at
+like different times and roblox
+like different times and roblox
+like different times and roblox
+and i'll tell you which one you should
+and i'll tell you which one you should
+and i'll tell you which one you should
+be using which one's the most recent and
+be using which one's the most recent and
+be using which one's the most recent and
+which one i like
+which one i like
+which one i like
+the most so stay tuned i hope you all
+the most so stay tuned i hope you all
+the most so stay tuned i hope you all
+enjoy
+enjoy
+enjoy
+and this is basically sort of like
+and this is basically sort of like
+and this is basically sort of like
+history video of the roblox world
+history video of the roblox world
+history video of the roblox world
+but also gives you a lot of helpful tips
+but also gives you a lot of helpful tips
+but also gives you a lot of helpful tips
+for all of the welds as well
+for all of the welds as well
+for all of the welds as well
+so if you enjoy make sure to show me
+so if you enjoy make sure to show me
+so if you enjoy make sure to show me
+with your likes and
+with your likes and
+with your likes and
+subscribes but without further ado let's
+subscribes but without further ado let's
+subscribes but without further ado let's
+get into the video
+[Music]
+[Music]
+[Music]
+okay so let's get started and
+okay so let's get started and
+okay so let's get started and
+let me create a part and the first type
+let me create a part and the first type
+let me create a part and the first type
+of world we'll be talking about
+of world we'll be talking about
+of world we'll be talking about
+is going to surface and then weld
+is going to surface and then weld
+is going to surface and then weld
+and you may be wondering what does this
+and you may be wondering what does this
+and you may be wondering what does this
+do
+do
+do
+i've never seen it before because i've
+i've never seen it before because i've
+i've never seen it before because i've
+never used this
+never used this
+never used this
+and the only reason i'm using it is for
+and the only reason i'm using it is for
+and the only reason i'm using it is for
+the sake of this video
+the sake of this video
+the sake of this video
+and this simply is a texture it does
+and this simply is a texture it does
+and this simply is a texture it does
+nothing
+nothing
+nothing
+in regards to physics so don't be misled
+in regards to physics so don't be misled
+in regards to physics so don't be misled
+by the name
+by the name
+by the name
+which says weld looks like it should be
+which says weld looks like it should be
+which says weld looks like it should be
+able to weld parts together
+able to weld parts together
+able to weld parts together
+but that's not the case it's only visual
+but that's not the case it's only visual
+but that's not the case it's only visual
+i think it may have had a purpose back
+i think it may have had a purpose back
+i think it may have had a purpose back
+in the early days of roblox but
+in the early days of roblox but
+in the early days of roblox but
+these days not so much so it just can
+these days not so much so it just can
+these days not so much so it just can
+make
+make
+make
+a part look cool i guess it doesn't
+a part look cool i guess it doesn't
+a part look cool i guess it doesn't
+really do anything other
+really do anything other
+really do anything other
+than that so let me just
+than that so let me just
+than that so let me just
+delete this and so the next type
+delete this and so the next type
+delete this and so the next type
+of weld we'll be talking about is an
+of weld we'll be talking about is an
+of weld we'll be talking about is an
+actual
+actual
+actual
+weld and there's a few ways to make this
+weld and there's a few ways to make this
+weld and there's a few ways to make this
+sort of weld
+sort of weld
+sort of weld
+the simplest and most abstract is
+the simplest and most abstract is
+the simplest and most abstract is
+clicking
+clicking
+clicking
+the join surfaces button up here
+the join surfaces button up here
+the join surfaces button up here
+which when you move apart around you'll
+which when you move apart around you'll
+which when you move apart around you'll
+see the little white outline
+see the little white outline
+see the little white outline
+at the very bottom let me zoom in you
+at the very bottom let me zoom in you
+at the very bottom let me zoom in you
+see that little white outline
+see that little white outline
+see that little white outline
+and once you drop the part you can see a
+and once you drop the part you can see a
+and once you drop the part you can see a
+little drop down appears in your
+little drop down appears in your
+little drop down appears in your
+explorer
+explorer
+explorer
+and this creates a weld so this is a
+and this creates a weld so this is a
+and this creates a weld so this is a
+more recent type of world but still not
+more recent type of world but still not
+more recent type of world but still not
+the most recent and it has a part 0 and
+the most recent and it has a part 0 and
+the most recent and it has a part 0 and
+part 1 properties doesn't matter which
+part 1 properties doesn't matter which
+part 1 properties doesn't matter which
+one's which
+one's which
+one's which
+and it has a c frame 0 and like c
+and it has a c frame 0 and like c
+and it has a c frame 0 and like c
+frame 1 property which tells you like
+frame 1 property which tells you like
+frame 1 property which tells you like
+the offsets
+the offsets
+the offsets
+of the parts which makes it good for
+of the parts which makes it good for
+of the parts which makes it good for
+technical users but when you're just
+technical users but when you're just
+technical users but when you're just
+trying to weld stuff together
+trying to weld stuff together
+trying to weld stuff together
+it leads to kind of weird stuff like
+it leads to kind of weird stuff like
+it leads to kind of weird stuff like
+when you're programming it or like when
+when you're programming it or like when
+when you're programming it or like when
+you're doing stuff like that
+you're doing stuff like that
+you're doing stuff like that
+but it works pretty well it does its job
+but it works pretty well it does its job
+but it works pretty well it does its job
+so let me just
+so let me just
+so let me just
+delete this real quick we're going to
+delete this real quick we're going to
+delete this real quick we're going to
+like bring it into the air i guess so
+like bring it into the air i guess so
+like bring it into the air i guess so
+you can weld a few parts together just
+you can weld a few parts together just
+you can weld a few parts together just
+to show you
+to show you
+to show you
+it's really good for builders that's for
+it's really good for builders that's for
+it's really good for builders that's for
+sure since you don't really have to
+sure since you don't really have to
+sure since you don't really have to
+do that much to like weld things
+do that much to like weld things
+do that much to like weld things
+together but like here we go
+together but like here we go
+together but like here we go
+you can roll it like that you see these
+you can roll it like that you see these
+you can roll it like that you see these
+three parts are going to be
+three parts are going to be
+three parts are going to be
+welded together whoops
+welded together whoops
+welded together whoops
+that's weird it's kind of laggy i don't
+that's weird it's kind of laggy i don't
+that's weird it's kind of laggy i don't
+know
+know
+know
+but you can see they're all well
+but you can see they're all well
+but you can see they're all well
+together they all move around together
+together they all move around together
+together they all move around together
+which is
+which is
+which is
+exactly what we want but personally
+exactly what we want but personally
+exactly what we want but personally
+i don't prefer it so i'm just gonna get
+i don't prefer it so i'm just gonna get
+i don't prefer it so i'm just gonna get
+rid of these
+rid of these
+rid of these
+and now we're gonna go on to the third
+and now we're gonna go on to the third
+and now we're gonna go on to the third
+type of weld
+type of weld
+type of weld
+which is a weld constraint so this is
+which is a weld constraint so this is
+which is a weld constraint so this is
+the most recent type of weld
+the most recent type of weld
+the most recent type of weld
+let me just turn off join surfaces real
+let me just turn off join surfaces real
+let me just turn off join surfaces real
+quick
+quick
+quick
+and this is used for
+and this is used for
+and this is used for
+everything that involves welding and
+everything that involves welding and
+everything that involves welding and
+it's my personal favorite weld
+it's my personal favorite weld
+it's my personal favorite weld
+and there are a bunch of ways to create
+and there are a bunch of ways to create
+and there are a bunch of ways to create
+this world constraint so first of all
+this world constraint so first of all
+this world constraint so first of all
+i can have these two parts i can go into
+i can have these two parts i can go into
+i can have these two parts i can go into
+the first part type in world constraint
+the first part type in world constraint
+the first part type in world constraint
+and the little drop down plus
+and the little drop down plus
+and the little drop down plus
+menu go to well constraint part 0
+menu go to well constraint part 0
+menu go to well constraint part 0
+will be this part and then part 1 will
+will be this part and then part 1 will
+will be this part and then part 1 will
+be this part and
+be this part and
+be this part and
+these parts are welded and the really
+these parts are welded and the really
+these parts are welded and the really
+cool thing about this
+cool thing about this
+cool thing about this
+is you can actually see the welds if you
+is you can actually see the welds if you
+is you can actually see the welds if you
+go to model
+go to model
+go to model
+show welds so i had it on by default and
+show welds so i had it on by default and
+show welds so i had it on by default and
+then
+then
+then
+if you want to see it on top of things
+if you want to see it on top of things
+if you want to see it on top of things
+you can
+you can
+you can
+toggle draw on top i'm going to leave it
+toggle draw on top i'm going to leave it
+toggle draw on top i'm going to leave it
+on because it lets me see through
+on because it lets me see through
+on because it lets me see through
+and you can hold alt to like see the
+and you can hold alt to like see the
+and you can hold alt to like see the
+parts it's like really really a really
+parts it's like really really a really
+parts it's like really really a really
+good system
+good system
+good system
+and so these parts are now welded they
+and so these parts are now welded they
+and so these parts are now welded they
+move
+move
+move
+together i mean you can see they move
+together i mean you can see they move
+together i mean you can see they move
+but that's because i'm moving it like
+but that's because i'm moving it like
+but that's because i'm moving it like
+with
+with
+with
+my hand and if we were to like
+my hand and if we were to like
+my hand and if we were to like
+rotate it like so you can see they just
+rotate it like so you can see they just
+rotate it like so you can see they just
+fall as one even though they're not
+fall as one even though they're not
+fall as one even though they're not
+necessarily touching
+necessarily touching
+necessarily touching
+so that's the first way to create these
+so that's the first way to create these
+so that's the first way to create these
+welds
+welds
+welds
+and let me just delete it you can also
+and let me just delete it you can also
+and let me just delete it you can also
+delete it from here which is also really
+delete it from here which is also really
+delete it from here which is also really
+cool you don't have to go into the
+cool you don't have to go into the
+cool you don't have to go into the
+hierarchy and delete them there which is
+hierarchy and delete them there which is
+hierarchy and delete them there which is
+really really nice
+really really nice
+really really nice
+but also if i have if i want to create
+but also if i have if i want to create
+but also if i have if i want to create
+welds a more
+welds a more
+welds a more
+intuitive way i can go to model create
+intuitive way i can go to model create
+intuitive way i can go to model create
+then weld and this is another type of
+then weld and this is another type of
+then weld and this is another type of
+like body constraint that's why it's
+like body constraint that's why it's
+like body constraint that's why it's
+called a world constraint so it's in the
+called a world constraint so it's in the
+called a world constraint so it's in the
+constraint menu with everything else
+constraint menu with everything else
+constraint menu with everything else
+and the really cool thing about this is
+and the really cool thing about this is
+and the really cool thing about this is
+i can click on this part
+i can click on this part
+i can click on this part
+and i clicked on the base plate before
+and i clicked on the base plate before
+and i clicked on the base plate before
+that's why that happened so
+that's why that happened so
+that's why that happened so
+let me try that again if i were to do
+let me try that again if i were to do
+let me try that again if i were to do
+create
+create
+create
+i can click on this part this starts the
+i can click on this part this starts the
+i can click on this part this starts the
+world you can see there's this little
+world you can see there's this little
+world you can see there's this little
+red line
+red line
+red line
+i can go click on this part to create to
+i can go click on this part to create to
+i can go click on this part to create to
+finish the weld
+finish the weld
+finish the weld
+and that works very nicely you can do
+and that works very nicely you can do
+and that works very nicely you can do
+that for whatever parts you want
+that for whatever parts you want
+that for whatever parts you want
+or in some cases let's say i already
+or in some cases let's say i already
+or in some cases let's say i already
+have this part selected i do create
+have this part selected i do create
+have this part selected i do create
+and i can pick sec the second part and
+and i can pick sec the second part and
+and i can pick sec the second part and
+it automatically remembers
+it automatically remembers
+it automatically remembers
+the relative offset so you don't have to
+the relative offset so you don't have to
+the relative offset so you don't have to
+do it yourself
+do it yourself
+do it yourself
+which is really really nice and then
+which is really really nice and then
+which is really really nice and then
+the best part about this in my opinion
+the best part about this in my opinion
+the best part about this in my opinion
+this is the sort of feature i use all
+this is the sort of feature i use all
+this is the sort of feature i use all
+the time
+the time
+the time
+is when you want to weld a whole group
+is when you want to weld a whole group
+is when you want to weld a whole group
+of parts so let's just like
+of parts so let's just like
+of parts so let's just like
+make a little stack and then maybe
+make a little stack and then maybe
+make a little stack and then maybe
+rotate this
+rotate this
+rotate this
+there we go and like i can move this to
+there we go and like i can move this to
+there we go and like i can move this to
+the side or something
+the side or something
+the side or something
+this is like a bunch of parts i don't
+this is like a bunch of parts i don't
+this is like a bunch of parts i don't
+want to manually weld all of these and
+want to manually weld all of these and
+want to manually weld all of these and
+let's say i had joined surfaces off
+let's say i had joined surfaces off
+let's say i had joined surfaces off
+while i was making it so i can highlight
+while i was making it so i can highlight
+while i was making it so i can highlight
+everything right now i'm just dragging
+everything right now i'm just dragging
+everything right now i'm just dragging
+but you could obviously control click
+but you could obviously control click
+but you could obviously control click
+if you wanted to but i'm just going to
+if you wanted to but i'm just going to
+if you wanted to but i'm just going to
+drag to select everything
+drag to select everything
+drag to select everything
+and go just create welds and you can see
+and go just create welds and you can see
+and go just create welds and you can see
+it creates welds
+it creates welds
+it creates welds
+all in between them and the reason this
+all in between them and the reason this
+all in between them and the reason this
+one's gray is because it's redundant
+one's gray is because it's redundant
+one's gray is because it's redundant
+but you can leave that there if you want
+but you can leave that there if you want
+but you can leave that there if you want
+one thing to note however
+one thing to note however
+one thing to note however
+is when you're doing this when you're
+is when you're doing this when you're
+is when you're doing this when you're
+creating all these welds
+creating all these welds
+creating all these welds
+if even the welds can span
+if even the welds can span
+if even the welds can span
+like gaps of like they don't have to be
+like gaps of like they don't have to be
+like gaps of like they don't have to be
+colliding
+colliding
+colliding
+if you highlight stuff that's not
+if you highlight stuff that's not
+if you highlight stuff that's not
+colliding it won't
+colliding it won't
+colliding it won't
+weld it to like the separate body which
+weld it to like the separate body which
+weld it to like the separate body which
+you need to keep in mind so they need to
+you need to keep in mind so they need to
+you need to keep in mind so they need to
+be colliding in order for the welds to
+be colliding in order for the welds to
+be colliding in order for the welds to
+actually
+actually
+actually
+register so if we were to highlight it
+register so if we were to highlight it
+register so if we were to highlight it
+again now that they're colliding
+again now that they're colliding
+again now that they're colliding
+you can see it creates that weld which
+you can see it creates that weld which
+you can see it creates that weld which
+is exactly what we want
+is exactly what we want
+is exactly what we want
+and these welds work the exact same as
+and these welds work the exact same as
+and these welds work the exact same as
+the other welds
+the other welds
+the other welds
+but they're a lot better in the fact
+but they're a lot better in the fact
+but they're a lot better in the fact
+that you can see them they're a lot more
+that you can see them they're a lot more
+that you can see them they're a lot more
+recent
+recent
+recent
+and they do work a lot better and
+and they do work a lot better and
+and they do work a lot better and
+there's also a nice property
+there's also a nice property
+there's also a nice property
+where you can enable and disable this
+where you can enable and disable this
+where you can enable and disable this
+weld which is really nice
+weld which is really nice
+weld which is really nice
+and there's also this active property
+and there's also this active property
+and there's also this active property
+which like for example
+which like for example
+which like for example
+on this weld which is gray it's
+on this weld which is gray it's
+on this weld which is gray it's
+off in case you ever need that when
+off in case you ever need that when
+off in case you ever need that when
+you're scripting
+you're scripting
+you're scripting
+so that's about it for this video i know
+so that's about it for this video i know
+so that's about it for this video i know
+it's kind of short
+it's kind of short
+it's kind of short
+but i hope i taught you something
+but i hope i taught you something
+but i hope i taught you something
+because to a new roblox user this stuff
+because to a new roblox user this stuff
+because to a new roblox user this stuff
+could be very intimidating or maybe if
+could be very intimidating or maybe if
+could be very intimidating or maybe if
+you're a little bit more experienced
+you're a little bit more experienced
+you're a little bit more experienced
+but you're just kind of confused by all
+but you're just kind of confused by all
+but you're just kind of confused by all
+the different types of welds i hope i
+the different types of welds i hope i
+the different types of welds i hope i
+could help
+could help
+could help
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+enjoyed this video
+enjoyed this video
+enjoyed this video
+and if you you would like to see a
+and if you you would like to see a
+and if you you would like to see a
+description of like the different
+description of like the different
+description of like the different
+functions and commands you can use with
+functions and commands you can use with
+functions and commands you can use with
+scripts to your worlds
+scripts to your worlds
+scripts to your worlds
+make sure to comment down below and i
+make sure to comment down below and i
+make sure to comment down below and i
+will show you
+will show you
+will show you
+because you can get some really cool
+because you can get some really cool
+because you can get some really cool
+stuff doing that but other than that i
+stuff doing that but other than that i
+stuff doing that but other than that i
+hope you guys have a nice day
+hope you guys have a nice day
+hope you guys have a nice day
+and a good bye
+you

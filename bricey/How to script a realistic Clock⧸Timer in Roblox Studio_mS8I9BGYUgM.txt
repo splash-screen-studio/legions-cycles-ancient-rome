@@ -1,0 +1,1327 @@
+oftentimes i find myself in need of a
+oftentimes i find myself in need of a
+oftentimes i find myself in need of a
+clock or a timer for my games like
+clock or a timer for my games like
+clock or a timer for my games like
+especially a mini game
+especially a mini game
+especially a mini game
+or just anything that needs time and you
+or just anything that needs time and you
+or just anything that needs time and you
+could obviously
+could obviously
+could obviously
+go the route of doing a wild weight loop
+go the route of doing a wild weight loop
+go the route of doing a wild weight loop
+and just
+and just
+and just
+updating a gui but there's a few
+updating a gui but there's a few
+updating a gui but there's a few
+problems with that first of all weight
+problems with that first of all weight
+problems with that first of all weight
+just
+just
+just
+isn't that good you can only count in
+isn't that good you can only count in
+isn't that good you can only count in
+seconds you can't go down to
+seconds you can't go down to
+seconds you can't go down to
+milliseconds
+milliseconds
+milliseconds
+and the display looks ugly if it's over
+and the display looks ugly if it's over
+and the display looks ugly if it's over
+60 seconds
+60 seconds
+60 seconds
+so in this video i will show you how to
+so in this video i will show you how to
+so in this video i will show you how to
+solve all these problems
+solve all these problems
+solve all these problems
+by making a little gui based clock that
+by making a little gui based clock that
+by making a little gui based clock that
+you can control
+you can control
+you can control
+in the client so let's get started
+in the client so let's get started
+in the client so let's get started
+so i'm in a new fresh base plate roblox
+so i'm in a new fresh base plate roblox
+so i'm in a new fresh base plate roblox
+project
+project
+project
+first thing i'm going to go do is go
+first thing i'm going to go do is go
+first thing i'm going to go do is go
+into starter gui
+into starter gui
+into starter gui
+click the plus and create a screen gui
+click the plus and create a screen gui
+click the plus and create a screen gui
+doesn't really matter what the name is
+doesn't really matter what the name is
+doesn't really matter what the name is
+and i'm going to click the plus again
+and i'm going to click the plus again
+and i'm going to click the plus again
+and create a text label and this is
+and create a text label and this is
+and create a text label and this is
+going to be what's going to display
+going to be what's going to display
+going to be what's going to display
+our time for our clock
+our time for our clock
+our time for our clock
+so i'm going to go down to the
+so i'm going to go down to the
+so i'm going to go down to the
+properties
+properties
+properties
+first of all i'm going to make it
+first of all i'm going to make it
+first of all i'm going to make it
+centered by setting the anchor point
+centered by setting the anchor point
+centered by setting the anchor point
+dot x just the first value to 0.5
+dot x just the first value to 0.5
+dot x just the first value to 0.5
+so then i can go down to position and
+so then i can go down to position and
+so then i can go down to position and
+set the x position the first value there
+set the x position the first value there
+set the x position the first value there
+2.5 so now it's centered and it's
+2.5 so now it's centered and it's
+2.5 so now it's centered and it's
+anchored in the center so it'll always
+anchored in the center so it'll always
+anchored in the center so it'll always
+be centered
+be centered
+be centered
+no matter what device it's on i'm going
+no matter what device it's on i'm going
+no matter what device it's on i'm going
+to set the size
+to set the size
+to set the size
+to some scale values let's just do 0.5
+to some scale values let's just do 0.5
+to some scale values let's just do 0.5
+on the x
+on the x
+on the x
+scale and then point
+scale and then point
+scale and then point
+1 on the y there we go make sure
+1 on the y there we go make sure
+1 on the y there we go make sure
+text scaled is turned on and you can
+text scaled is turned on and you can
+text scaled is turned on and you can
+play around with these settings
+play around with these settings
+play around with these settings
+and just to get in the mood i'll set the
+and just to get in the mood i'll set the
+and just to get in the mood i'll set the
+text
+text
+text
+to zero zero
+so now that our ui is done we can go
+so now that our ui is done we can go
+so now that our ui is done we can go
+into our text label
+into our text label
+into our text label
+and create a local script to start
+and create a local script to start
+and create a local script to start
+scripting our timer
+scripting our timer
+scripting our timer
+now in this example i'm going to be
+now in this example i'm going to be
+now in this example i'm going to be
+making a timer that starts at a value
+making a timer that starts at a value
+making a timer that starts at a value
+and goes down using the code you could
+and goes down using the code you could
+and goes down using the code you could
+also
+also
+also
+change it to make a clock that goes up
+change it to make a clock that goes up
+change it to make a clock that goes up
+it's up to you what you can do this is
+it's up to you what you can do this is
+it's up to you what you can do this is
+what i'm going to do when i find most
+what i'm going to do when i find most
+what i'm going to do when i find most
+useful
+useful
+useful
+so first thing i'm going to start is by
+so first thing i'm going to start is by
+so first thing i'm going to start is by
+defining our run service
+defining our run service
+defining our run service
+which will be equal to game get service
+which will be equal to game get service
+which will be equal to game get service
+run service and this is going to be
+run service and this is going to be
+run service and this is going to be
+responsible for
+responsible for
+responsible for
+recording our times for our
+recording our times for our
+recording our times for our
+timer because it has a bunch of
+timer because it has a bunch of
+timer because it has a bunch of
+functions that
+functions that
+functions that
+allow us to run a function every frame
+allow us to run a function every frame
+allow us to run a function every frame
+with the time in between each frame and
+with the time in between each frame and
+with the time in between each frame and
+that will allow us to decrement our
+that will allow us to decrement our
+that will allow us to decrement our
+value
+value
+value
+to a very precise degree next we're
+to a very precise degree next we're
+to a very precise degree next we're
+going to get our label
+going to get our label
+going to get our label
+which will be equal to script dot parent
+which will be equal to script dot parent
+which will be equal to script dot parent
+and now we can define a function which
+and now we can define a function which
+and now we can define a function which
+will be start
+will be start
+will be start
+timer this is a function that will take
+timer this is a function that will take
+timer this is a function that will take
+in a time left parameter which will be
+in a time left parameter which will be
+in a time left parameter which will be
+the time left
+the time left
+the time left
+from like like let's say 10 seconds like
+from like like let's say 10 seconds like
+from like like let's say 10 seconds like
+that'll start 10 and go all the way down
+that'll start 10 and go all the way down
+that'll start 10 and go all the way down
+to 0.
+to 0.
+to 0.
+inside our function body we can say run
+inside our function body we can say run
+inside our function body we can say run
+service
+service
+service
+bind to render step
+and it takes three parameters the name
+and it takes three parameters the name
+and it takes three parameters the name
+of our binding
+of our binding
+of our binding
+i'll just name it timer the render
+i'll just name it timer the render
+i'll just name it timer the render
+priority enum
+priority enum
+priority enum
+dot render priority
+dot render priority
+dot render priority
+there we go dot last dot value
+there we go dot last dot value
+there we go dot last dot value
+minus one you can set that to whatever
+minus one you can set that to whatever
+minus one you can set that to whatever
+you want it's an integer
+you want it's an integer
+you want it's an integer
+and it basically just says when our
+and it basically just says when our
+and it basically just says when our
+function is going to be called the
+function is going to be called the
+function is going to be called the
+higher the number
+higher the number
+higher the number
+the later it's called
+the later it's called
+the later it's called
+and for our application
+and for our application
+and for our application
+it doesn't really matter too much and as
+it doesn't really matter too much and as
+it doesn't really matter too much and as
+our third and final parameter we're
+our third and final parameter we're
+our third and final parameter we're
+going to send in
+going to send in
+going to send in
+a function with a delta parameter
+a function with a delta parameter
+a function with a delta parameter
+so what binder render step does is it
+so what binder render step does is it
+so what binder render step does is it
+binds this function
+binds this function
+binds this function
+to run every render step which is every
+to run every render step which is every
+to run every render step which is every
+frame
+frame
+frame
+according to our binding value
+according to our binding value
+according to our binding value
+our render priority and it gives us a
+our render priority and it gives us a
+our render priority and it gives us a
+handy delta variable which is the time
+handy delta variable which is the time
+handy delta variable which is the time
+since the last frame so delta
+since the last frame so delta
+since the last frame so delta
+is the time since the
+is the time since the
+is the time since the
+last frame so what we can do with that
+last frame so what we can do with that
+last frame so what we can do with that
+is we can say
+is we can say
+is we can say
+our time left minus equals
+our time left minus equals
+our time left minus equals
+delta what this says is time left
+delta what this says is time left
+delta what this says is time left
+equals time left minus our delta so if
+equals time left minus our delta so if
+equals time left minus our delta so if
+time left is 10
+time left is 10
+time left is 10
+delta is 1 our time left would be equal
+delta is 1 our time left would be equal
+delta is 1 our time left would be equal
+to 9 after this operation
+to 9 after this operation
+to 9 after this operation
+and for demonstration i'm just going to
+and for demonstration i'm just going to
+and for demonstration i'm just going to
+say
+say
+say
+label dot
+label dot
+label dot
+text equals time
+text equals time
+text equals time
+left so it'll decrease our time left
+left so it'll decrease our time left
+left so it'll decrease our time left
+every time and our label.text will be
+every time and our label.text will be
+every time and our label.text will be
+equal to time left just for a little
+equal to time left just for a little
+equal to time left just for a little
+display
+display
+display
+now we can go down to the bottom and say
+now we can go down to the bottom and say
+now we can go down to the bottom and say
+start timer with a value of 10
+start timer with a value of 10
+start timer with a value of 10
+seconds so what should happen
+seconds so what should happen
+seconds so what should happen
+when we run this as we get our timer
+when we run this as we get our timer
+when we run this as we get our timer
+starts at 10
+starts at 10
+starts at 10
+now it's going down there is no
+now it's going down there is no
+now it's going down there is no
+restriction at the bottom
+restriction at the bottom
+restriction at the bottom
+so it will go into negatives we'll
+so it will go into negatives we'll
+so it will go into negatives we'll
+obviously fix that a little bit later
+obviously fix that a little bit later
+obviously fix that a little bit later
+but you can see all of these nice juicy
+but you can see all of these nice juicy
+but you can see all of these nice juicy
+numbers that we have to work with
+numbers that we have to work with
+numbers that we have to work with
+with our display so the current value
+with our display so the current value
+with our display so the current value
+of our text label looks kind of ugly
+of our text label looks kind of ugly
+of our text label looks kind of ugly
+we only have seconds there's no minutes
+we only have seconds there's no minutes
+we only have seconds there's no minutes
+so if it goes over 60 seconds
+so if it goes over 60 seconds
+so if it goes over 60 seconds
+it'll be a really weird number and in
+it'll be a really weird number and in
+it'll be a really weird number and in
+today's day and age when we have our
+today's day and age when we have our
+today's day and age when we have our
+digital clocks with a
+digital clocks with a
+digital clocks with a
+nice little like format so it'd be for
+nice little like format so it'd be for
+nice little like format so it'd be for
+example would be like 0
+example would be like 0
+example would be like 0
+1 then b like 30 seconds
+1 then b like 30 seconds
+1 then b like 30 seconds
+and let's say 100
+and let's say 100
+and let's say 100
+it would like look like this it looked
+it would like look like this it looked
+it would like look like this it looked
+really nice so now we need to make
+really nice so now we need to make
+really nice so now we need to make
+our timer do that in my example i'm only
+our timer do that in my example i'm only
+our timer do that in my example i'm only
+going to be going to hundredths of a
+going to be going to hundredths of a
+going to be going to hundredths of a
+second
+second
+second
+you can go to milliseconds if you want
+you can go to milliseconds if you want
+you can go to milliseconds if you want
+you can go to tents if you want this is
+you can go to tents if you want this is
+you can go to tents if you want this is
+just what i'm going to do
+just what i'm going to do
+just what i'm going to do
+so first things first i'm going to make
+so first things first i'm going to make
+so first things first i'm going to make
+our minutes variable
+our minutes variable
+our minutes variable
+and bear with me here i'm going to do
+and bear with me here i'm going to do
+and bear with me here i'm going to do
+the math and do all the calculations but
+the math and do all the calculations but
+the math and do all the calculations but
+i'll explain it in detail
+i'll explain it in detail
+i'll explain it in detail
+in a in a bit so this is just for the
+in a in a bit so this is just for the
+in a in a bit so this is just for the
+people who just want the code
+people who just want the code
+people who just want the code
+and so we're going to say math.floor
+and so we're going to say math.floor
+and so we're going to say math.floor
+time left divided by 60. for our seconds
+time left divided by 60. for our seconds
+time left divided by 60. for our seconds
+say math.floor time
+say math.floor time
+say math.floor time
+left modulo 60 this is the modulus
+left modulo 60 this is the modulus
+left modulo 60 this is the modulus
+operator
+operator
+operator
+it's the percent sign and all it does
+it's the percent sign and all it does
+it's the percent sign and all it does
+is gets the remainder from a division
+is gets the remainder from a division
+is gets the remainder from a division
+operation
+operation
+operation
+and then finally we can say hundredths
+and then finally we can say hundredths
+and then finally we can say hundredths
+i think i spelled that right this would
+i think i spelled that right this would
+i think i spelled that right this would
+be math.floor
+be math.floor
+be math.floor
+time left modulo
+time left modulo
+time left modulo
+one times a hundred
+one times a hundred
+one times a hundred
+and so for our label.text actually let
+and so for our label.text actually let
+and so for our label.text actually let
+me move the time left up a little bit
+me move the time left up a little bit
+me move the time left up a little bit
+just so it makes a little more logical
+just so it makes a little more logical
+just so it makes a little more logical
+sense
+sense
+sense
+and for our label.text we can change
+and for our label.text we can change
+and for our label.text we can change
+this value from time left to string
+this value from time left to string
+this value from time left to string
+dot format so string out format takes in
+dot format so string out format takes in
+dot format so string out format takes in
+a format string and then some parameters
+a format string and then some parameters
+a format string and then some parameters
+our format string will be a
+our format string will be a
+our format string will be a
+percent sign that's a dollar sign
+percent sign that's a dollar sign
+percent sign that's a dollar sign
+percent sign
+percent sign
+percent sign
+0 to i then colon
+0 to i then colon
+0 to i then colon
+then we can just take the percent sign
+then we can just take the percent sign
+then we can just take the percent sign
+02i copy it
+02i copy it
+02i copy it
+once then another colon then paste it
+once then another colon then paste it
+once then another colon then paste it
+again
+again
+again
+so if you think of each of these percent
+so if you think of each of these percent
+so if you think of each of these percent
+like blocks as one little block
+like blocks as one little block
+like blocks as one little block
+separated by colons you can see that
+separated by colons you can see that
+separated by colons you can see that
+it'll look like our little clock up here
+it'll look like our little clock up here
+it'll look like our little clock up here
+and what this percent and like
+and what this percent and like
+and what this percent and like
+expression means is the percent
+expression means is the percent
+expression means is the percent
+basically initiates a
+basically initiates a
+basically initiates a
+formatting string and we have 0 2
+formatting string and we have 0 2
+formatting string and we have 0 2
+which basically takes our integer which
+which basically takes our integer which
+which basically takes our integer which
+is represented by the i
+is represented by the i
+is represented by the i
+and if it's less than two digits
+and if it's less than two digits
+and if it's less than two digits
+it'll left pad it with a zero it's like
+it'll left pad it with a zero it's like
+it'll left pad it with a zero it's like
+up here if we didn't have this zero two
+up here if we didn't have this zero two
+up here if we didn't have this zero two
+it would just say
+it would just say
+it would just say
+one instead of zero one but we wanna
+one instead of zero one but we wanna
+one instead of zero one but we wanna
+have zero one
+have zero one
+have zero one
+just because if it's in the interior
+just because if it's in the interior
+just because if it's in the interior
+like over here
+like over here
+like over here
+it'll like cut off like that and it'll
+it'll like cut off like that and it'll
+it'll like cut off like that and it'll
+look really stupid
+look really stupid
+look really stupid
+so we need to have that left pad just so
+so we need to have that left pad just so
+so we need to have that left pad just so
+it looks a little better
+it looks a little better
+it looks a little better
+and we just repeat that a few times for
+and we just repeat that a few times for
+and we just repeat that a few times for
+minutes
+minutes
+minutes
+then seconds then hundredths of a second
+then seconds then hundredths of a second
+then seconds then hundredths of a second
+and then in our string that format after
+and then in our string that format after
+and then in our string that format after
+our format string
+our format string
+our format string
+we send in the parameters to fill each
+we send in the parameters to fill each
+we send in the parameters to fill each
+integer value
+integer value
+integer value
+so then we can send in minutes
+so then we can send in minutes
+so then we can send in minutes
+then seconds then hundredths of a second
+and so that should work pretty well
+and so that should work pretty well
+and so that should work pretty well
+let's run this
+and you can see it actually looks really
+and you can see it actually looks really
+and you can see it actually looks really
+really nice it's scrolling down it's
+really nice it's scrolling down it's
+really nice it's scrolling down it's
+staying
+staying
+staying
+it's not fluctuating around the screen
+it's not fluctuating around the screen
+it's not fluctuating around the screen
+it's going all the way down to zero
+it's going all the way down to zero
+it's going all the way down to zero
+which is nice still goes
+which is nice still goes
+which is nice still goes
+negative and you can see it looks kind
+negative and you can see it looks kind
+negative and you can see it looks kind
+of weird
+of weird
+of weird
+so i just threw a ton of code at you
+so i just threw a ton of code at you
+so i just threw a ton of code at you
+and now i'm going to explain it because
+and now i'm going to explain it because
+and now i'm going to explain it because
+without
+without
+without
+writing and without visualizing it it'll
+writing and without visualizing it it'll
+writing and without visualizing it it'll
+be a lot harder to understand
+be a lot harder to understand
+be a lot harder to understand
+and this is the process that i went
+and this is the process that i went
+and this is the process that i went
+through to come up with these
+through to come up with these
+through to come up with these
+equations so we're going to first start
+equations so we're going to first start
+equations so we're going to first start
+with finding the
+with finding the
+with finding the
+minutes so i have this base number
+minutes so i have this base number
+minutes so i have this base number
+100.654 seconds
+100.654 seconds
+100.654 seconds
+and in order to find the minutes it's
+and in order to find the minutes it's
+and in order to find the minutes it's
+actually pretty straightforward we just
+actually pretty straightforward we just
+actually pretty straightforward we just
+divide by 60
+divide by 60
+divide by 60
+because there are 60 seconds in a minute
+because there are 60 seconds in a minute
+because there are 60 seconds in a minute
+so we need to get rid of seconds and
+so we need to get rid of seconds and
+so we need to get rid of seconds and
+turn it into minutes
+turn it into minutes
+turn it into minutes
+but we get a weird number so let me just
+but we get a weird number so let me just
+but we get a weird number so let me just
+bring
+bring
+bring
+up the calculator and we can send in a
+up the calculator and we can send in a
+up the calculator and we can send in a
+hundred
+hundred
+hundred
+point six five four divided by sixty
+point six five four divided by sixty
+point six five four divided by sixty
+this will give us one point
+this will give us one point
+this will give us one point
+seven about and that's a decimal minutes
+seven about and that's a decimal minutes
+seven about and that's a decimal minutes
+are whole numbers
+are whole numbers
+are whole numbers
+so what we do is we floor it and that
+so what we do is we floor it and that
+so what we do is we floor it and that
+basically
+basically
+basically
+gets rid of the decimal values it brings
+gets rid of the decimal values it brings
+gets rid of the decimal values it brings
+it down like it automatically rounds
+it down like it automatically rounds
+it down like it automatically rounds
+down
+down
+down
+gets rid of all of our decimal
+gets rid of all of our decimal
+gets rid of all of our decimal
+information and other programming
+information and other programming
+information and other programming
+languages this is known as just
+languages this is known as just
+languages this is known as just
+integer division but in lua we only have
+integer division but in lua we only have
+integer division but in lua we only have
+numbers so we just have to floor it
+numbers so we just have to floor it
+numbers so we just have to floor it
+using a function
+using a function
+using a function
+and that gives us a nice value of one
+and that gives us a nice value of one
+and that gives us a nice value of one
+minute for seconds
+minute for seconds
+minute for seconds
+we use do something a little bit
+we use do something a little bit
+we use do something a little bit
+differently but
+differently but
+differently but
+but the same sort of idea we use the
+but the same sort of idea we use the
+but the same sort of idea we use the
+modulus operator
+modulus operator
+modulus operator
+to get the remainder after we get our
+to get the remainder after we get our
+to get the remainder after we get our
+minutes so
+minutes so
+minutes so
+100 divided by 60 will give us one like
+100 divided by 60 will give us one like
+100 divided by 60 will give us one like
+whatever
+whatever
+whatever
+and then what we can do to get seconds
+and then what we can do to get seconds
+and then what we can do to get seconds
+is we can just say 1
+is we can just say 1
+is we can just say 1
+times 60 s will give us
+times 60 s will give us
+times 60 s will give us
+60 obviously and we can take this value
+60 obviously and we can take this value
+60 obviously and we can take this value
+and just subtract it
+and just subtract it
+and just subtract it
+from this value or the other way around
+from this value or the other way around
+from this value or the other way around
+take 60 subtract it from this value
+take 60 subtract it from this value
+take 60 subtract it from this value
+and that'll give us our seconds so if i
+and that'll give us our seconds so if i
+and that'll give us our seconds so if i
+bring up the calculator once again
+bring up the calculator once again
+bring up the calculator once again
+we can say 100.654
+we can say 100.654
+we can say 100.654
+divided by 60
+not divided i meant to say minus let's
+not divided i meant to say minus let's
+not divided i meant to say minus let's
+do it again
+do it again
+do it again
+minus 60 will give us 40.654
+40.654
+40.654
+40.654
+seconds but we don't want this decimal
+seconds but we don't want this decimal
+seconds but we don't want this decimal
+information
+information
+information
+seconds on whole numbers so we floor it
+seconds on whole numbers so we floor it
+seconds on whole numbers so we floor it
+once again
+once again
+once again
+and that's also pretty sorry for it so
+and that's also pretty sorry for it so
+and that's also pretty sorry for it so
+now we're at 1 minute and 40 seconds
+now we're at 1 minute and 40 seconds
+now we're at 1 minute and 40 seconds
+and you can see how instead of just
+and you can see how instead of just
+and you can see how instead of just
+multiplying minutes by 60
+multiplying minutes by 60
+multiplying minutes by 60
+and then getting that and subtracting it
+and then getting that and subtracting it
+and then getting that and subtracting it
+we use the modulus operator
+we use the modulus operator
+we use the modulus operator
+because that does the same thing we how
+because that does the same thing we how
+because that does the same thing we how
+many times a 60 go into 100 it goes into
+many times a 60 go into 100 it goes into
+many times a 60 go into 100 it goes into
+it once
+it once
+it once
+with a remainder of seconds
+with a remainder of seconds
+with a remainder of seconds
+and then finally for our hundredths of a
+and then finally for our hundredths of a
+and then finally for our hundredths of a
+second
+second
+second
+we need to do something a little bit
+we need to do something a little bit
+we need to do something a little bit
+differently first thing we want to do
+differently first thing we want to do
+differently first thing we want to do
+is divide by one or
+is divide by one or
+is divide by one or
+do modulus by 1 to get that remainder
+do modulus by 1 to get that remainder
+do modulus by 1 to get that remainder
+and since 1 goes into 100.654 100 times
+and since 1 goes into 100.654 100 times
+and since 1 goes into 100.654 100 times
+we get a remainder of 0.654
+we get a remainder of 0.654
+we get a remainder of 0.654
+and this isolates our decimal values
+and this isolates our decimal values
+and this isolates our decimal values
+which is really really nice but if we
+which is really really nice but if we
+which is really really nice but if we
+were to display this value
+were to display this value
+were to display this value
+it would look really weird it'd be like
+it would look really weird it'd be like
+it would look really weird it'd be like
+zero zero let me just
+zero zero let me just
+zero zero let me just
+and it would be 0.7 or something like
+and it would be 0.7 or something like
+and it would be 0.7 or something like
+that that would look stupid
+that that would look stupid
+that that would look stupid
+so what we do is we can multiply this by
+so what we do is we can multiply this by
+so what we do is we can multiply this by
+a hundred
+a hundred
+a hundred
+and this would give us 65.4
+and this would give us 65.4
+and this would give us 65.4
+and then we floor it to get rid of the
+and then we floor it to get rid of the
+and then we floor it to get rid of the
+extra digits that we don't really need
+extra digits that we don't really need
+extra digits that we don't really need
+and this gives us 65 hundredths i'm just
+and this gives us 65 hundredths i'm just
+and this gives us 65 hundredths i'm just
+going to say
+going to say
+going to say
+h so then that gives us all of these
+h so then that gives us all of these
+h so then that gives us all of these
+numbers
+numbers
+numbers
+in a nice concise faction with as
+in a nice concise faction with as
+in a nice concise faction with as
+minimal code as possible
+minimal code as possible
+minimal code as possible
+so i hope that helped explain what we're
+so i hope that helped explain what we're
+so i hope that helped explain what we're
+doing here
+doing here
+doing here
+and i know it can look a little daunting
+and i know it can look a little daunting
+and i know it can look a little daunting
+at first but if you just break it down i
+at first but if you just break it down i
+at first but if you just break it down i
+recommend bringing out a piece of paper
+recommend bringing out a piece of paper
+recommend bringing out a piece of paper
+and just start writing an example number
+and just start writing an example number
+and just start writing an example number
+and just figure out how you can get your
+and just figure out how you can get your
+and just figure out how you can get your
+values i do this with a bunch of stuff
+values i do this with a bunch of stuff
+values i do this with a bunch of stuff
+not just finding time it's good for a
+not just finding time it's good for a
+not just finding time it's good for a
+bunch of different things just in
+bunch of different things just in
+bunch of different things just in
+programming and scripting in general so
+programming and scripting in general so
+programming and scripting in general so
+our start timer function is basically
+our start timer function is basically
+our start timer function is basically
+done but you'll notice if we were to
+done but you'll notice if we were to
+done but you'll notice if we were to
+like go past 0 for example
+like go past 0 for example
+like go past 0 for example
+it does not stop so we need to fix that
+it does not stop so we need to fix that
+it does not stop so we need to fix that
+so i'm going to say if time left
+so i'm going to say if time left
+so i'm going to say if time left
+is less than or equal to
+is less than or equal to
+is less than or equal to
+0 then first thing we need to do
+0 then first thing we need to do
+0 then first thing we need to do
+our only thing we need to do actually is
+our only thing we need to do actually is
+our only thing we need to do actually is
+just say one service unbind
+just say one service unbind
+just say one service unbind
+from render step and just send in our
+from render step and just send in our
+from render step and just send in our
+timer so you can see we have a repeating
+timer so you can see we have a repeating
+timer so you can see we have a repeating
+variable or literal i should say and
+variable or literal i should say and
+variable or literal i should say and
+that's a bad idea so i'm going to go to
+that's a bad idea so i'm going to go to
+that's a bad idea so i'm going to go to
+top my script to find a constant and
+top my script to find a constant and
+top my script to find a constant and
+this will be
+this will be
+this will be
+our timer
+our timer
+our timer
+binding name and i'll set this to timer
+binding name and i'll set this to timer
+binding name and i'll set this to timer
+i can just replace this
+i can just replace this
+i can just replace this
+with this constant timer binding name
+with this constant timer binding name
+with this constant timer binding name
+and then timer binding name so this
+and then timer binding name so this
+and then timer binding name so this
+prevents us from having a typo
+prevents us from having a typo
+prevents us from having a typo
+because the interpreter will realize
+because the interpreter will realize
+because the interpreter will realize
+that the variable is wrong so
+that the variable is wrong so
+that the variable is wrong so
+instead of just a string typo we'll have
+instead of just a string typo we'll have
+instead of just a string typo we'll have
+a
+a
+a
+actual like error which is good it's a
+actual like error which is good it's a
+actual like error which is good it's a
+lot better than repeating your code all
+lot better than repeating your code all
+lot better than repeating your code all
+over the place
+over the place
+over the place
+so if we were to run this
+our timer should stop around zero
+and this really doesn't matter until we
+and this really doesn't matter until we
+and this really doesn't matter until we
+add
+add
+add
+the last feature of our time you can see
+the last feature of our time you can see
+the last feature of our time you can see
+it gives a little bit past that's
+it gives a little bit past that's
+it gives a little bit past that's
+okay and the last feature we're going to
+okay and the last feature we're going to
+okay and the last feature we're going to
+add is
+add is
+add is
+waiting so right now if we have our
+waiting so right now if we have our
+waiting so right now if we have our
+timer let me just put a print statement
+timer let me just put a print statement
+timer let me just put a print statement
+after the timer
+after the timer
+after the timer
+so just print hello
+so just print hello
+so just print hello
+you can see it runs instantly which is
+you can see it runs instantly which is
+you can see it runs instantly which is
+not good
+not good
+not good
+if you want to have a step-by-step
+if you want to have a step-by-step
+if you want to have a step-by-step
+script imperative script it won't really
+script imperative script it won't really
+script imperative script it won't really
+work too well
+work too well
+work too well
+and it's not very intuitive if you're
+and it's not very intuitive if you're
+and it's not very intuitive if you're
+working with a team because
+working with a team because
+working with a team because
+it's like a wait function but doesn't
+it's like a wait function but doesn't
+it's like a wait function but doesn't
+wait so the way we're going to do that
+wait so the way we're going to do that
+wait so the way we're going to do that
+is by adding a bindable event
+is by adding a bindable event
+is by adding a bindable event
+so we're going to say local delay event
+so we're going to say local delay event
+so we're going to say local delay event
+equals
+equals
+equals
+instance dot new
+instance dot new
+instance dot new
+bindable event and what we'll do
+bindable event and what we'll do
+bindable event and what we'll do
+is we'll say delay
+is we'll say delay
+is we'll say delay
+event dot
+event dot
+event dot
+event wait so this will wait for our
+event wait so this will wait for our
+event wait so this will wait for our
+event to fire and then once it does we
+event to fire and then once it does we
+event to fire and then once it does we
+can return so it'll yield the script
+can return so it'll yield the script
+can return so it'll yield the script
+which will basically mean stop the
+which will basically mean stop the
+which will basically mean stop the
+script until our start timer function is
+script until our start timer function is
+script until our start timer function is
+done
+done
+done
+timing so then we can in our uh
+timing so then we can in our uh
+timing so then we can in our uh
+time left break we can just say delay
+time left break we can just say delay
+time left break we can just say delay
+event
+event
+event
+fire so when our time reaches zero we
+fire so when our time reaches zero we
+fire so when our time reaches zero we
+can fire
+can fire
+can fire
+our event and for example we could say
+our event and for example we could say
+our event and for example we could say
+label.time or label.txt equals done
+label.time or label.txt equals done
+label.time or label.txt equals done
+all the way down here let me just zoom
+all the way down here let me just zoom
+all the way down here let me just zoom
+in so you can see it we just say
+in so you can see it we just say
+in so you can see it we just say
+label.text equals done
+label.text equals done
+label.text equals done
+after the timer finishes
+so the timer starts going down as per
+so the timer starts going down as per
+so the timer starts going down as per
+usual
+and then once we reach the bottom
+it'll say done and you can obviously
+it'll say done and you can obviously
+it'll say done and you can obviously
+customize it you can get rid of this if
+customize it you can get rid of this if
+customize it you can get rid of this if
+you want
+you want
+you want
+only make it an event so like maybe make
+only make it an event so like maybe make
+only make it an event so like maybe make
+it return the event so that
+it return the event so that
+it return the event so that
+a script could wait if it wants to but
+a script could wait if it wants to but
+a script could wait if it wants to but
+if it doesn't want to
+if it doesn't want to
+if it doesn't want to
+it just won't it's up to you
+it just won't it's up to you
+it just won't it's up to you
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you guys enjoyed
+you guys enjoyed
+you guys enjoyed
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+make sure to like and subscribe if you
+enjoyed the video comment any questions
+enjoyed the video comment any questions
+enjoyed the video comment any questions
+or video suggestions down below
+or video suggestions down below
+or video suggestions down below
+and if you want join my discord server
+and if you want join my discord server
+and if you want join my discord server
+link will be in the description we talk
+link will be in the description we talk
+link will be in the description we talk
+a lot you can get scripting help there
+a lot you can get scripting help there
+a lot you can get scripting help there
+and you can just generally discuss
+and you can just generally discuss
+and you can just generally discuss
+roblox scripting or any scripting
+roblox scripting or any scripting
+roblox scripting or any scripting
+for that matter but other than that
+for that matter but other than that
+for that matter but other than that
+i hope you guys have a nice day and
+i hope you guys have a nice day and
+i hope you guys have a nice day and
+goodbye
+[Music]
+[Music]
+[Music]
+[Applause]
+[Applause]
+[Applause]
+[Music]
+[Music]
+[Music]
+you

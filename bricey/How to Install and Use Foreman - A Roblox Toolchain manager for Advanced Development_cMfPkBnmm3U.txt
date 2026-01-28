@@ -1,0 +1,587 @@
+So, Foreman is a tool chain manager in
+So, Foreman is a tool chain manager in
+So, Foreman is a tool chain manager in
+Roblox that allows you to install a
+Roblox that allows you to install a
+Roblox that allows you to install a
+bunch of different like command line
+bunch of different like command line
+bunch of different like command line
+applications like Rojo, Remodel, Tarmac,
+applications like Rojo, Remodel, Tarmac,
+applications like Rojo, Remodel, Tarmac,
+and Seline. So, you've already seen me
+and Seline. So, you've already seen me
+and Seline. So, you've already seen me
+use Rojo
+use Rojo
+use Rojo
+with the VS Code plugin, but for allows
+with the VS Code plugin, but for allows
+with the VS Code plugin, but for allows
+you get to get the command line version,
+you get to get the command line version,
+you get to get the command line version,
+which is a little bit better, as well as
+which is a little bit better, as well as
+which is a little bit better, as well as
+remodel. Remodel is amazing. It is crazy
+remodel. Remodel is amazing. It is crazy
+remodel. Remodel is amazing. It is crazy
+good. It allows you to do so much stuff
+good. It allows you to do so much stuff
+good. It allows you to do so much stuff
+and fully automatically as well. I'll
+and fully automatically as well. I'll
+and fully automatically as well. I'll
+make a video on remodel in the future.
+make a video on remodel in the future.
+make a video on remodel in the future.
+Tarmac's also pretty cool and Selen's a
+Tarmac's also pretty cool and Selen's a
+Tarmac's also pretty cool and Selen's a
+pretty cool llinter. And so format
+pretty cool llinter. And so format
+pretty cool llinter. And so format
+allows you to give give you all of these
+allows you to give give you all of these
+allows you to give give you all of these
+tools and it's sort of like node package
+tools and it's sort of like node package
+tools and it's sort of like node package
+manager or npm if you ever heard of that
+manager or npm if you ever heard of that
+manager or npm if you ever heard of that
+but instead of just packages it's just
+but instead of just packages it's just
+but instead of just packages it's just
+straight up tools and it gives you like
+straight up tools and it gives you like
+straight up tools and it gives you like
+a one central location to
+a one central location to
+a one central location to
+use all of them. So this video I'm going
+use all of them. So this video I'm going
+use all of them. So this video I'm going
+to show you how to install it and how to
+to show you how to install it and how to
+to show you how to install it and how to
+get up and running using forman. So, in
+get up and running using forman. So, in
+get up and running using forman. So, in
+order to install Foreman, you're first
+order to install Foreman, you're first
+order to install Foreman, you're first
+going to want to go to
+going to want to go to
+going to want to go to
+the GitHub repository, which I will link
+the GitHub repository, which I will link
+the GitHub repository, which I will link
+in the description. And then on the
+in the description. And then on the
+in the description. And then on the
+right hand side, you have your releases.
+right hand side, you have your releases.
+right hand side, you have your releases.
+I'm on version 1.0.2.
+I'm on version 1.0.2.
+I'm on version 1.0.2.
+I'm going to click that. It doesn't
+I'm going to click that. It doesn't
+I'm going to click that. It doesn't
+really matter what version you have. It
+really matter what version you have. It
+really matter what version you have. It
+should be the same process. Then, you
+should be the same process. Then, you
+should be the same process. Then, you
+want to go to Forman Win64
+want to go to Forman Win64
+want to go to Forman Win64
+if you're on Windows. I don't know how
+if you're on Windows. I don't know how
+if you're on Windows. I don't know how
+to help you if you're not on Windows
+to help you if you're not on Windows
+to help you if you're not on Windows
+because that's the only device I have.
+because that's the only device I have.
+because that's the only device I have.
+So, I'm going to save this to my
+So, I'm going to save this to my
+So, I'm going to save this to my
+downloads folder. Then, open this up.
+downloads folder. Then, open this up.
+downloads folder. Then, open this up.
+So, I'm in the folder. You can see we
+So, I'm in the folder. You can see we
+So, I'm in the folder. You can see we
+have an executable. I'm going to first
+have an executable. I'm going to first
+have an executable. I'm going to first
+extract all. So, right click, extract
+extract all. So, right click, extract
+extract all. So, right click, extract
+all. And then I'm going to send this to
+all. And then I'm going to send this to
+all. And then I'm going to send this to
+program files because it's a program.
+program files because it's a program.
+program files because it's a program.
+And I'm going to create a new folder
+And I'm going to create a new folder
+And I'm going to create a new folder
+by right clicking, going to new folder.
+by right clicking, going to new folder.
+by right clicking, going to new folder.
+And you're going to have to have
+And you're going to have to have
+And you're going to have to have
+administrator access on your device in
+administrator access on your device in
+administrator access on your device in
+order to do this. Oh, whoops. There's
+order to do this. Oh, whoops. There's
+order to do this. Oh, whoops. There's
+too many new folders. You can see there
+too many new folders. You can see there
+too many new folders. You can see there
+I have to have administrator device
+I have to have administrator device
+I have to have administrator device
+privileges to delete it. And if you
+privileges to delete it. And if you
+privileges to delete it. And if you
+don't, you can just put it in documents.
+don't, you can just put it in documents.
+don't, you can just put it in documents.
+No worries. But the rest of the process
+No worries. But the rest of the process
+No worries. But the rest of the process
+will be a little bit different. So I'm
+will be a little bit different. So I'm
+will be a little bit different. So I'm
+going to name this folder for
+save that. And then make sure it's
+save that. And then make sure it's
+save that. And then make sure it's
+highlighted. Then press select folder.
+highlighted. Then press select folder.
+highlighted. Then press select folder.
+Then I can extract it.
+Then I can extract it.
+Then I can extract it.
+And here we go. So the formand.exe is
+And here we go. So the formand.exe is
+And here we go. So the formand.exe is
+now in my program files format. [snorts]
+now in my program files format. [snorts]
+now in my program files format. [snorts]
+So now what I'm going to do is I'm just
+So now what I'm going to do is I'm just
+So now what I'm going to do is I'm just
+going to doubleclick on the executable.
+And Microsoft is yelling at me, but we
+And Microsoft is yelling at me, but we
+And Microsoft is yelling at me, but we
+know it's secure. It's coming from
+know it's secure. It's coming from
+know it's secure. It's coming from
+Roblox. So we can run it.
+Roblox. So we can run it.
+Roblox. So we can run it.
+Nothing happens. But what what it'll do
+Nothing happens. But what what it'll do
+Nothing happens. But what what it'll do
+if everything's set up correctly and it
+if everything's set up correctly and it
+if everything's set up correctly and it
+should do this is if you go to users my
+should do this is if you go to users my
+should do this is if you go to users my
+user then like whatever your name is
+user then like whatever your name is
+user then like whatever your name is
+and then we go
+and then we go
+and then we go
+look around and you can see there's a
+look around and you can see there's a
+look around and you can see there's a
+foreman folder. There's some stuff in
+foreman folder. There's some stuff in
+foreman folder. There's some stuff in
+here. We'll deal with that a little bit
+here. We'll deal with that a little bit
+here. We'll deal with that a little bit
+later. This shows you that it's
+later. This shows you that it's
+later. This shows you that it's
+installed correctly [snorts] and you can
+installed correctly [snorts] and you can
+installed correctly [snorts] and you can
+access that through there.
+So that's all the file management done
+So that's all the file management done
+So that's all the file management done
+for the most part. I'm just going to
+for the most part. I'm just going to
+for the most part. I'm just going to
+leave these open.
+leave these open.
+leave these open.
+But now nothing will really happen. You
+But now nothing will really happen. You
+But now nothing will really happen. You
+can't access it through the command
+can't access it through the command
+can't access it through the command
+line. So we were to go to my command
+line. So we were to go to my command
+line. So we were to go to my command
+prompt and type in foreman. Nothing
+prompt and type in foreman. Nothing
+prompt and type in foreman. Nothing
+happens. So we need to add foreman as an
+happens. So we need to add foreman as an
+happens. So we need to add foreman as an
+environment variable to path. So, what
+environment variable to path. So, what
+environment variable to path. So, what
+I'm going to do is I'm going to press
+I'm going to do is I'm going to press
+I'm going to do is I'm going to press
+the Windows key and start typing
+the Windows key and start typing
+the Windows key and start typing
+environment. And you can see this thing
+environment. And you can see this thing
+environment. And you can see this thing
+called pops up. It says edit environment
+called pops up. It says edit environment
+called pops up. It says edit environment
+variables for your account.
+variables for your account.
+variables for your account.
+Here we go. And then I'm going to go
+Here we go. And then I'm going to go
+Here we go. And then I'm going to go
+down to path.
+down to path.
+down to path.
+Select
+Select
+Select
+edit.
+edit.
+edit.
+And then I want to add two things to the
+And then I want to add two things to the
+And then I want to add two things to the
+path. So I'm going to click new.
+path. So I'm going to click new.
+path. So I'm going to click new.
+And we're just going to press browse. So
+And we're just going to press browse. So
+And we're just going to press browse. So
+we don't have to actually enter in the
+we don't have to actually enter in the
+we don't have to actually enter in the
+path itself. And then we can go to
+path itself. And then we can go to
+path itself. And then we can go to
+local disk program files
+local disk program files
+local disk program files
+then to foremen
+then to foremen
+then to foremen
+and click okay.
+and click okay.
+and click okay.
+So that adds a foreman directory to our
+So that adds a foreman directory to our
+So that adds a foreman directory to our
+path. So this will allow us to access
+path. So this will allow us to access
+path. So this will allow us to access
+foremen from the command line. And then
+foremen from the command line. And then
+foremen from the command line. And then
+now we want to add create a new and go
+now we want to add create a new and go
+now we want to add create a new and go
+browse. We want to add theformman/bin
+browse. We want to add theformman/bin
+browse. We want to add theformman/bin
+folder because that's where the
+folder because that's where the
+folder because that's where the
+areas will be to run specific commands
+areas will be to run specific commands
+areas will be to run specific commands
+from the installed tools like rojo or
+from the installed tools like rojo or
+from the installed tools like rojo or
+solen or tarmac or remodel. So let's go
+solen or tarmac or remodel. So let's go
+solen or tarmac or remodel. So let's go
+to once again users your name
+to once again users your name
+to once again users your name
+and then
+and then
+and then
+down to foremen then bin and then click
+down to foremen then bin and then click
+down to foremen then bin and then click
+okay. [snorts] And so that should do it.
+okay. [snorts] And so that should do it.
+okay. [snorts] And so that should do it.
+Click okay on all the dialogues. And now
+Click okay on all the dialogues. And now
+Click okay on all the dialogues. And now
+let's test it. So I'm going to type in
+let's test it. So I'm going to type in
+let's test it. So I'm going to type in
+the Windows key. Type command to bring
+the Windows key. Type command to bring
+the Windows key. Type command to bring
+up the command prompt or cmd.
+up the command prompt or cmd.
+up the command prompt or cmd.
+And I'm going to press enter. And we're
+And I'm going to press enter. And we're
+And I'm going to press enter. And we're
+going to type in format. And you can see
+going to type in format. And you can see
+going to type in format. And you can see
+it tells us what version we have. It's
+it tells us what version we have. It's
+it tells us what version we have. It's
+basically help. So
+basically help. So
+basically help. So
+now we can like list the stuff that we
+now we can like list the stuff that we
+now we can like list the stuff that we
+have. So we don't have any installed
+have. So we don't have any installed
+have. So we don't have any installed
+tools right now. So it won't do
+tools right now. So it won't do
+tools right now. So it won't do
+anything. So, let's install a tool. Let
+anything. So, let's install a tool. Let
+anything. So, let's install a tool. Let
+me go back to the file explorer to
+me go back to the file explorer to
+me go back to the file explorer to
+theformman directory, then to the
+theformman directory, then to the
+theformman directory, then to the
+forman.toml.
+forman.toml.
+forman.toml.
+We want to open this up. I'm going to
+We want to open this up. I'm going to
+We want to open this up. I'm going to
+use Visual Studio Code for this. You can
+use Visual Studio Code for this. You can
+use Visual Studio Code for this. You can
+use whatever you want. You can even use
+use whatever you want. You can even use
+use whatever you want. You can even use
+like Notepad or something.
+like Notepad or something.
+like Notepad or something.
+Let me just bring this over.
+So, let me just bring it over.
+So, let me just bring it over.
+So, let me just bring it over.
+And you can see it's a standard Tombbo
+And you can see it's a standard Tombbo
+And you can see it's a standard Tombbo
+file. So you don't really need to know
+file. So you don't really need to know
+file. So you don't really need to know
+the syntax. All you need to know is you
+the syntax. All you need to know is you
+the syntax. All you need to know is you
+need to have brackets tools and then all
+need to have brackets tools and then all
+need to have brackets tools and then all
+the tools that you need. So every
+the tools that you need. So every
+the tools that you need. So every
+repository that you'll come by that can
+repository that you'll come by that can
+repository that you'll come by that can
+be used by foremen. We'll show you the
+be used by foremen. We'll show you the
+be used by foremen. We'll show you the
+specific syntax for the source and the
+specific syntax for the source and the
+specific syntax for the source and the
+version. See right now it conveniently
+version. See right now it conveniently
+version. See right now it conveniently
+already has a row here. And these little
+already has a row here. And these little
+already has a row here. And these little
+hashtags specify a comment just like
+hashtags specify a comment just like
+hashtags specify a comment just like
+Python. So I'm gonna get rid of the
+Python. So I'm gonna get rid of the
+Python. So I'm gonna get rid of the
+comment. And this is kind of outdated.
+comment. And this is kind of outdated.
+comment. And this is kind of outdated.
+So I'm going to change my version to
+So I'm going to change my version to
+So I'm going to change my version to
+6.1.0.
+6.1.0.
+6.1.0.
+Save that. Make sure it's saved. And
+Save that. Make sure it's saved. And
+Save that. Make sure it's saved. And
+then now I can go back to the command
+then now I can go back to the command
+then now I can go back to the command
+line and type in foremen install. And
+line and type in foremen install. And
+line and type in foremen install. And
+what this
+what this
+what this
+command does is all it does is it goes
+command does is all it does is it goes
+command does is all it does is it goes
+to the foremen.l normal and installs all
+to the foremen.l normal and installs all
+to the foremen.l normal and installs all
+of the tools there. And now we can check
+of the tools there. And now we can check
+of the tools there. And now we can check
+to see if Rojo is actually installed by
+to see if Rojo is actually installed by
+to see if Rojo is actually installed by
+typing in Rojo. And you can see it has
+typing in Rojo. And you can see it has
+typing in Rojo. And you can see it has
+everything there for you to use. And you
+everything there for you to use. And you
+everything there for you to use. And you
+can do this with all of the supported
+can do this with all of the supported
+can do this with all of the supported
+tools for format. It's really, really
+tools for format. It's really, really
+tools for format. It's really, really
+nice. And this allows you to keep
+nice. And this allows you to keep
+nice. And this allows you to keep
+everything centralized. Only add two
+everything centralized. Only add two
+everything centralized. Only add two
+variables to path because if you install
+variables to path because if you install
+variables to path because if you install
+everything together, you'll have to add
+everything together, you'll have to add
+everything together, you'll have to add
+all of them to path manually. And that's
+all of them to path manually. And that's
+all of them to path manually. And that's
+not really good. You want to keep it
+not really good. You want to keep it
+not really good. You want to keep it
+nice and simple. And so honestly, the
+nice and simple. And so honestly, the
+nice and simple. And so honestly, the
+main benefit of using foreman in my
+main benefit of using foreman in my
+main benefit of using foreman in my
+opinion is access to like remodel and
+opinion is access to like remodel and
+opinion is access to like remodel and
+all of the other tools in the same exact
+all of the other tools in the same exact
+all of the other tools in the same exact
+spot because Rojo you can obviously get
+spot because Rojo you can obviously get
+spot because Rojo you can obviously get
+alone and some of the other tools just
+alone and some of the other tools just
+alone and some of the other tools just
+aren't that useful, but remodel it's
+aren't that useful, but remodel it's
+aren't that useful, but remodel it's
+insanely good. I will make a video on
+insanely good. I will make a video on
+insanely good. I will make a video on
+that next. I will have to show you how
+that next. I will have to show you how
+that next. I will have to show you how
+good it is and what things it can can
+good it is and what things it can can
+good it is and what things it can can
+do. So that's about it for this video. I
+do. So that's about it for this video. I
+do. So that's about it for this video. I
+hope you enjoyed this introduction to
+hope you enjoyed this introduction to
+hope you enjoyed this introduction to
+Foreman and all of the help it can give
+Foreman and all of the help it can give
+Foreman and all of the help it can give
+you when developing advanced toplevel
+you when developing advanced toplevel
+you when developing advanced toplevel
+Roblox games. In fact, the person who
+Roblox games. In fact, the person who
+Roblox games. In fact, the person who
+created Foreman worked for Adopt Me
+created Foreman worked for Adopt Me
+created Foreman worked for Adopt Me
+originally and now he works for Roblox
+originally and now he works for Roblox
+originally and now he works for Roblox
+and works on these projects like Foreman
+and works on these projects like Foreman
+and works on these projects like Foreman
+or Rojo in his spare time. You can see
+or Rojo in his spare time. You can see
+or Rojo in his spare time. You can see
+him right here. He is let me go back.
+LPG hat guy.
+LPG hat guy.
+LPG hat guy.
+She He's pretty cool. He has a ton of
+She He's pretty cool. He has a ton of
+She He's pretty cool. He has a ton of
+stuff and he's just a great developer
+stuff and he's just a great developer
+stuff and he's just a great developer
+for the Roblox community.
+for the Roblox community.
+for the Roblox community.
+But other than that, make sure to like
+But other than that, make sure to like
+But other than that, make sure to like
+and subscribe if you enjoyed this video
+and subscribe if you enjoyed this video
+and subscribe if you enjoyed this video
+and stay tuned for more Roblox tool
+and stay tuned for more Roblox tool
+and stay tuned for more Roblox tool
+videos for advanced development. So, I
+videos for advanced development. So, I
+videos for advanced development. So, I
+hope you have a nice day and goodbye.
+[music]
+[music]

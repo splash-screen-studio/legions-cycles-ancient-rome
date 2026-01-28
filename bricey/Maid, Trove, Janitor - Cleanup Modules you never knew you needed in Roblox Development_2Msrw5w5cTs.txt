@@ -1,0 +1,1269 @@
+so let's say we have some object
+so let's say we have some object
+so let's say we have some object
+oriented class here this is a something
+oriented class here this is a something
+oriented class here this is a something
+class it does something in our game who
+class it does something in our game who
+class it does something in our game who
+knows what it does but for the sake of
+knows what it does but for the sake of
+knows what it does but for the sake of
+explanation here it is
+explanation here it is
+explanation here it is
+and it's pretty simple all we got is a
+and it's pretty simple all we got is a
+and it's pretty simple all we got is a
+new to create a new object destroy which
+new to create a new object destroy which
+new to create a new object destroy which
+has nothing in it but we'll we'll
+has nothing in it but we'll we'll
+has nothing in it but we'll we'll
+populate it in just a second
+populate it in just a second
+populate it in just a second
+and then
+and then
+and then
+let's populate this like you would an
+let's populate this like you would an
+let's populate this like you would an
+actual game so if we were to use this
+actual game so if we were to use this
+actual game so if we were to use this
+in-game we'd probably need some form of
+in-game we'd probably need some form of
+in-game we'd probably need some form of
+bindable event if we want to communicate
+bindable event if we want to communicate
+bindable event if we want to communicate
+something so i'm just going to create a
+something so i'm just going to create a
+something so i'm just going to create a
+new bindable event within our object
+new bindable event within our object
+new bindable event within our object
+and then usually i like to link my
+and then usually i like to link my
+and then usually i like to link my
+classes to something
+classes to something
+classes to something
+tangible in the game world like for
+tangible in the game world like for
+tangible in the game world like for
+example a port so i'm going to add a
+example a port so i'm going to add a
+example a port so i'm going to add a
+part to this
+part to this
+part to this
+i'm just going to make a new part
+i'm just going to make a new part
+i'm just going to make a new part
+there we go
+there we go
+there we go
+but
+but
+but
+the issue here is we use we call
+the issue here is we use we call
+the issue here is we use we call
+instance.new we create a new bindable
+instance.new we create a new bindable
+instance.new we create a new bindable
+event we create a new part
+event we create a new part
+event we create a new part
+but
+but
+but
+they stay in the game forever
+they stay in the game forever
+they stay in the game forever
+even if we're done with this something
+even if we're done with this something
+even if we're done with this something
+so what we have to do is we have to go
+so what we have to do is we have to go
+so what we have to do is we have to go
+to our destroy function
+to our destroy function
+to our destroy function
+and we have to
+and we have to
+and we have to
+destroy it so for some event you know
+destroy it so for some event you know
+destroy it so for some event you know
+i'm pretty confident we can just destroy
+i'm pretty confident we can just destroy
+i'm pretty confident we can just destroy
+it on the spot there we go but then for
+it on the spot there we go but then for
+it on the spot there we go but then for
+some part we first have to check if it
+some part we first have to check if it
+some part we first have to check if it
+exists because we don't want it to error
+exists because we don't want it to error
+exists because we don't want it to error
+if it doesn't exist so we say if
+if it doesn't exist so we say if
+if it doesn't exist so we say if
+self.some part then
+self.some part then
+self.some part then
+we'll do self.some part destroy
+we'll do self.some part destroy
+we'll do self.some part destroy
+so if the part still exists in the world
+so if the part still exists in the world
+so if the part still exists in the world
+we need to destroy it because we don't
+we need to destroy it because we don't
+we need to destroy it because we don't
+want to have parts lying around so if
+want to have parts lying around so if
+want to have parts lying around so if
+you create multiple sub-things and get
+you create multiple sub-things and get
+you create multiple sub-things and get
+rid of them you want the parts to get
+rid of them you want the parts to get
+rid of them you want the parts to get
+destroyed
+destroyed
+destroyed
+okay so that's that's pretty basic right
+okay so that's that's pretty basic right
+okay so that's that's pretty basic right
+now let's
+now let's
+now let's
+make a new
+make a new
+make a new
+property called self.connection and this
+property called self.connection and this
+property called self.connection and this
+will be linked to a run service
+will be linked to a run service
+will be linked to a run service
+connection
+connection
+connection
+so let's do local run service this game
+so let's do local run service this game
+so let's do local run service this game
+get service run service there we go and
+get service run service there we go and
+get service run service there we go and
+we do
+we do
+we do
+run service dot stepped
+run service dot stepped
+run service dot stepped
+connect
+connect
+connect
+and then
+and then
+and then
+we
+we
+we
+time
+time
+time
+and delta time wait so is the time oh
+and delta time wait so is the time oh
+and delta time wait so is the time oh
+wait i need a function oh crap okay so
+wait i need a function oh crap okay so
+wait i need a function oh crap okay so
+is it time is that elapsed time or is
+is it time is that elapsed time or is
+is it time is that elapsed time or is
+that
+that
+that
+like the global time
+like the global time
+like the global time
+okay okay i might have to check
+okay okay i might have to check
+okay okay i might have to check
+the documentation on that but oh
+the documentation on that but oh
+the documentation on that but oh
+whatever let's just let's just finish
+whatever let's just let's just finish
+whatever let's just let's just finish
+implementing this
+implementing this
+implementing this
+um but i might need to use delta time so
+um but i might need to use delta time so
+um but i might need to use delta time so
+i might need to
+i might need to
+i might need to
+uh
+uh
+uh
+well first let's let's test let's test
+well first let's let's test let's test
+well first let's let's test let's test
+if it works so let's just process
+if it works so let's just process
+if it works so let's just process
+printing there we go
+printing there we go
+printing there we go
+let's test this out let's run this it's
+let's test this out let's run this it's
+let's test this out let's run this it's
+required in another script so it should
+required in another script so it should
+required in another script so it should
+be fine it's printing that's good that's
+be fine it's printing that's good that's
+be fine it's printing that's good that's
+good okay so now i need to go check the
+good okay so now i need to go check the
+good okay so now i need to go check the
+documentation come back and
+documentation come back and
+documentation come back and
+finish this
+finish this
+finish this
+okay there we go this does exactly what
+okay there we go this does exactly what
+okay there we go this does exactly what
+i wanted to do it moves some part
+i wanted to do it moves some part
+i wanted to do it moves some part
+and moves it by two every stud
+and moves it by two every stud
+and moves it by two every stud
+every 10 seconds since t modulo 10
+every 10 seconds since t modulo 10
+every 10 seconds since t modulo 10
+because zero so every 10 seconds will
+because zero so every 10 seconds will
+because zero so every 10 seconds will
+move it that works let's try it out
+um
+um
+um
+doesn't do anything
+doesn't do anything
+doesn't do anything
+i wonder what oh i forgot to send the
+i wonder what oh i forgot to send the
+i wonder what oh i forgot to send the
+parent so we say self dot sum part dot
+parent so we say self dot sum part dot
+parent so we say self dot sum part dot
+parent equals workspace there we go
+parent equals workspace there we go
+parent equals workspace there we go
+should work out fine
+oh where is it
+oh where is it
+oh where is it
+oh it's inside here and it's
+oh it's inside here and it's
+oh it's inside here and it's
+not anchored
+not anchored
+not anchored
+well we'll figure that later
+well we'll figure that later
+well we'll figure that later
+so
+so
+so
+what went wrong here i was just caught
+what went wrong here i was just caught
+what went wrong here i was just caught
+up with working on my connection around
+up with working on my connection around
+up with working on my connection around
+service connection
+service connection
+service connection
+but you know what i forgot to do
+but you know what i forgot to do
+but you know what i forgot to do
+i forgot to add it to the destroy method
+i forgot to add it to the destroy method
+i forgot to add it to the destroy method
+so
+so
+so
+what i just showed you there is a
+what i just showed you there is a
+what i just showed you there is a
+typical situation
+typical situation
+typical situation
+where
+where
+where
+you can get carried away with what
+you can get carried away with what
+you can get carried away with what
+you're doing with what you're developing
+you're doing with what you're developing
+you're doing with what you're developing
+and you can forget
+and you can forget
+and you can forget
+to clean up
+to clean up
+to clean up
+your mess
+your mess
+your mess
+and that is what
+and that is what
+and that is what
+the cleanup modules and roblox
+the cleanup modules and roblox
+the cleanup modules and roblox
+are meant to solve it's meant to
+are meant to solve it's meant to
+are meant to solve it's meant to
+alleviate some of that pressure of
+alleviate some of that pressure of
+alleviate some of that pressure of
+trying to remember to clean up every
+trying to remember to clean up every
+trying to remember to clean up every
+single connection every single part
+single connection every single part
+single connection every single part
+every single
+every single
+every single
+event whatever what have you
+event whatever what have you
+event whatever what have you
+and
+and
+and
+allow you to program in a more fluid
+allow you to program in a more fluid
+allow you to program in a more fluid
+like more
+imperative fashion like step-by-step
+imperative fashion like step-by-step
+imperative fashion like step-by-step
+fashion because you don't have to keep
+fashion because you don't have to keep
+fashion because you don't have to keep
+on jumping back and forth changing your
+on jumping back and forth changing your
+on jumping back and forth changing your
+perspective you can stay in the same
+perspective you can stay in the same
+perspective you can stay in the same
+spot and work and you can know that your
+spot and work and you can know that your
+spot and work and you can know that your
+objects will be properly disposed of
+objects will be properly disposed of
+objects will be properly disposed of
+because in this case this would have led
+because in this case this would have led
+because in this case this would have led
+to a memory liquid this connection would
+to a memory liquid this connection would
+to a memory liquid this connection would
+have stayed
+have stayed
+have stayed
+so it either would have aired a bunch
+so it either would have aired a bunch
+so it either would have aired a bunch
+and like like that server or it would
+and like like that server or it would
+and like like that server or it would
+have just built up and eventually ran
+have just built up and eventually ran
+have just built up and eventually ran
+out of memory now with the connection
+out of memory now with the connection
+out of memory now with the connection
+it's not that bad with other things like
+it's not that bad with other things like
+it's not that bad with other things like
+parts or whatever it might be a lot
+parts or whatever it might be a lot
+parts or whatever it might be a lot
+worse speeds will still be left in the
+worse speeds will still be left in the
+worse speeds will still be left in the
+game world this can all be solved with
+game world this can all be solved with
+game world this can all be solved with
+every locks cleanup module and i say
+every locks cleanup module and i say
+every locks cleanup module and i say
+generally because there's a couple
+generally because there's a couple
+generally because there's a couple
+there's
+there's
+there's
+trove janitor made
+trove janitor made
+trove janitor made
+there's also one called dumpster there's
+there's also one called dumpster there's
+there's also one called dumpster there's
+a bunch of them my personal preference
+a bunch of them my personal preference
+a bunch of them my personal preference
+is trove and that's what i'll be using
+is trove and that's what i'll be using
+is trove and that's what i'll be using
+right now to
+right now to
+right now to
+fix
+fix
+fix
+our issue so let's bring trove to the
+our issue so let's bring trove to the
+our issue so let's bring trove to the
+rescue now for this specific example i
+rescue now for this specific example i
+rescue now for this specific example i
+just copy and pasted the source of trove
+just copy and pasted the source of trove
+just copy and pasted the source of trove
+into a module script into replicated
+into a module script into replicated
+into a module script into replicated
+storage but for your actual game it'd be
+storage but for your actual game it'd be
+storage but for your actual game it'd be
+better to use a package manager like
+better to use a package manager like
+better to use a package manager like
+wally if you're using rojo or maybe get
+wally if you're using rojo or maybe get
+wally if you're using rojo or maybe get
+it bundled with some other things if
+it bundled with some other things if
+it bundled with some other things if
+that's at all possible
+that's at all possible
+that's at all possible
+so let's
+so let's
+so let's
+use trove
+use trove
+use trove
+and
+and
+and
+fix
+fix
+fix
+our issue
+our issue
+our issue
+so we're gonna say local trove equals
+so we're gonna say local trove equals
+so we're gonna say local trove equals
+require
+require
+require
+game get service replicate storage
+game get service replicate storage
+game get service replicate storage
+dot trove so we got our trove and so now
+dot trove so we got our trove and so now
+dot trove so we got our trove and so now
+all you have to do is first make a
+all you have to do is first make a
+all you have to do is first make a
+variable for the trove and our object so
+variable for the trove and our object so
+variable for the trove and our object so
+in the self and the function or
+in the self and the function or
+in the self and the function or
+something that new block i'm going to
+something that new block i'm going to
+something that new block i'm going to
+say self.underscore trove
+say self.underscore trove
+say self.underscore trove
+equals trove dot new the only reason i'm
+equals trove dot new the only reason i'm
+equals trove dot new the only reason i'm
+using unscore here is as a naming
+using unscore here is as a naming
+using unscore here is as a naming
+convention it has nothing important
+convention it has nothing important
+convention it has nothing important
+having this underscore basically means
+having this underscore basically means
+having this underscore basically means
+that it's private because other objects
+that it's private because other objects
+that it's private because other objects
+should definitely not be accessing
+should definitely not be accessing
+should definitely not be accessing
+this some things trove because it's kind
+this some things trove because it's kind
+this some things trove because it's kind
+of just for itself
+of just for itself
+of just for itself
+and so now i can go down
+and so now i can go down
+and so now i can go down
+to the destroy
+to the destroy
+to the destroy
+first get rid of all this junk because
+first get rid of all this junk because
+first get rid of all this junk because
+it's kind of ugly you can say
+it's kind of ugly you can say
+it's kind of ugly you can say
+self
+self
+self
+dot underscore trove
+dot underscore trove
+dot underscore trove
+destroy
+destroy
+destroy
+and there you go this
+and there you go this
+and there you go this
+should be the only line you should ever
+should be the only line you should ever
+should be the only line you should ever
+have to add to a destroy block
+have to add to a destroy block
+have to add to a destroy block
+in a class
+in a class
+in a class
+because ideally you should have to add
+because ideally you should have to add
+because ideally you should have to add
+everything in your trove so how exactly
+everything in your trove so how exactly
+everything in your trove so how exactly
+is a trover so the trophy is basically
+is a trover so the trophy is basically
+is a trover so the trophy is basically
+like a stash
+like a stash
+like a stash
+or like you know like a trash can so you
+or like you know like a trash can so you
+or like you know like a trash can so you
+take all the things that you need to
+take all the things that you need to
+take all the things that you need to
+eventually throw away and you shove it
+eventually throw away and you shove it
+eventually throw away and you shove it
+into the trove and the trove at the very
+into the trove and the trove at the very
+into the trove and the trove at the very
+bottom destroy method cleans it up so
+bottom destroy method cleans it up so
+bottom destroy method cleans it up so
+it's like you know dumping everything in
+it's like you know dumping everything in
+it's like you know dumping everything in
+a trash can and once you're done and the
+a trash can and once you're done and the
+a trash can and once you're done and the
+trash can is full and you're like you're
+trash can is full and you're like you're
+trash can is full and you're like you're
+done with it you take the trash out
+done with it you take the trash out
+done with it you take the trash out
+and forget about it so the same thing
+and forget about it so the same thing
+and forget about it so the same thing
+here but we have to you know do that so
+here but we have to you know do that so
+here but we have to you know do that so
+before this instance dot new we're going
+before this instance dot new we're going
+before this instance dot new we're going
+to do self
+to do self
+to do self
+underscore true
+underscore true
+underscore true
+add
+add
+add
+and then parentheses and then go to the
+and then parentheses and then go to the
+and then parentheses and then go to the
+end and put another parenthesis so what
+end and put another parenthesis so what
+end and put another parenthesis so what
+this does
+this does
+this does
+is
+is
+is
+this adds this object to the trove
+this adds this object to the trove
+this adds this object to the trove
+but
+but
+but
+it also returns it so this allows you to
+it also returns it so this allows you to
+it also returns it so this allows you to
+make really nice uh declaration
+make really nice uh declaration
+make really nice uh declaration
+statements because
+statements because
+statements because
+usually with a module like made i think
+usually with a module like made i think
+usually with a module like made i think
+made still has this you would have to
+made still has this you would have to
+made still has this you would have to
+say like self.trove ad below
+say like self.trove ad below
+say like self.trove ad below
+below this sum event so you'd have to
+below this sum event so you'd have to
+below this sum event so you'd have to
+add some event manually but here we can
+add some event manually but here we can
+add some event manually but here we can
+do it all in one line because all this
+do it all in one line because all this
+do it all in one line because all this
+does is return the thing that's created
+does is return the thing that's created
+does is return the thing that's created
+here so basically this
+here so basically this
+here so basically this
+is the exact same thing
+is the exact same thing
+is the exact same thing
+as
+as
+as
+doing
+doing
+doing
+this so self.trove
+this so self.trove
+this so self.trove
+add
+add
+add
+soft some event this one this form right
+soft some event this one this form right
+soft some event this one this form right
+here makes a little more intuitive sense
+here makes a little more intuitive sense
+here makes a little more intuitive sense
+because
+because
+because
+we create the object and then we stash
+we create the object and then we stash
+we create the object and then we stash
+it in our trove to later destroy it so
+it in our trove to later destroy it so
+it in our trove to later destroy it so
+this object will not be destroyed until
+this object will not be destroyed until
+this object will not be destroyed until
+this is called which will be at the very
+this is called which will be at the very
+this is called which will be at the very
+end of the lifetime of your object but
+end of the lifetime of your object but
+end of the lifetime of your object but
+personally i prefer the other way
+personally i prefer the other way
+personally i prefer the other way
+because it's one line and to be honest
+because it's one line and to be honest
+because it's one line and to be honest
+roblox is already
+roblox is already
+roblox is already
+as verbose as it should be
+as verbose as it should be
+as verbose as it should be
+so we can do the same thing with our
+so we can do the same thing with our
+so we can do the same thing with our
+parts so self.trove
+add
+add
+add
+this
+and then
+and then
+and then
+for our
+for our
+for our
+connection trove actually has a
+connection trove actually has a
+connection trove actually has a
+special
+special
+special
+connect method so we can do self.
+connect method so we can do self.
+connect method so we can do self.
+underscore trove
+underscore trove
+underscore trove
+connect
+connect
+connect
+we can connect this run service.stepped
+we can connect this run service.stepped
+we can connect this run service.stepped
+event get rid of this connect and colon
+event get rid of this connect and colon
+event get rid of this connect and colon
+hit a comma there and there we go so
+hit a comma there and there we go so
+hit a comma there and there we go so
+this is just a convenient function all
+this is just a convenient function all
+this is just a convenient function all
+it does is it adds the connection
+it does is it adds the connection
+it does is it adds the connection
+that is created by our stepped event and
+that is created by our stepped event and
+that is created by our stepped event and
+it adds its function to the stepped
+it adds its function to the stepped
+it adds its function to the stepped
+event and then obviously we can get rid
+event and then obviously we can get rid
+event and then obviously we can get rid
+of this self.connection we don't need
+of this self.connection we don't need
+of this self.connection we don't need
+that anymore because the only reason we
+that anymore because the only reason we
+that anymore because the only reason we
+had the connection in the first place
+had the connection in the first place
+had the connection in the first place
+was to get cleaned up by the trove and
+was to get cleaned up by the trove and
+was to get cleaned up by the trove and
+the trove conveniently handles it so
+the trove conveniently handles it so
+the trove conveniently handles it so
+adding this little block of code at the
+adding this little block of code at the
+adding this little block of code at the
+start
+start
+start
+of like all your connections will save
+of like all your connections will save
+of like all your connections will save
+you from having to remember to
+you from having to remember to
+you from having to remember to
+disconnect them down the line
+disconnect them down the line
+disconnect them down the line
+because this destroy is a catch-all we
+because this destroy is a catch-all we
+because this destroy is a catch-all we
+add all of our stuff to the trove and
+add all of our stuff to the trove and
+add all of our stuff to the trove and
+then we dump it in the end
+then we dump it in the end
+then we dump it in the end
+and the reason this works so well is
+and the reason this works so well is
+and the reason this works so well is
+because you're able to think about what
+because you're able to think about what
+because you're able to think about what
+you have to do as you're as you're doing
+you have to do as you're as you're doing
+you have to do as you're as you're doing
+it so when you create an object you can
+it so when you create an object you can
+it so when you create an object you can
+instantly destroy it later it's like a
+instantly destroy it later it's like a
+instantly destroy it later it's like a
+it's almost like a promise it's not
+it's almost like a promise it's not
+it's almost like a promise it's not
+definitely not the same thing as a
+definitely not the same thing as a
+definitely not the same thing as a
+promise module that i covered in another
+promise module that i covered in another
+promise module that i covered in another
+video you should check that out if you
+video you should check that out if you
+video you should check that out if you
+haven't already but
+haven't already but
+haven't already but
+it is
+it is
+it is
+similar in the way that you can leave it
+similar in the way that you can leave it
+similar in the way that you can leave it
+and forget about you don't have to
+and forget about you don't have to
+and forget about you don't have to
+remember
+remember
+remember
+to destroy stuff when i first started
+to destroy stuff when i first started
+to destroy stuff when i first started
+roblox development i did consciously
+roblox development i did consciously
+roblox development i did consciously
+remember oh i had to add this i have to
+remember oh i had to add this i have to
+remember oh i had to add this i have to
+destroy that later down the line and it
+destroy that later down the line and it
+destroy that later down the line and it
+led to a whole host of bugs that i just
+led to a whole host of bugs that i just
+led to a whole host of bugs that i just
+had no clue how to fix
+had no clue how to fix
+had no clue how to fix
+and it was impossible to debug because i
+and it was impossible to debug because i
+and it was impossible to debug because i
+didn't know where stuff was and a lot of
+didn't know where stuff was and a lot of
+didn't know where stuff was and a lot of
+the memory leaks probably won't bite you
+the memory leaks probably won't bite you
+the memory leaks probably won't bite you
+until you're in production and stuff and
+until you're in production and stuff and
+until you're in production and stuff and
+a lot of people are joining and stuff is
+a lot of people are joining and stuff is
+a lot of people are joining and stuff is
+going wrong
+going wrong
+going wrong
+so just just for
+so just just for
+so just just for
+our purposes of this video let's try
+our purposes of this video let's try
+our purposes of this video let's try
+this out so this is my script where we
+this out so this is my script where we
+this out so this is my script where we
+require something
+require something
+require something
+we can do a little bit of a wait like
+we can do a little bit of a wait like
+we can do a little bit of a wait like
+three seconds and then we can say
+three seconds and then we can say
+three seconds and then we can say
+uh we can say
+uh we can say
+uh we can say
+s destroy to kill
+s destroy to kill
+s destroy to kill
+or something and we can also put a print
+or something and we can also put a print
+or something and we can also put a print
+within our
+within our
+within our
+run service just to say
+i'm running because once the trove
+i'm running because once the trove
+i'm running because once the trove
+cleans everything up it should stop
+cleans everything up it should stop
+cleans everything up it should stop
+saying that
+saying that
+saying that
+okay
+okay
+okay
+so we have an error well turns out i
+so we have an error well turns out i
+so we have an error well turns out i
+accidentally pressed l while in the
+accidentally pressed l while in the
+accidentally pressed l while in the
+trove script so that has a fat l for
+trove script so that has a fat l for
+trove script so that has a fat l for
+having no errors so let's get rid of
+having no errors so let's get rid of
+having no errors so let's get rid of
+that and now let's try it
+so we create our something it's running
+so we create our something it's running
+so we create our something it's running
+for three seconds
+for three seconds
+for three seconds
+and it stops and then let's check the
+and it stops and then let's check the
+and it stops and then let's check the
+hierarchy the part is gone wow it's like
+hierarchy the part is gone wow it's like
+hierarchy the part is gone wow it's like
+magic well no it's just a trove and or a
+magic well no it's just a trove and or a
+magic well no it's just a trove and or a
+maid in a regenerator
+maid in a regenerator
+maid in a regenerator
+so
+so
+so
+this is a very simple module that at
+this is a very simple module that at
+this is a very simple module that at
+first glance may seem kind of
+first glance may seem kind of
+first glance may seem kind of
+unnecessary like
+unnecessary like
+unnecessary like
+you know you the programmer the very
+you know you the programmer the very
+you know you the programmer the very
+smart programmer that you are should be
+smart programmer that you are should be
+smart programmer that you are should be
+able to
+able to
+able to
+destroy all of your stuff yourself
+destroy all of your stuff yourself
+destroy all of your stuff yourself
+because you can't be trusting those
+because you can't be trusting those
+because you can't be trusting those
+pesky third-party modules they don't
+pesky third-party modules they don't
+pesky third-party modules they don't
+they don't cater to you properly like
+they don't cater to you properly like
+they don't cater to you properly like
+you you can make your own code right but
+you you can make your own code right but
+you you can make your own code right but
+this is a module that basically
+this is a module that basically
+this is a module that basically
+helps take the like juggling the mind
+helps take the like juggling the mind
+helps take the like juggling the mind
+juggling of programming
+juggling of programming
+juggling of programming
+makes it a little bit easier because you
+makes it a little bit easier because you
+makes it a little bit easier because you
+the programmer should be thinking about
+the programmer should be thinking about
+the programmer should be thinking about
+you like your game design your
+you like your game design your
+you like your game design your
+overarching overarching architecture not
+overarching overarching architecture not
+overarching overarching architecture not
+some pesky memory leak bug that should
+some pesky memory leak bug that should
+some pesky memory leak bug that should
+be a very simple fix or shouldn't be a
+be a very simple fix or shouldn't be a
+be a very simple fix or shouldn't be a
+problem in the first place and these
+problem in the first place and these
+problem in the first place and these
+modules help you do that now as for
+modules help you do that now as for
+modules help you do that now as for
+which one you pick whether it be trove
+which one you pick whether it be trove
+which one you pick whether it be trove
+whether it be
+whether it be
+whether it be
+made or janitor so i think janitor
+made or janitor so i think janitor
+made or janitor so i think janitor
+technically is like the all-around best
+technically is like the all-around best
+technically is like the all-around best
+solution it has the most features made
+solution it has the most features made
+solution it has the most features made
+is kind of like the old like grandma of
+is kind of like the old like grandma of
+is kind of like the old like grandma of
+the two others
+the two others
+the two others
+because trove is made by slutneck it
+because trove is made by slutneck it
+because trove is made by slutneck it
+works well with knit and that's why i
+works well with knit and that's why i
+works well with knit and that's why i
+used it and i just like the ergonomics
+used it and i just like the ergonomics
+used it and i just like the ergonomics
+it has a bunch of extra functions like
+it has a bunch of extra functions like
+it has a bunch of extra functions like
+this connect function it also has a
+this connect function it also has a
+this connect function it also has a
+construct function that calls destroy
+construct function that calls destroy
+construct function that calls destroy
+unlike a
+unlike a
+unlike a
+class like this or a part or something
+class like this or a part or something
+class like this or a part or something
+like that when it creates it which that
+like that when it creates it which that
+like that when it creates it which that
+one's pretty cool too
+one's pretty cool too
+one's pretty cool too
+and
+and
+and
+yeah so it's just all up to you and one
+yeah so it's just all up to you and one
+yeah so it's just all up to you and one
+other thing is that you can actually add
+other thing is that you can actually add
+other thing is that you can actually add
+functions
+functions
+functions
+to
+to
+to
+your trove so if i say self
+your trove so if i say self
+your trove so if i say self
+trove
+trove
+trove
+add i can just add a function
+add i can just add a function
+add i can just add a function
+say print
+say print
+say print
+cleaned up
+cleaned up
+cleaned up
+and i run this again you'll see that
+and i run this again you'll see that
+and i run this again you'll see that
+cleaned up is printed
+cleaned up is printed
+cleaned up is printed
+and the the use case for this is when
+and the the use case for this is when
+and the the use case for this is when
+you are for example binding something to
+you are for example binding something to
+you are for example binding something to
+render stuff because when you bind a
+render stuff because when you bind a
+render stuff because when you bind a
+render step you have to unbind from
+render step you have to unbind from
+render step you have to unbind from
+render stub it's not a connection so you
+render stub it's not a connection so you
+render stub it's not a connection so you
+could put that in your trow function it
+could put that in your trow function it
+could put that in your trow function it
+looks a little bit less
+looks a little bit less
+looks a little bit less
+clean it's a little more clunky but it
+clean it's a little more clunky but it
+clean it's a little more clunky but it
+does do the trick it's very obvious what
+does do the trick it's very obvious what
+does do the trick it's very obvious what
+you're doing
+you're doing
+you're doing
+and any other people reading say oh yeah
+and any other people reading say oh yeah
+and any other people reading say oh yeah
+he's cleaning up his stuff which that's
+he's cleaning up his stuff which that's
+he's cleaning up his stuff which that's
+pretty cool
+pretty cool
+pretty cool
+so yeah
+so yeah
+so yeah
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you enjoyed make sure to like the video
+you enjoyed make sure to like the video
+you enjoyed make sure to like the video
+if you enjoyed it subscribe for more
+if you enjoyed it subscribe for more
+if you enjoyed it subscribe for more
+roblox scripting content and potentially
+roblox scripting content and potentially
+roblox scripting content and potentially
+more module tutorials if you're
+more module tutorials if you're
+more module tutorials if you're
+interested because a lot of these
+interested because a lot of these
+interested because a lot of these
+modules are
+modules are
+modules are
+pretty useful but they're a lot of times
+pretty useful but they're a lot of times
+pretty useful but they're a lot of times
+require an explanation i was skeptical
+require an explanation i was skeptical
+require an explanation i was skeptical
+when i started using them because
+when i started using them because
+when i started using them because
+you know like
+you know like
+you know like
+a lot of them just didn't seem very
+a lot of them just didn't seem very
+a lot of them just didn't seem very
+useful but they are
+useful but they are
+useful but they are
+and
+and
+and
+it's good to figure them out and figure
+it's good to figure them out and figure
+it's good to figure them out and figure
+out how your workflow can be helped so
+out how your workflow can be helped so
+out how your workflow can be helped so
+with that said comment any more
+with that said comment any more
+with that said comment any more
+suggestions you have for other modules
+suggestions you have for other modules
+suggestions you have for other modules
+and if you want i could also do a video
+and if you want i could also do a video
+and if you want i could also do a video
+on
+on
+on
+writing my own
+writing my own
+writing my own
+like trove
+like trove
+like trove
+made module whatever just has like a
+made module whatever just has like a
+made module whatever just has like a
+little exercise because although
+little exercise because although
+little exercise because although
+reinventing real isn't good for like a
+reinventing real isn't good for like a
+reinventing real isn't good for like a
+production game it's just fun to learn
+production game it's just fun to learn
+production game it's just fun to learn
+how stuff works and it can maybe help
+how stuff works and it can maybe help
+how stuff works and it can maybe help
+you in the future when you're building
+you in the future when you're building
+you in the future when you're building
+your own unique module
+your own unique module
+your own unique module
+and with that
+and with that
+and with that
+i hope you have a nice day
+i hope you have a nice day
+i hope you have a nice day
+and goodbye i'll see you next time
+and goodbye i'll see you next time
+and goodbye i'll see you next time
+[Music]
+you

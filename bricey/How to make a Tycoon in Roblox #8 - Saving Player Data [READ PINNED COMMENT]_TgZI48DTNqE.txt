@@ -1,0 +1,1859 @@
+data persistence or the ability
+data persistence or the ability
+data persistence or the ability
+to save player data in between play
+to save player data in between play
+to save player data in between play
+sessions
+sessions
+sessions
+is essential for every game and our
+is essential for every game and our
+is essential for every game and our
+tycoon is no exception
+tycoon is no exception
+tycoon is no exception
+that's why in this video i'll show you
+that's why in this video i'll show you
+that's why in this video i'll show you
+how to
+how to
+how to
+save your player data in the tycoon
+save your player data in the tycoon
+save your player data in the tycoon
+as you can see i'm joining in and
+as you can see i'm joining in and
+as you can see i'm joining in and
+all of the parts that i bought
+all of the parts that i bought
+all of the parts that i bought
+previously
+previously
+previously
+were saved and so was my money so
+were saved and so was my money so
+were saved and so was my money so
+staying
+staying
+staying
+stay tuned for that subscribe to my
+stay tuned for that subscribe to my
+stay tuned for that subscribe to my
+channel if you enjoy these videos and
+channel if you enjoy these videos and
+channel if you enjoy these videos and
+want to see other content like it
+want to see other content like it
+want to see other content like it
+comment any questions or suggestions
+comment any questions or suggestions
+comment any questions or suggestions
+down below and like the video
+down below and like the video
+down below and like the video
+and also join my discord server if you
+and also join my discord server if you
+and also join my discord server if you
+have any questions
+have any questions
+have any questions
+link is in the description so make sure
+link is in the description so make sure
+link is in the description so make sure
+to watch the last video if you haven't
+to watch the last video if you haven't
+to watch the last video if you haven't
+but without further ado
+but without further ado
+but without further ado
+let's get into the video
+so in order to save our players data
+so in order to save our players data
+so in order to save our players data
+we need to utilize the data store
+we need to utilize the data store
+we need to utilize the data store
+service
+service
+service
+we can't really use that in studio in a
+we can't really use that in studio in a
+we can't really use that in studio in a
+normal like roblox place so first we
+normal like roblox place so first we
+normal like roblox place so first we
+gotta go to game settings in home
+gotta go to game settings in home
+gotta go to game settings in home
+and then publish it you can name it
+and then publish it you can name it
+and then publish it you can name it
+whatever you want i'm just gonna name it
+whatever you want i'm just gonna name it
+whatever you want i'm just gonna name it
+tycoon video 8
+tycoon video 8
+tycoon video 8
+i'm just going to create the game so now
+i'm just going to create the game so now
+i'm just going to create the game so now
+it's published
+it's published
+it's published
+so now i can go back into our game
+so now i can go back into our game
+so now i can go back into our game
+settings
+settings
+settings
+go into security
+go into security
+go into security
+and flip this switch to enable studio
+and flip this switch to enable studio
+and flip this switch to enable studio
+access to api services so api services
+access to api services so api services
+access to api services so api services
+include data stores like it says here so
+include data stores like it says here so
+include data stores like it says here so
+we can click save
+we can click save
+we can click save
+and now we have access to our data
+and now we have access to our data
+and now we have access to our data
+stores
+stores
+stores
+so now we can go into our player manager
+so now we can go into our player manager
+so now we can go into our player manager
+so service script service player manager
+so service script service player manager
+so service script service player manager
+and we can start adding
+and we can start adding
+and we can start adding
+some functionality so i'm going to go to
+some functionality so i'm going to go to
+some functionality so i'm going to go to
+the very top of the script
+the very top of the script
+the very top of the script
+and define data store service by saying
+and define data store service by saying
+and define data store service by saying
+local data store
+local data store
+local data store
+service equals game
+service equals game
+service equals game
+get service data store
+get service data store
+get service data store
+service now i have a couple videos on
+service now i have a couple videos on
+service now i have a couple videos on
+the data source service if you're
+the data source service if you're
+the data source service if you're
+interested so i'm going to kind of glaze
+interested so i'm going to kind of glaze
+interested so i'm going to kind of glaze
+over the functionality because the
+over the functionality because the
+over the functionality because the
+system we're going to be implementing
+system we're going to be implementing
+system we're going to be implementing
+today is almost identical
+today is almost identical
+today is almost identical
+to my advanced data store tutorial
+to my advanced data store tutorial
+to my advanced data store tutorial
+but the first thing we want to do with
+but the first thing we want to do with
+but the first thing we want to do with
+our data store in order to save our data
+our data store in order to save our data
+our data store in order to save our data
+is get a store so i'm going to name the
+is get a store so i'm going to name the
+is get a store so i'm going to name the
+store player data
+store player data
+store player data
+it'll be equal to data store
+it'll be equal to data store
+it'll be equal to data store
+service get
+service get
+service get
+data store and then you can put in
+data store and then you can put in
+data store and then you can put in
+strangle
+strangle
+strangle
+whatever you want but i'm going to call
+whatever you want but i'm going to call
+whatever you want but i'm going to call
+it player data so this will get our
+it player data so this will get our
+it player data so this will get our
+current store where you can save our
+current store where you can save our
+current store where you can save our
+values for
+values for
+values for
+in between play sessions so now let's
+in between play sessions so now let's
+in between play sessions so now let's
+define a few functions
+define a few functions
+define a few functions
+below my leaderboard setup i'm going to
+below my leaderboard setup i'm going to
+below my leaderboard setup i'm going to
+make a function
+make a function
+make a function
+and call this local function
+and call this local function
+and call this local function
+load data and this will be responsible
+load data and this will be responsible
+load data and this will be responsible
+for
+for
+for
+you guessed it loading data it'll take
+you guessed it loading data it'll take
+you guessed it loading data it'll take
+in the player as an argument because we
+in the player as an argument because we
+in the player as an argument because we
+need to know which player to load the
+need to know which player to load the
+need to know which player to load the
+data for and
+data for and
+data for and
+all we have to do here is
+all we have to do here is
+all we have to do here is
+say local success comma result
+say local success comma result
+say local success comma result
+equals p call function
+equals p call function
+equals p call function
+and then inside this function we want to
+and then inside this function we want to
+and then inside this function we want to
+return
+return
+return
+player data get async
+player data get async
+player data get async
+player dot user id
+player dot user id
+player dot user id
+so we're dealing with data stores and
+so we're dealing with data stores and
+so we're dealing with data stores and
+data stores can error
+data stores can error
+data stores can error
+that's why we're using pico p call
+that's why we're using pico p call
+that's why we're using pico p call
+catches the error and puts it
+catches the error and puts it
+catches the error and puts it
+into the result and success determines
+into the result and success determines
+into the result and success determines
+whether it errors or not
+whether it errors or not
+whether it errors or not
+and in rp call we're returning
+and in rp call we're returning
+and in rp call we're returning
+player data so we're getting the player
+player data so we're getting the player
+player data so we're getting the player
+data for the current player
+data for the current player
+data for the current player
+and the key that we're using is the
+and the key that we're using is the
+and the key that we're using is the
+player user id
+player user id
+player user id
+and when this is returned it's put in
+and when this is returned it's put in
+and when this is returned it's put in
+the value of results so if
+the value of results so if
+the value of results so if
+it's return successful result will be
+it's return successful result will be
+it's return successful result will be
+equal to the player data
+equal to the player data
+equal to the player data
+if it's not successful then result will
+if it's not successful then result will
+if it's not successful then result will
+be a string
+be a string
+be a string
+with the error message so let's print
+with the error message so let's print
+with the error message so let's print
+that string
+that string
+that string
+if it happens so you can say if not
+if it happens so you can say if not
+if it happens so you can say if not
+success
+success
+success
+then we can warn one is the same thing
+then we can warn one is the same thing
+then we can warn one is the same thing
+as print it just has yellow text
+as print it just has yellow text
+as print it just has yellow text
+we can warn result so if our p
+we can warn result so if our p
+we can warn result so if our p
+call if our data grab is not successful
+call if our data grab is not successful
+call if our data grab is not successful
+we'll
+we'll
+we'll
+warn with the error just to make sure we
+warn with the error just to make sure we
+warn with the error just to make sure we
+know what's going wrong
+know what's going wrong
+know what's going wrong
+and all we have to do is return success
+and all we have to do is return success
+and all we have to do is return success
+and results so success by the way is a
+and results so success by the way is a
+and results so success by the way is a
+boolean if you didn't already notice
+boolean if you didn't already notice
+boolean if you didn't already notice
+and result will be our value
+and result will be our value
+and result will be our value
+and then below that we can have a
+and then below that we can have a
+and then below that we can have a
+similar function but this time it'll be
+similar function but this time it'll be
+similar function but this time it'll be
+local function save data and we'll get
+local function save data and we'll get
+local function save data and we'll get
+the player
+the player
+the player
+and then also the data so in our game
+and then also the data so in our game
+and then also the data so in our game
+all of our data on money and everything
+all of our data on money and everything
+all of our data on money and everything
+else is going to be stored
+else is going to be stored
+else is going to be stored
+in a table so that's why we only need
+in a table so that's why we only need
+in a table so that's why we only need
+this one value for the data
+this one value for the data
+this one value for the data
+and then instead of using get async we
+and then instead of using get async we
+and then instead of using get async we
+have to use
+have to use
+have to use
+set async here so i'm going to say local
+set async here so i'm going to say local
+set async here so i'm going to say local
+success
+success
+success
+comma result equals p call
+comma result equals p call
+comma result equals p call
+function and then the function will be
+function and then the function will be
+function and then the function will be
+player data set async
+player data set async
+player data set async
+player dot user id and data
+player dot user id and data
+player dot user id and data
+so i'm using say async not update async
+so i'm using say async not update async
+so i'm using say async not update async
+because we really do not need
+because we really do not need
+because we really do not need
+the previous value and you can use
+the previous value and you can use
+the previous value and you can use
+update async if you want but i just
+update async if you want but i just
+update async if you want but i just
+don't see the need
+don't see the need
+don't see the need
+so we're going to keep it like that so
+so we're going to keep it like that so
+so we're going to keep it like that so
+all this does is sets
+all this does is sets
+all this does is sets
+the key of the player.user id to our
+the key of the player.user id to our
+the key of the player.user id to our
+data and we can retrieve that with the
+data and we can retrieve that with the
+data and we can retrieve that with the
+getdata up here
+getdata up here
+getdata up here
+and then we can follow a similar process
+and then we can follow a similar process
+and then we can follow a similar process
+to what we did before we can say if not
+to what we did before we can say if not
+to what we did before we can say if not
+success
+success
+success
+then we warn the result
+then we warn the result
+then we warn the result
+and then below that all we have to do is
+and then below that all we have to do is
+and then below that all we have to do is
+return success
+return success
+return success
+because we don't really need the result
+because we don't really need the result
+because we don't really need the result
+since it will always be an error message
+since it will always be an error message
+since it will always be an error message
+since we're not returning anything
+since we're not returning anything
+since we're not returning anything
+so now we can define session data by
+so now we can define session data by
+so now we can define session data by
+saying local session data
+saying local session data
+saying local session data
+equals a blank table this will be the
+equals a blank table this will be the
+equals a blank table this will be the
+table that will hold all of our player
+table that will hold all of our player
+table that will hold all of our player
+data with the keys being the player's
+data with the keys being the player's
+data with the keys being the player's
+user id and the values being the data
+user id and the values being the data
+user id and the values being the data
+in the form of a table and again this is
+in the form of a table and again this is
+in the form of a table and again this is
+very similar to my advanced data store
+very similar to my advanced data store
+very similar to my advanced data store
+tutorial
+tutorial
+tutorial
+link is in the card in the top right and
+link is in the card in the top right and
+link is in the card in the top right and
+the description
+the description
+the description
+so now we can go down to our on
+so now we can go down to our on
+so now we can go down to our on
+onplayeradded function
+onplayeradded function
+onplayeradded function
+and implement our functionality so we're
+and implement our functionality so we're
+and implement our functionality so we're
+going to say local success
+going to say local success
+going to say local success
+comma data equals load
+comma data equals load
+comma data equals load
+data for the player so this will get
+data for the player so this will get
+data for the player so this will get
+our data and whether or not it was
+our data and whether or not it was
+our data and whether or not it was
+retrieved successfully
+retrieved successfully
+retrieved successfully
+and then we can say session data
+and then we can say session data
+and then we can say session data
+brackets so we're setting the key for
+brackets so we're setting the key for
+brackets so we're setting the key for
+our session data
+our session data
+our session data
+for the player.user id as a key
+for the player.user id as a key
+for the player.user id as a key
+equals success
+equals success
+equals success
+and data or
+and data or
+and data or
+a table and i'm going to make this table
+a table and i'm going to make this table
+a table and i'm going to make this table
+a little bigger
+a little bigger
+a little bigger
+and i'm going to say money equals 0 and
+and i'm going to say money equals 0 and
+and i'm going to say money equals 0 and
+then comma
+then comma
+then comma
+unlock ids equals a blank table
+unlock ids equals a blank table
+unlock ids equals a blank table
+so this is a lot what we're doing here
+so this is a lot what we're doing here
+so this is a lot what we're doing here
+is we're saying if success so if
+is we're saying if success so if
+is we're saying if success so if
+our data was retrieved successfully then
+our data was retrieved successfully then
+our data was retrieved successfully then
+we return the data so this is basically
+we return the data so this is basically
+we return the data so this is basically
+a shorthand for an if statement
+a shorthand for an if statement
+a shorthand for an if statement
+and as or is basically saying else we
+and as or is basically saying else we
+and as or is basically saying else we
+give them the default value
+give them the default value
+give them the default value
+so this default value is for a player
+so this default value is for a player
+so this default value is for a player
+who has no
+who has no
+who has no
+priorly saved data and we're gonna like
+priorly saved data and we're gonna like
+priorly saved data and we're gonna like
+start them from scratch
+start them from scratch
+start them from scratch
+so money is pretty self-explanatory
+so money is pretty self-explanatory
+so money is pretty self-explanatory
+that's your money unlock ids we'll get
+that's your money unlock ids we'll get
+that's your money unlock ids we'll get
+to a little bit later
+to a little bit later
+to a little bit later
+but for right now all you need to know
+but for right now all you need to know
+but for right now all you need to know
+is that's just that that's how we'll be
+is that's just that that's how we'll be
+is that's just that that's how we'll be
+saving and loading the players tycoon
+saving and loading the players tycoon
+saving and loading the players tycoon
+so now we have the session data
+so now we have the session data
+so now we have the session data
+infrastructure set up
+infrastructure set up
+infrastructure set up
+we need to do a couple of changes so go
+we need to do a couple of changes so go
+we need to do a couple of changes so go
+down
+down
+down
+to your get money function block
+to your get money function block
+to your get money function block
+and we don't really need all of this
+and we don't really need all of this
+and we don't really need all of this
+leadership stuff all we need to do
+leadership stuff all we need to do
+leadership stuff all we need to do
+is return
+session data brackets player.user id
+session data brackets player.user id
+session data brackets player.user id
+dot money so this just simplifies
+dot money so this just simplifies
+dot money so this just simplifies
+everything a lot all we're doing is
+everything a lot all we're doing is
+everything a lot all we're doing is
+getting
+getting
+getting
+our players current session data money
+our players current session data money
+our players current session data money
+and we're giving it back
+and we're giving it back
+and we're giving it back
+so we don't need the meter stats at all
+so we don't need the meter stats at all
+so we don't need the meter stats at all
+because the leader stats should be
+because the leader stats should be
+because the leader stats should be
+responsive to our session data it
+responsive to our session data it
+responsive to our session data it
+shouldn't be defining what our session
+shouldn't be defining what our session
+shouldn't be defining what our session
+data has or hasn't
+data has or hasn't
+data has or hasn't
+so that's what we're doing and then also
+so that's what we're doing and then also
+so that's what we're doing and then also
+we need to change our set money
+we need to change our set money
+we need to change our set money
+so when we say if money then money that
+so when we say if money then money that
+so when we say if money then money that
+values value
+values value
+values value
+we can also say session data
+we can also say session data
+we can also say session data
+player dot user id dot
+player dot user id dot
+player dot user id dot
+money equals value so we're setting our
+money equals value so we're setting our
+money equals value so we're setting our
+session data money to our value whenever
+session data money to our value whenever
+session data money to our value whenever
+we set the money
+we set the money
+we set the money
+and that's why it's useful to have these
+and that's why it's useful to have these
+and that's why it's useful to have these
+set money functions because we don't
+set money functions because we don't
+set money functions because we don't
+have to change any of the actual
+have to change any of the actual
+have to change any of the actual
+functionality in our other scripts
+functionality in our other scripts
+functionality in our other scripts
+we just have to add this extra line and
+we just have to add this extra line and
+we just have to add this extra line and
+in reality
+in reality
+in reality
+we can just put this up here so move it
+we can just put this up here so move it
+we can just put this up here so move it
+to
+to
+to
+if value so if the value exists then we
+if value so if the value exists then we
+if value so if the value exists then we
+can set our money value we don't really
+can set our money value we don't really
+can set our money value we don't really
+need to care about the leader stat
+need to care about the leader stat
+need to care about the leader stat
+that much it can work on its own
+that much it can work on its own
+that much it can work on its own
+and now we can go back up to our on
+and now we can go back up to our on
+and now we can go back up to our on
+player added and there's one more thing
+player added and there's one more thing
+player added and there's one more thing
+we have to do
+we have to do
+we have to do
+right now when we call leaderboard setup
+right now when we call leaderboard setup
+right now when we call leaderboard setup
+the value
+the value
+the value
+is always set to zero so money.value is
+is always set to zero so money.value is
+is always set to zero so money.value is
+set to zero but
+set to zero but
+set to zero but
+if the player joins with existing money
+if the player joins with existing money
+if the player joins with existing money
+we want that to be
+we want that to be
+we want that to be
+responsive so in our leaderboard setup
+responsive so in our leaderboard setup
+responsive so in our leaderboard setup
+we're going to
+we're going to
+we're going to
+change our arguments from nothing
+change our arguments from nothing
+change our arguments from nothing
+to value and then set money.value
+to value and then set money.value
+to value and then set money.value
+equal to value and then down here
+equal to value and then down here
+equal to value and then down here
+in our on player added
+in our on player added
+in our on player added
+we can set leaderboard setup and then
+we can set leaderboard setup and then
+we can set leaderboard setup and then
+for the parameters we'll send in
+for the parameters we'll send in
+for the parameters we'll send in
+we can just say player manager dot get
+we can just say player manager dot get
+we can just say player manager dot get
+money for the current player
+money for the current player
+money for the current player
+so this will get our money whether it be
+so this will get our money whether it be
+so this will get our money whether it be
+zero or whether it be save data
+zero or whether it be save data
+zero or whether it be save data
+and set it for our leader stats in the
+and set it for our leader stats in the
+and set it for our leader stats in the
+top right
+top right
+top right
+so this is only the loading part of our
+so this is only the loading part of our
+so this is only the loading part of our
+tycoon now we need to save our data but
+tycoon now we need to save our data but
+tycoon now we need to save our data but
+to be honest that's pretty simple all we
+to be honest that's pretty simple all we
+to be honest that's pretty simple all we
+have to do is go down to
+have to do is go down to
+have to do is go down to
+our on player removing function and say
+our on player removing function and say
+our on player removing function and say
+save data for the player we want to save
+save data for the player we want to save
+save data for the player we want to save
+data for the player
+data for the player
+data for the player
+the data we want to save is in session
+the data we want to save is in session
+the data we want to save is in session
+data
+data
+data
+brackets player.userid so we're
+brackets player.userid so we're
+brackets player.userid so we're
+referencing
+referencing
+referencing
+the players save data in the session
+the players save data in the session
+the players save data in the session
+data
+data
+data
+that we set with our set money and get
+that we set with our set money and get
+that we set with our set money and get
+and be initially set with our
+and be initially set with our
+and be initially set with our
+with this little block right here we
+with this little block right here we
+with this little block right here we
+reference that
+reference that
+reference that
+and we just save it and most of the time
+and we just save it and most of the time
+and we just save it and most of the time
+that will work but sometimes the game
+that will work but sometimes the game
+that will work but sometimes the game
+closes
+closes
+closes
+before this function can be called so
+before this function can be called so
+before this function can be called so
+that's why we have to contend
+that's why we have to contend
+that's why we have to contend
+with this edge case and we'll do that by
+with this edge case and we'll do that by
+with this edge case and we'll do that by
+making another function
+making another function
+making another function
+and this will be function
+player manager dot on close
+player manager dot on close
+player manager dot on close
+and this function will run when the game
+and this function will run when the game
+and this function will run when the game
+is closing it'll make sure
+is closing it'll make sure
+is closing it'll make sure
+all the players in the game when the
+all the players in the game when the
+all the players in the game when the
+game is closing their data saves
+game is closing their data saves
+game is closing their data saves
+so that's pretty simple we can just say
+so that's pretty simple we can just say
+so that's pretty simple we can just say
+four underscore
+four underscore
+four underscore
+player in ipairs
+players get players
+players get players
+players get players
+do and all i have to do is just repeat
+do and all i have to do is just repeat
+do and all i have to do is just repeat
+the same line from up here we can just
+the same line from up here we can just
+the same line from up here we can just
+do save data
+player session data
+player session data
+player session data
+player dot user id and realistically you
+player dot user id and realistically you
+player dot user id and realistically you
+really could just say player manager on
+really could just say player manager on
+really could just say player manager on
+player removing
+player removing
+player removing
+but i mean i don't think it really
+but i mean i don't think it really
+but i mean i don't think it really
+matters you can do it if you want
+matters you can do it if you want
+matters you can do it if you want
+actually i'll do that
+actually i'll do that
+actually i'll do that
+you can just change this to player
+you can just change this to player
+you can just change this to player
+manager the on player removing
+manager the on player removing
+manager the on player removing
+but they both do basically the exact
+but they both do basically the exact
+but they both do basically the exact
+same thing
+same thing
+same thing
+and so that should handle our edge case
+and so that should handle our edge case
+and so that should handle our edge case
+but this function never gets called
+but this function never gets called
+but this function never gets called
+so go up all the way to your
+so go up all the way to your
+so go up all the way to your
+playermanager.start and
+playermanager.start and
+playermanager.start and
+at the bottom i'm going to say game bind
+at the bottom i'm going to say game bind
+at the bottom i'm going to say game bind
+to
+to
+to
+close and then buy to close just binds a
+close and then buy to close just binds a
+close and then buy to close just binds a
+function to when the game is closing
+function to when the game is closing
+function to when the game is closing
+and we'll just bind player manager
+and we'll just bind player manager
+and we'll just bind player manager
+dot on close so when the game is about
+dot on close so when the game is about
+dot on close so when the game is about
+to quit
+to quit
+to quit
+we save all the players data just to
+we save all the players data just to
+we save all the players data just to
+make sure
+make sure
+make sure
+that it's all saved even if on player
+that it's all saved even if on player
+that it's all saved even if on player
+removing doesn't actually get called
+removing doesn't actually get called
+removing doesn't actually get called
+so now if we test it out
+so now if we test it out
+so now if we test it out
+we should be able to get some money so
+we should be able to get some money so
+we should be able to get some money so
+let me just spawn in the dropper
+let me just spawn in the dropper
+let me just spawn in the dropper
+and start generating some cash
+and start generating some cash
+and start generating some cash
+so we have 10 money we can close the
+so we have 10 money we can close the
+so we have 10 money we can close the
+game
+and then we can try again
+and you can see we have 15 money
+and you can see we have 15 money
+and you can see we have 15 money
+and you'll notice i had a little like
+and you'll notice i had a little like
+and you'll notice i had a little like
+yellow warning in the bottom of my
+yellow warning in the bottom of my
+yellow warning in the bottom of my
+screen
+screen
+screen
+and that's just because when you're in
+and that's just because when you're in
+and that's just because when you're in
+studio and when you're testing something
+studio and when you're testing something
+studio and when you're testing something
+like this
+like this
+like this
+a lot of times both things fire so
+a lot of times both things fire so
+a lot of times both things fire so
+when you're leaving in studio on close
+when you're leaving in studio on close
+when you're leaving in studio on close
+is fired
+is fired
+is fired
+but sometimes player removing is not
+but sometimes player removing is not
+but sometimes player removing is not
+fired so it's really iffy to test
+fired so it's really iffy to test
+fired so it's really iffy to test
+and that's why you have to enable this
+and that's why you have to enable this
+and that's why you have to enable this
+stuff it's not enabled by default
+stuff it's not enabled by default
+stuff it's not enabled by default
+so i would recommend testing this as
+so i would recommend testing this as
+so i would recommend testing this as
+little as possible
+little as possible
+little as possible
+and just make the code and try to bug
+and just make the code and try to bug
+and just make the code and try to bug
+test it before you run it because
+test it before you run it because
+test it before you run it because
+it does take a while what most people do
+it does take a while what most people do
+it does take a while what most people do
+is when they're testing this kind of
+is when they're testing this kind of
+is when they're testing this kind of
+thing in studio they say if
+thing in studio they say if
+thing in studio they say if
+game gets service
+run service
+is studio
+then return end so this basically says
+then return end so this basically says
+then return end so this basically says
+if
+if
+if
+we're testing it in studio we
+we're testing it in studio we
+we're testing it in studio we
+stop this function from running
+stop this function from running
+stop this function from running
+and that'll just prevent your game from
+and that'll just prevent your game from
+and that'll just prevent your game from
+lagging towards the end
+lagging towards the end
+lagging towards the end
+and prevent you from getting that
+and prevent you from getting that
+and prevent you from getting that
+message
+message
+message
+you can see that so you can leave this
+you can see that so you can leave this
+you can see that so you can leave this
+here i find that sometimes your data
+here i find that sometimes your data
+here i find that sometimes your data
+does not save if you have this here and
+does not save if you have this here and
+does not save if you have this here and
+you're testing in studio
+you're testing in studio
+you're testing in studio
+but when you're actually playing the
+but when you're actually playing the
+but when you're actually playing the
+game i guarantee it should save
+game i guarantee it should save
+game i guarantee it should save
+all the time our money now
+all the time our money now
+all the time our money now
+saves so now let's move on to our tycoon
+saves so now let's move on to our tycoon
+saves so now let's move on to our tycoon
+because we want our tycoon's progress to
+because we want our tycoon's progress to
+because we want our tycoon's progress to
+save as well
+save as well
+save as well
+now most of the time that would be quite
+now most of the time that would be quite
+now most of the time that would be quite
+challenging but since our tycoon is set
+challenging but since our tycoon is set
+challenging but since our tycoon is set
+up
+up
+up
+to publish topics to the button topic
+to publish topics to the button topic
+to publish topics to the button topic
+and our unlockable is called this unlock
+and our unlockable is called this unlock
+and our unlockable is called this unlock
+function with a special id
+function with a special id
+function with a special id
+it's quite simple because all we have to
+it's quite simple because all we have to
+it's quite simple because all we have to
+do is save the ids that we get
+do is save the ids that we get
+do is save the ids that we get
+when our tycoon unlocks something and
+when our tycoon unlocks something and
+when our tycoon unlocks something and
+then republish them once they rejoin so
+then republish them once they rejoin so
+then republish them once they rejoin so
+it's like
+it's like
+it's like
+you're basically saving frames of when
+you're basically saving frames of when
+you're basically saving frames of when
+the player
+the player
+the player
+achieves something and you're time
+achieves something and you're time
+achieves something and you're time
+lapsing through them when they rejoin
+lapsing through them when they rejoin
+lapsing through them when they rejoin
+to get them up to pace to redo all their
+to get them up to pace to redo all their
+to get them up to pace to redo all their
+progress but instead of reading all the
+progress but instead of reading all the
+progress but instead of reading all the
+progress
+progress
+progress
+in like the minutes and hours it take
+in like the minutes and hours it take
+in like the minutes and hours it take
+took them you redo it
+took them you redo it
+took them you redo it
+in the milliseconds that a computer runs
+in the milliseconds that a computer runs
+in the milliseconds that a computer runs
+so let's get to doing that let's go to
+so let's get to doing that let's go to
+so let's get to doing that let's go to
+our player manager
+our player manager
+our player manager
+and we want to add a function just like
+and we want to add a function just like
+and we want to add a function just like
+we did for get money and set money
+we did for get money and set money
+we did for get money and set money
+we want to add function player
+we want to add function player
+we want to add function player
+manager dot add unlock id
+and this will take in the player
+and this will take in the player
+and this will take in the player
+and the id that you want to add s is
+and the id that you want to add s is
+and the id that you want to add s is
+pretty straightforward
+pretty straightforward
+pretty straightforward
+first let's get our player data by
+first let's get our player data by
+first let's get our player data by
+saying local data equals session data
+saying local data equals session data
+saying local data equals session data
+player dot user id
+player dot user id
+player dot user id
+and then we want to do something a
+and then we want to do something a
+and then we want to do something a
+little interesting we want to say if
+little interesting we want to say if
+little interesting we want to say if
+not table dot find
+not table dot find
+not table dot find
+data dot unlock ids
+and then id then
+and then id then
+and then id then
+we want to do table.insert data.unlock
+we want to do table.insert data.unlock
+we want to do table.insert data.unlock
+ids and then id so
+ids and then id so
+ids and then id so
+what this is doing is it checks for
+what this is doing is it checks for
+what this is doing is it checks for
+repeats
+repeats
+repeats
+and it makes sure we never add a repeat
+and it makes sure we never add a repeat
+and it makes sure we never add a repeat
+to our
+to our
+to our
+unlock ids table so it makes sure our
+unlock ids table so it makes sure our
+unlock ids table so it makes sure our
+id is unique so when we run this it'll
+id is unique so when we run this it'll
+id is unique so when we run this it'll
+check if the id already exists and if it
+check if the id already exists and if it
+check if the id already exists and if it
+doesn't we'll add it
+doesn't we'll add it
+doesn't we'll add it
+and the reason we have to do this is
+and the reason we have to do this is
+and the reason we have to do this is
+because the tycoon unlock function
+because the tycoon unlock function
+because the tycoon unlock function
+may fire the same time from multiple ids
+may fire the same time from multiple ids
+may fire the same time from multiple ids
+if multiple unlock ids
+if multiple unlock ids
+if multiple unlock ids
+are shared between a bunch of different
+are shared between a bunch of different
+are shared between a bunch of different
+parts so we want we do not want to add
+parts so we want we do not want to add
+parts so we want we do not want to add
+those
+those
+those
+all together because it would lead to a
+all together because it would lead to a
+all together because it would lead to a
+pile up of a bunch of randomly useless
+pile up of a bunch of randomly useless
+pile up of a bunch of randomly useless
+ids
+ids
+ids
+and now we need to add a function to get
+and now we need to add a function to get
+and now we need to add a function to get
+our ids so you can just do local
+our ids so you can just do local
+our ids so you can just do local
+or function player manager get unlock
+or function player manager get unlock
+or function player manager get unlock
+ids and this will take in the player and
+ids and this will take in the player and
+ids and this will take in the player and
+we can just return
+we can just return
+we can just return
+session data player dot user id
+session data player dot user id
+session data player dot user id
+and then dot unlock ids
+and then dot unlock ids
+and then dot unlock ids
+and these are all pretty straightforward
+and these are all pretty straightforward
+and these are all pretty straightforward
+so now we can go back into our tycoon
+so now we can go back into our tycoon
+so now we can go back into our tycoon
+and
+and
+and
+implement it so the actual saving of our
+implement it so the actual saving of our
+implement it so the actual saving of our
+unlock ids is very straightforward
+unlock ids is very straightforward
+unlock ids is very straightforward
+go to your tycoon unlock function and at
+go to your tycoon unlock function and at
+go to your tycoon unlock function and at
+the very top
+the very top
+the very top
+all you have to say is player manager
+all you have to say is player manager
+all you have to say is player manager
+dot
+dot
+dot
+add unlock id and we want to add it for
+add unlock id and we want to add it for
+add unlock id and we want to add it for
+our self.owner so this is the player
+our self.owner so this is the player
+our self.owner so this is the player
+that owns his icoon
+that owns his icoon
+that owns his icoon
+and we want to pass in the id
+and we want to pass in the id
+and we want to pass in the id
+so i guess we don't have the player
+so i guess we don't have the player
+so i guess we don't have the player
+manager defined
+manager defined
+manager defined
+nope i spelled it wrong it's lowercase
+nope i spelled it wrong it's lowercase
+nope i spelled it wrong it's lowercase
+player manager whoops so it's player
+player manager whoops so it's player
+player manager whoops so it's player
+manager adam lock id self dot over there
+manager adam lock id self dot over there
+manager adam lock id self dot over there
+id so this will add all our ids but when
+id so this will add all our ids but when
+id so this will add all our ids but when
+we
+we
+we
+load in it won't actually load our ids
+load in it won't actually load our ids
+load in it won't actually load our ids
+but that's also
+but that's also
+but that's also
+pretty simple so below my tycoon indent
+pretty simple so below my tycoon indent
+pretty simple so below my tycoon indent
+i'm going to add a function this
+i'm going to add a function this
+i'm going to add a function this
+function is going to be tycoon
+load unlocks
+load unlocks
+load unlocks
+and what we're going to do in this
+and what we're going to do in this
+and what we're going to do in this
+function is we're going to say
+function is we're going to say
+function is we're going to say
+for underscore id and i pairs
+for underscore id and i pairs
+for underscore id and i pairs
+player manager gets
+player manager gets
+player manager gets
+unlock id
+unlock id
+unlock id
+get unlock ids for the self dot owner
+get unlock ids for the self dot owner
+get unlock ids for the self dot owner
+and i misspelled player manager again
+and i misspelled player manager again
+and i misspelled player manager again
+do and then so we're going to run
+do and then so we're going to run
+do and then so we're going to run
+through all of our ids
+through all of our ids
+through all of our ids
+and for each id all we have to do is say
+and for each id all we have to do is say
+and for each id all we have to do is say
+self
+self
+self
+publish topic
+publish topic
+publish topic
+and topic name is going to be button
+and topic name is going to be button
+and topic name is going to be button
+and then the id is going to be id so all
+and then the id is going to be id so all
+and then the id is going to be id so all
+we're doing is simulating
+we're doing is simulating
+we're doing is simulating
+button presses but instead of the player
+button presses but instead of the player
+button presses but instead of the player
+actually have to step on the buttons and
+actually have to step on the buttons and
+actually have to step on the buttons and
+get them to get this topic to fire we
+get them to get this topic to fire we
+get them to get this topic to fire we
+just fire them all in quick succession
+just fire them all in quick succession
+just fire them all in quick succession
+so this may not be the most most
+so this may not be the most most
+so this may not be the most most
+performant solution
+performant solution
+performant solution
+since we're spawning at all the buttons
+since we're spawning at all the buttons
+since we're spawning at all the buttons
+and we have to despawn them
+and we have to despawn them
+and we have to despawn them
+immediately but honestly it's very
+immediately but honestly it's very
+immediately but honestly it's very
+simple
+simple
+simple
+and it solves a lot of problems with a
+and it solves a lot of problems with a
+and it solves a lot of problems with a
+very simple function
+very simple function
+very simple function
+so i think the simplicity well outweighs
+so i think the simplicity well outweighs
+so i think the simplicity well outweighs
+the performance deficit
+the performance deficit
+the performance deficit
+and now all we have to do in order to
+and now all we have to do in order to
+and now all we have to do in order to
+call this function is literally just
+call this function is literally just
+call this function is literally just
+call it in the init function
+call it in the init function
+call it in the init function
+so underneath lock all and make sure it
+so underneath lock all and make sure it
+so underneath lock all and make sure it
+is underneath lock
+is underneath lock
+is underneath lock
+all because we need to create the
+all because we need to create the
+all because we need to create the
+unlockables for the unlockables to
+unlockables for the unlockables to
+unlockables for the unlockables to
+respond to our publishing
+respond to our publishing
+respond to our publishing
+we can say self load unlocks
+and then that should be it so let's try
+and then that should be it so let's try
+and then that should be it so let's try
+it out
+it out
+it out
+so we have 15 money right now and we can
+so we have 15 money right now and we can
+so we have 15 money right now and we can
+buy
+buy
+buy
+everything in the titan we can quit
+everything in the titan we can quit
+everything in the titan we can quit
+and we can play again
+and we can play again
+and we can play again
+but one problem is is for some reason
+but one problem is is for some reason
+but one problem is is for some reason
+when you test it in studio a lot of
+when you test it in studio a lot of
+when you test it in studio a lot of
+times
+times
+times
+the on close function or the player on
+the on close function or the player on
+the on close function or the player on
+player removing just does not fire so
+player removing just does not fire so
+player removing just does not fire so
+i'm just going to comment this out
+i'm just going to comment this out
+i'm just going to comment this out
+and comment that out if you have any
+and comment that out if you have any
+and comment that out if you have any
+problems
+i'm going to try it again
+i'm going to try it again
+i'm going to try it again
+so one problem with our implementation
+so one problem with our implementation
+so one problem with our implementation
+is the fact that it leaves the buttons
+is the fact that it leaves the buttons
+is the fact that it leaves the buttons
+now the easiest way to solve this
+now the easiest way to solve this
+now the easiest way to solve this
+is to make a separate component and i'm
+is to make a separate component and i'm
+is to make a separate component and i'm
+going to name this component
+going to name this component
+going to name this component
+d spawn so i'm going to make a new
+d spawn so i'm going to make a new
+d spawn so i'm going to make a new
+module script
+module script
+module script
+and call this d spawn
+and call this d spawn
+and call this d spawn
+and this component will basically listen
+and this component will basically listen
+and this component will basically listen
+for the id
+for the id
+for the id
+for our current part that it's attached
+for our current part that it's attached
+for our current part that it's attached
+to
+to
+to
+and it'll destroy it once the id
+and it'll destroy it once the id
+and it'll destroy it once the id
+has been published so you can say local
+has been published so you can say local
+has been published so you can say local
+d spawn
+d spawn
+d spawn
+equals a blank table and then do our
+equals a blank table and then do our
+equals a blank table and then do our
+normal
+normal
+normal
+component setup and then in our d
+component setup and then in our d
+component setup and then in our d
+spawn init all we have to do is say
+spawn init all we have to do is say
+spawn init all we have to do is say
+self.tycoon
+self.tycoon
+self.tycoon
+subscribe topic
+subscribe topic
+subscribe topic
+subscribe to the button topic and the
+subscribe to the button topic and the
+subscribe to the button topic and the
+function we want to connect to
+function we want to connect to
+function we want to connect to
+will have the id and then all we have to
+will have the id and then all we have to
+will have the id and then all we have to
+do is say
+do is say
+do is say
+if id equals self.instance
+if id equals self.instance
+if id equals self.instance
+get attribute id
+then self.instance
+then self.instance
+then self.instance
+destroy and so this is a lot of extra
+destroy and so this is a lot of extra
+destroy and so this is a lot of extra
+code
+code
+code
+for not that much extra functionality
+for not that much extra functionality
+for not that much extra functionality
+but you could also reuse this despawn
+but you could also reuse this despawn
+but you could also reuse this despawn
+component for like i don't know maybe
+component for like i don't know maybe
+component for like i don't know maybe
+some construction tape or something when
+some construction tape or something when
+some construction tape or something when
+something's being built and once it is
+something's being built and once it is
+something's being built and once it is
+built
+built
+built
+you can destroy it that's just an idea
+you can destroy it that's just an idea
+you can destroy it that's just an idea
+but it just makes our implementation a
+but it just makes our implementation a
+but it just makes our implementation a
+little bit easier
+little bit easier
+little bit easier
+because if we didn't do this we would
+because if we didn't do this we would
+because if we didn't do this we would
+have to run through
+have to run through
+have to run through
+all the buttons in our tycoon and that
+all the buttons in our tycoon and that
+all the buttons in our tycoon and that
+would be a little less elegant of a
+would be a little less elegant of a
+would be a little less elegant of a
+solution
+solution
+solution
+so now we can go to all of the buttons
+so now we can go to all of the buttons
+so now we can go to all of the buttons
+on our tycoon so i'm going to use a
+on our tycoon so i'm going to use a
+on our tycoon so i'm going to use a
+server storage template
+server storage template
+server storage template
+and then make a new tag in the tag
+and then make a new tag in the tag
+and then make a new tag in the tag
+editor plugin
+editor plugin
+editor plugin
+i'm going to call this dspawn
+i'm going to call this dspawn
+i'm going to call this dspawn
+and select both of my buttons give them
+and select both of my buttons give them
+and select both of my buttons give them
+the despawn
+the despawn
+the despawn
+tag and then go back to my original
+tag and then go back to my original
+tag and then go back to my original
+button
+button
+button
+and delete the line that says
+and delete the line that says
+and delete the line that says
+self.instance
+self.instance
+self.instance
+destroy since our d spawn will handle it
+destroy since our d spawn will handle it
+destroy since our d spawn will handle it
+for us
+for us
+for us
+so if we play this
+you can see the buttons are now gone
+you can see the buttons are now gone
+you can see the buttons are now gone
+and if our if we were to reset our
+and if our if we were to reset our
+and if our if we were to reset our
+progress
+progress
+progress
+the buttons would be there and then when
+the buttons would be there and then when
+the buttons would be there and then when
+you hold e to
+you hold e to
+you hold e to
+unlock them they would also get
+unlock them they would also get
+unlock them they would also get
+destroyed so
+destroyed so
+destroyed so
+if you are experiencing trouble with
+if you are experiencing trouble with
+if you are experiencing trouble with
+testing your data stores
+testing your data stores
+testing your data stores
+first of all just try getting rid of
+first of all just try getting rid of
+first of all just try getting rid of
+your
+your
+your
+this line right here with the run
+this line right here with the run
+this line right here with the run
+service because roblox recommends doing
+service because roblox recommends doing
+service because roblox recommends doing
+that
+that
+that
+but it doesn't really work for me it
+but it doesn't really work for me it
+but it doesn't really work for me it
+does cause your studio to lag a ton
+does cause your studio to lag a ton
+does cause your studio to lag a ton
+so once you're done testing your data
+so once you're done testing your data
+so once you're done testing your data
+store turn off
+store turn off
+store turn off
+security enable access to studio api
+security enable access to studio api
+security enable access to studio api
+services
+services
+services
+just to keep your game running smoothly
+just to keep your game running smoothly
+just to keep your game running smoothly
+and then if it really is bothering you
+and then if it really is bothering you
+and then if it really is bothering you
+or you can obviously go to file and then
+or you can obviously go to file and then
+or you can obviously go to file and then
+publish to roblox
+publish to roblox
+publish to roblox
+and then play your game like in the
+and then play your game like in the
+and then play your game like in the
+browser like a normal roblox game
+browser like a normal roblox game
+browser like a normal roblox game
+and it works fine like this you can see
+and it works fine like this you can see
+and it works fine like this you can see
+everything works perfectly
+everything works perfectly
+everything works perfectly
+over here but that's it for this video
+over here but that's it for this video
+over here but that's it for this video
+so i can officially say you have a
+so i can officially say you have a
+so i can officially say you have a
+working tycoon there is buttons there's
+working tycoon there is buttons there's
+working tycoon there is buttons there's
+droppers there's parts you can unlock
+droppers there's parts you can unlock
+droppers there's parts you can unlock
+you can make money there's a spawn point
+you can make money there's a spawn point
+you can make money there's a spawn point
+there's tycoon spawns
+there's tycoon spawns
+there's tycoon spawns
+and lastly your data saves in between
+and lastly your data saves in between
+and lastly your data saves in between
+play sessions so you can expand this to
+play sessions so you can expand this to
+play sessions so you can expand this to
+your liking you can add walls of doors
+your liking you can add walls of doors
+your liking you can add walls of doors
+whatever you want
+whatever you want
+whatever you want
+and i may not continue on the series
+and i may not continue on the series
+and i may not continue on the series
+depending on what comments or
+depending on what comments or
+depending on what comments or
+suggestions i get
+suggestions i get
+suggestions i get
+so comment any suggestions down below
+so comment any suggestions down below
+so comment any suggestions down below
+for extra episodes of this series
+for extra episodes of this series
+for extra episodes of this series
+but other than that like the video
+but other than that like the video
+but other than that like the video
+and subscribe to my channel to watch
+and subscribe to my channel to watch
+and subscribe to my channel to watch
+other scripting videos and i hope you
+other scripting videos and i hope you
+other scripting videos and i hope you
+have a nice day
+have a nice day
+have a nice day
+and goodbye
+[Music]
+you

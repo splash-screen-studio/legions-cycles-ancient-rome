@@ -1,0 +1,1087 @@
+have you ever started a project you know
+have you ever started a project you know
+have you ever started a project you know
+exactly what you wanted to do you had
+exactly what you wanted to do you had
+exactly what you wanted to do you had
+the best idea but you had no clue on how
+the best idea but you had no clue on how
+the best idea but you had no clue on how
+to implement it
+to implement it
+to implement it
+yeah it's happened to all of us
+yeah it's happened to all of us
+yeah it's happened to all of us
+organizing your game is hard
+organizing your game is hard
+organizing your game is hard
+that's why in this video i'll show you a
+that's why in this video i'll show you a
+that's why in this video i'll show you a
+good way to organize
+good way to organize
+good way to organize
+your tycoon using the component pattern
+your tycoon using the component pattern
+your tycoon using the component pattern
+also known as
+also known as
+also known as
+composition this is the same system i
+composition this is the same system i
+composition this is the same system i
+mentioned in another video which i'll
+mentioned in another video which i'll
+mentioned in another video which i'll
+link in the description
+link in the description
+link in the description
+that video goes over the concept and
+that video goes over the concept and
+that video goes over the concept and
+like the higher level ideas
+like the higher level ideas
+like the higher level ideas
+but in this video we're going to be
+but in this video we're going to be
+but in this video we're going to be
+actually tackling some concrete
+actually tackling some concrete
+actually tackling some concrete
+system for this concept which is our
+system for this concept which is our
+system for this concept which is our
+tycoon
+tycoon
+tycoon
+so make sure to watch the previous video
+so make sure to watch the previous video
+so make sure to watch the previous video
+to get caught up on the progress we've
+to get caught up on the progress we've
+to get caught up on the progress we've
+made with our tycoon so far
+made with our tycoon so far
+made with our tycoon so far
+and make sure to like this video if you
+and make sure to like this video if you
+and make sure to like this video if you
+enjoyed it and subscribe to my channel
+enjoyed it and subscribe to my channel
+enjoyed it and subscribe to my channel
+and also join the discord server the
+and also join the discord server the
+and also join the discord server the
+link is in the description below
+link is in the description below
+link is in the description below
+so without further ado let's get started
+so you might be thinking the component
+so you might be thinking the component
+so you might be thinking the component
+pattern why do i need that why can't i
+pattern why do i need that why can't i
+pattern why do i need that why can't i
+just write a normal game
+just write a normal game
+just write a normal game
+and make it work like a normal tycoon
+and make it work like a normal tycoon
+and make it work like a normal tycoon
+and i thought the same thing
+and i thought the same thing
+and i thought the same thing
+and then a few months later i had a
+and then a few months later i had a
+and then a few months later i had a
+tycoon with
+tycoon with
+tycoon with
+a module script with over a thousand
+a module script with over a thousand
+a module script with over a thousand
+lines of code
+lines of code
+lines of code
+that was a very painful experience so
+that was a very painful experience so
+that was a very painful experience so
+the component system aims to stop
+the component system aims to stop
+the component system aims to stop
+situations like that
+situations like that
+situations like that
+where you take a system like a tycoon
+where you take a system like a tycoon
+where you take a system like a tycoon
+and you decouple it
+and you decouple it
+and you decouple it
+into a bunch of different snippets of
+into a bunch of different snippets of
+into a bunch of different snippets of
+code so
+code so
+code so
+let's take a tycoon it consists of
+let's take a tycoon it consists of
+let's take a tycoon it consists of
+buttons
+buttons
+buttons
+droppers conveyors doors walls windows
+droppers conveyors doors walls windows
+droppers conveyors doors walls windows
+etc so if we were to make a script for
+etc so if we were to make a script for
+etc so if we were to make a script for
+each of those parts
+each of those parts
+each of those parts
+it'll make our actual tycoon script very
+it'll make our actual tycoon script very
+it'll make our actual tycoon script very
+small
+small
+small
+which is good for debugging it's good
+which is good for debugging it's good
+which is good for debugging it's good
+for working with other people and it's
+for working with other people and it's
+for working with other people and it's
+just good for general sanity and i have
+just good for general sanity and i have
+just good for general sanity and i have
+a video going over
+a video going over
+a video going over
+composition or the component system in
+composition or the component system in
+composition or the component system in
+more detail and i'll link it right now
+more detail and i'll link it right now
+more detail and i'll link it right now
+in the description another benefit of
+in the description another benefit of
+in the description another benefit of
+using components is that you can mix and
+using components is that you can mix and
+using components is that you can mix and
+match them
+match them
+match them
+on any part or model you want which will
+on any part or model you want which will
+on any part or model you want which will
+give you more flexibility
+give you more flexibility
+give you more flexibility
+and more code reuse throughout your
+and more code reuse throughout your
+and more code reuse throughout your
+entire
+entire
+entire
+project now that you know what the
+project now that you know what the
+project now that you know what the
+component pattern does
+component pattern does
+component pattern does
+and why we use it it's time to figure
+and why we use it it's time to figure
+and why we use it it's time to figure
+out the how how do we implement this
+out the how how do we implement this
+out the how how do we implement this
+into roblox
+into roblox
+into roblox
+now luckily roblox offers the collection
+now luckily roblox offers the collection
+now luckily roblox offers the collection
+service which is a
+service which is a
+service which is a
+service that allows you to tag objects
+service that allows you to tag objects
+service that allows you to tag objects
+and you can use those tags in your code
+and you can use those tags in your code
+and you can use those tags in your code
+to
+to
+to
+give them specific components which is
+give them specific components which is
+give them specific components which is
+exactly what we want
+exactly what we want
+exactly what we want
+i have a video on the collection service
+i have a video on the collection service
+i have a video on the collection service
+if you don't know about it i'll link it
+if you don't know about it i'll link it
+if you don't know about it i'll link it
+in the top right of your screen
+in the top right of your screen
+in the top right of your screen
+and the description so the first thing
+and the description so the first thing
+and the description so the first thing
+you want to do is make sure
+you want to do is make sure
+you want to do is make sure
+you have the tag editor plugin installed
+you have the tag editor plugin installed
+you have the tag editor plugin installed
+so go to plugins
+so go to plugins
+so go to plugins
+and then you should see tag window and
+and then you should see tag window and
+and then you should see tag window and
+world view
+world view
+world view
+if you have it installed i'll have a
+if you have it installed i'll have a
+if you have it installed i'll have a
+link to the install link in the
+link to the install link in the
+link to the install link in the
+description
+description
+description
+if you want to get it and then i'm going
+if you want to get it and then i'm going
+if you want to get it and then i'm going
+to click on the tag window bring up this
+to click on the tag window bring up this
+to click on the tag window bring up this
+little window
+little window
+little window
+and now we can start tagging things so
+and now we can start tagging things so
+and now we can start tagging things so
+i'm going to drag my template from
+i'm going to drag my template from
+i'm going to drag my template from
+server storage
+server storage
+server storage
+into the workspace let me just focus it
+into the workspace let me just focus it
+into the workspace let me just focus it
+there we go
+there we go
+there we go
+and then i'm gonna create a part so let
+and then i'm gonna create a part so let
+and then i'm gonna create a part so let
+me just
+me just
+me just
+plop a part down in the middle of this
+plop a part down in the middle of this
+plop a part down in the middle of this
+and then we're gonna like scale it
+and then we're gonna like scale it
+and then we're gonna like scale it
+anchor it maybe and then make sure to
+anchor it maybe and then make sure to
+anchor it maybe and then make sure to
+drag this part
+drag this part
+drag this part
+into the template model and once you've
+into the template model and once you've
+into the template model and once you've
+done that we can now tag it
+done that we can now tag it
+done that we can now tag it
+so i'm going to create a tag called test
+so i'm going to create a tag called test
+so i'm going to create a tag called test
+because our first component
+because our first component
+because our first component
+is going to be a test tag so just type
+is going to be a test tag so just type
+is going to be a test tag so just type
+it in press enter it should appear here
+it in press enter it should appear here
+it in press enter it should appear here
+and you'll notice there's a little tag
+and you'll notice there's a little tag
+and you'll notice there's a little tag
+list folder i don't really know what
+list folder i don't really know what
+list folder i don't really know what
+this is for
+this is for
+this is for
+it's for the plug-in so just don't touch
+it's for the plug-in so just don't touch
+it's for the plug-in so just don't touch
+it don't delete it
+it don't delete it
+it don't delete it
+but now we can tag this part so hover
+but now we can tag this part so hover
+but now we can tag this part so hover
+over the part
+over the part
+over the part
+then click the test icon and
+then click the test icon and
+then click the test icon and
+click off it should be tagged in order
+click off it should be tagged in order
+click off it should be tagged in order
+to check that
+to check that
+to check that
+go to plugins then world view and it
+go to plugins then world view and it
+go to plugins then world view and it
+should have a different color and if you
+should have a different color and if you
+should have a different color and if you
+hover over the color
+hover over the color
+hover over the color
+color it should say the tag it has so it
+color it should say the tag it has so it
+color it should say the tag it has so it
+has the instance like class name
+has the instance like class name
+has the instance like class name
+the name of the instance and then the
+the name of the instance and then the
+the name of the instance and then the
+tag which is test
+tag which is test
+tag which is test
+which is exactly what we want so now the
+which is exactly what we want so now the
+which is exactly what we want so now the
+part is
+part is
+part is
+properly tagged so now let's script
+properly tagged so now let's script
+properly tagged so now let's script
+our test component i'm going to go into
+our test component i'm going to go into
+our test component i'm going to go into
+server script service
+server script service
+server script service
+and create a new folder and this folder
+and create a new folder and this folder
+and create a new folder and this folder
+is going to be for all of our components
+is going to be for all of our components
+is going to be for all of our components
+so i'm going to name it
+so i'm going to name it
+so i'm going to name it
+components inside of this folder i'm
+components inside of this folder i'm
+components inside of this folder i'm
+going to
+going to
+going to
+create a new oops i'm going to create a
+create a new oops i'm going to create a
+create a new oops i'm going to create a
+new module script
+new module script
+new module script
+and name this module script test because
+and name this module script test because
+and name this module script test because
+you know it's a test component
+you know it's a test component
+you know it's a test component
+just zoom in a little bit change
+just zoom in a little bit change
+just zoom in a little bit change
+module to test and then we're going to
+module to test and then we're going to
+module to test and then we're going to
+set this up like a normal object
+set this up like a normal object
+set this up like a normal object
+oriented class a very similar to our
+oriented class a very similar to our
+oriented class a very similar to our
+tycoon in the last video
+tycoon in the last video
+tycoon in the last video
+so i'm going to say test dot underscore
+so i'm going to say test dot underscore
+so i'm going to say test dot underscore
+underscore index equals
+underscore index equals
+underscore index equals
+test we're going to do function test dot
+test we're going to do function test dot
+test we're going to do function test dot
+new
+new
+new
+and whenever we create our components
+and whenever we create our components
+and whenever we create our components
+it's going to get a reference to the
+it's going to get a reference to the
+it's going to get a reference to the
+tycoon
+tycoon
+tycoon
+that it was created by and the instance
+that it was created by and the instance
+that it was created by and the instance
+which could either be a part
+which could either be a part
+which could either be a part
+a model or whatever is tagged that
+a model or whatever is tagged that
+a model or whatever is tagged that
+it has and then we can define self
+it has and then we can define self
+it has and then we can define self
+as equal to set meta table
+blank table and then test
+blank table and then test
+blank table and then test
+and then we can just say return self
+and then we can just say return self
+and then we can just say return self
+now in most of our components we'll have
+now in most of our components we'll have
+now in most of our components we'll have
+self dot tycoon equals tycoon
+self dot tycoon equals tycoon
+self dot tycoon equals tycoon
+and self dot instance equals instance
+and self dot instance equals instance
+and self dot instance equals instance
+but honestly that's only for ease of use
+but honestly that's only for ease of use
+but honestly that's only for ease of use
+for the functions down the line
+for the functions down the line
+for the functions down the line
+if you don't really use them you don't
+if you don't really use them you don't
+if you don't really use them you don't
+need them but i'll just leave them there
+need them but i'll just leave them there
+need them but i'll just leave them there
+as an example
+as an example
+as an example
+now let's make our test init function
+now let's make our test init function
+now let's make our test init function
+because each
+because each
+because each
+component will have init and new and new
+component will have init and new and new
+component will have init and new and new
+will be called you can
+will be called you can
+will be called you can
+just call it to create a new object
+just call it to create a new object
+just call it to create a new object
+access to all the functions or whatever
+access to all the functions or whatever
+access to all the functions or whatever
+but for init it'll actually do something
+but for init it'll actually do something
+but for init it'll actually do something
+so in our case doing something is just
+so in our case doing something is just
+so in our case doing something is just
+going to be printing
+going to be printing
+going to be printing
+test was initialized
+i probably spelled that wrong but
+i probably spelled that wrong but
+i probably spelled that wrong but
+whatever
+whatever
+whatever
+so right now this component does
+so right now this component does
+so right now this component does
+absolutely nothing it's just a module
+absolutely nothing it's just a module
+absolutely nothing it's just a module
+script never gets required never gets
+script never gets required never gets
+script never gets required never gets
+used
+used
+used
+so let's go into our tycoon module
+so let's go into our tycoon module
+so let's go into our tycoon module
+script
+script
+script
+and add functionality so i first want to
+and add functionality so i first want to
+and add functionality so i first want to
+get the component folder at the top of
+get the component folder at the top of
+get the component folder at the top of
+our script so i'm going to say local
+our script so i'm going to say local
+our script so i'm going to say local
+component folder
+component folder
+component folder
+equals script dot parent
+equals script dot parent
+equals script dot parent
+dot components and we can use that down
+dot components and we can use that down
+dot components and we can use that down
+the line
+the line
+the line
+underneath our knit and before the
+underneath our knit and before the
+underneath our knit and before the
+destroy i always like to keep the
+destroy i always like to keep the
+destroy i always like to keep the
+destroy at the very end
+destroy at the very end
+destroy at the very end
+just so it makes a little more sense
+just so it makes a little more sense
+just so it makes a little more sense
+we're going to make a function
+we're going to make a function
+we're going to make a function
+that's going to be tycoon create
+that's going to be tycoon create
+that's going to be tycoon create
+component and it's going to be
+component and it's going to be
+component and it's going to be
+responsible just for making
+responsible just for making
+responsible just for making
+the components it'll take in the
+the components it'll take in the
+the components it'll take in the
+instance that we want to create a
+instance that we want to create a
+instance that we want to create a
+component on
+component on
+component on
+and the component like module script so
+and the component like module script so
+and the component like module script so
+we can just say component script that we
+we can just say component script that we
+we can just say component script that we
+want to use
+want to use
+want to use
+and keep in mind this script will not be
+and keep in mind this script will not be
+and keep in mind this script will not be
+required it's a little easier that way
+required it's a little easier that way
+required it's a little easier that way
+so the first thing we want to do is say
+so the first thing we want to do is say
+so the first thing we want to do is say
+local comp module
+local comp module
+local comp module
+equals require component
+equals require component
+equals require component
+script so they send in the actual like
+script so they send in the actual like
+script so they send in the actual like
+link or reference to the
+link or reference to the
+link or reference to the
+test like a module for example but we
+test like a module for example but we
+test like a module for example but we
+have to require it to make sure we get
+have to require it to make sure we get
+have to require it to make sure we get
+the functions
+the functions
+the functions
+and we just say local new component or
+and we just say local new component or
+and we just say local new component or
+just new comp
+just new comp
+just new comp
+equals comp module dot new
+equals comp module dot new
+equals comp module dot new
+and then keep in mind we want to send in
+and then keep in mind we want to send in
+and then keep in mind we want to send in
+a reference to the tycoon
+a reference to the tycoon
+a reference to the tycoon
+to our test component
+to our test component
+to our test component
+so we have to use self because we're
+so we have to use self because we're
+so we have to use self because we're
+running this function inside of tycoon
+running this function inside of tycoon
+running this function inside of tycoon
+itself
+itself
+itself
+so we need to give it a reference to
+so we need to give it a reference to
+so we need to give it a reference to
+the tycoon that's calling it which in
+the tycoon that's calling it which in
+the tycoon that's calling it which in
+this case itself pretty simple
+this case itself pretty simple
+this case itself pretty simple
+and then we also want to send to the
+and then we also want to send to the
+and then we also want to send to the
+instance which is given to us
+instance which is given to us
+instance which is given to us
+generously by the parameter
+generously by the parameter
+generously by the parameter
+and then we can init the new comp by
+and then we can init the new comp by
+and then we can init the new comp by
+saying new comp
+saying new comp
+saying new comp
+init and this function may seem a little
+init and this function may seem a little
+init and this function may seem a little
+pointless on its own but trust me we'll
+pointless on its own but trust me we'll
+pointless on its own but trust me we'll
+use it down the line so just leave it
+use it down the line so just leave it
+use it down the line so just leave it
+there
+there
+there
+and this function will be used by tycoon
+and this function will be used by tycoon
+and this function will be used by tycoon
+add components which is another function
+add components which is another function
+add components which is another function
+that i'm defining right now
+that i'm defining right now
+that i'm defining right now
+and it'll take in an instance so this
+and it'll take in an instance so this
+and it'll take in an instance so this
+function is going to be pretty cool
+function is going to be pretty cool
+function is going to be pretty cool
+it'll run through all the tags of our
+it'll run through all the tags of our
+it'll run through all the tags of our
+instance and then add all the necessary
+instance and then add all the necessary
+instance and then add all the necessary
+components and in order to like run
+components and in order to like run
+components and in order to like run
+through the tags to like play with them
+through the tags to like play with them
+through the tags to like play with them
+you have to get the collection server so
+you have to get the collection server so
+you have to get the collection server so
+i'm going to go to the top my script
+i'm going to go to the top my script
+i'm going to go to the top my script
+and define local collection service
+and define local collection service
+and define local collection service
+equals game get service
+equals game get service
+equals game get service
+collection service there we go so now we
+collection service there we go so now we
+collection service there we go so now we
+can use all of our collection service
+can use all of our collection service
+can use all of our collection service
+stuff and let's go down here and say for
+stuff and let's go down here and say for
+stuff and let's go down here and say for
+underscore
+underscore
+underscore
+tag and i pairs
+tag and i pairs
+tag and i pairs
+collection service get tags
+collection service get tags
+collection service get tags
+make sure to use get tags and not get
+make sure to use get tags and not get
+make sure to use get tags and not get
+tagged
+tagged
+tagged
+because git tag just gets all the tag
+because git tag just gets all the tag
+because git tag just gets all the tag
+things for a certain
+things for a certain
+things for a certain
+string tag but we want to get all the
+string tag but we want to get all the
+string tag but we want to get all the
+tags
+tags
+tags
+of our instance because the one of the
+of our instance because the one of the
+of our instance because the one of the
+main benefits of using the component
+main benefits of using the component
+main benefits of using the component
+system
+system
+system
+is that multiple
+is that multiple
+is that multiple
+things or multiple components can be
+things or multiple components can be
+things or multiple components can be
+added to a single instance and that's
+added to a single instance and that's
+added to a single instance and that's
+why we want to get all the tags on our
+why we want to get all the tags on our
+why we want to get all the tags on our
+instance
+instance
+instance
+and then we'll have a do at the very end
+and then we'll have a do at the very end
+and then we'll have a do at the very end
+and then here we go so let me just
+and then here we go so let me just
+and then here we go so let me just
+explain
+explain
+explain
+this part underscore it just means we're
+this part underscore it just means we're
+this part underscore it just means we're
+never going to use this value if you're
+never going to use this value if you're
+never going to use this value if you're
+wondering about that
+wondering about that
+wondering about that
+and then we're using i pairs because
+and then we're using i pairs because
+and then we're using i pairs because
+this returns an array and it's always
+this returns an array and it's always
+this returns an array and it's always
+good practice to use i pairs with
+good practice to use i pairs with
+good practice to use i pairs with
+an array and not a not just a dictionary
+an array and not a not just a dictionary
+an array and not a not just a dictionary
+and so now in our for body we can define
+and so now in our for body we can define
+and so now in our for body we can define
+the component
+the component
+the component
+as being equal to components folder
+as being equal to components folder
+as being equal to components folder
+find first child
+of tag so what this will do i spelled
+of tag so what this will do i spelled
+of tag so what this will do i spelled
+this wrong
+this wrong
+this wrong
+component folder there we go what this
+component folder there we go what this
+component folder there we go what this
+will do is it will find
+will do is it will find
+will do is it will find
+the component based off the tag if it
+the component based off the tag if it
+the component based off the tag if it
+exists if it doesn't exist
+exists if it doesn't exist
+exists if it doesn't exist
+it'll return now you may be asking why
+it'll return now you may be asking why
+it'll return now you may be asking why
+can't we just assume
+can't we just assume
+can't we just assume
+all the tags are equal to all the
+all the tags are equal to all the
+all the tags are equal to all the
+components
+components
+components
+in a complex game you might accidentally
+in a complex game you might accidentally
+in a complex game you might accidentally
+add another tag that you weren't meaning
+add another tag that you weren't meaning
+add another tag that you weren't meaning
+to
+to
+to
+or there could just be extra tags that
+or there could just be extra tags that
+or there could just be extra tags that
+do different things or you could
+do different things or you could
+do different things or you could
+be working with other people to add tags
+be working with other people to add tags
+be working with other people to add tags
+without you knowing and it could break
+without you knowing and it could break
+without you knowing and it could break
+your game so this is just
+your game so this is just
+your game so this is just
+a safer approach where you check if the
+a safer approach where you check if the
+a safer approach where you check if the
+component exists which we'll do right
+component exists which we'll do right
+component exists which we'll do right
+now by saying if component
+then we can do self
+then we can do self
+then we can do self
+create component off the instance that
+create component off the instance that
+create component off the instance that
+we have
+we have
+we have
+and the component like script that we've
+and the component like script that we've
+and the component like script that we've
+got
+got
+got
+and it'll just create all the components
+and it'll just create all the components
+and it'll just create all the components
+so
+so
+so
+as a test we can go up to our init
+as a test we can go up to our init
+as a test we can go up to our init
+and underneath the self dot model we can
+and underneath the self dot model we can
+and underneath the self dot model we can
+just say self
+just say self
+just say self
+add components
+based off of self dot model
+based off of self dot model
+based off of self dot model
+dot part so
+dot part so
+dot part so
+we're going to add all the components
+we're going to add all the components
+we're going to add all the components
+for the little test part that we created
+for the little test part that we created
+for the little test part that we created
+which is under self.model.part which is
+which is under self.model.part which is
+which is under self.model.part which is
+like over here
+like over here
+like over here
+and now make sure before you test this
+and now make sure before you test this
+and now make sure before you test this
+to put the template back
+to put the template back
+to put the template back
+into server storage i don't know what
+into server storage i don't know what
+into server storage i don't know what
+happened here
+happened here
+happened here
+but now we should be able to run it and
+but now we should be able to run it and
+but now we should be able to run it and
+everything that should work
+so you can see at the bottom of the
+so you can see at the bottom of the
+so you can see at the bottom of the
+screen it says test was initialized and
+screen it says test was initialized and
+screen it says test was initialized and
+that's
+that's
+that's
+perfect because when we ran the code
+perfect because when we ran the code
+perfect because when we ran the code
+the ad components was called it looked
+the ad components was called it looked
+the ad components was called it looked
+through all the test components
+through all the test components
+through all the test components
+and then it created the test component
+and then it created the test component
+and then it created the test component
+and it was initialized
+and it was initialized
+and it was initialized
+and then it printed it out so that's
+and then it printed it out so that's
+and then it printed it out so that's
+exactly what we want
+exactly what we want
+exactly what we want
+analyticism can be expanded to any
+analyticism can be expanded to any
+analyticism can be expanded to any
+number of components you want on any
+number of components you want on any
+number of components you want on any
+number of parts and each part can have
+number of parts and each part can have
+number of parts and each part can have
+any number of components
+any number of components
+any number of components
+as well which is really good really
+as well which is really good really
+as well which is really good really
+expandable
+expandable
+expandable
+so that's it for this video i knew the
+so that's it for this video i knew the
+so that's it for this video i knew the
+past
+past
+past
+videos have been a lot of nitty-gritty
+videos have been a lot of nitty-gritty
+videos have been a lot of nitty-gritty
+stuff just getting set up
+stuff just getting set up
+stuff just getting set up
+implemented but trust me in the next
+implemented but trust me in the next
+implemented but trust me in the next
+video we'll be getting started with some
+video we'll be getting started with some
+video we'll be getting started with some
+actual
+actual
+actual
+tycoon and meat where we'll be making
+tycoon and meat where we'll be making
+tycoon and meat where we'll be making
+components that can be unlocked
+components that can be unlocked
+components that can be unlocked
+and potentially even creating the
+and potentially even creating the
+and potentially even creating the
+infamous tycoon
+infamous tycoon
+infamous tycoon
+button that you press to unlock new
+button that you press to unlock new
+button that you press to unlock new
+things so stay tuned for that
+things so stay tuned for that
+things so stay tuned for that
+and other than that subscribe to my
+and other than that subscribe to my
+and other than that subscribe to my
+channel if you enjoyed this video and
+channel if you enjoyed this video and
+channel if you enjoyed this video and
+make sure to like the video comment any
+make sure to like the video comment any
+make sure to like the video comment any
+of your questions
+of your questions
+of your questions
+and suggestions down below and also the
+and suggestions down below and also the
+and suggestions down below and also the
+code will be in the description if you
+code will be in the description if you
+code will be in the description if you
+need some help
+need some help
+need some help
+it's in a little github repository with
+it's in a little github repository with
+it's in a little github repository with
+all the videos so that's pretty
+all the videos so that's pretty
+all the videos so that's pretty
+convenient
+convenient
+convenient
+but other than that i hope you have a
+but other than that i hope you have a
+but other than that i hope you have a
+nice day and goodbye
+[Music]
+you

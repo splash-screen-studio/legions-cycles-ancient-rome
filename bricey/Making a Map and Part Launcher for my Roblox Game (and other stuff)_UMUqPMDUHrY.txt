@@ -1,0 +1,707 @@
+hello and welcome to another
+hello and welcome to another
+hello and welcome to another
+tallest tower devlog in this video
+tallest tower devlog in this video
+tallest tower devlog in this video
+i set up this map as you can see here
+i set up this map as you can see here
+i set up this map as you can see here
+and this little part spawning mechanism
+and this little part spawning mechanism
+and this little part spawning mechanism
+as well
+as well
+as well
+i also fix a lot of game breaking bugs
+i also fix a lot of game breaking bugs
+i also fix a lot of game breaking bugs
+which is always really good
+which is always really good
+which is always really good
+and i generally just flesh out the game
+and i generally just flesh out the game
+and i generally just flesh out the game
+loop so basically
+loop so basically
+loop so basically
+what this game is going to look like so
+what this game is going to look like so
+what this game is going to look like so
+if you enjoy this video make sure to
+if you enjoy this video make sure to
+if you enjoy this video make sure to
+like and subscribe
+like and subscribe
+like and subscribe
+and without further ado let's get in to
+and without further ado let's get in to
+and without further ado let's get in to
+the video
+[Music]
+[Music]
+[Music]
+so i just created a little basic map
+so i just created a little basic map
+so i just created a little basic map
+for our game and i have all the player
+for our game and i have all the player
+for our game and i have all the player
+locations plotted out right now and i
+locations plotted out right now and i
+locations plotted out right now and i
+have the center location
+have the center location
+have the center location
+where all of the parts will spawn so
+where all of the parts will spawn so
+where all of the parts will spawn so
+none of this is final
+none of this is final
+none of this is final
+i'm just kind of laying things out but
+i'm just kind of laying things out but
+i'm just kind of laying things out but
+now i need to actually program it and by
+now i need to actually program it and by
+now i need to actually program it and by
+the way i'll make this look better
+the way i'll make this look better
+the way i'll make this look better
+this is just testing to make sure that
+this is just testing to make sure that
+this is just testing to make sure that
+everything works out
+everything works out
+everything works out
+so basically the way i want the game to
+so basically the way i want the game to
+so basically the way i want the game to
+play out
+play out
+play out
+is each player will get their own plot
+is each player will get their own plot
+is each player will get their own plot
+with
+with
+with
+these blue locations that's where
+these blue locations that's where
+these blue locations that's where
+they'll go it'll be
+they'll go it'll be
+they'll go it'll be
+in a more circular shape obviously as
+in a more circular shape obviously as
+in a more circular shape obviously as
+you just saw
+you just saw
+you just saw
+and in the center part we'll
+and in the center part we'll
+and in the center part we'll
+be throwing parts in every direction so
+be throwing parts in every direction so
+be throwing parts in every direction so
+what i'm thinking it'll
+what i'm thinking it'll
+what i'm thinking it'll
+it'll like rotate periodically
+it'll like rotate periodically
+it'll like rotate periodically
+and i'll just spit parts by adding
+and i'll just spit parts by adding
+and i'll just spit parts by adding
+velocity
+velocity
+velocity
+in every direction so every player
+in every direction so every player
+in every direction so every player
+should be able to get
+should be able to get
+should be able to get
+parts they'll be able to fight over
+parts they'll be able to fight over
+parts they'll be able to fight over
+parts and stuff like that
+parts and stuff like that
+parts and stuff like that
+okay so i have a system implemented now
+okay so i have a system implemented now
+okay so i have a system implemented now
+that allows each player to join and get
+that allows each player to join and get
+that allows each player to join and get
+their own plot
+their own plot
+their own plot
+there's this weird issue where their
+there's this weird issue where their
+there's this weird issue where their
+plot is like
+plot is like
+plot is like
+15 studs tall but that should be
+15 studs tall but that should be
+15 studs tall but that should be
+an easy fix so now i need to start
+an easy fix so now i need to start
+an easy fix so now i need to start
+working on
+working on
+working on
+this middle bit where our parts will be
+this middle bit where our parts will be
+this middle bit where our parts will be
+heated for all to pick up and build with
+heated for all to pick up and build with
+heated for all to pick up and build with
+so i've been working on the code for a
+so i've been working on the code for a
+so i've been working on the code for a
+little while
+little while
+little while
+and this is what i've got done so you
+and this is what i've got done so you
+and this is what i've got done so you
+can see
+can see
+can see
+when we spawn in this little orb at the
+when we spawn in this little orb at the
+when we spawn in this little orb at the
+center
+center
+center
+is spawning parts and right now it has a
+is spawning parts and right now it has a
+is spawning parts and right now it has a
+set of three parts that it uses
+set of three parts that it uses
+set of three parts that it uses
+let me just show you real quick it's in
+let me just show you real quick it's in
+let me just show you real quick it's in
+server storage we have our parts we have
+server storage we have our parts we have
+server storage we have our parts we have
+a plank
+a plank
+a plank
+a sphere and a wedge i'll add more in
+a sphere and a wedge i'll add more in
+a sphere and a wedge i'll add more in
+the future and i could add some like
+the future and i could add some like
+the future and i could add some like
+complex shapes like
+complex shapes like
+complex shapes like
+models or whatever but for right now
+models or whatever but for right now
+models or whatever but for right now
+this works
+this works
+this works
+so basically the way the game work is
+so basically the way the game work is
+so basically the way the game work is
+all of these parts are spawning in the
+all of these parts are spawning in the
+all of these parts are spawning in the
+middle
+middle
+middle
+you got to chuck them over to your plot
+you got to chuck them over to your plot
+you got to chuck them over to your plot
+so you can start building with them
+so you can start building with them
+so you can start building with them
+that's what i'm doing right now
+that's what i'm doing right now
+that's what i'm doing right now
+might actually be better in first person
+so let me just get a few of these
+there we go so this should be enough to
+there we go so this should be enough to
+there we go so this should be enough to
+start out
+start out
+start out
+so i'm just gonna put some parts
+so i'm just gonna put some parts
+so i'm just gonna put some parts
+start building up my plot
+start building up my plot
+start building up my plot
+and the rotation's honestly kind of bad
+and the rotation's honestly kind of bad
+and the rotation's honestly kind of bad
+i need to figure out a better way to do
+i need to figure out a better way to do
+i need to figure out a better way to do
+it
+it
+it
+but it works for right now
+okay that will work i don't really care
+okay that will work i don't really care
+okay that will work i don't really care
+oh
+oh
+oh
+what happened to that
+well a part apparently just phased
+well a part apparently just phased
+well a part apparently just phased
+through me
+through me
+through me
+and went into oblivion but that's okay
+and went into oblivion but that's okay
+and went into oblivion but that's okay
+so now i can make a little stack and by
+so now i can make a little stack and by
+so now i can make a little stack and by
+the way these balls are to throw at
+the way these balls are to throw at
+the way these balls are to throw at
+other people
+other people
+other people
+so that it knocks their towers down and
+so that it knocks their towers down and
+so that it knocks their towers down and
+right now there is no limit
+right now there is no limit
+right now there is no limit
+to our spawner it just keeps on spawning
+to our spawner it just keeps on spawning
+to our spawner it just keeps on spawning
+parts
+parts
+parts
+forever which i might change that as
+forever which i might change that as
+forever which i might change that as
+well
+well
+well
+but yeah and the way i'm
+but yeah and the way i'm
+but yeah and the way i'm
+organizing my code for this is actually
+organizing my code for this is actually
+organizing my code for this is actually
+pretty smart
+pretty smart
+pretty smart
+i might make a video on this so what i'm
+i might make a video on this so what i'm
+i might make a video on this so what i'm
+using is
+using is
+using is
+a composition based class system
+a composition based class system
+a composition based class system
+so i have my game handler right here and
+so i have my game handler right here and
+so i have my game handler right here and
+instead of using an is a mentality which
+instead of using an is a mentality which
+instead of using an is a mentality which
+a game like a game handler
+a game like a game handler
+a game like a game handler
+is a game handler i'm using a has a
+is a game handler i'm using a has a
+is a game handler i'm using a has a
+mentality
+mentality
+mentality
+so a game handler has a plot manager
+so a game handler has a plot manager
+so a game handler has a plot manager
+and also has a part spawner
+and also has a part spawner
+and also has a part spawner
+so i use this index search function
+so i use this index search function
+so i use this index search function
+to basically search for when i whenever
+to basically search for when i whenever
+to basically search for when i whenever
+i call a method
+i call a method
+i call a method
+it looks to see which one of these has
+it looks to see which one of these has
+it looks to see which one of these has
+that method and it calls it
+that method and it calls it
+that method and it calls it
+so for example down here i'm calling
+so for example down here i'm calling
+so for example down here i'm calling
+start listening
+start listening
+start listening
+which is defined in this file
+which is defined in this file
+which is defined in this file
+but then i'm also calling start spawning
+but then i'm also calling start spawning
+but then i'm also calling start spawning
+which is defined in
+which is defined in
+which is defined in
+this file and i'm also doing this with
+this file and i'm also doing this with
+this file and i'm also doing this with
+our plot manager
+our plot manager
+our plot manager
+so this allows me to get a like
+so this allows me to get a like
+so this allows me to get a like
+semi-inheritance feel but there
+semi-inheritance feel but there
+semi-inheritance feel but there
+is no inheritance it's basically like
+is no inheritance it's basically like
+is no inheritance it's basically like
+multiple inheritance for the price
+multiple inheritance for the price
+multiple inheritance for the price
+of nothing like there's no added
+of nothing like there's no added
+of nothing like there's no added
+complexities it's just really really
+complexities it's just really really
+complexities it's just really really
+easy
+easy
+easy
+and allows me to set up my game handler
+and allows me to set up my game handler
+and allows me to set up my game handler
+module to handle everything
+module to handle everything
+module to handle everything
+the only problem is it might get a
+the only problem is it might get a
+the only problem is it might get a
+little confusing since i'm using meta
+little confusing since i'm using meta
+little confusing since i'm using meta
+tables
+tables
+tables
+this whole concept came from javascript
+this whole concept came from javascript
+this whole concept came from javascript
+and
+and
+and
+there tables are treated more concretely
+there tables are treated more concretely
+there tables are treated more concretely
+as instances
+as instances
+as instances
+whereas meta tables are kind of just
+whereas meta tables are kind of just
+whereas meta tables are kind of just
+like ethereal
+like ethereal
+like ethereal
+i mean that's how i describe it but yeah
+i mean that's how i describe it but yeah
+i mean that's how i describe it but yeah
+this system works really well if you
+this system works really well if you
+this system works really well if you
+want to see a video make sure to comment
+want to see a video make sure to comment
+want to see a video make sure to comment
+so i came across this really interesting
+so i came across this really interesting
+so i came across this really interesting
+bug i think it's on my end but
+bug i think it's on my end but
+bug i think it's on my end but
+honestly i really don't know what i'm
+honestly i really don't know what i'm
+honestly i really don't know what i'm
+doing wrong and i've tested this
+doing wrong and i've tested this
+doing wrong and i've tested this
+in a side project as well if you have
+in a side project as well if you have
+in a side project as well if you have
+any suggestions
+any suggestions
+any suggestions
+please comment down below but basically
+please comment down below but basically
+please comment down below but basically
+i'm a plot manager right
+i'm a plot manager right
+i'm a plot manager right
+and like every time i create a new game
+and like every time i create a new game
+and like every time i create a new game
+handler i create a new plot manager
+handler i create a new plot manager
+handler i create a new plot manager
+in this plot manager we have a plots
+in this plot manager we have a plots
+in this plot manager we have a plots
+table
+table
+table
+and this holds all of our player plots
+and this holds all of our player plots
+and this holds all of our player plots
+right
+right
+right
+wrong so what i was trying to do is i
+wrong so what i was trying to do is i
+wrong so what i was trying to do is i
+was trying to set
+was trying to set
+was trying to set
+self.plots to user id
+self.plots to user id
+self.plots to user id
+and after that i entered debug i printed
+and after that i entered debug i printed
+and after that i entered debug i printed
+self.plot's playeruserid and
+self.plot's playeruserid and
+self.plot's playeruserid and
+we never got anything i checked new plot
+we never got anything i checked new plot
+we never got anything i checked new plot
+that's
+that's
+that's
+not nil so it should have be a value and
+not nil so it should have be a value and
+not nil so it should have be a value and
+i tried the same thing and game handler
+i tried the same thing and game handler
+i tried the same thing and game handler
+didn't work so my solution to this was
+didn't work so my solution to this was
+didn't work so my solution to this was
+adding
+adding
+adding
+was reinitializing the plots in the game
+was reinitializing the plots in the game
+was reinitializing the plots in the game
+handler
+handler
+handler
+which is very it's a terrible fix but i
+which is very it's a terrible fix but i
+which is very it's a terrible fix but i
+mean
+mean
+mean
+it works and honestly it really
+it works and honestly it really
+it works and honestly it really
+shouldn't change anything
+shouldn't change anything
+shouldn't change anything
+it just makes my code that much more
+it just makes my code that much more
+it just makes my code that much more
+confusing
+confusing
+confusing
+and honestly i'm really enjoying
+and honestly i'm really enjoying
+and honestly i'm really enjoying
+composition based
+composition based
+composition based
+programming here but for some reason
+programming here but for some reason
+programming here but for some reason
+this doesn't work
+this doesn't work
+this doesn't work
+but now it works it's a terrible
+but now it works it's a terrible
+but now it works it's a terrible
+solution i don't know how i'm going to
+solution i don't know how i'm going to
+solution i don't know how i'm going to
+fix it but yeah i just wanted to show
+fix it but yeah i just wanted to show
+fix it but yeah i just wanted to show
+you
+you
+you
+okay so i fixed one more major bug
+okay so i fixed one more major bug
+okay so i fixed one more major bug
+and that was the bug where if i like
+and that was the bug where if i like
+and that was the bug where if i like
+clicked and then dragged down
+clicked and then dragged down
+clicked and then dragged down
+quickly let me just bring this over here
+quickly let me just bring this over here
+quickly let me just bring this over here
+if i clicked and dragged down quickly
+if i clicked and dragged down quickly
+if i clicked and dragged down quickly
+the part would like yeet into space
+the part would like yeet into space
+the part would like yeet into space
+and i was really confused by this but it
+and i was really confused by this but it
+and i was really confused by this but it
+turns out
+turns out
+turns out
+and i fixed it obviously and it turns
+and i fixed it obviously and it turns
+and i fixed it obviously and it turns
+out the problem i had
+out the problem i had
+out the problem i had
+was in here
+was in here
+was in here
+and on activate when you this is called
+and on activate when you this is called
+and on activate when you this is called
+when you click with your mouse
+when you click with your mouse
+when you click with your mouse
+i raycasted for
+i raycasted for
+i raycasted for
+the mouse and i checked to make sure the
+the mouse and i checked to make sure the
+the mouse and i checked to make sure the
+part that you're casting to actually
+part that you're casting to actually
+part that you're casting to actually
+works
+works
+works
+and then i grabbed the part using
+and then i grabbed the part using
+and then i grabbed the part using
+another raycast
+another raycast
+another raycast
+for the mouse's position so i did a
+for the mouse's position so i did a
+for the mouse's position so i did a
+raycast for the target and a raycast for
+raycast for the target and a raycast for
+raycast for the target and a raycast for
+the position
+the position
+the position
+so basically what would happen is if you
+so basically what would happen is if you
+so basically what would happen is if you
+clicked on a part
+clicked on a part
+clicked on a part
+then you drag down really quickly the
+then you drag down really quickly the
+then you drag down really quickly the
+position
+position
+position
+would be wrong like the raycast would be
+would be wrong like the raycast would be
+would be wrong like the raycast would be
+wrong
+wrong
+wrong
+so your position would get really offset
+so your position would get really offset
+so your position would get really offset
+and some really weird stuff would happen
+and some really weird stuff would happen
+and some really weird stuff would happen
+so i fixed that so just make sure to
+so i fixed that so just make sure to
+so i fixed that so just make sure to
+have one raycast if you're doing it in
+have one raycast if you're doing it in
+have one raycast if you're doing it in
+the same frame because
+the same frame because
+the same frame because
+stuff crazy stuff might happen but
+stuff crazy stuff might happen but
+stuff crazy stuff might happen but
+other than that yeah we're doing pretty
+other than that yeah we're doing pretty
+other than that yeah we're doing pretty
+well so i think
+well so i think
+well so i think
+that's about it for this devlog
+so that's about it for this video
+so that's about it for this video
+so that's about it for this video
+i tried a different sort of style only
+i tried a different sort of style only
+i tried a different sort of style only
+doing
+doing
+doing
+updates not really any time lapses so
+updates not really any time lapses so
+updates not really any time lapses so
+make sure to comment
+make sure to comment
+make sure to comment
+if you like this style better it makes
+if you like this style better it makes
+if you like this style better it makes
+the videos more concise and a little
+the videos more concise and a little
+the videos more concise and a little
+quicker
+quicker
+quicker
+it just depends so if you like that make
+it just depends so if you like that make
+it just depends so if you like that make
+sure to comment if you don't make sure
+sure to comment if you don't make sure
+sure to comment if you don't make sure
+to also comment
+to also comment
+to also comment
+but other than that i hope you guys like
+but other than that i hope you guys like
+but other than that i hope you guys like
+and subscribe if you enjoyed
+and subscribe if you enjoyed
+and subscribe if you enjoyed
+and have a nice day and goodbye
+[Music]
+[Music]
+[Music]
+you

@@ -1,0 +1,824 @@
+upgrading the drops that your dropper
+upgrading the drops that your dropper
+upgrading the drops that your dropper
+drops to give them more worth is pretty
+drops to give them more worth is pretty
+drops to give them more worth is pretty
+cool so we're going to add that to our
+cool so we're going to add that to our
+cool so we're going to add that to our
+tycoon
+tycoon
+tycoon
+so you can go up to this button
+so you can go up to this button
+so you can go up to this button
+click it and now you have an upgrader
+click it and now you have an upgrader
+click it and now you have an upgrader
+and now i'm getting
+and now i'm getting
+and now i'm getting
+more money
+more money
+more money
+so in this video i'll show you how to
+so in this video i'll show you how to
+so in this video i'll show you how to
+make this system in your tycoon if you
+make this system in your tycoon if you
+make this system in your tycoon if you
+haven't watched the previous videos and
+haven't watched the previous videos and
+haven't watched the previous videos and
+make sure you do
+make sure you do
+make sure you do
+make sure to like the video if you enjoy
+make sure to like the video if you enjoy
+make sure to like the video if you enjoy
+it subscribe to my channel if you're new
+it subscribe to my channel if you're new
+it subscribe to my channel if you're new
+and want to stay up to date with more
+and want to stay up to date with more
+and want to stay up to date with more
+tycoon tutorials
+tycoon tutorials
+tycoon tutorials
+but other than that let's get into the
+but other than that let's get into the
+but other than that let's get into the
+video
+so in front of me
+so in front of me
+so in front of me
+is a very basic upgrader model it
+is a very basic upgrader model it
+is a very basic upgrader model it
+consists of a couple of parts
+consists of a couple of parts
+consists of a couple of parts
+and they all just look sort of like an
+and they all just look sort of like an
+and they all just look sort of like an
+upgrade it's meant to mount on top of
+upgrade it's meant to mount on top of
+upgrade it's meant to mount on top of
+the conveyor belt hence this little gap
+the conveyor belt hence this little gap
+the conveyor belt hence this little gap
+here
+here
+here
+but we'll do that a little bit later for
+but we'll do that a little bit later for
+but we'll do that a little bit later for
+now let's first name the part
+now let's first name the part
+now let's first name the part
+that we want the
+that we want the
+that we want the
+other like
+other like
+other like
+ores and whatever the dropper drops to
+ores and whatever the dropper drops to
+ores and whatever the dropper drops to
+pass through so in this case it's this
+pass through so in this case it's this
+pass through so in this case it's this
+like semi-transparent part for me
+like semi-transparent part for me
+like semi-transparent part for me
+and this part also has can collide
+and this part also has can collide
+and this part also has can collide
+turned off that's very important so they
+turned off that's very important so they
+turned off that's very important so they
+can actually pass through
+can actually pass through
+can actually pass through
+and i'm going to name this part detector
+and i'm going to name this part detector
+and i'm going to name this part detector
+because it detects when the parts
+because it detects when the parts
+because it detects when the parts
+pass through it so make sure can collide
+pass through it so make sure can collide
+pass through it so make sure can collide
+is off and can touch is on because we
+is off and can touch is on because we
+is off and can touch is on because we
+will be using the touched event for this
+will be using the touched event for this
+will be using the touched event for this
+part now
+part now
+part now
+let's go and bring in our tycoon
+let's go and bring in our tycoon
+let's go and bring in our tycoon
+template from server storage by dragging
+template from server storage by dragging
+template from server storage by dragging
+it into the workspace
+and i'm going to take my
+and i'm going to take my
+and i'm going to take my
+upgrader and just plop it on
+upgrader and just plop it on
+upgrader and just plop it on
+if i can get it to fit
+if i can get it to fit
+if i can get it to fit
+there we go you can see how that fits
+there we go you can see how that fits
+there we go you can see how that fits
+nicely you can do whatever you want this
+nicely you can do whatever you want this
+nicely you can do whatever you want this
+upgrader looks kind of ugly but it's
+upgrader looks kind of ugly but it's
+upgrader looks kind of ugly but it's
+fine for now
+fine for now
+fine for now
+so now i'm going to go to my upgrader
+so now i'm going to go to my upgrader
+so now i'm going to go to my upgrader
+and
+and
+and
+i'm going to make sure it's unlockable
+i'm going to make sure it's unlockable
+i'm going to make sure it's unlockable
+and i'm going to add an attribute
+and i'm going to add an attribute
+and i'm going to add an attribute
+that's going to be the unlock id
+for
+for
+for
+my conveyor
+my conveyor
+my conveyor
+or my upgrader i should say and the
+or my upgrader i should say and the
+or my upgrader i should say and the
+unlock id i'm just going to say upgrader
+unlock id i'm just going to say upgrader
+unlock id i'm just going to say upgrader
+one just upgraded one as a string
+one just upgraded one as a string
+one just upgraded one as a string
+but right now
+but right now
+but right now
+this
+this
+this
+upgrader can never be unlocked since we
+upgrader can never be unlocked since we
+upgrader can never be unlocked since we
+don't have a button that triggers its
+don't have a button that triggers its
+don't have a button that triggers its
+event
+event
+event
+so i'm going to
+so i'm going to
+so i'm going to
+hover over my
+hover over my
+hover over my
+dropper button use ctrl d to duplicate
+dropper button use ctrl d to duplicate
+dropper button use ctrl d to duplicate
+it and drag it over and this will bring
+it and drag it over and this will bring
+it and drag it over and this will bring
+in another key concept that i haven't
+in another key concept that i haven't
+in another key concept that i haven't
+touched on in previous videos and that's
+touched on in previous videos and that's
+touched on in previous videos and that's
+the idea of chaining buttons together
+the idea of chaining buttons together
+the idea of chaining buttons together
+so you can see i have two buttons and
+so you can see i have two buttons and
+so you can see i have two buttons and
+i'm just going to name these just for
+i'm just going to name these just for
+i'm just going to name these just for
+clarification this is going to be named
+clarification this is going to be named
+clarification this is going to be named
+the upgrader button
+the upgrader button
+the upgrader button
+and oh i suppose button wrong
+and oh i suppose button wrong
+and oh i suppose button wrong
+button and then
+button and then
+button and then
+this one over here is going to be named
+this one over here is going to be named
+this one over here is going to be named
+the dropper button
+the dropper button
+the dropper button
+if i can rename it
+if i can rename it
+if i can rename it
+here we go
+here we go
+here we go
+dropper button
+dropper button
+dropper button
+and let's go back to our upgrader button
+and let's go back to our upgrader button
+and let's go back to our upgrader button
+and instead of
+and instead of
+and instead of
+leaving this button to be unlocked off
+leaving this button to be unlocked off
+leaving this button to be unlocked off
+the tycoon spawn i'm going to actually
+the tycoon spawn i'm going to actually
+the tycoon spawn i'm going to actually
+give it the unlockable component
+give it the unlockable component
+give it the unlockable component
+and then i'm going to add an attribute
+and then i'm going to add an attribute
+and then i'm going to add an attribute
+and this attribute is going to be called
+and this attribute is going to be called
+and this attribute is going to be called
+unlock id
+unlock id
+unlock id
+and the unlock id is going to be copper
+and the unlock id is going to be copper
+and the unlock id is going to be copper
+dropper so this button is basically
+dropper so this button is basically
+dropper so this button is basically
+acting like a
+acting like a
+acting like a
+little like drop in onto the actual
+little like drop in onto the actual
+little like drop in onto the actual
+dropper
+dropper
+dropper
+so that
+so that
+so that
+once this
+once this
+once this
+button unlocks it unlocks both the
+button unlocks it unlocks both the
+button unlocks it unlocks both the
+dropper and the next button in the chain
+dropper and the next button in the chain
+dropper and the next button in the chain
+and the only the only thing i did is i
+and the only the only thing i did is i
+and the only the only thing i did is i
+just set the unlock id to the same
+just set the unlock id to the same
+just set the unlock id to the same
+unlock id as the dropper
+unlock id as the dropper
+unlock id as the dropper
+so it's very simple it's a very simple
+so it's very simple it's a very simple
+so it's very simple it's a very simple
+system and it just works
+system and it just works
+system and it just works
+and make sure to change your id
+and make sure to change your id
+and make sure to change your id
+to the same id that you set for your
+to the same id that you set for your
+to the same id that you set for your
+upgrader so i'm going to set my
+upgrader so i'm going to set my
+upgrader so i'm going to set my
+attribute id to up
+attribute id to up
+attribute id to up
+grader 1 and then for the display i'm
+grader 1 and then for the display i'm
+grader 1 and then for the display i'm
+going to say this is going to be the
+going to say this is going to be the
+going to say this is going to be the
+upgrader you can say like basic upgrade
+upgrader you can say like basic upgrade
+upgrader you can say like basic upgrade
+or whatever and for right now i'm going
+or whatever and for right now i'm going
+or whatever and for right now i'm going
+to leave the cost at zero just for
+to leave the cost at zero just for
+to leave the cost at zero just for
+debugging later you can add a cost but
+debugging later you can add a cost but
+debugging later you can add a cost but
+for right now i'm just going to leave it
+for right now i'm just going to leave it
+for right now i'm just going to leave it
+at zero
+at zero
+at zero
+so now let's hover back over
+so now let's hover back over
+so now let's hover back over
+our upgrader
+our upgrader
+our upgrader
+and let's drag it into the template so
+and let's drag it into the template so
+and let's drag it into the template so
+make sure it's parent is the template
+make sure it's parent is the template
+make sure it's parent is the template
+and then i'm going to add
+and then i'm going to add
+and then i'm going to add
+another
+another
+another
+tag
+tag
+tag
+to our tag editor plugin
+to our tag editor plugin
+to our tag editor plugin
+is going to be called upgrader
+is going to be called upgrader
+is going to be called upgrader
+add new tag upgrader and i'm going to
+add new tag upgrader and i'm going to
+add new tag upgrader and i'm going to
+click the little check box to add the
+click the little check box to add the
+click the little check box to add the
+upgrader
+upgrader
+upgrader
+tag to our upgrader
+tag to our upgrader
+tag to our upgrader
+and there's one more attribute that we
+and there's one more attribute that we
+and there's one more attribute that we
+have to add to our upgrader and this is
+have to add to our upgrader and this is
+have to add to our upgrader and this is
+specific to the upgrader and it's going
+specific to the upgrader and it's going
+specific to the upgrader and it's going
+to be called
+to be called
+to be called
+the multiplier
+and it's going to be the amount
+and it's going to be the amount
+and it's going to be the amount
+which is usually a decimal that will
+which is usually a decimal that will
+which is usually a decimal that will
+increase the worth of the drop so i'm
+increase the worth of the drop so i'm
+increase the worth of the drop so i'm
+going to set this to 1.25 so it'll make
+going to set this to 1.25 so it'll make
+going to set this to 1.25 so it'll make
+our drops have 25 percent more worth
+our drops have 25 percent more worth
+our drops have 25 percent more worth
+because we're going to be multiplying
+because we're going to be multiplying
+because we're going to be multiplying
+any value by
+any value by
+any value by
+1.25 so for example if your drop is
+1.25 so for example if your drop is
+1.25 so for example if your drop is
+worth
+worth
+worth
+one
+one
+one
+money or whatever our currency is called
+money or whatever our currency is called
+money or whatever our currency is called
+when you multiply that by 1.25 it'll be
+when you multiply that by 1.25 it'll be
+when you multiply that by 1.25 it'll be
+worth 1.25 which is 25 percent greater
+worth 1.25 which is 25 percent greater
+worth 1.25 which is 25 percent greater
+that's exactly what we want so that is
+that's exactly what we want so that is
+that's exactly what we want so that is
+all of the setup done all we have to do
+all of the setup done all we have to do
+all of the setup done all we have to do
+is script it
+is script it
+is script it
+so i'm going to take my template drag it
+so i'm going to take my template drag it
+so i'm going to take my template drag it
+into server storage
+into server storage
+into server storage
+go into server script service go into
+go into server script service go into
+go into server script service go into
+components add a new component with the
+components add a new component with the
+components add a new component with the
+plus arrow and then make a module script
+plus arrow and then make a module script
+plus arrow and then make a module script
+name this module script
+name this module script
+name this module script
+upgrader and then
+upgrader and then
+upgrader and then
+make my basic
+and then we are all going to need
+and then we are all going to need
+and then we are all going to need
+a reference to our instance so i'm going
+a reference to our instance so i'm going
+a reference to our instance so i'm going
+to say self.instance equals instance
+to say self.instance equals instance
+to say self.instance equals instance
+we will not need a reference to our
+we will not need a reference to our
+we will not need a reference to our
+tycoon
+tycoon
+tycoon
+so i'm going to leave that as is
+so i'm going to leave that as is
+so i'm going to leave that as is
+now i'm going to make a new function
+now i'm going to make a new function
+now i'm going to make a new function
+call this function
+call this function
+call this function
+upgrader
+upgrader
+upgrader
+init this will be our init function
+init this will be our init function
+init this will be our init function
+all we're going to do here is connect a
+all we're going to do here is connect a
+all we're going to do here is connect a
+touched event to our
+touched event to our
+touched event to our
+detector
+detector
+detector
+part that we talked about about like
+part that we talked about about like
+part that we talked about about like
+before
+before
+before
+i'm going to say self.instance
+i'm going to say self.instance
+i'm going to say self.instance
+dot
+dot
+dot
+detector
+detector
+detector
+dot touched
+dot touched
+dot touched
+connect
+connect
+connect
+a function
+a function
+a function
+three dots or ellipses just to get all
+three dots or ellipses just to get all
+three dots or ellipses just to get all
+the parameters
+the parameters
+the parameters
+and then what we want to do inside this
+and then what we want to do inside this
+and then what we want to do inside this
+function is run another function that
+function is run another function that
+function is run another function that
+i'll create down here
+i'll create down here
+i'll create down here
+it'll be called
+it'll be called
+it'll be called
+function
+function
+function
+upgrader
+upgrader
+upgrader
+on touch and i've taken the hit part
+on touch and i've taken the hit part
+on touch and i've taken the hit part
+and so back in our touch connection
+and so back in our touch connection
+and so back in our touch connection
+we can just say
+we can just say
+we can just say
+self
+on touch
+on touch
+on touch
+with the ellipses
+with the ellipses
+with the ellipses
+there we go
+there we go
+there we go
+so now
+so now
+so now
+let's go into our on touch function for
+let's go into our on touch function for
+let's go into our on touch function for
+upgrader
+upgrader
+upgrader
+and all we need to do here is check if
+and all we need to do here is check if
+and all we need to do here is check if
+the touch part is actually
+the touch part is actually
+the touch part is actually
+a part that has worth and that's
+a part that has worth and that's
+a part that has worth and that's
+actually pretty straightforward
+actually pretty straightforward
+actually pretty straightforward
+just say local worth equals hit
+just say local worth equals hit
+just say local worth equals hit
+get attribute
+get attribute
+get attribute
+worth
+worth
+worth
+and recall that all of our drops in our
+and recall that all of our drops in our
+and recall that all of our drops in our
+server storage drops folder
+server storage drops folder
+server storage drops folder
+have an attribute called work that's
+have an attribute called work that's
+have an attribute called work that's
+what i'm checking for here see copper
+what i'm checking for here see copper
+what i'm checking for here see copper
+it's worth five
+it's worth five
+it's worth five
+so
+so
+so
+in our upgrade or on touch we can just
+in our upgrade or on touch we can just
+in our upgrade or on touch we can just
+say if worth so if the worth exists if
+say if worth so if the worth exists if
+say if worth so if the worth exists if
+our
+our
+our
+touch has worth because if the player
+touch has worth because if the player
+touch has worth because if the player
+hits the upgrade we don't want the
+hits the upgrade we don't want the
+hits the upgrade we don't want the
+player
+player
+player
+to increase in value like they wouldn't
+to increase in value like they wouldn't
+to increase in value like they wouldn't
+make any sense the player is not being
+make any sense the player is not being
+make any sense the player is not being
+collected so we have to make sure that
+collected so we have to make sure that
+collected so we have to make sure that
+the
+the
+the
+value is actually a drop
+value is actually a drop
+value is actually a drop
+and if it is we can just say hit set
+and if it is we can just say hit set
+and if it is we can just say hit set
+attribute
+attribute
+attribute
+worth
+worth
+worth
+to
+to
+to
+the worth that it is times
+the worth that it is times
+the worth that it is times
+self.instance get attribute
+self.instance get attribute
+self.instance get attribute
+multiplier
+multiplier
+multiplier
+so this will take in
+so this will take in
+so this will take in
+the
+the
+the
+[Music]
+[Music]
+[Music]
+attribute that we defined earlier in our
+attribute that we defined earlier in our
+attribute that we defined earlier in our
+upgrader called multiplier
+upgrader called multiplier
+upgrader called multiplier
+and it will
+and it will
+and it will
+multiply it by our worth
+multiply it by our worth
+multiply it by our worth
+and that will increase the value so we
+and that will increase the value so we
+and that will increase the value so we
+have 1.25 we'll increase it by 25
+have 1.25 we'll increase it by 25
+have 1.25 we'll increase it by 25
+percent
+percent
+percent
+so that is all the code we will need
+so that is all the code we will need
+so that is all the code we will need
+let's try it out
+so you see the button is not here
+so you see the button is not here
+so you see the button is not here
+initially so if we
+initially so if we
+initially so if we
+get our cardboard dropper it appears
+get our cardboard dropper it appears
+get our cardboard dropper it appears
+we can get our upgrader
+we can get our upgrader
+we can get our upgrader
+and you can see that
+and you can see that
+and you can see that
+we're getting some decimals going on
+we're getting some decimals going on
+we're getting some decimals going on
+and that's just because
+the values are like 1.25 now
+the values are like 1.25 now
+the values are like 1.25 now
+so it is changing
+so it is changing
+so it is changing
+our
+our
+our
+output and making us get a lot more
+output and making us get a lot more
+output and making us get a lot more
+and if you really wanted to you could
+and if you really wanted to you could
+and if you really wanted to you could
+also change the
+also change the
+also change the
+display so it looks a little bit better
+display so it looks a little bit better
+display so it looks a little bit better
+but
+but
+but
+i actually don't care that much so i'm
+i actually don't care that much so i'm
+i actually don't care that much so i'm
+going to leave like this
+so that's about it for this video i hope
+so that's about it for this video i hope
+so that's about it for this video i hope
+you enjoyed a quick little update to the
+you enjoyed a quick little update to the
+you enjoyed a quick little update to the
+tycoon series
+tycoon series
+tycoon series
+because i know you all wanted it if you
+because i know you all wanted it if you
+because i know you all wanted it if you
+have any more ideas please put them in
+have any more ideas please put them in
+have any more ideas please put them in
+the comments because
+the comments because
+the comments because
+you know i could make videos in this
+you know i could make videos in this
+you know i could make videos in this
+series off and on just for a couple of
+series off and on just for a couple of
+series off and on just for a couple of
+months now because these videos are
+months now because these videos are
+months now because these videos are
+pretty easy to make
+pretty easy to make
+pretty easy to make
+and they do involve a lot of value so if
+and they do involve a lot of value so if
+and they do involve a lot of value so if
+you have any new tycoon components you
+you have any new tycoon components you
+you have any new tycoon components you
+want any new features just put them down
+want any new features just put them down
+want any new features just put them down
+below
+below
+below
+other than that comment any questions or
+other than that comment any questions or
+other than that comment any questions or
+suggestions down below make sure to like
+suggestions down below make sure to like
+suggestions down below make sure to like
+the video if you enjoyed it and
+the video if you enjoyed it and
+the video if you enjoyed it and
+subscribe to stay up to date with the
+subscribe to stay up to date with the
+subscribe to stay up to date with the
+tycoon tutorials
+tycoon tutorials
+tycoon tutorials
+but i hope you have a nice day and
+but i hope you have a nice day and
+but i hope you have a nice day and
+goodbye
+goodbye
+goodbye
+[Music]
+foreign
