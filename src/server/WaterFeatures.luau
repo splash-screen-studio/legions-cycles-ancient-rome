@@ -3,50 +3,58 @@
     WaterFeatures - Creates Roman water features (fountains, rivers)
     Demonstrates CRITICAL water architecture: Water Terrain inside Part-built walls
     Based on BRicey techniques for procedural environment generation
+
+    Fountain System:
+    - Multiple fountains across the map (from FountainConfig)
+    - 4 types: Basin, Impluvium, PublicFountain, Nymphaeum
+    - Proper depth (4-6 studs) and containment
+    - Walls extend above water surface
 ]]
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local WaterFeatures = {}
 WaterFeatures.__index = WaterFeatures
-WaterFeatures.VERSION = "1.0.0"
+WaterFeatures.VERSION = "2.0.0"
 
 -- Import WaterPool module (same folder)
 local WaterPool = require(script.Parent.WaterPool)
 
 -- Type for configuration
 export type WaterFeaturesConfig = {
-    fountainPosition: Vector3?, -- Custom fountain position (default near spawn)
+    enableFountains: boolean?, -- Enable fountain system (default: true)
+    enableRiver: boolean?, -- Enable river (default: true)
+    customFountainPlacements: any?, -- Custom fountain placements (optional)
     riverStartPosition: Vector3?, -- Custom river start (default valley)
-    enableFountain: boolean?,
-    enableRiver: boolean?,
 }
 
 export type WaterFeaturesInstance = typeof(setmetatable(
     {} :: {
         config: WaterFeaturesConfig,
-        fountainPool: typeof(WaterPool.new({} :: any))?,
+        fountainPools: { typeof(WaterPool.new({} :: any)) },
         riverPools: { typeof(WaterPool.new({} :: any)) },
         terrainUtils: any,
         terrain: Terrain,
+        fountainConfig: any,
     },
     WaterFeatures
 ))
 
--- Roman color palette
-local MARBLE_WHITE = Color3.fromRGB(245, 240, 230)
+-- Roman color palette for river
 local ROCK_GRAY = Color3.fromRGB(120, 110, 100)
 
 function WaterFeatures.new(config: WaterFeaturesConfig?): WaterFeaturesInstance
     local Shared = ReplicatedStorage:WaitForChild("Shared")
     local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
+    local FountainConfig = require(Shared:WaitForChild("FountainConfig"))
 
     local self = setmetatable({}, WaterFeatures)
     self.config = config or {}
-    self.fountainPool = nil
+    self.fountainPools = {} :: { typeof(WaterPool.new({} :: any)) }
     self.riverPools = {} :: { typeof(WaterPool.new({} :: any)) }
     self.terrainUtils = TerrainUtils
     self.terrain = workspace.Terrain
+    self.fountainConfig = FountainConfig
 
     print(string.format("[WaterFeatures v%s] Initializing...", WaterFeatures.VERSION))
     return self
@@ -56,11 +64,11 @@ function WaterFeatures:start()
     local config = self.config
 
     -- Default: enable both features
-    local enableFountain = config.enableFountain ~= false
+    local enableFountains = config.enableFountains ~= false
     local enableRiver = config.enableRiver ~= false
 
-    if enableFountain then
-        self:_createFountain()
+    if enableFountains then
+        self:_createAllFountains()
     end
 
     if enableRiver then
@@ -70,29 +78,62 @@ function WaterFeatures:start()
     print(string.format("[WaterFeatures v%s] Water features created", WaterFeatures.VERSION))
 end
 
-function WaterFeatures:_createFountain()
-    -- Fountain position near spawn area (default: southeast quadrant, near player spawn)
-    local fountainPos = self.config.fountainPosition or Vector3.new(350, 0, 350)
+function WaterFeatures:_createAllFountains()
+    local FountainConfig = self.fountainConfig
 
-    -- Roman Impluvium-style fountain: square marble basin
-    -- Size: 20x20 studs, 3 studs deep
+    -- Get placements (custom or default)
+    local placements = self.config.customFountainPlacements or FountainConfig.getDefaultPlacements()
+
+    print(string.format("[WaterFeatures v%s] Creating %d fountains...", WaterFeatures.VERSION, #placements))
+
+    for _, placement in ipairs(placements) do
+        self:_createFountain(placement)
+    end
+
+    print(string.format(
+        "[WaterFeatures v%s] Created %d fountains across map",
+        WaterFeatures.VERSION,
+        #self.fountainPools
+    ))
+end
+
+function WaterFeatures:_createFountain(placement: any)
+    local FountainConfig = self.fountainConfig
+
+    -- Get type config
+    local typeConfig = FountainConfig.getTypeConfig(placement.fountainType)
+
+    -- Create fountain name
+    local fountainName = placement.name or string.format(
+        "%s_%.0f_%.0f",
+        typeConfig.name,
+        placement.position.X,
+        placement.position.Z
+    )
+
+    -- Create the fountain pool with proper containment
     local fountain = WaterPool.new({
-        position = fountainPos,
-        size = Vector3.new(20, 3, 20),
-        wallMaterial = Enum.Material.Marble,
-        wallColor = MARBLE_WHITE,
-        wallThickness = 1,
-        name = "RomanFountain_Impluvium",
+        position = placement.position,
+        size = typeConfig.size,
+        wallMaterial = typeConfig.wallMaterial,
+        wallColor = typeConfig.wallColor,
+        wallThickness = typeConfig.wallThickness,
+        rimHeight = typeConfig.rimHeight,
+        name = fountainName,
     })
 
     fountain:build()
-    self.fountainPool = fountain
+    table.insert(self.fountainPools, fountain)
 
     print(string.format(
-        "[WaterFeatures v%s] Created Roman fountain at (%.0f, %.0f)",
+        "[WaterFeatures v%s] Created %s '%s' at (%.0f, %.0f) - depth: %.0f, rim: %.0f",
         WaterFeatures.VERSION,
-        fountainPos.X,
-        fountainPos.Z
+        typeConfig.name,
+        fountainName,
+        placement.position.X,
+        placement.position.Z,
+        typeConfig.size.Y,
+        typeConfig.rimHeight
     ))
 end
 
@@ -120,6 +161,7 @@ function WaterFeatures:_createRiver()
             wallMaterial = Enum.Material.Rock,
             wallColor = ROCK_GRAY,
             wallThickness = 2,
+            rimHeight = 1, -- River banks extend 1 stud above water
             name = string.format("River_Segment_%d", i),
         })
 
@@ -136,12 +178,20 @@ function WaterFeatures:_createRiver()
     ))
 end
 
+function WaterFeatures:getFountainCount(): number
+    return #self.fountainPools
+end
+
+function WaterFeatures:getRiverSegmentCount(): number
+    return #self.riverPools
+end
+
 function WaterFeatures:destroy()
-    -- Destroy fountain
-    if self.fountainPool then
-        self.fountainPool:destroy()
-        self.fountainPool = nil
+    -- Destroy all fountains
+    for _, fountain in ipairs(self.fountainPools) do
+        fountain:destroy()
     end
+    self.fountainPools = {}
 
     -- Destroy river segments
     for _, riverPool in ipairs(self.riverPools) do

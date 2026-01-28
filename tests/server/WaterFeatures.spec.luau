@@ -41,6 +41,10 @@ describe("WaterFeatures", function()
         expect(string.find(moduleSource, "function WaterFeatures:destroy", 1, true)).toNotBeNil()
     end)
 
+    it("should have _createAllFountains() private method", function()
+        expect(string.find(moduleSource, "function WaterFeatures:_createAllFountains", 1, true)).toNotBeNil()
+    end)
+
     it("should have _createFountain() private method", function()
         expect(string.find(moduleSource, "function WaterFeatures:_createFountain", 1, true)).toNotBeNil()
     end)
@@ -53,44 +57,52 @@ describe("WaterFeatures", function()
         expect(string.find(moduleSource, "require(script.Parent.WaterPool)", 1, true)).toNotBeNil()
     end)
 
-    it("should use marble material for fountain", function()
-        expect(string.find(moduleSource, "Enum.Material.Marble", 1, true)).toNotBeNil()
+    it("should require FountainConfig module", function()
+        expect(string.find(moduleSource, "FountainConfig", 1, true)).toNotBeNil()
     end)
 
     it("should use rock material for river", function()
         expect(string.find(moduleSource, "Enum.Material.Rock", 1, true)).toNotBeNil()
     end)
 
-    it("should create fountain with Roman name", function()
-        expect(string.find(moduleSource, "RomanFountain_Impluvium", 1, true)).toNotBeNil()
-    end)
-
     it("should create river segments", function()
         expect(string.find(moduleSource, "River_Segment_", 1, true)).toNotBeNil()
-    end)
-
-    it("should use marble white color", function()
-        expect(string.find(moduleSource, "MARBLE_WHITE", 1, true)).toNotBeNil()
     end)
 
     it("should use rock gray color", function()
         expect(string.find(moduleSource, "ROCK_GRAY", 1, true)).toNotBeNil()
     end)
 
-    it("should have configurable fountain position", function()
-        expect(string.find(moduleSource, "fountainPosition", 1, true)).toNotBeNil()
-    end)
-
     it("should have configurable river start position", function()
         expect(string.find(moduleSource, "riverStartPosition", 1, true)).toNotBeNil()
     end)
 
-    it("should have enableFountain option", function()
-        expect(string.find(moduleSource, "enableFountain", 1, true)).toNotBeNil()
+    it("should have enableFountains option", function()
+        expect(string.find(moduleSource, "enableFountains", 1, true)).toNotBeNil()
     end)
 
     it("should have enableRiver option", function()
         expect(string.find(moduleSource, "enableRiver", 1, true)).toNotBeNil()
+    end)
+
+    it("should have getFountainCount() method", function()
+        expect(string.find(moduleSource, "function WaterFeatures:getFountainCount", 1, true)).toNotBeNil()
+    end)
+
+    it("should have getRiverSegmentCount() method", function()
+        expect(string.find(moduleSource, "function WaterFeatures:getRiverSegmentCount", 1, true)).toNotBeNil()
+    end)
+
+    it("should store fountains in fountainPools array", function()
+        expect(string.find(moduleSource, "fountainPools", 1, true)).toNotBeNil()
+    end)
+
+    it("should use rimHeight from FountainConfig", function()
+        expect(string.find(moduleSource, "rimHeight", 1, true)).toNotBeNil()
+    end)
+
+    it("should support customFountainPlacements", function()
+        expect(string.find(moduleSource, "customFountainPlacements", 1, true)).toNotBeNil()
     end)
 
     it("should not have auto-executing code at module end", function()

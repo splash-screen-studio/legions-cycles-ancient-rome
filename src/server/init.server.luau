@@ -95,10 +95,9 @@ local spawnManager = SpawnManager.new({
 spawnManager:start()
 
 -- Bootstrap water features (must be after terrain generation)
--- NOTE: River is now handled by RiverBuilder, disable old river segments
+-- NOTE: River is now handled by RiverBuilder, fountains from FountainConfig
 local waterFeatures = WaterFeatures.new({
-    fountainPosition = Vector3.new(350, 0, 350), -- Near spawn area
-    enableFountain = true,
+    enableFountains = true, -- Creates multiple fountains from FountainConfig
     enableRiver = false, -- Disabled: river now built by RiverBuilder
 })
 waterFeatures:start()
