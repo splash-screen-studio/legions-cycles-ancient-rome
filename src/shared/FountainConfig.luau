@@ -39,7 +39,7 @@ export type FountainTypeConfig = {
 }
 
 -- Type configurations
-FountainConfig.TYPES: { [FountainType]: FountainTypeConfig } = {
+FountainConfig.TYPES = {
     basin = {
         name = "Basin",
         size = Vector3.new(5, 4, 5), -- 5x5 footprint, 4 studs deep
@@ -83,7 +83,7 @@ export type FountainPlacement = {
 
 -- Default fountain placements across the map
 -- These align with WorldPlan zones and landmarks
-FountainConfig.DEFAULT_PLACEMENTS: { FountainPlacement } = {
+FountainConfig.DEFAULT_PLACEMENTS = {
     -- Forum center (large public fountain) - civic area
     {
         position = Vector3.new(512, 0, 512),
