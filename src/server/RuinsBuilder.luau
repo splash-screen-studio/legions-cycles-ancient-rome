@@ -34,8 +34,8 @@ local CRACKED_BRICK = Color3.fromRGB(150, 90, 65)
 local AGED_CONCRETE = Color3.fromRGB(130, 125, 115)
 local DARK_STONE = Color3.fromRGB(100, 95, 90)
 
--- Ruin size categories (studs)
-local RUIN_SIZES = {
+-- Ruin size categories (studs) - reserved for future use
+local _RUIN_SIZES = {
     small = { min = 8, max = 12 },
     medium = { min = 20, max = 30 },
     large = { min = 40, max = 60 },
@@ -55,8 +55,8 @@ local MIN_LANDMARK_DISTANCE = 60
 -- Minimum distance from roads to place ruins
 local MIN_ROAD_DISTANCE = 15
 
--- Maximum distance from roads to place ruins (for historical context)
-local MAX_ROAD_DISTANCE = 200
+-- Maximum distance from roads to place ruins (for historical context) - reserved for future use
+local _MAX_ROAD_DISTANCE = 200
 
 export type RuinType = "fallen_column" | "column_fragment" | "column_base" | "fallen_colonnade"
     | "partial_wall" | "wall_foundation" | "broken_archway"
@@ -272,7 +272,8 @@ function RuinsBuilder:_createFallenColonnade(
     z: number,
     folder: Folder
 ): ()
-    local terrainY = TerrainUtils.getHeightAt(self.terrain, x, z)
+    -- Note: terrainY for center not used, each column gets its own height
+    local _terrainY = TerrainUtils.getHeightAt(self.terrain, x, z)
 
     math.randomseed(self.seed + math.floor(x * 100 + z))
     local numColumns = 3 + math.random(0, 2)
@@ -321,8 +322,7 @@ function RuinsBuilder:_createPartialWall(
     z: number,
     folder: Folder
 ): ()
-    local terrainY = TerrainUtils.getHeightAt(self.terrain, x, z)
-
+    -- Note: each wall segment gets its own terrain height
     math.randomseed(self.seed + math.floor(x * 100 + z))
     local wallLength = 15 + math.random() * 15
     local wallHeight = 4 + math.random() * 6
@@ -450,8 +450,7 @@ function RuinsBuilder:_createBuildingFoundation(
     z: number,
     folder: Folder
 ): ()
-    local terrainY = TerrainUtils.getHeightAt(self.terrain, x, z)
-
+    -- Note: each wall segment gets its own terrain height
     math.randomseed(self.seed + math.floor(x * 100 + z))
     local width = 15 + math.random() * 20
     local depth = 12 + math.random() * 15
@@ -581,8 +580,7 @@ function RuinsBuilder:_createRubblePile(
     z: number,
     folder: Folder
 ): ()
-    local terrainY = TerrainUtils.getHeightAt(self.terrain, x, z)
-
+    -- Note: each rubble block gets its own terrain height
     math.randomseed(self.seed + math.floor(x * 100 + z))
     local numBlocks = 5 + math.random(0, 8)
     local pileRadius = 4 + math.random() * 4
@@ -623,8 +621,7 @@ function RuinsBuilder:_createDebrisScatter(
     z: number,
     folder: Folder
 ): ()
-    local terrainY = TerrainUtils.getHeightAt(self.terrain, x, z)
-
+    -- Note: each debris piece gets its own terrain height
     math.randomseed(self.seed + math.floor(x * 100 + z))
     local numPieces = 8 + math.random(0, 10)
     local scatterRadius = 6 + math.random() * 6
@@ -876,7 +873,8 @@ function RuinsBuilder:build(): Folder
     -- Initialize random with seed
     math.randomseed(self.seed)
 
-    local halfSize = self.mapSize / 2
+    -- Note: halfSize reserved for potential future edge-of-map calculations
+    local _halfSize = self.mapSize / 2
     local attempts = 0
     local maxAttempts = self.targetCount * 10
 
