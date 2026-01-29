@@ -5,14 +5,15 @@
 
     Material selection follows a priority chain:
     1. Road proximity (cobblestone)
-    2. Water proximity (sand)
+    2. Water proximity (sand beach + grass ring)
     3. Structure/landmark proximity (cobblestone/marble)
     4. Zone overlay (urban = paved, rural = grass)
-    5. Base altitude (high = rock, low = grass)
+    5. Slope-based (steep = rocky/arid)
+    6. Base altitude (high = rock, low = grass)
 ]]
 
 local MaterialConfig = {}
-MaterialConfig.VERSION = "1.0.0"
+MaterialConfig.VERSION = "2.0.0"
 
 -- Export types for material configuration
 export type AltitudeBand = {
@@ -34,9 +35,19 @@ export type ProximityRule = {
     radius: number,
 }
 
+export type SlopeBand = {
+    minSlope: number,
+    maxSlope: number,
+    primaryMaterial: Enum.Material,
+    secondaryMaterial: Enum.Material,
+    grassPercentage: number,
+}
+
 -- Altitude bands for base material selection
 -- Heights are in studs, based on TerrainManager's baseHeight=20, amplitude=40
+-- Mediterranean climate: rocky hilltops, grassy valleys
 MaterialConfig.ALTITUDE_BANDS = {
+    -- Hilltops: Rocky and arid
     {
         minAltitude = 50,
         maxAltitude = math.huge,
@@ -44,54 +55,108 @@ MaterialConfig.ALTITUDE_BANDS = {
         secondaryMaterial = Enum.Material.Slate,
         grassPercentage = 0.05,
     },
+    -- Upper hillsides: Mix of rock and sandstone, sparse grass
     {
-        minAltitude = 35,
+        minAltitude = 40,
         maxAltitude = 50,
-        primaryMaterial = Enum.Material.Rock,
-        secondaryMaterial = Enum.Material.Ground,
-        grassPercentage = 0.15,
+        primaryMaterial = Enum.Material.Sandstone,
+        secondaryMaterial = Enum.Material.Rock,
+        grassPercentage = 0.10,
     },
+    -- Lower hillsides: Ground with some grass
+    {
+        minAltitude = 30,
+        maxAltitude = 40,
+        primaryMaterial = Enum.Material.Ground,
+        secondaryMaterial = Enum.Material.Sandstone,
+        grassPercentage = 0.25,
+    },
+    -- Flat areas: Balanced ground and grass
     {
         minAltitude = 20,
-        maxAltitude = 35,
+        maxAltitude = 30,
         primaryMaterial = Enum.Material.Ground,
         secondaryMaterial = Enum.Material.Grass,
-        grassPercentage = 0.40,
+        grassPercentage = 0.45,
     },
+    -- Valleys: Lush grass, concentrated vegetation
     {
         minAltitude = -math.huge,
         maxAltitude = 20,
         primaryMaterial = Enum.Material.Grass,
         secondaryMaterial = Enum.Material.Ground,
-        grassPercentage = 0.60,
+        grassPercentage = 0.65,
+    },
+}
+
+-- Slope bands for material selection (degrees)
+-- Steeper slopes = more rocky/arid materials
+MaterialConfig.SLOPE_BANDS = {
+    -- Very steep: Rocky outcrops
+    {
+        minSlope = 35,
+        maxSlope = math.huge,
+        primaryMaterial = Enum.Material.Rock,
+        secondaryMaterial = Enum.Material.Slate,
+        grassPercentage = 0.0,
+    },
+    -- Steep hillsides: Sandstone and rock
+    {
+        minSlope = 25,
+        maxSlope = 35,
+        primaryMaterial = Enum.Material.Sandstone,
+        secondaryMaterial = Enum.Material.Rock,
+        grassPercentage = 0.05,
+    },
+    -- Moderate slopes: Ground with sparse vegetation
+    {
+        minSlope = 15,
+        maxSlope = 25,
+        primaryMaterial = Enum.Material.Ground,
+        secondaryMaterial = Enum.Material.Sandstone,
+        grassPercentage = 0.15,
+    },
+    -- Gentle slopes: Normal material selection
+    {
+        minSlope = 0,
+        maxSlope = 15,
+        primaryMaterial = Enum.Material.Ground,
+        secondaryMaterial = Enum.Material.Grass,
+        grassPercentage = 0.40,
     },
 }
 
 -- Zone material overrides (higher priority than altitude)
+-- Mediterranean zones: urban areas paved, wilderness is arid
 MaterialConfig.ZONE_MATERIALS = {
+    -- Civic areas: Heavy paving with minimal vegetation
     civic = {
         primaryMaterial = Enum.Material.Cobblestone,
         secondaryMaterial = Enum.Material.Brick,
-        grassPercentage = 0.05,
+        grassPercentage = 0.02,
     },
+    -- Urban areas: Mostly paved with some dirt paths
     urban = {
         primaryMaterial = Enum.Material.Cobblestone,
         secondaryMaterial = Enum.Material.Ground,
-        grassPercentage = 0.10,
+        grassPercentage = 0.08,
     },
+    -- Rural areas: Balanced ground and grass for farmland
     rural = {
         primaryMaterial = Enum.Material.Ground,
         secondaryMaterial = Enum.Material.Grass,
-        grassPercentage = 0.50,
+        grassPercentage = 0.40,
     },
+    -- Wilderness: Sandy/arid with sparse vegetation
     wilderness = {
-        primaryMaterial = Enum.Material.Grass,
-        secondaryMaterial = Enum.Material.Ground,
-        grassPercentage = 0.55,
+        primaryMaterial = Enum.Material.Ground,
+        secondaryMaterial = Enum.Material.Sandstone,
+        grassPercentage = 0.30,
     },
 }
 
 -- Proximity rules (highest priority)
+-- Water proximity creates lush vegetation bands
 MaterialConfig.PROXIMITY_RULES = {
     road = {
         material = Enum.Material.Cobblestone,
@@ -99,7 +164,11 @@ MaterialConfig.PROXIMITY_RULES = {
     } :: ProximityRule,
     river = {
         material = Enum.Material.Sand,
-        radius = 20,
+        radius = 8, -- Narrow sand beach at water edge
+    } :: ProximityRule,
+    riverGrass = {
+        material = Enum.Material.Grass,
+        radius = 25, -- Lush grass band near water
     } :: ProximityRule,
     structure = {
         material = Enum.Material.Cobblestone,
@@ -107,7 +176,11 @@ MaterialConfig.PROXIMITY_RULES = {
     } :: ProximityRule,
     fountain = {
         material = Enum.Material.Sand,
-        radius = 15,
+        radius = 8, -- Narrow sand around fountains
+    } :: ProximityRule,
+    fountainGrass = {
+        material = Enum.Material.Grass,
+        radius = 18, -- Grass ring around fountain sand
     } :: ProximityRule,
 }
 
@@ -133,14 +206,15 @@ MaterialConfig.ALLOWED_MATERIALS = {
 }
 
 -- Target overall map coverage (for reference/validation)
+-- Mediterranean balance: ~40% Grass, ~30% Ground, ~20% Rock/Sandstone, ~10% Sand
 MaterialConfig.TARGET_COVERAGE = {
-    Ground = 0.35,
-    Grass = 0.25,
-    Rock = 0.15,
-    Slate = 0.05,
-    Sand = 0.05,
-    Sandstone = 0.05,
-    Cobblestone = 0.10,
+    Grass = 0.40, -- Concentrated in valleys, near water
+    Ground = 0.30, -- Paths, transitions, flat areas
+    Rock = 0.10, -- Hilltops, steep slopes
+    Sandstone = 0.08, -- Hillsides, arid zones
+    Slate = 0.02, -- Rocky outcrops
+    Sand = 0.05, -- Beaches, water edges
+    Cobblestone = 0.05, -- Roads, urban areas
 }
 
 -- Helper functions
@@ -154,6 +228,17 @@ function MaterialConfig.getAltitudeBand(altitude: number): AltitudeBand
     end
     -- Default to lowest band if no match
     return MaterialConfig.ALTITUDE_BANDS[#MaterialConfig.ALTITUDE_BANDS]
+end
+
+-- Get slope band for a given slope in degrees
+function MaterialConfig.getSlopeBand(slopeDegrees: number): SlopeBand
+    for _, band in ipairs(MaterialConfig.SLOPE_BANDS) do
+        if slopeDegrees >= band.minSlope and slopeDegrees < band.maxSlope then
+            return band
+        end
+    end
+    -- Default to gentlest slope band if no match
+    return MaterialConfig.SLOPE_BANDS[#MaterialConfig.SLOPE_BANDS]
 end
 
 -- Get zone material override
