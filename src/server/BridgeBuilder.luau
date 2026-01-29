@@ -17,9 +17,12 @@ local Shared = ReplicatedStorage:WaitForChild("Shared")
 local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
 local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
 
+-- Import RiverBuilder for shared constants
+local RiverBuilder = require(script.Parent.RiverBuilder)
+
 local BridgeBuilder = {}
 BridgeBuilder.__index = BridgeBuilder
-BridgeBuilder.VERSION = "1.0.0"
+BridgeBuilder.VERSION = "1.0.1"
 
 -- Bridge construction constants
 local BRIDGE_HEIGHT = 6 -- Height of bridge deck above river water
@@ -322,8 +325,8 @@ function BridgeBuilder:_buildBridge(
     -- Calculate deck Y position (above water level)
     local deckY = terrainY + BRIDGE_HEIGHT
 
-    -- River floor estimate (based on RiverBuilder constants)
-    local riverFloorY = terrainY - 12 -- WALL_HEIGHT from RiverBuilder
+    -- River floor estimate (using shared constant from RiverBuilder)
+    local riverFloorY = terrainY - RiverBuilder.WALL_HEIGHT
 
     -- Create bridge folder for organization
     local bridgeFolder = Instance.new("Folder")
