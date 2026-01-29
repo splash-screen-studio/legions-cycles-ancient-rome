@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.2.0"
+local VERSION = "1.3.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -36,6 +36,9 @@ print(string.format("[Server] Loaded RiverBuilder v%s", RiverBuilder.VERSION))
 
 local TerrainMaterials = require(script.TerrainMaterials)
 print(string.format("[Server] Loaded TerrainMaterials v%s", TerrainMaterials.VERSION))
+
+local BridgeBuilder = require(script.BridgeBuilder)
+print(string.format("[Server] Loaded BridgeBuilder v%s", BridgeBuilder.VERSION))
 
 -- Configuration
 local MAP_SIZE = 1024
@@ -77,6 +80,12 @@ local terrainMaterials = TerrainMaterials.new({
     worldPlan = worldPlan,
 })
 terrainMaterials:applyAll()
+
+-- STEP 5: Build bridges at road/river intersections
+local bridgeBuilder = BridgeBuilder.new({
+    worldPlan = worldPlan,
+})
+bridgeBuilder:build()
 
 -- Bootstrap map boundary walls
 local mapBoundary = MapBoundary.new({
