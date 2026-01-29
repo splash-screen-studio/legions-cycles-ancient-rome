@@ -139,6 +139,7 @@ spawnManager:start()
 local waterFeatures = WaterFeatures.new({
     enableFountains = true, -- Creates multiple fountains from FountainConfig
     enableRiver = false, -- Disabled: river now built by RiverBuilder
+    worldPlan = worldPlan, -- Pass world plan for river exclusion checks
 })
 waterFeatures:start()
 

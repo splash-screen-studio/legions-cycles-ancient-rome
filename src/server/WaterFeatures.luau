@@ -15,7 +15,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local WaterFeatures = {}
 WaterFeatures.__index = WaterFeatures
-WaterFeatures.VERSION = "2.1.0"
+WaterFeatures.VERSION = "2.2.0"
 
 -- Import WaterPool module (same folder)
 local WaterPool = require(script.Parent.WaterPool)
@@ -26,6 +26,7 @@ export type WaterFeaturesConfig = {
     enableRiver: boolean?, -- Enable river (default: true)
     customFountainPlacements: any?, -- Custom fountain placements (optional)
     riverStartPosition: Vector3?, -- Custom river start (default valley)
+    worldPlan: any?, -- WorldPlan instance for river exclusion checks
 }
 
 export type WaterFeaturesInstance = typeof(setmetatable(
@@ -37,6 +38,7 @@ export type WaterFeaturesInstance = typeof(setmetatable(
         terrain: Terrain,
         fountainConfig: any,
         constants: any,
+        worldPlan: any?,
     },
     WaterFeatures
 ))
@@ -58,6 +60,7 @@ function WaterFeatures.new(config: WaterFeaturesConfig?): WaterFeaturesInstance
     self.terrain = workspace.Terrain
     self.fountainConfig = FountainConfig
     self.constants = Constants
+    self.worldPlan = (config or {}).worldPlan
 
     print(string.format("[WaterFeatures v%s] Initializing...", WaterFeatures.VERSION))
     return self
@@ -94,8 +97,23 @@ function WaterFeatures:_createAllFountains()
     print(string.format("[WaterFeatures v%s] Evaluating %d fountain placements...", WaterFeatures.VERSION, #placements))
 
     local skippedCount = 0
+    local skippedRiverCount = 0
     for _, placement in ipairs(placements) do
         local x, z = placement.position.X, placement.position.Z
+
+        -- Check river exclusion zone FIRST (before slope check)
+        if self.worldPlan and self.worldPlan:isInRiverExclusionZone(x, z) then
+            print(string.format(
+                "[WaterFeatures v%s] Skipping fountain '%s' at (%.0f, %.0f) - inside river exclusion zone",
+                WaterFeatures.VERSION,
+                placement.name or "unnamed",
+                x,
+                z
+            ))
+            skippedRiverCount = skippedRiverCount + 1
+            continue
+        end
+
         local isFlatEnough = TerrainUtils.isFlatEnoughDegrees(self.terrain, x, z, maxFountainSlope, sampleDistance)
 
         if isFlatEnough then
@@ -116,10 +134,11 @@ function WaterFeatures:_createAllFountains()
     end
 
     print(string.format(
-        "[WaterFeatures v%s] Created %d fountains, skipped %d due to steep terrain",
+        "[WaterFeatures v%s] Created %d fountains, skipped %d due to steep terrain, %d due to river proximity",
         WaterFeatures.VERSION,
         #self.fountainPools,
-        skippedCount
+        skippedCount,
+        skippedRiverCount
     ))
 end
 
