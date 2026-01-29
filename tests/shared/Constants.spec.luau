@@ -85,5 +85,26 @@ return function(describe: DescribeFn, it: ItFn, expect: ExpectFn)
             expect(Constants.AI.PATROL_SPEED).to.be.ok()
             expect(Constants.AI.DETECTION_RANGE).to.be.ok()
         end)
+
+        it("should have SLOPE constraints", function()
+            expect(Constants.SLOPE).to.be.ok()
+            expect(Constants.SLOPE.MAX_URBAN_SLOPE).to.be.ok()
+            expect(type(Constants.SLOPE.MAX_URBAN_SLOPE)).to.equal("number")
+            expect(Constants.SLOPE.MAX_FOUNTAIN_SLOPE).to.be.ok()
+            expect(type(Constants.SLOPE.MAX_FOUNTAIN_SLOPE)).to.equal("number")
+            expect(Constants.SLOPE.RIVER_CLIFF_MARGIN).to.be.ok()
+            expect(type(Constants.SLOPE.RIVER_CLIFF_MARGIN)).to.equal("number")
+            expect(Constants.SLOPE.SAMPLE_DISTANCE).to.be.ok()
+            expect(type(Constants.SLOPE.SAMPLE_DISTANCE)).to.equal("number")
+        end)
+
+        it("should have appropriate slope values", function()
+            -- Urban slope should be greater than fountain slope
+            expect(Constants.SLOPE.MAX_URBAN_SLOPE).to.be.greaterThan(Constants.SLOPE.MAX_FOUNTAIN_SLOPE)
+            -- Fountain slope should be at most 20 degrees
+            expect(Constants.SLOPE.MAX_FOUNTAIN_SLOPE).to.equal(20)
+            -- Urban slope should be at most 30 degrees
+            expect(Constants.SLOPE.MAX_URBAN_SLOPE).to.equal(30)
+        end)
     end)
 end

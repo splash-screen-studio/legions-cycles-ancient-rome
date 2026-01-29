@@ -13,7 +13,7 @@
 
 local WorldPlan = {}
 WorldPlan.__index = WorldPlan
-WorldPlan.VERSION = "1.0.0"
+WorldPlan.VERSION = "1.1.0"
 
 -- Type definitions for the world plan data
 export type ZoneType = "urban" | "rural" | "civic" | "wilderness"
@@ -53,6 +53,7 @@ export type WorldPlanData = {
     -- River path (source of truth for water)
     riverPath: { Vector2 },
     riverWidth: number,
+    riverExclusionWidth: number?, -- Width including cliff margins for urban placement
 
     -- Zones (source of truth for urban/rural)
     zones: { Zone },
@@ -68,6 +69,10 @@ export type WorldPlanData = {
 
     -- Map dimensions
     mapSize: number,
+
+    -- Slope constraints for placement validation
+    maxUrbanSlope: number?, -- Max slope (degrees) for urban zones
+    maxFountainSlope: number?, -- Max slope (degrees) for fountains
 }
 
 export type WorldPlanInstance = typeof(setmetatable(
@@ -152,6 +157,30 @@ end
 function WorldPlan.getDistanceToRiver(self: WorldPlanInstance, x: number, z: number): number
     local point = Vector2.new(x, z)
     return distanceToPath(point, self.data.riverPath)
+end
+
+-- Check if position is in the river cliff exclusion zone (river + cliff margins)
+-- Used to prevent urban placement on steep terrain near river
+function WorldPlan.isInRiverExclusionZone(self: WorldPlanInstance, x: number, z: number): boolean
+    local point = Vector2.new(x, z)
+    local distance = distanceToPath(point, self.data.riverPath)
+    local exclusionWidth = self.data.riverExclusionWidth or self.data.riverWidth
+    return distance <= (exclusionWidth / 2)
+end
+
+-- Get the river exclusion width (river + cliff margins)
+function WorldPlan.getRiverExclusionWidth(self: WorldPlanInstance): number
+    return self.data.riverExclusionWidth or self.data.riverWidth
+end
+
+-- Get the max slope for urban placement (in degrees)
+function WorldPlan.getMaxUrbanSlope(self: WorldPlanInstance): number
+    return self.data.maxUrbanSlope or 30 -- Default 30 degrees
+end
+
+-- Get the max slope for fountain placement (in degrees)
+function WorldPlan.getMaxFountainSlope(self: WorldPlanInstance): number
+    return self.data.maxFountainSlope or 20 -- Default 20 degrees
 end
 
 -- Zone queries
@@ -291,12 +320,12 @@ end
 
 -- Combined queries
 function WorldPlan.canPlaceStructure(self: WorldPlanInstance, x: number, z: number, size: Vector2): (boolean, string?)
-    -- Check if position is on river
-    if self:isOnRiver(x, z) then
-        return false, "Cannot place on river"
+    -- Check if position is in river exclusion zone (includes cliff margins)
+    if self:isInRiverExclusionZone(x, z) then
+        return false, "Cannot place near river cliffs"
     end
 
-    -- Check corners and center for river collision
+    -- Check corners and center for river exclusion zone collision
     local halfSize = size / 2
     local checkPoints = {
         Vector2.new(x - halfSize.X, z - halfSize.Y),
@@ -306,8 +335,8 @@ function WorldPlan.canPlaceStructure(self: WorldPlanInstance, x: number, z: numb
     }
 
     for _, point in ipairs(checkPoints) do
-        if self:isOnRiver(point.X, point.Y) then
-            return false, "Structure would overlap river"
+        if self:isInRiverExclusionZone(point.X, point.Y) then
+            return false, "Structure would overlap river exclusion zone"
         end
     end
 

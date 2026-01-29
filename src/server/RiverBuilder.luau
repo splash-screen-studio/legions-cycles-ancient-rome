@@ -19,10 +19,12 @@ local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
 
 local RiverBuilder = {}
 RiverBuilder.__index = RiverBuilder
-RiverBuilder.VERSION = "1.1.0"
 
--- River construction constants
+RiverBuilder.VERSION = "1.2.0"
+
+-- River construction constants (exported for other modules like BridgeBuilder)
 local WALL_HEIGHT = 12 -- Height of river walls (deep enough to swim: 8-12 studs)
+RiverBuilder.WALL_HEIGHT = WALL_HEIGHT -- Export for BridgeBuilder
 local WALL_THICKNESS = 2 -- Thickness of wall parts
 local FLOOR_THICKNESS = 2 -- Thickness of river floor
 local _SEGMENT_LENGTH = 20 -- Length of each river segment (reserved for future use)
