@@ -261,6 +261,10 @@ describe("StructureModels", function()
         expect(string.find(moduleSource, "function StructureModels.createArch", 1, true)).toNotBeNil()
     end)
 
+    it("should have createThermae function", function()
+        expect(string.find(moduleSource, "function StructureModels.createThermae", 1, true)).toNotBeNil()
+    end)
+
     it("should return createInsula for INSULA", function()
         expect(string.find(moduleSource, '"INSULA"', 1, true)).toNotBeNil()
         expect(string.find(moduleSource, "StructureModels.createInsula", 1, true)).toNotBeNil()
@@ -279,6 +283,11 @@ describe("StructureModels", function()
     it("should return createArch for ARCH", function()
         expect(string.find(moduleSource, '"ARCH"', 1, true)).toNotBeNil()
         expect(string.find(moduleSource, "StructureModels.createArch", 1, true)).toNotBeNil()
+    end)
+
+    it("should return createThermae for THERMAE", function()
+        expect(string.find(moduleSource, '"THERMAE"', 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "StructureModels.createThermae", 1, true)).toNotBeNil()
     end)
 
     -- Insula structure components (using whole module since function has nested blocks)
@@ -377,6 +386,46 @@ describe("StructureModels", function()
     -- WOOD_BROWN color constant for Forum Stall
     it("should have WOOD_BROWN color constant", function()
         expect(string.find(moduleSource, "local WOOD_BROWN", 1, true)).toNotBeNil()
+    end)
+
+    -- POOL_BLUE color constant for Thermae
+    it("should have POOL_BLUE color constant", function()
+        expect(string.find(moduleSource, "local POOL_BLUE", 1, true)).toNotBeNil()
+    end)
+
+    -- Thermae structure components
+    it("should create floor in Thermae", function()
+        expect(string.find(moduleSource, "function StructureModels.createThermae", 1, true)).toNotBeNil()
+        -- Floor is created as foundation
+        expect(string.find(moduleSource, "-- Foundation/floor", 1, true)).toNotBeNil()
+    end)
+
+    it("should create 4 columns in Thermae", function()
+        -- Thermae has 4 columns along the front
+        expect(string.find(moduleSource, "-- 4 columns along the front", 1, true)).toNotBeNil()
+    end)
+
+    it("should create pool basin in Thermae", function()
+        expect(string.find(moduleSource, '"PoolBasin"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create pool water in Thermae", function()
+        expect(string.find(moduleSource, '"PoolWater"', 1, true)).toNotBeNil()
+    end)
+
+    it("should use Glass material for pool water", function()
+        -- Pool water uses Glass material
+        expect(string.find(moduleSource, "Material.Glass", 1, true)).toNotBeNil()
+    end)
+
+    it("should create doorway in Thermae", function()
+        -- Thermae has arched entrance doorway
+        expect(string.find(moduleSource, "-- Front wall (+Z) with arched doorway", 1, true)).toNotBeNil()
+    end)
+
+    it("should create roof in Thermae", function()
+        -- Thermae has terracotta roof
+        expect(string.find(moduleSource, "-- Terracotta roof with slight overhang", 1, true)).toNotBeNil()
     end)
 
     it("should use strict mode", function()

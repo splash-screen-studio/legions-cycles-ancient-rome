@@ -13,7 +13,7 @@
 
 local StructureModels = {}
 StructureModels.__index = StructureModels
-StructureModels.VERSION = "1.1.0"
+StructureModels.VERSION = "1.2.0"
 
 -- Roman architectural colors (consistent with LandmarkBuilder)
 local MARBLE_WHITE = Color3.fromRGB(240, 235, 225)
@@ -22,6 +22,7 @@ local TERRACOTTA = Color3.fromRGB(180, 100, 70)
 local STONE_GRAY = Color3.fromRGB(160, 155, 145)
 local SAND_BEIGE = Color3.fromRGB(194, 178, 128)
 local WOOD_BROWN = Color3.fromRGB(139, 90, 43)
+local POOL_BLUE = Color3.fromRGB(100, 150, 200)
 
 -- Wall and doorway defaults
 local WALL_THICKNESS = 1.5
@@ -868,6 +869,107 @@ function StructureModels.createWatchtower(position: Vector3, size: Vector3, mode
 end
 
 --[[
+    Create Thermae (Roman public baths)
+    Main building with walls, columns along front, central pool, arched entrance, terracotta roof
+    @param position Base position (center of structure at terrain level)
+    @param size Structure footprint from BuildConfig (width, height, depth)
+    @param model Parent model to add parts to
+]]
+function StructureModels.createThermae(position: Vector3, size: Vector3, model: Model): ()
+    local width = size.X
+    local height = size.Y
+    local depth = size.Z
+    local baseY = position.Y
+    local centerX = position.X
+    local centerZ = position.Z
+
+    local wallHeight = height * 0.8
+    local wallThickness = WALL_THICKNESS
+
+    -- Foundation/floor
+    createPart(
+        "Floor",
+        Vector3.new(centerX, baseY + 0.25, centerZ),
+        Vector3.new(width - wallThickness * 2, 0.5, depth - wallThickness * 2),
+        MARBLE_CREAM,
+        Enum.Material.Marble,
+        model
+    )
+
+    -- Front wall (+Z) with arched doorway
+    createWallWithDoorway(
+        centerX, baseY, centerZ + depth / 2 - wallThickness / 2,
+        width, wallHeight, wallThickness,
+        false, MARBLE_WHITE, Enum.Material.Marble, model
+    )
+
+    -- Back wall (-Z) solid
+    createSolidWall(
+        centerX, baseY, centerZ - depth / 2 + wallThickness / 2,
+        width, wallHeight, wallThickness,
+        false, MARBLE_WHITE, Enum.Material.Marble, model
+    )
+
+    -- Left wall (-X) solid
+    createSolidWall(
+        centerX - width / 2 + wallThickness / 2, baseY, centerZ,
+        depth - wallThickness * 2, wallHeight, wallThickness,
+        true, MARBLE_WHITE, Enum.Material.Marble, model
+    )
+
+    -- Right wall (+X) solid
+    createSolidWall(
+        centerX + width / 2 - wallThickness / 2, baseY, centerZ,
+        depth - wallThickness * 2, wallHeight, wallThickness,
+        true, MARBLE_WHITE, Enum.Material.Marble, model
+    )
+
+    -- 4 columns along the front
+    local columnSpacing = width / 5
+    local columnZ = centerZ + depth / 2 - wallThickness - 2
+    for i = 1, 4 do
+        local columnX = centerX - width / 2 + i * columnSpacing
+        createColumn(columnX, baseY, columnZ, model)
+    end
+
+    -- Central pool (blue-tinted Part, NOT water terrain)
+    local poolWidth = width * 0.5
+    local poolDepth = depth * 0.4
+    local poolHeight = 1.5
+
+    -- Pool basin (recessed)
+    createPart(
+        "PoolBasin",
+        Vector3.new(centerX, baseY + 0.5 - poolHeight / 2, centerZ - 1),
+        Vector3.new(poolWidth, poolHeight, poolDepth),
+        STONE_GRAY,
+        Enum.Material.Concrete,
+        model
+    )
+
+    -- Pool water (blue glass part inside the basin)
+    local waterDepth = poolHeight - 0.3
+    createPart(
+        "PoolWater",
+        Vector3.new(centerX, baseY + 0.5 - waterDepth / 2, centerZ - 1),
+        Vector3.new(poolWidth - 0.5, waterDepth, poolDepth - 0.5),
+        POOL_BLUE,
+        Enum.Material.Glass,
+        model
+    )
+
+    -- Terracotta roof with slight overhang
+    createPart(
+        "Roof",
+        Vector3.new(centerX, baseY + wallHeight + 0.5, centerZ),
+        Vector3.new(width + 1, 1, depth + 1),
+        TERRACOTTA,
+        Enum.Material.Slate,
+        model
+    )
+end
+
+--[[
     Create an Arch (triumphal arch)
     Classic Roman arch with columns and decorative top
     @param position Base position (center of structure at terrain level)
@@ -962,7 +1064,7 @@ end
 
 --[[
     Get the structure builder function for a given structure ID
-    @param structureId The structure ID (DOMUS, TABERNA, TEMPLE, WALL, INSULA, FORUM_STALL, WATCHTOWER, ARCH)
+    @param structureId The structure ID (DOMUS, TABERNA, TEMPLE, WALL, INSULA, FORUM_STALL, WATCHTOWER, ARCH, THERMAE)
     @return The builder function or nil if not found
 ]]
 function StructureModels.getBuilder(structureId: string): ((position: Vector3, size: Vector3, model: Model) -> ())?
@@ -982,6 +1084,8 @@ function StructureModels.getBuilder(structureId: string): ((position: Vector3, s
         return StructureModels.createWatchtower
     elseif structureId == "ARCH" then
         return StructureModels.createArch
+    elseif structureId == "THERMAE" then
+        return StructureModels.createThermae
     end
     return nil
 end
