@@ -1,7 +1,7 @@
 --!strict
 -- Client Entry Point - Bootstraps all client systems
 
-local VERSION = "1.3.0"
+local VERSION = "1.4.0"
 print(string.format("[Client v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -39,6 +39,9 @@ print(string.format("[Client] Loaded BuildUI v%s", BuildUI.VERSION))
 local TutorialManager = require(script.TutorialManager)
 print(string.format("[Client] Loaded TutorialManager v%s", TutorialManager.VERSION))
 
+local SpeedBoostManager = require(script.SpeedBoostManager)
+print(string.format("[Client] Loaded SpeedBoostManager v%s", SpeedBoostManager.VERSION))
+
 -- Bootstrap atmosphere (lighting, sky, fog)
 local atmosphereManager = AtmosphereManager.new()
 atmosphereManager:start()
@@ -70,5 +73,9 @@ buildUI:start()
 -- Bootstrap tutorial system (guides new players through first build)
 local tutorialManager = TutorialManager.new()
 tutorialManager:start()
+
+-- Bootstrap speed boost system (roads give movement speed bonus)
+local speedBoostManager = SpeedBoostManager.new()
+speedBoostManager:start()
 
 print(string.format("[Client v%s] All systems initialized", VERSION))
