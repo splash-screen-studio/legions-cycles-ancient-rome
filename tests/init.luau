@@ -133,6 +133,8 @@ require("./client/CurrencyDisplay.spec")
 require("./client/BuildUI.spec")
 require("./client/StructureMenu.spec")
 require("./client/PlacementPreview.spec")
+require("./client/TutorialUI.spec")
+require("./client/TutorialManager.spec")
 
 -- Print summary
 log("\n===========================================")

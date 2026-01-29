@@ -1,7 +1,7 @@
 --!strict
 -- Client Entry Point - Bootstraps all client systems
 
-local VERSION = "1.2.0"
+local VERSION = "1.3.0"
 print(string.format("[Client v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -36,6 +36,9 @@ print(string.format("[Client] Loaded CoordinateDisplay v%s", CoordinateDisplay.V
 local BuildUI = require(script.BuildUI)
 print(string.format("[Client] Loaded BuildUI v%s", BuildUI.VERSION))
 
+local TutorialManager = require(script.TutorialManager)
+print(string.format("[Client] Loaded TutorialManager v%s", TutorialManager.VERSION))
+
 -- Bootstrap atmosphere (lighting, sky, fog)
 local atmosphereManager = AtmosphereManager.new()
 atmosphereManager:start()
@@ -63,5 +66,9 @@ coordinateDisplay:start()
 -- Bootstrap build UI (mobile-first construction interface)
 local buildUI = BuildUI.new()
 buildUI:start()
+
+-- Bootstrap tutorial system (guides new players through first build)
+local tutorialManager = TutorialManager.new()
+tutorialManager:start()
 
 print(string.format("[Client v%s] All systems initialized", VERSION))
