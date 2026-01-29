@@ -50,6 +50,22 @@ describe("WorldPlan", function()
         expect(string.find(moduleSource, "function WorldPlan.getDistanceToRiver", 1, true)).toNotBeNil()
     end)
 
+    it("should have isInRiverExclusionZone() method", function()
+        expect(string.find(moduleSource, "function WorldPlan.isInRiverExclusionZone", 1, true)).toNotBeNil()
+    end)
+
+    it("should have getRiverExclusionWidth() method", function()
+        expect(string.find(moduleSource, "function WorldPlan.getRiverExclusionWidth", 1, true)).toNotBeNil()
+    end)
+
+    it("should have getMaxUrbanSlope() method", function()
+        expect(string.find(moduleSource, "function WorldPlan.getMaxUrbanSlope", 1, true)).toNotBeNil()
+    end)
+
+    it("should have getMaxFountainSlope() method", function()
+        expect(string.find(moduleSource, "function WorldPlan.getMaxFountainSlope", 1, true)).toNotBeNil()
+    end)
+
     -- Zone query interface
     it("should have getZoneAt() method", function()
         expect(string.find(moduleSource, "function WorldPlan.getZoneAt", 1, true)).toNotBeNil()
@@ -146,6 +162,18 @@ describe("WorldPlan", function()
 
     it("should export WorldPlanData type", function()
         expect(string.find(moduleSource, "export type WorldPlanData", 1, true)).toNotBeNil()
+    end)
+
+    it("should have riverExclusionWidth in WorldPlanData type", function()
+        expect(string.find(moduleSource, "riverExclusionWidth", 1, true)).toNotBeNil()
+    end)
+
+    it("should have maxUrbanSlope in WorldPlanData type", function()
+        expect(string.find(moduleSource, "maxUrbanSlope", 1, true)).toNotBeNil()
+    end)
+
+    it("should have maxFountainSlope in WorldPlanData type", function()
+        expect(string.find(moduleSource, "maxFountainSlope", 1, true)).toNotBeNil()
     end)
 
     it("should export WorldPlanInstance type", function()

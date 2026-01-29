@@ -47,5 +47,13 @@ return function(describe: DescribeFn, it: ItFn, expect: ExpectFn)
         it("should export getAverageHeight function", function()
             expect(type(TerrainUtils.getAverageHeight)).to.equal("function")
         end)
+
+        it("should export isFlatEnoughDegrees function", function()
+            expect(type(TerrainUtils.isFlatEnoughDegrees)).to.equal("function")
+        end)
+
+        it("should export getMaxSlopeDegrees function", function()
+            expect(type(TerrainUtils.getMaxSlopeDegrees)).to.equal("function")
+        end)
     end)
 end

@@ -111,6 +111,24 @@ function TerrainUtils.isFlatEnough(terrain: Terrain, x: number, z: number, maxSl
     return math.abs(slopeX) <= maxSlopeRadians and math.abs(slopeZ) <= maxSlopeRadians
 end
 
+--- Check if terrain at a position is flat enough for building (slope in degrees)
+--- More convenient API using degrees instead of radians
+function TerrainUtils.isFlatEnoughDegrees(terrain: Terrain, x: number, z: number, maxSlopeDegrees: number, sampleDistance: number?): boolean
+    local dist = sampleDistance or DEFAULT_SAMPLE_DISTANCE
+    local slopeX, slopeZ = TerrainUtils.getSlopeXZ(terrain, x, z, dist)
+    local maxSlopeRadians = math.rad(maxSlopeDegrees)
+    return math.abs(slopeX) <= maxSlopeRadians and math.abs(slopeZ) <= maxSlopeRadians
+end
+
+--- Get the maximum slope (in degrees) at a position
+--- Returns the steeper of X and Z slopes
+function TerrainUtils.getMaxSlopeDegrees(terrain: Terrain, x: number, z: number, sampleDistance: number?): number
+    local dist = sampleDistance or DEFAULT_SAMPLE_DISTANCE
+    local slopeX, slopeZ = TerrainUtils.getSlopeXZ(terrain, x, z, dist)
+    local maxSlopeRadians = math.max(math.abs(slopeX), math.abs(slopeZ))
+    return math.deg(maxSlopeRadians)
+end
+
 --- Get the average height across multiple sample points
 function TerrainUtils.getAverageHeight(terrain: Terrain, x: number, z: number, radius: number, samples: number?): number
     local numSamples = samples or 4

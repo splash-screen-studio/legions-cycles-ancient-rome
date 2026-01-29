@@ -125,4 +125,13 @@ Constants.AI = {
     LOSE_INTEREST_TIME = 10,
 }
 
+-- Terrain slope constraints for placement
+-- Slopes are in degrees for readability
+Constants.SLOPE = {
+    MAX_URBAN_SLOPE = 30, -- Urban zones should avoid terrain steeper than 30 degrees
+    MAX_FOUNTAIN_SLOPE = 20, -- Fountains need flatter ground (max 20 degrees)
+    RIVER_CLIFF_MARGIN = 30, -- Extra margin around river to avoid cliff edges
+    SAMPLE_DISTANCE = 4, -- Distance to sample terrain for slope calculation
+}
+
 return Constants

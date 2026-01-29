@@ -15,7 +15,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local WaterFeatures = {}
 WaterFeatures.__index = WaterFeatures
-WaterFeatures.VERSION = "2.0.0"
+WaterFeatures.VERSION = "2.1.0"
 
 -- Import WaterPool module (same folder)
 local WaterPool = require(script.Parent.WaterPool)
@@ -36,6 +36,7 @@ export type WaterFeaturesInstance = typeof(setmetatable(
         terrainUtils: any,
         terrain: Terrain,
         fountainConfig: any,
+        constants: any,
     },
     WaterFeatures
 ))
@@ -47,6 +48,7 @@ function WaterFeatures.new(config: WaterFeaturesConfig?): WaterFeaturesInstance
     local Shared = ReplicatedStorage:WaitForChild("Shared")
     local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
     local FountainConfig = require(Shared:WaitForChild("FountainConfig"))
+    local Constants = require(Shared:WaitForChild("Constants"))
 
     local self = setmetatable({}, WaterFeatures)
     self.config = config or {}
@@ -55,6 +57,7 @@ function WaterFeatures.new(config: WaterFeaturesConfig?): WaterFeaturesInstance
     self.terrainUtils = TerrainUtils
     self.terrain = workspace.Terrain
     self.fountainConfig = FountainConfig
+    self.constants = Constants
 
     print(string.format("[WaterFeatures v%s] Initializing...", WaterFeatures.VERSION))
     return self
@@ -80,20 +83,43 @@ end
 
 function WaterFeatures:_createAllFountains()
     local FountainConfig = self.fountainConfig
+    local TerrainUtils = self.terrainUtils
+    local Constants = self.constants
 
     -- Get placements (custom or default)
     local placements = self.config.customFountainPlacements or FountainConfig.getDefaultPlacements()
+    local maxFountainSlope = Constants.SLOPE.MAX_FOUNTAIN_SLOPE
+    local sampleDistance = Constants.SLOPE.SAMPLE_DISTANCE
 
-    print(string.format("[WaterFeatures v%s] Creating %d fountains...", WaterFeatures.VERSION, #placements))
+    print(string.format("[WaterFeatures v%s] Evaluating %d fountain placements...", WaterFeatures.VERSION, #placements))
 
+    local skippedCount = 0
     for _, placement in ipairs(placements) do
-        self:_createFountain(placement)
+        local x, z = placement.position.X, placement.position.Z
+        local isFlatEnough = TerrainUtils.isFlatEnoughDegrees(self.terrain, x, z, maxFountainSlope, sampleDistance)
+
+        if isFlatEnough then
+            self:_createFountain(placement)
+        else
+            local slope = TerrainUtils.getMaxSlopeDegrees(self.terrain, x, z, sampleDistance)
+            print(string.format(
+                "[WaterFeatures v%s] Skipping fountain '%s' at (%.0f, %.0f) - slope %.1f° exceeds max %.0f°",
+                WaterFeatures.VERSION,
+                placement.name or "unnamed",
+                x,
+                z,
+                slope,
+                maxFountainSlope
+            ))
+            skippedCount = skippedCount + 1
+        end
     end
 
     print(string.format(
-        "[WaterFeatures v%s] Created %d fountains across map",
+        "[WaterFeatures v%s] Created %d fountains, skipped %d due to steep terrain",
         WaterFeatures.VERSION,
-        #self.fountainPools
+        #self.fountainPools,
+        skippedCount
     ))
 end
 

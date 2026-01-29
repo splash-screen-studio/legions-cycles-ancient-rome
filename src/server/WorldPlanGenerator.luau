@@ -10,10 +10,11 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Shared = ReplicatedStorage:WaitForChild("Shared")
 local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
+local Constants = require(Shared:WaitForChild("Constants"))
 
 local WorldPlanGenerator = {}
 WorldPlanGenerator.__index = WorldPlanGenerator
-WorldPlanGenerator.VERSION = "1.0.0"
+WorldPlanGenerator.VERSION = "1.1.0"
 
 export type WorldPlanGeneratorConfig = {
     mapSize: number?,
@@ -21,6 +22,7 @@ export type WorldPlanGeneratorConfig = {
     riverWidth: number?,
     urbanRadius: number?,
     civicRadius: number?,
+    riverCliffMargin: number?, -- Extra margin around river to avoid cliff edges
 }
 
 export type WorldPlanGeneratorInstance = typeof(setmetatable(
@@ -31,6 +33,7 @@ export type WorldPlanGeneratorInstance = typeof(setmetatable(
         riverWidth: number,
         urbanRadius: number,
         civicRadius: number,
+        riverCliffMargin: number,
     },
     WorldPlanGenerator
 ))
@@ -52,6 +55,7 @@ function WorldPlanGenerator.new(config: WorldPlanGeneratorConfig?): WorldPlanGen
     self.riverWidth = cfg.riverWidth or DEFAULT_RIVER_WIDTH
     self.urbanRadius = cfg.urbanRadius or DEFAULT_URBAN_RADIUS
     self.civicRadius = cfg.civicRadius or DEFAULT_CIVIC_RADIUS
+    self.riverCliffMargin = cfg.riverCliffMargin or Constants.SLOPE.RIVER_CLIFF_MARGIN
 
     print(string.format("[WorldPlanGenerator v%s] Initializing with seed: %d", WorldPlanGenerator.VERSION, self.seed))
     return self
@@ -291,14 +295,20 @@ function WorldPlanGenerator.generate(self: WorldPlanGeneratorInstance): WorldPla
     local roads = self:_generateRoads()
     local playerPlots = self:_generatePlayerPlots()
 
+    -- Calculate river exclusion zone (river width + cliff margin on each side)
+    local riverExclusionWidth = self.riverWidth + (self.riverCliffMargin * 2)
+
     local planData: WorldPlan.WorldPlanData = {
         riverPath = riverPath,
         riverWidth = self.riverWidth,
+        riverExclusionWidth = riverExclusionWidth,
         zones = zones,
         landmarks = landmarks,
         roads = roads,
         playerPlots = playerPlots,
         mapSize = self.mapSize,
+        maxUrbanSlope = Constants.SLOPE.MAX_URBAN_SLOPE,
+        maxFountainSlope = Constants.SLOPE.MAX_FOUNTAIN_SLOPE,
     }
 
     local worldPlan = WorldPlan.new(planData)
@@ -312,6 +322,12 @@ function WorldPlanGenerator.generate(self: WorldPlanGeneratorInstance): WorldPla
         #landmarks,
         #roads,
         #playerPlots
+    ))
+    print(string.format("[WorldPlanGenerator v%s] River exclusion zone: %.0f studs (river: %.0f + margins: %.0f)",
+        WorldPlanGenerator.VERSION,
+        riverExclusionWidth,
+        self.riverWidth,
+        self.riverCliffMargin * 2
     ))
 
     return worldPlan
