@@ -30,7 +30,7 @@ local MARBLE_WHITE = Color3.fromRGB(240, 235, 225)
 local MARBLE_CREAM = Color3.fromRGB(230, 220, 200)
 local STONE_GRAY = Color3.fromRGB(160, 155, 145)
 local BRONZE = Color3.fromRGB(180, 140, 80)
-local TERRACOTTA = Color3.fromRGB(180, 100, 70)
+local _TERRACOTTA = Color3.fromRGB(180, 100, 70) -- Reserved for future shop signs
 local WOOD_BROWN = Color3.fromRGB(120, 80, 50)
 
 -- Signpost dimensions
@@ -43,7 +43,7 @@ local BASE_SIZE = 3
 local BASE_HEIGHT = 1
 
 -- Text configuration
-local TEXT_SIZE = 24
+local _TEXT_SIZE = 24 -- Reserved for future font size configuration
 local TEXT_COLOR = Color3.fromRGB(40, 30, 20)
 
 -- Placement configuration
