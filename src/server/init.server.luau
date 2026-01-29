@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.8.0"
+local VERSION = "1.9.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -54,6 +54,9 @@ print(string.format("[Server] Loaded SignpostBuilder v%s", SignpostBuilder.VERSI
 
 local InteriorLighting = require(script.InteriorLighting)
 print(string.format("[Server] Loaded InteriorLighting v%s", InteriorLighting.VERSION))
+
+local ProgressionService = require(script.ProgressionService)
+print(string.format("[Server] Loaded ProgressionService v%s", ProgressionService.VERSION))
 
 -- Configuration
 local MAP_SIZE = 1024
@@ -162,5 +165,10 @@ local waterFeatures = WaterFeatures.new({
     worldPlan = worldPlan, -- Pass world plan for river exclusion checks
 })
 waterFeatures:start()
+
+-- Bootstrap progression service (player XP and levels)
+-- Creates RemoteEvents for client communication
+local progressionService = ProgressionService.new()
+progressionService:start()
 
 print(string.format("[Server v%s] All systems initialized", VERSION))
