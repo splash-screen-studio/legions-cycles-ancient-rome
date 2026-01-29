@@ -5,7 +5,7 @@
 ]]
 
 local BuildConfig = {}
-BuildConfig.VERSION = "1.1.0"
+BuildConfig.VERSION = "1.2.0"
 
 -- RemoteEvent/Function names for client-server communication
 BuildConfig.REMOTES = {
@@ -98,6 +98,14 @@ BuildConfig.STRUCTURES = {
         size = Vector3.new(12, 14, 4),
         description = "Triumphal arch celebrating victories",
     },
+    THERMAE = {
+        id = "THERMAE",
+        name = "Thermae",
+        category = BuildConfig.CATEGORIES.COMMERCIAL,
+        cost = 800,
+        size = Vector3.new(24, 10, 20),
+        description = "Public bathhouse for citizens",
+    },
 }
 
 -- Order of structures in the menu (by id)
@@ -106,6 +114,7 @@ BuildConfig.STRUCTURE_ORDER = {
     "INSULA",
     "TABERNA",
     "FORUM_STALL",
+    "THERMAE",
     "TEMPLE",
     "WALL",
     "WATCHTOWER",
