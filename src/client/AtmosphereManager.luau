@@ -22,7 +22,7 @@ local Maid = require(Shared:WaitForChild("Maid"))
 
 local AtmosphereManager = {}
 AtmosphereManager.__index = AtmosphereManager
-AtmosphereManager.VERSION = "1.0.0"
+AtmosphereManager.VERSION = "1.0.1"
 
 -- Time of Day Presets (hours in 24-hour format)
 local TIME_PRESETS = {
@@ -138,9 +138,7 @@ end
 
 --- Sets up base Lighting properties
 function AtmosphereManager:_setupLighting(): ()
-    -- Configure Lighting technology for modern rendering
-    Lighting.Technology = Enum.Technology.Future
-
+    -- Note: Lighting.Technology must be set in Studio (requires RobloxScript capability)
     -- Configure shadow settings
     Lighting.GlobalShadows = true
     Lighting.ShadowSoftness = 0.3
