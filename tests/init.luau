@@ -110,10 +110,12 @@ require("./server/WaterFeatures.spec")
 require("./server/RiverBuilder.spec")
 require("./server/BridgeBuilder.spec")
 require("./server/LandmarkBuilder.spec")
+require("./server/AqueductBuilder.spec")
 require("./server/RuinsBuilder.spec")
 require("./server/TerrainMaterials.spec")
 require("./client/MusicManager.spec")
 require("./client/AtmosphereManager.spec")
+require("./client/LanternManager.spec")
 
 -- Print summary
 log("\n===========================================")

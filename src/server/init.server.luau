@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.5.0"
+local VERSION = "1.6.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -42,6 +42,9 @@ print(string.format("[Server] Loaded BridgeBuilder v%s", BridgeBuilder.VERSION))
 
 local LandmarkBuilder = require(script.LandmarkBuilder)
 print(string.format("[Server] Loaded LandmarkBuilder v%s", LandmarkBuilder.VERSION))
+
+local AqueductBuilder = require(script.AqueductBuilder)
+print(string.format("[Server] Loaded AqueductBuilder v%s", AqueductBuilder.VERSION))
 
 local RuinsBuilder = require(script.RuinsBuilder)
 print(string.format("[Server] Loaded RuinsBuilder v%s", RuinsBuilder.VERSION))
@@ -100,7 +103,14 @@ local landmarkBuilder = LandmarkBuilder.new({
 })
 landmarkBuilder:build()
 
--- STEP 7: Scatter ancient ruins throughout rural/wilderness areas
+-- STEP 7: Build aqueduct spanning the map (after landmarks to avoid them)
+-- Creates iconic Roman aqueduct with functional and ruined sections
+local aqueductBuilder = AqueductBuilder.new({
+    worldPlan = worldPlan,
+})
+aqueductBuilder:build()
+
+-- STEP 8: Scatter ancient ruins throughout rural/wilderness areas
 -- These make the world feel ancient and historically layered
 local ruinsBuilder = RuinsBuilder.new({
     worldPlan = worldPlan,

@@ -134,9 +134,7 @@ describe("AtmosphereManager", function()
         expect(string.find(moduleSource, "_maid:destroy()", 1, true)).toNotBeNil()
     end)
 
-    it("should configure lighting technology to Future", function()
-        expect(string.find(moduleSource, "Lighting.Technology = Enum.Technology.Future", 1, true)).toNotBeNil()
-    end)
+    -- Note: Lighting.Technology requires RobloxScript capability, must be set in Studio
 
     it("should enable global shadows", function()
         expect(string.find(moduleSource, "Lighting.GlobalShadows = true", 1, true)).toNotBeNil()

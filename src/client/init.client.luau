@@ -21,9 +21,16 @@ print(string.format("[Client] Loaded MusicManager v%s", MusicManager.VERSION))
 local AtmosphereManager = require(script.AtmosphereManager)
 print(string.format("[Client] Loaded AtmosphereManager v%s", AtmosphereManager.VERSION))
 
+local LanternManager = require(script.LanternManager)
+print(string.format("[Client] Loaded LanternManager v%s", LanternManager.VERSION))
+
 -- Bootstrap atmosphere (lighting, sky, fog)
 local atmosphereManager = AtmosphereManager.new()
 atmosphereManager:start()
+
+-- Bootstrap lantern system (depends on AtmosphereManager for ambient detection)
+local lanternManager = LanternManager.new(atmosphereManager)
+lanternManager:start()
 
 -- Bootstrap music
 local musicManager = MusicManager.new()
