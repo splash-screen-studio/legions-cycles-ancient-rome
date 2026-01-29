@@ -23,7 +23,7 @@ local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
 
 local SignpostBuilder = {}
 SignpostBuilder.__index = SignpostBuilder
-SignpostBuilder.VERSION = "1.0.0"
+SignpostBuilder.VERSION = "1.1.0"
 
 -- Roman architectural colors
 local MARBLE_WHITE = Color3.fromRGB(240, 235, 225)
@@ -44,7 +44,7 @@ local BASE_HEIGHT = 1
 
 -- Text configuration
 local _TEXT_SIZE = 24 -- Reserved for future font size configuration
-local TEXT_COLOR = Color3.fromRGB(40, 30, 20)
+local TEXT_COLOR = Color3.fromRGB(255, 250, 230) -- Cream/off-white for contrast on wood
 
 -- Placement configuration
 local MILESTONE_SPACING = 100 -- Studs between milestones
@@ -121,6 +121,8 @@ function SignpostBuilder:_createSurfaceText(
     textLabel.TextColor3 = textColor or TEXT_COLOR
     textLabel.TextScaled = true
     textLabel.Font = Enum.Font.Antique
+    textLabel.TextStrokeTransparency = 0.3
+    textLabel.TextStrokeColor3 = Color3.fromRGB(40, 30, 20) -- Dark outline for readability
     textLabel.Parent = surfaceGui
 
     surfaceGui.Parent = parent
@@ -248,8 +250,9 @@ function SignpostBuilder:_createDirectionalArm(
     arrow.CFrame = CFrame.new(arrow.Position) * CFrame.Angles(0, math.rad(45) - angle, 0)
     arrow.Parent = folder
 
-    -- Add text to the arm
-    self:_createSurfaceText(arm, text, Enum.NormalId.Top)
+    -- Add text to both sides of the arm (Front and Back) for readability
+    self:_createSurfaceText(arm, text, Enum.NormalId.Front)
+    self:_createSurfaceText(arm, text, Enum.NormalId.Back)
 
     return arm
 end
