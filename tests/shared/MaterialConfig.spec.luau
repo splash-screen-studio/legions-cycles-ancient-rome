@@ -39,18 +39,40 @@ describe("MaterialConfig", function()
         expect(string.find(moduleSource, "export type ProximityRule", 1, true)).toNotBeNil()
     end)
 
+    it("should export SlopeBand type for Mediterranean terrain", function()
+        expect(string.find(moduleSource, "export type SlopeBand", 1, true)).toNotBeNil()
+    end)
+
     -- Altitude bands
     it("should define ALTITUDE_BANDS configuration", function()
         expect(string.find(moduleSource, "ALTITUDE_BANDS", 1, true)).toNotBeNil()
     end)
 
-    it("should have altitude bands for high, mid-high, mid, and low areas", function()
-        -- High: >50
+    it("should have altitude bands for Mediterranean terrain zones", function()
+        -- Hilltops: >50
         expect(string.find(moduleSource, "minAltitude = 50", 1, true)).toNotBeNil()
-        -- Mid-high: 35-50
-        expect(string.find(moduleSource, "minAltitude = 35", 1, true)).toNotBeNil()
-        -- Mid: 20-35
+        -- Upper hillsides: 40-50
+        expect(string.find(moduleSource, "minAltitude = 40", 1, true)).toNotBeNil()
+        -- Lower hillsides: 30-40
+        expect(string.find(moduleSource, "minAltitude = 30", 1, true)).toNotBeNil()
+        -- Flat areas: 20-30
         expect(string.find(moduleSource, "minAltitude = 20", 1, true)).toNotBeNil()
+    end)
+
+    -- Slope bands (Issue #70)
+    it("should define SLOPE_BANDS configuration for arid hillsides", function()
+        expect(string.find(moduleSource, "SLOPE_BANDS", 1, true)).toNotBeNil()
+    end)
+
+    it("should have slope bands for steep, moderate, and gentle terrain", function()
+        -- Very steep: >35 degrees
+        expect(string.find(moduleSource, "minSlope = 35", 1, true)).toNotBeNil()
+        -- Steep: 25-35 degrees
+        expect(string.find(moduleSource, "minSlope = 25", 1, true)).toNotBeNil()
+        -- Moderate: 15-25 degrees
+        expect(string.find(moduleSource, "minSlope = 15", 1, true)).toNotBeNil()
+        -- Gentle: 0-15 degrees
+        expect(string.find(moduleSource, "minSlope = 0", 1, true)).toNotBeNil()
     end)
 
     -- Zone materials
@@ -77,6 +99,11 @@ describe("MaterialConfig", function()
         expect(string.find(moduleSource, "fountain = {", 1, true)).toNotBeNil()
     end)
 
+    it("should have grass proximity rules for water features (Issue #70)", function()
+        expect(string.find(moduleSource, "riverGrass = {", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "fountainGrass = {", 1, true)).toNotBeNil()
+    end)
+
     -- Landmark materials
     it("should define LANDMARK_MATERIALS configuration", function()
         expect(string.find(moduleSource, "LANDMARK_MATERIALS", 1, true)).toNotBeNil()
@@ -98,6 +125,7 @@ describe("MaterialConfig", function()
         expect(string.find(moduleSource, "Material.Ground", 1, true)).toNotBeNil()
         expect(string.find(moduleSource, "Material.Rock", 1, true)).toNotBeNil()
         expect(string.find(moduleSource, "Material.Sand", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "Material.Sandstone", 1, true)).toNotBeNil()
         expect(string.find(moduleSource, "Material.Cobblestone", 1, true)).toNotBeNil()
     end)
 
@@ -107,14 +135,23 @@ describe("MaterialConfig", function()
         expect(string.find(moduleSource, "Material.Ice")).toBeNil()
     end)
 
-    -- Target coverage
+    -- Target coverage (Issue #70)
     it("should define TARGET_COVERAGE for validation", function()
         expect(string.find(moduleSource, "TARGET_COVERAGE", 1, true)).toNotBeNil()
+    end)
+
+    it("should have Mediterranean target coverage (40% Grass, 30% Ground)", function()
+        expect(string.find(moduleSource, "Grass = 0.40", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "Ground = 0.30", 1, true)).toNotBeNil()
     end)
 
     -- Helper functions
     it("should have getAltitudeBand helper function", function()
         expect(string.find(moduleSource, "function MaterialConfig.getAltitudeBand", 1, true)).toNotBeNil()
+    end)
+
+    it("should have getSlopeBand helper function for Mediterranean terrain", function()
+        expect(string.find(moduleSource, "function MaterialConfig.getSlopeBand", 1, true)).toNotBeNil()
     end)
 
     it("should have getZoneMaterial helper function", function()

@@ -5,10 +5,11 @@
 
     Applies terrain materials following a priority chain:
     1. Road proximity (cobblestone)
-    2. Water proximity (sand)
+    2. Water proximity (sand beach + grass ring)
     3. Landmark proximity (cobblestone/marble)
     4. Zone overlay (urban = paved, rural = grass)
-    5. Base altitude (high = rock, low = grass)
+    5. Slope-based (steep = rocky/arid)
+    6. Base altitude (high = rock, low = grass)
 
     This module should be run AFTER terrain shape is generated.
 ]]
@@ -22,11 +23,12 @@ local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
 
 local TerrainMaterials = {}
 TerrainMaterials.__index = TerrainMaterials
-TerrainMaterials.VERSION = "1.1.0"
+TerrainMaterials.VERSION = "2.0.0"
 
 -- Constants
 local DEFAULT_RESOLUTION = 4 -- Studs per terrain voxel
 local DEFAULT_CELL_SIZE = Vector3.new(4, 4, 4)
+local SLOPE_SAMPLE_DISTANCE = 4 -- Distance for slope calculation
 
 export type TerrainMaterialsConfig = {
     terrain: Terrain?,
@@ -73,11 +75,56 @@ function TerrainMaterials:_getMaterialByAltitude(altitude: number, x: number, z:
     -- Normalize noise from [-1, 1] to [0, 1]
     local normalizedNoise = (varietyNoise + 1) / 2
 
-    -- Choose between primary and secondary based on noise
-    if normalizedNoise < 0.6 then
+    -- Check for grass based on band's grass percentage
+    if normalizedNoise < band.grassPercentage then
+        return Enum.Material.Grass
+    elseif normalizedNoise < band.grassPercentage + 0.5 then
         return band.primaryMaterial
     else
         return band.secondaryMaterial
+    end
+end
+
+-- Get material by slope (steeper = more arid/rocky)
+function TerrainMaterials:_getMaterialBySlope(slopeDegrees: number, x: number, z: number): Enum.Material
+    local band = MaterialConfig.getSlopeBand(slopeDegrees)
+
+    -- Use noise for variety
+    local varietyNoise = math.noise(x * 0.025 + self.seed + 200, z * 0.025 + self.seed * 1.4 + 200)
+    local normalizedNoise = (varietyNoise + 1) / 2
+
+    -- Check for grass based on slope band's grass percentage
+    if normalizedNoise < band.grassPercentage then
+        return Enum.Material.Grass
+    elseif normalizedNoise < band.grassPercentage + 0.5 then
+        return band.primaryMaterial
+    else
+        return band.secondaryMaterial
+    end
+end
+
+-- Combine altitude and slope for base material (Mediterranean terrain)
+function TerrainMaterials:_getBaseMaterial(altitude: number, slopeDegrees: number, x: number, z: number): Enum.Material
+    -- Steep slopes override altitude-based selection
+    if slopeDegrees >= 25 then
+        return self:_getMaterialBySlope(slopeDegrees, x, z)
+    elseif slopeDegrees >= 15 then
+        -- Moderate slopes: blend altitude and slope influence
+        local altitudeMaterial = self:_getMaterialByAltitude(altitude, x, z)
+        local slopeMaterial = self:_getMaterialBySlope(slopeDegrees, x, z)
+
+        -- Use noise to decide which to use
+        local blendNoise = math.noise(x * 0.03 + self.seed + 300, z * 0.03 + self.seed * 1.6 + 300)
+        local slopeInfluence = (slopeDegrees - 15) / 10 -- 0 at 15 degrees, 1 at 25 degrees
+
+        if (blendNoise + 1) / 2 < slopeInfluence then
+            return slopeMaterial
+        else
+            return altitudeMaterial
+        end
+    else
+        -- Gentle terrain: use altitude-based selection
+        return self:_getMaterialByAltitude(altitude, x, z)
     end
 end
 
@@ -104,13 +151,14 @@ end
 
 -- Get material at a specific position following the priority chain
 function TerrainMaterials:getMaterialAt(x: number, z: number): Enum.Material
-    -- Get altitude for base material calculation
+    -- Get altitude and slope for base material calculation
     local altitude = TerrainUtils.getHeightAt(self.terrain, x, z)
+    local slopeDegrees = TerrainUtils.getMaxSlopeDegrees(self.terrain, x, z, SLOPE_SAMPLE_DISTANCE)
 
-    -- 1. Start with base material from altitude
-    local material = self:_getMaterialByAltitude(altitude, x, z)
+    -- 1. Start with base material from altitude and slope (Mediterranean terrain)
+    local material = self:_getBaseMaterial(altitude, slopeDegrees, x, z)
 
-    -- If no world plan, return altitude-based material
+    -- If no world plan, return terrain-based material
     if not self.worldPlan then
         return material
     end
@@ -128,14 +176,24 @@ function TerrainMaterials:getMaterialAt(x: number, z: number): Enum.Material
         end
     end
 
-    -- 4. Check water proximity (high priority override)
+    -- 4. Check water proximity (creates lush vegetation bands)
     local distanceToRiver = self.worldPlan:getDistanceToRiver(x, z)
+
+    -- Inner band: sand beach at water edge
     if distanceToRiver < MaterialConfig.PROXIMITY_RULES.river.radius then
-        -- Gradient: closer to river = more sand
         local riverInfluence = 1 - (distanceToRiver / MaterialConfig.PROXIMITY_RULES.river.radius)
         local sandNoise = math.noise(x * 0.05 + self.seed + 1000, z * 0.05)
-        if sandNoise + riverInfluence > 0.5 then
+        if sandNoise + riverInfluence > 0.4 then
             return Enum.Material.Sand
+        end
+    -- Outer band: lush grass near water (Mediterranean oasis effect)
+    elseif distanceToRiver < MaterialConfig.PROXIMITY_RULES.riverGrass.radius then
+        local grassInfluence = 1 - ((distanceToRiver - MaterialConfig.PROXIMITY_RULES.river.radius) /
+            (MaterialConfig.PROXIMITY_RULES.riverGrass.radius - MaterialConfig.PROXIMITY_RULES.river.radius))
+        local grassNoise = math.noise(x * 0.04 + self.seed + 1500, z * 0.04 + self.seed)
+        -- Higher grass chance near water
+        if (grassNoise + 1) / 2 < (0.5 + grassInfluence * 0.4) then
+            return Enum.Material.Grass
         end
     end
 

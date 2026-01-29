@@ -72,6 +72,24 @@ describe("TerrainMaterials", function()
         expect(string.find(moduleSource, "function TerrainMaterials:_getZoneMaterial", 1, true)).toNotBeNil()
     end)
 
+    -- Mediterranean terrain methods (Issue #70)
+    it("should have _getMaterialBySlope private method for arid slopes", function()
+        expect(string.find(moduleSource, "function TerrainMaterials:_getMaterialBySlope", 1, true)).toNotBeNil()
+    end)
+
+    it("should have _getBaseMaterial method combining altitude and slope", function()
+        expect(string.find(moduleSource, "function TerrainMaterials:_getBaseMaterial", 1, true)).toNotBeNil()
+    end)
+
+    it("should use getMaxSlopeDegrees for slope-based material selection", function()
+        expect(string.find(moduleSource, "getMaxSlopeDegrees", 1, true)).toNotBeNil()
+    end)
+
+    -- Mediterranean water proximity (grass near water)
+    it("should have riverGrass proximity rule for lush vegetation near water", function()
+        expect(string.find(moduleSource, "riverGrass", 1, true)).toNotBeNil()
+    end)
+
     -- Dependencies
     it("should require MaterialConfig", function()
         expect(string.find(moduleSource, 'require(Shared:WaitForChild("MaterialConfig"))', 1, true)).toNotBeNil()
