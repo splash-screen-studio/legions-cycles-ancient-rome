@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.9.0"
+local VERSION = "2.0.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -57,6 +57,9 @@ print(string.format("[Server] Loaded InteriorLighting v%s", InteriorLighting.VER
 
 local ProgressionService = require(script.ProgressionService)
 print(string.format("[Server] Loaded ProgressionService v%s", ProgressionService.VERSION))
+
+local CurrencyService = require(script.CurrencyService)
+print(string.format("[Server] Loaded CurrencyService v%s", CurrencyService.VERSION))
 
 -- Configuration
 local MAP_SIZE = 1024
@@ -170,5 +173,10 @@ waterFeatures:start()
 -- Creates RemoteEvents for client communication
 local progressionService = ProgressionService.new()
 progressionService:start()
+
+-- Bootstrap currency service (player Denarii balance)
+-- Creates RemoteEvents for client communication
+local currencyService = CurrencyService.new()
+currencyService:start()
 
 print(string.format("[Server v%s] All systems initialized", VERSION))
