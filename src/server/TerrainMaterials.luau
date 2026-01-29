@@ -22,7 +22,7 @@ local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
 
 local TerrainMaterials = {}
 TerrainMaterials.__index = TerrainMaterials
-TerrainMaterials.VERSION = "1.0.0"
+TerrainMaterials.VERSION = "1.1.0"
 
 -- Constants
 local DEFAULT_RESOLUTION = 4 -- Studs per terrain voxel
@@ -159,9 +159,17 @@ function TerrainMaterials:applyToRegion(minX: number, maxX: number, minZ: number
 
     local startTime = tick()
     local cellCount = 0
+    local skippedRiverCells = 0
 
     for x = minX, maxX, self.resolution do
         for z = minZ, maxZ, self.resolution do
+            -- CRITICAL: Skip cells that are inside the river corridor
+            -- This prevents overwriting the water terrain placed by RiverBuilder
+            if self.worldPlan and self.worldPlan:isOnRiver(x, z) then
+                skippedRiverCells = skippedRiverCells + 1
+                continue
+            end
+
             local material = self:getMaterialAt(x, z)
             local height = TerrainUtils.getHeightAt(self.terrain, x, z)
 
@@ -191,8 +199,8 @@ function TerrainMaterials:applyToRegion(minX: number, maxX: number, minZ: number
     end
 
     local elapsed = tick() - startTime
-    print(string.format("[TerrainMaterials v%s] Applied materials to %d cells in %.2f seconds",
-        TerrainMaterials.VERSION, cellCount, elapsed))
+    print(string.format("[TerrainMaterials v%s] Applied materials to %d cells in %.2f seconds (skipped %d river cells)",
+        TerrainMaterials.VERSION, cellCount, elapsed, skippedRiverCells))
 end
 
 -- Apply materials to the entire map
