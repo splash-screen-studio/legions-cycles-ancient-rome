@@ -12,7 +12,7 @@ local Shared = ReplicatedStorage:WaitForChild("Shared")
 local BuildConfig = require(Shared:WaitForChild("BuildConfig"))
 local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
 
-local StructureModels = require(script.StructureModels)
+local StructureModels = require(script.Parent.StructureModels)
 
 local BuildService = {}
 BuildService.__index = BuildService

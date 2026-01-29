@@ -157,7 +157,7 @@ describe("BuildService", function()
     end)
 
     it("should require StructureModels module", function()
-        expect(string.find(moduleSource, "require(script.StructureModels)", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "require(script.Parent.StructureModels)", 1, true)).toNotBeNil()
     end)
 
     it("should use StructureModels.getBuilder for structure creation", function()
