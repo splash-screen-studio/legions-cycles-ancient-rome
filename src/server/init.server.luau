@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.8.0"
+local VERSION = "1.9.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -51,6 +51,9 @@ print(string.format("[Server] Loaded RuinsBuilder v%s", RuinsBuilder.VERSION))
 
 local SignpostBuilder = require(script.SignpostBuilder)
 print(string.format("[Server] Loaded SignpostBuilder v%s", SignpostBuilder.VERSION))
+
+local InteriorLighting = require(script.InteriorLighting)
+print(string.format("[Server] Loaded InteriorLighting v%s", InteriorLighting.VERSION))
 
 local ProgressionService = require(script.ProgressionService)
 print(string.format("[Server] Loaded ProgressionService v%s", ProgressionService.VERSION))
@@ -130,6 +133,13 @@ local signpostBuilder = SignpostBuilder.new({
     worldPlan = worldPlan,
 })
 signpostBuilder:build()
+
+-- STEP 10: Add interior lighting to landmarks (after landmarks are built)
+-- Creates torches, oil lamps, and braziers for warm Roman atmosphere
+local interiorLighting = InteriorLighting.new({
+    worldPlan = worldPlan,
+})
+interiorLighting:build()
 
 -- Bootstrap map boundary walls
 local mapBoundary = MapBoundary.new({
