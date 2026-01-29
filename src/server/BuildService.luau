@@ -12,9 +12,11 @@ local Shared = ReplicatedStorage:WaitForChild("Shared")
 local BuildConfig = require(Shared:WaitForChild("BuildConfig"))
 local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
 
+local StructureModels = require(script.StructureModels)
+
 local BuildService = {}
 BuildService.__index = BuildService
-BuildService.VERSION = "1.0.0"
+BuildService.VERSION = "1.1.0"
 
 -- Structure storage
 export type PlacedStructure = {
@@ -192,48 +194,65 @@ function BuildService:_createStructure(
     local model = Instance.new("Model")
     model.Name = structureId
 
-    -- Create simple placeholder part (colored box)
-    local part = Instance.new("Part")
-    part.Name = "Foundation"
-    part.Size = structure.size
-    part.Anchored = true
-    part.CanCollide = true
-    part.CastShadow = true
-    part.Material = Enum.Material.Brick
-    part.Color = self:_getStructureColor(structure.id)
+    -- Position at terrain height
+    local structurePosition = Vector3.new(position.X, terrainHeight, position.Z)
 
-    -- Position at terrain height (center of part above ground)
-    local structureY = terrainHeight + (structure.size.Y / 2)
-    part.CFrame = CFrame.new(position.X, structureY, position.Z)
-    part.Parent = model
+    -- Use StructureModels to create the actual Roman structure
+    local builder = StructureModels.getBuilder(structure.id)
+    if builder then
+        builder(structurePosition, structure.size, model)
+    else
+        -- Fallback: Create simple placeholder part (colored box) for unknown types
+        local part = Instance.new("Part")
+        part.Name = "Foundation"
+        part.Size = structure.size
+        part.Anchored = true
+        part.CanCollide = true
+        part.CastShadow = true
+        part.Material = Enum.Material.Brick
+        part.Color = self:_getStructureColor(structure.id)
+        part.CFrame = CFrame.new(position.X, terrainHeight + (structure.size.Y / 2), position.Z)
+        part.Parent = model
+    end
 
-    -- Add name label
-    local billboardGui = Instance.new("BillboardGui")
-    billboardGui.Name = "NameTag"
-    billboardGui.Size = UDim2.new(0, 100, 0, 30)
-    billboardGui.StudsOffset = Vector3.new(0, structure.size.Y / 2 + 2, 0)
-    billboardGui.AlwaysOnTop = false
-    billboardGui.Parent = part
+    -- Find a part to use as primary part (first part in model)
+    local primaryPart: Part? = nil
+    for _, child in model:GetChildren() do
+        if child:IsA("Part") then
+            primaryPart = child :: Part
+            break
+        end
+    end
 
-    local nameLabel = Instance.new("TextLabel")
-    nameLabel.Size = UDim2.new(1, 0, 1, 0)
-    nameLabel.BackgroundTransparency = 0.5
-    nameLabel.BackgroundColor3 = Color3.new(0, 0, 0)
-    nameLabel.Text = structure.name
-    nameLabel.TextColor3 = Color3.new(1, 1, 1)
-    nameLabel.TextScaled = true
-    nameLabel.Font = Enum.Font.GothamBold
-    nameLabel.Parent = billboardGui
+    -- Add name label to primary part if found
+    if primaryPart then
+        local billboardGui = Instance.new("BillboardGui")
+        billboardGui.Name = "NameTag"
+        billboardGui.Size = UDim2.new(0, 100, 0, 30)
+        billboardGui.StudsOffset = Vector3.new(0, structure.size.Y / 2 + 2, 0)
+        billboardGui.AlwaysOnTop = false
+        billboardGui.Parent = primaryPart
 
-    -- Set primary part and parent
-    model.PrimaryPart = part
+        local nameLabel = Instance.new("TextLabel")
+        nameLabel.Size = UDim2.new(1, 0, 1, 0)
+        nameLabel.BackgroundTransparency = 0.5
+        nameLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+        nameLabel.Text = structure.name
+        nameLabel.TextColor3 = Color3.new(1, 1, 1)
+        nameLabel.TextScaled = true
+        nameLabel.Font = Enum.Font.GothamBold
+        nameLabel.Parent = billboardGui
+
+        model.PrimaryPart = primaryPart
+    end
+
     model.Parent = self._structuresFolder
 
     -- Create record
     local placedStructure: PlacedStructure = {
         id = structureId,
         structureType = structure.id,
-        position = Vector3.new(position.X, structureY, position.Z),
+        position = structurePosition,
         model = model,
         owner = player.UserId,
         placedAt = os.time(),
