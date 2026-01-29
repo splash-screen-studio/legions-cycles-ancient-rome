@@ -5,7 +5,7 @@
 ]]
 
 local BuildConfig = {}
-BuildConfig.VERSION = "1.0.0"
+BuildConfig.VERSION = "1.1.0"
 
 -- RemoteEvent/Function names for client-server communication
 BuildConfig.REMOTES = {
@@ -66,14 +66,50 @@ BuildConfig.STRUCTURES = {
         size = Vector3.new(8, 6, 2),
         description = "Defensive wall segment",
     },
+    INSULA = {
+        id = "INSULA",
+        name = "Insula",
+        category = BuildConfig.CATEGORIES.RESIDENTIAL,
+        cost = 350,
+        size = Vector3.new(16, 20, 16),
+        description = "Multi-story apartment for common citizens",
+    },
+    FORUM_STALL = {
+        id = "FORUM_STALL",
+        name = "Forum Stall",
+        category = BuildConfig.CATEGORIES.COMMERCIAL,
+        cost = 50,
+        size = Vector3.new(8, 6, 8),
+        description = "Market stall for traders",
+    },
+    WATCHTOWER = {
+        id = "WATCHTOWER",
+        name = "Watchtower",
+        category = BuildConfig.CATEGORIES.INFRASTRUCTURE,
+        cost = 150,
+        size = Vector3.new(6, 16, 6),
+        description = "Guard tower for defense",
+    },
+    ARCH = {
+        id = "ARCH",
+        name = "Arch",
+        category = BuildConfig.CATEGORIES.INFRASTRUCTURE,
+        cost = 500,
+        size = Vector3.new(12, 14, 4),
+        description = "Triumphal arch celebrating victories",
+    },
 }
 
 -- Order of structures in the menu (by id)
 BuildConfig.STRUCTURE_ORDER = {
     "DOMUS",
+    "INSULA",
     "TABERNA",
+    "FORUM_STALL",
     "TEMPLE",
     "WALL",
+    "WATCHTOWER",
+    "ARCH",
 }
 
 -- UI Constants for mobile-first design

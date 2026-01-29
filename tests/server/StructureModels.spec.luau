@@ -244,6 +244,141 @@ describe("StructureModels", function()
         expect(string.find(moduleSource, "StructureModels.createWall", 1, true)).toNotBeNil()
     end)
 
+    -- New structure builders
+    it("should have createInsula function", function()
+        expect(string.find(moduleSource, "function StructureModels.createInsula", 1, true)).toNotBeNil()
+    end)
+
+    it("should have createForumStall function", function()
+        expect(string.find(moduleSource, "function StructureModels.createForumStall", 1, true)).toNotBeNil()
+    end)
+
+    it("should have createWatchtower function", function()
+        expect(string.find(moduleSource, "function StructureModels.createWatchtower", 1, true)).toNotBeNil()
+    end)
+
+    it("should have createArch function", function()
+        expect(string.find(moduleSource, "function StructureModels.createArch", 1, true)).toNotBeNil()
+    end)
+
+    it("should return createInsula for INSULA", function()
+        expect(string.find(moduleSource, '"INSULA"', 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "StructureModels.createInsula", 1, true)).toNotBeNil()
+    end)
+
+    it("should return createForumStall for FORUM_STALL", function()
+        expect(string.find(moduleSource, '"FORUM_STALL"', 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "StructureModels.createForumStall", 1, true)).toNotBeNil()
+    end)
+
+    it("should return createWatchtower for WATCHTOWER", function()
+        expect(string.find(moduleSource, '"WATCHTOWER"', 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "StructureModels.createWatchtower", 1, true)).toNotBeNil()
+    end)
+
+    it("should return createArch for ARCH", function()
+        expect(string.find(moduleSource, '"ARCH"', 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "StructureModels.createArch", 1, true)).toNotBeNil()
+    end)
+
+    -- Insula structure components (using whole module since function has nested blocks)
+    it("should create foundation in Insula", function()
+        expect(string.find(moduleSource, "function StructureModels.createInsula", 1, true)).toNotBeNil()
+        -- Foundation is created in createInsula
+        expect(string.find(moduleSource, '"Foundation"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create multiple floors in Insula", function()
+        expect(string.find(moduleSource, "numFloors = 4", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, '"FloorSlab"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create balconies in Insula", function()
+        expect(string.find(moduleSource, '"Balcony" .. floorSuffix', 1, true)).toNotBeNil()
+    end)
+
+    it("should create roof in Insula", function()
+        -- Roof is created in multiple functions, verify createInsula has one
+        expect(string.find(moduleSource, "-- Roof %(flat with slight overhang%)", 1, false)).toNotBeNil()
+    end)
+
+    -- Forum Stall structure components
+    it("should create platform in ForumStall", function()
+        expect(string.find(moduleSource, "function StructureModels.createForumStall", 1, true)).toNotBeNil()
+        -- Platform is created as ground base
+        expect(string.find(moduleSource, "-- Ground platform", 1, true)).toNotBeNil()
+    end)
+
+    it("should create posts in ForumStall", function()
+        expect(string.find(moduleSource, '"Post_%d"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create awning in ForumStall", function()
+        expect(string.find(moduleSource, '"Awning"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create counter in ForumStall", function()
+        -- Counter appears in both Taberna and ForumStall
+        expect(string.find(moduleSource, "-- Display counter at front", 1, true)).toNotBeNil()
+    end)
+
+    it("should use Wood material in ForumStall", function()
+        -- Wood material is used for posts and counter
+        expect(string.find(moduleSource, "WOOD_BROWN", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "Material.Wood", 1, true)).toNotBeNil()
+    end)
+
+    -- Watchtower structure components
+    it("should create foundation in Watchtower", function()
+        expect(string.find(moduleSource, "function StructureModels.createWatchtower", 1, true)).toNotBeNil()
+        -- Watchtower has foundation with wider base
+        expect(string.find(moduleSource, "-- Base foundation %(wider than tower%)", 1, false)).toNotBeNil()
+    end)
+
+    it("should create observation platform in Watchtower", function()
+        expect(string.find(moduleSource, '"ObservationPlatform"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create crenellations in Watchtower", function()
+        expect(string.find(moduleSource, '"Merlon_Front_%d"', 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, '"Merlon_Back_%d"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create doorway in Watchtower", function()
+        -- Watchtower has a front doorway
+        expect(string.find(moduleSource, "-- Front wall with doorway", 1, true)).toNotBeNil()
+    end)
+
+    -- Arch structure components
+    it("should create foundation in Arch", function()
+        expect(string.find(moduleSource, "function StructureModels.createArch", 1, true)).toNotBeNil()
+        -- Arch has foundation/base
+        expect(string.find(moduleSource, "-- Foundation/base", 1, true)).toNotBeNil()
+    end)
+
+    it("should create pillars in Arch", function()
+        expect(string.find(moduleSource, '"Pillar_Left"', 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, '"Pillar_Right"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create attic (top beam) in Arch", function()
+        expect(string.find(moduleSource, '"Attic"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create cornice in Arch", function()
+        expect(string.find(moduleSource, '"Cornice"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create decorative columns in Arch", function()
+        expect(string.find(moduleSource, '"Column_Left"', 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, '"Column_Right"', 1, true)).toNotBeNil()
+    end)
+
+    -- WOOD_BROWN color constant for Forum Stall
+    it("should have WOOD_BROWN color constant", function()
+        expect(string.find(moduleSource, "local WOOD_BROWN", 1, true)).toNotBeNil()
+    end)
+
     it("should use strict mode", function()
         expect(string.find(moduleSource, "--!strict", 1, true)).toNotBeNil()
     end)
