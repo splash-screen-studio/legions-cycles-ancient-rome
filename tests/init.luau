@@ -111,6 +111,7 @@ require("./server/RiverBuilder.spec")
 require("./server/BridgeBuilder.spec")
 require("./server/TerrainMaterials.spec")
 require("./client/MusicManager.spec")
+require("./client/AtmosphereManager.spec")
 
 -- Print summary
 log("\n===========================================")
