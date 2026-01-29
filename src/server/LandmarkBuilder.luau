@@ -20,7 +20,7 @@ local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
 
 local LandmarkBuilder = {}
 LandmarkBuilder.__index = LandmarkBuilder
-LandmarkBuilder.VERSION = "1.1.0"
+LandmarkBuilder.VERSION = "1.2.0"
 
 -- Roman architectural colors
 local MARBLE_WHITE = Color3.fromRGB(240, 235, 225)
@@ -189,6 +189,131 @@ function LandmarkBuilder:_createPlatform(
     return baseY + PLATFORM_HEIGHT
 end
 
+-- Helper: Create a wall with a centered doorway (returns 2 wall segments)
+function LandmarkBuilder:_createWallWithDoorway(
+    wallCenterX: number,
+    wallBaseY: number,
+    wallCenterZ: number,
+    wallWidth: number,
+    wallHeight: number,
+    wallThickness: number,
+    doorwayWidth: number,
+    doorwayHeight: number,
+    isZAligned: boolean, -- true = wall runs along Z axis, false = along X axis
+    color: Color3,
+    material: Enum.Material,
+    folder: Folder
+): ()
+    local segmentWidth = (wallWidth - doorwayWidth) / 2
+
+    if isZAligned then
+        -- Wall runs along Z axis (east-west facing)
+        -- Left segment
+        local leftX = wallCenterX
+        local leftZ = wallCenterZ - wallWidth / 4 - doorwayWidth / 4
+        local left = self:_createPart(
+            "Wall_Left",
+            Vector3.new(leftX, wallBaseY + wallHeight / 2, leftZ),
+            Vector3.new(wallThickness, wallHeight, segmentWidth),
+            color,
+            material
+        )
+        left.Parent = folder
+
+        -- Right segment
+        local rightZ = wallCenterZ + wallWidth / 4 + doorwayWidth / 4
+        local right = self:_createPart(
+            "Wall_Right",
+            Vector3.new(wallCenterX, wallBaseY + wallHeight / 2, rightZ),
+            Vector3.new(wallThickness, wallHeight, segmentWidth),
+            color,
+            material
+        )
+        right.Parent = folder
+
+        -- Lintel above doorway
+        local lintelHeight = wallHeight - doorwayHeight
+        if lintelHeight > 0 then
+            local lintel = self:_createPart(
+                "Wall_Lintel",
+                Vector3.new(wallCenterX, wallBaseY + doorwayHeight + lintelHeight / 2, wallCenterZ),
+                Vector3.new(wallThickness, lintelHeight, doorwayWidth),
+                color,
+                material
+            )
+            lintel.Parent = folder
+        end
+    else
+        -- Wall runs along X axis (north-south facing)
+        -- Left segment
+        local leftX = wallCenterX - wallWidth / 4 - doorwayWidth / 4
+        local left = self:_createPart(
+            "Wall_Left",
+            Vector3.new(leftX, wallBaseY + wallHeight / 2, wallCenterZ),
+            Vector3.new(segmentWidth, wallHeight, wallThickness),
+            color,
+            material
+        )
+        left.Parent = folder
+
+        -- Right segment
+        local rightX = wallCenterX + wallWidth / 4 + doorwayWidth / 4
+        local right = self:_createPart(
+            "Wall_Right",
+            Vector3.new(rightX, wallBaseY + wallHeight / 2, wallCenterZ),
+            Vector3.new(segmentWidth, wallHeight, wallThickness),
+            color,
+            material
+        )
+        right.Parent = folder
+
+        -- Lintel above doorway
+        local lintelHeight = wallHeight - doorwayHeight
+        if lintelHeight > 0 then
+            local lintel = self:_createPart(
+                "Wall_Lintel",
+                Vector3.new(wallCenterX, wallBaseY + doorwayHeight + lintelHeight / 2, wallCenterZ),
+                Vector3.new(doorwayWidth, lintelHeight, wallThickness),
+                color,
+                material
+            )
+            lintel.Parent = folder
+        end
+    end
+end
+
+-- Helper: Create a solid wall (no doorway)
+function LandmarkBuilder:_createSolidWall(
+    wallCenterX: number,
+    wallBaseY: number,
+    wallCenterZ: number,
+    wallWidth: number,
+    wallHeight: number,
+    wallThickness: number,
+    isZAligned: boolean, -- true = wall runs along Z axis, false = along X axis
+    color: Color3,
+    material: Enum.Material,
+    folder: Folder
+): ()
+    local sizeX, sizeZ
+    if isZAligned then
+        sizeX = wallThickness
+        sizeZ = wallWidth
+    else
+        sizeX = wallWidth
+        sizeZ = wallThickness
+    end
+
+    local wall = self:_createPart(
+        "Wall_Solid",
+        Vector3.new(wallCenterX, wallBaseY + wallHeight / 2, wallCenterZ),
+        Vector3.new(sizeX, wallHeight, sizeZ),
+        color,
+        material
+    )
+    wall.Parent = folder
+end
+
 -- Helper: Create a colonnade (row of columns)
 function LandmarkBuilder:_createColonnade(
     startX: number,
@@ -347,7 +472,7 @@ function LandmarkBuilder:_buildColosseum(
     end
 end
 
--- Build Thermae (bath complex)
+-- Build Thermae (bath complex) - walkable hollow interior
 function LandmarkBuilder:_buildThermae(
     centerX: number,
     centerZ: number,
@@ -357,20 +482,66 @@ function LandmarkBuilder:_buildThermae(
     local terrainY = TerrainUtils.getHeightAt(self.terrain, centerX, centerZ)
     local platformTop = self:_createPlatform(centerX, terrainY, centerZ, radius * 1.4, radius * 1.2, folder)
 
-    -- Main building
-    local mainBuilding = self:_createPart(
-        "MainBuilding",
-        Vector3.new(centerX, platformTop + 8, centerZ),
-        Vector3.new(radius * 1.2, 16, radius),
+    -- Building dimensions
+    local buildingWidth = radius * 1.2
+    local buildingDepth = radius
+    local wallHeight = 16
+    local wallThickness = 2
+    local doorwayWidth = 6
+    local doorwayHeight = 10
+
+    -- Interior floor
+    local floor = self:_createPart(
+        "InteriorFloor",
+        Vector3.new(centerX, platformTop + 0.5, centerZ),
+        Vector3.new(buildingWidth - wallThickness * 2, 1, buildingDepth - wallThickness * 2),
+        MARBLE_CREAM,
+        Enum.Material.Marble
+    )
+    floor.Parent = folder
+
+    -- North wall (back) with doorway
+    self:_createWallWithDoorway(
+        centerX, platformTop, centerZ - buildingDepth / 2 + wallThickness / 2,
+        buildingWidth, wallHeight, wallThickness, doorwayWidth, doorwayHeight,
+        false, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- South wall (front) with doorway
+    self:_createWallWithDoorway(
+        centerX, platformTop, centerZ + buildingDepth / 2 - wallThickness / 2,
+        buildingWidth, wallHeight, wallThickness, doorwayWidth, doorwayHeight,
+        false, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- East wall (solid)
+    self:_createSolidWall(
+        centerX + buildingWidth / 2 - wallThickness / 2, platformTop, centerZ,
+        buildingDepth - wallThickness * 2, wallHeight, wallThickness,
+        true, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- West wall (solid)
+    self:_createSolidWall(
+        centerX - buildingWidth / 2 + wallThickness / 2, platformTop, centerZ,
+        buildingDepth - wallThickness * 2, wallHeight, wallThickness,
+        true, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- Roof
+    local roof = self:_createPart(
+        "Roof",
+        Vector3.new(centerX, platformTop + wallHeight + 1, centerZ),
+        Vector3.new(buildingWidth, 2, buildingDepth),
         TERRACOTTA,
         Enum.Material.Brick
     )
-    mainBuilding.Parent = folder
+    roof.Parent = folder
 
     -- Domed roof section
     local dome = self:_createPart(
         "Dome",
-        Vector3.new(centerX, platformTop + 18, centerZ),
+        Vector3.new(centerX, platformTop + wallHeight + 5, centerZ),
         Vector3.new(radius * 0.8, 6, radius * 0.8),
         TERRACOTTA,
         Enum.Material.Brick
@@ -391,7 +562,7 @@ function LandmarkBuilder:_buildThermae(
     )
 end
 
--- Build Temple (classical temple with pediment)
+-- Build Temple (classical temple with pediment) - walkable cella interior
 function LandmarkBuilder:_buildTemple(
     centerX: number,
     centerZ: number,
@@ -402,14 +573,62 @@ function LandmarkBuilder:_buildTemple(
     local terrainY = TerrainUtils.getHeightAt(self.terrain, centerX, centerZ)
     local platformTop = self:_createPlatform(centerX, terrainY, centerZ, radius * 1.6, radius * 1.2, folder)
 
-    -- Cella (inner chamber)
-    local cella = self:_createPart(
-        "Cella",
-        Vector3.new(centerX, platformTop + 8, centerZ - radius * 0.2),
-        Vector3.new(radius * 0.8, 16, radius * 0.6),
-        MARBLE_WHITE
+    -- Cella (inner chamber) dimensions - hollow with walls
+    local cellaWidth = radius * 0.8
+    local cellaDepth = radius * 0.6
+    local cellaCenterZ = centerZ - radius * 0.2
+    local cellaHeight = 16
+    local wallThickness = 2
+    local doorwayWidth = 5
+    local doorwayHeight = 10
+
+    -- Cella interior floor
+    local cellaFloor = self:_createPart(
+        "CellaFloor",
+        Vector3.new(centerX, platformTop + 0.5, cellaCenterZ),
+        Vector3.new(cellaWidth - wallThickness * 2, 1, cellaDepth - wallThickness * 2),
+        MARBLE_WHITE,
+        Enum.Material.Marble
     )
-    cella.Parent = folder
+    cellaFloor.Parent = folder
+
+    -- Cella front wall (south, facing columns) with doorway
+    self:_createWallWithDoorway(
+        centerX, platformTop, cellaCenterZ + cellaDepth / 2 - wallThickness / 2,
+        cellaWidth, cellaHeight, wallThickness, doorwayWidth, doorwayHeight,
+        false, MARBLE_WHITE, Enum.Material.Marble, folder
+    )
+
+    -- Cella back wall (north, solid)
+    self:_createSolidWall(
+        centerX, platformTop, cellaCenterZ - cellaDepth / 2 + wallThickness / 2,
+        cellaWidth, cellaHeight, wallThickness,
+        false, MARBLE_WHITE, Enum.Material.Marble, folder
+    )
+
+    -- Cella east wall (solid)
+    self:_createSolidWall(
+        centerX + cellaWidth / 2 - wallThickness / 2, platformTop, cellaCenterZ,
+        cellaDepth - wallThickness * 2, cellaHeight, wallThickness,
+        true, MARBLE_WHITE, Enum.Material.Marble, folder
+    )
+
+    -- Cella west wall (solid)
+    self:_createSolidWall(
+        centerX - cellaWidth / 2 + wallThickness / 2, platformTop, cellaCenterZ,
+        cellaDepth - wallThickness * 2, cellaHeight, wallThickness,
+        true, MARBLE_WHITE, Enum.Material.Marble, folder
+    )
+
+    -- Cella roof
+    local cellaRoof = self:_createPart(
+        "CellaRoof",
+        Vector3.new(centerX, platformTop + cellaHeight + 1, cellaCenterZ),
+        Vector3.new(cellaWidth, 2, cellaDepth),
+        MARBLE_CREAM,
+        Enum.Material.Marble
+    )
+    cellaRoof.Parent = folder
 
     -- Front columns (6-column portico)
     self:_createColonnade(
@@ -519,7 +738,7 @@ function LandmarkBuilder:_buildCircusMaximus(
     end
 end
 
--- Build Castrum (military fortress)
+-- Build Castrum (military fortress) - Principia has walkable interior
 function LandmarkBuilder:_buildCastrum(
     centerX: number,
     centerZ: number,
@@ -569,15 +788,61 @@ function LandmarkBuilder:_buildCastrum(
         tower.Parent = folder
     end
 
-    -- Central command building (Principia)
-    local principia = self:_createPart(
-        "Principia",
-        Vector3.new(centerX, terrainY + 6, centerZ),
-        Vector3.new(radius * 0.6, 12, radius * 0.6),
+    -- Central command building (Principia) - hollow with doorways
+    local principiaWidth = radius * 0.6
+    local principiaDepth = radius * 0.6
+    local principiaHeight = 12
+    local principiaWallThickness = 2
+    local doorwayWidth = 5
+    local doorwayHeight = 8
+
+    -- Principia interior floor
+    local principiaFloor = self:_createPart(
+        "PrincipiaFloor",
+        Vector3.new(centerX, terrainY + 0.5, centerZ),
+        Vector3.new(principiaWidth - principiaWallThickness * 2, 1, principiaDepth - principiaWallThickness * 2),
         MARBLE_CREAM,
+        Enum.Material.Marble
+    )
+    principiaFloor.Parent = folder
+
+    -- Principia north wall with doorway (back entrance)
+    self:_createWallWithDoorway(
+        centerX, terrainY, centerZ - principiaDepth / 2 + principiaWallThickness / 2,
+        principiaWidth, principiaHeight, principiaWallThickness, doorwayWidth, doorwayHeight,
+        false, MARBLE_CREAM, Enum.Material.Brick, folder
+    )
+
+    -- Principia south wall with doorway (front entrance)
+    self:_createWallWithDoorway(
+        centerX, terrainY, centerZ + principiaDepth / 2 - principiaWallThickness / 2,
+        principiaWidth, principiaHeight, principiaWallThickness, doorwayWidth, doorwayHeight,
+        false, MARBLE_CREAM, Enum.Material.Brick, folder
+    )
+
+    -- Principia east wall (solid)
+    self:_createSolidWall(
+        centerX + principiaWidth / 2 - principiaWallThickness / 2, terrainY, centerZ,
+        principiaDepth - principiaWallThickness * 2, principiaHeight, principiaWallThickness,
+        true, MARBLE_CREAM, Enum.Material.Brick, folder
+    )
+
+    -- Principia west wall (solid)
+    self:_createSolidWall(
+        centerX - principiaWidth / 2 + principiaWallThickness / 2, terrainY, centerZ,
+        principiaDepth - principiaWallThickness * 2, principiaHeight, principiaWallThickness,
+        true, MARBLE_CREAM, Enum.Material.Brick, folder
+    )
+
+    -- Principia roof
+    local principiaRoof = self:_createPart(
+        "PrincipiaRoof",
+        Vector3.new(centerX, terrainY + principiaHeight + 1, centerZ),
+        Vector3.new(principiaWidth, 2, principiaDepth),
+        TERRACOTTA,
         Enum.Material.Brick
     )
-    principia.Parent = folder
+    principiaRoof.Parent = folder
 end
 
 -- Build Macellum (marketplace)
@@ -625,7 +890,7 @@ function LandmarkBuilder:_buildMacellum(
     end
 end
 
--- Build Horreum (warehouse)
+-- Build Horreum (warehouse) - large hollow interior with cargo doorways
 function LandmarkBuilder:_buildHorreum(
     centerX: number,
     centerZ: number,
@@ -634,35 +899,71 @@ function LandmarkBuilder:_buildHorreum(
 ): ()
     local terrainY = TerrainUtils.getHeightAt(self.terrain, centerX, centerZ)
 
-    -- Main warehouse building
-    local warehouse = self:_createPart(
-        "Warehouse",
-        Vector3.new(centerX, terrainY + 8, centerZ),
-        Vector3.new(radius * 1.5, 16, radius),
+    -- Warehouse dimensions
+    local buildingWidth = radius * 1.5
+    local buildingDepth = radius
+    local wallHeight = 16
+    local wallThickness = 2
+    local cargoDoorwayWidth = 8 -- Large cargo doors
+    local cargoDoorwayHeight = 12
+
+    -- Interior floor
+    local floor = self:_createPart(
+        "InteriorFloor",
+        Vector3.new(centerX, terrainY + 0.5, centerZ),
+        Vector3.new(buildingWidth - wallThickness * 2, 1, buildingDepth - wallThickness * 2),
+        STONE_GRAY,
+        Enum.Material.Slate
+    )
+    floor.Parent = folder
+
+    -- North wall (solid, back)
+    self:_createSolidWall(
+        centerX, terrainY, centerZ - buildingDepth / 2 + wallThickness / 2,
+        buildingWidth, wallHeight, wallThickness,
+        false, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- South wall (front) with large cargo doorway
+    self:_createWallWithDoorway(
+        centerX, terrainY, centerZ + buildingDepth / 2 - wallThickness / 2,
+        buildingWidth, wallHeight, wallThickness, cargoDoorwayWidth, cargoDoorwayHeight,
+        false, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- East wall with cargo doorway (side entrance)
+    self:_createWallWithDoorway(
+        centerX + buildingWidth / 2 - wallThickness / 2, terrainY, centerZ,
+        buildingDepth - wallThickness * 2, wallHeight, wallThickness, cargoDoorwayWidth, cargoDoorwayHeight,
+        true, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- West wall (solid)
+    self:_createSolidWall(
+        centerX - buildingWidth / 2 + wallThickness / 2, terrainY, centerZ,
+        buildingDepth - wallThickness * 2, wallHeight, wallThickness,
+        true, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- Roof
+    local roof = self:_createPart(
+        "Roof",
+        Vector3.new(centerX, terrainY + wallHeight + 1, centerZ),
+        Vector3.new(buildingWidth + 2, 2, buildingDepth + 2),
         TERRACOTTA,
         Enum.Material.Brick
     )
-    warehouse.Parent = folder
+    roof.Parent = folder
 
-    -- Loading dock
+    -- Loading dock (outside, in front of main entrance)
     local dock = self:_createPart(
         "LoadingDock",
-        Vector3.new(centerX, terrainY + 2, centerZ + radius * 0.6),
+        Vector3.new(centerX, terrainY + 2, centerZ + buildingDepth / 2 + 4),
         Vector3.new(radius * 1.2, 4, 6),
         STONE_GRAY,
         Enum.Material.Brick
     )
     dock.Parent = folder
-
-    -- Roof
-    local roof = self:_createPart(
-        "Roof",
-        Vector3.new(centerX, terrainY + 17, centerZ),
-        Vector3.new(radius * 1.6, 2, radius * 1.1),
-        TERRACOTTA,
-        Enum.Material.Brick
-    )
-    roof.Parent = folder
 end
 
 -- Build Pharos (lighthouse)
@@ -763,7 +1064,7 @@ function LandmarkBuilder:_buildEmporium(
     portico.Parent = folder
 end
 
--- Build VillaRustica (rural estate)
+-- Build VillaRustica (rural estate) - MainHouse has walkable interior
 function LandmarkBuilder:_buildVillaRustica(
     centerX: number,
     centerZ: number,
@@ -772,23 +1073,69 @@ function LandmarkBuilder:_buildVillaRustica(
 ): ()
     local terrainY = TerrainUtils.getHeightAt(self.terrain, centerX, centerZ)
 
-    -- Main house
-    local house = self:_createPart(
-        "MainHouse",
-        Vector3.new(centerX, terrainY + 6, centerZ),
-        Vector3.new(radius * 1.2, 12, radius),
+    -- Main house dimensions
+    local houseWidth = radius * 1.2
+    local houseDepth = radius
+    local wallHeight = 12
+    local wallThickness = 2
+    local doorwayWidth = 5
+    local doorwayHeight = 8
+
+    -- Interior floor
+    local floor = self:_createPart(
+        "InteriorFloor",
+        Vector3.new(centerX, terrainY + 0.5, centerZ),
+        Vector3.new(houseWidth - wallThickness * 2, 1, houseDepth - wallThickness * 2),
         TERRACOTTA,
         Enum.Material.Brick
     )
-    house.Parent = folder
+    floor.Parent = folder
 
-    -- Peristyle courtyard columns
+    -- North wall (back) with doorway
+    self:_createWallWithDoorway(
+        centerX, terrainY, centerZ - houseDepth / 2 + wallThickness / 2,
+        houseWidth, wallHeight, wallThickness, doorwayWidth, doorwayHeight,
+        false, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- South wall (front) with doorway
+    self:_createWallWithDoorway(
+        centerX, terrainY, centerZ + houseDepth / 2 - wallThickness / 2,
+        houseWidth, wallHeight, wallThickness, doorwayWidth, doorwayHeight,
+        false, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- East wall (solid)
+    self:_createSolidWall(
+        centerX + houseWidth / 2 - wallThickness / 2, terrainY, centerZ,
+        houseDepth - wallThickness * 2, wallHeight, wallThickness,
+        true, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- West wall (solid)
+    self:_createSolidWall(
+        centerX - houseWidth / 2 + wallThickness / 2, terrainY, centerZ,
+        houseDepth - wallThickness * 2, wallHeight, wallThickness,
+        true, TERRACOTTA, Enum.Material.Brick, folder
+    )
+
+    -- Roof
+    local roof = self:_createPart(
+        "Roof",
+        Vector3.new(centerX, terrainY + wallHeight + 1, centerZ),
+        Vector3.new(houseWidth + 2, 2, houseDepth + 2),
+        TERRACOTTA,
+        Enum.Material.Brick
+    )
+    roof.Parent = folder
+
+    -- Peristyle courtyard columns (in front of house)
     local courtSize = radius * 0.5
     local columnPositions = {
-        { x = centerX - courtSize, z = centerZ - courtSize },
-        { x = centerX + courtSize, z = centerZ - courtSize },
-        { x = centerX - courtSize, z = centerZ + courtSize },
-        { x = centerX + courtSize, z = centerZ + courtSize },
+        { x = centerX - courtSize, z = centerZ + houseDepth / 2 + 4 },
+        { x = centerX + courtSize, z = centerZ + houseDepth / 2 + 4 },
+        { x = centerX - courtSize, z = centerZ + houseDepth / 2 + 4 + courtSize },
+        { x = centerX + courtSize, z = centerZ + houseDepth / 2 + 4 + courtSize },
     }
 
     for _, pos in ipairs(columnPositions) do
