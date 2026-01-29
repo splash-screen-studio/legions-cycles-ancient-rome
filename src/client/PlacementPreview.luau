@@ -16,7 +16,7 @@ local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
 
 local PlacementPreview = {}
 PlacementPreview.__index = PlacementPreview
-PlacementPreview.VERSION = "1.0.0"
+PlacementPreview.VERSION = "1.0.1"
 
 -- Preview constants
 local PREVIEW_TRANSPARENCY = 0.5
@@ -249,16 +249,10 @@ function PlacementPreview:_updatePreviewPosition()
 end
 
 function PlacementPreview:_getPointerPosition(): Vector2?
-    -- Check for touch input first (mobile-first)
-    local touches = UserInputService:GetTouchPoints()
-    if #touches > 0 then
-        return Vector2.new(touches[1].X, touches[1].Y)
-    end
-
-    -- Fall back to mouse position (desktop)
-    local mouse = self._player:GetMouse()
-    if mouse then
-        return Vector2.new(mouse.X, mouse.Y)
+    -- GetMouseLocation works for both mouse and touch input
+    local mouseLocation = UserInputService:GetMouseLocation()
+    if mouseLocation then
+        return mouseLocation
     end
 
     return nil

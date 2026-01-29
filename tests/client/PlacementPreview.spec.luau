@@ -102,8 +102,8 @@ describe("PlacementPreview", function()
 
     it("should get pointer position from touch or mouse", function()
         expect(string.find(moduleSource, "_getPointerPosition", 1, true)).toNotBeNil()
-        expect(string.find(moduleSource, "GetTouchPoints", 1, true)).toNotBeNil()
-        expect(string.find(moduleSource, "GetMouse", 1, true)).toNotBeNil()
+        -- GetMouseLocation works for both mouse and touch input
+        expect(string.find(moduleSource, "GetMouseLocation", 1, true)).toNotBeNil()
     end)
 
     it("should raycast to terrain for position", function()
