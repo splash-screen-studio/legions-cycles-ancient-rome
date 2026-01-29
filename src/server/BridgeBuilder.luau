@@ -466,3 +466,4 @@ function BridgeBuilder:destroy(): ()
 end
 
 return BridgeBuilder
+
