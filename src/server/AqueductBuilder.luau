@@ -33,7 +33,7 @@ local CHANNEL_WALL_THICKNESS = 1 -- Thickness of channel walls
 local WALKWAY_WIDTH = 8 -- Total width of top walkway
 local RAILING_HEIGHT = 2 -- Height of side railings
 local MIN_PILLAR_HEIGHT = 4 -- Minimum pillar height
-local TOTAL_AQUEDUCT_LENGTH = 800 -- Total length in studs
+local _TOTAL_AQUEDUCT_LENGTH = 800 -- Total length in studs (reserved for future use)
 local LANDMARK_AVOIDANCE_RADIUS = 80 -- Distance to avoid landmarks
 
 -- Roman architectural colors
@@ -182,7 +182,7 @@ end
 function AqueductBuilder:_determineSectionType(segmentIndex: number, totalSegments: number): SectionType
     math.randomseed(self.seed + segmentIndex)
     local random = math.random()
-    local progress = segmentIndex / totalSegments
+    local _progress = segmentIndex / totalSegments -- Reserved for future position-based logic
 
     -- Create natural variation in condition
     -- Earlier sections more likely to be ruined, middle functional, later weathered
@@ -279,7 +279,7 @@ function AqueductBuilder:_buildPillar(
     z: number,
     baseY: number,
     height: number,
-    tiers: number,
+    _tiers: number,
     rotation: number,
     folder: Folder,
     sectionType: SectionType
