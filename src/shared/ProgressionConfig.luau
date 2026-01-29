@@ -93,7 +93,6 @@ end
 -- Calculate level from total XP
 function ProgressionConfig.getLevelFromXP(xp: number): number
     local level = 1
-    local requiredXP = 0
 
     while true do
         local nextLevelXP = ProgressionConfig.getXPForLevel(level + 1)
@@ -101,7 +100,6 @@ function ProgressionConfig.getLevelFromXP(xp: number): number
             break
         end
         level = level + 1
-        requiredXP = nextLevelXP
 
         -- Safety cap at level 100
         if level >= 100 then
