@@ -61,6 +61,9 @@ print(string.format("[Server] Loaded ProgressionService v%s", ProgressionService
 local CurrencyService = require(script.CurrencyService)
 print(string.format("[Server] Loaded CurrencyService v%s", CurrencyService.VERSION))
 
+local CitizenManager = require(script.CitizenManager)
+print(string.format("[Server] Loaded CitizenManager v%s", CitizenManager.VERSION))
+
 -- Configuration
 local MAP_SIZE = 1024
 
@@ -178,5 +181,13 @@ progressionService:start()
 -- Creates RemoteEvents for client communication
 local currencyService = CurrencyService.new()
 currencyService:start()
+
+-- STEP 11: Spawn citizens near landmarks
+-- Creates stationary NPCs to bring the world to life
+local citizenManager = CitizenManager.new({
+    worldPlan = worldPlan,
+    maxCitizens = 50, -- Mobile performance limit
+})
+citizenManager:start()
 
 print(string.format("[Server v%s] All systems initialized", VERSION))
