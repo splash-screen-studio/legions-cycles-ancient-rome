@@ -30,6 +30,9 @@ print(string.format("[Client] Loaded ProgressionDisplay v%s", ProgressionDisplay
 local CurrencyDisplay = require(script.CurrencyDisplay)
 print(string.format("[Client] Loaded CurrencyDisplay v%s", CurrencyDisplay.VERSION))
 
+local CoordinateDisplay = require(script.CoordinateDisplay)
+print(string.format("[Client] Loaded CoordinateDisplay v%s", CoordinateDisplay.VERSION))
+
 -- Bootstrap atmosphere (lighting, sky, fog)
 local atmosphereManager = AtmosphereManager.new()
 atmosphereManager:start()
@@ -49,5 +52,9 @@ progressionDisplay:start()
 -- Bootstrap currency display (Denarii balance UI)
 local currencyDisplay = CurrencyDisplay.new()
 currencyDisplay:start()
+
+-- Bootstrap coordinate display (X, Z, Y position for debugging)
+local coordinateDisplay = CoordinateDisplay.new()
+coordinateDisplay:start()
 
 print(string.format("[Client v%s] All systems initialized", VERSION))
