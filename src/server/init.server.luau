@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "2.0.0"
+local VERSION = "2.1.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -64,6 +64,12 @@ print(string.format("[Server] Loaded CurrencyService v%s", CurrencyService.VERSI
 local CitizenManager = require(script.CitizenManager)
 print(string.format("[Server] Loaded CitizenManager v%s", CitizenManager.VERSION))
 
+local SpatialManager = require(script.SpatialManager)
+print(string.format("[Server] Loaded SpatialManager v%s", SpatialManager.VERSION))
+
+local BuildService = require(script.BuildService)
+print(string.format("[Server] Loaded BuildService v%s", BuildService.VERSION))
+
 -- Configuration
 local MAP_SIZE = 1024
 
@@ -80,6 +86,15 @@ print(string.format("[Server] World plan created - %d landmarks, %d roads",
     #worldPlan:getLandmarks(),
     #worldPlan:getRoads()
 ))
+
+-- STEP 1.5: Initialize Spatial Coordination System (right after WorldPlan)
+-- This provides centralized spatial awareness for all placement systems
+-- Future systems (structure placement, NPC pathfinding) will use this
+local _spatialManager = SpatialManager.new({
+    worldPlan = worldPlan,
+    mapSize = MAP_SIZE,
+})
+print("[Server] Spatial coordination system ready")
 
 -- STEP 2: Generate Terrain (queries WorldPlan for river to make low points)
 local terrainManager = TerrainManager.new({
@@ -189,5 +204,11 @@ local citizenManager = CitizenManager.new({
     maxCitizens = 50, -- Mobile performance limit
 })
 citizenManager:start()
+
+-- STEP 12: Bootstrap build service (player structure placement)
+-- Handles placement requests, validates positions, deducts currency
+local buildService = BuildService.new()
+buildService:setCurrencyService(currencyService)
+buildService:start()
 
 print(string.format("[Server v%s] All systems initialized", VERSION))
