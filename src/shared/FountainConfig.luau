@@ -3,7 +3,7 @@
     FountainConfig - Definitions for Roman fountain types and placements
 
     Fountain Types (from smallest to largest):
-    - Basin: Tiny (5x5), street corners
+    - Basin: Small (8x8), street corners
     - Impluvium: Small (10x10), Domus atriums (player-built)
     - PublicFountain: Medium (20x20), plazas, intersections
     - Nymphaeum: Large (30x15), Forum, civic areas
@@ -16,7 +16,7 @@
 ]]
 
 local FountainConfig = {}
-FountainConfig.VERSION = "1.1.0"
+FountainConfig.VERSION = "1.2.0"
 
 -- Roman color palette
 FountainConfig.COLORS = {
@@ -42,7 +42,7 @@ export type FountainTypeConfig = {
 FountainConfig.TYPES = {
     basin = {
         name = "Basin",
-        size = Vector3.new(5, 4, 5), -- 5x5 footprint, 4 studs deep
+        size = Vector3.new(8, 5, 8), -- 8x8 footprint, 5 studs deep
         wallMaterial = Enum.Material.Marble,
         wallColor = FountainConfig.COLORS.MARBLE_WHITE,
         wallThickness = 1,
