@@ -67,6 +67,9 @@ print(string.format("[Server] Loaded CitizenManager v%s", CitizenManager.VERSION
 local SpatialManager = require(script.SpatialManager)
 print(string.format("[Server] Loaded SpatialManager v%s", SpatialManager.VERSION))
 
+local BuildService = require(script.BuildService)
+print(string.format("[Server] Loaded BuildService v%s", BuildService.VERSION))
+
 -- Configuration
 local MAP_SIZE = 1024
 
@@ -91,7 +94,7 @@ local _spatialManager = SpatialManager.new({
     worldPlan = worldPlan,
     mapSize = MAP_SIZE,
 })
-print(string.format("[Server] Spatial coordination system ready"))
+print("[Server] Spatial coordination system ready")
 
 -- STEP 2: Generate Terrain (queries WorldPlan for river to make low points)
 local terrainManager = TerrainManager.new({
@@ -201,5 +204,11 @@ local citizenManager = CitizenManager.new({
     maxCitizens = 50, -- Mobile performance limit
 })
 citizenManager:start()
+
+-- STEP 12: Bootstrap build service (player structure placement)
+-- Handles placement requests, validates positions, deducts currency
+local buildService = BuildService.new()
+buildService:setCurrencyService(currencyService)
+buildService:start()
 
 print(string.format("[Server v%s] All systems initialized", VERSION))
