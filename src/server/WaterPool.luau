@@ -15,7 +15,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local WaterPool = {}
 WaterPool.__index = WaterPool
-WaterPool.VERSION = "2.0.0"
+WaterPool.VERSION = "2.2.0"
 
 -- Type definitions
 export type PoolConfig = {
@@ -64,8 +64,9 @@ function WaterPool:build(): Folder
     -- CRITICAL: Query terrain height at center position
     local terrainY = self.terrainUtils.getHeightAt(self.terrain, pos.X, pos.Z)
     local poolBottom = terrainY - size.Y
-    local waterSurface = terrainY -- Water surface at terrain level
-    local wallTop = terrainY + rimHeight -- Walls extend above water
+    local wallTop = terrainY + rimHeight -- Walls extend above terrain
+    -- Water surface should be near the rim (1-2 studs below wall top) so fountain looks full
+    local waterSurface = wallTop - 1 -- Water fills to 1 stud below rim
 
     -- Create folder for organization
     local folderName = config.name or string.format("WaterPool_%.0f_%.0f", pos.X, pos.Z)
@@ -120,9 +121,10 @@ function WaterPool:build(): Folder
 
     -- CRITICAL: Clear ALL terrain inside walls (including air above water)
     -- This ensures no terrain leaks through the walls
+    -- NOTE: Clear below floor part (poolBottom - thickness) to prevent grass showing through
     local clearMinCorner = Vector3.new(
         pos.X - size.X / 2,
-        poolBottom,
+        poolBottom - thickness,
         pos.Z - size.Z / 2
     )
     local clearMaxCorner = Vector3.new(
@@ -133,7 +135,7 @@ function WaterPool:build(): Folder
     local clearRegion = Region3.new(clearMinCorner, clearMaxCorner)
     self.terrain:FillRegion(clearRegion, 4, Enum.Material.Air)
 
-    -- Fill water region only (from pool bottom to water surface)
+    -- Fill water region only (from pool bottom to water surface near rim)
     local waterMinCorner = Vector3.new(
         pos.X - size.X / 2,
         poolBottom,
@@ -141,7 +143,7 @@ function WaterPool:build(): Folder
     )
     local waterMaxCorner = Vector3.new(
         pos.X + size.X / 2,
-        waterSurface - 0.1, -- Slightly below terrain surface
+        waterSurface, -- Water fills to near the rim so fountain looks full
         pos.Z + size.Z / 2
     )
     local waterRegion = Region3.new(waterMinCorner, waterMaxCorner)
@@ -185,14 +187,16 @@ function WaterPool:destroy()
         local config = self.config
         local pos = config.position
         local size = config.size
+        local thickness = config.wallThickness or 2
         local rimHeight = config.rimHeight or 2
         local terrainY = self.terrainUtils.getHeightAt(self.terrain, pos.X, pos.Z)
         local poolBottom = terrainY - size.Y
         local wallTop = terrainY + rimHeight
 
+        -- Clear from below floor part (poolBottom - thickness) to wallTop
         local clearMinCorner = Vector3.new(
             pos.X - size.X / 2,
-            poolBottom,
+            poolBottom - thickness,
             pos.Z - size.Z / 2
         )
         local clearMaxCorner = Vector3.new(

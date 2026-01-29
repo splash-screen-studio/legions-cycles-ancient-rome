@@ -5,7 +5,7 @@
 
     Features:
     - Play individual tracks or shuffle playlist
-    - Smooth crossfade transitions between tracks
+    - Smooth crossfade transitions between tracks using TweenService
     - Volume control (master volume)
     - Auto-advance to next track on completion
 
@@ -13,6 +13,7 @@
 ]]
 
 local SoundService = game:GetService("SoundService")
+local TweenService = game:GetService("TweenService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local MusicConfig = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("MusicConfig"))
@@ -20,7 +21,7 @@ local Maid = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Maid
 
 local MusicManager = {}
 MusicManager.__index = MusicManager
-MusicManager.VERSION = "1.0.0"
+MusicManager.VERSION = "1.1.0"
 
 export type MusicManager = typeof(setmetatable({} :: {
     _sounds: { [string]: Sound },
@@ -32,7 +33,8 @@ export type MusicManager = typeof(setmetatable({} :: {
     _shuffleMode: boolean,
     _shuffledPlaylist: { string },
     _maid: Maid.Maid,
-    _crossfadeThread: thread?,
+    _fadeOutTween: Tween?,
+    _fadeInTween: Tween?,
 }, MusicManager))
 
 --- Creates a new MusicManager instance
@@ -47,7 +49,8 @@ function MusicManager.new(): MusicManager
         _shuffleMode = false,
         _shuffledPlaylist = {} :: { string },
         _maid = Maid.new(),
-        _crossfadeThread = nil :: thread?,
+        _fadeOutTween = nil :: Tween?,
+        _fadeInTween = nil :: Tween?,
     }, MusicManager)
 
     self:_createSounds()
@@ -128,40 +131,61 @@ function MusicManager:_advancePlaylist(): ()
     self:playTrack(nextTrack)
 end
 
---- Performs a smooth crossfade between two tracks
+--- Cancels any active crossfade tweens
+function MusicManager:_cancelCrossfadeTweens(): ()
+    if self._fadeOutTween then
+        self._fadeOutTween:Cancel()
+        self._fadeOutTween = nil
+    end
+    if self._fadeInTween then
+        self._fadeInTween:Cancel()
+        self._fadeInTween = nil
+    end
+end
+
+--- Performs a smooth crossfade between two tracks using TweenService
 function MusicManager:_crossfade(fromSound: Sound?, toSound: Sound, duration: number): ()
-    -- Cancel any existing crossfade
-    if self._crossfadeThread then
-        task.cancel(self._crossfadeThread)
-        self._crossfadeThread = nil
+    -- Cancel any existing crossfade tweens
+    self:_cancelCrossfadeTweens()
+
+    -- TweenInfo with Quad ease-in-out for smooth crossfade
+    local tweenInfo = TweenInfo.new(
+        duration,
+        Enum.EasingStyle.Quad,
+        Enum.EasingDirection.InOut
+    )
+
+    -- Start the new track at volume 0
+    toSound.Volume = 0
+    toSound:Play()
+
+    -- Create fade-in tween for the new track
+    self._fadeInTween = TweenService:Create(toSound, tweenInfo, {
+        Volume = self._masterVolume,
+    })
+    self._fadeInTween:Play()
+
+    -- If there's a previous track, fade it out and stop it when done
+    if fromSound then
+        self._fadeOutTween = TweenService:Create(fromSound, tweenInfo, {
+            Volume = 0,
+        })
+
+        -- Capture fromSound in a local to avoid issues with self._currentSound changing
+        local soundToStop = fromSound
+        self._maid:give(self._fadeOutTween.Completed:Once(function()
+            soundToStop:Stop()
+            soundToStop.Volume = 0
+            self._fadeOutTween = nil
+        end))
+
+        self._fadeOutTween:Play()
     end
 
-    self._crossfadeThread = task.spawn(function()
-        toSound.Volume = 0
-        toSound:Play()
-
-        local startTime = tick()
-        while tick() - startTime < duration do
-            local alpha = (tick() - startTime) / duration
-            local easeAlpha = alpha * alpha * (3 - 2 * alpha) -- Smoothstep easing
-
-            if fromSound then
-                fromSound.Volume = (1 - easeAlpha) * self._masterVolume
-            end
-            toSound.Volume = easeAlpha * self._masterVolume
-
-            task.wait()
-        end
-
-        -- Ensure final values
-        if fromSound then
-            fromSound:Stop()
-            fromSound.Volume = 0
-        end
-        toSound.Volume = self._masterVolume
-
-        self._crossfadeThread = nil
-    end)
+    -- Clean up fade-in tween reference when complete
+    self._maid:give(self._fadeInTween.Completed:Once(function()
+        self._fadeInTween = nil
+    end))
 end
 
 --- Plays a specific track by name
@@ -190,7 +214,7 @@ function MusicManager:playTrack(trackName: string): ()
     self:_crossfade(previousSound, sound, MusicConfig.CROSSFADE_DURATION)
 end
 
---- Stops the currently playing track with fade out
+--- Stops the currently playing track with fade out using TweenService
 function MusicManager:stop(): ()
     if not self._currentSound then
         return
@@ -198,28 +222,27 @@ function MusicManager:stop(): ()
 
     self._isPlaying = false
 
-    -- Cancel any existing crossfade
-    if self._crossfadeThread then
-        task.cancel(self._crossfadeThread)
-        self._crossfadeThread = nil
-    end
+    -- Cancel any existing crossfade tweens
+    self:_cancelCrossfadeTweens()
 
-    -- Fade out
+    -- Fade out using TweenService
     local soundToStop = self._currentSound
-    task.spawn(function()
-        local startVolume = soundToStop.Volume
-        local startTime = tick()
-        local duration = MusicConfig.CROSSFADE_DURATION
+    local tweenInfo = TweenInfo.new(
+        MusicConfig.CROSSFADE_DURATION,
+        Enum.EasingStyle.Quad,
+        Enum.EasingDirection.Out
+    )
 
-        while tick() - startTime < duration do
-            local alpha = (tick() - startTime) / duration
-            soundToStop.Volume = startVolume * (1 - alpha)
-            task.wait()
-        end
+    local fadeOutTween = TweenService:Create(soundToStop, tweenInfo, {
+        Volume = 0,
+    })
 
+    self._maid:give(fadeOutTween.Completed:Once(function()
         soundToStop:Stop()
         soundToStop.Volume = 0
-    end)
+    end))
+
+    fadeOutTween:Play()
 
     self._currentSound = nil
     self._currentTrack = nil
@@ -246,7 +269,8 @@ function MusicManager:setVolume(volume: number): ()
     self._masterVolume = math.clamp(volume, MusicConfig.MIN_VOLUME, MusicConfig.MAX_VOLUME)
 
     -- Update current sound if playing and not in crossfade
-    if self._currentSound and self._isPlaying and not self._crossfadeThread then
+    local isCrossfading = self._fadeInTween ~= nil or self._fadeOutTween ~= nil
+    if self._currentSound and self._isPlaying and not isCrossfading then
         self._currentSound.Volume = self._masterVolume
     end
 end

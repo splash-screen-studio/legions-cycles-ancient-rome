@@ -3,7 +3,7 @@
     FountainConfig - Definitions for Roman fountain types and placements
 
     Fountain Types (from smallest to largest):
-    - Basin: Tiny (5x5), street corners
+    - Basin: Small (8x8), street corners
     - Impluvium: Small (10x10), Domus atriums (player-built)
     - PublicFountain: Medium (20x20), plazas, intersections
     - Nymphaeum: Large (30x15), Forum, civic areas
@@ -16,7 +16,7 @@
 ]]
 
 local FountainConfig = {}
-FountainConfig.VERSION = "1.0.0"
+FountainConfig.VERSION = "1.2.0"
 
 -- Roman color palette
 FountainConfig.COLORS = {
@@ -42,7 +42,7 @@ export type FountainTypeConfig = {
 FountainConfig.TYPES = {
     basin = {
         name = "Basin",
-        size = Vector3.new(5, 4, 5), -- 5x5 footprint, 4 studs deep
+        size = Vector3.new(8, 5, 8), -- 8x8 footprint, 5 studs deep
         wallMaterial = Enum.Material.Marble,
         wallColor = FountainConfig.COLORS.MARBLE_WHITE,
         wallThickness = 1,
@@ -82,57 +82,69 @@ export type FountainPlacement = {
 }
 
 -- Default fountain placements across the map
--- These align with WorldPlan zones and landmarks
+-- Uses WorldPlan coordinates (centered at 0,0, map is -512 to 512)
+-- IMPORTANT: Placements are validated to avoid roads (see WorldPlan)
+-- Roads: Via Appia (x=0), Via Sacra (z=0), plus paths to landmarks
 FountainConfig.DEFAULT_PLACEMENTS = {
-    -- Forum center (large public fountain) - civic area
+    -- Forum plaza (large nymphaeum) - offset from road intersection
+    -- Placed at (40, 40) to avoid Via Appia (x=0) and Via Sacra (z=0)
     {
-        position = Vector3.new(512, 0, 512),
+        position = Vector3.new(40, 0, 40),
         fountainType = "nymphaeum",
         name = "Forum_Nymphaeum",
     },
     -- Near player spawn area (accessible water)
+    -- Spawn path runs through (200,200)→(400,400), placed offset at (280, 150)
     {
-        position = Vector3.new(350, 0, 350),
+        position = Vector3.new(280, 0, 150),
         fountainType = "publicFountain",
         name = "SpawnArea_PublicFountain",
     },
-    -- Colosseum approach plaza
+    -- Colosseum approach plaza - near landmark at (100, -80)
+    -- Placed adjacent to Colosseum, away from road
     {
-        position = Vector3.new(700, 0, 300),
+        position = Vector3.new(140, 0, -120),
         fountainType = "publicFountain",
         name = "Colosseum_PublicFountain",
     },
-    -- Road intersection waypoints (scattered basins)
+    -- Corner basins - at street corners, NOT on roads
+    -- WestRoad: offset from Via Appia and Via Sacra intersection
     {
-        position = Vector3.new(256, 0, 256),
+        position = Vector3.new(-30, 0, -30),
         fountainType = "basin",
         name = "WestRoad_Basin",
     },
+    -- EastRoad: opposite corner from WestRoad
     {
-        position = Vector3.new(768, 0, 256),
+        position = Vector3.new(30, 0, -30),
         fountainType = "basin",
         name = "EastRoad_Basin",
     },
+    -- NorthWest corner basin
     {
-        position = Vector3.new(256, 0, 768),
+        position = Vector3.new(-30, 0, 30),
         fountainType = "basin",
         name = "NorthWest_Basin",
     },
+    -- NorthEast corner basin
     {
-        position = Vector3.new(768, 0, 768),
+        position = Vector3.new(30, 0, 30),
         fountainType = "basin",
         name = "NorthEast_Basin",
     },
-    -- Additional public fountains at key intersections
+    -- Thermae plaza fountain - near Thermae at (-80, 60)
+    -- Placed in plaza area near the baths
     {
-        position = Vector3.new(400, 0, 600),
+        position = Vector3.new(-120, 0, 80),
         fountainType = "publicFountain",
-        name = "CentralPlaza_PublicFountain",
+        name = "Thermae_PublicFountain",
     },
+    -- Temple plaza fountain - near Temple at (-50, -100)
+    -- Placed in plaza area near the temple
     {
-        position = Vector3.new(600, 0, 400),
+        position = Vector3.new(-80, 0, -130),
         fountainType = "publicFountain",
-        name = "EastPlaza_PublicFountain",
+        name = "Temple_PublicFountain",
     },
 }
 
