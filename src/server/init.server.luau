@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.7.0"
+local VERSION = "1.8.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -51,6 +51,9 @@ print(string.format("[Server] Loaded RuinsBuilder v%s", RuinsBuilder.VERSION))
 
 local SignpostBuilder = require(script.SignpostBuilder)
 print(string.format("[Server] Loaded SignpostBuilder v%s", SignpostBuilder.VERSION))
+
+local CurrencyService = require(script.CurrencyService)
+print(string.format("[Server] Loaded CurrencyService v%s", CurrencyService.VERSION))
 
 -- Configuration
 local MAP_SIZE = 1024
@@ -152,5 +155,10 @@ local waterFeatures = WaterFeatures.new({
     worldPlan = worldPlan, -- Pass world plan for river exclusion checks
 })
 waterFeatures:start()
+
+-- Bootstrap currency system (manages player Denarii)
+-- Must be early to handle player joins, but after basic world setup
+local currencyService = CurrencyService.new()
+currencyService:start()
 
 print(string.format("[Server v%s] All systems initialized", VERSION))
