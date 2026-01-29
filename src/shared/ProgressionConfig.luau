@@ -28,7 +28,7 @@ export type RankInfo = {
 }
 
 -- Rank definitions
-ProgressionConfig.RANKS: { RankInfo } = {
+ProgressionConfig.RANKS = {
     {
         name = "Citizen",
         latinName = "Civis",
@@ -135,7 +135,7 @@ export type Unlock = {
 }
 
 -- All unlocks in the game, sorted by level requirement
-ProgressionConfig.UNLOCKS: { Unlock } = {
+ProgressionConfig.UNLOCKS = {
     -- Level 1 - Citizen starter unlocks
     {
         id = "domus_basic",
