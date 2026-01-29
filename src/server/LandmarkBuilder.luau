@@ -20,7 +20,7 @@ local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
 
 local LandmarkBuilder = {}
 LandmarkBuilder.__index = LandmarkBuilder
-LandmarkBuilder.VERSION = "1.2.0"
+LandmarkBuilder.VERSION = "1.3.0"
 
 -- Roman architectural colors
 local MARBLE_WHITE = Color3.fromRGB(240, 235, 225)
@@ -675,7 +675,8 @@ function LandmarkBuilder:_buildTemple(
     end
 end
 
--- Build Circus Maximus (long racing track)
+-- Build Circus Maximus (grand chariot racing stadium)
+-- The largest structure in Rome, seats 250,000 spectators
 function LandmarkBuilder:_buildCircusMaximus(
     centerX: number,
     centerZ: number,
@@ -683,10 +684,16 @@ function LandmarkBuilder:_buildCircusMaximus(
     folder: Folder
 ): ()
     local terrainY = TerrainUtils.getHeightAt(self.terrain, centerX, centerZ)
-    local trackLength = radius * 3
-    local trackWidth = radius * 0.6
 
-    -- Racing track (sand floor)
+    -- Scale dimensions based on radius but ensure impressive size
+    -- Target: ~200 studs long, ~60 studs wide
+    local trackLength = math.max(radius * 3, 200)
+    local trackWidth = math.max(radius * 0.9, 60)
+    local _innerTrackWidth = trackWidth - 12 -- Width inside the spina
+
+    -- ============================================
+    -- 1. RACING TRACK (elongated oval, sandy surface)
+    -- ============================================
     local track = self:_createPart(
         "RaceTrack",
         Vector3.new(centerX, terrainY + 0.5, centerZ),
@@ -696,46 +703,280 @@ function LandmarkBuilder:_buildCircusMaximus(
     )
     track.Parent = folder
 
-    -- Spina (central divider)
+    -- Rounded ends (semicircular sections using wedge-like parts)
+    -- West end (turning end)
+    local westEndRadius = trackWidth / 2
+    local westEnd = self:_createPart(
+        "WestEnd",
+        Vector3.new(centerX - trackLength / 2 - westEndRadius / 2 + 2, terrainY + 0.5, centerZ),
+        Vector3.new(westEndRadius, 1, trackWidth),
+        SAND,
+        Enum.Material.Sand
+    )
+    westEnd.Parent = folder
+
+    -- East end (near starting gates)
+    local eastEnd = self:_createPart(
+        "EastEnd",
+        Vector3.new(centerX + trackLength / 2 + westEndRadius / 2 - 2, terrainY + 0.5, centerZ),
+        Vector3.new(westEndRadius, 1, trackWidth),
+        SAND,
+        Enum.Material.Sand
+    )
+    eastEnd.Parent = folder
+
+    -- ============================================
+    -- 2. SPINA (Central Barrier)
+    -- ============================================
+    local spinaLength = trackLength * 0.65
+    local spinaWidth = 8
+    local spinaHeight = 4
+
+    -- Main spina platform
     local spina = self:_createPart(
         "Spina",
-        Vector3.new(centerX, terrainY + 3, centerZ),
-        Vector3.new(trackLength * 0.7, 6, 6),
-        MARBLE_WHITE
+        Vector3.new(centerX, terrainY + spinaHeight / 2 + 1, centerZ),
+        Vector3.new(spinaLength, spinaHeight, spinaWidth),
+        MARBLE_CREAM,
+        Enum.Material.Concrete
     )
     spina.Parent = folder
 
-    -- Meta (turning posts at each end)
-    local metaLeft = self:_createCylinder(
-        "MetaLeft",
-        Vector3.new(centerX - trackLength * 0.4, terrainY + 6, centerZ),
-        3,
-        12,
-        BRONZE
+    -- Central obelisk (tall narrow part)
+    local obeliskHeight = 30
+    local obeliskBase = 4
+    local obelisk = self:_createPart(
+        "Obelisk",
+        Vector3.new(centerX, terrainY + spinaHeight + obeliskHeight / 2 + 1, centerZ),
+        Vector3.new(obeliskBase, obeliskHeight, obeliskBase),
+        STONE_GRAY,
+        Enum.Material.Slate
     )
-    metaLeft.Parent = folder
+    obelisk.Parent = folder
 
-    local metaRight = self:_createCylinder(
-        "MetaRight",
-        Vector3.new(centerX + trackLength * 0.4, terrainY + 6, centerZ),
-        3,
-        12,
-        BRONZE
+    -- Obelisk cap (pyramid-like top)
+    local obeliskCap = self:_createPart(
+        "ObeliskCap",
+        Vector3.new(centerX, terrainY + spinaHeight + obeliskHeight + 3, centerZ),
+        Vector3.new(2, 4, 2),
+        BRONZE,
+        Enum.Material.Metal
     )
-    metaRight.Parent = folder
+    obeliskCap.Parent = folder
 
-    -- Seating tiers on both sides
+    -- Lap counters (7 dolphin/egg markers - simplified as bronze parts)
+    local lapCounterSpacing = spinaLength / 8
+    for i = 1, 7 do
+        local counterX = centerX - spinaLength / 2 + lapCounterSpacing * i
+        local counter = self:_createPart(
+            string.format("LapCounter_%d", i),
+            Vector3.new(counterX, terrainY + spinaHeight + 4, centerZ + spinaWidth / 2 - 1),
+            Vector3.new(2, 3, 1),
+            BRONZE,
+            Enum.Material.Metal
+        )
+        counter.Parent = folder
+    end
+
+    -- Decorative fountains on spina (smaller basins)
+    local fountainPositions = { -spinaLength * 0.3, spinaLength * 0.3 }
+    for idx, offsetX in ipairs(fountainPositions) do
+        local fountain = self:_createCylinder(
+            string.format("SpinaFountain_%d", idx),
+            Vector3.new(centerX + offsetX, terrainY + spinaHeight + 3, centerZ),
+            3,
+            4,
+            MARBLE_WHITE
+        )
+        fountain.Parent = folder
+    end
+
+    -- ============================================
+    -- 3. METAE (Turning Posts at each end of spina)
+    -- ============================================
+    local metaHeight = 15
+    local metaRadius = 3
+
+    -- West meta (3 conical posts)
+    for j = -1, 1 do
+        local metaWest = self:_createCylinder(
+            string.format("MetaWest_%d", j + 2),
+            Vector3.new(centerX - spinaLength / 2 - 4, terrainY + metaHeight / 2 + 1, centerZ + j * 4),
+            metaRadius,
+            metaHeight,
+            BRONZE
+        )
+        metaWest.Parent = folder
+    end
+
+    -- East meta (3 conical posts)
+    for j = -1, 1 do
+        local metaEast = self:_createCylinder(
+            string.format("MetaEast_%d", j + 2),
+            Vector3.new(centerX + spinaLength / 2 + 4, terrainY + metaHeight / 2 + 1, centerZ + j * 4),
+            metaRadius,
+            metaHeight,
+            BRONZE
+        )
+        metaEast.Parent = folder
+    end
+
+    -- ============================================
+    -- 4. TIERED SEATING (Cavea) on both long sides
+    -- ============================================
+    local numTiers = 3
+    local tierHeights = { 8, 16, 24 }
+    local tierDepths = { 10, 10, 10 }
+
     for side = -1, 1, 2 do
-        local seatZ = centerZ + side * (trackWidth / 2 + 10)
-        local seating = self:_createPart(
-            string.format("Seating_%s", side > 0 and "South" or "North"),
-            Vector3.new(centerX, terrainY + 6, seatZ),
-            Vector3.new(trackLength, 12, 8),
+        local sideName = side > 0 and "South" or "North"
+        local baseZ = centerZ + side * (trackWidth / 2 + 5)
+
+        for tier = 1, numTiers do
+            local tierY = terrainY + tierHeights[tier] / 2
+            local tierZ = baseZ + side * (tier - 1) * tierDepths[tier]
+
+            local seating = self:_createPart(
+                string.format("Seating_%s_Tier%d", sideName, tier),
+                Vector3.new(centerX, tierY, tierZ),
+                Vector3.new(trackLength + 20, tierHeights[tier], tierDepths[tier]),
+                STONE_GRAY,
+                Enum.Material.Concrete
+            )
+            seating.Parent = folder
+        end
+
+        -- Top colonnade along the seating (decorative)
+        local colonnadeZ = baseZ + side * (numTiers * 10 - 5)
+        local numColumns = math.floor(trackLength / 20)
+        self:_createColonnade(
+            centerX - (numColumns - 1) * 10,
+            terrainY + tierHeights[numTiers],
+            colonnadeZ,
+            numColumns,
+            20,
+            COLUMN_RADIUS_SMALL,
+            COLUMN_HEIGHT_SMALL,
+            Vector3.new(1, 0, 0),
+            folder
+        )
+    end
+
+    -- Curved seating at west end (turning end)
+    local curvedSeatZ = centerZ
+    local curvedSeatX = centerX - trackLength / 2 - 15
+    local curvedSeating = self:_createPart(
+        "Seating_West_Curved",
+        Vector3.new(curvedSeatX, terrainY + 12, curvedSeatZ),
+        Vector3.new(20, 24, trackWidth + 40),
+        STONE_GRAY,
+        Enum.Material.Concrete
+    )
+    curvedSeating.Parent = folder
+
+    -- ============================================
+    -- 5. CARCERES (Starting Gates) at east end
+    -- ============================================
+    local carceresWidth = trackWidth + 20
+    local carceresDepth = 12
+    local carceresHeight = 16
+    local carceresX = centerX + trackLength / 2 + 20
+
+    -- Main gate structure (back wall with arches)
+    local gateBack = self:_createPart(
+        "Carceres_Back",
+        Vector3.new(carceresX + carceresDepth / 2, terrainY + carceresHeight / 2, centerZ),
+        Vector3.new(4, carceresHeight, carceresWidth),
+        MARBLE_CREAM,
+        Enum.Material.Concrete
+    )
+    gateBack.Parent = folder
+
+    -- Individual starting gates (12 gates for 12 chariots)
+    local numGates = 12
+    local gateSpacing = carceresWidth / (numGates + 1)
+    local gateWidth = gateSpacing - 2
+    local gateHeight = 10
+
+    for gateIdx = 1, numGates do
+        local gateZ = centerZ - carceresWidth / 2 + gateSpacing * gateIdx
+
+        -- Gate pillars (sides of each starting box)
+        local pillarLeft = self:_createPart(
+            string.format("Gate_%d_PillarLeft", gateIdx),
+            Vector3.new(carceresX, terrainY + carceresHeight / 2, gateZ - gateWidth / 2),
+            Vector3.new(carceresDepth, carceresHeight, 2),
+            MARBLE_WHITE,
+            Enum.Material.Marble
+        )
+        pillarLeft.Parent = folder
+
+        -- Gate arch (lintel above opening)
+        local arch = self:_createPart(
+            string.format("Gate_%d_Arch", gateIdx),
+            Vector3.new(carceresX, terrainY + gateHeight + (carceresHeight - gateHeight) / 2, gateZ),
+            Vector3.new(carceresDepth, carceresHeight - gateHeight, gateWidth - 2),
+            MARBLE_CREAM,
+            Enum.Material.Concrete
+        )
+        arch.Parent = folder
+    end
+
+    -- Carceres towers at corners
+    local towerHeight = 24
+    local towerWidth = 8
+    for side = -1, 1, 2 do
+        local tower = self:_createPart(
+            string.format("Carceres_Tower_%s", side > 0 and "South" or "North"),
+            Vector3.new(carceresX + carceresDepth / 2, terrainY + towerHeight / 2, centerZ + side * (carceresWidth / 2 + towerWidth / 2)),
+            Vector3.new(towerWidth, towerHeight, towerWidth),
             STONE_GRAY,
             Enum.Material.Brick
         )
-        seating.Parent = folder
+        tower.Parent = folder
     end
+
+    -- ============================================
+    -- 6. IMPERIAL BOX (Pulvinar) - special seating
+    -- ============================================
+    local pulvinarX = centerX + trackLength / 4
+    local pulvinarZ = centerZ - trackWidth / 2 - 25
+    local pulvinarWidth = 30
+    local pulvinarDepth = 15
+    local pulvinarHeight = 20
+
+    -- Elevated platform for emperor
+    local pulvinarBase = self:_createPart(
+        "Pulvinar_Base",
+        Vector3.new(pulvinarX, terrainY + pulvinarHeight / 2, pulvinarZ),
+        Vector3.new(pulvinarWidth, pulvinarHeight, pulvinarDepth),
+        MARBLE_WHITE,
+        Enum.Material.Marble
+    )
+    pulvinarBase.Parent = folder
+
+    -- Pulvinar columns
+    self:_createColonnade(
+        pulvinarX - pulvinarWidth / 2 + 4,
+        terrainY + pulvinarHeight,
+        pulvinarZ + pulvinarDepth / 2 - 2,
+        4,
+        8,
+        COLUMN_RADIUS_MEDIUM,
+        COLUMN_HEIGHT_MEDIUM,
+        Vector3.new(1, 0, 0),
+        folder
+    )
+
+    -- Pulvinar roof/canopy
+    local pulvinarRoof = self:_createPart(
+        "Pulvinar_Roof",
+        Vector3.new(pulvinarX, terrainY + pulvinarHeight + COLUMN_HEIGHT_MEDIUM + 2, pulvinarZ),
+        Vector3.new(pulvinarWidth + 4, 3, pulvinarDepth + 4),
+        TERRACOTTA,
+        Enum.Material.Brick
+    )
+    pulvinarRoof.Parent = folder
 end
 
 -- Build Castrum (military fortress) - Principia has walkable interior

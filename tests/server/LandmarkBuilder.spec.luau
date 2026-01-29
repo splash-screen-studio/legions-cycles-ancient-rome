@@ -289,8 +289,127 @@ describe("LandmarkBuilder", function()
     end)
 
     -- Version check
-    it("should have VERSION 1.2.0 for walkable interiors", function()
-        expect(string.find(moduleSource, 'VERSION = "1.2.0"', 1, true)).toNotBeNil()
+    it("should have VERSION 1.3.0 for enhanced Circus Maximus", function()
+        expect(string.find(moduleSource, 'VERSION = "1.3.0"', 1, true)).toNotBeNil()
+    end)
+
+    -- Circus Maximus specific tests
+    describe("Circus Maximus", function()
+        it("should create RaceTrack with Sand material", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, '"RaceTrack"', 1, true)).toNotBeNil()
+            expect(string.find(circusSection :: string, "Enum.Material.Sand", 1, true)).toNotBeNil()
+        end)
+
+        it("should create Spina (central barrier)", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, '"Spina"', 1, true)).toNotBeNil()
+        end)
+
+        it("should create Obelisk on the spina", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, '"Obelisk"', 1, true)).toNotBeNil()
+        end)
+
+        it("should create lap counters (7 markers)", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            -- Uses string.format("LapCounter_%d", i) pattern
+            expect(string.find(circusSection :: string, 'LapCounter_', 1, true)).toNotBeNil()
+            expect(string.find(circusSection :: string, "for i = 1, 7 do", 1, true)).toNotBeNil()
+        end)
+
+        it("should create Metae (turning posts) at both ends", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            -- Uses string.format pattern for MetaWest and MetaEast
+            expect(string.find(circusSection :: string, 'MetaWest_', 1, true)).toNotBeNil()
+            expect(string.find(circusSection :: string, 'MetaEast_', 1, true)).toNotBeNil()
+        end)
+
+        it("should create tiered seating (Cavea) on both sides", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            -- Uses string.format("Seating_%s_Tier%d", sideName, tier) pattern
+            expect(string.find(circusSection :: string, 'Seating_%s_Tier', 1, true)).toNotBeNil()
+            expect(string.find(circusSection :: string, 'sideName', 1, true)).toNotBeNil()
+        end)
+
+        it("should create multiple tiers of seating", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, "numTiers = 3", 1, true)).toNotBeNil()
+        end)
+
+        it("should create Carceres (starting gates)", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, 'Carceres_Back', 1, true)).toNotBeNil()
+            -- Uses string.format("Gate_%d_...", i) pattern
+            expect(string.find(circusSection :: string, 'Gate_%d', 1, true)).toNotBeNil()
+        end)
+
+        it("should create 12 starting gates for chariots", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, "numGates = 12", 1, true)).toNotBeNil()
+        end)
+
+        it("should create Imperial Box (Pulvinar)", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, '"Pulvinar_Base"', 1, true)).toNotBeNil()
+            expect(string.find(circusSection :: string, '"Pulvinar_Roof"', 1, true)).toNotBeNil()
+        end)
+
+        it("should use impressive dimensions (~200 studs long minimum)", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            -- Should have math.max to ensure minimum size
+            expect(string.find(circusSection :: string, "math.max(radius", 1, true)).toNotBeNil()
+            expect(string.find(circusSection :: string, "200", 1, true)).toNotBeNil()
+        end)
+
+        it("should use Concrete material for seating stands", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, "Enum.Material.Concrete", 1, true)).toNotBeNil()
+        end)
+
+        it("should use Bronze material for metae and decorations", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, "BRONZE", 1, true)).toNotBeNil()
+        end)
+
+        it("should create decorative fountains on spina", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            -- Uses string.format("SpinaFountain_%d", i) pattern
+            expect(string.find(circusSection :: string, 'SpinaFountain_', 1, true)).toNotBeNil()
+        end)
+
+        it("should create colonnades along top of seating", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, "_createColonnade", 1, true)).toNotBeNil()
+        end)
+
+        it("should create curved seating at west turning end", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            expect(string.find(circusSection :: string, '"Seating_West_Curved"', 1, true)).toNotBeNil()
+        end)
+
+        it("should create tower structures at carceres corners", function()
+            local circusSection = string.match(moduleSource, "function LandmarkBuilder:_buildCircusMaximus.-\nend\n")
+            expect(circusSection).toNotBeNil()
+            -- Uses string.format("Carceres_Tower_%s", ...) pattern
+            expect(string.find(circusSection :: string, 'Carceres_Tower_', 1, true)).toNotBeNil()
+        end)
     end)
 
     it("should not have auto-executing code at module end", function()
