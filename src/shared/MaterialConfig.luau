@@ -13,7 +13,7 @@
 ]]
 
 local MaterialConfig = {}
-MaterialConfig.VERSION = "2.0.0"
+MaterialConfig.VERSION = "2.1.0"
 
 -- Export types for material configuration
 export type AltitudeBand = {
@@ -46,38 +46,39 @@ export type SlopeBand = {
 -- Altitude bands for base material selection
 -- Heights are in studs, based on TerrainManager's baseHeight=20, amplitude=40
 -- Mediterranean climate: rocky hilltops, grassy valleys
+-- Rebalanced in v2.1.0: More grass throughout (issue #148)
 MaterialConfig.ALTITUDE_BANDS = {
-    -- Hilltops: Rocky and arid
+    -- Hilltops: Rocky and arid, but with some grass patches
     {
         minAltitude = 50,
         maxAltitude = math.huge,
         primaryMaterial = Enum.Material.Rock,
         secondaryMaterial = Enum.Material.Slate,
-        grassPercentage = 0.05,
+        grassPercentage = 0.15,
     },
-    -- Upper hillsides: Mix of rock and sandstone, sparse grass
+    -- Upper hillsides: Mix of rock and sandstone, more grass
     {
         minAltitude = 40,
         maxAltitude = 50,
         primaryMaterial = Enum.Material.Sandstone,
         secondaryMaterial = Enum.Material.Rock,
-        grassPercentage = 0.10,
+        grassPercentage = 0.25,
     },
-    -- Lower hillsides: Ground with some grass
+    -- Lower hillsides: Ground with grass
     {
         minAltitude = 30,
         maxAltitude = 40,
         primaryMaterial = Enum.Material.Ground,
-        secondaryMaterial = Enum.Material.Sandstone,
-        grassPercentage = 0.25,
+        secondaryMaterial = Enum.Material.Grass,
+        grassPercentage = 0.40,
     },
-    -- Flat areas: Balanced ground and grass
+    -- Flat areas: More grass-dominant
     {
         minAltitude = 20,
         maxAltitude = 30,
-        primaryMaterial = Enum.Material.Ground,
-        secondaryMaterial = Enum.Material.Grass,
-        grassPercentage = 0.45,
+        primaryMaterial = Enum.Material.Grass,
+        secondaryMaterial = Enum.Material.Ground,
+        grassPercentage = 0.60,
     },
     -- Valleys: Lush grass, concentrated vegetation
     {
@@ -85,73 +86,75 @@ MaterialConfig.ALTITUDE_BANDS = {
         maxAltitude = 20,
         primaryMaterial = Enum.Material.Grass,
         secondaryMaterial = Enum.Material.Ground,
-        grassPercentage = 0.65,
+        grassPercentage = 0.75,
     },
 }
 
 -- Slope bands for material selection (degrees)
 -- Steeper slopes = more rocky/arid materials
+-- Rebalanced in v2.1.0: Less aggressive rock on slopes (issue #148)
 MaterialConfig.SLOPE_BANDS = {
-    -- Very steep: Rocky outcrops
+    -- Very steep: Rocky outcrops, but some grass in crevices
     {
-        minSlope = 35,
+        minSlope = 40,
         maxSlope = math.huge,
         primaryMaterial = Enum.Material.Rock,
         secondaryMaterial = Enum.Material.Slate,
-        grassPercentage = 0.0,
+        grassPercentage = 0.10,
     },
-    -- Steep hillsides: Sandstone and rock
+    -- Steep hillsides: Sandstone and rock, with grass patches
     {
-        minSlope = 25,
-        maxSlope = 35,
+        minSlope = 30,
+        maxSlope = 40,
         primaryMaterial = Enum.Material.Sandstone,
         secondaryMaterial = Enum.Material.Rock,
-        grassPercentage = 0.05,
+        grassPercentage = 0.20,
     },
-    -- Moderate slopes: Ground with sparse vegetation
+    -- Moderate slopes: Ground with grass
     {
-        minSlope = 15,
-        maxSlope = 25,
-        primaryMaterial = Enum.Material.Ground,
-        secondaryMaterial = Enum.Material.Sandstone,
-        grassPercentage = 0.15,
-    },
-    -- Gentle slopes: Normal material selection
-    {
-        minSlope = 0,
-        maxSlope = 15,
+        minSlope = 18,
+        maxSlope = 30,
         primaryMaterial = Enum.Material.Ground,
         secondaryMaterial = Enum.Material.Grass,
-        grassPercentage = 0.40,
+        grassPercentage = 0.35,
+    },
+    -- Gentle slopes: Grass-dominant
+    {
+        minSlope = 0,
+        maxSlope = 18,
+        primaryMaterial = Enum.Material.Grass,
+        secondaryMaterial = Enum.Material.Ground,
+        grassPercentage = 0.55,
     },
 }
 
 -- Zone material overrides (higher priority than altitude)
--- Mediterranean zones: urban areas paved, wilderness is arid
+-- Mediterranean zones: urban areas paved, wilderness has grass
+-- Rebalanced in v2.1.0: More grass in wilderness/rural (issue #148)
 MaterialConfig.ZONE_MATERIALS = {
     -- Civic areas: Heavy paving with minimal vegetation
     civic = {
         primaryMaterial = Enum.Material.Cobblestone,
         secondaryMaterial = Enum.Material.Brick,
-        grassPercentage = 0.02,
+        grassPercentage = 0.05,
     },
     -- Urban areas: Mostly paved with some dirt paths
     urban = {
         primaryMaterial = Enum.Material.Cobblestone,
         secondaryMaterial = Enum.Material.Ground,
-        grassPercentage = 0.08,
+        grassPercentage = 0.12,
     },
-    -- Rural areas: Balanced ground and grass for farmland
+    -- Rural areas: Grass-dominant farmland
     rural = {
-        primaryMaterial = Enum.Material.Ground,
-        secondaryMaterial = Enum.Material.Grass,
-        grassPercentage = 0.40,
+        primaryMaterial = Enum.Material.Grass,
+        secondaryMaterial = Enum.Material.Ground,
+        grassPercentage = 0.55,
     },
-    -- Wilderness: Sandy/arid with sparse vegetation
+    -- Wilderness: Grass with ground/sandstone patches
     wilderness = {
-        primaryMaterial = Enum.Material.Ground,
-        secondaryMaterial = Enum.Material.Sandstone,
-        grassPercentage = 0.30,
+        primaryMaterial = Enum.Material.Grass,
+        secondaryMaterial = Enum.Material.Ground,
+        grassPercentage = 0.50,
     },
 }
 
@@ -206,13 +209,13 @@ MaterialConfig.ALLOWED_MATERIALS = {
 }
 
 -- Target overall map coverage (for reference/validation)
--- Mediterranean balance: ~40% Grass, ~30% Ground, ~20% Rock/Sandstone, ~10% Sand
+-- Rebalanced in v2.1.0: ~55% Grass (issue #148)
 MaterialConfig.TARGET_COVERAGE = {
-    Grass = 0.40, -- Concentrated in valleys, near water
-    Ground = 0.30, -- Paths, transitions, flat areas
-    Rock = 0.10, -- Hilltops, steep slopes
-    Sandstone = 0.08, -- Hillsides, arid zones
-    Slate = 0.02, -- Rocky outcrops
+    Grass = 0.55, -- Dominant across valleys, flat areas, and wilderness
+    Ground = 0.22, -- Paths, transitions, hillsides
+    Rock = 0.07, -- Hilltops, very steep slopes only
+    Sandstone = 0.05, -- Upper hillsides
+    Slate = 0.01, -- Rocky outcrops
     Sand = 0.05, -- Beaches, water edges
     Cobblestone = 0.05, -- Roads, urban areas
 }

@@ -65,13 +65,13 @@ describe("MaterialConfig", function()
     end)
 
     it("should have slope bands for steep, moderate, and gentle terrain", function()
-        -- Very steep: >35 degrees
-        expect(string.find(moduleSource, "minSlope = 35", 1, true)).toNotBeNil()
-        -- Steep: 25-35 degrees
-        expect(string.find(moduleSource, "minSlope = 25", 1, true)).toNotBeNil()
-        -- Moderate: 15-25 degrees
-        expect(string.find(moduleSource, "minSlope = 15", 1, true)).toNotBeNil()
-        -- Gentle: 0-15 degrees
+        -- Very steep: >40 degrees (rebalanced in v2.1.0)
+        expect(string.find(moduleSource, "minSlope = 40", 1, true)).toNotBeNil()
+        -- Steep: 30-40 degrees (rebalanced in v2.1.0)
+        expect(string.find(moduleSource, "minSlope = 30", 1, true)).toNotBeNil()
+        -- Moderate: 18-30 degrees (rebalanced in v2.1.0)
+        expect(string.find(moduleSource, "minSlope = 18", 1, true)).toNotBeNil()
+        -- Gentle: 0-18 degrees
         expect(string.find(moduleSource, "minSlope = 0", 1, true)).toNotBeNil()
     end)
 
@@ -140,9 +140,10 @@ describe("MaterialConfig", function()
         expect(string.find(moduleSource, "TARGET_COVERAGE", 1, true)).toNotBeNil()
     end)
 
-    it("should have Mediterranean target coverage (40% Grass, 30% Ground)", function()
-        expect(string.find(moduleSource, "Grass = 0.40", 1, true)).toNotBeNil()
-        expect(string.find(moduleSource, "Ground = 0.30", 1, true)).toNotBeNil()
+    it("should have Mediterranean target coverage (55% Grass, 22% Ground)", function()
+        -- Rebalanced in v2.1.0 for more grass (issue #148)
+        expect(string.find(moduleSource, "Grass = 0.55", 1, true)).toNotBeNil()
+        expect(string.find(moduleSource, "Ground = 0.22", 1, true)).toNotBeNil()
     end)
 
     -- Helper functions
