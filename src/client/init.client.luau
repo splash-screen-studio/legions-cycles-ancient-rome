@@ -18,6 +18,13 @@ print("[Client] Found Shared folder")
 local MusicManager = require(script.MusicManager)
 print(string.format("[Client] Loaded MusicManager v%s", MusicManager.VERSION))
 
+local AtmosphereManager = require(script.AtmosphereManager)
+print(string.format("[Client] Loaded AtmosphereManager v%s", AtmosphereManager.VERSION))
+
+-- Bootstrap atmosphere (lighting, sky, fog)
+local atmosphereManager = AtmosphereManager.new()
+atmosphereManager:start()
+
 -- Bootstrap music
 local musicManager = MusicManager.new()
 musicManager:playPlaylist(false) -- Sequential playback
