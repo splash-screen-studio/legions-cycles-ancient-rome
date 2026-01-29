@@ -190,6 +190,29 @@ describe("LandmarkBuilder", function()
         expect(string.find(moduleSource, "TerrainUtils.getHeightAt", 1, true)).toNotBeNil()
     end)
 
+    -- River exclusion zone validation
+    it("should check river exclusion zone before building landmarks", function()
+        expect(string.find(moduleSource, "isInRiverExclusionZone", 1, true)).toNotBeNil()
+    end)
+
+    it("should skip landmarks in river exclusion zone", function()
+        -- Should have continue statement to skip invalid landmarks
+        expect(string.find(moduleSource, "in river exclusion zone", 1, true)).toNotBeNil()
+    end)
+
+    it("should warn when skipping landmarks in river exclusion zone", function()
+        -- Should use warn() for skipped landmarks
+        expect(string.find(moduleSource, "warn(string.format", 1, true)).toNotBeNil()
+    end)
+
+    it("should track skipped landmark count", function()
+        expect(string.find(moduleSource, "skippedCount", 1, true)).toNotBeNil()
+    end)
+
+    it("should report skipped landmarks in final summary", function()
+        expect(string.find(moduleSource, "skipped for river", 1, true)).toNotBeNil()
+    end)
+
     it("should not have auto-executing code at module end", function()
         -- Check that module ends with return statement, not function calls
         local lines = {}
