@@ -149,3 +149,89 @@ describe("WorldPlanGenerator", function()
         expect(lastLine).toBe("return WorldPlanGenerator")
     end)
 end)
+
+-- Tests for multi-cluster urban areas (Issue #116)
+describe("WorldPlanGenerator Multi-Cluster", function()
+    -- Urban cluster types
+    it("should export UrbanCluster type", function()
+        expect(string.find(moduleSource, "export type UrbanCluster", 1, true)).toNotBeNil()
+    end)
+
+    it("should have clusters field in instance type", function()
+        expect(string.find(moduleSource, "clusters: { UrbanCluster }", 1, true)).toNotBeNil()
+    end)
+
+    -- Primary cluster (Roma)
+    it("should include Roma as primary cluster", function()
+        expect(string.find(moduleSource, 'name = "Roma"', 1, true)).toNotBeNil()
+    end)
+
+    it("should mark Roma as primary cluster", function()
+        expect(string.find(moduleSource, "isPrimary = true", 1, true)).toNotBeNil()
+    end)
+
+    -- Secondary clusters
+    it("should include Castra (military) cluster", function()
+        expect(string.find(moduleSource, 'name = "Castra"', 1, true)).toNotBeNil()
+    end)
+
+    it("should include Mercatum (merchant) cluster", function()
+        expect(string.find(moduleSource, 'name = "Mercatum"', 1, true)).toNotBeNil()
+    end)
+
+    it("should include Rus (agricultural) cluster", function()
+        expect(string.find(moduleSource, 'name = "Rus"', 1, true)).toNotBeNil()
+    end)
+
+    it("should include Portus (port) cluster", function()
+        expect(string.find(moduleSource, 'name = "Portus"', 1, true)).toNotBeNil()
+    end)
+
+    -- Helper methods for clusters
+    it("should have _getPrimaryCluster() method", function()
+        expect(string.find(moduleSource, "function WorldPlanGenerator._getPrimaryCluster", 1, true)).toNotBeNil()
+    end)
+
+    it("should have _getClusterByName() method", function()
+        expect(string.find(moduleSource, "function WorldPlanGenerator._getClusterByName", 1, true)).toNotBeNil()
+    end)
+
+    -- New landmarks for secondary clusters
+    it("should include Castrum landmark (Castra cluster)", function()
+        expect(string.find(moduleSource, '"Castrum"', 1, true)).toNotBeNil()
+    end)
+
+    it("should include Macellum landmark (Mercatum cluster)", function()
+        expect(string.find(moduleSource, '"Macellum"', 1, true)).toNotBeNil()
+    end)
+
+    it("should include VillaRustica landmark (Rus cluster)", function()
+        expect(string.find(moduleSource, '"VillaRustica"', 1, true)).toNotBeNil()
+    end)
+
+    it("should include Emporium landmark (Portus cluster)", function()
+        expect(string.find(moduleSource, '"Emporium"', 1, true)).toNotBeNil()
+    end)
+
+    it("should include Pharos lighthouse landmark (Portus cluster)", function()
+        expect(string.find(moduleSource, '"Pharos"', 1, true)).toNotBeNil()
+    end)
+
+    -- Road network connecting clusters
+    it("should connect clusters with inter-cluster roads", function()
+        -- Check for roads connecting primary to secondary clusters
+        expect(string.find(moduleSource, "INTER%-CLUSTER ROADS", 1, false)).toNotBeNil()
+    end)
+
+    it("should have peripheral roads connecting adjacent clusters", function()
+        expect(string.find(moduleSource, "PERIPHERAL ROADS", 1, true)).toNotBeNil()
+    end)
+
+    it("should create road from Mercatum to Castra", function()
+        expect(string.find(moduleSource, "North road: Mercatum to Castra", 1, true)).toNotBeNil()
+    end)
+
+    it("should create road from Rus to Portus", function()
+        expect(string.find(moduleSource, "South road: Rus to Portus", 1, true)).toNotBeNil()
+    end)
+end)

@@ -14,7 +14,16 @@ local Constants = require(Shared:WaitForChild("Constants"))
 
 local WorldPlanGenerator = {}
 WorldPlanGenerator.__index = WorldPlanGenerator
-WorldPlanGenerator.VERSION = "1.1.0"
+WorldPlanGenerator.VERSION = "2.1.0"
+
+-- Urban cluster configuration type
+export type UrbanCluster = {
+    name: string,
+    center: Vector2,
+    civicRadius: number,
+    urbanRadius: number,
+    isPrimary: boolean,
+}
 
 export type WorldPlanGeneratorConfig = {
     mapSize: number?,
@@ -22,7 +31,7 @@ export type WorldPlanGeneratorConfig = {
     riverWidth: number?,
     urbanRadius: number?,
     civicRadius: number?,
-    riverCliffMargin: number?, -- Extra margin around river to avoid cliff edges
+    riverCliffMargin: number?,
 }
 
 export type WorldPlanGeneratorInstance = typeof(setmetatable(
@@ -34,6 +43,7 @@ export type WorldPlanGeneratorInstance = typeof(setmetatable(
         urbanRadius: number,
         civicRadius: number,
         riverCliffMargin: number,
+        clusters: { UrbanCluster },
     },
     WorldPlanGenerator
 ))
@@ -44,6 +54,60 @@ local DEFAULT_RIVER_WIDTH = 40 -- Wider river (30-50 studs as per spec)
 local DEFAULT_URBAN_RADIUS = 150
 local DEFAULT_CIVIC_RADIUS = 80
 local _DEFAULT_RIVER_DEPTH = 10 -- 8-12 studs deep for swimming (used by RiverBuilder)
+
+-- Generate urban cluster positions based on map size
+local function generateClusterPositions(mapSize: number, seed: number): { UrbanCluster }
+    local halfSize = mapSize / 2
+    local edgeOffset = 120 -- Distance from map edge for secondary clusters
+
+    -- Seed random for consistent cluster generation
+    math.randomseed(seed + 1000)
+
+    -- Primary civic center (main Forum area) - center of map
+    local clusters: { UrbanCluster } = {
+        {
+            name = "Roma",
+            center = Vector2.new(0, 0),
+            civicRadius = 80,
+            urbanRadius = 150,
+            isPrimary = true,
+        },
+        -- Northeast cluster - military/industrial district
+        {
+            name = "Castra",
+            center = Vector2.new(halfSize - edgeOffset - 80, -halfSize + edgeOffset + 60),
+            civicRadius = 40,
+            urbanRadius = 80,
+            isPrimary = false,
+        },
+        -- Northwest cluster - residential/merchant area
+        {
+            name = "Mercatum",
+            center = Vector2.new(-halfSize + edgeOffset + 60, -halfSize + edgeOffset + 80),
+            civicRadius = 35,
+            urbanRadius = 70,
+            isPrimary = false,
+        },
+        -- Southwest cluster - agricultural/rural town
+        {
+            name = "Rus",
+            center = Vector2.new(-halfSize + edgeOffset + 100, halfSize - edgeOffset - 100),
+            civicRadius = 30,
+            urbanRadius = 60,
+            isPrimary = false,
+        },
+        -- Southeast cluster - port/trade hub (closer to spawn area)
+        {
+            name = "Portus",
+            center = Vector2.new(halfSize - edgeOffset - 100, halfSize - edgeOffset - 80),
+            civicRadius = 45,
+            urbanRadius = 90,
+            isPrimary = false,
+        },
+    }
+
+    return clusters
+end
 
 function WorldPlanGenerator.new(config: WorldPlanGeneratorConfig?): WorldPlanGeneratorInstance
     local self = setmetatable({}, WorldPlanGenerator)
@@ -57,7 +121,11 @@ function WorldPlanGenerator.new(config: WorldPlanGeneratorConfig?): WorldPlanGen
     self.civicRadius = cfg.civicRadius or DEFAULT_CIVIC_RADIUS
     self.riverCliffMargin = cfg.riverCliffMargin or Constants.SLOPE.RIVER_CLIFF_MARGIN
 
-    print(string.format("[WorldPlanGenerator v%s] Initializing with seed: %d", WorldPlanGenerator.VERSION, self.seed))
+    -- Generate cluster positions
+    self.clusters = generateClusterPositions(self.mapSize, self.seed)
+
+    print(string.format("[WorldPlanGenerator v%s] Initializing with seed: %d, %d urban clusters",
+        WorldPlanGenerator.VERSION, self.seed, #self.clusters))
     return self
 end
 
@@ -115,88 +183,249 @@ function WorldPlanGenerator._generateRiverPath(self: WorldPlanGeneratorInstance)
     return path
 end
 
--- Generate zone definitions
+-- Generate zone definitions for all urban clusters
 function WorldPlanGenerator._generateZones(self: WorldPlanGeneratorInstance): { WorldPlan.Zone }
     local zones: { WorldPlan.Zone } = {}
     local halfSize = self.mapSize / 2
 
-    -- Civic center (Forum area) - center of map
-    table.insert(zones, {
-        center = Vector2.new(0, 0),
-        radius = self.civicRadius,
-        zoneType = "civic" :: WorldPlan.ZoneType,
-    })
+    -- Generate zones for each urban cluster
+    -- Order matters: civic zones first (higher priority), then urban zones
+    for _, cluster in ipairs(self.clusters) do
+        -- Civic center zone for each cluster
+        table.insert(zones, {
+            center = cluster.center,
+            radius = cluster.civicRadius,
+            zoneType = "civic" :: WorldPlan.ZoneType,
+        })
+    end
 
-    -- Urban zone surrounding civic center
-    table.insert(zones, {
-        center = Vector2.new(0, 0),
-        radius = self.urbanRadius,
-        zoneType = "urban" :: WorldPlan.ZoneType,
-    })
+    for _, cluster in ipairs(self.clusters) do
+        -- Urban zone surrounding each civic center
+        table.insert(zones, {
+            center = cluster.center,
+            radius = cluster.urbanRadius,
+            zoneType = "urban" :: WorldPlan.ZoneType,
+        })
+    end
 
-    -- Rural zone in the southeast (farming area near spawn)
+    -- Rural zones between clusters (farming/agricultural areas)
+    -- These are positioned in areas between major urban centers
+
+    -- Rural zone in the southeast (farming area near spawn, between Roma and Portus)
     table.insert(zones, {
-        center = Vector2.new(halfSize / 2, halfSize / 2),
-        radius = 200,
+        center = Vector2.new(halfSize / 4, halfSize / 4),
+        radius = 120,
         zoneType = "rural" :: WorldPlan.ZoneType,
     })
 
-    -- Rural zone in the southwest
+    -- Rural zone in the southwest (between Roma and Rus)
     table.insert(zones, {
-        center = Vector2.new(-halfSize / 2, halfSize / 2),
-        radius = 150,
+        center = Vector2.new(-halfSize / 3, halfSize / 3),
+        radius = 100,
+        zoneType = "rural" :: WorldPlan.ZoneType,
+    })
+
+    -- Rural zone in the northwest (between Roma and Mercatum)
+    table.insert(zones, {
+        center = Vector2.new(-halfSize / 4, -halfSize / 4),
+        radius = 100,
+        zoneType = "rural" :: WorldPlan.ZoneType,
+    })
+
+    -- Rural zone in the northeast (between Roma and Castra)
+    table.insert(zones, {
+        center = Vector2.new(halfSize / 3, -halfSize / 3),
+        radius = 100,
         zoneType = "rural" :: WorldPlan.ZoneType,
     })
 
     return zones
 end
 
--- Generate landmark positions
+-- Generate landmark positions distributed across all urban clusters
 function WorldPlanGenerator:_generateLandmarks(): { WorldPlan.Landmark }
     local landmarks: { WorldPlan.Landmark } = {}
 
-    -- Forum - center of the civic zone
-    table.insert(landmarks, {
-        position = Vector2.new(0, 0),
-        landmarkType = "Forum",
-        radius = 40,
-    })
+    -- ROMA (Primary Cluster) - Major civic landmarks
+    local roma = self:_getClusterByName("Roma")
+    if roma then
+        -- Forum - center of the civic zone
+        table.insert(landmarks, {
+            position = roma.center,
+            landmarkType = "Forum",
+            radius = 40,
+        })
 
-    -- Colosseum - northeast of civic center
-    table.insert(landmarks, {
-        position = Vector2.new(100, -80),
-        landmarkType = "Colosseum",
-        radius = 60,
-    })
+        -- Colosseum - northeast of civic center
+        table.insert(landmarks, {
+            position = roma.center + Vector2.new(100, -80),
+            landmarkType = "Colosseum",
+            radius = 60,
+        })
 
-    -- Thermae (Baths) - southwest of civic center
-    table.insert(landmarks, {
-        position = Vector2.new(-80, 60),
-        landmarkType = "Thermae",
-        radius = 35,
-    })
+        -- Thermae (Baths) - southwest of civic center
+        table.insert(landmarks, {
+            position = roma.center + Vector2.new(-80, 60),
+            landmarkType = "Thermae",
+            radius = 35,
+        })
 
-    -- Temple - northwest of forum
-    table.insert(landmarks, {
-        position = Vector2.new(-50, -100),
-        landmarkType = "Temple",
-        radius = 25,
-    })
+        -- Temple of Jupiter - northwest of forum
+        table.insert(landmarks, {
+            position = roma.center + Vector2.new(-50, -100),
+            landmarkType = "Temple",
+            radius = 25,
+        })
 
-    -- Circus Maximus - south of civic center
-    table.insert(landmarks, {
-        position = Vector2.new(30, 150),
-        landmarkType = "CircusMaximus",
-        radius = 80,
-    })
+        -- Circus Maximus - south of civic center
+        table.insert(landmarks, {
+            position = roma.center + Vector2.new(30, 150),
+            landmarkType = "CircusMaximus",
+            radius = 80,
+        })
+    end
+
+    -- CASTRA (Northeast - Military District)
+    local castra = self:_getClusterByName("Castra")
+    if castra then
+        -- Military barracks/fortress
+        table.insert(landmarks, {
+            position = castra.center,
+            landmarkType = "Castrum",
+            radius = 35,
+        })
+
+        -- Training grounds
+        table.insert(landmarks, {
+            position = castra.center + Vector2.new(40, 30),
+            landmarkType = "PalaestraMinor",
+            radius = 25,
+        })
+
+        -- Small temple to Mars
+        table.insert(landmarks, {
+            position = castra.center + Vector2.new(-30, -20),
+            landmarkType = "TempleMars",
+            radius = 15,
+        })
+    end
+
+    -- MERCATUM (Northwest - Merchant District)
+    local mercatum = self:_getClusterByName("Mercatum")
+    if mercatum then
+        -- Main marketplace
+        table.insert(landmarks, {
+            position = mercatum.center,
+            landmarkType = "Macellum",
+            radius = 30,
+        })
+
+        -- Warehouse district
+        table.insert(landmarks, {
+            position = mercatum.center + Vector2.new(35, 25),
+            landmarkType = "Horreum",
+            radius = 25,
+        })
+
+        -- Small baths
+        table.insert(landmarks, {
+            position = mercatum.center + Vector2.new(-25, -30),
+            landmarkType = "ThermaeMinor",
+            radius = 20,
+        })
+    end
+
+    -- RUS (Southwest - Agricultural Town)
+    local rus = self:_getClusterByName("Rus")
+    if rus then
+        -- Rural villa
+        table.insert(landmarks, {
+            position = rus.center,
+            landmarkType = "VillaRustica",
+            radius = 25,
+        })
+
+        -- Grain storage
+        table.insert(landmarks, {
+            position = rus.center + Vector2.new(25, 20),
+            landmarkType = "Granarium",
+            radius = 20,
+        })
+
+        -- Shrine to Ceres
+        table.insert(landmarks, {
+            position = rus.center + Vector2.new(-20, -25),
+            landmarkType = "SacellumCeres",
+            radius = 12,
+        })
+    end
+
+    -- PORTUS (Southeast - Port/Trade Hub)
+    local portus = self:_getClusterByName("Portus")
+    if portus then
+        -- Harbor warehouse
+        table.insert(landmarks, {
+            position = portus.center,
+            landmarkType = "Emporium",
+            radius = 35,
+        })
+
+        -- Lighthouse
+        table.insert(landmarks, {
+            position = portus.center + Vector2.new(50, 30),
+            landmarkType = "Pharos",
+            radius = 15,
+        })
+
+        -- Temple to Neptune
+        table.insert(landmarks, {
+            position = portus.center + Vector2.new(-30, -35),
+            landmarkType = "TempleNeptune",
+            radius = 20,
+        })
+
+        -- Fish market
+        table.insert(landmarks, {
+            position = portus.center + Vector2.new(20, -25),
+            landmarkType = "ForumPiscarium",
+            radius = 18,
+        })
+    end
 
     return landmarks
 end
 
--- Generate road network
+-- Helper: Find the primary (Roma) cluster
+function WorldPlanGenerator._getPrimaryCluster(self: WorldPlanGeneratorInstance): UrbanCluster?
+    for _, cluster in ipairs(self.clusters) do
+        if cluster.isPrimary then
+            return cluster
+        end
+    end
+    return nil
+end
+
+-- Helper: Get cluster by name
+function WorldPlanGenerator._getClusterByName(self: WorldPlanGeneratorInstance, name: string): UrbanCluster?
+    for _, cluster in ipairs(self.clusters) do
+        if cluster.name == name then
+            return cluster
+        end
+    end
+    return nil
+end
+
+-- Generate road network connecting all urban clusters
 function WorldPlanGenerator._generateRoads(self: WorldPlanGeneratorInstance): { WorldPlan.Road }
     local roads: { WorldPlan.Road } = {}
     local halfSize = self.mapSize / 2
+
+    local primaryCluster = self:_getPrimaryCluster()
+    if not primaryCluster then
+        return roads
+    end
+
+    -- MAIN ROADS (Via) - Connect the primary cluster to all edges and secondary clusters
 
     -- Via Appia - main road running north-south through the center
     table.insert(roads, {
@@ -218,36 +447,94 @@ function WorldPlanGenerator._generateRoads(self: WorldPlanGeneratorInstance): { 
         roadType = "via" :: "via" | "path",
     })
 
-    -- Road to Colosseum
-    table.insert(roads, {
-        path = {
-            Vector2.new(0, 0),
-            Vector2.new(100, -80),
-        },
-        width = 8,
-        roadType = "path" :: "via" | "path",
-    })
+    -- INTER-CLUSTER ROADS - Connect Roma to each secondary cluster
+    for _, cluster in ipairs(self.clusters) do
+        if not cluster.isPrimary then
+            -- Main road from Roma to this cluster
+            table.insert(roads, {
+                path = {
+                    primaryCluster.center,
+                    cluster.center,
+                },
+                width = 10,
+                roadType = "via" :: "via" | "path",
+            })
+        end
+    end
 
-    -- Road to Thermae
-    table.insert(roads, {
-        path = {
-            Vector2.new(0, 0),
-            Vector2.new(-80, 60),
-        },
-        width = 8,
-        roadType = "path" :: "via" | "path",
-    })
+    -- PERIPHERAL ROADS - Connect adjacent secondary clusters to form a ring
+    local castra = self:_getClusterByName("Castra")
+    local mercatum = self:_getClusterByName("Mercatum")
+    local rus = self:_getClusterByName("Rus")
+    local portus = self:_getClusterByName("Portus")
 
-    -- Road to player spawn area (southeast)
-    table.insert(roads, {
-        path = {
-            Vector2.new(0, 0),
-            Vector2.new(200, 200),
-            Vector2.new(400, 400),
-        },
-        width = 8,
-        roadType = "path" :: "via" | "path",
-    })
+    -- North road: Mercatum to Castra
+    if mercatum and castra then
+        table.insert(roads, {
+            path = {
+                mercatum.center,
+                Vector2.new(0, -halfSize + 100), -- Pass near north edge
+                castra.center,
+            },
+            width = 8,
+            roadType = "path" :: "via" | "path",
+        })
+    end
+
+    -- West road: Mercatum to Rus
+    if mercatum and rus then
+        table.insert(roads, {
+            path = {
+                mercatum.center,
+                Vector2.new(-halfSize + 80, 0), -- Pass near west edge
+                rus.center,
+            },
+            width = 8,
+            roadType = "path" :: "via" | "path",
+        })
+    end
+
+    -- South road: Rus to Portus
+    if rus and portus then
+        table.insert(roads, {
+            path = {
+                rus.center,
+                Vector2.new(0, halfSize - 100), -- Pass near south edge
+                portus.center,
+            },
+            width = 8,
+            roadType = "path" :: "via" | "path",
+        })
+    end
+
+    -- East road: Portus to Castra
+    if portus and castra then
+        table.insert(roads, {
+            path = {
+                portus.center,
+                Vector2.new(halfSize - 80, 0), -- Pass near east edge
+                castra.center,
+            },
+            width = 8,
+            roadType = "path" :: "via" | "path",
+        })
+    end
+
+    -- INTERNAL CLUSTER ROADS - Small roads within each cluster to landmarks
+    -- These will be generated based on landmarks once we have them
+
+    -- Road to player spawn area (southeast, from Portus area)
+    if portus then
+        table.insert(roads, {
+            path = {
+                portus.center,
+                Vector2.new(halfSize - 150, halfSize - 150),
+                Vector2.new(400, 400),
+            },
+            width = 6,
+            roadType = "path" :: "via" | "path",
+        })
+    end
 
     return roads
 end
