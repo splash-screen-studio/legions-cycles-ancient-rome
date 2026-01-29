@@ -57,7 +57,7 @@ export type LightSourceConfig = {
 }
 
 -- Light source configurations by type
-LightingConfig.Sources: { [LightSourceType]: LightSourceConfig } = {
+LightingConfig.Sources = {
     torch = {
         brightness = 1.5,
         range = 20,
@@ -125,7 +125,7 @@ export type LandmarkLightingConfig = {
     hasDoorwayLight: boolean,
 }
 
-LightingConfig.LandmarkLighting: { [string]: LandmarkLightingConfig } = {
+LightingConfig.LandmarkLighting = {
     -- Major landmarks
     Forum = {
         torchCount = 8,
@@ -240,7 +240,7 @@ LightingConfig.LandmarkLighting: { [string]: LandmarkLightingConfig } = {
 }
 
 -- Default configuration for unknown landmark types
-LightingConfig.DefaultLandmarkLighting: LandmarkLightingConfig = {
+LightingConfig.DefaultLandmarkLighting = {
     torchCount = 2,
     oilLampCount = 2,
     brazierCount = 0,
