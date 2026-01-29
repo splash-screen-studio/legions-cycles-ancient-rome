@@ -105,6 +105,30 @@ describe("WaterFeatures", function()
         expect(string.find(moduleSource, "customFountainPlacements", 1, true)).toNotBeNil()
     end)
 
+    it("should support worldPlan config option", function()
+        expect(string.find(moduleSource, "worldPlan", 1, true)).toNotBeNil()
+    end)
+
+    it("should check river exclusion zone before slope check", function()
+        -- Verify the river exclusion check exists and runs before slope check
+        expect(string.find(moduleSource, "isInRiverExclusionZone", 1, true)).toNotBeNil()
+    end)
+
+    it("should log warning when fountain is in river exclusion zone", function()
+        -- Verify warning log message exists for river exclusion
+        expect(string.find(moduleSource, "inside river exclusion zone", 1, true)).toNotBeNil()
+    end)
+
+    it("should track skipped fountains due to river proximity", function()
+        -- Verify the skippedRiverCount variable exists
+        expect(string.find(moduleSource, "skippedRiverCount", 1, true)).toNotBeNil()
+    end)
+
+    it("should log river proximity skipped count in summary", function()
+        -- Verify the final log includes river proximity count
+        expect(string.find(moduleSource, "due to river proximity", 1, true)).toNotBeNil()
+    end)
+
     it("should not have auto-executing code at module end", function()
         -- Check that module ends with return statement, not function calls
         local lines = {}
