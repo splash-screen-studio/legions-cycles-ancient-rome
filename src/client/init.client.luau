@@ -33,6 +33,9 @@ print(string.format("[Client] Loaded CurrencyDisplay v%s", CurrencyDisplay.VERSI
 local CoordinateDisplay = require(script.CoordinateDisplay)
 print(string.format("[Client] Loaded CoordinateDisplay v%s", CoordinateDisplay.VERSION))
 
+local BuildUI = require(script.BuildUI)
+print(string.format("[Client] Loaded BuildUI v%s", BuildUI.VERSION))
+
 -- Bootstrap atmosphere (lighting, sky, fog)
 local atmosphereManager = AtmosphereManager.new()
 atmosphereManager:start()
@@ -56,5 +59,9 @@ currencyDisplay:start()
 -- Bootstrap coordinate display (X, Z, Y position for debugging)
 local coordinateDisplay = CoordinateDisplay.new()
 coordinateDisplay:start()
+
+-- Bootstrap build UI (mobile-first construction interface)
+local buildUI = BuildUI.new()
+buildUI:start()
 
 print(string.format("[Client v%s] All systems initialized", VERSION))
