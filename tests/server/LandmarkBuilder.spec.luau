@@ -213,6 +213,86 @@ describe("LandmarkBuilder", function()
         expect(string.find(moduleSource, "skipped for river", 1, true)).toNotBeNil()
     end)
 
+    -- Walkable interior tests
+    it("should have _createWallWithDoorway helper method", function()
+        expect(string.find(moduleSource, "function LandmarkBuilder:_createWallWithDoorway", 1, true)).toNotBeNil()
+    end)
+
+    it("should have _createSolidWall helper method", function()
+        expect(string.find(moduleSource, "function LandmarkBuilder:_createSolidWall", 1, true)).toNotBeNil()
+    end)
+
+    -- Thermae walkable interior
+    it("should create interior floor in Thermae", function()
+        expect(string.find(moduleSource, '"InteriorFloor"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create doorways in Thermae for north and south walls", function()
+        -- Thermae uses _createWallWithDoorway for front and back
+        local thermaeSection = string.match(moduleSource, "function LandmarkBuilder:_buildThermae.-end\n")
+        expect(thermaeSection).toNotBeNil()
+        -- Should call _createWallWithDoorway
+        expect(string.find(thermaeSection :: string, "_createWallWithDoorway", 1, true)).toNotBeNil()
+    end)
+
+    -- Temple walkable cella
+    it("should create cella interior floor in Temple", function()
+        expect(string.find(moduleSource, '"CellaFloor"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create doorway in Temple cella facing columns", function()
+        local templeSection = string.match(moduleSource, "function LandmarkBuilder:_buildTemple.-end\n")
+        expect(templeSection).toNotBeNil()
+        expect(string.find(templeSection :: string, "_createWallWithDoorway", 1, true)).toNotBeNil()
+    end)
+
+    -- Castrum Principia walkable interior
+    it("should create Principia interior floor in Castrum", function()
+        expect(string.find(moduleSource, '"PrincipiaFloor"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create doorways in Castrum Principia", function()
+        -- Find start of _buildCastrum and end (start of next function)
+        local castrumStart = string.find(moduleSource, "function LandmarkBuilder:_buildCastrum", 1, true)
+        local castrumEnd = string.find(moduleSource, "function LandmarkBuilder:_buildMacellum", 1, true)
+        expect(castrumStart).toNotBeNil()
+        expect(castrumEnd).toNotBeNil()
+        local castrumSection = string.sub(moduleSource, castrumStart :: number, castrumEnd :: number)
+        expect(string.find(castrumSection, "_createWallWithDoorway", 1, true)).toNotBeNil()
+    end)
+
+    -- Horreum walkable interior
+    it("should create interior floor in Horreum", function()
+        local horreumSection = string.match(moduleSource, "function LandmarkBuilder:_buildHorreum.-end\n")
+        expect(horreumSection).toNotBeNil()
+        expect(string.find(horreumSection :: string, '"InteriorFloor"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create cargo doorways in Horreum", function()
+        local horreumSection = string.match(moduleSource, "function LandmarkBuilder:_buildHorreum.-end\n")
+        expect(horreumSection).toNotBeNil()
+        expect(string.find(horreumSection :: string, "cargoDoorwayWidth", 1, true)).toNotBeNil()
+        expect(string.find(horreumSection :: string, "_createWallWithDoorway", 1, true)).toNotBeNil()
+    end)
+
+    -- VillaRustica walkable interior
+    it("should create interior floor in VillaRustica", function()
+        local villaSection = string.match(moduleSource, "function LandmarkBuilder:_buildVillaRustica.-end\n")
+        expect(villaSection).toNotBeNil()
+        expect(string.find(villaSection :: string, '"InteriorFloor"', 1, true)).toNotBeNil()
+    end)
+
+    it("should create doorways in VillaRustica main house", function()
+        local villaSection = string.match(moduleSource, "function LandmarkBuilder:_buildVillaRustica.-end\n")
+        expect(villaSection).toNotBeNil()
+        expect(string.find(villaSection :: string, "_createWallWithDoorway", 1, true)).toNotBeNil()
+    end)
+
+    -- Version check
+    it("should have VERSION 1.2.0 for walkable interiors", function()
+        expect(string.find(moduleSource, 'VERSION = "1.2.0"', 1, true)).toNotBeNil()
+    end)
+
     it("should not have auto-executing code at module end", function()
         -- Check that module ends with return statement, not function calls
         local lines = {}
