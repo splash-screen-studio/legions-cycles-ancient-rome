@@ -5,7 +5,7 @@
     Integrates with CurrencyService for cost deduction
 ]]
 
-local Players = game:GetService("Players")
+local _Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Shared = ReplicatedStorage:WaitForChild("Shared")
@@ -144,7 +144,7 @@ function BuildService:_handlePlaceRequest(player: Player, structureId: string, p
     return true, nil
 end
 
-function BuildService:_validatePlacement(position: Vector3, structure: BuildConfig.StructureType): (boolean, string?)
+function BuildService:_validatePlacement(position: Vector3, _structure: BuildConfig.StructureType): (boolean, string?)
     local x, z = position.X, position.Z
 
     -- Check terrain height

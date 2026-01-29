@@ -33,7 +33,7 @@ export type StructureType = {
 }
 
 -- Available structures for v1.0.0 (basic set)
-BuildConfig.STRUCTURES: { [string]: StructureType } = {
+BuildConfig.STRUCTURES = {
     DOMUS = {
         id = "DOMUS",
         name = "Domus",
