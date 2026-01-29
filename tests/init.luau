@@ -136,6 +136,7 @@ require("./client/StructureMenu.spec")
 require("./client/PlacementPreview.spec")
 require("./client/TutorialUI.spec")
 require("./client/TutorialManager.spec")
+require("./client/SpeedBoostManager.spec")
 
 -- Print summary
 log("\n===========================================")
