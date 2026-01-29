@@ -23,7 +23,7 @@ local TerrainUtils = require(Shared:WaitForChild("TerrainUtils"))
 
 local TerrainMaterials = {}
 TerrainMaterials.__index = TerrainMaterials
-TerrainMaterials.VERSION = "2.0.0"
+TerrainMaterials.VERSION = "2.1.0"
 
 -- Constants
 local DEFAULT_RESOLUTION = 4 -- Studs per terrain voxel
@@ -104,20 +104,22 @@ function TerrainMaterials:_getMaterialBySlope(slopeDegrees: number, x: number, z
 end
 
 -- Combine altitude and slope for base material (Mediterranean terrain)
+-- Rebalanced in v2.1.0: Less aggressive rock on moderate slopes (issue #148)
 function TerrainMaterials:_getBaseMaterial(altitude: number, slopeDegrees: number, x: number, z: number): Enum.Material
-    -- Steep slopes override altitude-based selection
-    if slopeDegrees >= 25 then
+    -- Only very steep slopes override altitude-based selection (raised from 25 to 30)
+    if slopeDegrees >= 30 then
         return self:_getMaterialBySlope(slopeDegrees, x, z)
-    elseif slopeDegrees >= 15 then
-        -- Moderate slopes: blend altitude and slope influence
+    elseif slopeDegrees >= 18 then
+        -- Moderate slopes: blend altitude and slope influence (raised from 15 to 18)
         local altitudeMaterial = self:_getMaterialByAltitude(altitude, x, z)
         local slopeMaterial = self:_getMaterialBySlope(slopeDegrees, x, z)
 
         -- Use noise to decide which to use
         local blendNoise = math.noise(x * 0.03 + self.seed + 300, z * 0.03 + self.seed * 1.6 + 300)
-        local slopeInfluence = (slopeDegrees - 15) / 10 -- 0 at 15 degrees, 1 at 25 degrees
+        local slopeInfluence = (slopeDegrees - 18) / 12 -- 0 at 18 degrees, 1 at 30 degrees
 
-        if (blendNoise + 1) / 2 < slopeInfluence then
+        -- Bias toward altitude-based (more grass) by requiring stronger slope influence
+        if (blendNoise + 1) / 2 < slopeInfluence * 0.7 then
             return slopeMaterial
         else
             return altitudeMaterial
