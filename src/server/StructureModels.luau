@@ -883,7 +883,7 @@ function StructureModels.createArch(position: Vector3, size: Vector3, model: Mod
     local centerZ = position.Z
 
     local pillarWidth = width * 0.25
-    local archOpeningWidth = width - pillarWidth * 2
+    local _archOpeningWidth = width - pillarWidth * 2
     local archOpeningHeight = height * 0.65
 
     -- Foundation/base
