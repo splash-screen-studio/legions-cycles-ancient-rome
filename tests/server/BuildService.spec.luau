@@ -156,6 +156,14 @@ describe("BuildService", function()
         expect(string.find(moduleSource, "_getStructureColor", 1, true)).toNotBeNil()
     end)
 
+    it("should require StructureModels module", function()
+        expect(string.find(moduleSource, "require(script.StructureModels)", 1, true)).toNotBeNil()
+    end)
+
+    it("should use StructureModels.getBuilder for structure creation", function()
+        expect(string.find(moduleSource, "StructureModels.getBuilder", 1, true)).toNotBeNil()
+    end)
+
     it("should use strict mode", function()
         expect(string.find(moduleSource, "--!strict", 1, true)).toNotBeNil()
     end)
