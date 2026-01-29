@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.4.0"
+local VERSION = "1.5.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -42,6 +42,9 @@ print(string.format("[Server] Loaded BridgeBuilder v%s", BridgeBuilder.VERSION))
 
 local LandmarkBuilder = require(script.LandmarkBuilder)
 print(string.format("[Server] Loaded LandmarkBuilder v%s", LandmarkBuilder.VERSION))
+
+local RuinsBuilder = require(script.RuinsBuilder)
+print(string.format("[Server] Loaded RuinsBuilder v%s", RuinsBuilder.VERSION))
 
 -- Configuration
 local MAP_SIZE = 1024
@@ -96,6 +99,14 @@ local landmarkBuilder = LandmarkBuilder.new({
     worldPlan = worldPlan,
 })
 landmarkBuilder:build()
+
+-- STEP 7: Scatter ancient ruins throughout rural/wilderness areas
+-- These make the world feel ancient and historically layered
+local ruinsBuilder = RuinsBuilder.new({
+    worldPlan = worldPlan,
+    ruinCount = 50, -- Scatter 50 ruin sets across the map
+})
+ruinsBuilder:build()
 
 -- Bootstrap map boundary walls
 local mapBoundary = MapBoundary.new({
