@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.3.0"
+local VERSION = "1.4.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -39,6 +39,9 @@ print(string.format("[Server] Loaded TerrainMaterials v%s", TerrainMaterials.VER
 
 local BridgeBuilder = require(script.BridgeBuilder)
 print(string.format("[Server] Loaded BridgeBuilder v%s", BridgeBuilder.VERSION))
+
+local LandmarkBuilder = require(script.LandmarkBuilder)
+print(string.format("[Server] Loaded LandmarkBuilder v%s", LandmarkBuilder.VERSION))
 
 -- Configuration
 local MAP_SIZE = 1024
@@ -86,6 +89,13 @@ local bridgeBuilder = BridgeBuilder.new({
     worldPlan = worldPlan,
 })
 bridgeBuilder:build()
+
+-- STEP 6: Build pre-built landmarks (Forum, Colosseum, Temples, etc.)
+-- These make the world feel inhabited from the start
+local landmarkBuilder = LandmarkBuilder.new({
+    worldPlan = worldPlan,
+})
+landmarkBuilder:build()
 
 -- Bootstrap map boundary walls
 local mapBoundary = MapBoundary.new({
