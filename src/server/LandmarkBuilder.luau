@@ -20,7 +20,7 @@ local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
 
 local LandmarkBuilder = {}
 LandmarkBuilder.__index = LandmarkBuilder
-LandmarkBuilder.VERSION = "1.0.0"
+LandmarkBuilder.VERSION = "1.1.0"
 
 -- Roman architectural colors
 local MARBLE_WHITE = Color3.fromRGB(240, 235, 225)
@@ -1051,15 +1051,31 @@ function LandmarkBuilder:build(): Folder
     local landmarks = self.worldPlan:getLandmarks()
 
     -- Build each landmark
+    local skippedCount = 0
     for i, landmark in ipairs(landmarks) do
+        local x = landmark.position.X
+        local z = landmark.position.Y -- Vector2 Y is world Z
+
+        -- Validate: skip landmarks in river exclusion zone
+        if self.worldPlan:isInRiverExclusionZone(x, z) then
+            warn(string.format("[LandmarkBuilder v%s] Skipping %s at (%.1f, %.1f) - in river exclusion zone",
+                LandmarkBuilder.VERSION,
+                landmark.landmarkType,
+                x,
+                z
+            ))
+            skippedCount = skippedCount + 1
+            continue
+        end
+
         local landmarkFolder = Instance.new("Folder")
         landmarkFolder.Name = string.format("%s_%d", landmark.landmarkType, i)
         landmarkFolder.Parent = folder
 
         self:_buildLandmarkByType(
             landmark.landmarkType,
-            landmark.position.X,
-            landmark.position.Y,
+            x,
+            z,
             landmark.radius,
             landmarkFolder
         )
@@ -1069,8 +1085,8 @@ function LandmarkBuilder:build(): Folder
         print(string.format("[LandmarkBuilder v%s] Built %s at (%.1f, %.1f)",
             LandmarkBuilder.VERSION,
             landmark.landmarkType,
-            landmark.position.X,
-            landmark.position.Y
+            x,
+            z
         ))
 
         -- Yield periodically to avoid script timeout
@@ -1080,11 +1096,12 @@ function LandmarkBuilder:build(): Folder
     end
 
     local elapsed = tick() - startTime
-    print(string.format("[LandmarkBuilder v%s] Built %d landmarks in %.2f seconds (%d parts)",
+    print(string.format("[LandmarkBuilder v%s] Built %d landmarks in %.2f seconds (%d parts, %d skipped for river)",
         LandmarkBuilder.VERSION,
         self.landmarkCount,
         elapsed,
-        #self.parts
+        #self.parts,
+        skippedCount
     ))
 
     return folder
