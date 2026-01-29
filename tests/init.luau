@@ -109,6 +109,7 @@ require("./server/WaterPool.spec")
 require("./server/WaterFeatures.spec")
 require("./server/RiverBuilder.spec")
 require("./server/BridgeBuilder.spec")
+require("./server/LandmarkBuilder.spec")
 require("./server/TerrainMaterials.spec")
 require("./client/MusicManager.spec")
 
