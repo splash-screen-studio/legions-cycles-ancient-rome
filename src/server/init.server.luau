@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.6.0"
+local VERSION = "1.7.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -48,6 +48,9 @@ print(string.format("[Server] Loaded AqueductBuilder v%s", AqueductBuilder.VERSI
 
 local RuinsBuilder = require(script.RuinsBuilder)
 print(string.format("[Server] Loaded RuinsBuilder v%s", RuinsBuilder.VERSION))
+
+local SignpostBuilder = require(script.SignpostBuilder)
+print(string.format("[Server] Loaded SignpostBuilder v%s", SignpostBuilder.VERSION))
 
 -- Configuration
 local MAP_SIZE = 1024
@@ -117,6 +120,13 @@ local ruinsBuilder = RuinsBuilder.new({
     ruinCount = 50, -- Scatter 50 ruin sets across the map
 })
 ruinsBuilder:build()
+
+-- STEP 9: Build signposts and navigation markers (after landmarks and roads)
+-- Creates direction posts, milestones, and district signs to guide players
+local signpostBuilder = SignpostBuilder.new({
+    worldPlan = worldPlan,
+})
+signpostBuilder:build()
 
 -- Bootstrap map boundary walls
 local mapBoundary = MapBoundary.new({
