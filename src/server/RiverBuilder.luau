@@ -20,7 +20,7 @@ local WorldPlan = require(Shared:WaitForChild("WorldPlan"))
 local RiverBuilder = {}
 RiverBuilder.__index = RiverBuilder
 
-RiverBuilder.VERSION = "1.2.0"
+RiverBuilder.VERSION = "1.3.0"
 
 -- River construction constants (exported for other modules like BridgeBuilder)
 local WALL_HEIGHT = 12 -- Height of river walls (deep enough to swim: 8-12 studs)
@@ -44,6 +44,7 @@ export type RiverBuilderInstance = typeof(setmetatable(
         terrain: Terrain,
         folder: Folder?,
         parts: { Part },
+        segmentHeights: { number }, -- Store terrain heights BEFORE clearing
     },
     RiverBuilder
 ))
@@ -54,6 +55,7 @@ function RiverBuilder.new(config: RiverBuilderConfig): RiverBuilderInstance
     self.terrain = workspace.Terrain
     self.folder = nil
     self.parts = {}
+    self.segmentHeights = {} -- Will be populated during wall building
 
     print(string.format("[RiverBuilder v%s] Initializing...", RiverBuilder.VERSION))
     return self
@@ -114,8 +116,18 @@ function RiverBuilder:_buildSegment(
     local centerX = (p1.X + p2.X) / 2
     local centerZ = (p1.Y + p2.Y) / 2
 
-    -- Query terrain height at center
+    -- Query terrain height at center BEFORE any clearing happens
     local terrainY = TerrainUtils.getHeightAt(self.terrain, centerX, centerZ)
+
+    -- CRITICAL: Store this height for later use in water filling
+    self.segmentHeights[segmentIndex] = terrainY
+
+    -- Log first few segments for debugging
+    if segmentIndex <= 3 then
+        print(string.format("[RiverBuilder v%s] Segment %d: terrainY=%.1f at (%.1f, %.1f)",
+            RiverBuilder.VERSION, segmentIndex, terrainY, centerX, centerZ))
+    end
+
     local floorY = terrainY - WALL_HEIGHT + FLOOR_THICKNESS / 2
     local wallCenterY = terrainY - WALL_HEIGHT / 2
 
@@ -206,7 +218,8 @@ function RiverBuilder:_fillWithWater(): ()
     local riverPath = self.worldPlan:getRiverPath()
     local riverWidth = self.worldPlan:getRiverWidth()
 
-    print(string.format("[RiverBuilder v%s] Filling river with water...", RiverBuilder.VERSION))
+    print(string.format("[RiverBuilder v%s] Filling river with water (%d segments)...",
+        RiverBuilder.VERSION, #riverPath - 1))
 
     -- Fill water along each segment
     for i = 1, #riverPath - 1 do
@@ -219,8 +232,13 @@ function RiverBuilder:_fillWithWater(): ()
         local centerX = (p1.X + p2.X) / 2
         local centerZ = (p1.Y + p2.Y) / 2
 
-        -- Query terrain height
-        local terrainY = TerrainUtils.getHeightAt(self.terrain, centerX, centerZ)
+        -- CRITICAL: Use stored terrain height, NOT current query (terrain is now cleared!)
+        local terrainY = self.segmentHeights[i]
+        if not terrainY then
+            warn(string.format("[RiverBuilder v%s] WARNING: No stored height for segment %d, skipping water",
+                RiverBuilder.VERSION, i))
+            continue
+        end
 
         -- Water fills from floor top to just below terrain surface
         -- Floor top is at: terrainY - WALL_HEIGHT + FLOOR_THICKNESS
@@ -229,6 +247,12 @@ function RiverBuilder:_fillWithWater(): ()
         local waterTop = terrainY - WATER_SURFACE_OFFSET
         local waterHeight = waterTop - waterBottom
         local waterY = (waterBottom + waterTop) / 2
+
+        -- Log first few segments for debugging
+        if i <= 3 then
+            print(string.format("[RiverBuilder v%s] Water segment %d: storedTerrainY=%.1f, waterBottom=%.1f, waterTop=%.1f, waterY=%.1f, waterHeight=%.1f",
+                RiverBuilder.VERSION, i, terrainY, waterBottom, waterTop, waterY, waterHeight))
+        end
 
         -- Calculate rotation
         local rotation = math.atan2(direction.X, direction.Y)
@@ -244,6 +268,8 @@ function RiverBuilder:_fillWithWater(): ()
             task.wait()
         end
     end
+
+    print(string.format("[RiverBuilder v%s] Water fill complete", RiverBuilder.VERSION))
 end
 
 -- Build the complete river structure
