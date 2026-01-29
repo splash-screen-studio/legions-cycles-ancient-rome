@@ -1,7 +1,7 @@
 --!strict
 -- Client Entry Point - Bootstraps all client systems
 
-local VERSION = "1.1.0"
+local VERSION = "1.2.0"
 print(string.format("[Client v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -24,6 +24,9 @@ print(string.format("[Client] Loaded AtmosphereManager v%s", AtmosphereManager.V
 local LanternManager = require(script.LanternManager)
 print(string.format("[Client] Loaded LanternManager v%s", LanternManager.VERSION))
 
+local ProgressionDisplay = require(script.ProgressionDisplay)
+print(string.format("[Client] Loaded ProgressionDisplay v%s", ProgressionDisplay.VERSION))
+
 local CurrencyDisplay = require(script.CurrencyDisplay)
 print(string.format("[Client] Loaded CurrencyDisplay v%s", CurrencyDisplay.VERSION))
 
@@ -39,7 +42,11 @@ lanternManager:start()
 local musicManager = MusicManager.new()
 musicManager:playPlaylist(false) -- Sequential playback
 
--- Bootstrap currency display (shows Denarii balance in UI)
+-- Bootstrap progression display (XP, level, rank UI)
+local progressionDisplay = ProgressionDisplay.new()
+progressionDisplay:start()
+
+-- Bootstrap currency display (Denarii balance UI)
 local currencyDisplay = CurrencyDisplay.new()
 currencyDisplay:start()
 

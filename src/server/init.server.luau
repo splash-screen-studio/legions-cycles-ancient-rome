@@ -1,7 +1,7 @@
 --!strict
 -- Server Entry Point - Bootstraps all server systems
 
-local VERSION = "1.9.0"
+local VERSION = "2.0.0"
 print(string.format("[Server v%s] Starting...", VERSION))
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -54,6 +54,9 @@ print(string.format("[Server] Loaded SignpostBuilder v%s", SignpostBuilder.VERSI
 
 local InteriorLighting = require(script.InteriorLighting)
 print(string.format("[Server] Loaded InteriorLighting v%s", InteriorLighting.VERSION))
+
+local ProgressionService = require(script.ProgressionService)
+print(string.format("[Server] Loaded ProgressionService v%s", ProgressionService.VERSION))
 
 local CurrencyService = require(script.CurrencyService)
 print(string.format("[Server] Loaded CurrencyService v%s", CurrencyService.VERSION))
@@ -166,8 +169,13 @@ local waterFeatures = WaterFeatures.new({
 })
 waterFeatures:start()
 
--- Bootstrap currency system (manages player Denarii)
--- Must be early to handle player joins, but after basic world setup
+-- Bootstrap progression service (player XP and levels)
+-- Creates RemoteEvents for client communication
+local progressionService = ProgressionService.new()
+progressionService:start()
+
+-- Bootstrap currency service (player Denarii balance)
+-- Creates RemoteEvents for client communication
 local currencyService = CurrencyService.new()
 currencyService:start()
 
